@@ -3,10 +3,11 @@ title: Cloud Docker包
 description: 请参阅Cloud Docker包的最新改进列表。
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-10-07T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+last-substantial-update: 2025-02-06T00:00:00Z
+exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
+source-git-commit: 7f62dbc7db9924abfe304b46ed62d9577471386d
 workflow-type: tm+mt
-source-wordcount: '3684'
+source-wordcount: '3697'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,14 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.0 {#latest}
+## v1.4.1 {#latest}
+
+发行日期： 2025年2月6日
+
+- ![新图标](../../assets/new.svg) **PHP 8.4** — 添加了对PHP 8.4的支持。
+
+
+## v1.4.0
 
 发行日期： 2024年10月7日
 

@@ -2,9 +2,10 @@
 title: 适用于Commerce的云组件
 description: 请参阅云组件包的最新改进列表。
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
+source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,16 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.1.0 {#latest}
+## v1.1.1 {#latest}
+
+
+发行日期： 2025年2月6日
+
+- ![新图标](../../assets/new.svg) **PHP 8.4** — 添加了对PHP 8.4.<!-- MCLOUD-13148	 - -->的支持
+- ![修复图标](../../assets/fix.svg) **修复缓存预热问题** — 修复了缓存预热期间类别URL的问题。<!-- MCLOUD-12454 - -->
+
+
+## v1.1.0
 
 发行日期： 2024年10月7日
 
