@@ -1,5 +1,5 @@
 ---
-source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
+source-git-commit: 6a686858394e65dfbb665bb76332ee13348dad7e
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 3%
@@ -7,7 +7,7 @@ ht-degree: 3%
 ---
 # ece-tools
 
-**版本**： 2002.2.0
+**版本**： 2002.2.1
 
 此引用包含通过`ece-tools`命令行工具提供的34个命令。
 在云基础架构上的Adobe Commerce中使用`ece-tools list`命令自动生成初始列表。
@@ -453,7 +453,7 @@ ece-tools build:transfer
 ece-tools cloud:config:create <configuration>
 ```
 
-使用指定的生成、部署和部署后变量配置创建`.magento.env.yaml`文件。 覆盖任何现有的`.magento,.env.yaml`文件。
+使用指定的生成、部署和部署后变量配置创建`.magento.env.yaml`文件。 覆盖任何现有的`.magento.env.yaml`文件。
 
 ### 参数
 
