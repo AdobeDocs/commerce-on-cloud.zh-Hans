@@ -1,12 +1,12 @@
 ---
-user-guide-title: Commerce on Cloud指南
+user-guide-title: 云上 Commerce 指南
 user-guide-description: 了解如何在云基础架构上管理 Adobe Commerce 应用程序。
 product: magento
 feature: Cloud
 source-git-commit: 4e107bb8696c3c7cb76a0a702624aeb754648f70
 workflow-type: tm+mt
 source-wordcount: '356'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
