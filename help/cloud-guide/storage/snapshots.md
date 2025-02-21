@@ -2,9 +2,10 @@
 title: 备份管理
 description: 了解如何在Cloud Infrastructure项目中手动创建和恢复Adobe Commerce的备份。
 feature: Cloud, Paas, Snapshots, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
+source-git-commit: b5fa153b4eb0569fd16c78fb7bf47c54222752cd
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -14,6 +15,10 @@ ht-degree: 0%
 您可以随时使用[!DNL Cloud Console]中的&#x200B;**[!UICONTROL Backup]**&#x200B;按钮或使用`magento-cloud snapshot:create`命令执行活动Starter环境的手动备份。
 
 备份或&#x200B;_快照_&#x200B;是对环境数据的完整备份，包括来自正在运行的服务（MySQL数据库）的所有永久数据以及存储在装入卷(var、pub/media、app/etc)上的任何文件。 快照&#x200B;_不_&#x200B;包含代码，因为代码已存储在基于Git的存储库中。 无法下载快照的副本。
+
+>[!WARNING]
+>
+>虽然备份通常包含已装入目录的内容，包括如`pub/media`之类的公共Web目录，但不要将备份输出文件移动到如`pub/media`或`pub/static`之类的公共Web目录。
 
 备份/快照功能&#x200B;**不**&#x200B;适用于Pro暂存和生产环境，默认情况下这些环境接收用于灾难恢复的常规备份。 有关详细信息，请参阅[专业备份和灾难恢复](../architecture/pro-architecture.md#backup-and-disaster-recovery)。 与Pro暂存环境和生产环境中的自动实时备份不同，备份&#x200B;**不是**&#x200B;自动。 _您有_&#x200B;责任手动创建备份或设置cron作业以定期创建Starter或Pro集成环境的备份。
 
