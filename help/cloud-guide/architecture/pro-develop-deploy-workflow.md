@@ -2,9 +2,10 @@
 title: Pro项目工作流
 description: 了解如何使用专业开发和部署工作流。
 feature: Cloud, Iaas, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: efe41991-8940-4d5c-a720-80369274bee3
+source-git-commit: b4905acf71e4cb71eb369cb6d4bb3abe9ada4e9d
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,7 @@ Pro项目包含一个具有全局`master`分支和三个主要环境的Git存储
 
 ## 开发工作流
 
-集成环境提供了一个基础`integration`分支，其中包含您的Adobe Commerce on cloud基础架构代码。 您可以创建一个额外的活动环境分支。 这允许将最多两个活动分支部署到Platform as a Service (PaaS)容器。 不限数量的不活动环境。
+集成环境提供了一个基础`integration`分支，其中包含您的Adobe Commerce on cloud基础架构代码。 您可以创建一个额外的活动环境分支。 这允许将最多两个活动分支部署到Platform as a Service (PaaS)容器。 不活动环境的数量没有限制，但是，不活动环境的数量越多，加载Cloud Console所需的时间就越长。
 
 {{enhanced-integration-envs}}
 
