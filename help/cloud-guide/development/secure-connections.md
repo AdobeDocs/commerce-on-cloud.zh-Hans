@@ -4,9 +4,10 @@ description: 了解如何将SSH密钥应用于云基础架构项目上的Adobe C
 role: Developer
 feature: Cloud, Security
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 73af13d8-7085-4ac8-9cfe-9772bc6bc112
+source-git-commit: c25e5b74ae8105995107860246ecb9ba45910bb1
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,7 @@ Secure Shell (SSH)是用于安全登录到远程服务器和系统的常用协�
 
 ## 向帐户添加SSH公钥
 
-在云基础架构帐户上将SSH公钥添加到Adobe Commerce后，重新部署帐户上的所有活动环境以安装密钥。
+在向Adobe Commerce on cloud infrastructure帐户中添加或更新SSH公钥后，在您的帐户上[重新部署所有活动环境](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy)以安装密钥。
 
 您可以使用以下方法之一将SSH密钥添加到您的帐户： Cloud CLI或[!DNL Cloud Console]。
 
