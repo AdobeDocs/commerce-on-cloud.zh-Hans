@@ -2,7 +2,8 @@
 title: 查看和管理日志
 description: 了解云基础架构中可用的日志文件类型以及在何处查找它们。
 last-substantial-update: 2023-05-23T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
+source-git-commit: 7615347cd5b528406c2a0e72be3450350655eeb9
 workflow-type: tm+mt
 source-wordcount: '1083'
 ht-degree: 0%
@@ -111,7 +112,7 @@ Re-deploying environment project-integration-ID
 
 >[!TIP]
 >
->在配置云环境时，您可以设置[基于日志的Slack和电子邮件通知](../environment/set-up-notifications.md)以进行生成和部署操作。
+>在配置云环境时，您可以设置[基于日志的Slack和电子邮件通知](../environment/set-up-notifications.md)，以便执行生成和部署操作。
 
 以下日志具有适用于所有云项目的公共位置：
 
@@ -208,13 +209,13 @@ type: warning
 
 | 日志文件 | Pro Staging | Pro Production |
 | ------------------- | --------------------------------------------------- | ----------------------------------------------- |
-| **部署日志** | 仅第一个节点：<br>`/var/log/platform/<project-ID>_stg/deploy.log` | 仅第一个节点：<br>`/var/log/platform/<project-ID>/deploy.log` |
-| **部署后日志** | 仅第一个节点：<br>`/var/log/platform/<project-ID>_stg/post_deploy.log` | 仅第一个节点：<br>`/var/log/platform/<project-ID>/post_deploy.log` |
-| **Cron日志** | 仅第一个节点：<br>`/var/log/platform/<project-ID>_stg/cron.log` | 仅第一个节点：<br>`/var/log/platform/<project-ID>/cron.log` |
-| **Nginx访问日志** | `/var/log/platform/<project-ID>_stg/access.log` | `/var/log/platform/<project-ID>/access.log` |
-| **Nginx错误日志** | `/var/log/platform/<project-ID>_stg/error.log` | `/var/log/platform/<project-ID>/error.log` |
-| **PHP访问日志** | `/var/log/platform/<project-ID>_stg/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
-| **PHP FPM日志** | `/var/log/platform/<project-ID>_stg/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
+| **部署日志** | 仅第一个节点：<br>`/var/log/platform/<project-ID>_stg*/deploy.log` | 仅第一个节点：<br>`/var/log/platform/<project-ID>/deploy.log` |
+| **部署后日志** | 仅第一个节点：<br>`/var/log/platform/<project-ID>_stg*/post_deploy.log` | 仅第一个节点：<br>`/var/log/platform/<project-ID>/post_deploy.log` |
+| **Cron日志** | 仅第一个节点：<br>`/var/log/platform/<project-ID>_stg*/cron.log` | 仅第一个节点：<br>`/var/log/platform/<project-ID>/cron.log` |
+| **Nginx访问日志** | `/var/log/platform/<project-ID>_stg*/access.log` | `/var/log/platform/<project-ID>/access.log` |
+| **Nginx错误日志** | `/var/log/platform/<project-ID>_stg*/error.log` | `/var/log/platform/<project-ID>/error.log` |
+| **PHP访问日志** | `/var/log/platform/<project-ID>_stg*/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
+| **PHP FPM日志** | `/var/log/platform/<project-ID>_stg*/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
 
 ### 归档日志文件
 
@@ -234,7 +235,7 @@ type: warning
 
 由于每个服务都在一个单独的容器中运行，因此服务日志在集成环境中不可用。 云基础架构上的Adobe Commerce仅允许访问集成环境中的Web服务器容器。 以下服务日志位置适用于专业生产和暂存环境：
 
-- **Redis日志**： `/var/log/platform/<project-ID>_stg/redis-server-<project-ID>_stg.log`
+- **Redis日志**： `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
 - **Elasticsearch日志**： `/var/log/elasticsearch/elasticsearch.log`
 - **Java垃圾回收日志**： `/var/log/elasticsearch/gc.log`
 - **邮件日志**： `/var/log/mail.log`
