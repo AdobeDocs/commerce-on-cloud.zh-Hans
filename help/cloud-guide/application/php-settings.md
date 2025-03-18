@@ -2,9 +2,10 @@
 title: PHP设置
 description: 了解在云基础架构中用于Commerce应用程序配置的最佳PHP设置。
 feature: Cloud, Configuration, Extensions
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
+source-git-commit: 1725741cfab62a2791fe95cfae9ed9dffa352339
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -66,10 +67,16 @@ realpath_cache_ttl = 7200
 
 ### 检查自定义PHP设置
 
-将`php.ini`更改推送到云环境后，您可以检查自定义PHP配置是否已添加到环境中。 例如，使用SSH登录到远程环境，并使用类似于以下内容的内容查看文件：
+将`php.ini`更改推送到云环境后，您可以检查自定义PHP配置是否已添加到环境中。 例如，使用SSH登录到远程环境，显示PHP配置信息，并筛选`register_argc_argv`指令：
 
 ```bash
-cat /etc/php/<php-version>/fpm/php.ini
+php -i | grep register_argc_ar
+```
+
+示例输出：
+
+```text
+register_argc_argv => On => On
 ```
 
 >[!WARNING]
