@@ -1,10 +1,11 @@
 ---
 title: 运行状况通知
-description: 了解如何在Adobe Commerce on cloud infrastructure项目中为Slack、电子邮件和分页任务通知的磁盘空间使用情况配置。
+description: 了解如何在Adobe Commerce on cloud infrastructure项目中为Slack的磁盘空间使用情况配置PagerDuty、电子邮件和PagerDuty通知。
 feature: Cloud, Observability, Integration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 5a7f37e9-e8f9-4b6b-b628-60dcaa60cc64
+source-git-commit: c3c708656e3d79c0893d1c02e60dcdf2ad8d7c7c
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -29,9 +30,9 @@ ht-degree: 0%
 magento-cloud integration:add --type health.email --from-address you@example.com --recipients them@example.com --recipients others@example.com
 ```
 
-## Slack频道通知
+## Slack渠道通知
 
-Slack是一种外部服务，它使用称为机器人的交互式应用程序在聊天室中发布消息。 在Slack中接收运行状况通知之前，您必须为您的Slack组创建自定义[机器人用户](https://api.slack.com/bot-users)。 为您的渠道或渠道配置机器人用户后，保存Slack提供的[机器人令牌](https://api.slack.com/docs/token-types#bot)以注册集成。 以下示例在Slack渠道中注册运行状况通知：
+Slack是一种外部服务，它使用称为机器人的交互式应用程序在聊天室中发布消息。 在Slack中接收运行状况通知之前，必须为您的Slack组创建自定义[机器人用户](https://api.slack.com/bot-users)。 为您的渠道或渠道配置机器人用户后，保存Slack提供的[机器人令牌](https://api.slack.com/docs/token-types#bot)以注册您的集成。 以下示例在Slack渠道中注册运行状况通知：
 
 ```bash
 magento-cloud integration:add --type health.slack --token SLACK_BOT_TOKEN --channel '#slack-channel-name'
@@ -44,3 +45,13 @@ PagerDuty是一项外部服务，可通知待命团队成员存在重要问题�
 ```bash
 magento-cloud integration:add --type health.pagerduty --routing-key PAGERDUTY_ROUTING_KEY
 ```
+
+## 日志管理
+
+要增加可用磁盘空间，可以截断或删除环境中的日志文件。 如果启用了logrotate，请首先下载日志的备份副本，然后删除它们：
+
+```bash
+rm -rf some-log-file.log.gz
+```
+
+或者，您可以截断单个日志文件以减小其大小。 有关日志文件截断的详细示例，请参阅视频教程截断日志文件{target="_blank"}。
