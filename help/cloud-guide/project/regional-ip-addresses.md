@@ -1,9 +1,10 @@
 ---
 title: 区域IP地址
 description: 查看Adobe Commerce在集成环境的云基础架构上使用的AWS和Azure区域的IP地址列表。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1137f5cf-4879-46d7-878c-bf47de7a0e34
+source-git-commit: f2214dd56625847132298892635c7cf738c3d71f
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,9 @@ ht-degree: 0%
 - **项目ID** = 13个字符的项目ID
 - **区域** = AWS或Azure区域名称
 
-您可以使用`ping`命令检索传入IP地址：
+您可以使用`ping`或`dig`命令检索传入IP地址：
+
+**Ping**
 
 ```bash
 ping integration-abcd123-abcd78910.us-3.magentosite.cloud
@@ -35,6 +38,18 @@ PING integration-abcd123-abcd78910.us-3.magentosite.cloud (34.210.133.187): 56 d
 Request timeout for icmp_seq 0
 Request timeout for icmp_seq 1
 Request timeout for icmp_seq 2
+```
+
+**Dig**
+
+```bash
+dig +short integration-abcd123-abcd78910.us-3.magentosite.cloud
+```
+
+示例响应
+
+```bash
+34.210.133.187
 ```
 
 列入允许列表如果您的公司防火墙阻止传出SSH连接，则可以将入站IP地址添加到中。
