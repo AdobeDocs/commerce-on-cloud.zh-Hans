@@ -3,9 +3,9 @@ title: Cloud Docker包
 description: 请参阅Cloud Docker包的最新改进列表。
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-04-03T00:00:00Z
+last-substantial-update: 2025-04-07T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: 3d5c84890f48a26938b42783b591b876fd2a2fd1
+source-git-commit: 5e991f974f33b35497b09c10fde36850c6279586
 workflow-type: tm+mt
 source-wordcount: '3710'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## v1.4.2 {#latest}
 
-发行日期： 2025年4月3日
+发行日期： 2025年4月7日
 
 - ![新图标](../../assets/new.svg) **PHP 8.4** — 已添加`php-cli` 8.4和`php-fpm` 8.4图像。
 

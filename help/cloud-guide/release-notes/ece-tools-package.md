@@ -2,11 +2,11 @@
 title: ECE-Tools发行说明
 description: 请参阅ECE-Tools软件包的最新改进列表。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-03T00:00:00Z
+last-substantial-update: 2024-04-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 3d5c84890f48a26938b42783b591b876fd2a2fd1
+source-git-commit: 2522e606aebac79285793cd40428d3e064a3c1db
 workflow-type: tm+mt
-source-wordcount: '3059'
+source-wordcount: '3065'
 ht-degree: 0%
 
 ---
@@ -30,17 +30,17 @@ ht-degree: 0%
 
 ## v2002.2.2 {#latest}
 
-发行日期： 2025年4月3日
+发行日期： 2025年4月7日
 
-- ![new icon](../../assets/new.svg) **Valkey** — 添加了对新服务(Valkey)的支持，该服务是Redis的替代服务。<!-- MCLOUD-13455	 - -->
-- ![修复图标](../../assets/fix.svg) **适用于2.4.4/2.4.5**&#x200B;的Opensearch2 — 在Adobe Commerce版本2.4.4/2.4.5中添加了对`opensearch2`的支持。<!-- MCLOUD-13493	 - -->
+- ![new icon](../../assets/new.svg) **Valkey** — 添加了对新服务(Valkey)的支持，该服务是Redis的替代服务。&lt;！— MCLOUD-13455 —>
+- ![修复图标](../../assets/fix.svg) **适用于2.4.4/2.4.5**&#x200B;的Opensearch2 — 在Adobe Commerce版本2.4.4/2.4.5中添加了对`opensearch2`的支持。 &lt;！— MCLOUD-13493 —>
 
 ## v2002.2.1
 
 发行日期： 2024年2月6日
 
-- ![新图标](../../assets/new.svg) **PHP 8.4** — 添加了对PHP 8.4.<!-- MCLOUD-13145	 - -->的支持
-- ![修复图标](../../assets/fix.svg) **Opensearch的验证器** — 修复了生成有关错误服务版本的误导性消息的验证器。<!-- MCLOUD-13184	 - -->
+- ![新图标](../../assets/new.svg) **PHP 8.4** — 添加了对PHP 8.4.<!-- MCLOUD-13145     - -->的支持
+- ![修复图标](../../assets/fix.svg) **Opensearch的验证器** — 修复了生成有关错误服务版本的误导性消息的验证器。&lt;！— MCLOUD-13184 —>
 
 
 ## v2002.2.0
