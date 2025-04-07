@@ -2,11 +2,11 @@
 title: ECE-Tools发行说明
 description: 请参阅ECE-Tools软件包的最新改进列表。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-02-06T00:00:00Z
+last-substantial-update: 2024-04-03T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
+source-git-commit: 3d5c84890f48a26938b42783b591b876fd2a2fd1
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3059'
 ht-degree: 0%
 
 ---
@@ -28,8 +28,14 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.1 {#latest}
+## v2002.2.2 {#latest}
 
+发行日期： 2025年4月3日
+
+- ![new icon](../../assets/new.svg) **Valkey** — 添加了对新服务(Valkey)的支持，该服务是Redis的替代服务。<!-- MCLOUD-13455	 - -->
+- ![修复图标](../../assets/fix.svg) **适用于2.4.4/2.4.5**&#x200B;的Opensearch2 — 在Adobe Commerce版本2.4.4/2.4.5中添加了对`opensearch2`的支持。<!-- MCLOUD-13493	 - -->
+
+## v2002.2.1
 
 发行日期： 2024年2月6日
 
@@ -44,7 +50,7 @@ ht-degree: 0%
 - ![新图标](../../assets/new.svg) **MariaDB 11.4** — 已添加MariaDB 11.4的支持。
 - ![修复图标](../../assets/fix.svg) **重构的代码** — 已删除对旧PHP版本7.4、7.3、7.2和相关库的支持。<!-- MCLOUD-9278 -->
 - ![修复图标](../../assets/fix.svg) **升级了单色版本** — 添加了对单色版本3.6的支持。<!-- MCLOUD-12855 -->
-- ![修复图标](../../assets/fix.svg) **适用于RabbitMQ、MariaDB和PHP的验证器** — 修复了生成有关错误服务版本的误导性消息的验证器。
+- ![修复图标](../../assets/fix.svg) **RabbitMQ、MariaDB和PHP的验证器** — 修复了生成有关错误服务版本的误导性消息的验证器。
 
 ## v2002.1.19
 
@@ -64,7 +70,7 @@ ht-degree: 0%
 
 发行日期： 2024年1月16日
 
-- ![修复图标](../../assets/fix.svg) **Elasticsearch和OpenSearch的验证器** — 修复了在启用LiveSearch时生成误导性消息以安装Search服务的验证器。<!-- MCLOUD-10167 -->
+- ![修复图标](../../assets/fix.svg) **Elasticsearch和OpenSearch的验证器** — 修复了在启用LiveSearch时生成误导性消息以安装搜索服务的验证器。<!-- MCLOUD-10167 -->
 - ![修复图标](../../assets/fix.svg) **部署警告** — 修复了导致出现非空文件夹部署警告的问题。<!-- MCLOUD-8958 -->
 
 ## v2002.1.16
@@ -79,7 +85,7 @@ ht-degree: 0%
 
 - ![修复图标](../../assets/fix.svg) **错误代码** — 已更新错误代码架构和错误代码文档生成器。
 - ![修复图标](../../assets/fix.svg) **自定义Redis模型的验证器** — 已更新自定义Redis后端模型的验证器。 [查看缓存配置的示例](../environment/variables-deploy.md#cache_configuration)。
-- ![修复图标](../../assets/fix.svg) **RabbitMQ的验证器** — 添加了对RabbitMQ 3.11的支持
+- ![修复图标](../../assets/fix.svg) **RabbitMQ的验证器** — 已添加对RabbitMQ 3.11的支持
 - ![修复图标](../../assets/fix.svg) **修复了错误的链接** — 修复了欢迎电子邮件模板中指向载入文档的错误链接。
 
 ## v2002.1.14
@@ -94,7 +100,7 @@ ht-degree: 0%
 
 发行日期： 2022年10月27日
 
-- ![新图标](../../assets/new.svg) **已添加对Adobe Commerce的Adobe I/O Events的支持**。 扩展开发人员现在可以使用[Adobe I/O Events](https://developer.adobe.com/events/docs/)框架将云实例中的Commerce事件信息发送到其为[AdobeApp Builder](https://developer.adobe.com/app-builder/docs/overview/)编写的应用程序中。 适用于Adobe Commerce的Adobe I/O Events在“合作伙伴预览”中。<!-- CEXT-932 -->
+- ![新图标](../../assets/new.svg) **已添加对Adobe Commerce的Adobe I/O Events的支持**。 扩展开发人员现在可以使用[Adobe I/O Events](https://developer.adobe.com/events/docs/)框架将云实例中的Commerce事件信息发送到其为[Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/)编写的应用程序。 适用于Adobe Commerce的Adobe I/O Events在“合作伙伴预览”中。<!-- CEXT-932 -->
 - ![新图标](../../assets/new.svg) **OPcache配置的验证器** — 已添加验证器以检查排除路径的OPcache配置。<!-- MCLOUD-9485 -->
 - ![修复图标](../../assets/fix.svg) **修复了GraphQL缓存配置的问题** — 现在，ECE-Tools在`app/etc/env.php`文件中保留`cache`配置中的GraphQL `id_salt`值。<!-- MCLOUD-9486 -->
 
@@ -117,7 +123,7 @@ ht-degree: 0%
 
 发行日期： 2022年3月31日
 
-- ![修复图标](../../assets/fix.svg) **Elasticsearch7.10** — 更新了验证器以支持Elasticsearch的7.10版本。<!-- MCLOUD-8548 -->
+- ![修复图标](../../assets/fix.svg) **Elasticsearch 7.10** — 更新了验证器以支持Elasticsearch 7.10版本。<!-- MCLOUD-8548 -->
 
 ## v2002.1.9
 
@@ -151,7 +157,7 @@ ht-degree: 0%
 
 - ![修复图标](../../assets/fix.svg) **更新了`symphony/console`**&#x200B;的编辑器要求 — 更新了`symphony/console`包的ECE-Tools `composer.json`版本要求，以修复导致`di:compile`命令失败并出现以下错误的问题： `Incompatible argument type: Required type: int. Actual type: string`<!--MC-42919-->
 
-- ![修复图标](../../assets/fix.svg)更新了软件生命周期结束检查(`eol.yaml`)以包含Elasticsearch7.9.x。<!--MCLOUD-7938-->
+- ![修复图标](../../assets/fix.svg)更新了软件生命周期结束检查(`eol.yaml`)以包含Elasticsearch 7.9.x。<!--MCLOUD-7938-->
 
 ## v2002.1.6
 
@@ -159,13 +165,13 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **Redis身份验证凭据** — 已添加在部署阶段从`relationships`属性读取Redis授权凭据的功能。<!--MCLOUD-7694-->
 
-- ![新图标](../../assets/new.svg) **Elasticsearch授权凭据** — 添加了在部署阶段从`relationships`Elasticsearch读取资产授权凭据的功能。<!--MCLOUD-7695-->
+- ![新图标](../../assets/new.svg) **Elasticsearch授权凭据** — 已添加在部署阶段从`relationships`属性读取Elasticsearch授权凭据的功能。<!--MCLOUD-7695-->
 
 - ![新图标](../../assets/new.svg) **专用会话存储服务** — 已添加`redis-session`作为会话存储的第二个选项。 您可以使用`redis-session`服务来存储会话信息，并使用`redis`服务来缓存以提供更好的性能。<!--MCLOUD-7698-->
 
 - ![新图标](../../assets/new.svg) **已弃用的SPLIT_DB消息** — 为Adobe Commerce 2.4.2的已弃用`SPLIT_DB`选项添加了验证器警告和严重消息，并在Adobe Commerce 2.5.0中删除了该选项。<!--MCLOUD-7806-->
 
-- ![修复图标](../../assets/fix.svg) **来自关系的Elasticsearch版本** — 修复了服务验证器，以便从Cloud Docker和集成环境中的`relationships`Elasticsearch中检索正确的属性。<!--MCLOUD-7572-->
+- ![修复图标](../../assets/fix.svg) **来自关系的Elasticsearch版本** — 修复了服务验证器，以便从Cloud Docker和集成环境中的`relationships`属性中检索Elasticsearch的正确版本。<!--MCLOUD-7572-->
 
 - ![修复图标](../../assets/fix.svg) **灵活的Redis端口验证**—Redis现在可以从`server` URL验证自定义缓存连接中的端口。 例如，您可以将端口号添加到服务器URL中，如下所示： `server: 'tcp://rfs-store-simple-page-cache:26379'`。 这有助于防止`port`选项缺失或不正确的验证错误。<!--MCLOUD-7722-->
 
@@ -209,7 +215,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg)当静态内容设置为在生成阶段中部署时，为只读`pub/static`目录添加了ECE-Tools支持。<!--MC-37699-->
 
-- ![新图标](../../assets/new.svg)已添加对Elasticsearch7.9和Redis 6的支持，以便与即将发布的Adobe Commerce版本兼容。<!--MCLOUD-7191-->
+- ![新图标](../../assets/new.svg)已添加对Elasticsearch 7.9和Redis 6的支持，以便与即将发布的Adobe Commerce版本兼容。<!--MCLOUD-7191-->
 
 - ![修复图标](../../assets/fix.svg)已更新ECE-Tools `composer.json`以添加质量修补程序工具所需的依赖项。 这修复了ECE-Tools和magento-cloud-patches包之间存在的循环依赖关系。<!--MCLOUD-6910-->
 
@@ -219,7 +225,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg)已添加Elasticsearch验证，以检查Elasticsearch服务版本与Adobe Commerce版本之间的兼容性。<!--MCLOUD-7193-->
 
-- ![新图标](../../assets/new.svg)更新了Elasticsearch兼容性错误消息，以显示与Adobe CommerceElasticsearch模块兼容的Elasticsearch版本。 现在，错误消息会提供要在您的Cloud基础架构中安装的特定Elasticsearch版本，以便与您的Adobe Commerce版本使用的Elasticsearch模块兼容。 查看[警告错误，部署阶段](../dev-tools/error-reference.md#deploy-stage-1)。<!--MCLOUD-6698-->
+- ![新图标](../../assets/new.svg)更新了Elasticsearch兼容性错误消息，以显示与Adobe Commerce Elasticsearch模块兼容的Elasticsearch版本。 现在，错误消息会提供要在您的Elasticsearch基础架构中安装的特定Cloud版本，以便与您的Adobe Commerce版本使用的Elasticsearch模块兼容。 查看[警告错误，部署阶段](../dev-tools/error-reference.md#deploy-stage-1)。<!--MCLOUD-6698-->
 
 - ![新图标](../../assets/new.svg)为无效的`MAGE_MODE`环境变量设置添加了警告错误`2026`和`2027`。 唯一有效值为`production`。 在此修复之前，可以将`MAGE_MODE`设置为`developer`，而不会出现部署错误，但只会在以后尝试写入只读文件时导致错误。 查看[警告错误](../dev-tools/error-reference.md#warning-errors).<!--MCLOUD-6708-->
 
@@ -253,7 +259,7 @@ ht-degree: 0%
 
    - 错误代码102 — 添加了对`env.php`文件不可写<!--MCLOUD-6221-->时发生的问题的额外检查
 
-- ![新图标](../../assets/new.svg)已添加&#x200B;**QUALITY_PATCH**&#x200B;环境变量，以指定要在部署过程中应用的一个或多个质量修补程序。 查看[生成变量](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->
+- ![新图标](../../assets/new.svg)已添加&#x200B;**QUALITY_PATCHES**&#x200B;环境变量，以指定要在部署过程中应用的一个或多个质量修补程序。 查看[生成变量](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->
 
 ## v2002.1.1
 
@@ -293,7 +299,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **验证改进**—
 
-   - ![新图标](../../assets/new.svg) **Elasticsearch7.x兼容性检查** — 已更新Elasticsearch7.x软件兼容性检查的Elasticsearch验证。<!--MCLOUD-5542-->
+   - ![新图标](../../assets/new.svg) **Elasticsearch 7.x兼容性检查** — 更新了Elasticsearch验证以进行Elasticsearch 7.x软件兼容性检查。<!--MCLOUD-5542-->
 
    - ![新图标](../../assets/new.svg) **更新了服务版本和EOL验证检查** — 更新了验证以根据Adobe Commerce 2.4检查已安装的服务版本。要求。<!--MCLOUD-6144-->
 
@@ -357,7 +363,7 @@ ht-degree: 0%
 
    - ![新图标](../../assets/new.svg)添加了对PHP 7.3.<!--MAGECLOUD-4022-->的支持
 
-   - ![新图标](../../assets/new.svg)已添加对RabbitMQ 3.8的支持。<!--MAGECLOUD-4674-->
+   - ![新图标](../../assets/new.svg)已添加对RabbitMQ 3.8.<!--MAGECLOUD-4674-->的支持
 
    - ![新图标](../../assets/new.svg)已添加验证，以根据每个服务的EOL日期检查已安装的服务版本。 现在，如果服务版本在EOL日期后的三个月内，客户将收到通知，如果EOL日期在过去，客户将收到警告。<!--MAGECLOUD-4076-->
 

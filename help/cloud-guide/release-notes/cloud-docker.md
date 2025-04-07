@@ -3,11 +3,11 @@ title: Cloud Docker包
 description: 请参阅Cloud Docker包的最新改进列表。
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-02-06T00:00:00Z
+last-substantial-update: 2025-04-03T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: 7f62dbc7db9924abfe304b46ed62d9577471386d
+source-git-commit: 3d5c84890f48a26938b42783b591b876fd2a2fd1
 workflow-type: tm+mt
-source-wordcount: '3697'
+source-wordcount: '3710'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,14 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.1 {#latest}
+## v1.4.2 {#latest}
+
+发行日期： 2025年4月3日
+
+- ![新图标](../../assets/new.svg) **PHP 8.4** — 已添加`php-cli` 8.4和`php-fpm` 8.4图像。
+
+
+## v1.4.1
 
 发行日期： 2025年2月6日
 
@@ -81,7 +88,7 @@ ht-degree: 0%
 
 发行日期： 2022年3月31日
 
-- ![新图标](../../assets/new.svg) **已添加Elasticsearch7.10图像**<!-- MCLOUD-8548 -->
+- ![新图标](../../assets/new.svg) **已添加Elasticsearch 7.10图像**<!-- MCLOUD-8548 -->
 
 ## v1.3.1
 
@@ -96,7 +103,7 @@ ht-degree: 0%
    - 已升级xDebug版本3.1.2
    - 已升级xmlrpc 1.0.0RC3
 
-- ![修复图标](../../assets/fix.svg) **Elasticsearch和OpenSearch改进** — 改进了Elasticsearch和OpenSearch Dockerfiles；删除了Elasticsearch5.2图像。
+- ![修复图标](../../assets/fix.svg) **Elasticsearch和OpenSearch改进** — 改进了Elasticsearch和OpenSearch Dockerfiles；删除了Elasticsearch 5.2图像。
 - ![修复图标](../../assets/fix.svg) **Na扩展** — 默认情况下在所有PHP映像中启用了`sodium`扩展。
 - ![修复图标](../../assets/fix.svg) **Composer缓存卷** — 修复了Composer缓存卷具有缓存的Composer包的路径。
 - ![修复图标](../../assets/fix.svg) **nginx中的内存限制** — 修复了NGINX映像中的内存限制。
@@ -126,7 +133,7 @@ ht-degree: 0%
 发布日期： 2021年6月14日
 
 - ![新图标](../../assets/new.svg) **添加了PHP 8.0** — 已将PHP更新为版本8.0，允许您利用PHP 8.0包含的所有新功能和优化。<!--MCLOUD-7941-->
-- ![新图标](../../assets/new.svg) **已更新为Varnish 6.6和Elasticsearch7.11.2** — 以下链接提供有关[Varnish缓存6.6](https://varnish-cache.org/releases/rel6.6.0.html#rel6-6-0)和Elasticsearch7.11.2.<!--MCLOUD-7921-->的发行信息
+- ![新图标](../../assets/new.svg) **已更新为Varnish 6.6和Elasticsearch 7.11.2** — 以下链接提供有关[Varnish缓存6.6](https://varnish-cache.org/releases/rel6.6.0.html#rel6-6-0)和Elasticsearch 7.11.2.<!--MCLOUD-7921-->的发行信息
 - ![新图标](../../assets/new.svg) **为PHP 7.4映像**&#x200B;添加了`ioncube`扩展 — 在最初从PHP 7.3升级到PHP 7.4后，`ioncube`扩展已重新添加到PHP 7.4映像。 *[由mattskr](https://github.com/magento/magento-cloud-docker/pull/314)提交。*<!--PR #314-->
 - ![新图标](../../assets/new.svg) **添加了一个文件同步选项：`manual-native`** — `manual-native`文件同步选项提供了对同步的手动控制，为macOS和Windows环境提供了最佳性能。 阅读有关在[开发人员模式](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/developer-mode/)中使用`manual-native`选项以及在Docker开发人员环境中同步数据](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data/#file-synchronization-options)的信息。<!--MCLOUD-7977-->[
 - ![新图标](../../assets/new.svg) **已从`up`和`down`命令中删除卷删除** — 已从`bin/magento-docker up`和`bin/magento-docker down`命令中删除`--volume`选项，替换为带有数据丢失警告的新`bin/magento-docker init`命令。 此更改有助于防止意外数据丢失。 *[由joeshelton-wagento提交](https://github.com/magento/magento-cloud-docker/pull/319)。*<!--PR #319-->
@@ -146,7 +153,7 @@ ht-degree: 0%
   ./vendor/bin/ece-docker build:compose --custom-registry=my-registry.example.com
   ```
 
-- ![新图标](../../assets/new.svg) **已删除旧Elasticsearch版本** — 已从Elasticsearch映像中移除Elasticsearch版本1.7和2.4。<!--MCLOUD-7504-->
+- ![新图标](../../assets/new.svg) **已删除旧的Elasticsearch版本** — 已从Elasticsearch映像中移除Elasticsearch版本1.7和2.4。<!--MCLOUD-7504-->
 - ![新图标](../../assets/new.svg) **自动生成NGINX证书** — 已从NGINX映像中删除现有证书。 现在，每个新部署都会自动生成NGINX证书，以提高安全性。<!--MCLOUD-7396-->
 - ![修复图标](../../assets/fix.svg) **已启用`opcache.validate_timestamps`** — 在开发人员模式下默认启用`opcache.validate_timestamps` PHP设置。 启用此设置修复了在Docker中无法识别文件系统更改的问题。<!--MCLOUD-7466-->
 - ![修复图标](../../assets/fix.svg) **修复`build:custom:compose`** — 修复了`build:custom:compose`命令，以便在生成过程中无法覆盖文件时引发错误。 引发错误可防止`docker-compose up`使用错误文件的情况。<!--MCLOUD-7457-->
@@ -172,7 +179,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **NGINX内存消耗** — 已减少NGINX进程为TLS和Web服务所消耗的内存。<!--MCLOUD-7259-->
 
-- ![新图标](../../assets/new.svg) **Blackfire** — 默认情况下在Cloud Docker映像中禁用了BlackfirePHP扩展。
+- ![新图标](../../assets/new.svg) **Blackfire** — 在Cloud Docker映像中默认禁用了Blackfire PHP扩展。
 
 - ![修复图标](../../assets/fix.svg) **PHP-FPM容器** — 通过将`WEB_PORT`从`80`更改为`8080`修复了PHP-FPM容器运行状况检查。<!--MCLOUD-7232-->
 
@@ -192,7 +199,7 @@ ht-degree: 0%
 
    - ![新图标](../../assets/new.svg) **Elasticsearch容器**
 
-      - 添加了对Elasticsearch7.9的支持，以便与即将发布的Adobe Commerce版本兼容。<!--MCLOUD-7190-->
+      - 添加了对Elasticsearch 7.9的支持，以便与即将发布的Adobe Commerce版本兼容。<!--MCLOUD-7190-->
 
       - **Elasticsearch插件配置** — 添加了对使用`services.yaml`文件中的Elasticsearch插件配置信息来为Commerce环境的Cloud Docker生成`docker-compose.yaml`文件的支持。 查看[Elasticsearch插件](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-plugins).<!--MCLOUD-2789-->
 
@@ -234,7 +241,7 @@ ht-degree: 0%
 
 发行日期： 2020年9月9日
 
-- ![新图标](../../assets/new.svg)已添加对Elasticsearch7.7<!--MCLOUD-6219-->的支持
+- ![新图标](../../assets/new.svg)已添加对Elasticsearch 7.7<!--MCLOUD-6219-->的支持
 
 ## v1.1.1
 
@@ -261,7 +268,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **添加了对拆分数据库性能解决方案的支持** — 现在可以在Cloud Docker环境中使用拆分数据库性能解决方案配置和部署存储。<!--MCLOUD-3740-->
 
-- ![新图标](../../assets/new.svg) **支持Adobe Commerce和Magento Open Source部署** — 现在您可以使用Cloud Docker for Commerce为云基础架构上未在Adobe Commerce上托管的项目部署本地开发环境。<!--MCLOUD-5667-->
+- ![新图标](../../assets/new.svg) **对Adobe Commerce和Magento Open Source部署的支持** — 现在您可以使用适用于Commerce的Cloud Docker为云基础架构上未在Adobe Commerce上托管的项目部署本地开发环境。<!--MCLOUD-5667-->
 
 - ![新图标](../../assets/new.svg) **Blackfire.io支持** — 添加了对使用[Blackfire.io扩展](https://developer.adobe.com/commerce/cloud-tools/docker/test/blackfire/)进行自动性能测试的支持。 由Adarsh Manickam从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/202)<!--MCLOUD-5857-->
 
@@ -289,11 +296,11 @@ ht-degree: 0%
 
    - ![新图标](../../assets/new.svg) **Elasticsearch**
 
-      - 添加了对Elasticsearch6.8、7.2、7.5和7.6的支持。<!--MCLOUD-4050, MCLOUD-5855,MCLOUD-5860-->
+      - 添加了对Elasticsearch 6.8、7.2、7.5和7.6的支持。<!--MCLOUD-4050, MCLOUD-5855,MCLOUD-5860-->
 
       - 添加了生成Docker组合配置文件时自定义[Elasticsearch容器配置](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-container)的功能。<!--MCLOUD-3059-->
 
-      - 向用于生成Docker编写配置文件的服务配置选项添加了`--no-es`选项。 使用此选项可跳过Elasticsearch容器安装，改用MySQL搜索。 仅Adobe Commerce版本2.3.5及更早版本支持此选项。<!--MCLOUD-3766-->
+      - 向用于生成Docker编写配置文件的服务配置选项添加了`--no-es`选项。 使用此选项可跳过Elasticsearch容器安装，并改为使用MySQL搜索。 仅Adobe Commerce版本2.3.5及更早版本支持此选项。<!--MCLOUD-3766-->
 
    - ![新图标](../../assets/new.svg) **FPM-XDEBUG容器** — 添加了一个服务配置选项，用于在Cloud Docker环境中安装和配置Xdebug以调试PHP。 请参阅[配置Xdebug](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug/)。<!--MCLOUD-4098-->
 
@@ -360,7 +367,7 @@ ht-degree: 0%
 
       - ![新图标](../../assets/new.svg) **自动生成的NGINX证书**—Docker配置文件现在包含为Web容器自动生成NGINX证书的配置。<!--MAGECLOUD-4258-->
 
-   - ![新图标](../../assets/new.svg) **新Selenium容器** — 添加了[Selenium容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#selenium-container)以使用Magento功能测试框架(MFTF)支持Adobe Commerce应用程序测试。<!--MAGECLOUD-4040-->
+   - ![新图标](../../assets/new.svg) **新Selenium容器** — 添加了[Selenium容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#selenium-container)以支持使用Magento功能测试框架(MFTF)进行Adobe Commerce应用程序测试。<!--MAGECLOUD-4040-->
 
    - ![新图标](../../assets/new.svg) **[!DNL RabbitMQ]版本支持** — 已更新[!DNL RabbitMQ]容器配置以支持[!DNL RabbitMQ]版本3.8。<!--MAGECLOUD-4674-->
 
