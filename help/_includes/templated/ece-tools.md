@@ -1,5 +1,5 @@
 ---
-source-git-commit: 6a686858394e65dfbb665bb76332ee13348dad7e
+source-git-commit: 9fbcca6f545276e7afedcdb6e6061a87dd8f2dd9
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 3%
@@ -7,7 +7,7 @@ ht-degree: 3%
 ---
 # ece-tools
 
-**版本**： 2002.2.1
+**版本**： 2002.2.2
 
 此引用包含通过`ece-tools`命令行工具提供的34个命令。
 在云基础架构上的Adobe Commerce中使用`ece-tools list`命令自动生成初始列表。
@@ -521,7 +521,7 @@ ece-tools config:dumpdump
 ece-tools cron:disable
 ```
 
-禁用所有Magentocron进程并终止所有正在运行的进程。
+禁用所有Magento cron进程并终止所有正在运行的进程。
 
 ### 选项
 
@@ -534,7 +534,7 @@ ece-tools cron:disable
 ece-tools cron:enable
 ```
 
-启用Magentocron流程。
+启用Magento cron流程。
 
 ### 选项
 
@@ -547,7 +547,7 @@ ece-tools cron:enable
 ece-tools cron:kill
 ```
 
-终止所有Magentocron进程。
+终止所有Magento cron流程。
 
 ### 选项
 
