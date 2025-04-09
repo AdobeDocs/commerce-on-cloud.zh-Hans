@@ -2,7 +2,8 @@
 title: 升级Commerce版本
 description: 了解如何在云基础架构项目中升级Adobe Commerce版本。
 feature: Cloud, Upgrade
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
+source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 0%
@@ -64,7 +65,7 @@ ht-degree: 0%
 
 ### 验证Zend框架编辑器依赖关系
 
-从2.2.x **升级到** 2.3.x或更高版本时，请验证Zend Framework依赖项是否已添加到`composer.json`文件的`autoload`属性中以支持Laminas。 此插件支持Zend框架的新要求，该框架已迁移到Laminas项目。 请参阅&#x200B;_MagentoDevBlog_&#x200B;上的[将Zend Framework迁移到Laminas项目](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251)。
+从2.2.x **升级到** 2.3.x或更高版本时，请验证Zend Framework依赖项是否已添加到`composer.json`文件的`autoload`属性中以支持Laminas。 此插件支持Zend框架的新要求，该框架已迁移到Laminas项目。 请参阅&#x200B;_Magento DevBlog_&#x200B;上的[将Zend Framework迁移到Laminas项目](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251)。
 
 **检查`auto-load:psr-4`配置**：
 
@@ -123,7 +124,7 @@ ht-degree: 0%
 
 ### .magento.app.yaml
 
-始终检查[.magento.app.yaml](../application/configure-app-yaml.md)文件中包含的值以确定您所安装的版本，因为它控制应用程序构建和部署到云基础架构的方式。 以下示例适用于版本2.4.7，并且使用编辑器2.7.2。`build: flavor:`属性不用于Composer 2.x；请参阅[安装和使用Composer 2](../application/properties.md#installing-and-using-composer-2)。
+始终检查[.magento.app.yaml](../application/configure-app-yaml.md)文件中包含的值以确定您所安装的版本，因为它控制应用程序构建和部署到云基础架构的方式。 以下示例适用于版本2.4.8，并且使用编辑器2.8.4。`build: flavor:`属性不用于Composer 2.x；请参阅[安装和使用Composer 2](../application/properties.md#installing-and-using-composer-2)。
 
 **要更新`.magento.app.yaml`文件**：
 
@@ -134,13 +135,13 @@ ht-degree: 0%
 1. 更新PHP选项。
 
    ```yaml
-   type: php:8.3
+   type: php:8.4
    
    build:
        flavor: none
    dependencies:
        php:
-           composer/composer: '2.7.2'
+           composer/composer: '2.8.4'
    ```
 
 1. 修改`hooks`属性`build`和`deploy`命令
