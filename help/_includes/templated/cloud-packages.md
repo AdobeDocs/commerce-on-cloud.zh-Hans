@@ -1,7 +1,7 @@
 ---
-source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
+source-git-commit: 5567f425f28cb4d19aaa0db80f0ede1fd525a686
 workflow-type: tm+mt
-source-wordcount: '2191'
+source-wordcount: '2275'
 ht-degree: 0%
 
 ---
@@ -23,17 +23,17 @@ ht-degree: 0%
 
 `composer.json`文件声明了包的列表，而`composer.lock`文件存储了用于构建Adobe Commerce安装的包的完整列表（每个包的完整版本及其依赖项）。
 
-以下参考文档从`composer.lock`文件生成，它涵盖了Adobe Commerce on cloud infrastructure 2.4.7中包含的必需包。
+以下参考文档从`composer.lock`文件生成，它涵盖了Adobe Commerce on cloud infrastructure 2.4.8-p1中包含的必需包。
 
 ## 依赖关系
 
-`magento/magento-cloud-metapackage 2.4.7`具有以下依赖项：
+`magento/magento-cloud-metapackage 2.4.8-p1`具有以下依赖项：
 
 ```config
 fastly/magento2: ^1.2.34
-magento/ece-tools: ^2002.1.0
+magento/ece-tools: ^2002.2.0
 magento/module-paypal-on-boarding: ~100.5.0
-magento/product-enterprise-edition: >=2.4.7 <2.4.8
+magento/product-enterprise-edition: >=2.4.8 <2.4.9
 ```
 
 ## 第三方许可证
@@ -49,13 +49,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>
-      <a href="https://github.com/elastic/elasticsearch-php.git">elasticsearch/elasticsearch</a>
-    </td>
-    <td>库</td>
-    <td>用于Elasticsearch的PHP客户端</td>
-  </tr>
   <tr>
     <td>
       <a href="https://github.com/opensearch-project/opensearch-php.git">opensearch-project/opensearch-php</a>
@@ -100,10 +93,24 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/opentelemetry-php/api.git">开放遥测/api</a>
+    </td>
+    <td>库</td>
+    <td>适用于OpenTelemetry PHP的API。</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/opentelemetry-php/context.git">开放遥测/上下文</a>
+    </td>
+    <td>库</td>
+    <td>OpenTelemetry PHP的上下文实现。</td>
+  </tr>
+  <tr>
+    <td>
       paypal/module-braintree
     </td>
     <td>中继</td>
-    <td>BraintreeMagento</td>
+    <td>Braintree Magento</td>
   </tr>
   <tr>
     <td>
@@ -177,10 +184,17 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/duosecurity/duo_universal_php.git">duosecurity/duo_universal_php</a>
+    </td>
+    <td>库</td>
+    <td>Duo Universal SDK的PHP实现。</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/fastly/fastly-magento2.git">fastly/magento2</a>
     </td>
     <td>magento2模块</td>
-    <td>适用于Magento2.4.x的Fastly CDN模块</td>
+    <td>适用于Magento 2.4.x的Fastly CDN模块</td>
   </tr>
   <tr>
     <td>
@@ -188,13 +202,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>库</td>
     <td>在PHP中编码和解码JSON Web令牌(JWT)的简单库。 应符合当前规范。</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/google/recaptcha.git">google/recaptcha</a>
-    </td>
-    <td>库</td>
-    <td>Client Library for reCAPTCHA，这是一种保护网站抵御垃圾邮件和滥用的免费服务。</td>
   </tr>
   <tr>
     <td>
@@ -216,20 +223,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>库</td>
     <td>提供了基于嵌套对象属性的用户界面，用于访问应用程序代码中的此配置数据</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-crypt.git">laminas/laminas-crypt</a>
-    </td>
-    <td>库</td>
-    <td>强大的加密工具和密码散列</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-db.git">laminas/laminas-db</a>
-    </td>
-    <td>库</td>
-    <td>数据库抽象层、SQL抽象、结果集抽象，以及RowDataGateway和TableDataGateway实现</td>
   </tr>
   <tr>
     <td>
@@ -258,13 +251,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>库</td>
     <td>提供创建和使用RSS和Atom馈送的功能</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-file.git">laminas/laminas-file</a>
-    </td>
-    <td>库</td>
-    <td>查找PHP类文件</td>
   </tr>
   <tr>
     <td>
@@ -303,27 +289,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mail.git">laminas/laminas邮件</a>
-    </td>
-    <td>库</td>
-    <td>提供通用功能，用于撰写和发送文本以及符合MIME的多部分电子邮件</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-math.git">laminas/laminas-math</a>
-    </td>
-    <td>库</td>
-    <td>创建加密安全的伪随机数，并管理大整数</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-mime.git">laminas/laminas-mime</a>
-    </td>
-    <td>库</td>
-    <td>创建和解析MIME消息和部件</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/laminas/laminas-modulemanager.git">laminas/laminas-modulemanager</a>
     </td>
     <td>库</td>
@@ -335,13 +300,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>库</td>
     <td>Laminas的事件驱动MVC层，包括MVC应用程序、控制器和插件</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-oauth.git">laminas/laminas-oauth</a>
-    </td>
-    <td>库</td>
-    <td></td>
   </tr>
   <tr>
     <td>
@@ -408,6 +366,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/laminas/laminas-translator.git">laminas/laminas-translator</a>
+    </td>
+    <td>库</td>
+    <td>laminas-i18n的Translator组件的接口</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/laminas/laminas-uri.git">laminas/laminas-uri</a>
     </td>
     <td>库</td>
@@ -429,10 +394,24 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/marc-mabe/php-enum.git">marc-mabe/php-enum</a>
+    </td>
+    <td>库</td>
+    <td>使用本机PHP简单、快速地实施枚举</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/nikic/PHP-Parser.git">nikic/php-parser</a>
     </td>
     <td>库</td>
     <td>用PHP编写的PHP解析器</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/phpfui/recaptcha.git">phpfui/recaptcha</a>
+    </td>
+    <td>库</td>
+    <td>适用于Google的reCAPTCHA for PHP 8.4及更高版本的客户端库</td>
   </tr>
   <tr>
     <td>
@@ -516,7 +495,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
       <a href="https://github.com/php-amqplib/php-amqplib.git">php-amqplib/php-amqplib</a>
     </td>
     <td>库</td>
-    <td>以前称为videlalvaro/php-amqplib。  此库是AMQP协议的纯PHP实现。 它已经过针对RabbitMQ的测试。</td>
+    <td>以前称为videlalvaro/php-amqplib。  此库是AMQP协议的纯PHP实现。 已经通过RabbitMQ的测试。</td>
   </tr>
   </tbody>
 </table>
@@ -537,7 +516,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
       <a href="https://github.com/braintree/braintree_php.git">braintree/braintree_php</a>
     </td>
     <td>库</td>
-    <td>PHP客户端库Braintree</td>
+    <td>Braintree PHP客户端库</td>
   </tr>
   <tr>
     <td>
@@ -632,6 +611,34 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/doctrine/lexer.git">理论/词法分析器</a>
+    </td>
+    <td>库</td>
+    <td>PHP Doctrine Lexer分析器库，可在自上而下的递归后代分析器中使用。</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/egulias/EmailValidator.git">egulias/email-validator</a>
+    </td>
+    <td>库</td>
+    <td>用于针对多个RFC验证电子邮件的库</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/elastic/elastic-transport-php.git">弹性/传输</a>
+    </td>
+    <td>库</td>
+    <td>用于弹性产品的HTTP传输PHP库</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/elastic/elasticsearch-php.git">elasticsearch/elasticsearch</a>
+    </td>
+    <td>库</td>
+    <td>适用于Elasticsearch的PHP客户端</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/endroid/qr-code.git">endroid/qr-code</a>
     </td>
     <td>库</td>
@@ -695,6 +702,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/illuminate/conditionable.git">照明/可条件</a>
+    </td>
+    <td>库</td>
+    <td>照明条件包。</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/illuminate/config.git">照明/配置</a>
     </td>
     <td>库</td>
@@ -737,6 +751,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/thephpleague/flysystem-local.git">league/flysystem-local</a>
+    </td>
+    <td>库</td>
+    <td>用于Flysystem的本地文件系统适配器。</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/thephpleague/mime-type-detection.git">league/mime-type-detection</a>
     </td>
     <td>库</td>
@@ -758,7 +779,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/briannesbitt/Carbon.git">nesbot/carbon</a>
+      <a href="https://github.com/CarbonPHP/carbon.git">nesbot/carbon</a>
     </td>
     <td>库</td>
     <td>适用于DateTime的API扩展，支持281种不同的语言。</td>
@@ -783,6 +804,27 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>库</td>
     <td>将CSS样式转换为HTML代码中的内联样式属性</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/php-http/discovery.git">php-http/discovery</a>
+    </td>
+    <td>composer-plugin</td>
+    <td>查找并安装PSR-7、PSR-17、PSR-18和HTTPlug实施</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/php-http/httplug.git">php-http/httplug</a>
+    </td>
+    <td>库</td>
+    <td>HTTPlug，PHP的HTTP客户端抽象</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/php-http/promise.git">php-http/promise</a>
+    </td>
+    <td>库</td>
+    <td>用于异步HTTP请求的Promise</td>
   </tr>
   <tr>
     <td>
@@ -961,6 +1003,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/clock.git">交响曲/时钟</a>
+    </td>
+    <td>库</td>
+    <td>将应用程序与系统时钟分离</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/config.git">symfony/config</a>
     </td>
     <td>库</td>
@@ -1066,6 +1115,20 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/mailer.git">symfony/mailer</a>
+    </td>
+    <td>库</td>
+    <td>帮助发送电子邮件</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/mime.git">symfony/mime</a>
+    </td>
+    <td>库</td>
+    <td>允许处理MIME消息</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/polyfill-ctype.git">symfony/polyfill-ctype</a>
     </td>
     <td>库</td>
@@ -1101,13 +1164,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/polyfill-php72.git">symfony/polyfill-php72</a>
-    </td>
-    <td>库</td>
-    <td>Symfony polyfill将一些PHP 7.2+功能回移植到较低的PHP版本</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/symfony/polyfill-php73.git">symfony/polyfill-php73</a>
     </td>
     <td>库</td>
@@ -1126,6 +1182,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
     </td>
     <td>库</td>
     <td>Symfony polyfill将一些PHP 8.1+功能回移植到较低的PHP版本</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/polyfill-php82.git">symfony/polyfill-php82</a>
+    </td>
+    <td>库</td>
+    <td>Symfony polyfill将一些PHP 8.2+功能回移植到较低的PHP版本</td>
   </tr>
   <tr>
     <td>
@@ -1213,13 +1276,6 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/webmozarts/assert.git">webmozart/assert</a>
-    </td>
-    <td>库</td>
-    <td>用于验证方法输入/输出的断言，带有很好的错误消息。</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/webonyx/graphql-php.git">webonyx/graphql-php</a>
     </td>
     <td>库</td>
@@ -1255,6 +1311,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   </tr>
   <tr>
     <td>
+      paypal/module-braintree-gift-card
+    </td>
+    <td>magento2模块</td>
+    <td>不适用</td>
+  </tr>
+  <tr>
+    <td>
       paypal/module-braintree-gift-card-account
     </td>
     <td>magento2模块</td>
@@ -1270,6 +1333,13 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
   <tr>
     <td>
       paypal/module-braintree-graph-ql
+    </td>
+    <td>magento2模块</td>
+    <td>不适用</td>
+  </tr>
+  <tr>
+    <td>
+      paypal/module-braintree-reward
     </td>
     <td>magento2模块</td>
     <td>不适用</td>
@@ -1342,7 +1412,7 @@ magento/product-enterprise-edition: >=2.4.7 <2.4.8
       paypal/module-braintree-core
     </td>
     <td>magento2模块</td>
-    <td>从Gene Commerce为PayPal提供的MagentoBraintree2.2.0模块创建分支。</td>
+    <td>从Gene Commerce为PayPal撰写的Magento Braintree 2.2.0模块创建分支。</td>
   </tr>
   </tbody>
 </table>
