@@ -2,11 +2,11 @@
 title: Commerce的云修补程序
 description: 请参阅云修补程序包的最新改进列表。
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-02-06T00:00:00Z
+last-substantial-update: 2025-04-15T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: 4c8da3e40561a43674906cdf7f461bbcb1066c30
+source-git-commit: cebf68dfc1722a055a6217fa50552116d216d579
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2372'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,13 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 <!--Add release notes below-->
 
-## v1.1.4 {#latest}
+## v1.1.5 {#latest}
+
+发行日期： 2025年4月15日
+
+- ![新图标](../../assets/new.svg) **已添加B2B 1.5.2**&#x200B;的修补程序 — 修复了ACP2E-3833与B2B模块1.5.2和MariaDB 10.6<!-- MCLOUD-13605	-->的问题
+
+## v1.1.4
 
 发行日期： 2025年2月13日
 
