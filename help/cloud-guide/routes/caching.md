@@ -2,9 +2,10 @@
 title: 缓存
 description: 了解如何在云基础架构环境中为Adobe Commerce启用缓存。
 feature: Cloud, Cache, Routes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e73c36d6-9a58-45c0-9220-86074c1f46f0
+source-git-commit: a1ed2818cbaf5adf8b673df0ee9b9218e6f700a2
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
@@ -130,7 +131,7 @@ cache:
 
 Cookie具有以下限制：
 
-- 您可以在系统中设置最多&#x200B;**50个Cookie**。 否则，应用程序会引发`Unable to send the cookie. Maximum number of cookies would be exceeded`异常。
+- 系统中设置的最大值为&#x200B;**50 Cookie**。 否则，应用程序会引发`Unable to send the cookie. Maximum number of cookies would be exceeded`异常。 若要将Cookie数量增加到200，请使用[Quality Patches Tool](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/tools/quality-patch-tool)应用[MDVA-12304修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html)。
 - Cookie最大大小为&#x200B;**4096字节**。 否则，应用程序会引发`Unable to send the cookie. Size of '%name' is %size bytes`异常。
 
 ### `default_ttl`
