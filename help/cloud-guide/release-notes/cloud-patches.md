@@ -2,11 +2,11 @@
 title: Commerce的云修补程序
 description: 请参阅云修补程序包的最新改进列表。
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-04-15T00:00:00Z
+last-substantial-update: 2025-04-24T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: cebf68dfc1722a055a6217fa50552116d216d579
+source-git-commit: db8d20cdf999657c059202131111e71faf50b8e9
 workflow-type: tm+mt
-source-wordcount: '2372'
+source-wordcount: '2402'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,13 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 <!--Add release notes below-->
 
-## v1.1.5 {#latest}
+## v1.1.6 {#latest}
+
+发行日期： 2025年4月24日
+
+- ![新图标](../../assets/new.svg) **已将Commerce 2.4.4的修补程序更新为2.4.7** — 这是在1.1.4<!-- MCLOUD-13240 -->中发布的[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)的更新修补程序
+
+## v1.1.5
 
 发行日期： 2025年4月15日
 

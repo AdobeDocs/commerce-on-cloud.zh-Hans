@@ -1,19 +1,19 @@
 ---
 title: ECE-Tools发行说明
-description: 查看ECE-Tools包的最新改进列表。
+description: 请参阅ECE-Tools软件包的最新改进列表。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-09T00:00:00Z
+last-substantial-update: 2024-04-24T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 933e0c1b8bfbafeb6a477ec7bba7dcf7667dc6ec
+source-git-commit: dff5792f310382eb97c9595da08faac90e602126
 workflow-type: tm+mt
-source-wordcount: '3092'
+source-wordcount: '3117'
 ht-degree: 0%
 
 ---
 
 # ECE-Tools发行说明
 
-[ece-tools](https://github.com/magento/ece-tools)包是一组脚本和工具，旨在管理和部署云项目。 这些发行说明介绍了此包的最新改进，此程序包是[适用于Commerce的Cloud Tools Suite](cloud-tools-suite.md)的一部分。
+[ece-tools](https://github.com/magento/ece-tools)包是一组用于管理和部署云项目的脚本和工具。 这些发行说明介绍了此包的最新改进，此包是[适用于Commerce的Cloud Tools Suite](cloud-tools-suite.md)的一部分。
 
 >[!NOTE]
 >
@@ -28,7 +28,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.3 {#latest}
+## v2002.2.4 {#latest}
+
+发行日期： 2025年4月24日
+
+- ![修复图标](../../assets/fix.svg) **适用于2.4.4/2.4.5**&#x200B;的Opensearch2 — 修复了与Adobe Commerce版本2.4.4/2.4.5.<!-- MCLOUD-13607 -->中支持`opensearch2`相关的问题
+
+## v2002.2.3
 
 发行日期： 2025年4月9日
 
@@ -60,7 +66,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **MariaDB 11.4** — 已添加MariaDB 11.4的支持。
 - ![修复图标](../../assets/fix.svg) **重构的代码** — 已删除对旧PHP版本7.4、7.3、7.2和相关库的支持。<!-- MCLOUD-9278 -->
-- ![修复图标](../../assets/fix.svg) **升级的Monolog版本** — 添加了对Monolog 3.6的支持。<!-- MCLOUD-12855 -->
+- ![修复图标](../../assets/fix.svg) **升级了单色版本** — 添加了对单色版本3.6的支持。<!-- MCLOUD-12855 -->
 - ![修复图标](../../assets/fix.svg) **RabbitMQ、MariaDB和PHP的验证器** — 修复了生成有关错误服务版本的误导性消息的验证器。
 
 ## v2002.1.19
@@ -109,11 +115,11 @@ ht-degree: 0%
 
 ## v2002.1.13
 
-发行日期：2022年10月27日
+发行日期： 2022年10月27日
 
-- ![新建图标](../../assets/new.svg) **添加了对Adobe Commerce的Adobe I/O事件的支持**。 扩展开发人员现在可以使用[Adobe I/O事件](https://developer.adobe.com/events/docs/)框架将Commerce事件信息从Cloud实例发送到其为[AdobeApp Builder](https://developer.adobe.com/app-builder/docs/overview/)编写的应用程序中。 适用于Adobe Commerce的Adobe I/O事件处于合作伙伴预览中。<!-- CEXT-932 -->
-- ![新图标](../../assets/new.svg) **OPcache配置的验证程序** — 已添加验证程序，以检查已排除路径的OPcache配置。<!-- MCLOUD-9485 -->
-- ![修复图标](../../assets/fix.svg) **修复了GraphQL缓存配置的问题** — 现在，ECE-Tools在`app/etc/env.php`文件的`cache`配置中保留GraphQL `id_salt`值。<!-- MCLOUD-9486 -->
+- ![新图标](../../assets/new.svg) **已添加对Adobe Commerce的Adobe I/O Events的支持**。 扩展开发人员现在可以使用[Adobe I/O Events](https://developer.adobe.com/events/docs/)框架将云实例中的Commerce事件信息发送到其为[Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/)编写的应用程序。 适用于Adobe Commerce的Adobe I/O Events在“合作伙伴预览”中。<!-- CEXT-932 -->
+- ![新图标](../../assets/new.svg) **OPcache配置的验证器** — 已添加验证器以检查排除路径的OPcache配置。<!-- MCLOUD-9485 -->
+- ![修复图标](../../assets/fix.svg) **修复了GraphQL缓存配置的问题** — 现在，ECE-Tools在`app/etc/env.php`文件中保留`cache`配置中的GraphQL `id_salt`值。<!-- MCLOUD-9486 -->
 
 ## v2002.1.12
 
@@ -155,7 +161,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **备用转储位置** — 添加了`--dump-directory`选项，以便您可以为数据库转储选择目标目录。 现在`/app/var/dump-main`是数据库转储的默认目标目录。 请参阅[备份管理：转储数据库](../storage/database-dump.md)<!-- MCLOUD-8063 -->
 - ![修复图标](../../assets/fix.svg) **更新单一日志** — 已将`monolog`包所需的最低版本更新为`^2.3`。<!-- ACMP-1263 -->
-- ![修复图标](../../assets/fix.svg) **更新Symfony** — 已更新Symfony依赖项，使其与Adobe Commerce 2.4.4兼容。<!-- ACMP-1533 -->
+- ![修复图标](../../assets/fix.svg) **更新Symfony** — 已更新Symfony依赖项以便与Adobe Commerce 2.4.4兼容。<!-- ACMP-1533 -->
 - ![修复图标](../../assets/fix.svg) **功能/解决自动加载** — 修复了部署到集成环境并看到`CRITICAL: [9] Required configuration is missed in autoload section of composer.json file.`错误时的问题。<!-- https://github.com/magento/ece-tools/pull/799 -->
 
 ## v2002.1.7
@@ -204,9 +210,9 @@ ht-degree: 0%
 
 - ![修复图标](../../assets/fix.svg) **内存限制和命令** — 修复了当`cloud.log`文件的大小超过PHP memory_limit时，`php vendor/bin/ece-tools`命令无法运行的问题。 现在，我们只从日志文件读取较小的数据子集，而不是将整个`cloud.log`文件读入内存。<!--MCLOUD-7275--><!--MCLOUD-7400-->
 
-- ![修复图标](../../assets/fix.svg) **自定义数据库连接** — 修复了为`DATABASE_CONFIGURATION`定义的自定义数据库连接未使用的`.magento.env.yaml`配置问题。 未将连接设置添加到`app/etc/env.php`。<!--MCLOUD-7426-->
+- ![修复图标](../../assets/fix.svg) **自定义数据库连接** — 修复了未使用为`DATABASE_CONFIGURATION`定义的自定义数据库连接的`.magento.env.yaml`配置问题。 未将连接设置添加到`app/etc/env.php`.<!--MCLOUD-7426-->
 
-- ![修复图标](../../assets/fix.svg) **空错误日志** — 修复了在`cloud.error.log`为空时导致部署失败的问题。<!--MCLOUD-7296-->
+- ![修复图标](../../assets/fix.svg) **空错误日志** — 修复了`cloud.error.log`为空时导致部署失败的问题。<!--MCLOUD-7296-->
 
 - ![修复图标](../../assets/fix.svg) **MariaDB 10.3验证** — 修复了Adobe Commerce 2.3.6-p1的MariaDB 10.3验证。<!--MCLOUD-7416-->
 
@@ -242,11 +248,11 @@ ht-degree: 0%
 
 - ![修复图标](../../assets/fix.svg)修复了Redis、RabbitMQ和MySQL服务的验证，以确保这些版本与Adobe Commerce版本兼容。 这些服务的有效版本现在写入`cloud.log`.<!--MCLOUD-7098-->
 
-- ![修复图标](../../assets/fix.svg) 更新了 以 `cloud.log` 包括在缓存预热期间发送请求的并发请求限制。 此值在 [部署后变量WARM_UP_CONCURRENCY](../environment/variables-post-deploy.md#warm_up_concurrency) 配置。<!--MCLOUD-5563-->
+- ![修复图标](../../assets/fix.svg)已更新`cloud.log`以包含在缓存预热期间发送请求的并发请求限制。 此值在[WARM_UP_CONCURRENCY](../environment/variables-post-deploy.md#warm_up_concurrency)部署后变量中进行配置。<!--MCLOUD-5563-->
 
-**CLI 命令更新** —
+**CLI命令更新**—
 
-- ![新图标](../../assets/new.svg) 添加了 CLI 命令 （`cloud:config:create` 和 `cloud:config:update`），以使用可包含一个或多个生成、部署和部署后变量的配置来创建和更新 `.magento.env.yaml` 文件。 请参阅 [从 CLI](../environment/configure-env-yaml.md#create-configuration-file-from-cli) 创建配置文件。<!--MCLOUD-7072-->
+- ![新图标](../../assets/new.svg)添加了CLI命令（`cloud:config:create`和`cloud:config:update`），用于创建和更新`.magento.env.yaml`文件，其配置可以包括一个或多个生成、部署和部署后变量。 请参阅[从CLI创建配置文件](../environment/configure-env-yaml.md#create-configuration-file-from-cli)。<!--MCLOUD-7072-->
 
 **环境变量更新**—
 
@@ -254,7 +260,7 @@ ht-degree: 0%
 
 ## v2002.1.2
 
-发布日期：2020 年 8 月 5 日
+发行日期： 2020年8月5日
 
 **验证和日志改进**—
 
@@ -300,17 +306,17 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **CLI命令更新**—
 
-   - ![新图标](../../assets/new.svg)已使用更详细的日志记录选项更新以下CLI命令：
+   - ![新图标](../../assets/new.svg)更新了以下CLI命令，其中包含用于更详细日志记录的选项：
 
       - `app:config:dump`
       - `app:config:import`
       - `module:enable`
 
-     每次调用的日志记录级别由`.magento.env.yaml`文件中[`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands)变量的配置决定。<!--MCLOUD-3503-->
+     每个调用的日志记录级别由`.magento.env.yaml`文件中[`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands)变量的配置决定。<!--MCLOUD-3503-->
 
-- ![新建图标](../../assets/new.svg) **验证改进**—
+- ![新图标](../../assets/new.svg) **验证改进**—
 
-   - ![新建图标](../../assets/new.svg) **Elasticsearch7.x兼容性检查** — 更新了Elasticsearch验证以进行Elasticsearch7.x软件兼容性检查。<!--MCLOUD-5542-->
+   - ![新图标](../../assets/new.svg) **Elasticsearch 7.x兼容性检查** — 更新了Elasticsearch验证以进行Elasticsearch 7.x软件兼容性检查。<!--MCLOUD-5542-->
 
    - ![新图标](../../assets/new.svg) **更新了服务版本和EOL验证检查** — 更新了验证以根据Adobe Commerce 2.4检查已安装的服务版本。要求。<!--MCLOUD-6144-->
 
@@ -364,15 +370,15 @@ ht-degree: 0%
 
    - ![新图标](../../assets/new.svg)现在您可以使用XML配置文件自定义生成、部署和部署后进程以覆盖或自定义默认配置。
 
-   - ![新图标](../../assets/new.svg) **已在`.magento.app.yaml`**&#x200B;中更改`hooks`配置 — 我们更新了`hooks`配置格式以支持基于方案的部署。 早期 ECE-Tools 2002.0.x 版本中的旧格式仍受支持。 但是，必须更新到新格式才能使用基于方案的部署功能。 请参阅 [基于方案的部署](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks)。
+   - ![新图标](../../assets/new.svg) **已在`.magento.app.yaml`**&#x200B;中更改`hooks`配置 — 我们更新了`hooks`配置格式以支持基于方案的部署。 旧版ECE-Tools 2002.0.x仍然受支持。 但是，必须更新为新格式才能使用基于场景的部署功能。 请参阅[基于方案的部署](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks)。
 
 >[!NOTE]
 >
->在更新到 ECE-Tools 版本 2002.1.0 之前，请查看向后不兼容的 [更改](backward-incompatible-changes.md) ，以了解可能需要更新云基础架构上的 Adobe Commerce 项目配置或流程的更改。
+>在更新到ECE-Tools版本2002.1.0之前，请向后查看[   不兼容的更改](backward-incompatible-changes.md)，以了解可能需要您   在云基础架构项目配置或流程上更新Adobe Commerce。
 
 - ![新图标](../../assets/new.svg) **服务更新**—
 
-   - ![新图标](../../assets/new.svg) 添加了对 PHP 7.3 的支持。<!--MAGECLOUD-4022-->
+   - ![新图标](../../assets/new.svg)添加了对PHP 7.3.<!--MAGECLOUD-4022-->的支持
 
    - ![新图标](../../assets/new.svg)已添加对RabbitMQ 3.8.<!--MAGECLOUD-4674-->的支持
 
@@ -382,7 +388,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有关云基础架构上的 Adobe Commerce 中使用的服务及其版本与云模板的兼容性的列表，请参阅 [服务版本](../services/services-yaml.md#service-versions) 。
+>请参阅[服务版本](../services/services-yaml.md#service-versions)，以获取云基础架构上Adobe Commerce中使用的服务及其版本与Cloud模板的兼容性列表。
 
 - ![新图标](../../assets/new.svg) **环境变量更新**—
 
