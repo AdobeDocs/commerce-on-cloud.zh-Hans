@@ -1,5 +1,5 @@
 ---
-source-git-commit: 713008d26d05f05e3e39e33c0d0df766f4dbe0b0
+source-git-commit: 2207508cf769b712705de5d41e0876ed60e5f614
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 3%
@@ -7,7 +7,7 @@ ht-degree: 3%
 ---
 # ece-tools
 
-**版本**： 2002.2.3
+**版本**： 2002.2.4
 
 此引用包含通过`ece-tools`命令行工具提供的34个命令。
 在云基础架构上的Adobe Commerce中使用`ece-tools list`命令自动生成初始列表。
