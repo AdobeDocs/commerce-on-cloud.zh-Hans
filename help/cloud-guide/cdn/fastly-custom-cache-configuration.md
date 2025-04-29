@@ -2,9 +2,10 @@
 title: 自定义缓存配置
 description: 了解如何在Fastly服务设置完成后查看和自定义缓存配置设置。
 feature: Cloud, Configuration, Iaas, Cache
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
+source-git-commit: dcf585e25a4b06ff903642e42e72a71820bad008
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1857'
 ht-degree: 0%
 
 ---
@@ -13,11 +14,11 @@ ht-degree: 0%
 
 在暂存环境和生产环境中设置和测试Fastly服务后，查看和自定义缓存配置设置。 例如，您可以更新设置以允许TLS将HTTP请求重定向到Fastly，更新清除设置以及启用基本身份验证以在开发期间对您的网站进行密码保护。
 
-以下部分提供了配置某些缓存设置的概述和说明。 在[Fastly CDN Module for Module 2](https://github.com/fastly/fastly-magento2/tree/master/Documentation)文档中查找有关可用Magento选项的其他信息。
+以下部分提供了配置某些缓存设置的概述和说明。 在[Fastly CDN Module for Magento 2](https://github.com/fastly/fastly-magento2/tree/master/Documentation)文档中查找有关可用配置选项的其他信息。
 
 ## 强制TLS
 
-Fastly提供了用于将未加密请求(HTTP)重定向到Fastly的&#x200B;_强制TLS_&#x200B;选项。 为您的暂存或生产环境配置了[有效的SSL/TLS证书](fastly-configuration.md#provision-ssltls-certificates)后，您可以更新存储的Fastly配置以启用“强制TLS”选项。 有关Magento2 _的文档，请参阅_ Fastly CDN模块中的Fastly [Force TLS指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)。
+Fastly提供了用于将未加密请求(HTTP)重定向到Fastly的&#x200B;_强制TLS_&#x200B;选项。 为您的暂存或生产环境配置了[有效的SSL/TLS证书](fastly-configuration.md#provision-ssltls-certificates)后，您可以更新存储的Fastly配置以启用“强制TLS”选项。 请参阅Magento 2 _的_ Fastly CDN模块中的Fastly [Force TLS指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)文档。
 
 >[!NOTE]
 >
@@ -30,6 +31,8 @@ Fastly服务配置为发送给管理员的HTTPS请求指定180秒的默认超时
 要完成耗时超过3分钟的批量操作，请更改&#x200B;_管理员路径超时_ value_以防止503错误。
 
 >[!NOTE]
+>
+>如果您已在&#x200B;**商店** > **配置** > **高级** > **管理员** > **管理员基础URL**&#x200B;中的&#x200B;**自定义管理路径**&#x200B;字段中指定了自定义管理路径终结点，则还需要将该环境中的[ADMIN_URL变量](../environment/variables-admin.md#change-the-admin-url)设置为相同的值。 如果设置不同，则超时不起作用。
 >
 >要扩展Fastly UI中除管理员以外的Fastly超时参数，请参阅[增加长作业的超时](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-INCREASE-TIMEOUTS-LONG-JOBS.md)。
 
@@ -51,7 +54,7 @@ Fastly检索用于从`app/etc/env.php`配置文件生成VCL文件的管理员路
 
 ## 配置清除选项
 
-Fastly在“Magento缓存管理”页面上提供了多种类型的清除选项，包括用于清除产品类别、产品资源和内容的选项。 启用后，Fastly会监视事件以自动清除这些缓存。 如果禁用清除选项，则可以在通过“高速缓存管理”页完成更新后手动清除快速高速缓存。
+Fastly在Magento缓存管理页面上提供了多种类型的清除选项，包括用于清除产品类别、产品资源和内容的选项。 启用后，Fastly会监视事件以自动清除这些缓存。 如果禁用清除选项，则可以在通过“高速缓存管理”页完成更新后手动清除快速高速缓存。
 
 清除选项包括：
 
@@ -218,4 +221,4 @@ Fastly支持自定义版本的Varnish Configuration Language (VCL)以自定义Fa
 
    启用维护模式后，除来自`maint_allowlist` ACL中IP地址的请求外，所有通信都将被阻止。 您可以更新`maint_allowlist`以更改ACL中的IP地址。
 
-   有关详细的配置说明，请参阅Magento2模块的Fastly CDN文档中的[维护模式指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md)。
+   有关详细的配置说明，请参阅Magento 2模块的Fastly CDN文档中的[维护模式指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md)。
