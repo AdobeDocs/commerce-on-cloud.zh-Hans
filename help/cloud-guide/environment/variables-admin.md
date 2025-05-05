@@ -18,7 +18,7 @@ ht-degree: 0%
 
 您可以在安装Commerce期间使用下表中的管理员变量覆盖管理员用户凭据。
 
-如果要在安装后更改值，请使用SSH连接到您的环境，并使用Adobe Commerce CLI [`admin:user`命令](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html)创建或编辑Admin用户凭据。
+如果要在安装后更改值，请使用SSH连接到您的环境，并使用Adobe Commerce CLI [`admin:user`命令](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=zh-Hans)创建或编辑Admin用户凭据。
 
 | 变量 | 默认 | 描述 |
 | -------------- | --------------------------- | ----------- |

@@ -264,6 +264,6 @@ elasticsearch:
 
 请参阅以下Adobe Commerce支持文章，以获取有关Elasticsearch问题疑难解答的帮助：
 
-- [已配置Elasticsearch5，但搜索页未加载，并显示“Fielddata已禁用……”错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html)
+- [已配置Elasticsearch5，但搜索页未加载，并显示“Fielddata已禁用……”错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html?lang=zh-Hans)
 - Adobe Commerce疑难解答程序中的[Elasticsearch](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-in-magento-troubleshooter.html)
-- [Elasticsearch索引状态为`yellow`或`red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html)
+- [Elasticsearch索引状态为`yellow`或`red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html?lang=zh-Hans)

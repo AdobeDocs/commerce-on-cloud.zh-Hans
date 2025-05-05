@@ -171,7 +171,7 @@ mysql:
 
 ## 服务版本
 
-云基础架构上Adobe Commerce的服务版本和兼容性支持取决于在云基础架构上部署和测试的版本，有时与Adobe Commerce内部部署支持的版本不同。 有关Adobe已使用特定Adobe Commerce和Magento Open Source版本测试的第三方软件依赖项的列表，请参阅&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)。
+云基础架构上Adobe Commerce的服务版本和兼容性支持取决于在云基础架构上部署和测试的版本，有时与Adobe Commerce内部部署支持的版本不同。 有关Adobe已使用特定Adobe Commerce和Magento Open Source版本测试的第三方软件依赖项的列表，请参阅&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)。
 
 ### 软件EOL检查
 

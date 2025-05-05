@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->对于云基础架构项目上的Adobe Commerce，在`routes.yaml`文件中配置大量非正则表达式重定向和重写可能会导致性能问题。 如果`routes.yaml`文件大于或等于32 KB，请卸载非正则表达式重定向并重新写入Fastly。 查看&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[卸载非正则表达式重定向到Fastly，而不是Nginx（路由）](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html)。
+>对于云基础架构项目上的Adobe Commerce，在`routes.yaml`文件中配置大量非正则表达式重定向和重写可能会导致性能问题。 如果`routes.yaml`文件大于或等于32 KB，请卸载非正则表达式重定向并重新写入Fastly。 查看&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[卸载非正则表达式重定向到Fastly，而不是Nginx（路由）](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html?lang=zh-Hans)。
 
 ## 全路径重定向
 

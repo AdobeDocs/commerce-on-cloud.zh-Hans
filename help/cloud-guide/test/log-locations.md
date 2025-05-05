@@ -78,7 +78,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >对于Pro Staging和Pro Production环境，为具有固定文件名的日志文件启用自动日志旋转、压缩和删除。 每种日志文件类型都有一个旋转模式和生命周期。
 >有关环境的日志轮换和压缩日志的生命周期的完整详细信息，请参见： `/etc/logrotate.conf`和`/etc/logrotate.d/<various>`。
->对于Pro Staging和Pro Production环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以请求更改日志轮换配置。
+>对于Pro Staging和Pro Production环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以请求更改日志轮换配置。
 
 >[!TIP]
 >
@@ -189,7 +189,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-大多数错误消息都包含说明和建议的操作。 使用ECE-Tools[&#128279;](../dev-tools/error-reference.md)的错误消息引用查找错误代码以获得进一步的指导。 有关进一步指导，请使用[Adobe Commerce部署疑难解答程序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)。
+大多数错误消息都包含说明和建议的操作。 使用ECE-Tools[&#128279;](../dev-tools/error-reference.md)的错误消息引用查找错误代码以获得进一步的指导。 有关进一步指导，请使用[Adobe Commerce部署疑难解答程序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=zh-Hans)。
 
 ## 应用程序日志
 

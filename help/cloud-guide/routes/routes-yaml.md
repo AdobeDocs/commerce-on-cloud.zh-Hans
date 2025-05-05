@@ -167,7 +167,7 @@ https://www.example.com/blog
       upstream: "mymagento:http"
   ```
 
-- 对于暂存和生产环境，请从管理UI中启用[强制Fastly上的TLS](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html)选项。 使用此选项时，Fastly处理到HTTPS的重新定向，因此您不必更新`routes.yaml`配置。
+- 对于暂存和生产环境，请从管理UI中启用[强制Fastly上的TLS](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html?lang=zh-Hans)选项。 使用此选项时，Fastly处理到HTTPS的重新定向，因此您不必更新`routes.yaml`配置。
 
 ## 路由选项
 

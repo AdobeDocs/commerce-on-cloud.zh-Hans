@@ -31,7 +31,7 @@ ht-degree: 0%
 
 有关多个域或唯一域的进一步指导，请参阅&#x200B;_Commerce on Cloud Infrastructure_&#x200B;指南中的[设置多个网站或商店](../cloud-guide/store/multiple-sites.md)。
 
-如果您现有的Fastly帐户链接了您Adobe Commerce网站上使用的相同顶点和子域，请参阅[多个Fastly帐户和分配的域](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}。
+如果您现有的Fastly帐户链接了您Adobe Commerce网站上使用的相同顶点和子域，请参阅[多个Fastly帐户和分配的域](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}。
 
 ## 事务性电子邮件域
 

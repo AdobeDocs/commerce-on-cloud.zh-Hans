@@ -66,9 +66,9 @@ Adobe会定期测试核心应用程序代码是否存在安全漏洞。 为客�
 - OWASPZAP
 - 和SqlMap
 
-每两周会使用这些工具扫描整个代码库。 通过直接电子邮件、应用程序中的通知以及[安全中心](https://helpx.adobe.com/security.html)中的通知，客户将收到有关安全修补程序的通知。
+每两周会使用这些工具扫描整个代码库。 通过直接电子邮件、应用程序中的通知以及[安全中心](https://helpx.adobe.com/cn/security.html)中的通知，客户将收到有关安全修补程序的通知。
 
-客户必须确保根据PCI准则在发布后30天内将这些修补程序应用到其定制应用程序中。 Adobe还提供[安全扫描工具](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)，使商家能够定期监视其网站，并接收有关已知安全风险、恶意软件和未经授权的访问的更新。 安全扫描工具是一项免费服务，可在任何版本的Adobe Commerce上运行。
+客户必须确保根据PCI准则在发布后30天内将这些修补程序应用到其定制应用程序中。 Adobe还提供[安全扫描工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-scan)，使商家能够定期监视其网站，并接收有关已知安全风险、恶意软件和未经授权的访问的更新。 安全扫描工具是一项免费服务，可在任何版本的Adobe Commerce上运行。
 
 为了鼓励安全研究人员识别和报告漏洞，除了内部测试之外，Adobe Commerce还设立了[漏洞奖励计划](https://hackerone.com/magento)。 此外，如果需要，还向客户提供了应用程序的完整源代码以供他们自行审查。
 
@@ -108,7 +108,7 @@ GDPR要求收集的任何个人身份信息（例如姓名、种族和出生日�
 
 >[!NOTE]
 >
->本页概述了有关GDPR的考虑事项。 有关Adobe Commerce如何存储个人信息的详细信息，请参阅&#x200B;_[安全和合规性指南](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview)_。 要确定您的企业应如何遵守任何法律义务，请咨询您的法律顾问或参阅[正式文本](https://eur-lex.europa.eu/eli/reg/2016/679/oj)。
+>本页概述了有关GDPR的考虑事项。 有关Adobe Commerce如何存储个人信息的详细信息，请参阅&#x200B;_[安全和合规性指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/security-and-compliance/overview)_。 要确定您的企业应如何遵守任何法律义务，请咨询您的法律顾问或参阅[正式文本](https://eur-lex.europa.eu/eli/reg/2016/679/oj)。
 
 ## 备份
 

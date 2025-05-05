@@ -9,8 +9,8 @@ ht-degree: 0%
 
 本网站包含有关云基础架构上的Commerce的最新开发人员文档。
 
-- 云基础架构上的[Commerce指南](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html)
-- 在云基础架构上[开始使用Commerce](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
+- 云基础架构上的[Commerce指南](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=zh-Hans)
+- 在云基础架构上[开始使用Commerce](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=zh-Hans)
 
 ## Adobe打开Source行为准则
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ### 次要更改
 
-如果您要提供较小的更新，请打开该文章，然后单击&#x200B;**编辑**&#x200B;链接，该链接会将您转到文章的GitHub源。 使用GitHub UI进行更新。 请参阅常规的[Adobe文档参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)。
+如果您要提供较小的更新，请打开该文章，然后单击&#x200B;**编辑**&#x200B;链接，该链接会将您转到文章的GitHub源。 使用GitHub UI进行更新。 请参阅常规的[Adobe文档参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hans)。
 
 您为此存储库中的文档和代码示例提交的小幅度更正或说明受Adobe使用条款的约束。
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 社区参与者可以使用GitHub UI进行基本编辑或创建存储库分支以进行重大更改。
 
-有关详细信息，请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)。
+有关详细信息，请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hans)。
 
 ## Markdown
 

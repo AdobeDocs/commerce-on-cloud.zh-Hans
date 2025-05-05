@@ -26,7 +26,7 @@ ht-degree: 0%
 
 使用&#x200B;_配置环境_&#x200B;视图中的&#x200B;**[!UICONTROL Outgoing emails]**&#x200B;切换启用或禁用电子邮件支持。
 
-如果必须在专业生产或暂存环境中禁用或重新启用传出电子邮件，则可以提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)。
+如果必须在专业生产或暂存环境中禁用或重新启用传出电子邮件，则可以提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)。
 
 >[!TIP]
 >

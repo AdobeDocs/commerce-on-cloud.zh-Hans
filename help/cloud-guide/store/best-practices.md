@@ -11,17 +11,17 @@ ht-degree: 0%
 
 # 存储配置的最佳实践
 
-有关配置您的商店、站点和网站的详细信息，您可能需要查看[Adobe Commerce用户指南](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)。 此页面提供了用于配置商店、网站等的最佳实践、有用信息和指南，以及随着时间推移和在不同版本之间发布的其他内容。
+有关配置您的商店、站点和网站的详细信息，您可能需要查看[Adobe Commerce用户指南](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html?lang=zh-Hans)。 此页面提供了用于配置商店、网站等的最佳实践、有用信息和指南，以及随着时间推移和在不同版本之间发布的其他内容。
 
 ## 营销活动和促销
 
 此信息对于云基础架构2.1.X和2.2.X上的Adobe Commerce很有帮助。
 
-要创建营销活动和促销活动，请在[内容暂存](https://experienceleague.adobe.com/docs/commerce-admin/content-design/staging/content-staging.html)中创建选项和设置。 利用此功能，您可以先创建和预览营销活动，然后再将其公开发布给客户销售。 以下信息提供了有用的信息。 有关确切说明，请参阅链接的《Adobe Commerce用户指南》内容。
+要创建营销活动和促销活动，请在[内容暂存](https://experienceleague.adobe.com/docs/commerce-admin/content-design/staging/content-staging.html?lang=zh-Hans)中创建选项和设置。 利用此功能，您可以先创建和预览营销活动，然后再将其公开发布给客户销售。 以下信息提供了有用的信息。 有关确切说明，请参阅链接的《Adobe Commerce用户指南》内容。
 
 _促销活动_&#x200B;是季节性销售、新产品系列等的营销活动。 每个促销活动均可包括自定义主题、内容块、用于控制和显示内容的构件以及带价格规则的相关促销活动。 由于活动的广泛性质，您可以通过内容暂存创建具有开始和结束日期的营销活动。
 
-_促销活动_&#x200B;提供折扣、一次性优惠、优惠券、首次购买奖励等等。 您将这些促销活动创建为&#x200B;_价格规则_，该规则设置了促销条款、折扣和选项以鼓励客户购买。 您可以在[购物车](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html)或[目录](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog.html)上创建价格规则，并添加横幅、奖励积分等更多选项。 您可以计划促销活动，并为新产品线或季节性销售等主要活动应用价格规则。
+_促销活动_&#x200B;提供折扣、一次性优惠、优惠券、首次购买奖励等等。 您将这些促销活动创建为&#x200B;_价格规则_，该规则设置了促销条款、折扣和选项以鼓励客户购买。 您可以在[购物车](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html?lang=zh-Hans)或[目录](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog.html?lang=zh-Hans)上创建价格规则，并添加横幅、奖励积分等更多选项。 您可以计划促销活动，并为新产品线或季节性销售等主要活动应用价格规则。
 
 以下提示可帮助创建、更新和管理促销和活动：
 
@@ -34,7 +34,7 @@ _促销活动_&#x200B;提供折扣、一次性优惠、优惠券、首次购买�
 
 此信息对于云基础架构2.1.X和2.2.X上的Adobe Commerce很有帮助。
 
-通常，您可以通过Admin的&#x200B;**Products** > **Catalogs**&#x200B;区域为产品设置[高级定价](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/pricing/pricing-advanced.html)。 利用暂存内容，完成一些额外的步骤以将定价添加到促销和促销活动。
+通常，您可以通过Admin的&#x200B;**Products** > **Catalogs**&#x200B;区域为产品设置[高级定价](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/pricing/pricing-advanced.html?lang=zh-Hans)。 利用暂存内容，完成一些额外的步骤以将定价添加到促销和促销活动。
 
 要编辑高级定价并更新内容暂存，请执行以下操作：
 
@@ -47,17 +47,17 @@ _促销活动_&#x200B;提供折扣、一次性优惠、优惠券、首次购买�
 1. 保存促销活动。 将创建一个不活动的初始营销活动。
 1. 您可以预览以复查促销活动的特殊价格、促销名称、正常价格和计划日期范围。
 
-有关其他步骤，您可以继续按照[计划更改目录价格规则](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes.html)的说明进行操作。 单击&#x200B;**下一步**&#x200B;逐步完成这些步骤。
+有关其他步骤，您可以继续按照[计划更改目录价格规则](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes.html?lang=zh-Hans)的说明进行操作。 单击&#x200B;**下一步**&#x200B;逐步完成这些步骤。
 
 ## 价格规则
 
 价格规则可以包括逻辑和条件，就像营销想象力一样无限。 一些受欢迎的示例包括“买一送一”、“买一送一”50%折扣、超过100美元的订单有25美元折扣等等。
 
-要创建价格规则，请参阅[Adobe Commerce用户指南](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create.html)。
+要创建价格规则，请参阅[Adobe Commerce用户指南](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create.html?lang=zh-Hans)。
 
 下面提供了一个为仅限于第一张订单的折扣创建价格规则的示例。 对于此折扣，您需要：
 
-* 创建一个价格规则，该规则包含[客户区段](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/segments/customer-segment-price-rule)，其条件为：订单总数小于1
+* 创建一个价格规则，该规则包含[客户区段](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/customers/segments/customer-segment-price-rule)，其条件为：订单总数小于1
 * 将此客户区段作为条件添加到购物车规则
 * 可选 — 添加条件和规则以将折扣应用于特定的SKU或产品类别以进行重点购买
 

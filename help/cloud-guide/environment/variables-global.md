@@ -177,7 +177,7 @@ stage:
 - **默认值**—_未设置_
 - **版本**—Adobe Commerce 2.1.4及更高版本
 
-使用`X_FRAME_CONFIGURATION`变量更改Adobe Commerce站点的[`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html)标头配置。 此配置控制浏览器如何呈现`<frame>`、`<iframe>`或`<object>`中的页面。 使用以下选项之一：
+使用`X_FRAME_CONFIGURATION`变量更改Adobe Commerce站点的[`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html?lang=zh-Hans)标头配置。 此配置控制浏览器如何呈现`<frame>`、`<iframe>`或`<object>`中的页面。 使用以下选项之一：
 
 - `DENY` — 页面无法显示在框架中。
 - `SAMEORIGIN`—(默认Adobe Commerce设置。) 页面只能在与页面本身同源的框架中显示。

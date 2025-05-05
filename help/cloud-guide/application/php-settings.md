@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # PHP设置
 
-您可以选择在`.magento.app.yaml`文件中运行的PHP[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)的版本：
+您可以选择在`.magento.app.yaml`文件中运行的PHP[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)的版本：
 
 ```yaml
 name: mymagento
@@ -63,7 +63,7 @@ realpath_cache_ttl = 7200
 
 >[!NOTE]
 >
->有关推荐的PHP配置设置列表，请参阅&#x200B;_安装指南_&#x200B;中的[必需的PHP设置](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)。
+>有关推荐的PHP配置设置列表，请参阅&#x200B;_安装指南_&#x200B;中的[必需的PHP设置](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=zh-Hans)。
 
 ### 检查自定义PHP设置
 
@@ -118,7 +118,7 @@ php -m
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-PHP模块要求与Adobe Commerce版本相关联。 请参阅[PHP要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)。
+PHP模块要求与Adobe Commerce版本相关联。 请参阅[PHP要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=zh-Hans)。
 
 ### 扩展支持
 
@@ -136,7 +136,7 @@ sourceguardian.restrict_unencoded = "1"
 
 请参阅SourceGuardian文档的[第3.5节](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf)。 _这是指向PDF_&#x200B;的链接。
 
-[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，以获得在所有生产环境和Pro暂存环境中安装这些PHP扩展的帮助。 包含更新的`.magento/services.yaml`文件、`.magento.app.yaml`文件（包含更新的PHP版本和任何其他PHP扩展名）。 对于实时生产环境的更改，您必须至少提供48小时的通知。 Cloud Infrastructure团队更新项目最多可能需要48小时。
+[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)，以获得在所有生产环境和Pro暂存环境中安装这些PHP扩展的帮助。 包含更新的`.magento/services.yaml`文件、`.magento.app.yaml`文件（包含更新的PHP版本和任何其他PHP扩展名）。 对于实时生产环境的更改，您必须至少提供48小时的通知。 Cloud Infrastructure团队更新项目最多可能需要48小时。
 
 >[!WARNING]
 >

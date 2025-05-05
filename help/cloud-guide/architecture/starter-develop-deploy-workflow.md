@@ -104,9 +104,9 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 有关配置的最佳信息，请查看Adobe Commerce文档和已安装的扩展。 以下是帮助您入门的一些链接和想法：
 
 - 针对云中的特定最佳实践，[存储配置的最佳实践](../store/best-practices.md)
-- [商店管理员访问权限、名称、语言、货币、品牌、网站、商店视图等的](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/store-details)基本配置
-- [主题](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu#design-features)，用于显示您的网站和存储（包括CSS和布局）的外观
-- [系统配置](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/guide-overview)，用于角色、工具、通知和数据库的加密密钥
+- [商店管理员访问权限、名称、语言、货币、品牌、网站、商店视图等的](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/setup/store-details)基本配置
+- [主题](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/content-design/content-menu#design-features)，用于显示您的网站和存储（包括CSS和布局）的外观
+- [系统配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/guide-overview)，用于角色、工具、通知和数据库的加密密钥
 - 扩展设置使用其文档
 
 除了商店设置之外，您还可以进一步配置多个站点和商店、配置的服务等。 请参阅[配置您的商店](../store/overview.md)。
@@ -162,9 +162,9 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 
 要帮助将生产数据导出为测试数据，以便在暂存和集成环境中使用，请执行以下操作：
 
-- [使用Adobe Commerce加密密钥导出客户的受保护备份并存储数据时，运行支持实用程序](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) CLI命令（推荐）
+- [使用Adobe Commerce加密密钥导出客户的受保护备份并存储数据时，运行支持实用程序](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=zh-Hans) CLI命令（推荐）
 
-- 用于生成和导出数据的[数据收集](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector)工具
+- 用于生成和导出数据的[数据收集](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/support#data-collector)工具
 
 要迁移此数据，请参阅[迁移和部署静态文件和数据](../deploy/staging-production.md#migrate-static-files)。
 
@@ -172,7 +172,7 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 
 >[!NOTE]
 >
->将数据推送到其他环境之前，应考虑清理您的数据。 您有几个选项，包括[使用支持实用程序](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html)或开发脚本以清除客户数据。
+>将数据推送到其他环境之前，应考虑清理您的数据。 您有几个选项，包括[使用支持实用程序](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=zh-Hans)或开发脚本以清除客户数据。
 
 >[!WARNING]
 >

@@ -27,7 +27,7 @@ Adobe Commerce中云基础架构上的环境包括带有应用程序、服务和
 
 ## Pro环境的配置更新
 
-对于云基础架构上的Adobe Commerce Pro暂存和生产环境，您可以更新本地开发环境中的许多配置选项，并提交更改以将其应用于这些环境。 但是，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以更新以下配置选项：
+对于云基础架构上的Adobe Commerce Pro暂存和生产环境，您可以更新本地开发环境中的许多配置选项，并提交更改以将其应用于这些环境。 但是，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以更新以下配置选项：
 
 - 在`.magento/services.yaml`文件中安装或更新服务。
 - 更改`.magento.app.yaml`文件中`mounts`和`disk`属性的配置。

@@ -40,7 +40,7 @@ hooks:
 
 >[!NOTE]
 >
->随着`ece-tools` 2002.1.x的发布，有新的[挂接配置](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html)格式。 仍支持`ece-tools` 2002.0.x版本的旧格式。 但是，必须更新为新格式才能使用基于场景的部署功能。
+>随着`ece-tools` 2002.1.x的发布，有新的[挂接配置](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=zh-Hans)格式。 仍支持`ece-tools` 2002.0.x版本的旧格式。 但是，必须更新为新格式才能使用基于场景的部署功能。
 
 ## 查看方案步骤
 

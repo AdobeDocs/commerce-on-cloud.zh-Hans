@@ -20,4 +20,4 @@ ht-degree: 0%
 + [登录到 [!DNL Cloud Console]](cloud-console.md)
 + [访问店面](access-storefront.md)
 + [准备开发](prepare-workspace.md)
-+ [返回到Cloud Infrastructure指南](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html)
++ [返回到Cloud Infrastructure指南](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=zh-Hans)

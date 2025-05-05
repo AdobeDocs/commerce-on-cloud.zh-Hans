@@ -57,7 +57,7 @@ ht-degree: 0%
 
 ## 云修补程序更改
 
-- **删除已下载的修补程序**- `magento/magento-cloud-patches`包捆绑了[软件下载](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html)页面中的所有可用修补程序，并在您部署到云时自动应用这些修补程序。 要防止升级到ECE-Tools 2002.1.0或更高版本后出现补丁程序冲突，请删除手动下载并添加到项目中的Adobe提供的任何补丁程序。
+- **删除已下载的修补程序**- `magento/magento-cloud-patches`包捆绑了[软件下载](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=zh-Hans)页面中的所有可用修补程序，并在您部署到云时自动应用这些修补程序。 要防止升级到ECE-Tools 2002.1.0或更高版本后出现补丁程序冲突，请删除手动下载并添加到项目中的Adobe提供的任何补丁程序。
 
 - **正在更新应用修补程序命令** — 我们将用于应用修补程序的命令从`vendor/bin/ece-tools`目录移动到`vendor/bin/ece-patches`目录。 如果使用此命令手动应用修补程序，请使用新路径。
 

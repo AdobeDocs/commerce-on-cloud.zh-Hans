@@ -19,7 +19,7 @@ ht-degree: 0%
 
 - [Adobe Commerce开发人员文档](https://developer.adobe.com/commerce/docs/) (Adobe Developer站点) — 开发、自定义、集成、扩展和使用高级功能
 
-- [Adobe Commerce文档](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League) — 规划、实施、运营、升级和维护您的Commerce项目
+- [Adobe Commerce文档](https://experienceleague.adobe.com/docs/commerce.html?lang=zh-Hans) (Adobe Experience League) — 规划、实施、运营、升级和维护您的Commerce项目
 
 >[!TIP]
 >

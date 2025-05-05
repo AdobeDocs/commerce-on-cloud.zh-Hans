@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->默认情况下，云项目上未启用MFA。 云基础架构项目Adobe Commerce的帐户所有者必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)才能启用它。 启用MFA后，所有用户必须在其Adobe Commerce上的云基础架构帐户中启用双重身份验证(TFA)，才能通过SSH访问项目环境。
+>默认情况下，云项目上未启用MFA。 云基础架构项目Adobe Commerce的帐户所有者必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)才能启用它。 启用MFA后，所有用户必须在其Adobe Commerce上的云基础架构帐户中启用双重身份验证(TFA)，才能通过SSH访问项目环境。
 
 ## 用于SSH访问的证书
 

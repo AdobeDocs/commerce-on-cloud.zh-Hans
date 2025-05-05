@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Variables属性
 
-您可以使用基于应用程序的环境变量来自定义存储配置。 这些变量使用特定的语法。 请参阅&#x200B;_配置指南_&#x200B;中的[覆盖配置设置](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html)。
+您可以使用基于应用程序的环境变量来自定义存储配置。 这些变量使用特定的语法。 请参阅&#x200B;_配置指南_&#x200B;中的[覆盖配置设置](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=zh-Hans)。
 
 `.magento.app.yaml`文件中包含的以下环境变量对于[!DNL Commerce]应用程序的特定版本是必需的。
 

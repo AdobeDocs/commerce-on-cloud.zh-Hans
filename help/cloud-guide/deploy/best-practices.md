@@ -61,7 +61,7 @@ ht-degree: 0%
 
 - **验证服务版本和关系以及连接能力**
 
-  验证应用程序可用的服务，并确保您使用的是最新的兼容版本。 有关推荐的版本，请参阅&#x200B;_安装指南_&#x200B;中的[服务关系](../services/services-yaml.md#service-relationships)和[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)。
+  验证应用程序可用的服务，并确保您使用的是最新的兼容版本。 有关推荐的版本，请参阅&#x200B;_安装指南_&#x200B;中的[服务关系](../services/services-yaml.md#service-relationships)和[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)。
 
 - **在部署到暂存和生产环境之前，在本地和集成环境中进行测试**
 
@@ -117,7 +117,7 @@ ht-degree: 0%
 此阶段构建代码库并在`.magento.app.yaml`的`build`部分中运行挂接。 默认的生成挂接是`php ./vendor/bin/ece-tools`命令，并执行以下操作：
 
 - 在`vendor/magento/ece-patches`中应用修补程序，在`m2-hotfixes`中应用项目特定的可选修补程序
-- 使用`bin/magento setup:di:compile`重新生成代码和[依赖项注入](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)配置（即`generated/`目录，包括`generated/code`和`generated/metapackage`）。
+- 使用`bin/magento setup:di:compile`重新生成代码和[依赖项注入](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/glossary)配置（即`generated/`目录，包括`generated/code`和`generated/metapackage`）。
 - 检查代码库中是否存在[`app/etc/config.php`](../store/store-settings.md)文件。 如果Adobe Commerce在构建阶段未检测到此文件并包含模块和扩展名的列表，则会自动生成此文件。 如果存在，则构建阶段将照常继续，使用GZIP压缩静态文件并进行部署，从而减少部署阶段的停机时间。 请参阅[生成选项](../environment/variables-build.md)，了解有关自定义或禁用文件压缩的信息。
 
 >[!WARNING]
@@ -144,7 +144,7 @@ ht-degree: 0%
 
 ### 阶段4：部署Slug和群集
 
-您的应用程序和所有[后端](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)服务预配，如下所示：
+您的应用程序和所有[后端](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/glossary)服务预配，如下所示：
 
 - 将每个服务挂载到容器中，如Web服务器、OpenSearch、[!DNL RabbitMQ]
 - 装载读写文件系统（装载在高可用分布式存储网格上）
@@ -170,13 +170,13 @@ ht-degree: 0%
 
 有两个部署挂钩。 `pre-deploy.php`挂接完成对生成挂接中生成的资源和代码进行必要的清理和检索。 `php ./vendor/bin/ece-tools deploy`挂接运行一系列命令和脚本：
 
-- 如果Adobe Commerce是&#x200B;**未安装**，则它随`bin/magento setup:install`一起安装，更新部署配置`app/etc/env.php`以及指定环境（如Redis和网站URL）的数据库。 **重要信息：**&#x200B;当您在安装程序期间完成[首次部署](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html)时，在所有环境中都安装和部署了Adobe Commerce。
+- 如果Adobe Commerce是&#x200B;**未安装**，则它随`bin/magento setup:install`一起安装，更新部署配置`app/etc/env.php`以及指定环境（如Redis和网站URL）的数据库。 **重要信息：**&#x200B;当您在安装程序期间完成[首次部署](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html?lang=zh-Hans)时，在所有环境中都安装和部署了Adobe Commerce。
 
 - 如果已安装Adobe Commerce **&#x200B;**，请执行任何必要的升级。 部署脚本运行`bin/magento setup:upgrade`以更新数据库架构和数据（在扩展或核心代码更新后必需），并更新环境的部署配置、`app/etc/env.php`和数据库。 最后，部署脚本清除Adobe Commerce缓存。
 
 - 脚本可以选择使用命令`magento setup:static-content:deploy`生成静态Web内容。
 
-- 为静态内容部署策略使用默认设置为`quick`的作用域（生成脚本中的`-s`标志）。 您可以使用环境变量[`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)自定义策略。 有关这些选项和功能的详细信息，请参阅[部署静态视图文件](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)的[静态文件部署策略](../deploy/static-content.md)和`-s`标志。
+- 为静态内容部署策略使用默认设置为`quick`的作用域（生成脚本中的`-s`标志）。 您可以使用环境变量[`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)自定义策略。 有关这些选项和功能的详细信息，请参阅[部署静态视图文件](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=zh-Hans)的[静态文件部署策略](../deploy/static-content.md)和`-s`标志。
 
 >[!NOTE]
 >

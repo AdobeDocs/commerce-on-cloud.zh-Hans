@@ -30,7 +30,7 @@ New Relic使用PHP代理连接并监视您的基础结构和[!DNL Commerce]应�
 
 >[!TIP]
 >
->有关使用此数据解决应用程序性能问题的详细信息，请参阅&#x200B;_New Relic帮助中心_&#x200B;中的[使用Adobe Commerce解决性能问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html)。
+>有关使用此数据解决应用程序性能问题的详细信息，请参阅&#x200B;_New Relic帮助中心_&#x200B;中的[使用Adobe Commerce解决性能问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=zh-Hans)。
 
 ## 使用受管警报监视性能
 
@@ -46,7 +46,7 @@ Adobe为Adobe Commerce _警报策略提供_&#x200B;托管警报，以跟踪性�
 | MariaDB查询加载 | NRI | Pro |
 | Redis内存 | NRI | Pro |
 
-当站点基础设施或应用程序条件触发警报阈值时，New Relic会发送警报通知，以便您能够主动解决问题。 有关警报阈值的详细信息以及解决触发警报的问题的故障排除步骤，请参阅&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[Adobe Commerce托管警报](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html)。
+当站点基础设施或应用程序条件触发警报阈值时，New Relic会发送警报通知，以便您能够主动解决问题。 有关警报阈值的详细信息以及解决触发警报的问题的故障排除步骤，请参阅&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[Adobe Commerce托管警报](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=zh-Hans)。
 
 >[!TIP]
 >
@@ -76,7 +76,7 @@ Adobe为Adobe Commerce _警报策略提供_&#x200B;托管警报，以跟踪性�
 
      >[!NOTE]
      >
-     >如果&#x200B;_Adobe Commerce托管警报_&#x200B;策略不可用，请参阅&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[Adobe Commerce托管警报](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html)。
+     >如果&#x200B;_Adobe Commerce托管警报_&#x200B;策略不可用，请参阅&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[Adobe Commerce托管警报](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=zh-Hans)。
 
 1. 单击&#x200B;**[!UICONTROL Alert conditions]**&#x200B;选项卡以查看策略中定义的警报条件。
 

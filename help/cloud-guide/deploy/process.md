@@ -21,7 +21,7 @@ _生成_&#x200B;阶段为配置文件中定义的服务组装容器，安装基�
 
 ## ![部署阶段](../../assets/status-deploy.png)部署阶段
 
-_部署_&#x200B;阶段对传入的请求进行临时保留，并将站点转换到[维护模式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html)。 部署阶段使用新容器，在装入文件系统后打开网络连接，激活`.magento.app.yaml`文件的`relationships`部分中定义的服务，并运行`.magento.app.yaml`文件中定义的部署挂接。 除`.magento.app.yaml`文件中定义的目录外，所有内容均为&#x200B;_只读_。 默认情况下，[`mounts`属性](../application/properties.md#mounts)包含以下目录：
+_部署_&#x200B;阶段对传入的请求进行临时保留，并将站点转换到[维护模式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=zh-Hans)。 部署阶段使用新容器，在装入文件系统后打开网络连接，激活`.magento.app.yaml`文件的`relationships`部分中定义的服务，并运行`.magento.app.yaml`文件中定义的部署挂接。 除`.magento.app.yaml`文件中定义的目录外，所有内容均为&#x200B;_只读_。 默认情况下，[`mounts`属性](../application/properties.md#mounts)包含以下目录：
 
 - `app/etc` — 包含`env.php`和`config.php`配置文件
 - `pub/media` — 包含所有媒体数据，如产品或类别

@@ -58,7 +58,7 @@ PayPal支持在全球范围内为国家/地区连接PayPal Express Checkout，�
    * **沙盒模式**&#x200B;选择“是”或“否”以指示您输入的凭据是否用于沙盒。 如果您输入了生产凭据，请选择“否”。
    * **API使用代理**&#x200B;如果系统使用代理服务器在Adobe Commerce和PayPal支付系统之间建立连接，请选择“是”或“否”进行设置。 如果为Yes，则输入代理主机和端口。
 
-1. 有关配置帐户的详细信息和步骤，请参阅[PayPal Express签出](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout)，从步骤2开始，完成所需的设置。
+1. 有关配置帐户的详细信息和步骤，请参阅[PayPal Express签出](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout)，从步骤2开始，完成所需的设置。
 
 通过配置和身份验证帐户，您可以在“必需的PayPal设置”下启用和禁用PayPal付款选项：
 

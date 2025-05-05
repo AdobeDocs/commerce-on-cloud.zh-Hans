@@ -35,7 +35,7 @@ ht-degree: 0%
 - 无法使用PrivateLink建立SSH连接。 请参阅[启用SSH密钥](secure-connections.md)。
 - Adobe Commerce支持不涵盖对AWS PrivateLink初始启用以外的问题进行故障诊断。
 - 客户负责与管理自己的VPC相关的成本。
-- 由于[Fastly源遮蔽](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html)，无法使用HTTPS协议（端口443）通过Azure专用链接连接到云基础架构上的Adobe Commerce。 此限制不适用于AWS PrivateLink。
+- 由于[Fastly源遮蔽](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=zh-Hans)，无法使用HTTPS协议（端口443）通过Azure专用链接连接到云基础架构上的Adobe Commerce。 此限制不适用于AWS PrivateLink。
 - PrivateDNS不可用。
 
 ## PrivateLink连接类型
@@ -202,7 +202,7 @@ ht-degree: 0%
 
 ## 更改PrivateLink配置
 
-[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以更改现有的PrivateLink配置。 例如，您可以请求进行如下更改：
+[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以更改现有的PrivateLink配置。 例如，您可以请求进行如下更改：
 
 - 在云基础架构Pro生产或暂存环境中从Adobe Commerce中删除PrivateLink连接。
 - 更改用于访问Adobe端点服务的客户云平台帐号。

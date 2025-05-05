@@ -43,7 +43,7 @@ Fastly提供以下服务，以优化和保护Adobe Commerce在云基础架构项
 
 - **源遮蔽** — 防止流量绕过Fastly WAF并隐藏源服务器的IP地址，以保护它们免受直接访问和DDoS攻击。
 
-  默认情况下，云基础架构Pro Production项目上的Adobe Commerce上会启用源遮蔽。 要在云基础架构入门生产项目上的Adobe Commerce上启用源遮蔽，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 如果您的流量不需要缓存，则可以自定义Fastly服务配置以允许请求[绕过Fastly缓存](fastly-vcl-bypass-to-origin.md)。
+  默认情况下，云基础架构Pro Production项目上的Adobe Commerce上会启用源遮蔽。 要在云基础架构入门生产项目上的Adobe Commerce上启用源遮蔽，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。 如果您的流量不需要缓存，则可以自定义Fastly服务配置以允许请求[绕过Fastly缓存](fastly-vcl-bypass-to-origin.md)。
 
 - **[图像优化](fastly-image-optimization.md)** — 将图像处理和调整负载卸载到Fastly服务，以便服务器可以更高效地处理订单和转换。
 
@@ -69,7 +69,7 @@ Fastly提供以下服务，以优化和保护Adobe Commerce在云基础架构项
 
 **要更改Fastly API令牌凭据**：
 
-1. [提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，请求新的Fastly API凭据。
+1. [提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)，请求新的Fastly API凭据。
 
    在云基础架构项目ID和需要新凭据的环境中包含您的Adobe Commerce。
 
@@ -121,12 +121,12 @@ DDOS保护内置于Fastly CDN服务中。 一旦您为Adobe Commerce站点启用
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[检查DDoS攻击]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
+[检查DDoS攻击]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=zh-Hans
 
 [用于Magento2的Fastly CDN模块]: https://github.com/fastly/fastly-magento2
 
 [Fastly支持票]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[如何阻止恶意流量]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html
+[如何阻止恶意流量]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=zh-Hans
 
 [使用域]: https://docs.fastly.com/en/guides/working-with-domains

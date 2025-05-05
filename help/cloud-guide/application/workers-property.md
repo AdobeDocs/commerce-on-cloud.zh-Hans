@@ -17,7 +17,7 @@ ht-degree: 0%
 
 辅助进程只能与Pro暂存和生产环境一起使用。 Pro集成和入门环境可以选择使用[CRON_CONSUMERS_RUNNER](../environment/variables-deploy.md#cron_consumers_runner)变量。
 
-要在Pro Staging或Production中配置工作程序，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)并包含以下信息：
+要在Pro Staging或Production中配置工作程序，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)并包含以下信息：
 
 - 项目编号
 - 环境ID

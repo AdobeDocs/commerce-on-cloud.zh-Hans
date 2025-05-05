@@ -27,7 +27,7 @@ ht-degree: 0%
 
 - **Adobe Commerce加密密钥**
 
-  仅导入现有系统时，捕获用于保护您对数据库的访问和数据的加密密钥。 有关此密钥的详细信息，请参阅[解决加密密钥的问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html)
+  仅导入现有系统时，捕获用于保护您对数据库的访问和数据的加密密钥。 有关此密钥的详细信息，请参阅[解决加密密钥的问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html?lang=zh-Hans)
 
 ## 开发人员工具
 

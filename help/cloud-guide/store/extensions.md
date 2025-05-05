@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ## 安装扩展
 
-在向实施中添加扩展时，Adobe建议在开发分支中工作。 安装扩展时，扩展名(`<VendorName>_<ComponentName>`)会自动插入到[`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html)文件中。 无需直接编辑文件。
+在向实施中添加扩展时，Adobe建议在开发分支中工作。 安装扩展时，扩展名(`<VendorName>_<ComponentName>`)会自动插入到[`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html?lang=zh-Hans)文件中。 无需直接编辑文件。
 
 **要安装扩展**：
 
@@ -155,7 +155,7 @@ ht-degree: 0%
 
 ## 升级扩展
 
-在继续之前，您需要具有扩展的编辑器名称和版本。 此外，请确认该扩展与您的项目和Adobe Commerce版本兼容。 特别是，[在开始之前检查所需的PHP版本](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)。
+在继续之前，您需要具有扩展的编辑器名称和版本。 此外，请确认该扩展与您的项目和Adobe Commerce版本兼容。 特别是，[在开始之前检查所需的PHP版本](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)。
 
 **要更新扩展**：
 
@@ -189,4 +189,4 @@ ht-degree: 0%
    git push origin <branch-names>
    ```
 
-如果遇到错误，请参阅[从组件故障中恢复](../deploy/recover-failed-deployment.md)。 要了解有关将扩展与Adobe Commerce结合使用的更多信息，请参阅&#x200B;_管理员指南_&#x200B;中的[扩展](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html)。
+如果遇到错误，请参阅[从组件故障中恢复](../deploy/recover-failed-deployment.md)。 要了解有关将扩展与Adobe Commerce结合使用的更多信息，请参阅&#x200B;_管理员指南_&#x200B;中的[扩展](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html?lang=zh-Hans)。

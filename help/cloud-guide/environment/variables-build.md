@@ -185,7 +185,7 @@ stage:
 - **默认**—`quick`
 - **版本**—Adobe Commerce 2.2.0及更高版本
 
-为静态内容自定义[部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html)。 请参阅[部署静态视图文件](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)。
+为静态内容自定义[部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=zh-Hans)。 请参阅[部署静态视图文件](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=zh-Hans)。
 
 如果您有多个区域设置，请仅使用这些选项&#x200B;__：
 

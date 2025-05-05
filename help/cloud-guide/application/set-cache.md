@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在更新生产环境之前，请务必在暂存环境中测试更改。 [提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，以获得在这些环境中更新配置的帮助。
+>在更新生产环境之前，请务必在暂存环境中测试更改。 [提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)，以获得在这些环境中更新配置的帮助。
 
 1. 在`.magento.app.yaml`文件的[`web`属性](web-property.md)中指定TTL时间（秒）。 您可以在`locations`下或在`"/media"`和`"/static"`下添加`expires`键。
 

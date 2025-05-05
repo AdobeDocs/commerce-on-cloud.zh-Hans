@@ -14,7 +14,7 @@ ht-degree: 0%
 
 您必须拥有身份验证密钥才能访问Adobe Commerce存储库，并在云基础架构项目上为Adobe Commerce启用安装和更新命令。 有两种方法可指定Composer授权凭据。
 
-- **身份验证文件** — 在云基础架构根目录上的Adobe Commerce中包含您的Adobe Commerce [授权凭据](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html)的文件。
+- **身份验证文件** — 在云基础架构根目录上的Adobe Commerce中包含您的Adobe Commerce [授权凭据](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html?lang=zh-Hans)的文件。
 - **环境变量** — 一个环境变量，用于在Adobe Commerce on cloud infrastructure项目中设置身份验证密钥，以防止意外泄露。
 
 >[!BEGINSHADEBOX]

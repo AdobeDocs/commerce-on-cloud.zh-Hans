@@ -131,7 +131,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 >[!IMPORTANT]
 >
->对于Pro生产和暂存环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以更改磁盘空间分配。 Pro生产和暂存环境的大小只能按特定的时间间隔增加，因此，根据您当前的磁盘空间使用情况，支持人员可能建议将磁盘空间分配至少增加10 GB。 分配后，无法恢复Pro暂存和生产中的存储增长。 无法在资源之间重新分配或重新分配存储。 要增加更多文件存储空间，请减少分配给MySQL的磁盘空间。
+>对于Pro生产和暂存环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以更改磁盘空间分配。 Pro生产和暂存环境的大小只能按特定的时间间隔增加，因此，根据您当前的磁盘空间使用情况，支持人员可能建议将磁盘空间分配至少增加10 GB。 分配后，无法恢复Pro暂存和生产中的存储增长。 无法在资源之间重新分配或重新分配存储。 要增加更多文件存储空间，请减少分配给MySQL的磁盘空间。
 
 ### 应用程序磁盘空间
 
@@ -187,7 +187,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 ## 监视磁盘空间
 
-在Pro Production环境中，您可以使用New Relic的“Adobe Commerce的托管警报”警报策略监控磁盘空间和其他性能指标。 有关详细信息，请参阅[使用托管警报监视性能](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)。 有关进一步指导，请参阅[解决数据库性能问题的最佳实践](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html)。
+在Pro Production环境中，您可以使用New Relic的“Adobe Commerce的托管警报”警报策略监控磁盘空间和其他性能指标。 有关详细信息，请参阅[使用托管警报监视性能](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)。 有关进一步指导，请参阅[解决数据库性能问题的最佳实践](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=zh-Hans)。
 
 ## 无剩余空间
 

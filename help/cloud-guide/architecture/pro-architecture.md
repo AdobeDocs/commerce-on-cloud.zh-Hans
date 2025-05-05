@@ -176,7 +176,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->装入的卷仅包含/引用[可写装入](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)，将不包含所有`app/`目录。 至于其他文件，它们由[生成和部署过程](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)创建/生成，您还必须检查Git存储库中是否有剩余文件。
+>装入的卷仅包含/引用[可写装入](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)，将不包含所有`app/`目录。 至于其他文件，它们由[生成和部署过程](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)创建/生成，您还必须检查Git存储库中是否有剩余文件。
 
 {{pro-backups}}
 
@@ -210,4 +210,4 @@ Pro群集大小和&#x200B;_计算_&#x200B;配置因所选的云提供商(AWS、A
 
 冗余体系结构使Adobe云基础架构能够在不停机的情况下进行扩展。 在升级时，这三个实例中的每一个都会轮换以升级容量，而不会影响站点操作。 例如，如果约束位于PHP级别而不是数据库级别，则可以将额外的Web服务器添加到现有群集。 这提供了&#x200B;_水平缩放_，以补充数据库级别上额外CPU提供的垂直缩放。 请参阅[缩放的体系结构](scaled-architecture.md)。
 
-如果您预计某个事件或其他原因会导致流量显着增加，则可以请求临时增加容量。 请参阅[如何在&#x200B;_Commerce帮助中心_&#x200B;中请求临时扩展](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html)。
+如果您预计某个事件或其他原因会导致流量显着增加，则可以请求临时增加容量。 请参阅[如何在&#x200B;_Commerce帮助中心_&#x200B;中请求临时扩展](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=zh-Hans)。

@@ -15,7 +15,7 @@ ht-degree: 0%
 您可以使用以下服务来监控云环境的性能：
 
 - [运行状况通知](../integrations/health-notifications.md) — 一种集成，可在入门和专业版集成环境中提供磁盘空间警报。
-- [Adobe Commerce观察指南](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html) — 全面监视所有Commerce站点，结合来自多个源的日志数据，以帮助您更好地管理Adobe Commerce站点性能和诊断问题。
+- [Adobe Commerce观察指南](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html?lang=zh-Hans) — 全面监视所有Commerce站点，结合来自多个源的日志数据，以帮助您更好地管理Adobe Commerce站点性能和诊断问题。
 
 ## New Relic服务
 

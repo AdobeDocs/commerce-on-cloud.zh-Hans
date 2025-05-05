@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->要使用[[!DNL Cloud Console]](../project/overview.md)将环境变量添加到[覆盖配置设置](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html)，您必须在变量名称前面加上`env:`，如以下示例所示：
+>要使用[[!DNL Cloud Console]](../project/overview.md)将环境变量添加到[覆盖配置设置](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=zh-Hans)，您必须在变量名称前面加上`env:`，如以下示例所示：
 >
 >![环境变量示例](../../assets/set-env-variable-ui.png)
 

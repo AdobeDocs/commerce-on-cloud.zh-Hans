@@ -90,7 +90,7 @@ Adobe为每个环境提供Let&#39;s Encrypt SSL/TLS证书。 Fastly需要此证�
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **注意**：您还可以从管理员更新基本URL。 请参阅&#x200B;_Adobe Commerce商店和购买体验指南_&#x200B;中的[商店URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html)。
+   **注意**：您还可以从管理员更新基本URL。 请参阅&#x200B;_Adobe Commerce商店和购买体验指南_&#x200B;中的[商店URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=zh-Hans)。
 
 1. 请等待几分钟，以便网站更新。
 
@@ -104,7 +104,7 @@ Adobe为每个环境提供Let&#39;s Encrypt SSL/TLS证书。 Fastly需要此证�
 
 - [已完成传出电子邮件的测试](../project/outgoing-emails.md)
 
-- [管理员凭据和基本管理员URL的安全配置](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
+- [管理员凭据和基本管理员URL的安全配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-admin)
 
 - [为Web优化所有图像](../cdn/fastly-image-optimization.md)
 
@@ -136,9 +136,9 @@ Adobe为每个环境提供Let&#39;s Encrypt SSL/TLS证书。 Fastly需要此证�
 
 - [设置安全扫描](overview.md#set-up-the-security-scan-tool)
 
-- 管理员用户的[安全配置](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
+- 管理员用户的[安全配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-admin)
 
-- 管理员URL的[安全配置](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
+- 管理员URL的[安全配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [删除云基础架构项目上的Adobe Commerce上不再存在的所有用户](../project/user-access.md)
 

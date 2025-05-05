@@ -58,14 +58,14 @@ SELECT average(cpuPercent) FROM SystemSample FACET hostname, apmApplicationNames
 
 ## 启用自动缩放
 
-要在云基础架构项目上启用或禁用Adobe Commerce的自动缩放，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 在票证中选择以下原因：
+要在云基础架构项目上启用或禁用Adobe Commerce的自动缩放，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。 在票证中选择以下原因：
 
 - **联系原因**：基础架构更改请求
 - **Adobe Commerce基础架构联系原因**：其他基础架构更改请求
 
 >[!IMPORTANT]
 >
->自动缩放功能会捕获意外事件。 即使您启用了自动缩放，如果您预计即将发生事件，Adobe仍建议您继续[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。
+>自动缩放功能会捕获意外事件。 即使您启用了自动缩放，如果您预计即将发生事件，Adobe仍建议您继续[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。
 
 ### 负载测试
 
