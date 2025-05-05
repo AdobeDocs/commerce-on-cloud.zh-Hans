@@ -29,7 +29,7 @@ ht-degree: 0%
 >
 >在集成环境中，您无法从[!DNL Cloud Console]查看部署日志。 此功能仅适用于生产和暂存环境。 但是，您可以使用[生成和部署](../test/log-locations.md#build-and-deploy-logs)日志在任何环境中查看部署的每个阶段的日志。 有关疑难解答信息，请参阅[部署错误引用](../dev-tools/error-reference.md)。
 
-您可以使用New Relic](../monitor/track-deployments.md)启用[跟踪部署，以监视部署事件并分析部署之间的性能。
+您可以使用New Relic[&#128279;](../monitor/track-deployments.md)启用跟踪部署，以监视部署事件并分析部署之间的性能。
 
 ## 构建和部署的最佳实践
 
@@ -172,7 +172,7 @@ ht-degree: 0%
 
 - 如果Adobe Commerce是&#x200B;**未安装**，则它随`bin/magento setup:install`一起安装，更新部署配置`app/etc/env.php`以及指定环境（如Redis和网站URL）的数据库。 **重要信息：**&#x200B;当您在安装程序期间完成[首次部署](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html)时，在所有环境中都安装和部署了Adobe Commerce。
 
-- 如果已安装Adobe Commerce ****，请执行任何必要的升级。 部署脚本运行`bin/magento setup:upgrade`以更新数据库架构和数据（在扩展或核心代码更新后必需），并更新环境的部署配置、`app/etc/env.php`和数据库。 最后，部署脚本清除Adobe Commerce缓存。
+- 如果已安装Adobe Commerce **&#x200B;**，请执行任何必要的升级。 部署脚本运行`bin/magento setup:upgrade`以更新数据库架构和数据（在扩展或核心代码更新后必需），并更新环境的部署配置、`app/etc/env.php`和数据库。 最后，部署脚本清除Adobe Commerce缓存。
 
 - 脚本可以选择使用命令`magento setup:static-content:deploy`生成静态Web内容。
 

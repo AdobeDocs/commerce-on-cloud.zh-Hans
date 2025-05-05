@@ -63,7 +63,7 @@ ht-degree: 0%
    - 暂存： `dig https://mcstaging.<your-domain>.com`
    - 生产： `dig https://mcprod.<your-domain>.com`
 
-   有关其他`dig`测试，请在更改DNS](https://docs.fastly.com/en/guides/working-with-domains)之前参阅Fastly的[测试。
+   有关其他`dig`测试，请在更改DNS[&#128279;](https://docs.fastly.com/en/guides/working-with-domains)之前参阅Fastly的测试。
 
 1. 使用`cURL`验证响应标头信息。
 

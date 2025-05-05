@@ -62,7 +62,7 @@ DKIM是一种电子邮件身份验证技术，它使Internet服务提供商(ISP)
 
 >[!TIP]
 >
->请确保在&#x200B;**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**&#x200B;中使用&#x200B;**[!UICONTROLS的适当域配置{store电子邮件地址]**。 对发件人的电子邮件地址执行域身份验证。 如果配置了默认设置(`example.com`)，来自`example.com`的电子邮件将被Sendgrid阻止。
+>请确保在&#x200B;**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**&#x200B;中使用&#x200B;**[!UICONTROL S的适当域配置&lbrace;store电子邮件地址]**。 对发件人的电子邮件地址执行域身份验证。 如果配置了默认设置(`example.com`)，来自`example.com`的电子邮件将被Sendgrid阻止。
 
 **要启用域身份验证**：
 
@@ -117,7 +117,7 @@ dig CNAME s2._domainkey.domain_name
 
 事务性电子邮件阈值是指在特定时间段内可从Pro环境发送的事务性电子邮件消息数，例如每月从非生产环境发送12,000封电子邮件。 阈值旨在防止发送垃圾邮件并防止可能对您的电子邮件信誉造成损害。
 
-只要发件人信誉得分超过95%，就可以在“生产”环境中发送的电子邮件数量就没有任何硬性限制。 信誉受退回或拒绝的电子邮件数量以及基于DNS的垃圾邮件注册是否已将您的域标记为潜在垃圾邮件来源的影响。 在&#x200B;_Commerce支持知识库_&#x200B;中，查看Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded)上超过SendGrid积分时未发送的[电子邮件。
+只要发件人信誉得分超过95%，就可以在“生产”环境中发送的电子邮件数量就没有任何硬性限制。 信誉受退回或拒绝的电子邮件数量以及基于DNS的垃圾邮件注册是否已将您的域标记为潜在垃圾邮件来源的影响。 在&#x200B;_Commerce支持知识库_&#x200B;中，查看Adobe Commerce[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded)上超过SendGrid积分时未发送的电子邮件。
 
 **若要检查是否超过最大积分**：
 

@@ -108,7 +108,7 @@ Fastly在上传过程中验证VCL代码的更新版本。 如果验证失败，�
 
 >[!WARNING]
 >
->在这些示例中，VCL代码的格式为JSON有效负荷，该有效负荷可以保存到文件中并在Fastly API请求中提交。 您可以从Admin](#add-the-custom-vcl-snippet)提交[VCL代码片段，或使用Fastly API作为JSON字符串提交。 要防止在将Fastly API与JSON字符串一起使用时发生验证错误，必须使用反斜杠对特殊字符进行转义。
+>在这些示例中，VCL代码的格式为JSON有效负荷，该有效负荷可以保存到文件中并在Fastly API请求中提交。 您可以从Admin[&#128279;](#add-the-custom-vcl-snippet)提交VCL代码片段，或使用Fastly API作为JSON字符串提交。 要防止在将Fastly API与JSON字符串一起使用时发生验证错误，必须使用反斜杠对特殊字符进行转义。
 
 >[!NOTE]
 >如果要从Admin提交VCL代码片段，请从示例VCL代码中提取各个值，并将它们输入到相应的字段中。 例如：

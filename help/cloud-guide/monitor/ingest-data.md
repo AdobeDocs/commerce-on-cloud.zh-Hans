@@ -22,7 +22,7 @@ New Relic提供了一个&#x200B;_数据管理_&#x200B;视图，该视图按数�
 
    ![数据管理](../../assets/new-relic/data-ingestion.png)
 
-   **[!UICONTROL Data ingestion]**选项卡显示当天摄取的数据以及数据源。
+   **[!UICONTROL Data ingestion]**&#x200B;选项卡显示当天摄取的数据以及数据源。
 “数据保留”选项卡显示并控制数据的存储时间。
 
 1. 选择&#x200B;**[!UICONTROL Limits]**&#x200B;选项卡并查看您帐户的限制。

@@ -177,7 +177,7 @@ https://www.example.com/blog
 | ---------------- | ----------- |
 | `type: upstream` | 为应用程序提供服务。 此外，它有一个`upstream`属性，该属性指定应用程序名称（如`.magento.app.yaml`中所定义）并后跟`:http`终结点。 |
 | `type: redirect` | 重定向到另一条路由。 它后面是`to`属性，该属性是对由其模板标识的另一路由的HTTP重定向。 |
-| `cache:` | 控制路由](caching.md)的[缓存。 |
+| `cache:` | 控制路由[&#128279;](caching.md)的缓存。 |
 | `redirects:` | 控制[重定向规则](redirects.md)。 |
 | `ssi:` | 控件启用[服务器端Include](server-side-includes.md)。 |
 

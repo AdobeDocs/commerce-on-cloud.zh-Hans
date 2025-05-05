@@ -30,7 +30,7 @@ ht-degree: 0%
 
 - 内容最多可包含65,535个字符。
 - 指定HTML源中的所有CSS内联。
-- 使用base64捆绑HTML页面中的图像，以便即使Fastly处于离线状态也能显示这些图像。 查看css-tricks网站](https://css-tricks.com/data-uris/)上的[数据URI。
+- 使用base64捆绑HTML页面中的图像，以便即使Fastly处于离线状态也能显示这些图像。 查看css-tricks网站[&#128279;](https://css-tricks.com/data-uris/)上的数据URI。
 
 ## 自定义503错误页面
 

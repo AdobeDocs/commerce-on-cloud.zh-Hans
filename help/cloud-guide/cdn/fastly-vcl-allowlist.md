@@ -90,7 +90,7 @@ Edge ACL创建IP地址列表来管理对站点的访问。 在此示例中，您
 
 查看并更新环境的代码后，使用以下任一方法将自定义VCL代码段添加到Fastly服务配置中：
 
-- [从Admin](#add-the-custom-vcl-snippet)添加自定义VCL代码片段。 如果您可以访问管理员，则建议使用此方法。 (需要Magento2版本1.2.58](fastly-configuration.md#upgrade)或更高版本的[Fastly CDN模块。)
+- [从Admin](#add-the-custom-vcl-snippet)添加自定义VCL代码片段。 如果您可以访问管理员，则建议使用此方法。 (需要Magento2版本1.2.58[&#128279;](fastly-configuration.md#upgrade)或更高版本的Fastly CDN模块。)
 
 - 将JSON代码示例保存到文件（例如，`allowlist.json`）中，然后[使用Fastly API](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)上载它。 如果您无法访问管理员，请使用此方法。
 

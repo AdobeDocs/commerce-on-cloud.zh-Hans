@@ -59,7 +59,7 @@ ht-degree: 0%
 
 ## 忽略文件
 
-云基础架构项目存储库上存在具有Adobe Commerce的基本`.gitignore`文件。 在magento-cloud存储库](https://github.com/magento/magento-cloud/blob/master/.gitignore)中查看最新的[.gitignore文件。 要添加位于`.gitignore`列表中的文件，您可以在暂存提交时使用`-f` （强制）选项：
+云基础架构项目存储库上存在具有Adobe Commerce的基本`.gitignore`文件。 在magento-cloud存储库[&#128279;](https://github.com/magento/magento-cloud/blob/master/.gitignore)中查看最新的.gitignore文件。 要添加位于`.gitignore`列表中的文件，您可以在暂存提交时使用`-f` （强制）选项：
 
 ```bash
 git add <path/filename> -f
@@ -80,7 +80,7 @@ git add <path/filename> -f
    }
    ```
 
-1. 添加为基本模板设计的`.gitignore`文件。 例如，如果您需要版本2.2.6模板的`.gitignore`文件，请使用2.2.6](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore)的[.gitignore文件作为引用。
+1. 添加为基本模板设计的`.gitignore`文件。 例如，如果您需要版本2.2.6模板的`.gitignore`文件，请使用2.2.6[&#128279;](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore)的.gitignore文件作为引用。
 
 1. 清除Git缓存。
 

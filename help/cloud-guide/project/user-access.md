@@ -146,7 +146,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. 在&#x200B;_访问_&#x200B;视图中，单击&#x200B;**[!UICONTROL Add]**。
 
-1. 完成&#x200B;_[!UICONTROL Add User]_表单：
+1. 完成&#x200B;_[!UICONTROL Add User]_&#x200B;表单：
 
    - 输入用户电子邮件地址。
 

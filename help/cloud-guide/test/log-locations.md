@@ -189,7 +189,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-大多数错误消息都包含说明和建议的操作。 使用ECE-Tools](../dev-tools/error-reference.md)的[错误消息引用查找错误代码以获得进一步的指导。 有关进一步指导，请使用[Adobe Commerce部署疑难解答程序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)。
+大多数错误消息都包含说明和建议的操作。 使用ECE-Tools[&#128279;](../dev-tools/error-reference.md)的错误消息引用查找错误代码以获得进一步的指导。 有关进一步指导，请使用[Adobe Commerce部署疑难解答程序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)。
 
 ## 应用程序日志
 
@@ -247,7 +247,7 @@ type: warning
 
 >[!TIP]
 >
->在缩放的体系结构中，日志文件位置取决于节点类型。 请参阅缩放体系结构](../architecture/scaled-architecture.md#log-locations)主题中的[日志位置。
+>在缩放的体系结构中，日志文件位置取决于节点类型。 请参阅缩放体系结构[&#128279;](../architecture/scaled-architecture.md#log-locations)主题中的日志位置。
 
 ## 记录用于专业生产和暂存的数据
 

@@ -104,7 +104,7 @@ ht-degree: 0%
 
 以下工作流程概述了PrivateLink与Adobe Commerce在云基础架构上集成的实施过程。
 
-1. **客户**&#x200B;提交请求主题行`PrivateLink support for <company>`启用PrivateLink的支持票证。 在票证中包含启用](#prerequisites)所需的[数据。 Adobe使用支持工单在启用过程中协调通信。
+1. **客户**&#x200B;提交请求主题行`PrivateLink support for <company>`启用PrivateLink的支持票证。 在票证中包含启用[&#128279;](#prerequisites)所需的数据。 Adobe使用支持工单在启用过程中协调通信。
 
 1. **Adobe**&#x200B;允许客户帐户访问AdobeVPC中的终结点服务。
 

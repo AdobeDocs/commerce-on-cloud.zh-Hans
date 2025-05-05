@@ -89,9 +89,9 @@ ht-degree: 0%
 
    - ![新图标](../../assets/new.svg)您现在可以在Docker环境中使用`ece-tools`包执行功能测试。 查看[应用程序测试](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/).<!-- MAGECLOUD-3129/3684 -->
 
-   - ![新图标](../../assets/new.svg)添加了对使用`.magento.app.yaml`文件配置PHP模块的支持。 在`.magento.app.yaml`文件](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)中指定的任何[PHP扩展将在Docker PHP容器中变得可用。<!-- MAGECLOUD-3357 -->
+   - ![新图标](../../assets/new.svg)添加了对使用`.magento.app.yaml`文件配置PHP模块的支持。 在`.magento.app.yaml`文件[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)中指定的任何PHP扩展将在Docker PHP容器中变得可用。<!-- MAGECLOUD-3357 -->
 
-   - ![新图标](../../assets/new.svg)有新命令可用于改进Docker命令行体验。 查看Docker引用](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/#cloud-docker-cli).<!-- MAGECLOUD-3569 -->的[`bin/magento-docker`部分
+   - ![新图标](../../assets/new.svg)有新命令可用于改进Docker命令行体验。 查看Docker引用&rbrack;(https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/#cloud-docker-cli).<!-- MAGECLOUD-3569 -->的&lbrack;`bin/magento-docker`部分
 
    - ![新图标](../../assets/new.svg)添加了使用Mutagen.io在本地主机和Docker之间进行开发期间同步文件的功能。<!-- MAGECLOUD-3559 -->
 
@@ -143,7 +143,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **Docker更新**—
 
-   - ![新图标](../../assets/new.svg)现在，Docker环境支持.magento.app.yaml文件](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property).<!-- MAGECLOUD-3150 -->的[crons属性中定义的cron配置
+   - ![新图标](../../assets/new.svg)现在，Docker环境支持.magento.app.yaml文件&rbrack;(https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property).<!-- MAGECLOUD-3150 -->的&lbrack;crons属性中定义的cron配置
 
    - ![新图标](../../assets/new.svg) **新Docker容器** — 添加了[TLS终止代理容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#varnish-container)，以便于通过HTTPS终止Varnish SSL。<!-- MAGECLOUD-2890 -->
 
@@ -691,7 +691,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->此包不再与云基础架构上的其他Adobe Commerce版本兼容，不应使用&#x200B;****。
+>此包不再与云基础架构上的其他Adobe Commerce版本兼容，不应使用&#x200B;**&#x200B;**。
 
 ### 初始版本
 

@@ -123,7 +123,7 @@ Adobe建议从`master`创建一个名为`staging`的分支。 `staging`分支将
 
 - [OpenSearch](../services/opensearch.md)
 
-在暂存和生产环境中，您可以使用Fastly进行CDN和缓存。 最新版本的Fastly CDN扩展将在项目初始配置期间安装。 您可以升级扩展以获取最新的错误修复和改进。 查看Magento2](https://github.com/fastly/fastly-magento2)的[Fastly CDN模块。 此外，您还有权访问[New Relic](../monitor/account-management.md)以进行性能监控。
+在暂存和生产环境中，您可以使用Fastly进行CDN和缓存。 最新版本的Fastly CDN扩展将在项目初始配置期间安装。 您可以升级扩展以获取最新的错误修复和改进。 查看Magento2[&#128279;](https://github.com/fastly/fastly-magento2)的Fastly CDN模块。 此外，您还有权访问[New Relic](../monitor/account-management.md)以进行性能监控。
 
 使用以下文件配置要在实施中使用的软件版本。
 

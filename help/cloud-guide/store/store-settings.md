@@ -77,7 +77,7 @@ ht-degree: 0%
 
 如果在转储配置后启用了配置管理，则应将SCD_*变量从部署阶段移动到构建阶段，以便在构建阶段正确启用静态内容生成。 查看[环境变量](../environment/configure-env-yaml.md#environment-variables)。
 
-配置管理前&#x200B;****：
+配置管理前&#x200B;**&#x200B;**：
 
 ```yaml
   deploy:

@@ -212,7 +212,7 @@ https://store.com/second/
 
 ### 设置网站、商店和商店视图
 
-在&#x200B;_管理UI_&#x200B;中，设置您的Adobe Commerce **网站**、**商店**&#x200B;和&#x200B;**商店视图**。 请参阅&#x200B;_配置指南_&#x200B;的“管理员”](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html)中的[设置多个网站、商店和商店视图。
+在&#x200B;_管理UI_&#x200B;中，设置您的Adobe Commerce **网站**、**商店**&#x200B;和&#x200B;**商店视图**。 请参阅&#x200B;_配置指南_&#x200B;的“管理员”[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html)中的设置多个网站、商店和商店视图。
 
 设置本地安装时，请务必使用管理员提供的网站、商店和商店视图的相同名称和代码。 更新`magento-vars.php`文件时需要这些值。
 

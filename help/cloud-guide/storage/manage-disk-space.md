@@ -165,7 +165,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 1. 在本地开发环境中，打开`.magento/services.yaml`配置文件。
 
-1. 在文件中添加或查找服务。 有关配置服务的详细信息，请参阅[](../services/services-yaml.md)。
+1. 在文件中添加或查找服务。 有关配置服务的详细信息，请参阅[&#128279;](../services/services-yaml.md)。
 
 1. 为磁盘属性设置一个新值（以MB为单位）。
 

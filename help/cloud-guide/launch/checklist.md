@@ -71,7 +71,7 @@ Adobe为每个环境提供Let&#39;s Encrypt SSL/TLS证书。 Fastly需要此证�
 
 >[!IMPORTANT]
 >
->[RFC1034](https://www.rfc-editor.org/rfc/rfc1912) （**第2.4**节）中的DNS说明指出：
+>[RFC1034](https://www.rfc-editor.org/rfc/rfc1912) （**第2.4**&#x200B;节）中的DNS说明指出：
 >_CNAME记录不允许与任何其他数据共存。 换言之，如果suzy.podunk.xx是sue.podunk.xx的别名，则不能同时具有suzy.podunk.edu的MX记录、A记录甚至TXT记录。_
 >
 >因此，子域的DNS记录应为`CNAME`类型，apex域（根域）应为`A`类型。 放弃此规则可能会导致邮件服务或DNS传播中断，因为您将失去添加其他记录（如MX或NS）的能力。 某些DNS提供商可能会通过使用内部自定义来绕过此要求，但遵循此标准可确保稳定性和灵活性（例如，更改DNS提供商）。

@@ -158,7 +158,7 @@ _原始屏蔽_&#x200B;将存储的所有请求路由到特定存在点(POP)。 �
 ## 基本身份验证
 
 基本身份验证功能可保护您网站上的每个页面和资产
-用户名和密码。 我们**不建议**激活基本
+用户名和密码。 我们&#x200B;**不建议**&#x200B;激活基本
 在生产环境中进行身份验证。 您可以在暂存环境中配置它
 以在开发过程中保护您的站点。 请参阅Fastly CDN模块文档中的[基本身份验证指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md)。
 

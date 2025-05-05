@@ -38,7 +38,7 @@ Adobe在最终配置后的2至3周内，为新帐户启用WAF服务。 WAF通过
 
 ## 工作原理
 
-WAF服务与Fastly集成，并使用Fastly CDN服务中的缓存逻辑过滤Fastly全局节点的流量。 我们使用基于Trustwave SpiderLabs](https://github.com/owasp-modsecurity/ModSecurity)的[ModSecurity规则和WAF十大安全威胁的默认WAF策略，在您的生产环境中启用OWASP服务。
+WAF服务与Fastly集成，并使用Fastly CDN服务中的缓存逻辑过滤Fastly全局节点的流量。 我们使用基于Trustwave SpiderLabs[&#128279;](https://github.com/owasp-modsecurity/ModSecurity)的ModSecurity规则和WAF十大安全威胁的默认WAF策略，在您的生产环境中启用OWASP服务。
 
 WAF服务会针对WAF规则集检查HTTP和HTTPS流量(GET和POST请求)，并阻止恶意或不遵守特定规则的流量。 该服务仅检查尝试刷新缓存的原点绑定流量。 因此，我们会在Fastly缓存中停止大多数攻击流量，从而保护原始流量免受恶意攻击。 通过仅处理源流量，WAF服务可保留缓存性能，并为每个非缓存请求仅引入约1.5毫秒到20毫秒的延迟。
 
