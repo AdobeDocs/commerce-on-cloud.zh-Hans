@@ -10,9 +10,10 @@ mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/commerce-on-cloud.zh-Hans
 description: 《云基础架构上的Adobe Commerce指南》
 index: true
-source-git-commit: d7ada06faf9297aab0d106db34ec25a61ddc307a
+badgePaas: label="仅限PaaS" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目(Adobe管理的PaaS基础架构)和内部部署项目上的Adobe Commerce 。"
+source-git-commit: cb478d1f34e68784b3d7e9fe69bee62fcda00a60
 workflow-type: tm+mt
-source-wordcount: '41'
+source-wordcount: '58'
 ht-degree: 0%
 
 ---
