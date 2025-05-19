@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 云基础架构上的Commerce
 
-云基础架构上的Adobe Commerce提供了一个自动托管平台，该平台提供了一种用于在云原生环境中构建、部署和管理[!DNL Commerce]应用程序的&#x200B;**自助服务**&#x200B;方法。 云基础架构上的Adobe Commerce提供了其他功能，使其与内部部署Adobe Commerce和Magento Open Source平台不同：
+云基础架构上的Adobe Commerce提供了一个自动托管平台，该平台提供了一种用于在云原生环境中构建、部署和管理[!DNL Commerce]应用程序的&#x200B;**自助服务**&#x200B;方法。 云基础架构上的Adobe Commerce提供了其他功能，使其与内部部署Adobe Commerce和Magento Open Source平台有所不同：
 
 - 预配置的基础结构，包括PHP、MySQL (MariaDB)、Redis、[!DNL RabbitMQ]和受支持的搜索引擎技术。
 - 基于Git的工作流，具有自动构建和部署功能，可在您每次推送Platform as a Service (PaaS)环境中的代码更改时实现高效的快速开发和连续部署。
@@ -23,9 +23,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有关安全性的更多信息，请参阅[安全性启动项核对清单](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
+>有关安全性的更多信息，请参阅[安全性启动项核对清单](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
 
-查看[技术栈栈](architecture/tech-stack.md)的详细信息，或了解有关Commerce [&#128279;](architecture/cloud-architecture.md)的云架构中的特定功能和支持的产品的更多信息。
+查看[技术栈栈](architecture/tech-stack.md)的详细信息，或了解有关Commerce ](architecture/cloud-architecture.md)的[云架构中的特定功能和支持的产品的更多信息。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -60,5 +60,5 @@ Commerce on cloud infrastructure指南假定您对Adobe Commerce应用程序有�
 
 - [Adobe Commerce开发人员文档](https://developer.adobe.com/commerce/docs/) (Adobe Developer站点) — 开发、自定义、集成、扩展和使用高级功能
 
-- [Adobe Commerce文档](https://experienceleague.adobe.com/docs/commerce.html?lang=zh-Hans) (Adobe Experience League) — 规划、实施、运营、升级和维护您的[!DNL Commerce]项目
+- [Adobe Commerce文档](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League) — 规划、实施、运营、升级和维护您的[!DNL Commerce]项目
 
