@@ -39,7 +39,7 @@ OpenSearch允许您从任何来源、任何格式获取数据，并实时搜索�
        disk: 1024
    ```
 
-   对于Pro项目，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)才能在暂存环境和生产环境中更改OpenSearch版本。
+   对于Pro项目，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)才能在暂存环境和生产环境中更改OpenSearch版本。
 
 1. 设置或验证`.magento.app.yaml`文件中的`relationships`属性。
 
@@ -92,7 +92,7 @@ OpenSearch允许您从任何来源、任何格式获取数据，并实时搜索�
 
 - **项目升级** — 验证新应用程序版本中的OpenSearch PHP客户端是否与云基础架构上安装的OpenSearch服务版本兼容。
 
-服务版本和兼容性支持取决于在云基础架构上测试和部署的版本，并且有时不同于Adobe Commerce内部部署支持的版本。 有关支持的版本列表，请参阅&#x200B;_安装指南_&#x200B;中的[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)。
+服务版本和兼容性支持取决于在云基础架构上测试和部署的版本，并且有时不同于Adobe Commerce内部部署支持的版本。 有关支持的版本列表，请参阅&#x200B;_安装指南_&#x200B;中的[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)。
 
 **验证OpenSearch软件兼容性**：
 
