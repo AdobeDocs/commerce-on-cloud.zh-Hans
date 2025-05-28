@@ -3,9 +3,9 @@ title: 备份管理
 description: 了解如何在Cloud Infrastructure项目中手动创建和恢复Adobe Commerce的备份。
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: b5fa153b4eb0569fd16c78fb7bf47c54222752cd
+source-git-commit: 3efc5478428c4ede9e2106e1cbef8362c525ccd8
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,8 @@ ht-degree: 0%
    +---------------------------+----------------------+------------+
    ```
 
+要创建任何环境（包括暂存环境和生产环境）的数据库转储，请参阅[创建数据库转储](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知识库文章。
+
 ## 恢复手动备份
 
 您必须具有环境的[管理员访问权限](../project/user-access.md)。 您最多有&#x200B;**7天**&#x200B;到&#x200B;_还原_&#x200B;手动备份。 恢复备份不会更改当前Git分支的代码。 以这种方式恢复备份不适用于Pro暂存和生产环境；请参阅[专业备份和灾难恢复](../architecture/pro-architecture.md#backup-and-disaster-recovery)。
@@ -137,7 +139,7 @@ ht-degree: 0%
 
 ## 恢复灾难恢复快照
 
-要在Pro暂存和生产环境中还原灾难恢复快照，请[直接从服务器](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)导入数据库转储。
+要在Pro暂存和生产环境中还原灾难恢复快照，请[直接从服务器](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)导入数据库转储。
 
 ## 回滚代码
 
