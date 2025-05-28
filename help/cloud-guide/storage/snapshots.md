@@ -83,7 +83,7 @@ ht-degree: 0%
    +---------------------------+----------------------+------------+
    ```
 
-要创建任何环境（包括暂存环境和生产环境）的数据库转储，请参阅[创建数据库转储](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知识库文章。
+要创建任何环境（包括暂存环境和生产环境）的数据库转储，请参阅[创建数据库转储](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知识库文章。
 
 ## 恢复手动备份
 
@@ -139,7 +139,7 @@ ht-degree: 0%
 
 ## 恢复灾难恢复快照
 
-要在Pro暂存和生产环境中还原灾难恢复快照，请[直接从服务器](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)导入数据库转储。
+要在Pro暂存和生产环境中还原灾难恢复快照，请[直接从服务器](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)导入数据库转储。
 
 ## 回滚代码
 
