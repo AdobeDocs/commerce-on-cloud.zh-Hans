@@ -2,11 +2,11 @@
 title: ECE-Tools发行说明
 description: 请参阅ECE-Tools软件包的最新改进列表。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-05-27T00:00:00Z
+last-substantial-update: 2024-06-03T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 70664897a10a59668fad74565c04b4ad72474736
+source-git-commit: e447e19d89edeaec84314c52b377f3712e0f0400
 workflow-type: tm+mt
-source-wordcount: '3166'
+source-wordcount: '3185'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,17 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.5 {#latest}
+## v2002.2.6 {#latest}
+
+发布日期： 2025年6月3日
+
+- ![修复图标](../../assets/fix.svg) **改进与2.4.8的兼容性** — 更新了第三方库以更好地与2.4.8<!-- MCLOUD-13707	 - -->兼容
+
+## v2002.2.5
 
 发行日期： 2025年5月27日
 
-- ![修复图标](../../assets/new.svg) **Extended Valkey兼容性**-Adobe Commerce中的Extended Valkey兼容性。<!-- MCLOUD-13595	 - -->
+- ![新图标](../../assets/new.svg) **Extended Valkey兼容性**-Adobe Commerce中的Extended Valkey兼容性。<!-- MCLOUD-13595	 - -->
 - ![修复图标](../../assets/fix.svg) **已更新RabbitMQ验证器** — 已更新RabbitMQ的验证器。<!-- MCLOUD-13589	 - -->
 - ![修复图标](../../assets/fix.svg) **已更新MariaDB验证器** — 已更新MariaDB 10.11的ece-tools验证器。<!-- MCLOUD-13593	 - -->
 - ![修复图标](../../assets/fix.svg) **扩展Opensearch2兼容性** — 使Opensearch2与最新的2.4.4版本兼容。<!-- MCLOUD-13710	 - -->
@@ -273,7 +279,7 @@ ht-degree: 0%
 
 **验证和日志改进**—
 
-- ![新图标](../../assets/new.svg)添加了`schema.error.yaml`文件，该文件包含在生成、部署和部署后过程中可能发生的所有错误和警告通知以及解决错误的建议。 此文件中的信息也可在&#x200B;_Commerce云指南_&#x200B;中找到。 查看ece-tools[&#128279;](../dev-tools/error-reference.md)的错误消息引用。<!--MCLOUD-5878-->
+- ![新图标](../../assets/new.svg)添加了`schema.error.yaml`文件，该文件包含在生成、部署和部署后过程中可能发生的所有错误和警告通知以及解决错误的建议。 此文件中的信息也可在&#x200B;_Commerce云指南_&#x200B;中找到。 查看ece-tools](../dev-tools/error-reference.md)的[错误消息引用。<!--MCLOUD-5878-->
 
 - ![新图标](../../assets/new.svg)已将云错误日志(`/var/log/cloud.error.log`)条目更改为JSON格式，以使该日志更易于以编程方式解析。<!--MCLOUD-5879-->
 
@@ -293,7 +299,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **基础架构更新**—
 
-   - ![新图标](../../assets/new.svg) **日志记录改进** — 改进了日志跟踪功能，将退出代码分配给严重的部署错误，并在错误消息通知和日志事件中公开退出代码。 查看ece-tools[&#128279;](../dev-tools/error-reference.md)的错误消息引用。<!-- MCLOUD-5637, 5531-->
+   - ![新图标](../../assets/new.svg) **日志记录改进** — 改进了日志跟踪功能，将退出代码分配给严重的部署错误，并在错误消息通知和日志事件中公开退出代码。 查看ece-tools](../dev-tools/error-reference.md)的[错误消息引用。<!-- MCLOUD-5637, 5531-->
 
    - ![新图标](../../assets/new.svg)改进了数据库转储的进程(`vendor/bin/ece-tools db-dump`)并更新了日志消息，以明确说明数据库转储操作将应用程序切换到维护模式，停止使用者队列进程，并在转储开始之前禁用cron作业。<!--MCLOUD-5324, MCLOUD-2062-->
 

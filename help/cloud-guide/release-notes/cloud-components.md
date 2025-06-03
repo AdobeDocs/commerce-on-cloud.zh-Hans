@@ -3,9 +3,9 @@ title: 适用于Commerce的云组件
 description: 请参阅云组件包的最新改进列表。
 recommendations: noDisplay, catalog
 exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
-source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
+source-git-commit: dcf71ffbdafae46e6a02735c090c33a8fe248bc6
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.1.1 {#latest}
+## v1.1.2 {#latest}
 
+发布日期： 2025年6月3日
+
+- ![修复图标](../../assets/fix.svg) **改进与2.4.8的兼容性** — 更新了第三方库以更好地与2.4.8<!-- MCLOUD-13707	 - -->兼容
+
+## v1.1.1
 
 发行日期： 2025年2月6日
 
@@ -55,7 +60,7 @@ ht-degree: 0%
 
 发行日期： 2022年9月13日
 
-- ![修复图标](../../assets/fix.svg) **预热错误** — 修复了当管理员中的页面可见性设置为&#x200B;[**不可单独显示**](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)时尝试[预热的](../environment/variables-post-deploy.md#warm_up_pages)问题，该问题导致部署日志中出现`ERROR: Warming up failed: <link to page>`错误。<!-- MCLOUD-9134 -->
+- ![修复图标](../../assets/fix.svg) **预热错误** — 修复了当管理员中的页面可见性设置为&#x200B;[**不可单独显示**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)时尝试[预热的](../environment/variables-post-deploy.md#warm_up_pages)问题，该问题导致部署日志中出现`ERROR: Warming up failed: <link to page>`错误。<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 
