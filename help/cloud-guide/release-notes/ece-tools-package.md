@@ -279,7 +279,7 @@ ht-degree: 0%
 
 **验证和日志改进**—
 
-- ![新图标](../../assets/new.svg)添加了`schema.error.yaml`文件，该文件包含在生成、部署和部署后过程中可能发生的所有错误和警告通知以及解决错误的建议。 此文件中的信息也可在&#x200B;_Commerce云指南_&#x200B;中找到。 查看ece-tools](../dev-tools/error-reference.md)的[错误消息引用。<!--MCLOUD-5878-->
+- ![新图标](../../assets/new.svg)添加了`schema.error.yaml`文件，该文件包含在生成、部署和部署后过程中可能发生的所有错误和警告通知以及解决错误的建议。 此文件中的信息也可在&#x200B;_Commerce云指南_&#x200B;中找到。 查看ece-tools[&#128279;](../dev-tools/error-reference.md)的错误消息引用。<!--MCLOUD-5878-->
 
 - ![新图标](../../assets/new.svg)已将云错误日志(`/var/log/cloud.error.log`)条目更改为JSON格式，以使该日志更易于以编程方式解析。<!--MCLOUD-5879-->
 
@@ -299,7 +299,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **基础架构更新**—
 
-   - ![新图标](../../assets/new.svg) **日志记录改进** — 改进了日志跟踪功能，将退出代码分配给严重的部署错误，并在错误消息通知和日志事件中公开退出代码。 查看ece-tools](../dev-tools/error-reference.md)的[错误消息引用。<!-- MCLOUD-5637, 5531-->
+   - ![新图标](../../assets/new.svg) **日志记录改进** — 改进了日志跟踪功能，将退出代码分配给严重的部署错误，并在错误消息通知和日志事件中公开退出代码。 查看ece-tools[&#128279;](../dev-tools/error-reference.md)的错误消息引用。<!-- MCLOUD-5637, 5531-->
 
    - ![新图标](../../assets/new.svg)改进了数据库转储的进程(`vendor/bin/ece-tools db-dump`)并更新了日志消息，以明确说明数据库转储操作将应用程序切换到维护模式，停止使用者队列进程，并在转储开始之前禁用cron作业。<!--MCLOUD-5324, MCLOUD-2062-->
 
