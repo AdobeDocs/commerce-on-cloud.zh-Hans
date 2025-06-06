@@ -23,7 +23,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->有关安全性的更多信息，请参阅[安全性启动项核对清单](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
+>有关安全性的更多信息，请参阅[安全性启动项核对清单](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
 
 查看[技术栈栈](architecture/tech-stack.md)的详细信息，或了解有关Commerce [&#128279;](architecture/cloud-architecture.md)的云架构中的特定功能和支持的产品的更多信息。
 
@@ -60,5 +60,5 @@ Commerce on cloud infrastructure指南假定您对Adobe Commerce应用程序有�
 
 - [Adobe Commerce开发人员文档](https://developer.adobe.com/commerce/docs/) (Adobe Developer站点) — 开发、自定义、集成、扩展和使用高级功能
 
-- [Adobe Commerce文档](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League) — 规划、实施、运营、升级和维护您的[!DNL Commerce]项目
+- [Adobe Commerce文档](https://experienceleague.adobe.com/docs/commerce.html?lang=zh-Hans) (Adobe Experience League) — 规划、实施、运营、升级和维护您的[!DNL Commerce]项目
 
