@@ -3,9 +3,9 @@ title: 自定义缓存配置
 description: 了解如何在Fastly服务设置完成后查看和自定义缓存配置设置。
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: dcf585e25a4b06ff903642e42e72a71820bad008
+source-git-commit: eaa9980c437a9398f0d20d3c27832aecffc78fd9
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,10 @@ Fastly服务配置为发送给管理员的HTTPS请求指定180秒的默认超时
 1. 在&#x200B;_快速配置_&#x200B;部分中，展开&#x200B;**高级配置**。
 
 1. 设置&#x200B;**管理员路径超时**&#x200B;值（以秒为单位）。 此值不能超过10分钟（600秒）。
+
+>[!NOTE]
+>
+>**_管理员路径超时_**&#x200B;配置设置不控制Adobe Commerce之外的超时值，如Fastly WAF超时。 要调整Fastly WAF超时值，您必须打开Adobe支持票证以在Fastly服务中更新它。
 
 1. 单击页面顶部的&#x200B;**保存配置**。
 
@@ -158,7 +162,7 @@ _原始屏蔽_&#x200B;将存储的所有请求路由到特定存在点(POP)。 �
 ## 基本身份验证
 
 基本身份验证功能可保护您网站上的每个页面和资产
-用户名和密码。 我们&#x200B;**不建议**&#x200B;激活基本
+用户名和密码。 我们**不建议**激活基本
 在生产环境中进行身份验证。 您可以在暂存环境中配置它
 以在开发过程中保护您的站点。 请参阅Fastly CDN模块文档中的[基本身份验证指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md)。
 
@@ -181,7 +185,7 @@ Fastly支持自定义版本的Varnish Configuration Language (VCL)以自定义Fa
 
 - 对于入门项目，请转到[!DNL Cloud Console]中[!UICONTROL Domains]选项卡下的项目URL以添加项目URL。
 
-- 对于Pro项目，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以将该域添加到云项目配置。 支持团队还更新Adobe Commerce Fastly帐户配置以添加域。
+- 对于Pro项目，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以将该域添加到云项目配置。 支持团队还更新Adobe Commerce Fastly帐户配置以添加域。
 
 **要从管理员管理Fastly域配置**：
 
