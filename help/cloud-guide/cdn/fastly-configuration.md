@@ -82,7 +82,7 @@ Fastly与Varnish合作，提供快速缓存功能以及用于静态资产的内�
 
 您需要以下组件来启用和配置Fastly服务：
 
-- 暂存和生产环境中安装的适用于Magento 2模块](fastly.md#fastly-cdn-module-for-magento-2)的[Fastly CDN的最新版本。 查看[快速升级](#upgrade-the-fastly-module)。
+- 暂存和生产环境中安装的适用于Magento 2模块[&#128279;](fastly.md#fastly-cdn-module-for-magento-2)的Fastly CDN的最新版本。 查看[快速升级](#upgrade-the-fastly-module)。
 
 - 云基础架构暂存和生产环境上的Adobe Commerce的[Fastly凭据](#get-fastly-credentials)
 
@@ -116,7 +116,7 @@ Fastly与Varnish合作，提供快速缓存功能以及用于静态资产的内�
 
    >[!NOTE]
    >
-   >请勿选择链接以创建Fastly API令牌。 请改用Adobe](#get-fastly-credentials)提供的[Fastly凭据（服务ID和API令牌）。
+   >请勿选择链接以创建Fastly API令牌。 请改用Adobe[&#128279;](#get-fastly-credentials)提供的Fastly凭据（服务ID和API令牌）。
 
 1. 单击&#x200B;**测试凭据**。
 
