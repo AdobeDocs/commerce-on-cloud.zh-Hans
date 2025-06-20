@@ -2,9 +2,10 @@
 title: 添加站点地图和搜索引擎机器人
 description: 了解如何在云基础架构上将站点地图和搜索引擎机器人添加到Adobe Commerce。
 feature: Cloud, Configuration, Search, Site Navigation
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
+source-git-commit: 8626364ec7bcaaa0e17a3380ec0b9b73110c4574
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -48,7 +49,7 @@ Please make sure that "/" is writable by the web-server.
 
 >[!NOTE]
 >
->如果`<domain.your.project>/robots.txt`文件生成`404 error`，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以移除从`/robots.txt`到`/media/robots.txt`的重定向。
+>如果`<domain.your.project>/robots.txt`文件生成`404 error`，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以移除从`/robots.txt`到`/media/robots.txt`的重定向。
 
 ## 使用Fastly VCL代码片段重写
 
@@ -116,12 +117,19 @@ VCL代码段路由`http://domain.com/robots.txt`并显示`pub/media/domain_robot
 
 ### 按搜索引擎配置索引
 
-要在生产环境中激活`robots.txt`自定义项，您必须启用项目设置中的&#x200B;`<environment-name>`**的**&#x200B;按搜索引擎索引处于打开状态选项。
+要在生产环境中激活`robots.txt`自定义项，必须在Cloud Console上的项目设置中启用&#x200B;**为`<environment-name>`**&#x200B;启用按搜索引擎索引功能选项：
 
 ![使用[!DNL Cloud Console]管理环境](../../assets/robots-indexing-by-search-engine.png)
+
+您还可以使用magento-cloud CLI更新此设置：
+
+```bash
+magento-cloud environment:info -p <project_id> -e production restrict_robots false
+```
 
 >[!NOTE]
 >
 >- 只能在生产环境中启用按搜索引擎编制索引，而不能在任何较低级别的环境中启用。
 >
->- 如果您正在使用PWA Studio并且无法访问配置的`robots.txt`文件，请将`robots.txt`添加到[前名PWA](https://github.com/magento/magento2-upward-connector#front-name-allowlist)，位于&#x200B;**商店** >配置> **常规** > **Web** > UPPER允许列表配置。
+>- 如果您使用PWA Studio并且无法访问您配置的`robots.txt`文件，请将`robots.txt`添加到[前名允许列表](https://github.com/magento/magento2-upward-connector#front-name-allowlist)，位置为&#x200B;**商店** >配置> **常规** > **Web** > PWA配置向上。
+
