@@ -1,9 +1,10 @@
 ---
 title: 站点启动
 description: 了解如何开始站点启动准备工作。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 95abc7aa-ed4d-44f7-96aa-517c646bc00d
+source-git-commit: 38ac38d4edd0f317155d0d4537021a29a21d5761
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -38,11 +39,11 @@ ht-degree: 0%
 
 - SSL/TLS证书
 
-作为Adobe Commerce云基础架构订阅的一部分，Adobe提供由Let’s Encrypt颁发的经域验证的SSL/TLS证书。 每个Pro Production、Staging和Starter Production (`master`)环境都有一个唯一的证书，该证书涵盖了该环境中的所有域和子域。 这些证书会在您更新用于开发和生产的DNS配置后自动配置并上传到您的站点。 请参阅[预配SSL/TLS证书](../cdn/fastly-configuration.md#provision-ssltls-certificates)。
+作为Adobe Commerce云基础架构订阅的一部分，Adobe提供了由让我们加密颁发的域验证的SSL/TLS证书。 每个Pro Production、Staging和Starter Production (`master`)环境都有一个唯一的证书，该证书涵盖了该环境中的所有域和子域。 这些证书会在您更新用于开发和生产的DNS配置后自动配置并上传到您的站点。 请参阅[预配SSL/TLS证书](../cdn/fastly-configuration.md#provision-ssltls-certificates)。
 
 >[!NOTE]
 >
->如果您要为公司部署自己的扩展验证SSL证书，而不使用Let&#39;s Encrypt证书，请联系您的CTA或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。
+>如果您要为公司部署自己的扩展验证SSL证书，而不使用Let&#39;s Encrypt证书，请联系您的CTA或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。
 
 ## 设置安全扫描工具
 
@@ -58,13 +59,17 @@ ht-degree: 0%
 >
 >将这些IP地址添加到网络防火墙规则中的允许列表，以允许该工具扫描您的站点。 该工具仅向端口80和443发送请求。
 
-安全扫描工具可让您定期监视商店网站，并接收已知安全风险、恶意软件和过期软件的更新。 此工具是一项免费服务，适用于云基础架构上的所有实施和版本的Adobe Commerce。 你通过[Commerce Marketplace](https://account.magento.com/customer/account/login)访问该工具。
+安全扫描工具可让您定期监视商店网站，并接收已知安全风险、恶意软件和过期软件的更新。 此工具是一项免费服务，适用于云基础架构上的所有实施和版本的Adobe Commerce。 您可通过您的[Commerce Marketplace帐户](https://account.magento.com/customer/account/login)访问该工具。
 
 - 监视站点安全状态和应用的安全更新
 
 - 接收安全更新和特定于站点的通知
 
-有关设置和使用安全扫描工具的信息，请参阅[用户指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-scan)。 通常，在开始用户验收测试(UAT)时即开始使用此工具。
+>[!NOTE]
+>
+>Adobe建议使用安全扫描工具来取代其他第三方工具，以确保在调查结果调查期间提供最佳服务质量。
+
+有关设置和使用安全扫描工具的信息，请参阅[用户指南](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)。 通常，在开始用户验收测试(UAT)时即开始使用此工具。
 
 您扫描的每个站点都必须通过“安全扫描”选项卡进行注册。 在注册过程中，您必须接受免责声明，然后才能开始扫描。 您可以控制计划，并授权用户在每次扫描完成时接收通知。 您可以计划特定循环日期和时间的扫描，也可以根据需要运行扫描。
 
@@ -79,7 +84,7 @@ Visbot/2.0 (+http://www.visvo.com/en/webmasters.jsp;bot@visvo.com)
 
 ## 扫描您的网站
 
-1. 访问你的[Commerce Marketplace](https://account.magento.com/customer/account/login)。
+1. 访问您的[Commerce Marketplace帐户](https://account.magento.com/customer/account/login)。
 
 1. 单击“安全扫描”选项卡，然后选择&#x200B;**转到安全扫描**。
 
