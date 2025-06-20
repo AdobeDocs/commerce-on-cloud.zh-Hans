@@ -30,7 +30,7 @@ ht-degree: 0%
 >
 >通过在终端中运行以下命令，可以直接在Pro Production和Staging群集上创建代码的备份 — 针对要包含/排除的任何文件夹/路径调整该命令：
 >
-```bash
+>```bash
 >mkdir -p var/support
 >/usr/bin/nice -n 15 /bin/tar -czhf var/support/code-$(date +"%Y%m%d%H%M%p").tar.gz app bin composer.* dev lib pub/*.php pub/errors setup vendor --exclude='pub/media'
 >```
