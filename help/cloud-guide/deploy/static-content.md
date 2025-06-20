@@ -42,8 +42,8 @@ ht-degree: 0%
 
 >[!NOTE]
 >运行`ece-tools`包中的`config:dump`命令后，转储到`config.php`文件[的配置在管理员仪表板](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin)中将被锁定（灰显）。 在管理员中更新这些配置的唯一方法是从本地文件删除它们，然后重新部署项目。
->>此外，每次向实例添加新的商店/商店组/网站时，都应记得运行`config:dump`命令以确保数据库同步。 您还可以选择应将哪些配置](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)转储到`config.php`文件中的[。
->>如果由于字段灰显而忽略执行此步骤而从`config.php`文件中删除商店/商店组/网站配置，则下次部署时将从数据库中删除未转储的新实体。
+>&#x200B;>此外，每次向实例添加新的商店/商店组/网站时，都应记得运行`config:dump`命令以确保数据库同步。 您还可以选择应将哪些配置[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)转储到`config.php`文件中的。
+>&#x200B;>如果由于字段灰显而忽略执行此步骤而从`config.php`文件中删除商店/商店组/网站配置，则下次部署时将从数据库中删除未转储的新实体。
 
 **要将项目配置为在生成**&#x200B;时生成SCD，请执行以下操作：
 
