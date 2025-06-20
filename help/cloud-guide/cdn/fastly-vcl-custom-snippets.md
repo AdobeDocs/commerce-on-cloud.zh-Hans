@@ -2,9 +2,10 @@
 title: 开始使用自定义VCL代码片段
 description: 了解如何使用Varnish控制语言代码片段自定义Adobe Commerce的Fastly服务配置。
 feature: Cloud, Configuration, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 90f0bea6-4365-4657-94e9-92a0fd1145fd
+source-git-commit: 71fb8f5b3f32553d8b247de44fea29b1bb945584
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '2037'
 ht-degree: 0%
 
 ---
@@ -316,3 +317,16 @@ curl -H "Fastly-Key: $FASTLY_API_TOKEN" https://api.fastly.com/service/$FASTLY_S
 - **覆盖[默认Fastly VCL代码中的值](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**
 
   创建具有更新值的代码片段并分配`100`优先级。
+
+## 无法在Commerce管理员中查看/修改的代码片段
+
+您不能直接在Commerce管理员中查看或修改某些代码片段。 例如，[动态代码片段](https://docs.fastly.com/en/guides/using-dynamic-vcl-snippets)。 在“自定义VCL代码片段”部分中，您将不会看到Cloud Support团队直接添加到[Fastly管理仪表板](fastly.md#fastly-service-account-and-credentials)的代码片段。
+
+
+**要观察云支持团队添加的代码片段，请执行以下操作：**
+
+1. 转到&#x200B;**工具**&#x200B;部分。
+
+1. 单击&#x200B;_版本历史记录_&#x200B;旁边的&#x200B;**列出所有版本**。
+
+1. 单击适用的VCL版本旁边的眼睛图标以查看现有代码片段。
