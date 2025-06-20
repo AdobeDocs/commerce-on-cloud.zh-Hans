@@ -40,7 +40,7 @@ Fastly与Varnish合作，提供快速缓存功能以及用于静态资产的内�
 
 在云基础架构上使用Adobe Commerce，您无法直接访问Fastly管理仪表板。
 
-您必须使用Adobe Commerce管理员来查看和更新环境的Fastly配置。 如果您无法在管理员中使用Fastly功能解决问题，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。
+您必须使用Adobe Commerce管理员来查看和更新环境的Fastly配置。 如果您无法在管理员中使用Fastly功能解决问题，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。
 
 ## 获取Fastly凭据
 
@@ -56,7 +56,7 @@ Fastly与Varnish合作，提供快速缓存功能以及用于静态资产的内�
 >
 >如果您的API令牌曾公开共享或附加到支持票证，则将被视为泄露。 在这种情况下，将需要Adobe为您生成一个新令牌。
 >
->相关：验证Fastly凭据时出现[错误](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)
+>相关：验证Fastly凭据时出现[错误](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)
 
 对于Pro和Starter项目，查看凭据的方法不同。
 
@@ -148,7 +148,7 @@ Fastly与Varnish合作，提供快速缓存功能以及用于静态资产的内�
 
 ## 配置SSL/TLS证书
 
-Adobe提供了一个域验证的Let’s Encrypt SSL/TLS证书，为来自Fastly的安全HTTPS流量提供服务。 Adobe为每个Pro Production、Staging和Starter Production环境提供一个证书，以保护该环境中的所有域。 有关提供的证书的详细信息，请参阅云基础架构上的[Adobe Adobe Commerce SSL (TLS)证书](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html)。
+Adobe提供了一个域验证的Let’s Encrypt SSL/TLS证书，为来自Fastly的安全HTTPS流量提供服务。 Adobe为每个Pro Production、Staging和Starter Production环境提供一个证书，以保护该环境中的所有域。 有关提供的证书的详细信息，请参阅云基础架构上的[Adobe Adobe Commerce SSL (TLS)证书](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html?lang=zh-Hans)。
 
 >[!NOTE]
 >
@@ -252,7 +252,7 @@ Adobe提供了一个域验证的Let’s Encrypt SSL/TLS证书，为来自Fastly�
 
    >[!NOTE]
    >
-   >作为使用Cloud CLI的替代方法，您可以从[管理员](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html)更新基本URL
+   >作为使用Cloud CLI的替代方法，您可以从[管理员](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=zh-Hans)更新基本URL
 
 1. 重新启动Web浏览器。
 
@@ -327,4 +327,4 @@ Fastly更新了Magento 2模块的Fastly CDN，以解决问题、提高性能并�
 
 >[!TIP]
 >
-> 如果您在Adobe Commerce环境中遇到Fastly服务问题，请参阅[Adobe Commerce Fastly疑难解答程序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html)。
+> 如果您在Adobe Commerce环境中遇到Fastly服务问题，请参阅[Adobe Commerce Fastly疑难解答程序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html?lang=zh-Hans)。
