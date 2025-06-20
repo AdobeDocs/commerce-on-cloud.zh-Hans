@@ -3,9 +3,9 @@ title: 备份管理
 description: 了解如何在Cloud Infrastructure项目中手动创建和恢复Adobe Commerce的备份。
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: b9bbbb9b83ed995951feaa9391015f02a9661206
+source-git-commit: 13cb5e3231c2173d5687aec3e4e64ecc154ee962
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '819'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,18 @@ ht-degree: 0%
 
 您可以从[!DNL Cloud Console]创建任何活动Starter环境和集成Pro环境的手动备份，或从Cloud CLI创建快照。 您必须具有环境的[管理员角色](../project/user-access.md)。
 
+>[!NOTE]
+>
+>通过在终端中运行以下命令，可以直接在Pro Production和Staging群集上创建代码的备份 — 针对要包含/排除的任何文件夹/路径调整该命令：
+>
+```bash
+>mkdir -p var/support
+>/usr/bin/nice -n 15 /bin/tar -czhf var/support/code-$(date +"%Y%m%d%H%M%p").tar.gz app bin composer.* dev lib pub/*.php pub/errors setup vendor --exclude='pub/media'
+>```
+
 **创建Pro环境的数据库备份**：
-要为任何Pro环境（包括暂存环境和生产环境）创建数据库转储，请参阅[创建数据库转储](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知识库文章。
+
+要创建任何Pro环境（包括暂存环境和生产环境）的数据库转储，请参阅[创建数据库转储](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知识库文章。
 
 **要使用[!DNL Cloud Console]**&#x200B;创建任何Starter环境的备份：
 
@@ -140,10 +150,15 @@ ht-degree: 0%
 
 ## 恢复灾难恢复快照
 
-要在Pro暂存和生产环境中还原灾难恢复快照，请[直接从服务器](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)导入数据库转储。
+要在Pro暂存和生产环境中还原灾难恢复快照，请[直接从服务器](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)导入数据库转储。
 
 ## 回滚代码
 
 备份和快照&#x200B;_不_&#x200B;包含您的代码副本。 您的代码已存储在基于Git的存储库中，因此您可以使用基于Git的命令来回滚（或还原）代码。 例如，使用`git log --oneline`滚动浏览以前的提交；然后使用[`git revert`](https://git-scm.com/docs/git-revert)从特定提交还原代码。
 
 此外，您可以选择将代码存储在&#x200B;_非活动_&#x200B;分支中。 使用git命令而不是使用`magento-cloud`命令来创建分支。 请参阅Cloud CLI主题中的关于[Git命令](../dev-tools/cloud-cli-overview.md#git-commands)。
+
+## 相关信息
+
+- [备份数据库](database-dump.md)
+- Pro生产和暂存群集的[备份和灾难恢复](../architecture/pro-architecture.md#backup-and-disaster-recovery)
