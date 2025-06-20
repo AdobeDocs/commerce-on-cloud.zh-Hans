@@ -2,9 +2,10 @@
 title: Fastly服务概述
 description: 了解云基础架构上Adobe Commerce中包含的Fastly服务如何帮助您优化和保护Adobe Commerce站点的内容交付操作。
 feature: Cloud, Configuration, Iaas, Paas, Cache, Security, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 429b6762-0b01-438b-a962-35376306895b
+source-git-commit: 3cef442321120d8ca813c760d2fd0435f4961235
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1443'
 ht-degree: 0%
 
 ---
@@ -43,33 +44,35 @@ Fastly提供以下服务，以优化和保护Adobe Commerce在云基础架构项
 
 - **源遮蔽** — 防止流量绕过Fastly WAF并隐藏源服务器的IP地址，以保护它们免受直接访问和DDoS攻击。
 
-  默认情况下，云基础架构Pro Production项目上的Adobe Commerce上会启用源遮蔽。 要在云基础架构入门生产项目上的Adobe Commerce上启用源遮蔽，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。 如果您的流量不需要缓存，则可以自定义Fastly服务配置以允许请求[绕过Fastly缓存](fastly-vcl-bypass-to-origin.md)。
+  默认情况下，云基础架构Pro Production项目上的Adobe Commerce上会启用源遮蔽。 要在云基础架构入门生产项目上的Adobe Commerce上启用源遮蔽，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 如果您的流量不需要缓存，则可以自定义Fastly服务配置以允许请求[绕过Fastly缓存](fastly-vcl-bypass-to-origin.md)。
 
 - **[图像优化](fastly-image-optimization.md)** — 将图像处理和调整负载卸载到Fastly服务，以便服务器可以更高效地处理订单和转换。
 
 - **[Fastly CDN和WAF日志](../monitor/new-relic-service.md#new-relic-log-management)** — 对于云基础架构Pro项目上的Adobe Commerce，您可以使用New Relic日志服务来查看和分析Fastly CDN和WAF日志数据。
 
-## 用于Magento2的Fastly CDN模块
+## 适用于Magento 2的Fastly CDN模块
 
-云基础架构上Adobe Commerce的Fastly服务使用安装在以下环境中的Magento2&rbrack;的&lbrack;Fastly CDN模块： Pro Staging and Production， Starter Production （`master`分支）。
+云基础架构上Adobe Commerce的Fastly服务使用安装在以下环境中的Magento 2]的[Fastly CDN模块： Pro Staging and Production， Starter Production （`master`分支）。
 
 在初始配置或升级Adobe Commerce项目时，Adobe会在暂存和生产环境中安装最新版本的Fastly CDN模块。 当Fastly发布模块更新时，您会在管理员中收到有关环境的通知。 Adobe建议您更新环境以使用最新版本。 查看[快速升级](fastly-configuration.md#upgrade-the-fastly-module)。
 
 ## Fastly服务帐户和凭据
 
-云基础架构项目上的Adobe Commerce未获得专用的Fastly帐户。 Fastly服务在向Adobe注册的集中帐户中进行管理，并且管理功能板仅供云支持团队访问。
+云基础架构项目上的Adobe Commerce未获得专用的Fastly帐户。 Fastly服务在注册到Adobe的集中帐户中进行管理，并且管理功能板仅供云支持团队访问。
 
 相反，每个暂存和生产环境都具有唯一的Fastly凭据（API令牌和服务ID），以便从Commerce管理员配置和管理Fastly服务。 Fastly API可用于执行Fastly服务的高级管理，这需要凭据才能提交这些请求。
 
-在项目配置期间，Adobe会将您的项目添加到云基础架构上Adobe Commerce的Fastly服务帐户，并将Fastly凭据添加到暂存环境和生产环境的配置。 查看[获取Fastly凭据](fastly-configuration.md#get-fastly-credentials)。
+在项目配置期间，Adobe会将您的项目添加到云基础架构上Adobe Commerce的Fastly服务帐户，并将Fastly凭据添加到暂存环境和生产环境的配置中。 查看[获取Fastly凭据](fastly-configuration.md#get-fastly-credentials)。
 
 ### 更改Fastly API标记
 
-提交Adobe Commerce支持票证以更改Fastly API令牌凭据。 当您收到新令牌时，请更新您的暂存或生产环境以使用新令牌。
+提交Adobe Commerce支持票证，以便在验证失败/已过期](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials)或您认为其已受到侵害时，颁发新的Fastly API令牌凭据[。
+
+当您收到新令牌时，请更新您的暂存或生产环境以使用新令牌。
 
 **要更改Fastly API令牌凭据**：
 
-1. [提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)，请求新的Fastly API凭据。
+1. [提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，请求新的Fastly API凭据。
 
    在云基础架构项目ID和需要新凭据的环境中包含您的Adobe Commerce。
 
@@ -115,18 +118,18 @@ DDOS保护内置于Fastly CDN服务中。 一旦您为Adobe Commerce站点启用
 
   Fastly在缓存层管理TCP级别的攻击。 此策略为每个客户端提供了必要的规模和环境，以应对SYN洪水攻击及其许多变体，包括TCP栈栈、资源攻击和Fastly系统中的TLS攻击。
 
-- Fastly还提供针对第7层攻击的保护。 如果您的商店遇到性能问题，并且您怀疑发生了7层DDoS攻击，请提交Adobe Commerce支持请求工单。 Adobe可以创建自定义规则并将其应用于Fastly服务，以根据标头、有效负载或标识攻击流量的属性组合检查和过滤恶意请求。 请参阅&#x200B;*Adobe Commerce帮助中心*&#x200B;中的[检查DDoS攻击]和[如何阻止恶意流量]。
+- Fastly还提供针对第7层攻击的保护。 如果您的商店遇到性能问题，并且您怀疑发生了7层DDoS攻击，请提交Adobe Commerce支持请求工单。 Adobe可以创建自定义规则并应用于Fastly服务，以根据标头、有效负载或标识攻击流量的属性组合检查和过滤恶意请求。 请参阅&#x200B;*Adobe Commerce帮助中心*&#x200B;中的[检查DDoS攻击]和[如何阻止恶意流量]。
 
 <!--Link definitions-->
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[检查DDoS攻击]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=zh-Hans
+[检查DDoS攻击]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
 
-[用于Magento2的Fastly CDN模块]: https://github.com/fastly/fastly-magento2
+[适用于Magento 2的Fastly CDN模块]: https://github.com/fastly/fastly-magento2
 
 [Fastly支持票]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[如何阻止恶意流量]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=zh-Hans
+[如何阻止恶意流量]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html
 
 [使用域]: https://docs.fastly.com/en/guides/working-with-domains
