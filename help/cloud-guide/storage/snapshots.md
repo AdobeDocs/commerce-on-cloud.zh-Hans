@@ -27,7 +27,7 @@ ht-degree: 0%
 您可以从[!DNL Cloud Console]创建任何活动Starter环境和集成Pro环境的手动备份，或从Cloud CLI创建快照。 您必须具有环境的[管理员角色](../project/user-access.md)。
 
 **创建Pro环境的数据库备份**：
-要为任何Pro环境（包括暂存环境和生产环境）创建数据库转储，请参阅[创建数据库转储](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知识库文章。
+要为任何Pro环境（包括暂存环境和生产环境）创建数据库转储，请参阅[创建数据库转储](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知识库文章。
 
 **要使用[!DNL Cloud Console]**&#x200B;创建任何Starter环境的备份：
 
@@ -140,7 +140,7 @@ ht-degree: 0%
 
 ## 恢复灾难恢复快照
 
-要在Pro暂存和生产环境中还原灾难恢复快照，请[直接从服务器](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)导入数据库转储。
+要在Pro暂存和生产环境中还原灾难恢复快照，请[直接从服务器](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)导入数据库转储。
 
 ## 回滚代码
 
