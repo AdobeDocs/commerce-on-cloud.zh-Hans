@@ -52,7 +52,7 @@ Fastly提供以下服务，以优化和保护Adobe Commerce在云基础架构项
 
 ## 适用于Magento 2的Fastly CDN模块
 
-云基础架构上Adobe Commerce的Fastly服务使用安装在以下环境中的Magento 2]的[Fastly CDN模块： Pro Staging and Production， Starter Production （`master`分支）。
+云基础架构上Adobe Commerce的Fastly服务使用安装在以下环境中的Magento 2&rbrack;的&lbrack;Fastly CDN模块： Pro Staging and Production， Starter Production （`master`分支）。
 
 在初始配置或升级Adobe Commerce项目时，Adobe会在暂存和生产环境中安装最新版本的Fastly CDN模块。 当Fastly发布模块更新时，您会在管理员中收到有关环境的通知。 Adobe建议您更新环境以使用最新版本。 查看[快速升级](fastly-configuration.md#upgrade-the-fastly-module)。
 
@@ -66,7 +66,7 @@ Fastly提供以下服务，以优化和保护Adobe Commerce在云基础架构项
 
 ### 更改Fastly API标记
 
-提交Adobe Commerce支持票证，以便在验证失败/已过期](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials)或您认为其已受到侵害时，颁发新的Fastly API令牌凭据[。
+提交Adobe Commerce支持票证，以便在验证失败/已过期[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials)或您认为其已受到侵害时，颁发新的Fastly API令牌凭据。
 
 当您收到新令牌时，请更新您的暂存或生产环境以使用新令牌。
 
