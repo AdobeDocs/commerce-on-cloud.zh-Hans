@@ -63,7 +63,7 @@ DKIM是一种电子邮件身份验证技术，它使Internet服务提供商(ISP)
 
 >[!TIP]
 >
->请确保在&#x200B;**[!UICONTROLS中使用]**&#x200B;的适当域配置{store电子邮件地址&#x200B;**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**。 对发件人的电子邮件地址执行域身份验证。 如果配置了默认设置(`example.com`)，来自`example.com`的电子邮件将被Sendgrid阻止。
+>请确保在&#x200B;**[!UICONTROL S中使用]**&#x200B;的适当域配置&lbrace;store电子邮件地址&#x200B;**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**。 对发件人的电子邮件地址执行域身份验证。 如果配置了默认设置(`example.com`)，来自`example.com`的电子邮件将被Sendgrid阻止。
 
 **要启用域身份验证**：
 
