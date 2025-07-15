@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 升级Commerce版本
 
-您可以将Adobe Commerce代码库升级到较新版本。 在升级项目之前，请查看[安装](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)指南中的&#x200B;_系统要求_&#x200B;以了解最新的软件版本要求。
+您可以将Adobe Commerce代码库升级到较新版本。 在升级项目之前，请查看[安装](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)指南中的&#x200B;_系统要求_&#x200B;以了解最新的软件版本要求。
 
 根据您的项目配置，升级任务可能包括以下内容：
 
@@ -128,7 +128,7 @@ ht-degree: 0%
    composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
    ```
 
-1. 如果您使用的是B2B，请将您的`composer.json`文件更新为Commerce的[支持的版本](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions)。
+1. 如果您使用的是B2B，请将您的`composer.json`文件更新为Commerce的[支持的版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/product-availability#adobe-authored-extensions)。
 
    ```bash
    composer require-commerce magento/extension-b2b 1.5.2 --no-update
@@ -142,15 +142,15 @@ ht-degree: 0%
 
 1. 查看当前应用的修补程序：
 
-   - 如果`m2-hotfixes`目录中安装了任何修补程序，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)，并与Adobe Commerce支持部门合作，验证哪些修补程序仍可以应用于新版本。 从`m2-hotfixes`目录中删除不适用的修补程序。
+   - 如果`m2-hotfixes`目录中安装了任何修补程序，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)，并与Adobe Commerce支持部门合作，验证哪些修补程序仍可以应用于新版本。 从`m2-hotfixes`目录中删除不适用的修补程序。
 
    - 如果[文件中应用了任何]质量修补程序`.magento.env.yaml`，请验证它们是否仍可应用于新版本。 从`QUALITY_PATCHES`文件的`.magento.env.yaml`部分删除不适用的修补程序。
 
-   **方法1**： [验证Quality Patches发行说明中的适用版本](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **方法1**： [验证Quality Patches发行说明中的适用版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **方法2**： [查看可用的修补程序和状态](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **方法2**： [查看可用的修补程序和状态](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **方法3**： [搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
+   **方法3**： [搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)
 
 
 1. 添加、提交和推送代码更改。
