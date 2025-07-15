@@ -3,195 +3,36 @@ title: 升级Commerce版本
 description: 了解如何在云基础架构项目中升级Adobe Commerce版本。
 feature: Cloud, Upgrade
 exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
-source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
+source-git-commit: bcb5b00f7f203b53eae5c1bc1037cdb1837ad473
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
 
 # 升级Commerce版本
 
-您可以将Adobe Commerce代码库升级到较新版本。 在升级项目之前，请查看&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)以了解最新的软件版本要求。
+您可以将Adobe Commerce代码库升级到较新版本。 在升级项目之前，请查看[安装](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)指南中的&#x200B;_系统要求_&#x200B;以了解最新的软件版本要求。
 
 根据您的项目配置，升级任务可能包括以下内容：
 
-- 更新服务(例如MariaDB (MySQL)、OpenSearch、RabbitMQ和Redis)以便与新的Adobe Commerce版本兼容。
-- 转换旧版配置管理文件。
+- 使用MariaDB (MySQL)、OpenSearch、RabbitMQ和Redis的新版本更新`.magento/services.yaml`文件，以便与新的Adobe Commerce版本兼容。
 - 使用挂接和环境变量的新设置更新`.magento.app.yaml`文件。
 - 将第三方扩展升级到支持的最新版本。
-- 更新`.gitignore`文件。
 
 {{upgrade-tip}}
 
 {{pro-update-service}}
 
-## 从旧版本升级
-
-如果您开始从低于2.1的Commerce版本升级，Adobe Commerce代码库中的某些限制可能会影响您将&#x200B;_更新_&#x200B;到特定ECE-Tools版本或&#x200B;_升级_&#x200B;到下一个受支持的Commerce版本的能力。 使用下表确定最佳路径：
-
-| 当前版本 | 升级路径 |
-| ----------------- | ------------ |
-| 2.1.3及更早版本 | 在继续操作之前，请将Adobe Commerce升级到版本2.1.4或更高版本。 然后执行[一次性升级以安装ECE-Tools](../dev-tools/install-package.md)。 |
-| 2.1.4 - 2.1.14 | [更新ECE-Tools](../dev-tools/update-package.md)包。<br>请参阅[2002.0.9](../release-notes/cloud-release-archive.md#v200209)和更高版本2002.0.x的发行说明。 |
-| 2.1.15 - 2.1.16 | [更新ECE-Tools](../dev-tools/update-package.md)包。<br>请参阅[2002.0.9](../release-notes/cloud-release-archive.md#v200209)及更高版本的发行说明。 |
-| 2.2.x及更高版本 | [更新ECE-Tools](../dev-tools/update-package.md)包。<br>请参阅[2002.0.8](../release-notes/cloud-release-archive.md#v200208)及更高版本的发行说明。 |
-
-{style="table-layout:auto"}
-
-{{ece-tools-package}}
-
-## 配置管理
-
-较旧版本的Adobe Commerce（如2.1.4或更高版本到2.2.x或更高版本）使用`config.local.php`文件进行配置管理。 Adobe Commerce版本2.2.0及更高版本使用`config.php`文件，该文件与`config.local.php`文件完全相同，但其配置设置有所不同，其中包括已启用的模块的列表和其他配置选项。
-
-从旧版本升级时，必须迁移`config.local.php`文件以使用较新的`config.php`文件。 使用以下步骤备份配置文件并创建一个。
-
-**要创建临时`config.php`文件**：
-
-1. 创建`config.local.php`文件的副本并将其命名为`config.php`。
-
-1. 将此文件添加到您项目的`app/etc`文件夹中。
-
-1. 将文件添加并提交到分支。
-
-1. 将文件推送到集成分支。
-
-1. 继续升级过程。
-
->[!WARNING]
->
->升级后，您可以删除`config.php`文件并生成新的完整文件。 您只能删除此文件以一次替换它。 生成新的、完整的`config.php`文件后，无法删除该文件以生成新的文件。 请参阅[配置管理和管道部署](../store/store-settings.md)。
-
-### 验证Zend框架编辑器依赖关系
-
-从2.2.x **升级到** 2.3.x或更高版本时，请验证Zend Framework依赖项是否已添加到`composer.json`文件的`autoload`属性中以支持Laminas。 此插件支持Zend框架的新要求，该框架已迁移到Laminas项目。 请参阅&#x200B;_Magento DevBlog_&#x200B;上的[将Zend Framework迁移到Laminas项目](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251)。
-
-**检查`auto-load:psr-4`配置**：
-
-1. 在本地工作站上，转到您的项目目录。
-
-1. 请查看您的集成分支。
-
-1. 在文本编辑器中打开`composer.json`文件。
-
-1. 检查Zend插件管理器实施的`autoload:psr-4`部分以了解控制器依赖关系。
-
-   ```json
-    "autoload": {
-       "psr-4": {
-          "Magento\\Framework\\": "lib/internal/Magento/Framework/",
-          "Magento\\Setup\\": "setup/src/Magento/Setup/",
-          "Magento\\": "app/code/Magento/",
-          "Zend\\Mvc\\Controller\\": "setup/src/Zend/Mvc/Controller/"
-       },
-   }
-   ```
-
-1. 如果缺少Zend依赖项，请更新`composer.json`文件：
-
-   - 将以下行添加到`autoload:psr-4`部分。
-
-     ```json
-     "Zend\\Mvc\\Controller\\": "setup/src/Zend/Mvc/Controller/"
-     ```
-
-   - 更新项目依赖关系。
-
-     ```bash
-     composer update
-     ```
-
-   - 添加、提交和推送代码更改。
-
-     ```bash
-     git add -A
-     ```
-
-     ```bash
-     git commit -m "Add Zend plugin manager implementation for controllers dependency for Laminas support"
-     ```
-
-     ```bash
-     git push origin <branch-name>
-     ```
-
-   - 先将更改合并到暂存环境，然后再合并到生产环境。
-
 ## 配置文件
 
 在升级应用程序之前，必须更新项目配置文件，以便考虑对云基础架构或应用程序上Adobe Commerce的默认配置设置所做的更改。 可以在[magento-cloud GitHub存储库](https://github.com/magento/magento-cloud)中找到最新的默认值。
-
-### .magento.app.yaml
-
-始终检查[.magento.app.yaml](../application/configure-app-yaml.md)文件中包含的值以确定您所安装的版本，因为它控制应用程序构建和部署到云基础架构的方式。 以下示例适用于版本2.4.8，并且使用编辑器2.8.4。`build: flavor:`属性不用于Composer 2.x；请参阅[安装和使用Composer 2](../application/properties.md#installing-and-using-composer-2)。
-
-**要更新`.magento.app.yaml`文件**：
-
-1. 在本地工作站上，转到您的项目目录。
-
-1. 打开并编辑`magento.app.yaml`文件。
-
-1. 更新PHP选项。
-
-   ```yaml
-   type: php:8.4
-   
-   build:
-       flavor: none
-   dependencies:
-       php:
-           composer/composer: '2.8.4'
-   ```
-
-1. 修改`hooks`属性`build`和`deploy`命令
-
-   ```yaml
-   hooks:
-       # We run build hooks before your application has been packaged.
-       build: |
-           set -e
-           composer install
-           php ./vendor/bin/ece-tools run scenario/build/generate.xml
-           php ./vendor/bin/ece-tools run scenario/build/transfer.xml
-       # We run deploy hook after your application has been deployed and started.
-       deploy: |
-           php ./vendor/bin/ece-tools run scenario/deploy.xml
-       # We run post deploy hook to clean and warm the cache. Available with ECE-Tools 2002.0.10.
-       post_deploy: |
-           php ./vendor/bin/ece-tools run scenario/post-deploy.xml
-   ```
-
-1. 在文件末尾添加以下环境变量。
-
-   对于Adobe Commerce 2.2.x到2.3.x-
-
-   ```yaml
-   variables:
-       env:
-           CONFIG__DEFAULT__PAYPAL_ONBOARDING__MIDDLEMAN_DOMAIN: 'payment-broker.magento.com'
-           CONFIG__STORES__DEFAULT__PAYMENT__BRAINTREE__CHANNEL: 'Magento_Enterprise_Cloud_BT'
-           CONFIG__STORES__DEFAULT__PAYPAL__NOTATION_CODE: 'Magento_Enterprise_Cloud'
-   ```
-
-   对于Adobe Commerce 2.4.x-
-
-   ```yaml
-   variables:
-       env:
-           CONFIG__DEFAULT__PAYPAL_ONBOARDING__MIDDLEMAN_DOMAIN: 'payment-broker.magento.com'
-           CONFIG__STORES__DEFAULT__PAYPAL__NOTATION_CODE: 'Magento_Enterprise_Cloud'
-   ```
-
-1. 保存文件。 不要将更改提交或推送到远程环境。
-
-1. 继续升级过程。
 
 ### composer.json
 
 升级之前，请始终检查`composer.json`文件中的依赖项是否与Adobe Commerce版本兼容。
 
-**要更新Adobe Commerce版本2.4.4及更高版本的`composer.json`文件**：
+要更新Adobe Commerce版本2.4.4及更高版本的`composer.json`文件**：
 
 1. 将以下`allow-plugins`添加到`config`部分：
 
@@ -241,7 +82,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >`magento-cloud db:dump`命令运行带有`--single-transaction`标志的[mysqldump](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)命令，该标志允许您在不锁定表的情况下备份数据库。
+   >`magento-cloud db:dump`命令运行带有[标志的](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)mysqldump`--single-transaction`命令，该标志允许您在不锁定表的情况下备份数据库。
 
 1. 备份代码和介质。
 
@@ -271,17 +112,29 @@ ht-degree: 0%
 
 1. 在本地工作站上，转到您的项目目录。
 
-1. 使用[版本约束语法](overview.md#cloud-metapackage)设置升级版本。
+1. 为目标升级版本设置[版本约束](overview.md#cloud-metapackage)。 仅当目标版本位于现有约束之外时，才需要执行此步骤。
 
    ```bash
-   composer require "magento/magento-cloud-metapackage":">=CURRENT_VERSION <NEXT_VERSION" --no-update
+   composer require-commerce "magento/magento-cloud-metapackage":">=CURRENT_VERSION <NEXT_VERSION" --no-update
    ```
 
    >[!NOTE]
    >
    >您必须使用版本约束语法才能成功更新`ece-tools`包。 您可以在`composer.json`文件中找到用于升级的[应用程序模板](https://github.com/magento/magento-cloud/blob/master/composer.json)的版本限制。
 
-1. 更新项目。
+1. 使用核心Commerce升级版本更新您的`composer.json`文件。
+
+   ```bash
+   composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
+   ```
+
+1. 如果您使用的是B2B，请将您的`composer.json`文件更新为Commerce的[支持的版本](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions)。
+
+   ```bash
+   composer require-commerce magento/extension-b2b 1.5.2 --no-update
+   ```
+
+1. 更新项目依赖关系。
 
    ```bash
    composer update
@@ -289,15 +142,15 @@ ht-degree: 0%
 
 1. 查看当前应用的修补程序：
 
-   - 如果`m2-hotfixes`目录中安装了任何修补程序，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)，并与Adobe Commerce支持部门合作，验证哪些修补程序仍可以应用于新版本。 从`m2-hotfixes`目录中删除不适用的修补程序。
+   - 如果`m2-hotfixes`目录中安装了任何修补程序，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)，并与Adobe Commerce支持部门合作，验证哪些修补程序仍可以应用于新版本。 从`m2-hotfixes`目录中删除不适用的修补程序。
 
-   - 如果`.magento.env.yaml`文件中应用了任何[质量修补程序]，请验证它们是否仍可应用于新版本。 从`.magento.env.yaml`文件的`QUALITY_PATCHES`部分删除不适用的修补程序。
+   - 如果[文件中应用了任何]质量修补程序`.magento.env.yaml`，请验证它们是否仍可应用于新版本。 从`QUALITY_PATCHES`文件的`.magento.env.yaml`部分删除不适用的修补程序。
 
-   **方法1**： [验证Quality Patches发行说明中的适用版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **方法1**： [验证Quality Patches发行说明中的适用版本](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **方法2**： [查看可用的修补程序和状态](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **方法2**： [查看可用的修补程序和状态](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **方法3**： [搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)
+   **方法3**： [搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
 
 
 1. 添加、提交和推送代码更改。
@@ -325,42 +178,6 @@ ht-degree: 0%
    ```bash
    php bin/magento --version
    ```
-
-### 创建config.php文件
-
-如[配置管理](#configuration-management)中所述，升级后，您必须创建一个更新的`config.php`文件。 通过集成环境中的管理员完成任何其他配置更改。
-
-**要创建系统特定的配置文件**：
-
-1. 从终端，使用SSH命令为环境生成`/app/etc/config.php`文件。
-
-   ```bash
-   ssh <SSH-URL> "<Command>"
-   ```
-
-   例如，对于Pro，要在`integration`分支上运行`scd-dump`，请执行以下操作：
-
-   ```bash
-   ssh <project-id-integration>@ssh.us.magentosite.cloud "php vendor/bin/ece-tools config:dump"
-   ```
-
-1. 使用`rsync`或`scp`将`config.php`文件传输到本地工作站。 您只能将此文件添加到本地分支中。
-
-   ```bash
-   rsync <SSH-URL>:app/etc/config.php ./app/etc/config.php
-   ```
-
-1. 添加、提交和推送代码更改。
-
-   ```bash
-   git add app/etc/config.php && git commit -m "Add system-specific configuration" && git push origin master
-   ```
-
-   这将生成一个包含模块列表和配置设置的更新`/app/etc/config.php`文件。
-
->[!WARNING]
->
->对于升级，您删除了`config.php`文件。 将此文件添加到您的代码后，您应该&#x200B;**不**&#x200B;删除它。 如果必须删除或编辑设置，请手动编辑该文件。
 
 ### 升级扩展
 
