@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 零停机部署
 
-云基础架构上的Adobe Commerce在部署阶段以&#x200B;[_维护_&#x200B;模式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode)运行应用程序，该模式将使您的网站脱机，直到部署完成。 生产站点处于维护模式的时长取决于站点的大小、部署期间应用的更改数以及静态内容部署的配置。 可以配置您的项目，使其部署时具有&#x200B;**零**&#x200B;停机影响。
+云基础架构上的Adobe Commerce在部署阶段以&#x200B;[_维护_&#x200B;模式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=zh-Hans#production-mode)运行应用程序，该模式将使您的网站脱机，直到部署完成。 生产站点处于维护模式的时长取决于站点的大小、部署期间应用的更改数以及静态内容部署的配置。 可以配置您的项目，使其部署时具有&#x200B;**零**&#x200B;停机影响。
 
 在部署过程中，所有连接将排队长达5分钟，以保留任何活动会话和待定操作，例如添加到购物车或结帐。 部署后，队列将释放，连接将继续而不会中断。 若要使用此&#x200B;_连接保持_&#x200B;的优势并将部署减少到&#x200B;_零_&#x200B;停机时间，必须将项目配置为使用最有效的部署策略。
 
