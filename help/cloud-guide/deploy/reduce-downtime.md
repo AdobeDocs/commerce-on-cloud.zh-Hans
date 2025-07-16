@@ -2,18 +2,23 @@
 title: 零停机部署
 description: 了解在云基础架构项目上部署Adobe Commerce时如何减少总体停机时间。
 feature: Cloud, Deploy, SCD, Themes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: c216c5e9-d787-4428-b67a-b6aee814ded5
+source-git-commit: b831bc5bce0f76ec8972b3578c500508dd4d7d41
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
 # 零停机部署
 
-云基础架构上的Adobe Commerce在部署阶段以&#x200B;[_维护_&#x200B;模式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=zh-Hans#production-mode)运行应用程序，该模式将使您的网站脱机，直到部署完成。 生产站点处于维护模式的时长取决于站点的大小、部署期间应用的更改数以及静态内容部署的配置。 可以配置您的项目，使其部署时具有&#x200B;**零**&#x200B;停机影响。
+云基础架构上的Adobe Commerce在部署阶段以&#x200B;[_维护_&#x200B;模式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode)运行应用程序，该模式将使您的网站脱机，直到部署完成。 生产站点处于维护模式的时长取决于站点的大小、部署期间应用的更改数以及静态内容部署的配置。 可以配置您的项目，使其部署时具有&#x200B;**零**&#x200B;停机影响。
 
 在部署过程中，所有连接将排队长达5分钟，以保留任何活动会话和待定操作，例如添加到购物车或结帐。 部署后，队列将释放，连接将继续而不会中断。 若要使用此&#x200B;_连接保持_&#x200B;的优势并将部署减少到&#x200B;_零_&#x200B;停机时间，必须将项目配置为使用最有效的部署策略。
+
+>[!NOTE]
+>
+>要验证您的云项目是否进行了最佳配置以最大限度地缩短部署停机时间，请使用[智能向导](smart-wizards.md)。 智能向导将检查您当前的设置，并指导您完成建议的配置调整，以启用零停机部署的最佳实践。
 
 使用以下步骤可减少存储将更新部署到生产环境所需的时间：
 
