@@ -1,5 +1,5 @@
 ---
-source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
+source-git-commit: 9166b44ae53e8cfc6b8022730a6b91406ba696c0
 workflow-type: tm+mt
 source-wordcount: '13341'
 ht-degree: 0%
@@ -59,7 +59,7 @@ ht-degree: 0%
 ## `clear-cache`
 
 ```bash
-magento-cloud magento-cloud cc
+magento-cloud cc
 ```
 
 清除CLI缓存
@@ -72,7 +72,7 @@ magento-cloud magento-cloud cc
 ## `decode`
 
 ```bash
-magento-cloud magento-cloud decode [-P|--property PROPERTY] [--] <value>
+magento-cloud decode [-P|--property PROPERTY] [--] <value>
 ```
 
 对编码字符串(如MAGENTO_CLOUD_VARIABLES)进行解码
@@ -99,7 +99,7 @@ magento-cloud magento-cloud decode [-P|--property PROPERTY] [--] <value>
 ## `docs`
 
 ```bash
-magento-cloud magento-cloud docs [--browser BROWSER] [--pipe] [--] [<search>]...
+magento-cloud docs [--browser BROWSER] [--pipe] [--] [<search>]...
 ```
 
 打开联机文档
@@ -134,7 +134,7 @@ magento-cloud magento-cloud docs [--browser BROWSER] [--pipe] [--] [<search>]...
 ## `help`
 
 ```bash
-magento-cloud magento-cloud help [--format FORMAT] [--raw] [--] [<command_name>]
+magento-cloud help [--format FORMAT] [--raw] [--] [<command_name>]
 ```
 
 显示命令的帮助
@@ -181,7 +181,7 @@ To display the list of available commands, please use the list command.
 ## `list`
 
 ```bash
-magento-cloud magento-cloud list [--raw] [--format FORMAT] [--all] [--] [<namespace>]
+magento-cloud list [--raw] [--format FORMAT] [--all] [--] [<namespace>]
 ```
 
 列出命令
@@ -246,7 +246,7 @@ It's also possible to get raw list of commands (useful for embedding command run
 ## `multi`
 
 ```bash
-magento-cloud magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--reverse] [--] <cmd> (<cmd>)...
+magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--reverse] [--] <cmd> (<cmd>)...
 ```
 
 在多个项目上执行命令
@@ -297,7 +297,7 @@ magento-cloud magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort 
 ## `web`
 
 ```bash
-magento-cloud magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 在Web UI中打开项目
@@ -335,7 +335,7 @@ magento-cloud magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJE
 ## `activity:cancel`
 
 ```bash
-magento-cloud magento-cloud activity:cancel [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
+magento-cloud activity:cancel [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 取消活动
@@ -387,7 +387,7 @@ magento-cloud magento-cloud activity:cancel [-t|--type TYPE] [-x|--exclude-type 
 ## `activity:get`
 
 ```bash
-magento-cloud magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<id>]
+magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<id>]
 ```
 
 查看有关单个活动的详细信息
@@ -493,7 +493,7 @@ magento-cloud magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYP
 ## `activity:list`
 
 ```bash
-magento-cloud magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 获取环境或项目的活动列表
@@ -600,7 +600,7 @@ magento-cloud magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLU
 ## `activity:log`
 
 ```bash
-magento-cloud magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
+magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 显示活动的日志
@@ -693,7 +693,7 @@ magento-cloud magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [
 ## `app:config-get`
 
 ```bash
-magento-cloud magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
 ```
 
 查看应用程序的配置
@@ -743,7 +743,7 @@ magento-cloud magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] 
 ## `app:list`
 
 ```bash
-magento-cloud magento-cloud apps [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+magento-cloud apps [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 列出项目中的应用程序
@@ -803,10 +803,10 @@ magento-cloud magento-cloud apps [--refresh] [--pipe] [-p|--project PROJECT] [-e
 ## `auth:api-token-login`
 
 ```bash
-magento-cloud magento-cloud auth:api-token-login
+magento-cloud auth:api-token-login
 ```
 
-使用API令牌登录Magento云
+使用API令牌登录Magento Cloud
 
 ```
 Use this command to log in to your Magento Cloud account using an API token.
@@ -829,10 +829,10 @@ Alternatively, to log in to the CLI with a browser, run:
 ## `auth:browser-login`
 
 ```bash
-magento-cloud magento-cloud login [-f|--force] [--browser BROWSER] [--pipe]
+magento-cloud login [-f|--force] [--browser BROWSER] [--pipe]
 ```
 
-通过浏览器登录Magento云
+通过浏览器登录Magento Cloud
 
 ```
 Use this command to log in to the Magento Cloud CLI using a web browser.
@@ -878,7 +878,7 @@ MAGENTO_CLOUD_CLI_TOKEN environment variable.
 ## `auth:info`
 
 ```bash
-magento-cloud magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--] [<property>]
+magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--] [<property>]
 ```
 
 显示您的帐户信息
@@ -938,7 +938,7 @@ magento-cloud magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY]
 ## `auth:logout`
 
 ```bash
-magento-cloud magento-cloud logout [-a|--all] [--other]
+magento-cloud logout [-a|--all] [--other]
 ```
 
 注销Magento Cloud
@@ -965,7 +965,7 @@ magento-cloud magento-cloud logout [-a|--all] [--other]
 ## `blackfire:setup`
 
 ```bash
-magento-cloud magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOKEN] [-p|--project PROJECT] [-W|--no-wait] [--wait]
+magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOKEN] [-p|--project PROJECT] [-W|--no-wait] [--wait]
 ```
 
 为项目设置Blackfire.io集成
@@ -1010,7 +1010,7 @@ magento-cloud magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_to
 ## `certificate:add`
 
 ```bash
-magento-cloud magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-W|--no-wait] [--wait]
+magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-W|--no-wait] [--wait]
 ```
 
 将SSL证书添加到项目
@@ -1062,7 +1062,7 @@ magento-cloud magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain C
 ## `certificate:delete`
 
 ```bash
-magento-cloud magento-cloud certificate:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <id>
+magento-cloud certificate:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <id>
 ```
 
 从项目中删除证书
@@ -1103,7 +1103,7 @@ magento-cloud magento-cloud certificate:delete [-p|--project PROJECT] [-W|--no-w
 ## `certificate:get`
 
 ```bash
-magento-cloud magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--] <id>
+magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--] <id>
 ```
 
 查看证书
@@ -1143,7 +1143,7 @@ magento-cloud magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt
 ## `certificate:list`
 
 ```bash
-magento-cloud magento-cloud certificates [--domain DOMAIN] [--exclude-domain EXCLUDE-DOMAIN] [--issuer ISSUER] [--only-auto] [--no-auto] [--ignore-expiry] [--only-expired] [--no-expired] [--pipe-domains] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud certificates [--domain DOMAIN] [--exclude-domain EXCLUDE-DOMAIN] [--issuer ISSUER] [--only-auto] [--no-auto] [--ignore-expiry] [--only-expired] [--no-expired] [--pipe-domains] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 列出项目证书
@@ -1250,7 +1250,7 @@ magento-cloud magento-cloud certificates [--domain DOMAIN] [--exclude-domain EXC
 ## `commit:get`
 
 ```bash
-magento-cloud magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--date-fmt DATE-FMT] [--] [<commit>]
+magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--date-fmt DATE-FMT] [--] [<commit>]
 ```
 
 显示提交详细信息
@@ -1296,7 +1296,7 @@ magento-cloud magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PR
 ## `commit:list`
 
 ```bash
-magento-cloud magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<commit>]
+magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<commit>]
 ```
 
 列表提交
@@ -1362,7 +1362,7 @@ magento-cloud magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [-e|-
 ## `db:dump`
 
 ```bash
-magento-cloud magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
 ```
 
 创建远程数据库的本地转储
@@ -1471,7 +1471,7 @@ magento-cloud magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--dir
 ## `db:size`
 
 ```bash
-magento-cloud magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE]
+magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE]
 ```
 
 估计数据库的磁盘使用情况
@@ -1555,7 +1555,7 @@ To see more accurate disk usage, run: magento-cloud disk
 ## `db:sql`
 
 ```bash
-magento-cloud magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [--] [<query>]
+magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [--] [<query>]
 ```
 
 在远程数据库上运行SQL
@@ -1617,7 +1617,7 @@ magento-cloud magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT]
 ## `domain:add`
 
 ```bash
-magento-cloud magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATTACH] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATTACH] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 向项目添加新域
@@ -1689,7 +1689,7 @@ magento-cloud magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN]
 ## `domain:delete`
 
 ```bash
-magento-cloud magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 从项目中删除域
@@ -1736,7 +1736,7 @@ magento-cloud magento-cloud domain:delete [-p|--project PROJECT] [-e|--environme
 ## `domain:get`
 
 ```bash
-magento-cloud magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<name>]
+magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<name>]
 ```
 
 显示域的详细信息
@@ -1801,7 +1801,7 @@ magento-cloud magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT
 ## `domain:list`
 
 ```bash
-magento-cloud magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 获取所有域的列表
@@ -1847,7 +1847,7 @@ magento-cloud magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--
 ## `domain:update`
 
 ```bash
-magento-cloud magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 更新域
@@ -1913,7 +1913,7 @@ magento-cloud magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHA
 ## `environment:activate`
 
 ```bash
-magento-cloud magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
+magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
 ```
 
 激活环境
@@ -1967,7 +1967,7 @@ magento-cloud magento-cloud environment:activate [--parent PARENT] [-p|--project
 ## `environment:branch`
 
 ```bash
-magento-cloud magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>] [<parent>]
+magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>] [<parent>]
 ```
 
 分支环境
@@ -2036,7 +2036,7 @@ magento-cloud magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-par
 ## `environment:checkout`
 
 ```bash
-magento-cloud magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
+magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
 ```
 
 查看环境
@@ -2061,7 +2061,7 @@ magento-cloud magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<i
 ## `environment:delete`
 
 ```bash
-magento-cloud magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--merged] [--allow-delete-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
+magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--merged] [--allow-delete-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
 ```
 
 删除一个或多个环境
@@ -2180,7 +2180,7 @@ This command allows you to delete environments as well as their Git branches.
 ## `environment:http-access`
 
 ```bash
-magento-cloud magento-cloud httpaccess [--access ACCESS] [--auth AUTH] [--enabled ENABLED] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+magento-cloud httpaccess [--access ACCESS] [--auth AUTH] [--enabled ENABLED] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
 更新环境的HTTP访问设置
@@ -2239,7 +2239,7 @@ HTTP基本身份验证凭据，格式为“username：password”。 使用0可�
 ## `environment:info`
 
 ```bash
-magento-cloud magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<property>] [<value>]
+magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<property>] [<value>]
 ```
 
 读取或设置环境的属性
@@ -2324,7 +2324,7 @@ magento-cloud magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [
 ## `environment:init`
 
 ```bash
-magento-cloud magento-cloud environment:init [--profile PROFILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <url>
+magento-cloud environment:init [--profile PROFILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <url>
 ```
 
 从公共Git存储库初始化环境
@@ -2377,7 +2377,7 @@ Git存储库的URL
 ## `environment:list`
 
 ```bash
-magento-cloud magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 获取环境列表
@@ -2459,7 +2459,7 @@ magento-cloud magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh 
 ## `environment:logs`
 
 ```bash
-magento-cloud magento-cloud log [--lines LINES] [--tail] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<type>]
+magento-cloud log [--lines LINES] [--tail] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<type>]
 ```
 
 读取环境的日志
@@ -2522,7 +2522,7 @@ magento-cloud magento-cloud log [--lines LINES] [--tail] [-p|--project PROJECT] 
 ## `environment:merge`
 
 ```bash
-magento-cloud magento-cloud merge [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
+magento-cloud merge [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
 ```
 
 合并环境
@@ -2571,7 +2571,7 @@ This command will initiate a Git merge of the specified environment into its par
 ## `environment:pause`
 
 ```bash
-magento-cloud magento-cloud environment:pause [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+magento-cloud environment:pause [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
 暂停环境
@@ -2616,7 +2616,7 @@ The environment will be unavailable until it is resumed. No data will be lost.
 ## `environment:push`
 
 ```bash
-magento-cloud magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-i|--identity-file IDENTITY-FILE] [--] [<source>]
+magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-i|--identity-file IDENTITY-FILE] [--] [<source>]
 ```
 
 将代码推送到环境
@@ -2722,7 +2722,7 @@ magento-cloud magento-cloud push [--target TARGET] [-f|--force] [--force-with-le
 ## `environment:redeploy`
 
 ```bash
-magento-cloud magento-cloud redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+magento-cloud redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
 重新部署环境
@@ -2761,7 +2761,7 @@ magento-cloud magento-cloud redeploy [-p|--project PROJECT] [-e|--environment EN
 ## `environment:relationships`
 
 ```bash
-magento-cloud magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<environment>]
+magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<environment>]
 ```
 
 显示环境关系
@@ -2817,7 +2817,7 @@ magento-cloud magento-cloud relationships [-P|--property PROPERTY] [--refresh] [
 ## `environment:resume`
 
 ```bash
-magento-cloud magento-cloud environment:resume [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+magento-cloud environment:resume [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
 恢复暂停的环境
@@ -2856,7 +2856,7 @@ magento-cloud magento-cloud environment:resume [-p|--project PROJECT] [-e|--envi
 ## `environment:scp`
 
 ```bash
-magento-cloud magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<files>]...
+magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<files>]...
 ```
 
 使用scp将文件复制到环境中或从环境中复制文件
@@ -2921,7 +2921,7 @@ magento-cloud magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--en
 ## `environment:ssh`
 
 ```bash
-magento-cloud magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<cmd>]...
+magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<cmd>]...
 ```
 
 SSH到当前环境
@@ -2993,7 +2993,7 @@ SSH到当前环境
 ## `environment:synchronize`
 
 ```bash
-magento-cloud magento-cloud sync [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<synchronize>]...
+magento-cloud sync [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<synchronize>]...
 ```
 
 同步环境的代码和/或来自其父级的数据
@@ -3057,7 +3057,7 @@ parent to the child.
 ## `environment:url`
 
 ```bash
-magento-cloud magento-cloud url [-1|--primary] [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+magento-cloud url [-1|--primary] [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 获取环境的公共URL
@@ -3102,7 +3102,7 @@ magento-cloud magento-cloud url [-1|--primary] [--browser BROWSER] [--pipe] [-p|
 ## `environment:xdebug`
 
 ```bash
-magento-cloud magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
 ```
 
 打开通往Xdebug环境的隧道
@@ -3158,7 +3158,7 @@ magento-cloud magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--en
 ## `integration:activity:get`
 
 ```bash
-magento-cloud magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<integration>] [<activity>]
+magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<integration>] [<activity>]
 ```
 
 查看有关单个集成活动的详细信息
@@ -3228,7 +3228,7 @@ magento-cloud magento-cloud integration:activity:get [-P|--property PROPERTY] [-
 ## `integration:activity:list`
 
 ```bash
-magento-cloud magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
+magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 获取集成的活动列表
@@ -3334,7 +3334,7 @@ magento-cloud magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYP
 ## `integration:activity:log`
 
 ```bash
-magento-cloud magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<integration>] [<activity>]
+magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<integration>] [<activity>]
 ```
 
 显示集成活动的日志
@@ -3384,7 +3384,7 @@ magento-cloud magento-cloud integration:activity:log [-t|--timestamps] [--date-f
 ## `integration:add`
 
 ```bash
-magento-cloud magento-cloud integration:add [--type TYPE] [--base-url BASE-URL] [--bitbucket-url BITBUCKET-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--license-key LICENSE-KEY] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--resources-init RESOURCES-INIT] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [--category CATEGORY] [--index INDEX] [--sourcetype SOURCETYPE] [--protocol PROTOCOL] [--syslog-host SYSLOG-HOST] [--syslog-port SYSLOG-PORT] [--facility FACILITY] [--message-format MESSAGE-FORMAT] [--auth-mode AUTH-MODE] [--auth-token AUTH-TOKEN] [--verify-tls VERIFY-TLS] [--header HEADER] [-p|--project PROJECT] [-W|--no-wait] [--wait]
+magento-cloud integration:add [--type TYPE] [--base-url BASE-URL] [--bitbucket-url BITBUCKET-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--license-key LICENSE-KEY] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--resources-init RESOURCES-INIT] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [--category CATEGORY] [--index INDEX] [--sourcetype SOURCETYPE] [--protocol PROTOCOL] [--syslog-host SYSLOG-HOST] [--syslog-port SYSLOG-PORT] [--facility FACILITY] [--message-format MESSAGE-FORMAT] [--auth-mode AUTH-MODE] [--auth-token AUTH-TOKEN] [--verify-tls VERIFY-TLS] [--header HEADER] [-p|--project PROJECT] [-W|--no-wait] [--wait]
 ```
 
 将集成添加到项目
@@ -3673,7 +3673,7 @@ Syslog消息格式（“rfc3164”或“rfc5424”）
 
 #### `--header`
 
-要在POST请求中使用的HTTP标头。 用冒号(：)分隔名称和值。
+在POST请求中使用的HTTP标头。 用冒号(：)分隔名称和值。
 
 - 默认： `[]`
 - 需要一个值
@@ -3702,7 +3702,7 @@ Syslog消息格式（“rfc3164”或“rfc5424”）
 ## `integration:delete`
 
 ```bash
-magento-cloud magento-cloud integration:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<id>]
+magento-cloud integration:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<id>]
 ```
 
 从项目中删除集成
@@ -3741,7 +3741,7 @@ magento-cloud magento-cloud integration:delete [-p|--project PROJECT] [-W|--no-w
 ## `integration:get`
 
 ```bash
-magento-cloud magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--] [<id>]
+magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--] [<id>]
 ```
 
 查看集成的详细信息
@@ -3793,7 +3793,7 @@ magento-cloud magento-cloud integration:get [-P|--property [PROPERTY]] [--format
 ## `integration:list`
 
 ```bash
-magento-cloud magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 查看项目集成的列表
@@ -3833,7 +3833,7 @@ magento-cloud magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS
 ## `integration:update`
 
 ```bash
-magento-cloud magento-cloud integration:update [--type TYPE] [--base-url BASE-URL] [--bitbucket-url BITBUCKET-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--license-key LICENSE-KEY] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--resources-init RESOURCES-INIT] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [--category CATEGORY] [--index INDEX] [--sourcetype SOURCETYPE] [--protocol PROTOCOL] [--syslog-host SYSLOG-HOST] [--syslog-port SYSLOG-PORT] [--facility FACILITY] [--message-format MESSAGE-FORMAT] [--auth-mode AUTH-MODE] [--auth-token AUTH-TOKEN] [--verify-tls VERIFY-TLS] [--header HEADER] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<id>]
+magento-cloud integration:update [--type TYPE] [--base-url BASE-URL] [--bitbucket-url BITBUCKET-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--license-key LICENSE-KEY] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--resources-init RESOURCES-INIT] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [--category CATEGORY] [--index INDEX] [--sourcetype SOURCETYPE] [--protocol PROTOCOL] [--syslog-host SYSLOG-HOST] [--syslog-port SYSLOG-PORT] [--facility FACILITY] [--message-format MESSAGE-FORMAT] [--auth-mode AUTH-MODE] [--auth-token AUTH-TOKEN] [--verify-tls VERIFY-TLS] [--header HEADER] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<id>]
 ```
 
 更新集成
@@ -4128,7 +4128,7 @@ Syslog消息格式（“rfc3164”或“rfc5424”）
 
 #### `--header`
 
-要在POST请求中使用的HTTP标头。 用冒号(：)分隔名称和值。
+在POST请求中使用的HTTP标头。 用冒号(：)分隔名称和值。
 
 - 默认： `[]`
 - 需要一个值
@@ -4157,7 +4157,7 @@ Syslog消息格式（“rfc3164”或“rfc5424”）
 ## `integration:validate`
 
 ```bash
-magento-cloud magento-cloud integration:validate [-p|--project PROJECT] [--] [<id>]
+magento-cloud integration:validate [-p|--project PROJECT] [--] [<id>]
 ```
 
 验证现有集成
@@ -4194,7 +4194,7 @@ repository may be deleted.
 ## `local:build`
 
 ```bash
-magento-cloud magento-cloud build [-a|--abslinks] [-s|--source SOURCE] [-d|--destination DESTINATION] [-c|--copy] [--clone] [--run-deploy-hooks] [--no-clean] [--no-archive] [--no-backup] [--no-cache] [--no-build-hooks] [--no-deps] [--working-copy] [--concurrency CONCURRENCY] [--lock] [--] [<app>]...
+magento-cloud build [-a|--abslinks] [-s|--source SOURCE] [-d|--destination DESTINATION] [-c|--copy] [--clone] [--run-deploy-hooks] [--no-clean] [--no-archive] [--no-backup] [--no-cache] [--no-build-hooks] [--no-deps] [--working-copy] [--concurrency CONCURRENCY] [--lock] [--] [<app>]...
 ```
 
 在本地构建当前项目
@@ -4319,7 +4319,7 @@ Drush：创建或更新锁定文件（仅适用于Drush版本7+）
 ## `local:dir`
 
 ```bash
-magento-cloud magento-cloud dir [<subdir>]
+magento-cloud dir [<subdir>]
 ```
 
 查找本地项目根
@@ -4338,7 +4338,7 @@ magento-cloud magento-cloud dir [<subdir>]
 ## `metrics:all`
 
 ```bash
-magento-cloud magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
 Beta显示环境的CPU、磁盘和内存量度
@@ -4437,7 +4437,7 @@ Beta显示环境的CPU、磁盘和内存量度
 ## `metrics:cpu`
 
 ```bash
-magento-cloud magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
 Beta显示环境的CPU使用情况
@@ -4529,7 +4529,7 @@ Beta显示环境的CPU使用情况
 ## `metrics:disk-usage`
 
 ```bash
-magento-cloud magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [--tmp] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [--tmp] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
 显示环境的磁盘使用情况
@@ -4635,7 +4635,7 @@ magento-cloud magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval 
 ## `metrics:memory`
 
 ```bash
-magento-cloud magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
 Beta显示环境的内存使用情况
@@ -4734,7 +4734,7 @@ Beta显示环境的内存使用情况
 ## `mount:download`
 
 ```bash
-magento-cloud magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
 ```
 
 使用rsync从装载下载文件
@@ -4837,7 +4837,7 @@ magento-cloud magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--targ
 ## `mount:list`
 
 ```bash
-magento-cloud magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
+magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 获取装载列表
@@ -4915,7 +4915,7 @@ magento-cloud magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|-
 ## `mount:size`
 
 ```bash
-magento-cloud magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
+magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 检查装载的磁盘使用情况
@@ -5008,7 +5008,7 @@ The filesystem's total size is determined by the disk key in the same file.
 ## `mount:upload`
 
 ```bash
-magento-cloud magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
 ```
 
 使用rsync将文件上载到装载
@@ -5097,7 +5097,7 @@ magento-cloud magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [-
 ## `operation:list`
 
 ```bash
-magento-cloud magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 Beta List对环境的运行时操作
@@ -5162,7 +5162,7 @@ Beta List对环境的运行时操作
 ## `operation:run`
 
 ```bash
-magento-cloud magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-W|--no-wait] [--wait] [--] [<operation>]
+magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-W|--no-wait] [--wait] [--] [<operation>]
 ```
 
 Beta对环境运行操作
@@ -5219,7 +5219,7 @@ Beta对环境运行操作
 ## `project:clear-build-cache`
 
 ```bash
-magento-cloud magento-cloud project:clear-build-cache [-p|--project PROJECT]
+magento-cloud project:clear-build-cache [-p|--project PROJECT]
 ```
 
 清除项目的生成缓存
@@ -5238,7 +5238,7 @@ magento-cloud magento-cloud project:clear-build-cache [-p|--project PROJECT]
 ## `project:get`
 
 ```bash
-magento-cloud magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
+magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
 ```
 
 在本地克隆项目
@@ -5293,7 +5293,7 @@ magento-cloud magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [
 ## `project:info`
 
 ```bash
-magento-cloud magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<property>] [<value>]
+magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<property>] [<value>]
 ```
 
 读取或设置项目的属性
@@ -5372,7 +5372,7 @@ magento-cloud magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--fo
 ## `project:list`
 
 ```bash
-magento-cloud magento-cloud projects [--pipe] [--region REGION] [--title TITLE] [--my] [--refresh REFRESH] [--sort SORT] [--reverse] [--page PAGE] [-c|--count COUNT] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+magento-cloud projects [--pipe] [--region REGION] [--title TITLE] [--my] [--refresh REFRESH] [--sort SORT] [--reverse] [--page PAGE] [-c|--count COUNT] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
 获取所有活动项目的列表
@@ -5472,7 +5472,7 @@ magento-cloud magento-cloud projects [--pipe] [--region REGION] [--title TITLE] 
 ## `project:set-remote`
 
 ```bash
-magento-cloud magento-cloud set-remote [<project>]
+magento-cloud set-remote [<project>]
 ```
 
 为当前Git存储库设置远程项目
@@ -5491,7 +5491,7 @@ magento-cloud magento-cloud set-remote [<project>]
 ## `repo:cat`
 
 ```bash
-magento-cloud magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] <path>
+magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] <path>
 ```
 
 读取项目存储库中的文件
@@ -5530,7 +5530,7 @@ magento-cloud magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT]
 ## `repo:ls`
 
 ```bash
-magento-cloud magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<path>]
+magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<path>]
 ```
 
 列出项目存储库中的文件
@@ -5588,7 +5588,7 @@ magento-cloud magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style
 ## `repo:read`
 
 ```bash
-magento-cloud magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<path>]
+magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<path>]
 ```
 
 读取项目存储库中的目录或文件
@@ -5625,7 +5625,7 @@ magento-cloud magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e
 ## `route:get`
 
 ```bash
-magento-cloud magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--refresh] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<route>]
+magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--refresh] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<route>]
 ```
 
 查看有关路由的详细信息
@@ -5701,7 +5701,7 @@ magento-cloud magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PR
 ## `route:list`
 
 ```bash
-magento-cloud magento-cloud routes [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<environment>]
+magento-cloud routes [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<environment>]
 ```
 
 列出环境的所有路由
@@ -5760,7 +5760,7 @@ magento-cloud magento-cloud routes [--refresh] [--format FORMAT] [-c|--columns C
 ## `self:install`
 
 ```bash
-magento-cloud magento-cloud self:install [--shell-type SHELL-TYPE]
+magento-cloud self:install [--shell-type SHELL-TYPE]
 ```
 
 安装或更新命令行界面配置文件
@@ -5784,7 +5784,7 @@ adding autocompletion support and handy aliases. Bash and ZSH are supported.
 ## `self:update`
 
 ```bash
-magento-cloud magento-cloud update [--no-major] [--unstable] [--manifest MANIFEST] [--current-version CURRENT-VERSION] [--timeout TIMEOUT]
+magento-cloud update [--no-major] [--unstable] [--manifest MANIFEST] [--current-version CURRENT-VERSION] [--timeout TIMEOUT]
 ```
 
 将CLI更新至最新版本
@@ -5830,7 +5830,7 @@ magento-cloud magento-cloud update [--no-major] [--unstable] [--manifest MANIFES
 ## `service:list`
 
 ```bash
-magento-cloud magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 列出项目中的服务
@@ -5890,7 +5890,7 @@ magento-cloud magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT]
 ## `service:mongo:dump`
 
 ```bash
-magento-cloud magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 从MongoDB创建数据的二进制档案转储
@@ -5953,7 +5953,7 @@ magento-cloud magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [
 ## `service:mongo:export`
 
 ```bash
-magento-cloud magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 从MongoDB导出数据
@@ -6022,7 +6022,7 @@ magento-cloud magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArra
 ## `service:mongo:restore`
 
 ```bash
-magento-cloud magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 将数据转储还原到MongoDB中
@@ -6071,7 +6071,7 @@ magento-cloud magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--rela
 ## `service:mongo:shell`
 
 ```bash
-magento-cloud magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 使用MongoDB shell
@@ -6120,7 +6120,7 @@ magento-cloud magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP]
 ## `service:redis-cli`
 
 ```bash
-magento-cloud magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]
+magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]
 ```
 
 访问Redis CLI
@@ -6169,7 +6169,7 @@ magento-cloud magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identit
 ## `snapshot:create`
 
 ```bash
-magento-cloud magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
+magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
 ```
 
 制作环境的快照
@@ -6221,7 +6221,7 @@ magento-cloud magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environ
 ## `snapshot:delete`
 
 ```bash
-magento-cloud magento-cloud snapshot:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>]
+magento-cloud snapshot:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>]
 ```
 
 删除环境快照
@@ -6266,7 +6266,7 @@ magento-cloud magento-cloud snapshot:delete [-p|--project PROJECT] [-e|--environ
 ## `snapshot:get`
 
 ```bash
-magento-cloud magento-cloud snapshot:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--date-fmt DATE-FMT] [--] [<id>]
+magento-cloud snapshot:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--date-fmt DATE-FMT] [--] [<id>]
 ```
 
 查看环境快照
@@ -6310,7 +6310,7 @@ magento-cloud magento-cloud snapshot:get [-P|--property PROPERTY] [-p|--project 
 ## `snapshot:list`
 
 ```bash
-magento-cloud magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 列出环境的可用快照
@@ -6363,7 +6363,7 @@ magento-cloud magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [
 ## `snapshot:restore`
 
 ```bash
-magento-cloud magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
+magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
 ```
 
 恢复环境快照
@@ -6420,7 +6420,7 @@ magento-cloud magento-cloud snapshot:restore [--target TARGET] [--branch-from BR
 ## `source-operation:list`
 
 ```bash
-magento-cloud magento-cloud source-ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+magento-cloud source-ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 列出环境上的源操作
@@ -6473,7 +6473,7 @@ magento-cloud magento-cloud source-ops [--full] [-p|--project PROJECT] [-e|--env
 ## `source-operation:run`
 
 ```bash
-magento-cloud magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<operation>]
+magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<operation>]
 ```
 
 运行源操作
@@ -6525,7 +6525,7 @@ magento-cloud magento-cloud source-operation:run [--variable VARIABLE] [-p|--pro
 ## `ssh-cert:load`
 
 ```bash
-magento-cloud magento-cloud ssh-cert:load [--refresh-only] [--new] [--new-key]
+magento-cloud ssh-cert:load [--refresh-only] [--new] [--new-key]
 ```
 
 生成SSH证书
@@ -6577,7 +6577,7 @@ explicitly. For unattended scripts, remember to turn off interaction via
 ## `ssh-key:add`
 
 ```bash
-magento-cloud magento-cloud ssh-key:add [--name NAME] [--] [<path>]
+magento-cloud ssh-key:add [--name NAME] [--] [<path>]
 ```
 
 添加新的SSH密钥
@@ -6612,7 +6612,7 @@ To load or check your SSH certificate, run: magento-cloud ssh-cert:load
 ## `ssh-key:delete`
 
 ```bash
-magento-cloud magento-cloud ssh-key:delete [<id>]
+magento-cloud ssh-key:delete [<id>]
 ```
 
 删除SSH密钥
@@ -6641,7 +6641,7 @@ To load or check your SSH certificate, run: magento-cloud ssh-cert:load
 ## `ssh-key:list`
 
 ```bash
-magento-cloud magento-cloud ssh-keys [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+magento-cloud ssh-keys [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 获取帐户中的SSH密钥列表
@@ -6685,7 +6685,7 @@ To load or check your SSH certificate, run: magento-cloud ssh-cert:load
 ## `subscription:info`
 
 ```bash
-magento-cloud magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--] [<property>] [<value>]
+magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--] [<property>] [<value>]
 ```
 
 读取或修改订阅属性
@@ -6749,7 +6749,7 @@ magento-cloud magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT]
 ## `tunnel:close`
 
 ```bash
-magento-cloud magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 关闭SSH隧道
@@ -6787,7 +6787,7 @@ magento-cloud magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [-e|-
 ## `tunnel:info`
 
 ```bash
-magento-cloud magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 查看SSH隧道的关系信息
@@ -6831,7 +6831,7 @@ magento-cloud magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [
 ## `tunnel:list`
 
 ```bash
-magento-cloud magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 列出SSH隧道
@@ -6890,7 +6890,7 @@ magento-cloud magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [-e|--envi
 ## `tunnel:open`
 
 ```bash
-magento-cloud magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
 ```
 
 打开SSH隧道以连接到应用程序的关系
@@ -6947,7 +6947,7 @@ extensions.
 ## `tunnel:single`
 
 ```bash
-magento-cloud magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
 ```
 
 打开到应用程序关系的单个SSH通道
@@ -7003,7 +7003,7 @@ magento-cloud magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p
 ## `user:add`
 
 ```bash
-magento-cloud magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<email>]
+magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<email>]
 ```
 
 在项目中添加用户
@@ -7056,7 +7056,7 @@ magento-cloud magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--pro
 ## `user:delete`
 
 ```bash
-magento-cloud magento-cloud user:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <email>
+magento-cloud user:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <email>
 ```
 
 从项目中删除用户
@@ -7097,7 +7097,7 @@ magento-cloud magento-cloud user:delete [-p|--project PROJECT] [-W|--no-wait] [-
 ## `user:get`
 
 ```bash
-magento-cloud magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [-r|--role ROLE] [--] [<email>]
+magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [-r|--role ROLE] [--] [<email>]
 ```
 
 查看用户的角色
@@ -7161,7 +7161,7 @@ magento-cloud magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project P
 ## `user:list`
 
 ```bash
-magento-cloud magento-cloud users [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud users [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 列出项目用户
@@ -7201,7 +7201,7 @@ magento-cloud magento-cloud users [--format FORMAT] [-c|--columns COLUMNS] [--no
 ## `user:update`
 
 ```bash
-magento-cloud magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<email>]
+magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<email>]
 ```
 
 更新项目中的用户角色
@@ -7247,7 +7247,7 @@ magento-cloud magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] 
 ## `variable:create`
 
 ```bash
-magento-cloud magento-cloud variable:create [-u|--update] [-l|--level LEVEL] [--name NAME] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--prefix PREFIX] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<name>]
+magento-cloud variable:create [-u|--update] [-l|--level LEVEL] [--name NAME] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--prefix PREFIX] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<name>]
 ```
 
 创建变量
@@ -7365,7 +7365,7 @@ magento-cloud magento-cloud variable:create [-u|--update] [-l|--level LEVEL] [--
 ## `variable:delete`
 
 ```bash
-magento-cloud magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 删除变量
@@ -7418,7 +7418,7 @@ magento-cloud magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PRO
 ## `variable:get`
 
 ```bash
-magento-cloud magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--pipe] [--] [<name>]
+magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--pipe] [--] [<name>]
 ```
 
 查看变量
@@ -7489,7 +7489,7 @@ magento-cloud magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--
 ## `variable:list`
 
 ```bash
-magento-cloud magento-cloud variables [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+magento-cloud variables [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 列表变量
@@ -7541,7 +7541,7 @@ magento-cloud magento-cloud variables [-l|--level LEVEL] [--format FORMAT] [-c|-
 ## `variable:update`
 
 ```bash
-magento-cloud magento-cloud variable:update [--allow-no-change] [-l|--level LEVEL] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud variable:update [--allow-no-change] [-l|--level LEVEL] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 更新变量
@@ -7648,7 +7648,7 @@ magento-cloud magento-cloud variable:update [--allow-no-change] [-l|--level LEVE
 ## `worker:list`
 
 ```bash
-magento-cloud magento-cloud workers [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+magento-cloud workers [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 获取所有已部署工作人员的列表
