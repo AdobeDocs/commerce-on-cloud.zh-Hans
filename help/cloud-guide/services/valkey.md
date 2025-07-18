@@ -3,9 +3,9 @@ title: 设置Valkey服务
 description: 了解如何在Cloud Infrastructure上设置和优化Valkey作为适用于Adobe Commerce的后端缓存解决方案。
 feature: Cloud, Cache, Services
 exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
-source-git-commit: 242582ea61d0d93725a7f43f2ca834db9e1a7c29
+source-git-commit: cf2e659267445603b3f5eaf877f4eb7ac0c1b54c
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io)是一个可选的后端缓存解决方案，它取代了Adobe Commerce默认使用的`Zend Framework Zend_Cache_Backend_File`。
 
-请参阅&#x200B;_配置指南_&#x200B;中的[配置Valkey](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=zh-Hans){target="_blank"}。
+请参阅[配置指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html){target="_blank"}中的&#x200B;_配置Valkey_。
 
 {{service-instruction}}
 
-**启用Valkey**：
+**要使用Valkey替换Redis，请更新以下三个文件中的配置**：
 
 1. 将所需的名称和类型添加到`.magento/services.yaml`文件中。
 
@@ -27,7 +27,7 @@ ht-degree: 0%
        type: valkey:<version>
    ```
 
-   要提供您自己的Valkey配置，请在`.magento/services.yaml`文件中添加`core_config`密钥：
+   要提供您自己的Valkey配置，请在`core_config`文件中添加`.magento/services.yaml`密钥：
 
    ```yaml
    cache:
@@ -41,10 +41,19 @@ ht-degree: 0%
        valkey: "cache:valkey"
    ```
 
+1. 按如下方式配置`.magento.env.yaml`：。
+
+   ```yaml
+    stage:
+        deploy:
+        VALKEY_USE_SLAVE_CONNECTION: true
+        VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+   ```
+
 1. 添加、提交和推送代码更改。
 
    ```bash
-   git add .magento/services.yaml .magento.app.yaml && git commit -m "Enable valkey service" && git push origin <branch-name>
+   git add .magento/services.yaml .magento.app.yaml .magento.env.yaml && git commit -m "Enable valkey service" && git push origin <branch-name>
    ```
 
 1. [验证服务关系](services-yaml.md#service-relationships)。
