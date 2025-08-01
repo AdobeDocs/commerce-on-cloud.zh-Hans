@@ -187,7 +187,7 @@ Fastly支持自定义版本的Varnish Configuration Language (VCL)以自定义Fa
 
 - 对于入门项目，请转到[!UICONTROL Domains]中[!DNL Cloud Console]选项卡下的项目URL以添加项目URL。
 
-- 对于Pro项目，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以将该域添加到云项目配置。 支持团队还更新Adobe Commerce Fastly帐户配置以添加域。
+- 对于Pro项目，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以将该域添加到云项目配置。 支持团队还更新Adobe Commerce Fastly帐户配置以添加域。
 
 **要从管理员管理Fastly域配置**：
 
