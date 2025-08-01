@@ -3,9 +3,9 @@ title: 自定义缓存配置
 description: 了解如何在Fastly服务设置完成后查看和自定义缓存配置设置。
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: eaa9980c437a9398f0d20d3c27832aecffc78fd9
+source-git-commit: 551a00932165dd1c0a876b8151ba14752ceac802
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1953'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 强制TLS
 
-Fastly提供了用于将未加密请求(HTTP)重定向到Fastly的&#x200B;_强制TLS_&#x200B;选项。 为您的暂存或生产环境配置了[有效的SSL/TLS证书](fastly-configuration.md#provision-ssltls-certificates)后，您可以更新存储的Fastly配置以启用“强制TLS”选项。 请参阅Magento 2 _的_ Fastly CDN模块中的Fastly [Force TLS指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)文档。
+Fastly提供了用于将未加密请求(HTTP)重定向到Fastly的&#x200B;_强制TLS_&#x200B;选项。 为您的暂存或生产环境配置了[有效的SSL/TLS证书](fastly-configuration.md#provision-ssltls-certificates)后，您可以更新存储的Fastly配置以启用“强制TLS”选项。 请参阅Magento 2[的](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)Fastly CDN模块中的Fastly _Force TLS指南_&#x200B;文档。
 
 >[!NOTE]
 >
@@ -52,7 +52,7 @@ Fastly服务配置为发送给管理员的HTTPS请求指定180秒的默认超时
 
 1. 单击页面顶部的&#x200B;**保存配置**。
 
-1. 重新加载页面后，在&#x200B;_Fastly配置_&#x200B;部分中选择&#x200B;**将VCL上传到Fastly**。
+1. 重新加载页面后，在&#x200B;**Fastly配置**&#x200B;部分中选择&#x200B;_将VCL上传到Fastly_。
 
 Fastly检索用于从`app/etc/env.php`配置文件生成VCL文件的管理员路径。
 
@@ -79,7 +79,7 @@ Fastly在Magento缓存管理页面上提供了多种类型的清除选项，包�
 
 1. 单击页面顶部的&#x200B;**保存配置**。
 
-1. 重新加载页面后，在&#x200B;_Fastly配置_&#x200B;部分中选择&#x200B;**将VCL上传到Fastly**。
+1. 重新加载页面后，在&#x200B;**Fastly配置**&#x200B;部分中选择&#x200B;_将VCL上传到Fastly_。
 
 有关详细信息，请参阅[Fastly配置选项](https://github.com/fastly/fastly-magento2/blob/21b61c8189971275589219d418332798efc7db41/Documentation/CONFIGURATION.md#further-configuration-options)。
 
@@ -105,7 +105,7 @@ Fastly模块包括GeoIP处理，用于自动重定向访客或提供与所获取
 
 1. 单击页面顶部的&#x200B;**保存配置**。
 
-1. 重新加载页面后，在&#x200B;_Fastly配置_&#x200B;部分中选择&#x200B;**将VCL上传到Fastly**。
+1. 重新加载页面后，在&#x200B;**Fastly配置**&#x200B;部分中选择&#x200B;_将VCL上传到Fastly_。
 
 >[!NOTE]
 >
@@ -161,13 +161,15 @@ _原始屏蔽_&#x200B;将存储的所有请求路由到特定存在点(POP)。 �
 
 ## 基本身份验证
 
-基本身份验证功能可保护您网站上的每个页面和资产
-用户名和密码。 我们&#x200B;**不建议**&#x200B;激活基本
-在生产环境中进行身份验证。 您可以在暂存环境中配置它
-以在开发过程中保护您的站点。 请参阅Fastly CDN模块文档中的[基本身份验证指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md)。
+基本身份验证是一项使用用户名和密码保护网站上每个页面和资产的功能。
 
-如果添加用户访问权限并在暂存环境中启用基本身份验证，您仍可以
-无需其他凭据即可访问管理员。
+Adobe **不建议**&#x200B;在生产环境中激活基本身份验证。 您可以在暂存环境中对其进行配置，以在开发过程中保护您的站点。 请参阅Fastly CDN模块文档中的[基本身份验证指南](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md)。
+
+如果添加用户访问权限并在暂存环境中启用基本身份验证，则您仍然可以访问管理员，而无需其他凭据。
+
+>[!NOTE]
+>
+>在Cloud Console中，对于已启用Fastly的任何环境（例如暂存或非实时生产环境），请&#x200B;**勿**&#x200B;检查[!UICONTROL Enable HTTP access control]。 如果以此方式配置访问控制，则以前拥有访问权限的用户仍可以访问该站点，前提是他们的凭据仍由Fastly缓存，即使他们的访问被取消也是如此。
 
 ## 创建自定义VCL代码段
 
@@ -183,9 +185,9 @@ Fastly支持自定义版本的Varnish Configuration Language (VCL)以自定义Fa
 
 对于Starter和Pro项目，您可以使用[!UICONTROL Domains]选项为存储添加和管理Fastly域配置。
 
-- 对于入门项目，请转到[!DNL Cloud Console]中[!UICONTROL Domains]选项卡下的项目URL以添加项目URL。
+- 对于入门项目，请转到[!UICONTROL Domains]中[!DNL Cloud Console]选项卡下的项目URL以添加项目URL。
 
-- 对于Pro项目，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以将该域添加到云项目配置。 支持团队还更新Adobe Commerce Fastly帐户配置以添加域。
+- 对于Pro项目，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以将该域添加到云项目配置。 支持团队还更新Adobe Commerce Fastly帐户配置以添加域。
 
 **要从管理员管理Fastly域配置**：
 
