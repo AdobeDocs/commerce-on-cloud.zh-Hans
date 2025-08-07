@@ -2,11 +2,11 @@
 title: Commerce的云修补程序
 description: 请参阅云修补程序包的最新改进列表。
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-06-09T00:00:00Z
+last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: 7081a16f65ccbd76cab221c0a6bfd138e47a20f8
+source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
 workflow-type: tm+mt
-source-wordcount: '2475'
+source-wordcount: '2486'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,13 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 <!--Add release notes below-->
 
-## v1.1.9 {#latest}
+## v1.1.10 {#latest}
+
+发行日期： 2025年8月7日
+
+- ![新图标](../../assets/new.svg) **PHP 8.4** — 已添加功能测试。<!-- MCLOUD-13312 -->
+
+## v1.1.9
 
 发布日期： 2025年6月9日
 
@@ -46,13 +52,13 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 发行日期： 2025年5月5日
 
-- ![新图标](../../assets/new.svg) **已将Commerce 2.4.4的修补程序更新为2.4.8** — 这是在1.1.7<!-- MCLOUD-13619 -->中发布的[CVE-2025-24434](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch)的更新修补程序
+- ![新图标](../../assets/new.svg) **已将Commerce 2.4.4的修补程序更新为2.4.8** — 这是在1.1.7[中发布的](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch)CVE-2025-24434<!-- MCLOUD-13619 -->的更新修补程序
 
 ## v1.1.6
 
 发行日期： 2025年4月24日
 
-- ![新图标](../../assets/new.svg) **已将Commerce 2.4.4的修补程序更新为2.4.7** — 这是在1.1.4<!-- MCLOUD-13240 -->中发布的[CVE-2025-24434](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)的更新修补程序
+- ![新图标](../../assets/new.svg) **已将Commerce 2.4.4的修补程序更新为2.4.7** — 这是在1.1.4[中发布的](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)CVE-2025-24434<!-- MCLOUD-13240 -->的更新修补程序
 
 ## v1.1.5
 
@@ -64,7 +70,7 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 发行日期： 2025年2月13日
 
-- ![新图标](../../assets/new.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修补程序[CVE-2025-24434](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)。<!-- MCLOUD-13240	 - -->
+- ![新图标](../../assets/new.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修补程序[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)。<!-- MCLOUD-13240	 - -->
 
 ## v1.1.3
 
@@ -76,13 +82,13 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 发行日期： 2024年11月5日
 
-- ![修复图标](../../assets/fix.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修复了在使用B2B模块时Adobe Commerce存在的严重[CVE-2024-45115](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73)漏洞。<!-- MCLOUD-12980 - -->
+- ![修复图标](../../assets/fix.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修复了在使用B2B模块时Adobe Commerce存在的严重[CVE-2024-45115](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73)漏洞。<!-- MCLOUD-12980 - -->
 
 ## v1.1.1
 
 发行日期： 2024年11月5日
 
-- ![修复图标](../../assets/fix.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修补了严重的[CVE-2024-34102](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicSting漏洞。<!-- MCLOUD-12980 - -->
+- ![修复图标](../../assets/fix.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修补了严重的[CVE-2024-34102](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicSting漏洞。<!-- MCLOUD-12980 - -->
 
 ## v1.1.0
 
@@ -160,7 +166,7 @@ Adobe Commerce 2.4.5的关键修补程序：
 
 - **使用Braintree付款的订单问题** — 此修补程序解决了阻止管理员发出新订单或重新订购的关键问题。<!-- MCLOUD-9137 -->
 
-请参阅[启用Braintree付款时，管理员无法创建订单/重新订单](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html?lang=zh-Hans)。
+请参阅[启用Braintree付款时，管理员无法创建订单/重新订单](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html)。
 
 ## v1.0.17
 
@@ -176,7 +182,7 @@ Adobe Commerce 2.3.3-p1及更高版本的关键修补程序：
 
 更新了修补程序以解决导致未经身份验证的远程代码执行的&#x200B;**关键**&#x200B;漏洞。<!-- MCLOUD-8479 -->
 
-请参阅[Adobe安全公告APSB22-12](https://helpx.adobe.com/cn/security/products/magento/apsb22-12.html)。
+请参阅[Adobe安全公告APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)。
 
 ## v1.0.15
 
@@ -193,7 +199,7 @@ Adobe Commerce 2.3.3-p1及更高版本的关键修补程序：
 
 添加了修补程序，以解决导致远程代码执行未经身份验证的&#x200B;**关键**&#x200B;漏洞。<!-- MCLOUD-8461 -->
 
-请参阅[Adobe安全公告APSB22-12](https://helpx.adobe.com/cn/security/products/magento/apsb22-12.html)。
+请参阅[Adobe安全公告APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)。
 
 ## v1.0.13
 
@@ -209,7 +215,7 @@ Adobe Commerce 2.3.3-p1及更高版本的关键修补程序：
 
 Adobe Commerce 2.4.3和2.3.7-p1的关键修补程序：
 
-- **API速率限制问题** — 此修补程序更正了默认速率限制，该限制导致Web API无法处理数组中超过20个项目的请求。 此修补程序将提高速率限制的默认值。 请参阅Adobe Commerce [2.4.3发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
+- **API速率限制问题** — 此修补程序更正了默认速率限制，该限制导致Web API无法处理数组中超过20个项目的请求。 此修补程序将提高速率限制的默认值。 请参阅Adobe Commerce [2.4.3发行说明](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
 
 ## v1.0.11
 
@@ -242,7 +248,7 @@ Adobe Commerce 2.4.3和2.3.7-p1的关键修补程序：
 
 发行日期： 2020年10月14日
 
-- **magento/magento-cloud-patches的兼容性更新** — 更新了`composer.json`文件中的`symfony`和`semver`版本约束，以便与Adobe Commerce 2.4.1及更高版本兼容。<!--MCLOUD-7111-->
+- **magento/magento-cloud-patches的兼容性更新** — 更新了`symfony`文件中的`semver`和`composer.json`版本约束，以便与Adobe Commerce 2.4.1及更高版本兼容。<!--MCLOUD-7111-->
 
 ## v1.0.7
 
@@ -269,7 +275,7 @@ Adobe Commerce 2.4.3和2.3.7-p1的关键修补程序：
    - 改进当前锁定机制
    - 实施已签名的锁定以防止对并行请求进行解锁
    - 修复了Redis写入操作中发生的以下错误： `OOM command not allowed when used memory > maxmemory`
-   - 修复了在产品更新<!--MCLOUD-6110-->期间运行的`cat_p`标记对干净缓存的处理
+   - 修复了在产品更新`cat_p`期间运行的<!--MCLOUD-6110-->标记对干净缓存的处理
 
 - 修复了在使用Adobe Commerce v2.2.6或2.3.5（不包括此模块）的Adobe Commerce基础架构项目中将所需的`amzn/amazon-pay-module`修补程序应用到时导致错误的问题。 现在，如果未安装模块，修补过程将跳过`amzn/amazon-pay-module`修补程序。<!--MCLOUD-6588-->
 
@@ -313,7 +319,7 @@ Adobe Commerce 2.4.3和2.3.7-p1的关键修补程序：
 
 - **magento/magento-cloud-patches的兼容性更新**
 
-   - 更新了`composer.json`文件中的`symfony`和`semver`版本约束以与Adobe Commerce 2.4及更高版本兼容。<!--MAGECLOUD-5127-->
+   - 更新了`symfony`文件中的`semver`和`composer.json`版本约束以与Adobe Commerce 2.4及更高版本兼容。<!--MAGECLOUD-5127-->
 
    - 更新了`composer.json`中的约束，以与`ece-tools` 2002.0.22及更高版本2002.0.x兼容。
 
