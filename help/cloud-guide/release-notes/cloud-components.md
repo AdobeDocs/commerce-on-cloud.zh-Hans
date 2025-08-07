@@ -67,7 +67,7 @@ ht-degree: 0%
 
 发行日期： 2022年9月13日
 
-- ![修复图标](../../assets/fix.svg) **预热错误** — 修复了当管理员中的页面可见性设置为[不可单独显示](../environment/variables-post-deploy.md#warm_up_pages) [**时尝试**&#x200B;预热的](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)问题，该问题导致部署日志中出现`ERROR: Warming up failed: <link to page>`错误。<!-- MCLOUD-9134 -->
+- ![修复图标](../../assets/fix.svg) **预热错误** — 修复了当管理员中的页面可见性设置为[不可单独显示](../environment/variables-post-deploy.md#warm_up_pages) [**时尝试**&#x200B;预热的](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)问题，该问题导致部署日志中出现`ERROR: Warming up failed: <link to page>`错误。<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 
