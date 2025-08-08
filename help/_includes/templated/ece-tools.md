@@ -1,13 +1,13 @@
 ---
-source-git-commit: 7f2934af84c947046fed3a32c3b6e2937aed418a
+source-git-commit: 69b764a03e6c272498e57645dca40d29c4e79626
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '934'
 ht-degree: 3%
 
 ---
 # ece-tools
 
-**版本**： 2002.2.5
+**版本**： 2002.2.7
 
 此引用包含通过`ece-tools`命令行工具提供的34个命令。
 在云基础架构上的Adobe Commerce中使用`ece-tools list`命令自动生成初始列表。
@@ -25,9 +25,16 @@ ht-degree: 3%
 - 默认： `false`
 - 不接受值
 
-#### `--quiet`，`-q`
+#### `--silent`
 
 不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+#### `--quiet`，`-q`
+
+仅显示错误。 所有其他输出都将被抑制
 
 - 默认： `false`
 - 不接受值
@@ -56,7 +63,6 @@ ht-degree: 3%
 
 否定“ — ansi”选项
 
-- 默认： `false`
 - 不接受值
 
 #### `--no-interaction`，`-n`
@@ -401,7 +407,7 @@ ece-tools backup:list
 ece-tools backup:restore [-f|--force] [--file [FILE]]
 ```
 
-还原重要的配置文件。 运行backup：list以显示备份文件列表。
+还原重要的配置文件。 运行备份:list以显示备份文件列表。
 
 ### 选项
 
