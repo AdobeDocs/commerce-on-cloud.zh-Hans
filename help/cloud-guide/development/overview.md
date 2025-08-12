@@ -6,9 +6,9 @@ feature: Cloud, Install
 topic: Development
 last-substantial-update: 2024-02-06T00:00:00Z
 exl-id: 14fb0b41-1c3a-4abc-8726-cea16ab00ba8
-source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
+source-git-commit: 1cf1f9097f9897591fe59a390b0e73921f2300fa
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Composer将项目所需的库和依赖项安装在`vendor`目录中。 以下必
 
 {style="table-layout:auto"}
 
-添加、提交和推送更新的代码后，部署进程将在[构建阶段](../deploy/process.md#build-phase-build-phase)期间自动运行`composer install`命令。
+添加、提交和推送更新的代码后，部署进程将在`composer install`构建阶段[期间自动运行](../deploy/process.md#build-phase-build-phase)命令。
 
 ### 云中继
 
@@ -47,7 +47,7 @@ Composer将项目所需的库和依赖项安装在`vendor`目录中。 以下必
 >=current_version <next_version
 ```
 
-例如，要使用最新的Adobe Commerce版本2.4.9，请在`composer.json`文件中将`2.4.8`设置为“当前”版本，将`2.4.9`设置为“下一个”版本：
+例如，要使用最新的Adobe Commerce版本2.4.9，请在`2.4.8`文件中将`2.4.9`设置为“当前”版本，将`composer.json`设置为“下一个”版本：
 
 ```text
 "magento/magento-cloud-metapackage": ">=2.4.8 <2.4.9"
@@ -59,10 +59,11 @@ Composer将项目所需的库和依赖项安装在`vendor`目录中。 以下必
 - **vendor/magento/product-enterprise-edition** — 此中继需要应用程序组件，包括模块、框架、主题等。
 - **vendor/fastly2/magento2** — 此模块管理Pro暂存环境和生产环境以及入门级生产环境的Fastly CDN和服务。 查看[Fastly服务](/help/cloud-guide/cdn/fastly.md#fastly-cdn-module-for-magento-2)。
 - **vendor/magento/module-paypal-on-boarding** — 此模块通过连接到您的PayPal商家帐户来提供PayPal付款网关结帐。 查看[PayPal入门培训工具](../store/paypal.md)。
+- **供应商/aem/rum** — 此模块管理[操作遥测](../monitor/operational-telemetry.md)数据收集工具。
 
 >[!TIP]
 >
->有关依赖项和第三方许可证的列表，请参阅&#x200B;_Adobe Commerce发行说明_&#x200B;中的[Commerce云包](/help/cloud-guide/release-notes/cloud-packages.md)。
+>有关依赖项和第三方许可证的列表，请参阅[Adobe Commerce发行说明](/help/cloud-guide/release-notes/cloud-packages.md)中的&#x200B;_Commerce云包_。
 
 ## Docker环境
 
