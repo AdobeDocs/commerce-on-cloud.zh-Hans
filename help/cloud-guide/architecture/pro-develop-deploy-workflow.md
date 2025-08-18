@@ -3,9 +3,9 @@ title: Pro项目工作流
 description: 了解如何使用专业开发和部署工作流。
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-source-git-commit: b4905acf71e4cb71eb369cb6d4bb3abe9ada4e9d
+source-git-commit: 8aacac9ae721bc98cbe29e67ddf23d784e478e55
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,20 @@ Pro项目包含一个具有全局`master`分支和三个主要环境的Git存储
 
 ![专业环境列表](../../assets/pro-environments.png)
 
-这些环境是`read-only`，接受从本地工作区推送的分支部署的代码更改。 有关Pro环境的完整概述，请参阅[Pro体系结构](pro-architecture.md)。 有关项目视图中Pro环境列表的概述，请参阅[[!DNL Cloud Console]](../project/overview.md#cloud-console)。
+这些环境是`read-only`，仅接受从本地工作区推送的分支部署的代码更改。
 
-下图演示了Pro开发和部署工作流，该工作流使用简单的Git分支方法。 您[使用基于`integration`环境的活动分支来开发](#development-workflow)代码，_正在推送_&#x200B;和&#x200B;_正在提取_&#x200B;代码更改到您的远程活动分支，或者从您的远程活动分支获取更改。 您通过&#x200B;_将远程分支_&#x200B;合并到基础分支来部署已验证的代码，这将为该环境激活自动[生成和部署](#deployment-workflow)进程。
+下图演示了Pro开发和部署工作流，该工作流使用简单的Git分支方法。 您[使用基于](#development-workflow)环境的活动分支来开发`integration`代码，_正在推送_&#x200B;和&#x200B;_正在提取_&#x200B;代码更改到您的远程活动分支，或者从您的远程活动分支获取更改。 您通过&#x200B;_将远程分支_&#x200B;合并到基础分支来部署已验证的代码，这将为该环境激活自动[生成和部署](#deployment-workflow)进程。
 
 ![专业体系结构开发工作流的高级视图](../../assets/pro-dev-workflow.png)
+
+由于环境是只读的，因此您无法直接在云环境中进行任何代码更改。 如果您尝试运行`composer install`以安装任何模块，则会收到错误，例如：
+
+```bash
+file_put_contents(...): Failed to open stream: Read-only file system  
+The disk hosting /app/<cluster_ID> is full
+```
+
+有关详细信息，请参阅[Pro体系结构](pro-architecture.md)以了解Pro环境的概述，请参阅[[!DNL Cloud Console]](../project/overview.md#cloud-console)以了解Pro环境列表在项目视图中的概述。
 
 ## 开发工作流
 
@@ -34,11 +43,11 @@ Pro项目包含一个具有全局`master`分支和三个主要环境的Git存储
 
 项目环境支持灵活、连续的集成过程。 首先，将`integration`分支克隆到本地项目文件夹。 创建一个或多个分支、开发新功能、配置更改、添加扩展和部署更新：
 
-- **从`integration`获取**&#x200B;更改
+- **从**&#x200B;获取`integration`更改
 
-- 来自`integration`的&#x200B;**分支**
+- 来自&#x200B;**的**&#x200B;分支`integration`
 
-- 在本地工作站上开发&#x200B;**代码，包括[!DNL Composer]更新**
+- 在本地工作站上开发&#x200B;**代码，包括**&#x200B;更新[!DNL Composer]
 
 - 将&#x200B;**推送**&#x200B;代码更改到远程并进行验证
 
@@ -50,7 +59,7 @@ Pro项目包含一个具有全局`master`分支和三个主要环境的Git存储
 
 - **正在生成配置管理文件** — 在已部署的环境中，某些配置设置是&#x200B;_只读_。
 
-- **正在配置您的商店** — 您应该使用集成环境完全配置所有商店设置。 您可以在&#x200B;_[!DNL Cloud Console]_&#x200B;中的_&#x200B;集成&#x200B;_环境视图上找到&#x200B;**存储管理员URL**。
+- **正在配置您的商店** — 您应该使用集成环境完全配置所有商店设置。 您可以在&#x200B;**中的**&#x200B;集成&#x200B;_环境视图上找到_&#x200B;存储管理员URL _[!DNL Cloud Console]_。
 
 ## 部署工作流
 
