@@ -75,7 +75,7 @@ Edge ACL创建IP地址列表来管理对站点的访问。 在此示例中，您
 }
 ```
 
-在此示例中[创建自定义代码片段](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html#add-the-custom-vcl-snippet)之前，请查看值以确定是否需要进行任何更改。 然后在相应的字段中输入每个值，例如在“类型”字段中输入值`type`，在“内容”字段中输入值`content`。
+在此示例中[创建自定义代码片段](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=zh-Hans#add-the-custom-vcl-snippet)之前，请查看值以确定是否需要进行任何更改。 然后在相应的字段中输入每个值，例如在“类型”字段中输入值`type`，在“内容”字段中输入值`content`。
 
 - `name` — VCL代码片段的名称。 对于此示例，`allowlist`。
 
