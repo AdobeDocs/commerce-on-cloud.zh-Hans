@@ -3,7 +3,7 @@ title: 开始使用自定义VCL代码片段
 description: 了解如何使用Varnish控制语言代码片段自定义Adobe Commerce的Fastly服务配置。
 feature: Cloud, Configuration, Services
 exl-id: 90f0bea6-4365-4657-94e9-92a0fd1145fd
-source-git-commit: a51946f65ccd606cde6fbb4278f625a49ae42dad
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '2037'
 ht-degree: 0%
@@ -332,3 +332,5 @@ curl -H "Fastly-Key: $FASTLY_API_TOKEN" https://api.fastly.com/service/$FASTLY_S
 - **覆盖[默认Fastly VCL代码中的值](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**
 
   创建具有更新值的代码片段并分配`100`优先级。
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

@@ -2,7 +2,8 @@
 title: 自定义VCL以绕过Fastly缓存
 description: 通过创建自定义VCL代码片段以绕过Fastly缓存，对到源服务器的请求流量进行故障诊断。
 feature: Cloud, Configuration, Cache
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4e19d6d4-b5a1-4623-b0be-804ddc81ff3d
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%
@@ -63,7 +64,7 @@ ht-degree: 0%
 
    ![创建Fastly Bypass VCL代码片段](/help/assets/cdn/fastly-create-bypass-snippet.png)
 
-1. 重新加载页面后，在&#x200B;*Fastly配置*&#x200B;部分中单击&#x200B;**将VCL上传到Fastly**。
+1. 重新加载页面后，在&#x200B;**Fastly配置**&#x200B;部分中单击&#x200B;*将VCL上传到Fastly*。
 
 1. 上载完成后，根据页面顶部的通知刷新缓存。
 
@@ -86,3 +87,5 @@ curl -svo /dev/null www.example.com/index.html
 <!--External link definitions-->
 
 [Fastly VCL引用]: https://docs.fastly.com/vcl/
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

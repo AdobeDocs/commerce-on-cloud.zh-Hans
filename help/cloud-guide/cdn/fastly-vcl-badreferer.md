@@ -2,7 +2,8 @@
 title: 阻止反向链接垃圾邮件
 description: 使用Fastly Edge词典和自定义VCL代码片段阻止来自您站点的反向链接垃圾邮件。
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4ed47a71-7fee-4f37-a7da-3e30052004df
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 0%
@@ -79,7 +80,7 @@ Edge词典用于创建在VCL代码片段处理期间可供VCL函数访问的键�
 
 - `dynamic` — 值0表示要上载到Fastly配置的版本化VCL的[常规代码片段](https://docs.fastly.com/en/guides/using-regular-vcl-snippets)。
 
-- `priority` — 确定VCL代码片段的运行时间。 优先顺序为`5`，以便在任何默认MagentoVCL代码片段(`magentomodule_*`)被指定优先顺序为50之前运行此代码片段。 根据您希望代码片段运行的时间，将每个自定义代码片段的优先级设置为高于或低于50。 优先级较低的代码片段首先运行。
+- `priority` — 确定VCL代码片段的运行时间。 优先级别为`5`，以便在任何默认的Magento VCL代码片段(`magentomodule_*`)被指定优先级别为50之前运行此代码片段。 根据您希望代码片段运行的时间，将每个自定义代码片段的优先级设置为高于或低于50。 优先级较低的代码片段首先运行。
 
 - `type` — 指定在VCL版本中插入代码片段的位置。 在此示例中，VCL代码片段是`recv`代码片段。 将代码片段插入VCL版本后，它会添加到`vcl_recv`子例程中，位于默认Fastly VCL代码下方，以及任何对象上方。
 
@@ -124,7 +125,7 @@ Edge词典用于创建在VCL代码片段处理期间可供VCL函数访问的键�
 
    ![创建自定义反向链接块VCL代码片段](/help/assets/cdn/fastly-create-referrer-block-snippet.png)
 
-1. 重新加载页面后，在&#x200B;*Fastly配置*&#x200B;部分中单击&#x200B;**将VCL上传到Fastly**。
+1. 重新加载页面后，在&#x200B;**Fastly配置**&#x200B;部分中单击&#x200B;*将VCL上传到Fastly*。
 
 1. 上载完成后，根据页面顶部的通知刷新缓存。
 
@@ -135,3 +136,5 @@ Fastly在上传过程中验证更新的VCL版本。 如果验证失败，请编�
 {{$include /help/_includes/vcl-snippet-modify.md}}
 
 {{$include /help/_includes/vcl-snippet-delete.md}}
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

@@ -2,7 +2,8 @@
 title: 用于阻止请求的自定义VCL
 description: 使用带有自定义VCL代码片段的Edge访问控制列表(ACL)，按IP地址阻止传入请求。
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: eb21c166-21ae-4404-85d9-c3a26137f82c
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '996'
 ht-degree: 0%
@@ -11,7 +12,7 @@ ht-degree: 0%
 
 # 用于阻止请求的自定义VCL
 
-您可以使用适用于Magento2的Fastly CDN模块创建一个包含要阻止的IP地址列表的Edge ACL。 然后，您可以将该列表与VCL代码段一起使用来阻止传入的请求。 该代码检查传入请求的IP地址。 如果与ACL列表中包含的IP地址匹配，Fastly将阻止请求访问您的站点并返回`403 Forbidden error`。 允许访问所有其他客户端IP地址。
+您可以使用适用于Magento 2的Fastly CDN模块创建一个包含要阻止的IP地址列表的Edge ACL。 然后，您可以将该列表与VCL代码段一起使用来阻止传入的请求。 该代码检查传入请求的IP地址。 如果与ACL列表中包含的IP地址匹配，Fastly将阻止请求访问您的站点并返回`403 Forbidden error`。 允许访问所有其他客户端IP地址。
 
 **先决条件：**
 
@@ -38,7 +39,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此示例向高级用户展示如何创建VCL代码段来配置自定义阻止规则以上载到Fastly服务。 列入阻止列表 列入允许列表您可以使用Fastly CDN中针对Magento2模块提供的[阻止](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md)功能，根据Adobe Commerce管理员的国家/地区配置或。
+>此示例向高级用户展示如何创建VCL代码段来配置自定义阻止规则以上载到Fastly服务。 您可以使用Magento 2的Fastly CDN中提供的[阻止](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md)功能，根据Adobe Commerce管理员的国家/地区配置阻止列表列入允许列表或模块。
 
 定义Edge ACL后，可以使用它创建VCL代码片段，以阻止对ACL中指定的IP地址的访问。 您可以在暂存环境和生产环境中使用相同的VCL代码片段，但必须分别将该代码片段上传到每个环境。
 
@@ -58,7 +59,7 @@ ht-degree: 0%
 
 - `name`： VCL代码片段的名称。 在此示例中，我们使用了名称`blocklist`。
 
-- `priority`：确定VCL代码片段的运行时间。 优先级为`5`以立即运行并检查管理员请求是否来自允许的IP地址。 该代码片段在任何默认MagentoVCL代码片段(`magentomodule_*`)的优先级为50之前运行。 根据您希望代码片段运行的时间，将每个自定义代码片段的优先级设置为高于或低于50。 优先级较低的代码片段首先运行。
+- `priority`：确定VCL代码片段的运行时间。 优先级为`5`以立即运行并检查管理员请求是否来自允许的IP地址。 该代码片段在任何默认Magento VCL代码片段(`magentomodule_*`)的优先级为50之前运行。 根据您希望代码片段运行的时间，将每个自定义代码片段的优先级设置为高于或低于50。 优先级较低的代码片段首先运行。
 
 - `type`：指定VCL代码片段的类型，以确定代码片段在生成的VCL代码中的位置。 在本例中，我们使用`recv`，它将VCL代码插入`vcl_recv`子例程中、样板VCL的下方和任何对象的上方。 有关代码片段类型的列表，请参阅[Fastly VCL代码片段引用](https://docs.fastly.com/api/config#api-section-snippet)。
 
@@ -96,7 +97,7 @@ ht-degree: 0%
 
 1. 单击&#x200B;**创建**&#x200B;以生成名称模式为`type_priority_name.vcl`的VCL代码片段文件，例如`recv_5_blocklist.vcl`
 
-1. 重新加载页面后，单击&#x200B;*Fastly配置*&#x200B;部分中的&#x200B;**将VCL上传到Fastly**&#x200B;以将文件添加到Fastly服务配置。
+1. 重新加载页面后，单击&#x200B;**Fastly配置**&#x200B;部分中的&#x200B;*将VCL上传到Fastly*&#x200B;以将文件添加到Fastly服务配置。
 
 1. 上传后，根据页面顶部的通知刷新缓存。
 
@@ -108,7 +109,7 @@ Fastly在上传过程中验证VCL代码的更新版本。 如果验证失败，�
 
 >[!WARNING]
 >
->在这些示例中，VCL代码的格式为JSON有效负荷，该有效负荷可以保存到文件中并在Fastly API请求中提交。 您可以从Admin[&#128279;](#add-the-custom-vcl-snippet)提交VCL代码片段，或使用Fastly API作为JSON字符串提交。 要防止在将Fastly API与JSON字符串一起使用时发生验证错误，必须使用反斜杠对特殊字符进行转义。
+>在这些示例中，VCL代码的格式为JSON有效负荷，该有效负荷可以保存到文件中并在Fastly API请求中提交。 您可以从Admin[提交](#add-the-custom-vcl-snippet)VCL代码片段，或使用Fastly API作为JSON字符串提交。 要防止在将Fastly API与JSON字符串一起使用时发生验证错误，必须使用反斜杠对特殊字符进行转义。
 
 >[!NOTE]
 >如果要从Admin提交VCL代码片段，请从示例VCL代码中提取各个值，并将它们输入到相应的字段中。 例如：
@@ -155,3 +156,5 @@ Fastly在上传过程中验证VCL代码的更新版本。 如果验证失败，�
 {{$include /help/_includes/vcl-snippet-modify.md}}
 
 {{$include /help/_includes/vcl-snippet-delete.md}}
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->
