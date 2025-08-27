@@ -1,7 +1,7 @@
 ---
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+source-git-commit: f75dbbc9726ff21a648b1bb3d8f06cb45a5d6b08
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -11,13 +11,28 @@ ht-degree: 0%
 
 ## 文件组织
 
+### `adobe-docs-tasks.rake`
+
+包含Experience League上Adobe Commerce的常见要求、共享功能以及未命名任务（文档存储库Rake任务）：
+
+- `whatsnew` — 为新闻摘要生成数据（默认：自上次更新后）
+- `render` — 渲染模板化文件并维护include
+
 ### `includes.rake`
 
-包含`:includes`命名空间下所有与包含相关的Rake任务：
+包含在`:includes`命名空间中组织的包含管理任务：
 
-- `includes:maintain_relationships` — 发现和维护包含关系
+- `includes:maintain_relationships` — 发现并维护Markdown文件中的包含关系
 - `includes:maintain_timestamps` — 根据包含文件更改添加/更新时间戳
 - `includes:maintain_all` — 按顺序运行这两个操作
+- `includes:unused` — 查找未使用的包含文件
+
+### `images.rake`
+
+包含在`:images`命名空间中组织的图像管理任务：
+
+- `images:optimize` — 优化修改后未提交文件中的图像
+- `images:unused` — 在项目中查找未使用的图像
 
 ## 工作原理
 
