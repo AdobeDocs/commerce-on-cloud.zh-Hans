@@ -1,7 +1,7 @@
 ---
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+source-git-commit: 5236f2718e5091dfc2fc140e15d4ac87a073d1d0
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '781'
 ht-degree: 1%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 1%
 
 本网站包含有关云基础架构上的Commerce的最新开发人员文档。
 
-- 云基础架构上的[Commerce指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)
-- 在云基础架构上[开始使用Commerce](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/start/overview)
+- 云基础架构上的[Commerce指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- 在云基础架构上[开始使用Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
 
 ## Adobe Open Source行为准则
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## 关于您对Adobe内容的投稿
 
-请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/zh-hans/docs/contributor/contributor-guide/introduction)。
+请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 您的参与方式取决于您的身份以及您想参与的更改类型：
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 社区参与者可以使用GitHub UI进行基本编辑或创建存储库分支以进行重大更改。
 
-有关详细信息，请参阅[Adobe Docs参与者指南](https://experienceleague.adobe.com/zh-hans/docs/contributor/contributor-guide/introduction)。
+有关详细信息，请参阅[Adobe Docs参与者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 ## 如何使用Markdown格式化主题
 
@@ -70,7 +70,7 @@ ht-degree: 1%
 >**注释：**
 >
 >- 生成模板化内容需要在终端中的命令行上工作。
->- 必须安装Ruby才能运行渲染脚本。 有关所需版本，请参阅[_jekyll/.ruby-version] (_jekyll/.ruby-version)。
+>- 必须安装Ruby才能运行渲染脚本。 有关所需版本，请参阅[_jekyll/.ruby-version](_jekyll/.ruby-version)。
 
 有关模板化内容的文件结构的描述，请参阅以下内容：
 
@@ -131,3 +131,31 @@ ht-degree: 1%
    ```
 
 有关[Data Files](https://jekyllrb.com/docs/datafiles)、[Liquid Filters](https://jekyllrb.com/docs/liquid/filters/)和其他功能的更多详细信息，请参阅Jekyll文档。
+
+## 用于图像优化的预提交挂接
+
+此存储库包括自动预提交挂接，用于在提交之前优化图像。 **所有参与者都应启用这些挂接**，以确保一致的图像优化并降低存储库大小。
+
+### 快速设置
+
+克隆存储库后，运行：
+
+```bash
+.githooks/setup-hooks.sh
+```
+
+### 钩子做什么
+
+- 自动检测暂存的图像文件(PNG、JPG、JPEG、GIF、SVG)
+- 运行`image_optim`以压缩和优化图像
+- 自动重新存放优化的图像
+- 确保所有提交的映像都得到了正确优化
+
+### 优点
+
+- 减少了存储库大小
+- 更快地加载文档的页面
+- 所有参与者均具有一致的图像质量
+- 无需手动优化
+
+有关详细的设置说明、疑难解答和配置，请参阅[`.githooks/README.md`](.githooks/README.md)。
