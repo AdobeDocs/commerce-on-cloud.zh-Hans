@@ -9,8 +9,8 @@ ht-degree: 1%
 
 本网站包含有关云基础架构上的Commerce的最新开发人员文档。
 
-- 云基础架构上的[Commerce指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
-- 在云基础架构上[开始使用Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
+- 云基础架构上的[Commerce指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)
+- 在云基础架构上[开始使用Commerce](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/start/overview)
 
 ## Adobe Open Source行为准则
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## 关于您对Adobe内容的投稿
 
-请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
+请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/zh-hans/docs/contributor/contributor-guide/introduction)。
 
 您的参与方式取决于您的身份以及您想参与的更改类型：
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 社区参与者可以使用GitHub UI进行基本编辑或创建存储库分支以进行重大更改。
 
-有关详细信息，请参阅[Adobe Docs参与者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
+有关详细信息，请参阅[Adobe Docs参与者指南](https://experienceleague.adobe.com/zh-hans/docs/contributor/contributor-guide/introduction)。
 
 ## 如何使用Markdown格式化主题
 
