@@ -1,7 +1,7 @@
 ---
-source-git-commit: 5236f2718e5091dfc2fc140e15d4ac87a073d1d0
+source-git-commit: b151aac666510594751937e80dc3d9db4ede41b7
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '815'
 ht-degree: 1%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 1%
 
 本网站包含有关云基础架构上的Commerce的最新开发人员文档。
 
-- 云基础架构上的[Commerce指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)
-- 在云基础架构上[开始使用Commerce](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/start/overview)
+- 云基础架构上的[Commerce指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- 在云基础架构上[开始使用Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
 
 ## Adobe Open Source行为准则
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## 关于您对Adobe内容的投稿
 
-请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/zh-hans/docs/contributor/contributor-guide/introduction)。
+请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 您的参与方式取决于您的身份以及您想参与的更改类型：
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 社区参与者可以使用GitHub UI进行基本编辑或创建存储库分支以进行重大更改。
 
-有关详细信息，请参阅[Adobe Docs参与者指南](https://experienceleague.adobe.com/zh-hans/docs/contributor/contributor-guide/introduction)。
+有关详细信息，请参阅[Adobe Docs参与者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 ## 如何使用Markdown格式化主题
 
@@ -70,7 +70,7 @@ ht-degree: 1%
 >**注释：**
 >
 >- 生成模板化内容需要在终端中的命令行上工作。
->- 必须安装Ruby才能运行渲染脚本。 有关所需版本，请参阅[_jekyll/.ruby-version] (_jekyll/.ruby-version)。
+>- 必须安装Ruby才能运行渲染脚本。 有关所需版本，请参阅[_jekyll/.ruby-version](_jekyll/.ruby-version)。
 
 有关模板化内容的文件结构的描述，请参阅以下内容：
 
@@ -98,10 +98,10 @@ ht-degree: 1%
 4. 生成模板化内容并将输出写入`help/_includes/templated`目录。
 
    ```bash
-   rake render
+   bundle exec rake render
    ```
 
-   >**注意：**&#x200B;必须从`_jekyll`目录运行脚本。 如果这是您第一次运行脚本，则必须先使用`bundle install`命令安装Ruby依赖项。
+   >**注意：**&#x200B;必须从`_jekyll`目录运行脚本。 如果这是您第一次运行脚本，则必须先使用`bundle install`命令安装Ruby依赖项。 rake任务由`adobe-comdox-exl-rake-tasks` gem提供，以便更好地维护Adobe Commerce文档存储库中的内容。
 
 5. 导航回`root`目录。
 
@@ -131,6 +131,15 @@ ht-degree: 1%
    ```
 
 有关[Data Files](https://jekyllrb.com/docs/datafiles)、[Liquid Filters](https://jekyllrb.com/docs/liquid/filters/)和其他功能的更多详细信息，请参阅Jekyll文档。
+
+## 可用的Rake任务
+
+此存储库使用`adobe-comdox-exl-rake-tasks` gem提供的Rake任务。 要查看所有可用任务，请运行：
+
+```bash
+cd _jekyll
+bundle exec rake --tasks
+```
 
 ## 用于图像优化的预提交挂接
 
