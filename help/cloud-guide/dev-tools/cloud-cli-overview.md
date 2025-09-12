@@ -1,27 +1,30 @@
 ---
 title: Cloud CLI
 description: 了解magento-cloud CLI以及它如何帮助您在云基础架构项目上管理Adobe Commerce的本地开发环境。
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 71a705f2-8672-4125-b539-b7b1621f2f64
+source-git-commit: 82d89f442792baec995dd0be40f2a49cba168f76
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
 
-
 # Cloud CLI
 
-通过`magento-cloud` CLI工具，开发人员和系统管理员能够管理Cloud项目和环境、执行例程并在本地运行自动化任务。 `magento-cloud` CLI扩展了[[!DNL Cloud Console]](../../get-started/cloud-console.md)的特性和功能。 在本地工作站上安装`magento-cloud` CLI后，您可以在云基础架构Starter和Pro集成环境中使用它来管理Adobe Commerce。
+`magento-cloud` CLI是一个命令行工具，它允许开发人员和系统管理员从其本地工作站管理云基础架构项目和环境上的Adobe Commerce。
+
+此工具通过提供额外的自动化功能和直接访问项目管理功能，扩展了[[!DNL Cloud Console]](../../get-started/cloud-console.md)的功能。 在本地安装该工具后，您可以使用它来管理入门和专业集成环境。
 
 >[!NOTE]
 >
->这是本地工具，不能使用此方法安装在云环境（只读）上。 您只能通过&#x200B;**部署工作流**&#x200B;在云环境中安装模块
->- [专业部署工作流](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
->- [入门部署工作流](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
+>这是本地工具，仅在基于Unix的操作系统上受支持。 不支持Windows。 无法使用此页面上描述的方法将其安装在云环境中（只读）。 您只能通过以下&#x200B;**部署工作流**&#x200B;之一在云环境中安装模块。
+>
+>- [专业部署工作流](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
+>- [入门部署工作流](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
 
 **安装`magento-cloud` CLI**：
 
-1. 在您的&#x200B;_本地工作站_&#x200B;上，切换到您打算克隆云项目且[文件系统所有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=zh-Hans)具有&#x200B;_写入_&#x200B;访问权限的目录。
+1. 在您的&#x200B;_本地工作站_&#x200B;上，切换到您打算克隆云项目且[文件系统所有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)具有&#x200B;_写入_&#x200B;访问权限的目录。
 
 1. 安装`magento-cloud` CLI。
 
@@ -61,7 +64,7 @@ ht-degree: 0%
 
 ## 常用命令
 
-Adobe设计了这些命令以管理Cloud集成环境，并建议从项目目录运行`magento-cloud` CLI，以便可以省略`-p <project-ID>`参数。
+Adobe设计了这些命令来管理云集成环境，并建议从项目目录运行`magento-cloud` CLI，以便可以省略`-p <project-ID>`参数。
 
 以下常用的`magento-cloud` CLI命令列表仅包含必需选项。 您可以将`--help`选项与任何命令一起使用，以查看更多信息。
 
@@ -134,7 +137,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
 
 1. 在本地工作站上，转到您的项目目录。
 
-1. 切换到[文件系统所有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=zh-Hans)。
+1. 切换到[文件系统所有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)。
 
 1. 登录到您的项目。
 
