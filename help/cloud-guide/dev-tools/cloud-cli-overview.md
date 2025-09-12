@@ -19,12 +19,12 @@ ht-degree: 0%
 >
 >这是本地工具，仅在基于Unix的操作系统上受支持。 不支持Windows。 无法使用此页面上描述的方法将其安装在云环境中（只读）。 您只能通过以下&#x200B;**部署工作流**&#x200B;之一在云环境中安装模块。
 >
->- [专业部署工作流](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
->- [入门部署工作流](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
+>- [专业部署工作流](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
+>- [入门部署工作流](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
 
 **安装`magento-cloud` CLI**：
 
-1. 在您的&#x200B;_本地工作站_&#x200B;上，切换到您打算克隆云项目且[文件系统所有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)具有&#x200B;_写入_&#x200B;访问权限的目录。
+1. 在您的&#x200B;_本地工作站_&#x200B;上，切换到您打算克隆云项目且[文件系统所有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=zh-Hans)具有&#x200B;_写入_&#x200B;访问权限的目录。
 
 1. 安装`magento-cloud` CLI。
 
@@ -137,7 +137,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
 
 1. 在本地工作站上，转到您的项目目录。
 
-1. 切换到[文件系统所有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html)。
+1. 切换到[文件系统所有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=zh-Hans)。
 
 1. 登录到您的项目。
 
