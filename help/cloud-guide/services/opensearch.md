@@ -27,7 +27,7 @@ OpenSearch允许您从任何来源、任何格式获取数据，并实时搜索�
 
 >[!TIP]
 >
->除非您使用[实时搜索](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview)，否则Adobe建议您始终为云基础架构项目上的Adobe Commerce设置OpenSearch，即使您计划为Adobe Commerce应用程序配置第三方搜索工具也是如此。 如果第三方搜索工具失败，则设置OpenSearch将提供回退选项。
+>除非您使用[实时搜索](https://experienceleague.adobe.com/zh-hans/docs/commerce/live-search/overview)，否则Adobe建议您始终为云基础架构项目上的Adobe Commerce设置OpenSearch，即使您计划为Adobe Commerce应用程序配置第三方搜索工具也是如此。 如果第三方搜索工具失败，则设置OpenSearch将提供回退选项。
 
 **启用OpenSearch**：
 
@@ -39,7 +39,7 @@ OpenSearch允许您从任何来源、任何格式获取数据，并实时搜索�
        disk: 1024
    ```
 
-   对于Pro项目，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)才能在暂存环境和生产环境中更改OpenSearch版本。
+   对于Pro项目，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)才能在暂存环境和生产环境中更改OpenSearch版本。
 
 1. 设置或验证`relationships`文件中的`.magento.app.yaml`属性。
 
@@ -92,7 +92,7 @@ OpenSearch允许您从任何来源、任何格式获取数据，并实时搜索�
 
 - **项目升级** — 验证新应用程序版本中的OpenSearch PHP客户端是否与云基础架构上安装的OpenSearch服务版本兼容。
 
-服务版本和兼容性支持取决于在云基础架构上测试和部署的版本，并且有时不同于Adobe Commerce内部部署支持的版本。 有关支持的版本列表，请参阅[安装指南](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)中的&#x200B;_系统要求_。
+服务版本和兼容性支持取决于在云基础架构上测试和部署的版本，并且有时不同于Adobe Commerce内部部署支持的版本。 有关支持的版本列表，请参阅[安装指南](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)中的&#x200B;_系统要求_。
 
 **验证OpenSearch软件兼容性**：
 
@@ -184,7 +184,7 @@ OpenSearch允许您从任何来源、任何格式获取数据，并实时搜索�
 
 >[!NOTE]
 >
->这仅适用于集成和入门环境。 要在Pro暂存或生产群集中安装插件，请[提交支持请求](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)。
+>这仅适用于集成和入门环境。 要在Pro暂存或生产群集中安装插件，请[提交支持请求](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)。
 
 
 ```yaml
@@ -208,7 +208,7 @@ opensearch:
 
 >[!NOTE]
 >
->此更改仅适用于集成和入门环境。 您必须[提交支持票证](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)才能删除Pro暂存或生产群集中的插件。
+>此更改仅适用于集成和入门环境。 您必须[提交支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)才能删除Pro暂存或生产群集中的插件。
 
 1. 从`.magento/services.yaml`文件中删除OpenSearch插件条目。
 1. 添加、提交和推送代码更改。
