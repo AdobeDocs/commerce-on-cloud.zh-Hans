@@ -2,7 +2,8 @@
 title: Fastly故障诊断
 description: 了解如何对Adobe Commerce的Fastly CDN模块和服务进行故障诊断和管理。
 feature: Cloud, Configuration, Cache, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 69954ef9-9ece-411e-934e-814a56542290
+source-git-commit: f496a4a96936558e6808b3ce74eac32dfdb9db19
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 0%
@@ -11,7 +12,7 @@ ht-degree: 0%
 
 # Fastly故障诊断
 
-使用以下信息对云基础架构项目环境上的Adobe Commerce中用于Magento2的Fastly CDN模块进行故障诊断和管理。 例如，您可以调查响应标头值和缓存行为以解决Fastly服务和性能问题。
+使用以下信息对云基础架构项目环境中Adobe Commerce中Magento 2的Fastly CDN模块进行故障诊断和管理。 例如，您可以调查响应标头值和缓存行为以解决Fastly服务和性能问题。
 
 在Pro生产和暂存环境中，您可以使用[New Relic日志](../monitor/log-management.md)查看和分析Fastly CDN和WAF日志数据，以排查错误和性能问题。
 
@@ -31,19 +32,19 @@ ht-degree: 0%
 log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 ```
 
-您可以对生产和暂存环境使用相同的VCL。 请参阅&#x200B;_Fastly文档_&#x200B;中的[`vcl_log`](https://www.fastly.com/documentation/reference/vcl/subroutines/log/)。
+您可以对生产和暂存环境使用相同的VCL。 请参阅[`vcl_log`Fastly文档](https://www.fastly.com/documentation/reference/vcl/subroutines/log/)中的&#x200B;__。
 
 ## 站点性能、清除和缓存问题
 
 使用以下列表可识别并解决与云基础架构环境中Adobe Commerce的Fastly服务配置相关的问题。
 
-- **商店菜单不显示或不起作用** — 您可能使用了直接指向原始服务器的链接或临时链接，而不是使用实时站点URL，或者您在[cURL命令](#check-live-site-through-fastly)中使用了`-H "host:URL"`。 如果绕过Fastly到原始服务器，主菜单将不起作用，并且显示的标头不正确，这允许在浏览器端进行缓存。
+- **商店菜单不显示或不起作用** — 您可能使用了直接指向原始服务器的链接或临时链接，而不是使用实时站点URL，或者您在`-H "host:URL"`cURL命令[中使用了](#check-live-site-through-fastly)。 如果绕过Fastly到原始服务器，主菜单将不起作用，并且显示的标头不正确，这允许在浏览器端进行缓存。
 
-- **顶部导航不起作用** — 顶部导航依赖于Edge Side Include (ESI)处理，该处理在您上传默认MagentoFastly VCL代码段时启用。 如果导航不起作用，[上传Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)并重新检查站点。
+- **顶部导航不起作用** — 顶部导航依赖于Edge Side Include (ESI)处理，该处理在您上传默认的Magento Fastly VCL代码片段时启用。 如果导航不起作用，[上传Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)并重新检查站点。
 
-- **地理位置/地理IP不起作用** — 默认MagentoFastly VCL代码段会将国家/地区代码附加到URL。 如果国家/地区代码不起作用，请[上传Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)并重新检查网站。
+- **地理位置/地理IP不起作用** — 默认的Magento Fastly VCL代码段会将国家/地区代码附加到URL。 如果国家/地区代码不起作用，请[上传Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)并重新检查网站。
 
-- **页面未缓存** — 默认情况下，Fastly不缓存标头为`Set-Cookies`的页面。 Adobe Commerce甚至在可缓存的页面上设置Cookie(TTL > 0)。 默认MagentoFastly VCL会删除可缓存页面上的这些Cookie。 如果页面未缓存，请[上传Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)并重新检查站点。
+- **页面未缓存** — 默认情况下，Fastly不缓存标头为`Set-Cookies`的页面。 Adobe Commerce甚至在可缓存的页面上设置Cookie(TTL > 0)。 默认的Magento Fastly VCL会删除可缓存页面上的这些Cookie。 如果页面未缓存，请[上传Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)并重新检查站点。
 
   如果模板中的页面块被标记为不可缓存，也可能会发生此问题。 在这种情况下，问题很可能是由第三方模块或扩展阻止或删除Adobe Commerce标头导致的。 要解决此问题，请参阅[X-Cache仅包含MISS，没有HIT](#x-cache-contains-only-miss-no-hit)。
 
@@ -88,7 +89,7 @@ log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 
   在日志中搜索返回503错误的URL的HTTP 200响应。 如果找到200响应，则表示Adobe Commerce返回页面时没有出现错误。 这表示在超过Fastly服务配置中设置的`first_byte_timeout`值的间隔之后可能发生问题。
 
-当发生503错误时，Fastly在错误和维护页面上返回原因。 如果您为[自定义响应页面](fastly-custom-response.md)添加了代码，则可能无法查看原因。 要查看默认错误页上的原因代码，您可以删除自定义错误页的HTML代码。
+当发生503错误时，Fastly在错误和维护页面上返回原因。 如果您为[自定义响应页面](fastly-custom-response.md)添加了代码，则可能无法查看原因。 要查看默认错误页面上的原因代码，您可以删除自定义错误页面的HTML代码。
 
 **检查Fastly 503错误页**：
 
@@ -153,7 +154,7 @@ Fastly API请求通过Fastly扩展传递，以从源服务器获取响应。 如
 1. 在响应中，验证[标头](#check-cache-hit-and-miss-response-headers)以确保Fastly正常工作。 您应在响应中看到以下唯一标头：
 
    ```http
-   < Fastly-Magento-VCL-Uploaded: yes
+   < Fastly-Magento-VCL-Uploaded: 1.2.222
    < X-Cache: HIT, MISS
    ```
 
@@ -175,7 +176,7 @@ Fastly API请求通过Fastly扩展传递，以从源服务器获取响应。 如
 
 - 包含`X-Magento-Tags`标头
 
-- `Fastly-Module-Enabled`标头的值为`Yes`或项目环境中安装的CDNMagento2模块的Fastly的版本号
+- `Fastly-Module-Enabled`标头的值为`Yes`或在项目环境中安装的CDN Magento 2模块的Fastly的版本号
 
 - [Cache-Control： max-age](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9)大于0
 
@@ -236,13 +237,13 @@ php bin/magento module:status Fastly_Cdn
 
 根据返回的状态，使用以下说明更新Fastly配置。
 
-- `Module does not exist` — 如果该模块不存在，[请在集成分支中安装和配置](https://github.com/fastly/fastly-magento2/blob/master/Documentation/INSTALLATION.md)Magento2的Fastly CDN模块。 安装完成后，启用并配置模块。 查看[设置Fastly](fastly-configuration.md)。
+- `Module does not exist` — 如果该模块不存在，[请在集成分支中安装和配置](https://github.com/fastly/fastly-magento2/blob/master/Documentation/INSTALLATION.md)适用于Magento 2的Fastly CDN模块。 安装完成后，启用并配置模块。 查看[设置Fastly](fastly-configuration.md)。
 
 - `Module is disabled` — 如果Fastly模块被禁用，请更新本地环境中`integration`分支上的环境配置以启用它。 然后，将更改推送到暂存和生产环境。 请参阅[管理扩展](../store/extensions.md#install-an-extension)。
 
   如果您使用[配置管理](../store/store-settings.md#configure-store)，请先检查`app/etc/config.php`配置文件中的Fastly CDN模块状态，然后再将更改推送到生产或暂存环境。
 
-  如果未在`config.php`文件中启用该模块(`Fastly_CDN => 0`)，请删除该文件并运行以下命令以使用最新的配置设置更新`config.php`。
+  如果未在`Fastly_CDN => 0`文件中启用该模块(`config.php`)，请删除该文件并运行以下命令以使用最新的配置设置更新`config.php`。
 
   ```bash
   bin/magento magento-cloud:scd-dump

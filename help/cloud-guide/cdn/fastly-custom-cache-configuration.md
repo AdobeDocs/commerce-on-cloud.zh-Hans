@@ -3,9 +3,9 @@ title: 自定义缓存配置
 description: 了解如何在Fastly服务设置完成后查看和自定义缓存配置设置。
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: 551a00932165dd1c0a876b8151ba14752ceac802
+source-git-commit: a2f5e2f67c7739302a87eaa27df25a62fca1acb7
 workflow-type: tm+mt
-source-wordcount: '1953'
+source-wordcount: '1995'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,11 @@ ht-degree: 0%
 
 在暂存环境和生产环境中设置和测试Fastly服务后，查看和自定义缓存配置设置。 例如，您可以更新设置以允许TLS将HTTP请求重定向到Fastly，更新清除设置以及启用基本身份验证以在开发期间对您的网站进行密码保护。
 
-以下部分提供了配置某些缓存设置的概述和说明。 在[Fastly CDN Module for Magento 2](https://github.com/fastly/fastly-magento2/tree/master/Documentation)文档中查找有关可用配置选项的其他信息。
+以下部分提供了配置某些缓存设置的概述和说明。
+
+>[!IMPORTANT]
+>
+>配置Fastly缓存的可用管理选项取决于安装的Magento 2的Fastly CDN模块版本。 Adobe建议您[将暂存和生产环境中的Fastly模块](fastly-configuration.md#upgrade)升级为最新版本。 有关最新信息，请参阅[Magento2模块的Fastly CDN发行说明](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)。
 
 ## 强制TLS
 
@@ -187,7 +191,7 @@ Fastly支持自定义版本的Varnish Configuration Language (VCL)以自定义Fa
 
 - 对于入门项目，请转到[!UICONTROL Domains]中[!DNL Cloud Console]选项卡下的项目URL以添加项目URL。
 
-- 对于Pro项目，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以将该域添加到云项目配置。 支持团队还更新Adobe Commerce Fastly帐户配置以添加域。
+- 对于Pro项目，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以将该域添加到云项目配置。 支持团队还更新Adobe Commerce Fastly帐户配置以添加域。
 
 **要从管理员管理Fastly域配置**：
 
