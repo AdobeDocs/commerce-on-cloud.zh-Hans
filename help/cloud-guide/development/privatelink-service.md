@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->PrivateLink最适合用于保护非HTTP集成（如数据库或文件传输）的连接。 如果您计划将应用程序与Adobe Commerce API集成，请参阅如何在[适用于Adobe Developer App Builder的Adobe API Mesh ](https://developer.adobe.com/graphql-mesh-gateway/gateway/create-mesh/)中创建&#x200B;_API Mesh_。
+>PrivateLink最适合用于保护非HTTP集成（如数据库或文件传输）的连接。 如果您计划将应用程序与Adobe Commerce API集成，请参阅如何在[适用于Adobe Developer App Builder的Adobe API Mesh &#x200B;](https://developer.adobe.com/graphql-mesh-gateway/gateway/create-mesh/)中创建&#x200B;_API Mesh_。
 
 ## 功能和支持
 
