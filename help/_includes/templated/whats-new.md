@@ -23,7 +23,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>阐明了<code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI工具<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">安装</a>支持的操作系统。</p>
+      <td><p>阐明了<code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI工具<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">安装</a>支持的操作系统。</p>
 </td>
       <td>
         反馈
@@ -45,7 +45,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>为Cloud修补程序包v1.1.11添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">发行说明</a>。</p>
+      <td><p>为Cloud修补程序包v1.1.11添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">发行说明</a>。</p>
 </td>
       <td>
         重大更新
