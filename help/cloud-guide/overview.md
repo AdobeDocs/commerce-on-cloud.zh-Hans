@@ -2,7 +2,7 @@
 title: 云基础架构上的Commerce
 description: 了解如何在云基础架构上构建、部署与管理 Commerce。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 988b07b827c32c94a8cb2d30abb7e73fec71c4a0
+source-git-commit: b29ca0d786bf8cd15e5a3ba1ee8218f3bed2ae2f
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 3%
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->有关安全性的更多信息，请参阅[安全性启动项核对清单](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
+>有关安全性的更多信息，请参阅[安全性启动项核对清单](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
 
 查看[技术栈栈](architecture/tech-stack.md)的详细信息，或了解有关Commerce [的](architecture/cloud-architecture.md)云架构中的特定功能和支持的产品的更多信息。
 
@@ -60,8 +60,8 @@ Commerce on cloud infrastructure指南假定您对Adobe Commerce应用程序有�
 
 - [Adobe Commerce开发人员文档](https://developer.adobe.com/commerce/docs/) (Adobe Developer站点) — 开发、自定义、集成、扩展和使用高级功能
 
-- [Adobe Commerce文档](https://experienceleague.adobe.com/docs/commerce.html?lang=zh-Hans) (Adobe Experience League) — 规划、实施、运营、升级和维护您的[!DNL Commerce]项目
+- [Adobe Commerce文档](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League) — 规划、实施、运营、升级和维护您的[!DNL Commerce]项目
 
 {{$include /help/_includes/templated/whats-new.md}}
 
-<!-- Last updated from includes: 2025-09-19 20:32:03 -->
+<!-- Last updated from includes: 2025-09-30 14:59:39 -->
