@@ -4,9 +4,9 @@ description: 请参阅ECE-Tools软件包的最新改进列表。
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
+source-git-commit: e39b348b02b4edfbe091420c54a20b320387a4b6
 workflow-type: tm+mt
-source-wordcount: '3269'
+source-wordcount: '3286'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,15 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.7 {#latest}
+## v2002.2.8 {#latest}
+
+发行日期： 2025年10月8日
+
+- ![新图标](../../assets/new.svg) **ActiveMQ** — 已添加对ActiveMQ的支持。<!-- MCLOUD-13770 -->
+- ![新图标](../../assets/new.svg) **ActiveMQ**&#x200B;已添加功能测试。<!-- MCLOUD-13813 -->
+
+
+## v2002.2.7
 
 发行日期： 2025年8月7日
 

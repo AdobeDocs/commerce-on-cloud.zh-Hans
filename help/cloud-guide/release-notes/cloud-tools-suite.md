@@ -3,7 +3,7 @@ title: Cloud Tools Suite发行说明
 description: 了解适用于Adobe Commerce的Cloud Tools套件的最新改进。
 feature: Cloud, Release Notes
 exl-id: ee2bc2e9-bdf4-4f7b-9724-8f4dd1e61378
-source-git-commit: d4eee1f85375164dc9d73dcc07596f473652ba08
+source-git-commit: c1f5e663716d3c9390e8ffb8bb2da6c7c67996b0
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 1%
@@ -16,9 +16,9 @@ ht-degree: 1%
 
 | 发行说明 | 版本 | 描述 | Source |
 | ----------------- |----------| ---------------------------------------- | --------------------------- |
-| [`ece-tools`包](ece-tools-package.md) | 2002.2.7 | 一组用于管理和部署云项目的脚本和工具 | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.7) |
+| [`ece-tools`包](ece-tools-package.md) | 2002.2.8 | 一组用于管理和部署云项目的脚本和工具 | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.8) |
 | Commerce的[云修补程序](cloud-patches.md) | 1.1.11 | 一组修补程序，用于改进所有Adobe Commerce版本与Cloud环境的集成。 此软件包包含Adobe Commerce修补程序以及使用`ece-tools`进行部署时应用的可用修补程序 | [`magento/magento-cloud-patches`](https://github.com/magento/magento-cloud-patches/tree/1.1.11) |
-| 适用于Commerce的[Cloud Docker](cloud-docker.md) | 1.4.4 | Docker映像将Adobe Commerce部署到本地云环境的功能和配置文件 | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.4) |
+| 适用于Commerce的[Cloud Docker](cloud-docker.md) | 1.4.5 | Docker映像将Adobe Commerce部署到本地云环境的功能和配置文件 | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.5) |
 | Commerce的[云组件](cloud-components.md) | 1.1.3 | 为部署在云基础架构上的站点扩展了Adobe Commerce核心功能 | [`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components/tree/1.1.3) |
 
 当您更新到ECE-Tools 2002.1.0或更高版本时，会自动更新到其他包的最新版本，这些包是`ece-tools`包的依赖项。 有关依赖项列表，请参阅[云中继](../development/overview.md#cloud-metapackage)。
