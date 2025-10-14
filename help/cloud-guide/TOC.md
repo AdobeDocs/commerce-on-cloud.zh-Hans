@@ -3,9 +3,9 @@ user-guide-title: 云上 Commerce 指南
 user-guide-description: 了解如何在云基础架构上管理 Adobe Commerce 应用程序。
 product: magento
 feature: Cloud
-source-git-commit: 3347ad0a5fe202cbd80d08b7289c20a1c98ed1e3
+source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '360'
 ht-degree: 8%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 8%
    + [专业工作流程](architecture/pro-develop-deploy-workflow.md)
    + [可扩展的体系结构](architecture/scaled-architecture.md)
    + [自动缩放](architecture/autoscaling.md)
-+ [开始](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=zh-Hans)
++ [开始](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + 发行说明 {#release-notes}
    + [Cloud tools suite](release-notes/cloud-tools-suite.md)
    + [ECE-Tools包](release-notes/ece-tools-package.md)
@@ -131,6 +131,7 @@ ht-degree: 8%
       + [服务器端包括](routes/server-side-includes.md)
    + 服务 {#service}
       + [配置服务](services/services-yaml.md)
+      + [ActiveMQ](services/activemq.md)
       + [Elasticsearch](services/elasticsearch.md)
       + [MySQL](services/mysql.md)
       + [OpenSearch](services/opensearch.md)

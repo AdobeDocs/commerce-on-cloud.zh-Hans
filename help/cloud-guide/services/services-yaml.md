@@ -2,9 +2,10 @@
 title: 配置服务
 description: 了解如何在云基础架构上配置Adobe Commerce使用的服务。
 feature: Cloud, Configuration, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
+source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 0%
 >`.magento/services.yaml`文件是在项目的`.magento`目录中本地管理的。 在构建过程中仅访问配置以在集成环境中定义所需的服务版本，并在部署完成后删除，这样在服务器上就找不到它们。
 
 
-部署脚本使用`.magento`目录中的配置文件为环境配置配置的服务。 如果某个服务包含在`.magento.app.yaml`文件的[`relationships`](../application/properties.md#relationships)属性中，则该服务对您的应用程序可用。 `services.yaml`文件包含&#x200B;_类型_&#x200B;和&#x200B;_磁盘_&#x200B;值。 服务类型定义服务&#x200B;_name_&#x200B;和&#x200B;_version_。
+部署脚本使用`.magento`目录中的配置文件为环境配置配置的服务。 如果某个服务包含在[`relationships`](../application/properties.md#relationships)文件的`.magento.app.yaml`属性中，则该服务对您的应用程序可用。 `services.yaml`文件包含&#x200B;_类型_&#x200B;和&#x200B;_磁盘_&#x200B;值。 服务类型定义服务&#x200B;_name_&#x200B;和&#x200B;_version_。
 
 更改服务配置会导致部署为环境提供更新的服务，这会对以下环境造成影响：
 
@@ -31,13 +32,14 @@ ht-degree: 0%
 
 云基础架构支持和部署以下服务：
 
+- [ActiveMQ](activemq.md)
 - [MySQL](mysql.md)
 - [Redis](redis.md)
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
 
-您可以在当前[默认`services.yaml`文件](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)中查看默认版本和磁盘值。 以下示例显示了`services.yaml`配置文件中定义的`mysql`、`redis`、`opensearch`或`elasticsearch`以及`rabbitmq`服务：
+您可以在当前[默认`services.yaml`文件](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)中查看默认版本和磁盘值。 以下示例显示了`mysql`配置文件中定义的`redis`、`opensearch`、`elasticsearch`或`rabbitmq`、`activemq-artemis`和`services.yaml`服务：
 
 ```yaml
 mysql:
@@ -53,6 +55,10 @@ opensearch:
 
 rabbitmq:
     type: rabbitmq:3.9
+    disk: 1024
+
+activemq-artemis:
+    type: activemq-artemis:2.42
     disk: 1024
 ```
 
@@ -72,7 +78,7 @@ rabbitmq:
 
 `service-id`值标识项目中的服务。 您只能使用小写字母数字字符：`a`到`z`和`0`到`9`，如`redis`。
 
-此&#x200B;_service-id_&#x200B;值在`.magento.app.yaml`配置文件的[`relationships`](../application/properties.md#relationships)属性中使用：
+此&#x200B;_service-id_&#x200B;值在[`relationships`](../application/properties.md#relationships)配置文件的`.magento.app.yaml`属性中使用：
 
 ```yaml
 relationships:
@@ -117,7 +123,7 @@ mysql:
 
 ## 服务关系
 
-在云基础架构项目上的Adobe Commerce中，在`.magento.app.yaml`文件中配置的服务[关系](../application/properties.md#relationships)决定了应用程序可用的服务。
+在云基础架构项目上的Adobe Commerce中，在[文件中配置的服务](../application/properties.md#relationships)关系`.magento.app.yaml`决定了应用程序可用的服务。
 
 您可以从[`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md)环境变量检索所有服务关系的配置数据。 配置数据包括服务名称、类型和版本，以及任何所需的连接详细信息，如端口号和登录凭据。
 
@@ -171,7 +177,7 @@ mysql:
 
 ## 服务版本
 
-云基础架构上Adobe Commerce的服务版本和兼容性支持取决于在云基础架构上部署和测试的版本，有时与Adobe Commerce内部部署支持的版本不同。 有关Adobe已使用特定Adobe Commerce和Magento Open Source版本测试的第三方软件依赖项的列表，请参阅&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)。
+云基础架构上Adobe Commerce的服务版本和兼容性支持取决于在云基础架构上部署和测试的版本，有时与Adobe Commerce内部部署支持的版本不同。 请参阅[安装](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)指南中的&#x200B;_系统要求_，获取Adobe已使用特定Adobe Commerce和Magento Open Source版本测试的第三方软件依赖项列表。
 
 ### 软件EOL检查
 
@@ -198,7 +204,7 @@ mysql:
 
 您可以通过更新`services.yaml`文件中的服务配置来升级已安装的服务版本。
 
-1. 更改`.magento/services.yaml`文件中服务的[`type`](#type)值：
+1. 更改[`type`](#type)文件中服务的`.magento/services.yaml`值：
 
    > 原始服务定义
 
