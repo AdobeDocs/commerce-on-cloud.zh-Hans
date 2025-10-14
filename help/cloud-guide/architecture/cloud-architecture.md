@@ -20,7 +20,7 @@ ht-degree: 0%
 
 |          | 起始者 | Pro |
 | -------- | --------------------| ------------------ |
-| 核心功能 | <ul><li>[所有Adobe Commerce功能](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html)</li><li>PayPal载入工具</li><li>[Commerce报表](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[所有Adobe Commerce功能](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html)</li><li>PayPal载入工具</li><li>[Commerce报表](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[B2B模块](https://business.adobe.com/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
+| 核心功能 | <ul><li>[所有Adobe Commerce功能](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=zh-Hans)</li><li>PayPal载入工具</li><li>[Commerce报表](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[所有Adobe Commerce功能](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=zh-Hans)</li><li>PayPal载入工具</li><li>[Commerce报表](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[B2B模块](https://business.adobe.com/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
 | 基础架构和部署 | <ul><li>具有无限用户的持续云集成工具</li><li>Fastly Content Delivery Network (CDN)、图像优化(IO)，以及宽带宽许可带来的安全性。 Web应用程序防火墙(WAF)服务仅在生产环境中可用。</li><li>在3个分支上执行[New Relic](../monitor/new-relic-service.md) APM（性能监控）：您选择的`master`和2<br>Platform as a Service (PaaS)生产、暂存和开发环境（共4个活动环境）已为Adobe Commerce优化</li><li>出口过滤（出站防火墙）</li></ul> | <ul><li>具有无限用户的持续云集成工具</li><li>Fastly Content Delivery Network (CDN)、图像优化(IO)，以及宽带宽许可带来的安全性。 Web应用程序防火墙(WAF)服务仅在生产环境中可用。</li><li>生产环境上的[New Relic](../monitor/new-relic-service.md)基础架构+暂存和生产环境上的APM（性能监控）。 适用于Adobe Commerce策略的[托管警报策略](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)实施监视最佳实践，以主动通知您有关影响站点性能的应用程序和基础架构问题。</li><li>基于Platform as a Service (PaaS)的[集成开发](pro-architecture.md#integration-environment)环境（总共2个活动环境）已为Adobe Commerce优化</li><li>基础架构即服务(IaaS) — 用于暂存和生产环境的专用虚拟基础架构</li></ul> |
 | 高可用性基础架构 | | [高可用性体系结构](pro-architecture.md#redundant-hardware)，在基础基础架构即服务(IaaS)中设置三台服务器，以提供企业级可靠性和可用性 |
 | 专用硬件 | | 底层基础架构即服务(IaaS)中的独立专用硬件，可提供更高级别的可靠性和可用性 |
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有关推荐的版本，请参阅[安装指南](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)中的&#x200B;_系统要求_。
+>有关推荐的版本，请参阅[安装指南](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)中的&#x200B;_系统要求_。
 
 Fastly CDN模块用于暂存和生产环境中的CDN和缓存服务。 请参阅[配置Fastly服务](../cdn/fastly.md)。
 

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 设置[!DNL RabbitMQ]服务
 
-[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html)是Adobe Commerce中的系统，它允许[模块](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module)将消息发布到队列。 它还定义了异步接收消息的消费者。
+[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=zh-Hans)是Adobe Commerce中的系统，它允许[模块](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/glossary#module)将消息发布到队列。 它还定义了异步接收消息的消费者。
 
 MQF使用[RabbitMQ](https://www.rabbitmq.com/)作为消息代理，该消息代理提供了一个用于发送和接收消息的可伸缩平台。 它还包括用于存储未传递消息的机制。 [!DNL RabbitMQ]基于高级消息队列协议(AMQP) 0.9.1规范。
 
