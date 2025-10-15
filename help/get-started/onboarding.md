@@ -52,6 +52,6 @@ Adobe在云基础架构订阅上激活Commerce后，初始项目和代码访问�
 
 <!-- link definitions -->
 
-[销售]: https://business.adobe.com/products/magento/get-demo.html
+[销售]: https://business.adobe.com/cn/products/magento/get-demo.html
 [共享访问]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#shared-access
 [状态页面]: https://status.adobe.com/products/503473

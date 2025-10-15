@@ -26,7 +26,7 @@ WAF服务提供以下优势：
 
 >[!TIP]
 >
->有关在云基础架构存储上维护Adobe Commerce的PCI合规性的其他信息，请参阅[PCI合规性](https://business.adobe.com/products/magento/pci-compliance.html)。
+>有关在云基础架构存储上维护Adobe Commerce的PCI合规性的其他信息，请参阅[PCI合规性](https://business.adobe.com/cn/products/magento/pci-compliance.html)。
 
 ## 启用WAF
 
