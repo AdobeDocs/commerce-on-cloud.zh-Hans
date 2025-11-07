@@ -3,9 +3,9 @@ title: 配置服务
 description: 了解如何在云基础架构上配置Adobe Commerce使用的服务。
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 322f7af2c79dd4eeeabafa2ba7e5a32cbd8b1925
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >`.magento/services.yaml`文件是在项目的`.magento`目录中本地管理的。 在构建过程中仅访问配置以在集成环境中定义所需的服务版本，并在部署完成后删除，这样在服务器上就找不到它们。
-
 
 部署脚本使用`.magento`目录中的配置文件为环境配置配置的服务。 如果某个服务包含在[`relationships`](../application/properties.md#relationships)文件的`.magento.app.yaml`属性中，则该服务对您的应用程序可用。 `services.yaml`文件包含&#x200B;_类型_&#x200B;和&#x200B;_磁盘_&#x200B;值。 服务类型定义服务&#x200B;_name_&#x200B;和&#x200B;_version_。
 
@@ -38,6 +37,10 @@ ht-degree: 0%
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
+
+>[!NOTE]
+>
+>升级到新版RabbitMQ后，触发完全部署以确保在RabbitMQ中重新创建自定义消息队列。
 
 您可以在当前[默认`services.yaml`文件](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)中查看默认版本和磁盘值。 以下示例显示了`mysql`配置文件中定义的`redis`、`opensearch`、`elasticsearch`或`rabbitmq`、`activemq-artemis`和`services.yaml`服务：
 
@@ -177,7 +180,7 @@ mysql:
 
 ## 服务版本
 
-云基础架构上Adobe Commerce的服务版本和兼容性支持取决于在云基础架构上部署和测试的版本，有时与Adobe Commerce内部部署支持的版本不同。 请参阅[安装](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)指南中的&#x200B;_系统要求_，获取Adobe已使用特定Adobe Commerce和Magento Open Source版本测试的第三方软件依赖项列表。
+云基础架构上Adobe Commerce的服务版本和兼容性支持取决于在云基础架构上部署和测试的版本，有时与Adobe Commerce内部部署支持的版本不同。 请参阅[安装](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)指南中的&#x200B;_系统要求_，获取Adobe已使用特定Adobe Commerce和Magento Open Source版本测试的第三方软件依赖项列表。
 
 ### 软件EOL检查
 
