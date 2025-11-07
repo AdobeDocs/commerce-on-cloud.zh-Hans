@@ -5,9 +5,10 @@ role: Admin
 feature: Cloud, Roles/Permissions
 last-substantial-update: 2023-06-27T00:00:00Z
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 953593de-f675-49fd-988f-f11306f67fbd
+source-git-commit: c972d9f2029499cf53edc334c1d9a40b155a991d
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1463'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ ht-degree: 0%
 
 **先决条件：**
 
-- Adobe ID的注册用户。 用户必须[注册Adobe帐户](https://account.adobe.com)，然后[初始化其云帐户](https://console.adobecommerce.com)，然后才能将其添加到云项目。
+- Adobe ID的注册用户。 用户必须[注册Adobe帐户](https://account.adobe.com)，然后通过访问[https://console.adobecommerce.com](https://console.adobecommerce.com)初始化其[Cloud帐户](https://console.adobecommerce.com)，然后才能将其添加到Cloud项目。
 - 分配了&#x200B;**管理员**&#x200B;角色的用户无法使用`magento-cloud` CLI管理用户。 只有被授予&#x200B;**帐户所有者**&#x200B;角色的用户才能管理用户。
 
 >[!ENDSHADEBOX]
@@ -95,7 +96,7 @@ ht-degree: 0%
    Adding the user to the project
    ```
 
-   添加用户后，Adobe会向指定地址发送一封电子邮件，说明如何访问云基础架构上的Adobe Commerce。
+   添加用户后，Adobe会向指定地址发送一封电子邮件，说明如何访问Adobe Commerce on cloud infrastructure项目。
 
 ### 查看用户的项目角色
 
@@ -112,7 +113,7 @@ Current role(s) of User (alice@example.com) on Production (project_id):
 
 ### 将用户添加到多个环境
 
-要在`Production`环境中将用户添加为`viewer`，并在`Integration`环境中将用户添加为`contributor`，请执行以下操作：
+要在`viewer`环境中将用户添加为`Production`，并在`contributor`环境中将用户添加为`Integration`，请执行以下操作：
 
 ```bash
 magento-cloud user:add alice@example.com -r production:v -r integration:c
@@ -120,7 +121,7 @@ magento-cloud user:add alice@example.com -r production:v -r integration:c
 
 ### 更新用户环境权限
 
-要在`Production`环境中将用户环境权限更新为`admin`，请执行以下操作：
+要在`admin`环境中将用户环境权限更新为`Production`，请执行以下操作：
 
 ```bash
 magento-cloud user:update alice@example.com -r production:a
@@ -146,7 +147,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. 在&#x200B;_访问_&#x200B;视图中，单击&#x200B;**[!UICONTROL Add]**。
 
-1. 完成&#x200B;_[!UICONTROL Add User]_&#x200B;表单：
+1. 完成&#x200B;_[!UICONTROL Add User]_表单：
 
    - 输入用户电子邮件地址。
 
@@ -166,11 +167,11 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. 添加用户后，重新部署所有环境以应用更改。 添加用户不会自动触发部署。 重新部署是确保用户可以使用SSH访问环境或执行管理员任务的重要步骤。
 
-添加用户后，Adobe会向指定地址发送一封电子邮件，说明如何访问云基础架构上的Adobe Commerce。
+添加用户后，Adobe会向指定地址发送一封电子邮件，说明如何访问Adobe Commerce on cloud infrastructure项目。
 
 ## 用户身份验证要求
 
-为了提高安全性，Adobe提供了项目级别的多因素身份验证(MFA)实施，以要求在云基础架构项目源代码和环境上对Adobe Commerce的SSH访问需要双重身份验证(TFA)。 请参阅[为SSH启用MFA](multi-factor-authentication.md)。
+为了提高安全性，Adobe提供了项目级别的多因素身份验证(MFA)实施，要求对云基础架构项目源代码和环境上的Adobe Commerce的SSH访问进行双重身份验证(TFA)。 请参阅[为SSH启用MFA](multi-factor-authentication.md)。
 
 在云基础架构项目上的Adobe Commerce上启用MFA强制执行后，所有对该项目中的环境具有SSH访问权限的用户都必须在其云基础架构帐户上的Adobe Commerce上启用TFA。 对于自动化进程，您可以创建计算机用户和API令牌，以通过命令行进行身份验证。
 
@@ -193,7 +194,7 @@ magento-cloud user:update alice@example.com -r production:a
 - [FreeOTP (Android)](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp)
 - [GAuth身份验证器（Firefox OS、桌面、其他）](https://github.com/gbraad-apps/gauth)
 
-有关安装验证器应用程序和启用TFA的说明，请参阅[!DNL Cloud Console]中的&#x200B;_帐户设置_&#x200B;页。
+有关安装验证器应用程序和启用TFA的说明，请参阅&#x200B;_中的_&#x200B;帐户设置[!DNL Cloud Console]页。
 
 **要在您的用户帐户上启用TFA**：
 
@@ -231,7 +232,7 @@ magento-cloud user:update alice@example.com -r production:a
 
      >[!WARNING]
      >
-     >如果您无法访问具有TFA的帐户，并且没有恢复代码列表，则必须联系项目管理员，或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以重置TFA应用程序。
+     >如果您无法访问具有TFA的帐户，并且没有恢复代码列表，则必须联系项目管理员，或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以重置TFA应用程序。
 
 1. 完成TFA设置后，单击&#x200B;**保存**&#x200B;以更新您的帐户。
 
@@ -266,7 +267,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 >[!IMPORTANT]
 >
->您的帐户的Protect API令牌值。 不要在代码示例、屏幕捕获或不安全的客户端 — 服务器通信中公开值。 此外，不要公开存储在公共存储库中的源代码中的值。
+>保护帐户的API令牌值。 不要在代码示例、屏幕捕获或不安全的客户端 — 服务器通信中公开值。 此外，不要公开存储在公共存储库中的源代码中的值。
 
 **要创建API令牌**：
 
