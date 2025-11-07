@@ -232,7 +232,7 @@ magento-cloud user:update alice@example.com -r production:a
 
      >[!WARNING]
      >
-     >如果您无法访问具有TFA的帐户，并且没有恢复代码列表，则必须联系项目管理员，或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以重置TFA应用程序。
+     >如果您无法访问具有TFA的帐户，并且没有恢复代码列表，则必须联系项目管理员，或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以重置TFA应用程序。
 
 1. 完成TFA设置后，单击&#x200B;**保存**&#x200B;以更新您的帐户。
 
