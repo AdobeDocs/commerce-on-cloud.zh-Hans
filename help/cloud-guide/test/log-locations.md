@@ -3,9 +3,9 @@ title: 查看和管理日志
 description: 了解云基础架构中可用的日志文件类型以及在何处查找它们。
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
-source-git-commit: afdc6f2b72d53199634faff7f30fd87ff3b31f3f
+source-git-commit: 445c5162f9d3436d9e5fe3df41af47189e344cfd
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1313'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,37 @@ ht-degree: 0%
 `<project-ID>`的值取决于项目以及环境是“暂存”还是“生产”。 例如，项目ID为`yw1unoukjcawe`时，暂存环境用户为`yw1unoukjcawe_stg`，生产环境用户为`yw1unoukjcawe`。
 
 使用该示例，部署日志为： `/var/log/platform/yw1unoukjcawe_stg/deploy.log`
+
+### 查找特定错误日志记录
+
+当遇到特定日志记录编号（如`475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9`）的错误时，可以使用以下方法通过查询Commerce应用程序服务器远程环境日志来查找记录：
+
+>[!NOTE]
+>
+>有关使用Secure Shell (SSH)访问Commerce应用程序的远程环境日志的说明，请参阅[到远程环境的安全连接](../development/secure-connections.md)。
+
+#### 方法1：使用grep搜索
+
+```bash
+# Search for the specific error record in all log files
+magento-cloud ssh -e <environment-ID> "grep -r '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' /var/log/"
+
+# Search in specific log files
+magento-cloud ssh -e <environment-ID> "grep '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' /var/log/exception.log"
+```
+
+#### 方法2：在归档日志中搜索
+
+如果以前发生错误，请检查归档日志文件：
+
+```bash
+# Search in compressed log files
+magento-cloud ssh -e <environment-ID> "find /var/log -name '*.gz' -exec zgrep '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' {} \;"
+```
+
+#### 方法3：使用New Relic (Pro environments)
+
+对于专业生产和暂存环境，请使用New Relic日志搜索特定的错误记录。 有关详细信息，请参阅[New Relic日志管理](../monitor/log-management.md)。
 
 ### 查看远程环境日志
 
@@ -78,7 +109,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >对于Pro Staging和Pro Production环境，为具有固定文件名的日志文件启用自动日志旋转、压缩和删除。 每种日志文件类型都有一个旋转模式和生命周期。
 >有关环境的日志轮换和压缩日志的生命周期的完整详细信息，请参见： `/etc/logrotate.conf`和`/etc/logrotate.d/<various>`。
->对于Pro Staging和Pro Production环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以请求更改日志轮换配置。
+>对于Pro Staging和Pro Production环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以请求更改日志轮换配置。
 
 >[!TIP]
 >
@@ -143,7 +174,7 @@ magento-cloud log -e <environment-ID> deploy
 ```
 Reading log file projectID-branchname-ID--mymagento@ssh.zone.magento.cloud:/var/log/'deploy.log'
 
-[2023-04-24 18:58:03.080678] Launching command 'b'php ./vendor/bin/ece-tools run scenario/deploy.xml\n''.
+[2023-04-24 18:58:03.080678] Launching command 'b'php ./vendor/bin/ece-tools run scenario/deploy.xml\\n''.
 
 [2023-04-24T18:58:04.129888+00:00] INFO: Starting scenario(s): scenario/deploy.xml (magento/ece-tools version: 2002.1.14, magento/magento2-base version: 2.4.6)
 [2023-04-24T18:58:04.364714+00:00] NOTICE: Starting pre-deploy.
@@ -189,7 +220,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-大多数错误消息都包含说明和建议的操作。 使用ECE-Tools[的](../dev-tools/error-reference.md)错误消息引用查找错误代码以获得进一步的指导。 有关进一步指导，请使用[Adobe Commerce部署疑难解答程序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=zh-Hans)。
+大多数错误消息都包含说明和建议的操作。 使用ECE-Tools[的](../dev-tools/error-reference.md)错误消息引用查找错误代码以获得进一步的指导。 有关进一步指导，请使用[Adobe Commerce部署疑难解答程序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)。
 
 ## 应用程序日志
 
@@ -227,7 +258,7 @@ type: warning
 
 存档的日志文件始终存储在压缩前原始文件所在的目录中。
 
-您可以[提交支持票证](https://experienceleague.adobe.com/home?lang=zh-Hans&support-tab=home#support)以请求对您的日志保留期或logrotate配置进行更改。 您可以将保留期增加到最多365天，减少保留期以节省存储配额，或向logrotate配置添加其他日志路径。 这些更改可用于Pro暂存和生产群集。
+您可以[提交支持票证](https://experienceleague.adobe.com/home?support-tab=home#support)以请求对您的日志保留期或logrotate配置进行更改。 您可以将保留期增加到最多365天，减少保留期以节省存储配额，或向logrotate配置添加其他日志路径。 这些更改可用于Pro暂存和生产群集。
 
 例如，如果您创建自定义路径以在`var/log/mymodule`目录中存储日志，则可以请求此路径的日志轮换。 但是，当前的基础架构需要一致的文件名才能使Adobe正确配置日志轮换。 Adobe建议保持日志名称一致以避免配置问题。
 
