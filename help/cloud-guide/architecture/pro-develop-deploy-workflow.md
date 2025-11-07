@@ -3,9 +3,9 @@ title: Pro项目工作流
 description: 了解如何使用专业开发和部署工作流。
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-source-git-commit: 8aacac9ae721bc98cbe29e67ddf23d784e478e55
+source-git-commit: edff4efe0af54542321e887defc27dc96e6ae7f6
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,9 @@ file_put_contents(...): Failed to open stream: Read-only file system
 The disk hosting /app/<cluster_ID> is full
 ```
 
-有关详细信息，请参阅[Pro体系结构](pro-architecture.md)以了解Pro环境的概述，请参阅[[!DNL Cloud Console]](../project/overview.md#cloud-console)以了解Pro环境列表在项目视图中的概述。
+>[!NOTE]
+>
+>此限制保护应用程序的完整性和安全性。 无法更改这些只读文件系统中的文件夹权限 — 即使支持人员也无法修改它们。 任何更改都必须从本地开发环境中的分支中进行，并推送到应用程序环境中。 有关详细信息，请参阅[Pro体系结构](pro-architecture.md)以了解Pro环境的概述，请参阅[[!DNL Cloud Console]](../project/overview.md#cloud-console)以了解Pro环境列表在项目视图中的概述。
 
 ## 开发工作流
 
