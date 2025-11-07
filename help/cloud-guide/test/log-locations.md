@@ -109,7 +109,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >对于Pro Staging和Pro Production环境，为具有固定文件名的日志文件启用自动日志旋转、压缩和删除。 每种日志文件类型都有一个旋转模式和生命周期。
 >有关环境的日志轮换和压缩日志的生命周期的完整详细信息，请参见： `/etc/logrotate.conf`和`/etc/logrotate.d/<various>`。
->对于Pro Staging和Pro Production环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以请求更改日志轮换配置。
+>对于Pro Staging和Pro Production环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以请求更改日志轮换配置。
 
 >[!TIP]
 >
@@ -220,7 +220,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-大多数错误消息都包含说明和建议的操作。 使用ECE-Tools[的](../dev-tools/error-reference.md)错误消息引用查找错误代码以获得进一步的指导。 有关进一步指导，请使用[Adobe Commerce部署疑难解答程序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)。
+大多数错误消息都包含说明和建议的操作。 使用ECE-Tools[的](../dev-tools/error-reference.md)错误消息引用查找错误代码以获得进一步的指导。 有关进一步指导，请使用[Adobe Commerce部署疑难解答程序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=zh-Hans)。
 
 ## 应用程序日志
 
@@ -258,7 +258,7 @@ type: warning
 
 存档的日志文件始终存储在压缩前原始文件所在的目录中。
 
-您可以[提交支持票证](https://experienceleague.adobe.com/home?support-tab=home#support)以请求对您的日志保留期或logrotate配置进行更改。 您可以将保留期增加到最多365天，减少保留期以节省存储配额，或向logrotate配置添加其他日志路径。 这些更改可用于Pro暂存和生产群集。
+您可以[提交支持票证](https://experienceleague.adobe.com/home?lang=zh-Hans&support-tab=home#support)以请求对您的日志保留期或logrotate配置进行更改。 您可以将保留期增加到最多365天，减少保留期以节省存储配额，或向logrotate配置添加其他日志路径。 这些更改可用于Pro暂存和生产群集。
 
 例如，如果您创建自定义路径以在`var/log/mymodule`目录中存储日志，则可以请求此路径的日志轮换。 但是，当前的基础架构需要一致的文件名才能使Adobe正确配置日志轮换。 Adobe建议保持日志名称一致以避免配置问题。
 
