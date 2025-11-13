@@ -403,7 +403,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **基础架构更新**—
 
-   - ![新图标](../../assets/new.svg) **为Commerce的Cloud Docker添加了单独的包** — 将Docker包与`ece-tools`包分离，以保持代码质量并提供独立的发行版。 从`ece-tools`magento-cloud-docker[ GitHub存储库中管理与](https://github.com/magento/magento-cloud-docker)相关的更新和修复。<!--MAGECLOUD-2927-->
+   - ![新图标](../../assets/new.svg) **为Commerce的Cloud Docker添加了单独的包** — 将Docker包与`ece-tools`包分离，以保持代码质量并提供独立的发行版。 从`ece-tools`magento-cloud-docker[&#x200B; GitHub存储库中管理与](https://github.com/magento/magento-cloud-docker)相关的更新和修复。<!--MAGECLOUD-2927-->
 
    - ![新图标](../../assets/new.svg) **更新了修补功能** — 已将修补功能从ECE-Tools包移动到单独的[magento-cloud-patches](https://github.com/magento/magento-cloud-patches)包。 在部署期间，`ece-tools`使用新包来应用修补程序。 请参阅[Cloud修补程序发行说明](cloud-patches.md).<!--MAGECLOUD-4567-->
 
@@ -417,7 +417,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在更新到ECE-Tools版本2002.1.0之前，请向后查看[   不兼容的更改](backward-incompatible-changes.md)，以了解可能需要您   在云基础架构项目配置或流程上更新Adobe Commerce。
+>在更新到ECE-Tools版本2002.1.0之前，请向后查看[&#x200B;   不兼容的更改](backward-incompatible-changes.md)，以了解可能需要您   在云基础架构项目配置或流程上更新Adobe Commerce。
 
 - ![新图标](../../assets/new.svg) **服务更新**—
 
