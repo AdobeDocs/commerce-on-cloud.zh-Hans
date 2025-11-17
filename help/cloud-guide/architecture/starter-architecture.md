@@ -2,9 +2,10 @@
 title: 入门级架构
 description: 了解Starter架构支持的环境。
 feature: Cloud, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 2f16cc60-b5f7-4331-b80e-43042a3f9b8f
+source-git-commit: 2236d0b853e2f2b8d1bafcbefaa7c23ebd5d26b3
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,9 @@ ht-degree: 0%
 
 所有环境都位于PaaS (Platform as a service)容器中。 这些容器部署在服务器网格上的高度受限的容器中。 这些环境是只读的，可接受从本地工作区推送的分支部署的代码更改。 每个环境都提供一个数据库和Web服务器。
 
-您可以使用喜欢的任何开发和分支方法。 获得对项目的初始访问权限后，请从`master`环境创建`staging`环境。 然后，通过从`staging`分支来创建`integration`环境。
+>[!NOTE]
+>
+>无法更改任何入门环境中只读文件夹的权限。 此限制保护应用程序的完整性和安全性。 无法更改这些只读文件系统中的文件夹权限 — 即使支持人员也无法修改它们。 任何更改都必须从本地开发环境中的分支中进行，并推送到应用程序环境中。 您可以使用喜欢的任何开发和分支方法。 获得对项目的初始访问权限后，请从`staging`环境创建`master`环境。 然后，通过从`integration`分支来创建`staging`环境。
 
 ## 入门环境体系结构
 
@@ -29,11 +32,11 @@ ht-degree: 0%
 
 由于`production`环境是只读的，请使用`integration`环境进行代码更改，跨体系结构从`integration`部署到`staging`，最后部署到`production`环境。 查看[部署您的商店](../deploy/staging-production.md)和[网站启动项](../launch/overview.md)。
 
-Adobe建议先在您的`staging`分支中进行完全测试，然后再推送到`master`分支，该分支将部署到`production`环境。
+Adobe建议先在您的`staging`分支中进行全面测试，然后再推送到`master`分支，该分支将部署到`production`环境。
 
 ## 暂存环境
 
-Adobe建议从`master`创建一个名为`staging`的分支。 `staging`分支将代码部署到暂存环境，以提供预生产环境以测试代码、模块和扩展、付款网关、运输、产品数据等。 此环境为所有服务提供配置以匹配生产环境，包括Fastly、New Relic APM和搜索。
+Adobe建议从`staging`创建一个名为`master`的分支。 `staging`分支将代码部署到暂存环境，以提供预生产环境以测试代码、模块和扩展、付款网关、运输、产品数据等。 此环境为所有服务提供配置以匹配生产环境，包括Fastly、New Relic APM和搜索。
 
 本指南中的其他部分提供了有关最终代码部署和在安全的暂存环境中测试生产级别交互的说明。 要获得最佳性能和功能测试，请将数据库复制到暂存环境中。
 
@@ -89,13 +92,13 @@ Adobe建议从`master`创建一个名为`staging`的分支。 `staging`分支将
 - Fastly用于HTTP缓存和CDN
 - Nginx Web服务器与PHP-FPM通信，一个实例具有多个工作程序
 - Redis服务器
-- Adobe Commerce 2.2到2.4.3-p2的目录搜索Elasticsearch
+- Elasticsearch for catalog search for Adobe Commerce 2.2到2.4.3-p2
 - OpenSearch for Adobe Commerce 2.3.7-p3、2.4.3-p2、2.4.4及更高版本的目录搜索
 - 出口过滤（出站防火墙）
 
 ### 服务
 
-云基础架构上的Adobe Commerce当前支持以下服务：PHP、MySQL (MariaDB)、Elasticsearch(Adobe Commerce 2.2到2.4.3-p2)、OpenSearch（2.3.7-p3、2.4.3-p2、2.4.4及更高版本）、Redis和[!DNL RabbitMQ]。
+云基础架构上的Adobe Commerce当前支持以下服务：PHP、MySQL (MariaDB)、Elasticsearch (Adobe Commerce 2.2到2.4.3-p2)、OpenSearch （2.3.7-p3、2.4.3-p2、2.4.4及更高版本）、Redis和[!DNL RabbitMQ]。
 
 每个服务都在一个单独的安全容器中运行。 容器在项目中一起管理。 某些服务是标准服务，例如：
 
@@ -123,7 +126,7 @@ Adobe建议从`master`创建一个名为`staging`的分支。 `staging`分支将
 
 - [OpenSearch](../services/opensearch.md)
 
-在暂存和生产环境中，您可以使用Fastly进行CDN和缓存。 最新版本的Fastly CDN扩展将在项目初始配置期间安装。 您可以升级扩展以获取最新的错误修复和改进。 查看Magento2[&#128279;](https://github.com/fastly/fastly-magento2)的Fastly CDN模块。 此外，您还有权访问[New Relic](../monitor/account-management.md)以进行性能监控。
+在暂存和生产环境中，您可以使用Fastly进行CDN和缓存。 最新版本的Fastly CDN扩展将在项目初始配置期间安装。 您可以升级扩展以获取最新的错误修复和改进。 查看Magento 2[的](https://github.com/fastly/fastly-magento2)Fastly CDN模块。 此外，您还有权访问[New Relic](../monitor/account-management.md)以进行性能监控。
 
 使用以下文件配置要在实施中使用的软件版本。
 
@@ -145,7 +148,7 @@ Adobe建议从`master`创建一个名为`staging`的分支。 `staging`分支将
 
 1. 将`master`分支克隆到本地环境
 
-1. 从`master`创建`staging`分支
+1. 从`staging`创建`master`分支
 
 1. 从`staging`创建开发分支
 
