@@ -2,35 +2,36 @@
 title: 设置Elasticsearch服务
 description: 了解如何在云基础架构上为Adobe Commerce启用Elasticsearch服务。
 feature: Cloud, Search, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 238b9ed5-ce73-428f-9459-35de8573d5d8
+source-git-commit: ef22e7b305c20148f4ee4b2c0e64e2114bf229b5
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
 
 # 设置Elasticsearch服务
 
-[Elasticsearch](https://www.elastic.co)是一种开源产品，它允许您从任何来源获取任何格式的数据，并实时搜索和可视化这些数据。
+[Elasticsearch](https://www.elastic.co)是一种开源产品，允许您从任何来源获取任何格式的数据，并实时搜索和可视化这些数据。
 
 {{elasticsearch-support}}
 
 对于Adobe Commerce版本2.4.4及更高版本，请参阅[设置OpenSearch服务](opensearch.md)。
 
 - Elasticsearch对产品目录中的产品执行快速和高级搜索
-- Elasticsearch分析器支持多种语言
+- Elasticsearch Analyzer支持多种语言
 - 支持停用词和同义词
 - 在重新索引操作完成之前，索引不会影响客户
 
 >[!TIP]
 >
->Adobe建议，即使您计划为Adobe Commerce on cloud infrastructure应用程序配置第三方搜索工具，也应始终为Adobe Commerce设置Elasticsearch。 设置Elasticsearch可在第三方搜索工具失败时提供回退选项。
+>Adobe建议您在云基础架构项目中始终为Adobe Commerce设置Elasticsearch，即使您计划为Adobe Commerce应用程序配置第三方搜索工具也是如此。 设置Elasticsearch时，可提供在第三方搜索工具失败时的回退选项。
 
 {{service-instruction}}
 
 **启用Elasticsearch**：
 
-1. 对于入门项目，请将`elasticsearch`服务添加到`.magento/services.yaml`文件，该文件具有Elasticsearch版本，并且分配的磁盘空间以MB为单位。
+1. 对于入门项目，使用Elasticsearch版本将`elasticsearch`服务添加到`.magento/services.yaml`文件，并分配磁盘空间（以MB为单位）。
 
    ```yaml
    elasticsearch:
@@ -38,9 +39,9 @@ ht-degree: 0%
        disk: 1024
    ```
 
-   对于Pro项目，您必须提交Adobe Commerce支持工单以在暂存环境和生产环境中更改Elasticsearch版本。
+   对于Pro项目，您必须提交Adobe Commerce支持工单以在暂存和生产环境中更改Elasticsearch版本。
 
-1. 在`.magento.app.yaml`文件中设置`relationships`属性。
+1. 在`relationships`文件中设置`.magento.app.yaml`属性。
 
    ```yaml
    relationships:
@@ -77,11 +78,11 @@ ht-degree: 0%
 
 ## Elasticsearch软件兼容性
 
-在云基础架构项目上安装或升级Adobe Commerce时，请始终检查Elasticsearch服务版本与Adobe Commerce的[ElasticsearchPHP](https://github.com/elastic/elasticsearch-php)客户端之间的兼容性。
+在云基础架构项目上安装或升级Adobe Commerce时，请始终检查Elasticsearch服务版本与Adobe Commerce的[Elasticsearch PHP](https://github.com/elastic/elasticsearch-php)客户端之间的兼容性。
 
-- **首次设置** — 确认`services.yaml`文件中指定的Elasticsearch版本与为Adobe Commerce配置的ElasticsearchPHP客户端兼容。
+- **首次设置** — 确认`services.yaml`文件中指定的Elasticsearch版本与为Adobe Commerce配置的Elasticsearch PHP客户端兼容。
 
-- **项目升级** — 验证新应用程序版本中的ElasticsearchPHP客户端是否与云基础架构上安装的Elasticsearch服务版本兼容。
+- **项目升级** — 验证新应用程序版本中的Elasticsearch PHP客户端是否与云基础架构上安装的Elasticsearch服务版本兼容。
 
 云基础架构上Adobe Commerce的服务版本和兼容性支持取决于云基础架构上部署的版本，并且有时与Adobe Commerce内部部署支持的版本不同。 请参阅[服务版本](services-yaml.md#service-versions)。
 
@@ -89,7 +90,7 @@ ht-degree: 0%
 
 1. 在本地工作站上，转到您的项目目录。
 
-1. 显示活动Elasticsearch的环境详细信息。
+1. 显示活动环境的Elasticsearch详细信息。
 
    ```bash
    magento-cloud relationships --property=elasticsearch
@@ -124,7 +125,7 @@ ht-degree: 0%
    names    : elasticsearch/elasticsearch
    ```
 
-   此外，您还可以在环境根目录的`composer.lock`文件中找到ElasticsearchPHP客户端版本。
+   此外，您还可以在环境根目录的`composer.lock`文件中找到Elasticsearch PHP客户端版本。
 
 1. 从命令行中，检索Elasticsearch服务连接详细信息。
 
@@ -185,13 +186,13 @@ ht-degree: 0%
 
    如果版本不兼容，请对环境配置进行以下更新之一：
 
-   - 将ElasticsearchPHP客户端更改为与Elasticsearch服务版本兼容的版本。
+   - 将Elasticsearch PHP客户端更改为与Elasticsearch服务版本兼容的版本。
 
      ```bash
      composer require "elasticsearch/elasticsearch:~<version>"
      ```
 
-   - 将`services.yaml`文件中的Elasticsearch服务版本更改为与ElasticsearchPHP客户端兼容的版本。
+   - 将`services.yaml`文件中的Elasticsearch服务版本更改为与Elasticsearch PHP客户端兼容的版本。
 
      {{pro-update-service}}
 
@@ -205,9 +206,9 @@ ht-degree: 0%
 
 - 为项目设置Elasticsearch服务后，使用管理员UI测试Elasticsearch连接并自定义Adobe Commerce的Elasticsearch设置。
 
-### 添加插件以进行Elasticsearch
+### 添加Elasticsearch插件
 
-或者，您可以通过将`configuration:plugins`部分添加到`.magento/services.yaml`文件中的Elasticsearch服务来添加用于Elasticsearch的插件。 例如，以下代码启用ICU分析和拼音分析插件。
+或者，您可以通过将`configuration:plugins`部分添加到`.magento/services.yaml`文件中的Elasticsearch服务来为Elasticsearch添加插件。 例如，以下代码启用ICU分析和拼音分析插件。
 
 ```yaml
 elasticsearch:
@@ -222,9 +223,9 @@ elasticsearch:
 如果您使用Elastic Suite第三方插件，则必须[将`ece-tools`包](../dev-tools/update-package.md)更新为版本2002.0.19或更高版本。
 设置Elastic Suite时，将配置设置添加到`ELASTICSUITE_CONFIGURATION`部署变量。 此配置跨部署保存设置。
 
-### 删除Elasticsearch插件
+### 删除Elasticsearch的插件
 
-从`.magento/services.yaml`中的`elasticsearch:`中删除插件项不会像您预期的那样卸载或禁用它们。 必须重新索引Elasticsearch数据。 此行为旨在防止依赖这些插件的数据可能丢失或损坏。
+从`elasticsearch:`中的`.magento/services.yaml`中删除插件项不会像您预期的那样卸载或禁用它们。 您必须重新索引Elasticsearch数据。 此行为旨在防止依赖这些插件的数据可能丢失或损坏。
 
 **要删除Elasticsearch插件**：
 
@@ -260,10 +261,3 @@ elasticsearch:
 >
 >有关将Elastic Suite插件与Adobe Commerce结合使用或对其疑难解答的详细信息，请参阅[Elastic Suite文档](https://github.com/Smile-SA/elasticsuite)。
 
-## 故障排除
-
-请参阅以下Adobe Commerce支持文章，以获取有关Elasticsearch问题疑难解答的帮助：
-
-- [已配置Elasticsearch5，但搜索页未加载，并显示“Fielddata已禁用……”错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html?lang=zh-Hans)
-- Adobe Commerce疑难解答程序中的[Elasticsearch](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-in-magento-troubleshooter.html)
-- [Elasticsearch索引状态为`yellow`或`red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html?lang=zh-Hans)
