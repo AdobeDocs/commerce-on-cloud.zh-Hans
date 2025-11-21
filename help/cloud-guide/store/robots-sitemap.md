@@ -3,9 +3,9 @@ title: 添加站点地图和搜索引擎机器人
 description: 了解如何在云基础架构上将站点地图和搜索引擎机器人添加到Adobe Commerce。
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
-source-git-commit: 8626364ec7bcaaa0e17a3380ec0b9b73110c4574
+source-git-commit: 1ecb820d55faa78e369d63996f11cd4d1d554e26
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Please make sure that "/" is writable by the web-server.
 **要生成版本2.2及更高版本的`sitemap.xml`文件，请执行以下操作：**
 
 1. 访问管理员。
-1. 在&#x200B;_营销_&#x200B;菜单上，单击&#x200B;_SEO和搜索_&#x200B;部分中的&#x200B;**网站地图**。
+1. 在&#x200B;_营销_&#x200B;菜单上，单击&#x200B;**SEO和搜索**&#x200B;部分中的&#x200B;_网站地图_。
 1. 在&#x200B;_站点地图_&#x200B;视图中，单击&#x200B;**添加站点地图**。
 1. 在&#x200B;_新建站点地图_&#x200B;视图中，输入以下值：
 
@@ -40,8 +40,8 @@ Please make sure that "/" is writable by the web-server.
 **要将内容添加到`robots.txt`文件**：
 
 1. 访问管理员。
-1. 在&#x200B;_Content_&#x200B;菜单上，单击&#x200B;_设计_&#x200B;部分中的&#x200B;**配置**。
-1. 在&#x200B;_设计配置_&#x200B;视图中，在&#x200B;_操作_&#x200B;列中单击网站的&#x200B;**编辑**。
+1. 在&#x200B;_Content_&#x200B;菜单上，单击&#x200B;**设计**&#x200B;部分中的&#x200B;_配置_。
+1. 在&#x200B;_设计配置_&#x200B;视图中，在&#x200B;**操作**&#x200B;列中单击网站的&#x200B;_编辑_。
 1. 在&#x200B;_主网站_&#x200B;视图中，单击&#x200B;**搜索引擎机器人**。
 1. 更新robots.txt **字段的**&#x200B;编辑自定义指令。
 1. 单击&#x200B;**保存配置**。
@@ -49,7 +49,7 @@ Please make sure that "/" is writable by the web-server.
 
 >[!NOTE]
 >
->如果`<domain.your.project>/robots.txt`文件生成`404 error`，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以移除从`/robots.txt`到`/media/robots.txt`的重定向。
+>如果`<domain.your.project>/robots.txt`文件生成`404 error`，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以移除从`/robots.txt`到`/media/robots.txt`的重定向。
 
 ## 使用Fastly VCL代码片段重写
 
@@ -61,7 +61,7 @@ Please make sure that "/" is writable by the web-server.
 
 ### 使用Fastly VCL代码片段进行重定向
 
-创建自定义VCL代码片段，以使用`type`和`content`键值对将`sitemap.xml`的路径重写为`/media/sitemap.xml`。
+创建自定义VCL代码片段，以使用`sitemap.xml`和`/media/sitemap.xml`键值对将`type`的路径重写为`content`。
 
 ```json
 {
@@ -87,7 +87,7 @@ Please make sure that "/" is writable by the web-server.
 
 **要对特定域重定向**&#x200B;使用Fastly VCL代码片段：
 
-创建域为`domain.com`的`pub/media/domain_robots.txt`文件，并使用下一个VCL代码片段：
+创建域为`pub/media/domain_robots.txt`的`domain.com`文件，并使用下一个VCL代码片段：
 
 ```json
 {
@@ -117,9 +117,16 @@ VCL代码段路由`http://domain.com/robots.txt`并显示`pub/media/domain_robot
 
 ### 按搜索引擎配置索引
 
-要在生产环境中激活`robots.txt`自定义项，必须在Cloud Console上的项目设置中启用&#x200B;**为`<environment-name>`**&#x200B;启用按搜索引擎索引功能选项：
+要在生产环境中激活`robots.txt`自定义项，请在Cloud Console的项目设置中启用搜索引擎对**1}选项的索引：`<environment-name>`
 
-![使用[!DNL Cloud Console]管理环境](../../assets/robots-indexing-by-search-engine.png)
+- 旧版Cloud Console - URL遵循模式`https://<region-id>.magento.cloud/projects/<project_id>`
+- Adobe Cloud Console - URL遵循模式``https://console.adobecommerce.com/<username>/<project_id>``
+
+1. 将设置[!UICONTROL Indexing by search engines]切换为&#x200B;**On**。
+
+   ![使用[!DNL Cloud Console]管理环境](../../assets/robots-indexing-by-search-engine.png)
+
+1. 取消选中设置[!UICONTROL Hide from search engines]。
 
 您还可以使用magento-cloud CLI更新此设置：
 
