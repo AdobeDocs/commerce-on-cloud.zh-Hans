@@ -117,7 +117,7 @@ VCL代码段路由`http://domain.com/robots.txt`并显示`pub/media/domain_robot
 
 ### 按搜索引擎配置索引
 
-要在生产环境中激活`robots.txt`自定义项，请在Cloud Console的项目设置中启用搜索引擎对**1}选项的索引：`<environment-name>`
+要在生产环境中激活`robots.txt`自定义项，请在Cloud Console的项目设置中启用搜索引擎对**1&rbrace;选项的索引：`<environment-name>`
 
 - 旧版Cloud Console - URL遵循模式`https://<region-id>.magento.cloud/projects/<project_id>`
 - Adobe Cloud Console - URL遵循模式``https://console.adobecommerce.com/<username>/<project_id>``
