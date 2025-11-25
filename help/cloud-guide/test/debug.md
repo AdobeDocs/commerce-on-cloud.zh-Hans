@@ -1,7 +1,8 @@
 ---
 title: 配置 [!DNL Xdebug]
 description: 了解如何配置Xdebug扩展以便在云基础架构项目开发中调试Adobe Commerce。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 32857c9c-4a49-4337-9c15-a6e46c328df7
+source-git-commit: d48b1844305e72b7b4a37568f2358f3aa4cf2e24
 workflow-type: tm+mt
 source-wordcount: '1920'
 ht-degree: 0%
@@ -14,11 +15,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您可以将[!DNL Xdebug]配置为在Cloud Docker环境中运行以进行本地调试，而无需更改云基础架构项目配置上的Adobe Commerce。 请参阅[为Docker配置Xdebug](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug/)。
+>您可以将[!DNL Xdebug]配置为在Cloud Docker环境中运行以进行本地调试，而无需更改云基础架构项目配置上的Adobe Commerce。 请参阅[为Docker配置Xdebug](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug)。
 
 要启用[!DNL Xdebug]，必须在Git存储库中配置文件、配置IDE并设置端口转发。 您可以在`magento.app.yaml`文件中配置某些设置。 编辑后，跨所有入门环境和Pro集成环境推送Git更改以启用[!DNL Xdebug]。 [!DNL Xdebug]在专业暂存和生产环境中已经可用。
 
-配置完毕后，即可调试CLI命令、Web请求和代码。 请记住，所有云基础架构环境都是只读的。 将代码克隆到本地开发环境以执行调试。 对于Pro暂存环境和生产环境，请参阅有关[!DNL Xdebug]的[其他说明](#debug-for-pro-staging-and-production)。
+配置完毕后，即可调试CLI命令、Web请求和代码。 请记住，所有云基础架构环境都是只读的。 将代码克隆到本地开发环境以执行调试。 对于Pro暂存环境和生产环境，请参阅有关[的](#debug-for-pro-staging-and-production)其他说明[!DNL Xdebug]。
 
 ## 要求
 
@@ -29,13 +30,13 @@ ht-degree: 0%
 要配置[!DNL Xdebug]，请执行以下步骤：
 
 - [在分支中工作以推送文件更新](#get-started-with-a-branch)
-- [为环境启用 [!DNL Xdebug] &#x200B;](#enable-xdebug-in-your-environment)
+- [为环境启用 [!DNL Xdebug] ](#enable-xdebug-in-your-environment)
 - [配置PHPStorm服务器](#configure-phpstorm-server)
 - [设置端口转发](#set-up-port-forwarding)
 
 ### 分支入门
 
-要添加[!DNL Xdebug]，Adobe建议在[开发分支](../dev-tools/cloud-cli-overview.md#create-an-environment-branch)中工作。
+要添加[!DNL Xdebug]，Adobe建议使用[开发分支](../dev-tools/cloud-cli-overview.md#create-an-environment-branch)。
 
 ### 在您的环境中启用Xdebug
 
@@ -43,7 +44,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3437407?learn=on)
 
-要为您的项目启用[!DNL Xdebug]，请将`xdebug`添加到`.magento.app.yaml`文件的`runtime:extensions`部分。
+要为您的项目启用[!DNL Xdebug]，请将`xdebug`添加到`runtime:extensions`文件的`.magento.app.yaml`部分。
 
 **启用Xdebug**：
 
@@ -96,9 +97,9 @@ ht-degree: 0%
 
 1. 单击&#x200B;**+**&#x200B;以添加服务器配置。 项目名称在顶部为灰色。
 
-1. [可选]为新服务器配置以下设置。 请参阅&#x200B;_PHPStorm_&#x200B;文档中的[未配置调试服务器](https://www.jetbrains.com/help/phpstorm/troubleshooting-php-debugging.html#no-debug-server-is-configured)。
+1. [可选]为新服务器配置以下设置。 请参阅[PHPStorm](https://www.jetbrains.com/help/phpstorm/troubleshooting-php-debugging.html#no-debug-server-is-configured)文档中的&#x200B;_未配置调试服务器_。
 
-   - **名称** — 输入与主机名相同的名称。 此值必须与[Debug CLI命令](#debug-cli-commands)中`PHP_IDE_CONFIG`变量的值匹配，才能使用CLI进行调试。
+   - **名称** — 输入与主机名相同的名称。 此值必须与`PHP_IDE_CONFIG`Debug CLI命令[中](#debug-cli-commands)变量的值匹配，才能使用CLI进行调试。
    - **主机** — 输入主机名。
    - **端口** — 输入`443`。
    - **调试器** — 选择`Xdebug`。
@@ -113,7 +114,7 @@ ht-degree: 0%
       - 生产： `/app/<project_code>/`
       - 暂存： `/app/<project_code>_stg/`
 
-1. 将[!DNL Xdebug]端口更改为`9000,9003`，或者可以在&#x200B;**PHP** > **调试** > **Xdebug** > **调试端口**&#x200B;面板中将其限制为仅`9000`。
+1. 将[!DNL Xdebug]端口更改为`9000,9003`，或者可以在`9000`PHP **>**&#x200B;调试&#x200B;**>** Xdebug **>**&#x200B;调试端口&#x200B;**面板中将其限制为仅**。
 
 1. 单击&#x200B;**应用**。
 
@@ -305,7 +306,7 @@ ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
 
 **要使用环境URL**&#x200B;开始调试：
 
-演示了用于启动远程GET会话的配置，以及调试参数。
+演示了用于启动远程调试会话的配置以及GET参数。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3437417?learn=on)
 
@@ -327,7 +328,7 @@ ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
 
    >[!NOTE]
    >
-   >不支持`POST`请求传递的`XDEBUG_SESSION_START`。
+   >不支持`XDEBUG_SESSION_START`请求传递的`POST`。
 
 ## 调试CLI命令
 

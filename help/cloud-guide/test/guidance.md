@@ -1,7 +1,8 @@
 ---
 title: 测试指南
 description: 了解在云基础架构上启动Adobe Commerce的测试类型和最佳实践。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 70fdfbbd-1763-4b1b-9ffd-9ffdc92f4f91
+source-git-commit: d48b1844305e72b7b4a37568f2358f3aa4cf2e24
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 0%
@@ -16,9 +17,9 @@ ht-degree: 0%
 
 在开发过程中，请务必对云基础架构项目上的Adobe Commerce执行端到端功能测试。 有关在Docker环境中执行功能测试，请参阅以下指南：
 
-- **应用程序测试** — 使用[Magento功能测试框架(MFTF)](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/)在Cloud Docker环境中测试应用程序。
+- **应用程序测试** — 使用[Magento功能测试框架(MFTF)](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing)在Cloud Docker环境中测试应用程序。
 
-- **代码测试** — 使用[PHP的代码欺骗测试框架](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/)验证用于贡献到Cloud包存储库的代码。
+- **代码测试** — 使用[PHP的代码欺骗测试框架](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing)验证用于贡献到Cloud包存储库的代码。
 
 ## 启动前的最佳实践
 
@@ -28,7 +29,7 @@ ht-degree: 0%
 
 - **压力测试** — 询问系统内的容量上限，以确定在当前负载大大超过预期最大值时，系统是否能够充分执行。
 
-- **安全扫描**—Adobe为您的站点提供免费的[安全扫描工具](../launch/overview.md#set-up-the-security-scan-tool)。
+- **安全扫描**—Adobe为您的站点提供了免费的[安全扫描工具](../launch/overview.md#set-up-the-security-scan-tool)。
 
 - **渗透测试** — 是计算机系统上的授权模拟网络攻击，旨在评估系统的安全性。 渗透测试有助于识别弱点或漏洞，包括未经授权的各方获取系统功能和数据的可能性。
 

@@ -3,7 +3,7 @@ title: PHP设置
 description: 了解在云基础架构中用于Commerce应用程序配置的最佳PHP设置。
 feature: Cloud, Configuration, Extensions
 exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+source-git-commit: de50fda78c28a57d76e5c0a4d5dac0f8d4d844a0
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # PHP设置
 
-您可以选择在[文件中运行的PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)的`.magento.app.yaml`版本：
+您可以选择在[文件中运行的PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)的`.magento.app.yaml`版本：
 
 ```yaml
 name: mymagento
@@ -63,7 +63,7 @@ realpath_cache_ttl = 7200
 
 >[!NOTE]
 >
->有关推荐的PHP配置设置列表，请参阅[安装指南](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=zh-Hans)中的&#x200B;_必需的PHP设置_。
+>有关推荐的PHP配置设置列表，请参阅[安装指南](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)中的&#x200B;_必需的PHP设置_。
 
 ### 检查自定义PHP设置
 
@@ -81,7 +81,7 @@ register_argc_argv => On => On
 
 >[!WARNING]
 >
->如果您使用Cloud Docker for Commerce进行本地开发，请参阅[Docker服务容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#fpm-container)，以了解有关在Docker环境中使用自定义`php.ini`文件的信息。
+>如果您使用Cloud Docker for Commerce进行本地开发，请参阅[Docker服务容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#fpm-container)，以了解有关在Docker环境中使用自定义`php.ini`文件的信息。
 
 ## 启用扩展
 
@@ -118,7 +118,7 @@ php -m
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-PHP模块要求与Adobe Commerce版本相关联。 请参阅[PHP要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=zh-Hans)。
+PHP模块要求与Adobe Commerce版本相关联。 请参阅[PHP要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)。
 
 ### 扩展支持
 
@@ -136,7 +136,7 @@ sourceguardian.restrict_unencoded = "1"
 
 请参阅SourceGuardian文档的[第3.5节](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf)。 _这是指向PDF_&#x200B;的链接。
 
-[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)，以获得在所有生产环境和Pro暂存环境中安装这些PHP扩展的帮助。 包含更新的`.magento/services.yaml`文件、`.magento.app.yaml`文件（包含更新的PHP版本和任何其他PHP扩展名）。 对于实时生产环境的更改，您必须至少提供48小时的通知。 Cloud Infrastructure团队更新项目最多可能需要48小时。
+[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，以获得在所有生产环境和Pro暂存环境中安装这些PHP扩展的帮助。 包含更新的`.magento/services.yaml`文件、`.magento.app.yaml`文件（包含更新的PHP版本和任何其他PHP扩展名）。 对于实时生产环境的更改，您必须至少提供48小时的通知。 Cloud Infrastructure团队更新项目最多可能需要48小时。
 
 >[!WARNING]
 >

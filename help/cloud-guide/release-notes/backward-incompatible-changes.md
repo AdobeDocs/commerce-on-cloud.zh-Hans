@@ -3,7 +3,8 @@ title: 向后不兼容的更改
 description: 了解在升级现有云项目时的向后兼容性。
 feature: Cloud, Release Notes
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 3f3c1036-bfd0-4c70-8309-6c5e442134cd
+source-git-commit: de50fda78c28a57d76e5c0a4d5dac0f8d4d844a0
 workflow-type: tm+mt
 source-wordcount: '791'
 ht-degree: 0%
@@ -22,11 +23,11 @@ ht-degree: 0%
 
 ### 服务版本要求更改
 
-对于使用`ece-tools` v2002.1.0及更高版本的云项目，我们将PHP的最低版本要求从7.0.x更改为7.1.x。 如果您的环境配置指定了PHP 7.0，请更新`.magento.app.yaml`文件中的[php配置](../application/php-settings.md)。
+对于使用`ece-tools` v2002.1.0及更高版本的云项目，我们将PHP的最低版本要求从7.0.x更改为7.1.x。 如果您的环境配置指定了PHP 7.0，请更新[文件中的](../application/php-settings.md)php配置`.magento.app.yaml`。
 
 >[!WARNING]
 >
->由于PHP版本要求的更改，`ece-tools` 2002.1.0在运行Adobe Commerce 2.1.15或更高版本的云基础架构项目中仅支持Adobe Commerce。 如果您的项目使用早期版本，则必须在更新到`ece-tools` 2002.1.0之前[升级](../development/commerce-version.md)。
+>由于PHP版本要求的更改，`ece-tools` 2002.1.0在运行Adobe Commerce 2.1.15或更高版本的云基础架构项目中仅支持Adobe Commerce。 如果您的项目使用早期版本，则必须在更新到[ 2002.1.0之前](../development/commerce-version.md)升级`ece-tools`。
 
 ### 环境配置更改
 
@@ -53,11 +54,11 @@ ht-degree: 0%
 | `vendor/bin/ece-tools docker:build` | `vendor/bin/ece-docker build:compose` |
 | `vendor/bin/ece-tools docker:config:convert` | `vendor/bin/ece-docker  image:generate:php` |
 
-在早期的ECE-Tools版本中，您可以使用`m2-ece-build`和`m2-ece-deploy`命令在`.magento.app.yaml`文件中配置部署挂接。 当您更新到v2002.1.0时，请检查`.magento.app.yaml`文件中的`hooks`配置以了解过时的命令，并根据需要替换它们。
+在早期的ECE-Tools版本中，您可以使用`m2-ece-build`和`m2-ece-deploy`命令在`.magento.app.yaml`文件中配置部署挂接。 当您更新到v2002.1.0时，请检查`hooks`文件中的`.magento.app.yaml`配置以了解过时的命令，并根据需要替换它们。
 
 ## 云修补程序更改
 
-- **删除已下载的修补程序**- `magento/magento-cloud-patches`包捆绑了[软件下载](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=zh-Hans)页面中的所有可用修补程序，并在您部署到云时自动应用这些修补程序。 要防止升级到ECE-Tools 2002.1.0或更高版本后出现补丁程序冲突，请删除手动下载并添加到项目中的Adobe提供的任何补丁程序。
+- **删除已下载的修补程序**- `magento/magento-cloud-patches`包捆绑了[软件下载](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html)页面中的所有可用修补程序，并在您部署到云时自动应用这些修补程序。 要防止升级到ECE-Tools 2002.1.0或更高版本后出现补丁程序冲突，请删除手动下载并添加到项目中的Adobe提供的任何补丁程序。
 
 - **正在更新应用修补程序命令** — 我们将用于应用修补程序的命令从`vendor/bin/ece-tools`目录移动到`vendor/bin/ece-patches`目录。 如果使用此命令手动应用修补程序，请使用新路径。
 
@@ -83,7 +84,7 @@ ht-degree: 0%
 
    - **正在更新Cloud Docker-compose命令** — 我们已将命令文件的路径从`./bin/docker`重命名为`./bin/magento-docker`。 更新脚本和命令以使用新路径。
 
-   - **Cron容器不再包含在默认Docker配置中** — 现在，您必须将`--with-cron`选项添加到`ece-docker build:compose`命令以在Docker环境配置中包含Cron容器。 请参阅&#x200B;_Cloud Docker for Commerce_&#x200B;指南中的[管理cron作业](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs/)。
+   - **Cron容器不再包含在默认Docker配置中** — 现在，您必须将`--with-cron`选项添加到`ece-docker build:compose`命令以在Docker环境配置中包含Cron容器。 请参阅[Cloud Docker for Commerce](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs)指南中的&#x200B;_管理cron作业_。
 
      以前使用cron作业生成的容器现在不包含cron容器。
 
