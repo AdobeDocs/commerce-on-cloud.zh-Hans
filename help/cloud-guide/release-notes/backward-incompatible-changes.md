@@ -27,7 +27,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->由于PHP版本要求的更改，`ece-tools` 2002.1.0在运行Adobe Commerce 2.1.15或更高版本的云基础架构项目中仅支持Adobe Commerce。 如果您的项目使用早期版本，则必须在更新到[ 2002.1.0之前](../development/commerce-version.md)升级`ece-tools`。
+>由于PHP版本要求的更改，`ece-tools` 2002.1.0在运行Adobe Commerce 2.1.15或更高版本的云基础架构项目中仅支持Adobe Commerce。 如果您的项目使用早期版本，则必须在更新到[&#x200B; 2002.1.0之前](../development/commerce-version.md)升级`ece-tools`。
 
 ### 环境配置更改
 
