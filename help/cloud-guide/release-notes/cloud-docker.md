@@ -5,7 +5,7 @@ feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: bbf11023474cb6ac6b3b881c40897c3260542de9
+source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
 workflow-type: tm+mt
 source-wordcount: '3806'
 ht-degree: 0%
@@ -87,7 +87,7 @@ ht-degree: 0%
 发行日期： 2023年7月31日
 
 - ![新图标](../../assets/new.svg) **已添加新的服务版本**—OpenSearch 2.5。
-- ![新图标](../../assets/new.svg) **启用编辑器缓存** — 现在，您可以扩展Docker配置以在启动Docker容器时启用编辑器清除缓存。 请参阅[Cloud Docker for Commerce](https://developer.adobe.com/commerce/cloud-tools/docker/configure)指南中的&#x200B;_扩展Docker配置_。
+- ![新图标](../../assets/new.svg) **启用编辑器缓存** — 现在，您可以扩展Docker配置以在启动Docker容器时启用编辑器清除缓存。 请参阅[Cloud Docker for Commerce](https://developer.adobe.com/commerce/cloud-tools/docker/configure/)指南中的&#x200B;_扩展Docker配置_。
 
 ## v1.3.5
 
@@ -241,7 +241,7 @@ ht-degree: 0%
 
    - ![修复图标](../../assets/fix.svg) **TLS容器** — 现在，[TLS容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container)基于`https://hub.docker.com/r/magento/magento-cloud-docker-nginx` Docker映像，而不是CentOS映像。 此更改修复了在Cloud Docker环境中的容器之间发送HTTPS请求时导致错误的问题。<!--MCLOUD-6469-->
 
-   - ![新图标](../../assets/new.svg) **测试容器** — 添加了用于应用程序测试的测试容器，并向Docker `--with-test`命令添加了`build:compose`选项，以便仅在Docker环境中测试时创建容器。 查看[应用程序测试](https://developer.adobe.com/commerce/cloud-tools/docker/test-application-testing).<!--MCLOUD-6394-->
+   - ![新图标](../../assets/new.svg) **测试容器** — 添加了用于应用程序测试的测试容器，并向Docker `--with-test`命令添加了`build:compose`选项，以便仅在Docker环境中测试时创建容器。 查看[应用程序测试](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing).<!--MCLOUD-6394-->
 
    - ![新图标](../../assets/new.svg) **FPM-XDEBUG容器**
 
@@ -251,7 +251,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **Docker配置更改**
 
-   - **MailHog配置** — 现在您可以使用以下`ece-docker build:compose`命令选项禁用MailHog并指定端口： `--no-mailhog`、`--mailhog-http-port`和`--mailhog-smtp-port`。 查看[设置电子邮件](https://developer.adobe.com/commerce/cloud-tools/docker/configure#set-up-email)。<!--MCLOUD-6898, MCLOUD-6660-->
+   - **MailHog配置** — 现在您可以使用以下`ece-docker build:compose`命令选项禁用MailHog并指定端口： `--no-mailhog`、`--mailhog-http-port`和`--mailhog-smtp-port`。 查看[设置电子邮件](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#set-up-email)。<!--MCLOUD-6898, MCLOUD-6660-->
 
    - 对于Cloud Docker for Commerce 1.2.0及更高版本，Adobe现在为每个修补程序版本提供Docker图像，并且Docker配置生成器使用指定的修补程序版本创建Docker配置，而不是使用最新的修补程序版本。 以前，Docker配置生成器使用最新的修补程序版本构建配置，该版本可能会破坏使用早期版本构建的Commerce环境的Cloud Docker。<!--MCLOUD-7093-->
 
@@ -427,7 +427,7 @@ ht-degree: 0%
 
    - ![新图标](../../assets/new.svg) **对网桥模式的支持** — 添加了对网桥模式的支持，以便通过本地网络启用Docker容器之间的连接。<!--MAGECLOUD-4165-->
 
-   - ![新图标](../../assets/new.svg) **默认情况下禁用的Cron容器** — 为了提高性能，在构建Docker环境时，默认情况下不再配置Cron容器。 您可以使用Docker构建命令上的`--with-cron`选项将Cron容器添加到环境中。 查看[管理cron作业](https://developer.adobe.com/commerce/cloud-tools/docker/configure#manage-cron-jobs)。<!--MAGECLOUD-5181-->
+   - ![新图标](../../assets/new.svg) **默认情况下禁用的Cron容器** — 为了提高性能，在构建Docker环境时，默认情况下不再配置Cron容器。 您可以使用Docker构建命令上的`--with-cron`选项将Cron容器添加到环境中。 查看[管理cron作业](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#manage-cron-jobs)。<!--MAGECLOUD-5181-->
 
    - ![新图标](../../assets/new.svg) **停止同步大型备份文件** — 已将数据库转储和存档文件（ZIP、SQL、GZ和BZ2）添加到`dist/docker-sync.yml`和`dist/mutagen.sh`文件的排除列表中。 同步大型文件(>1 GB)可能会导致一段时间不活动，并且备份文件通常不需要同步，因为您可以重新生成它们。<!--MAGECLOUD-3979-->
 

@@ -6,7 +6,7 @@ feature: Cloud, Install
 topic: Development
 last-substantial-update: 2024-02-06T00:00:00Z
 exl-id: 14fb0b41-1c3a-4abc-8726-cea16ab00ba8
-source-git-commit: de50fda78c28a57d76e5c0a4d5dac0f8d4d844a0
+source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Composer将项目所需的库和依赖项安装在`vendor`目录中。 以下必
 
 您可以使用Cloud Docker for Commerce工具在云基础架构生产和开发环境中模拟Adobe Commerce以进行本地开发。 适用于Commerce的Cloud Docker不需要在本地安装PHP和编辑器。
 
-- 在Adobe Developer站点中使用Cloud Docker [进行本地开发](https://developer.adobe.com/commerce/cloud-tools/docker/setup)
+- 在Adobe Developer站点中使用Cloud Docker [进行本地开发](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)
 - [Docker体系结构和常用命令](../dev-tools/cloud-docker.md)
 - [Cloud Docker发行说明](../release-notes/cloud-docker.md)
 

@@ -1,7 +1,8 @@
 ---
 title: 暂存和生产测试
 description: 了解如何在暂存和生产环境中测试。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 39625c97-5eb0-4039-ac5f-ddaeb43156de
+source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 0%
@@ -63,7 +64,7 @@ ht-degree: 0%
    - 暂存： `dig https://mcstaging.<your-domain>.com`
    - 生产： `dig https://mcprod.<your-domain>.com`
 
-   有关其他`dig`测试，请在更改DNS[&#128279;](https://docs.fastly.com/en/guides/working-with-domains)之前参阅Fastly的测试。
+   有关其他`dig`测试，请在更改DNS[之前参阅Fastly的](https://docs.fastly.com/en/guides/working-with-domains)测试。
 
 1. 使用`cURL`验证响应标头信息。
 
@@ -211,7 +212,7 @@ ht-degree: 0%
 
 ## 功能测试
 
-您可以使用Magento功能测试框架(MFTF)从Cloud Docker环境中完成Adobe Commerce的功能测试。 请参阅&#x200B;_Cloud Docker for Commerce指南_&#x200B;中的[应用程序测试](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/)。
+您可以使用Magento功能测试框架(MFTF)从Cloud Docker环境中完成Adobe Commerce的功能测试。 请参阅[Cloud Docker for Commerce指南](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing)中的&#x200B;_应用程序测试_。
 
 ## 设置安全扫描工具
 
