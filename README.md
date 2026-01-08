@@ -1,7 +1,7 @@
 ---
-source-git-commit: b151aac666510594751937e80dc3d9db4ede41b7
+source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 1%
 
 本网站包含有关云基础架构上的Commerce的最新开发人员文档。
 
-- 云基础架构上的[Commerce指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)
-- 在云基础架构上[开始使用Commerce](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/start/overview)
+- 云基础架构上的[Commerce指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- 在云基础架构上[开始使用Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
 
 ## Adobe Open Source行为准则
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## 关于您对Adobe内容的投稿
 
-请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/zh-hans/docs/contributor/contributor-guide/introduction)。
+请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 您的参与方式取决于您的身份以及您想参与的更改类型：
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 社区参与者可以使用GitHub UI进行基本编辑或创建存储库分支以进行重大更改。
 
-有关详细信息，请参阅[Adobe Docs参与者指南](https://experienceleague.adobe.com/zh-hans/docs/contributor/contributor-guide/introduction)。
+有关详细信息，请参阅[Adobe Docs参与者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 ## 如何使用Markdown格式化主题
 
@@ -70,7 +70,7 @@ ht-degree: 1%
 >**注释：**
 >
 >- 生成模板化内容需要在终端中的命令行上工作。
->- 必须安装Ruby才能运行渲染脚本。 有关所需版本，请参阅[_jekyll/.ruby-version] (_jekyll/.ruby-version)。
+>- 必须安装Ruby才能运行渲染脚本。 有关所需版本，请参阅[_jekyll/.ruby-version](_jekyll/.ruby-version)。
 
 有关模板化内容的文件结构的描述，请参阅以下内容：
 
@@ -101,7 +101,7 @@ ht-degree: 1%
    bundle exec rake render
    ```
 
-   >**注意：**&#x200B;必须从`_jekyll`目录运行脚本。 如果这是您第一次运行脚本，则必须先使用`bundle install`命令安装Ruby依赖项。 rake任务由`adobe-comdox-exl-rake-tasks` gem提供，以便更好地维护Adobe Commerce文档存储库中的内容。
+   >**注意：**&#x200B;必须从`_jekyll`目录运行脚本。 如果这是您第一次运行脚本，则必须先使用`bundle install`命令安装Ruby依赖项。 核心Rake任务和依赖项（Jekyll、Rake、图像优化）由`adobe-comdox-exl-rake-tasks` gem提供，以更好地维护Adobe Commerce文档存储库中的内容。 在`Rakefile`中实现了特定于此存储库的自定义任务。
 
 5. 导航回`root`目录。
 
