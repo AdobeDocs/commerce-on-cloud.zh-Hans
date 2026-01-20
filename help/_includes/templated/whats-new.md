@@ -23,7 +23,7 @@ ht-degree: 6%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新了<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">设置OpenSearch服务</a>中示例的版本。</p>
+      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/opensearch">设置OpenSearch服务</a>中示例的版本。</p>
 </td>
       <td>
         反馈
