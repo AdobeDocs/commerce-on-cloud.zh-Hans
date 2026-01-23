@@ -3,16 +3,16 @@ title: 设置RabbitMQ服务
 description: 了解如何启用RabbitMQ服务来管理云基础架构上Adobe Commerce的消息队列。
 feature: Cloud, Services
 exl-id: 64af1dfa-e3f0-4404-a352-659ca47c1121
-source-git-commit: 76a9721767cbd4328347311cc308810f0f7914c0
+source-git-commit: 258fe6de7a8b80cb3403f1ce04d0bf2e299f68ae
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
 
 # 设置[!DNL RabbitMQ]服务
 
-[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=zh-Hans)是Adobe Commerce中的系统，它允许[模块](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/glossary#module)将消息发布到队列。 它还定义了异步接收消息的消费者。
+[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html)是Adobe Commerce中的系统，它允许[模块](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module)将消息发布到队列。 它还定义了异步接收消息的消费者。
 
 MQF使用[RabbitMQ](https://www.rabbitmq.com/)作为消息代理，该消息代理提供了一个用于发送和接收消息的可伸缩平台。 它还包括用于存储未传递消息的机制。 [!DNL RabbitMQ]基于高级消息队列协议(AMQP) 0.9.1规范。
 
@@ -152,8 +152,12 @@ dependencies:
 
 ## [!DNL RabbitMQ]服务疑难解答
 
-请参阅[无法连接到Adobe Commerce Cloud中的RabbitMQ](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27688)。
+请参阅[无法连接到Adobe Commerce Cloud中的RabbitMQ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27688)。
 
 ## 正在升级[!DNL RabbitMQ]服务
 
-有关升级说明，请参阅[更改服务版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)。
+>
+>
+>在集成环境中升级[!DNL RabbitMQ]时，请勿跳过版本。 仅支持[连续升级](https://www.rabbitmq.com/docs/upgrade#rabbitmq-version-upgradability)&#x200B;(例如，3.8 → 3.9 → 3.10 → 3.11 → 3.12 → 3.13 → 4.0 → 4.1)，并且每个版本增量都必须对应于云环境的实际成功部署。
+>
+>有关一般服务升级说明，请参阅[更改服务版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)。
