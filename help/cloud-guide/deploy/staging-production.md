@@ -140,7 +140,7 @@ Cloud CLI提供用于部署代码的命令。 您需要SSH和Git权限才能访�
 
 ## 迁移静态文件
 
-[静态文件](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)存储在`mounts`中。 将文件从源装载位置（如本地环境）迁移到目标装载位置的方法有两种。 这两种方法都使用`rsync`实用程序，但Adobe建议使用`magento-cloud` CLI在本地和远程环境之间移动文件。 在将文件从远程源移动到其他远程位置时，Adobe建议使用`rsync`方法。
+[静态文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/glossary)存储在`mounts`中。 将文件从源装载位置（如本地环境）迁移到目标装载位置的方法有两种。 这两种方法都使用`rsync`实用程序，但Adobe建议使用`magento-cloud` CLI在本地和远程环境之间移动文件。 在将文件从远程源移动到其他远程位置时，Adobe建议使用`rsync`方法。
 
 ### 使用CLI迁移文件
 
