@@ -3,9 +3,9 @@ title: 添加站点地图和搜索引擎机器人
 description: 了解如何在云基础架构上将站点地图和搜索引擎机器人添加到Adobe Commerce。
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
-source-git-commit: 1ecb820d55faa78e369d63996f11cd4d1d554e26
+source-git-commit: 1d52481fb6874f3a9ba14b0ff4fe39dc7d564938
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Please make sure that "/" is writable by the web-server.
 
 >[!NOTE]
 >
->如果`<domain.your.project>/robots.txt`文件生成`404 error`，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以移除从`/robots.txt`到`/media/robots.txt`的重定向。
+>如果`<domain.your.project>/robots.txt`文件生成`404 error`，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以移除从`/robots.txt`到`/media/robots.txt`的重定向。
 
 ## 使用Fastly VCL代码片段重写
 
@@ -117,22 +117,23 @@ VCL代码段路由`http://domain.com/robots.txt`并显示`pub/media/domain_robot
 
 ### 按搜索引擎配置索引
 
-要在生产环境中激活`robots.txt`自定义项，请在Cloud Console的项目设置中启用搜索引擎对**1&rbrace;选项的索引：`<environment-name>`
+要在生产环境中激活`robots.txt`自定义项，请在Cloud Console上的项目设置中启用搜索引擎对`<environment-name>`选项的索引：
 
 - 旧版Cloud Console - URL遵循模式`https://<region-id>.magento.cloud/projects/<project_id>`
+
+  将设置[!UICONTROL Indexing by search engines] （旧版控制台） [!UICONTROL Hide from search engines] (Adobe控制台)切换为&#x200B;**On**。
+
+  ![使用[!DNL Cloud Console]管理环境](../../assets/robots-indexing-by-search-engine.png)
+
 - Adobe Cloud Console - URL遵循模式``https://console.adobecommerce.com/<username>/<project_id>``
 
-1. 将设置[!UICONTROL Indexing by search engines]切换为&#x200B;**On**。
+  取消选中设置[!UICONTROL Hide from search engines]。
 
-   ![使用[!DNL Cloud Console]管理环境](../../assets/robots-indexing-by-search-engine.png)
+- 您还可以使用magento-cloud CLI更新此设置：
 
-1. 取消选中设置[!UICONTROL Hide from search engines]。
-
-您还可以使用magento-cloud CLI更新此设置：
-
-```bash
-magento-cloud environment:info -p <project_id> -e production restrict_robots false
-```
+  ```bash
+  magento-cloud environment:info -p <project_id> -e production restrict_robots false
+  ```
 
 >[!NOTE]
 >
