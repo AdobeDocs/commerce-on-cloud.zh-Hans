@@ -2,16 +2,17 @@
 title: 部署到暂存和生产环境
 description: 了解如何在云基础架构上将Adobe Commerce代码部署到暂存环境和生产环境以进行进一步测试。
 feature: Cloud, Console, Deploy, SCD, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1cfeb472-c6ec-44ff-9b32-516ffa1b30d2
+source-git-commit: fe634412c6de8325faa36c07e9769cde0eb76c48
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1311'
 ht-degree: 0%
 
 ---
 
 # 部署到暂存和生产环境
 
-部署和上线的过程从开发开始，一直到暂存，最后是在生产环境中上线。 Adobe提供端到端环境解决方案，确保配置的一致性。 每个环境都支持对店面的直接URL访问，以及CLI命令的管理员和SSH访问。
+部署和上线的过程从开发开始，一直到暂存，最后是在生产环境中上线。 Adobe提供了一个端到端环境解决方案，以确保配置的一致性。 每个环境都支持对店面的直接URL访问，以及CLI命令的管理员和SSH访问。
 
 准备好部署存储时，必须先在暂存环境中完成部署和测试，然后才能部署到生产环境。 本节提供了有关构建和部署过程、迁移数据和内容以及测试的深入说明和信息。
 
@@ -23,7 +24,7 @@ ht-degree: 0%
 
 ## 入门部署流程
 
-Adobe建议从`master`分支创建一个`staging`分支，以最好地支持您的入门计划开发和部署。 然后，您的四个活动环境中有两个已准备就绪：`master`用于生产，`staging`用于暂存。
+Adobe建议从`staging`分支创建一个`master`分支，以最好地支持您的入门计划开发和部署。 然后，您的四个活动环境中有两个已准备就绪：`master`用于生产，`staging`用于暂存。
 
 有关进程的详细信息，请参阅[入门开发和部署工作流](../architecture/starter-develop-deploy-workflow.md)。
 
@@ -139,7 +140,7 @@ Cloud CLI提供用于部署代码的命令。 您需要SSH和Git权限才能访�
 
 ## 迁移静态文件
 
-[静态文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/glossary)存储在`mounts`中。 将文件从源装载位置（如本地环境）迁移到目标装载位置的方法有两种。 这两种方法都使用`rsync`实用程序，但Adobe建议使用`magento-cloud` CLI在本地和远程环境之间移动文件。 并且Adobe建议在将文件从远程源移动到其他远程位置时使用`rsync`方法。
+[静态文件](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)存储在`mounts`中。 将文件从源装载位置（如本地环境）迁移到目标装载位置的方法有两种。 这两种方法都使用`rsync`实用程序，但Adobe建议使用`magento-cloud` CLI在本地和远程环境之间移动文件。 在将文件从远程源移动到其他远程位置时，Adobe建议使用`rsync`方法。
 
 ### 使用CLI迁移文件
 
@@ -188,7 +189,7 @@ Are you sure you want to continue? [Y/n] Y
   total size is 154.57K  speedup is 18.23
 ```
 
-对`mount:upload`和`mount:download`命令使用`--help`选项查看更多选项。 例如，有一个`--delete`选项可在迁移期间删除无关文件。
+对`--help`和`mount:upload`命令使用`mount:download`选项查看更多选项。 例如，有一个`--delete`选项可在迁移期间删除无关文件。
 
 ### 使用rsync迁移文件
 
@@ -217,7 +218,7 @@ rsync -azvP <source> <destination>
 
    >[!TIP]
    >
-   >要在您的[!DNL Cloud Console]中找到&#x200B;**SSH访问**&#x200B;链接，请选择环境并单击&#x200B;**访问站点**。
+   >要在您的&#x200B;**中找到** SSH访问[!DNL Cloud Console]链接，请选择环境并单击&#x200B;**访问站点**。
 
    ```bash
    ssh -A <environment_ssh_link@ssh.region.magento.cloud>
@@ -245,7 +246,7 @@ rsync -azvP <source> <destination>
 >
 >集成环境数据库严格用于开发测试，可以包含您不希望迁移到暂存和生产环境的数据。
 
-对于连续集成部署，Adobe **不建议**&#x200B;将数据从集成迁移到暂存和生产环境。 您可以传递测试数据或覆盖重要数据。 在生成和部署期间使用[配置文件](../store/store-settings.md)和`setup:upgrade`命令传递任何重要配置。
+对于持续集成部署，Adobe **不建议**&#x200B;将数据从集成迁移到暂存和生产环境。 您可以传递测试数据或覆盖重要数据。 在生成和部署期间使用[配置文件](../store/store-settings.md)和`setup:upgrade`命令传递任何重要配置。
 
 >[!ENDSHADEBOX]
 
@@ -319,16 +320,10 @@ Adobe **建议**&#x200B;将数据从生产环境迁移到暂存环境，以完�
    drop database main;
    ```
 
-   对于生产：
+   对于生产和暂存环境：
 
    ```shell
-   drop database <cluster-id>;
-   ```
-
-   对于暂存：
-
-   ```shell
-   drop database <cluster-ID_stg>;
+   drop database <database_name>;
    ```
 
 1. 重新创建数据库。
