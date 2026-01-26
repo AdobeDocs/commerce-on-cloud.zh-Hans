@@ -21,7 +21,7 @@ Adobe在云基础架构订阅上激活Commerce后，初始项目和代码访问�
 
 ## 注册云帐户
 
-如果您在云基础架构上没有Adobe Commerce，请联系[销售人员](https://business.adobe.com/products/magento/get-demo.html)。 注册后，Adobe会创建您的帐户并向您发送一封欢迎电子邮件，为您提供有关如何访问项目界面的说明。 该电子邮件包含一个链接，以便您可以登录到帐户并完成初始项目设置。
+如果您在云基础架构上没有Adobe Commerce，请联系[销售人员](https://business.adobe.com/cn/products/magento/get-demo.html)。 注册后，Adobe会创建您的帐户并向您发送一封欢迎电子邮件，为您提供有关如何访问项目界面的说明。 该电子邮件包含一个链接，以便您可以登录到帐户并完成初始项目设置。
 
 ## 访问项目并添加用户
 
@@ -33,7 +33,7 @@ Adobe在云基础架构订阅上激活Commerce后，初始项目和代码访问�
 
 ### 共享帐户访问权限
 
-许可证所有者可以设置帐户的共享访问权限。 共享访问允许受信任的员工和服务提供商使用帮助中心提交和跟踪与云基础架构项目上的Adobe Commerce相关的支持工单。 有关设置说明，请参阅帮助中心中的[共享访问](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#shared-access)文章。
+许可证所有者可以设置帐户的共享访问权限。 共享访问允许受信任的员工和服务提供商使用帮助中心提交和跟踪与云基础架构项目上的Adobe Commerce相关的支持工单。 有关设置说明，请参阅帮助中心中的[共享访问](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#shared-access)文章。
 
 ### [!DNL Cloud Console]
 
