@@ -1,7 +1,7 @@
 ---
-source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
+source-git-commit: ee2ed3a78939af36572f0baa6672b2e9f9a2557f
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ## 钩子做什么
 
-- **自动检测**&#x200B;暂存的图像文件(PNG、JPG、JPEG、GIF、SVG)
+- **自动检测**&#x200B;个暂存的图像文件(PNG、JPG、JPEG、GIF)
 - **运行`image_optim`**&#x200B;以压缩和优化图像
 - **自动重新存放优化映像**
 - **确保所有已提交的映像**&#x200B;都已正确优化
@@ -85,11 +85,11 @@ Image optimization complete!
 ## 图像准则
 
 - **PNG**：用于屏幕截图和UI元素（将自动优化）
-- **SVG**：用于图标和简单图形（默认情况下禁用优化）
 - **JPEG**：用于照片（将自动优化）
 - **GIF**：用于动画（将自动优化）
+- **SVG**：用于图标和简单图形（不由挂接处理，按原样提交）
 
-预提交挂接将在提交时自动优化所有图像。
+预提交挂接将在提交时自动优化PNG、JPEG和GIF图像。
 
 ## 手动优化
 
@@ -107,7 +107,7 @@ bundle exec rake images:optimize path=../path/to/images
 - **PNG**：使用`advpng`、`optipng`和`pngquant`
 - **JPEG**：使用`jhead`、`jpegoptim`和`jpegtran`
 - **GIF**：使用`gifsicle`
-- **SVG**：默认情况下已禁用SVG优化（可能会破坏复杂的矢量图形和动画）
+- **SVG**：未处理（从检测中排除，以保留矢量图形和动画）
 
 ## 故障排除
 
@@ -141,7 +141,7 @@ bundle exec rake images:optimize path=../path/to/images
 - **PNG** (`.png`) — 无损和有损压缩
 - **JPEG** (`.jpg`， `.jpeg`) — 包含元数据清理的有损压缩
 - **GIF** (`.gif`) — 动画和静态优化
-- **SVG** (`.svg`) — 矢量优化（默认禁用）
+- **SVG** (`.svg`) — 未由挂接处理（按原样提交以保留质量）
 
 ## 最佳实践
 
