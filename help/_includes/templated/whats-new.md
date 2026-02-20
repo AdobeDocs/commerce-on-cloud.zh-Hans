@@ -23,7 +23,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">将New Relic帐户所有者</a>更改为<em>Commerce on Cloud Infrastructure指南</em>的说明。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">将New Relic帐户所有者</a>更改为<em>Commerce on Cloud Infrastructure指南</em>的说明。</p>
 </td>
       <td>
         技术
@@ -45,7 +45,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>向<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly服务概述</a>添加了以下有关源遮盖的信息。<br /> — 定义和通信流<br /> — 启用状态（自2021年以来在所有云项目中启用）已阻止的源URL示例<br />- REST API使用示例</p>
+      <td><p>向<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly服务概述</a>添加了以下有关源遮盖的信息。<br /> — 定义和通信流<br /> — 启用状态（自2021年以来在所有云项目中启用）已阻止的源URL示例<br />- REST API使用示例</p>
 </td>
       <td>
         技术
@@ -67,7 +67,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新了<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">设置OpenSearch服务</a>中示例的版本。</p>
+      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/opensearch">设置OpenSearch服务</a>中示例的版本。</p>
 </td>
       <td>
         反馈
