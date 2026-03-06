@@ -1,13 +1,13 @@
 ---
-source-git-commit: 1521b83be787fd7d8e0db302bfaea48f912af572
+source-git-commit: 603e8365fb20c90e9d54cb8c809cc51b5cd0ce9a
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '947'
 ht-degree: 3%
 
 ---
 # ece-tools
 
-**版本**： 2002.2.9
+**版本**： 2002.2.10
 
 此引用包含通过`ece-tools`命令行工具提供的34个命令。
 在云基础架构上的Adobe Commerce中使用`ece-tools list`命令自动生成初始列表。
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 ### 全局选项
 
-#### `--help`，`-h`
+#### `--help`, `-h`
 
 显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
@@ -32,21 +32,21 @@ ht-degree: 3%
 - 默认： `false`
 - 不接受值
 
-#### `--quiet`，`-q`
+#### `--quiet`, `-q`
 
 仅显示错误。 所有其他输出都将被抑制
 
 - 默认： `false`
 - 不接受值
 
-#### `--verbose`，`-v|-vv|-vvv`
+#### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
 
-#### `--version`，`-V`
+#### `--version`, `-V`
 
 显示此应用程序版本
 
@@ -65,7 +65,7 @@ ht-degree: 3%
 
 - 不接受值
 
-#### `--no-interaction`，`-n`
+#### `--no-interaction`, `-n`
 
 不要问任何交互式问题
 
@@ -85,32 +85,32 @@ ece-tools _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT]
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--shell`，`-s`
+#### `--shell`, `-s`
 
 壳类型(“bash”、“fish”、“zsh”)
 
 - 需要一个值
 
-#### `--input`，`-i`
+#### `--input`, `-i`
 
 输入令牌的数组（例如COMP_WORDS或argv）
 
 - 默认： `[]`
 - 需要一个值
 
-#### `--current`，`-c`
+#### `--current`, `-c`
 
 光标所在的“输入”数组的索引（例如COMP_CWORD）
 
 - 需要一个值
 
-#### `--api-version`，`-a`
+#### `--api-version`, `-a`
 
 完成脚本的API版本
 
 - 需要一个值
 
-#### `--symfony`，`-S`
+#### `--symfony`, `-S`
 
 已弃用
 
@@ -206,14 +206,14 @@ ece-tools db-dump [-d|--remove-definers] [-a|--dump-directory DUMP-DIRECTORY] [-
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--remove-definers`，`-d`
+#### `--remove-definers`, `-d`
 
 从数据库转储中删除定义符
 
 - 默认： `false`
 - 不接受值
 
-#### `--dump-directory`，`-a`
+#### `--dump-directory`, `-a`
 
 使用替代目录保存转储
 
@@ -413,7 +413,7 @@ ece-tools backup:restore [-f|--force] [--file [FILE]]
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--force`，`-f`
+#### `--force`, `-f`
 
 在还原备份期间覆盖现有文件
 
@@ -646,7 +646,7 @@ ece-tools error:show [-j|--json] [--] [<error-code>]
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--json`，`-j`
+#### `--json`, `-j`
 
 用于以JSON格式获取结果
 
