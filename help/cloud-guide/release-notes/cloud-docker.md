@@ -5,9 +5,9 @@ feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
+source-git-commit: c668b984ae4353757adfde23fd5c028c80b9d2a7
 workflow-type: tm+mt
-source-wordcount: '3806'
+source-wordcount: '4437'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,15 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.6 {#latest}
+## v1.4.7 {#latest}
+
+发行日期： 2026年3月5日
+
+- ![新图标](../../assets/new.svg) **PHP 8.5** — 添加了对PHP 8.5的支持。<!-- MCLOUD-14180 -->
+- ![新图标](../../assets/new.svg) **已添加`php-cli`和`php-fpm` 8.5映像** — 已添加支持PHP 8.5的新Cloud Docker映像（CLI和FPM）。<!-- MCLOUD-14178 -->
+- ![新图标](../../assets/new.svg) **添加了PHP 8.5和Opensearch 3.0 docker映像生成命令** — 解决了Docker网络隔离（包括ARM64），修复了集成测试并为Docker映像生成命令添加了PHP 8.5和OpenSearch 3.0支持。<!-- MCLOUD-14523 -->
+
+## v1.4.6
 
 发行日期： 2025年11月13日
 
@@ -78,8 +86,8 @@ ht-degree: 0%
 发行日期： 2024年4月8日
 
 - ![新图标](../../assets/new.svg) **PHP** — 添加了对PHP 8.3和PHP 8.3映像的支持。
-- ![新图标](../../assets/new.svg) **Nginx** — 已添加图像nginx v. 1.24。
-- ![新图标](../../assets/new.svg) **Opensearch** — 已添加OpenSearch v. 2.12、1.3。
+- ![新图标](../../assets/new.svg) **Nginx** — 已添加图像nginx v。 1.24.
+- ![新图标](../../assets/new.svg) **Opensearch** — 已添加OpenSearch v. 2.12, 1.3.
 - ![新图标](../../assets/new.svg) **Composer** — 已将Composer版本更新为2.2.23。
 
 ## v1.3.6
@@ -87,7 +95,7 @@ ht-degree: 0%
 发行日期： 2023年7月31日
 
 - ![新图标](../../assets/new.svg) **已添加新的服务版本**—OpenSearch 2.5。
-- ![新图标](../../assets/new.svg) **启用编辑器缓存** — 现在，您可以扩展Docker配置以在启动Docker容器时启用编辑器清除缓存。 请参阅[Cloud Docker for Commerce](https://developer.adobe.com/commerce/cloud-tools/docker/configure/)指南中的&#x200B;_扩展Docker配置_。
+- ![新图标](../../assets/new.svg) **启用编辑器缓存** — 现在，您可以扩展Docker配置以在启动Docker容器时启用编辑器清除缓存。 请参阅&#x200B;_Cloud Docker for Commerce_&#x200B;指南中的[扩展Docker配置](https://developer.adobe.com/commerce/cloud-tools/docker/configure/)。
 
 ## v1.3.5
 
@@ -140,7 +148,7 @@ ht-degree: 0%
 
 发行日期： 2021年10月25日
 
-- ![修复图标](../../assets/fix.svg) **改进开发人员模式工作流** — 以前，您需要在生成和部署步骤中指定模式。 现在，`--mode`步骤中的`build`选项决定了稍后`deploy`步骤中的模式。 不再需要设置部署后的模式。 查看[开发人员模式](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/developer-mode).<!-- ACMP-1086 -->
+- ![修复图标](../../assets/fix.svg) **改进开发人员模式工作流** — 以前，您需要在生成和部署步骤中指定模式。 现在，`build`步骤中的`--mode`选项决定了稍后`deploy`步骤中的模式。 不再需要设置部署后的模式。 查看[开发人员模式](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/developer-mode).<!-- ACMP-1086 -->
 - ![修复图标](../../assets/fix.svg) **只读文件系统的改进**—<!-- ACMP-1106 -->
    - 修复了启动邮件配置的PHP容器时出现的问题。
    - 可以在INI文件中使用环境变量。
@@ -162,18 +170,18 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **添加了PHP 8.0** — 已将PHP更新为版本8.0，允许您利用PHP 8.0包含的所有新功能和优化。<!--MCLOUD-7941-->
 - ![新图标](../../assets/new.svg) **已更新为Varnish 6.6和Elasticsearch 7.11.2** — 以下链接提供有关[Varnish缓存6.6](https://varnish-cache.org/releases/rel6.6.0.html#rel6-6-0)和Elasticsearch 7.11.2.<!--MCLOUD-7921-->的发行信息
-- ![新图标](../../assets/new.svg) **为PHP 7.4映像`ioncube`添加了**&#x200B;扩展 — 在最初从PHP 7.3升级到PHP 7.4后，`ioncube`扩展已重新添加到PHP 7.4映像。 *[由mattskr](https://github.com/magento/magento-cloud-docker/pull/314)提交。*<!--PR #314-->
-- ![新图标](../../assets/new.svg) **添加了一个文件同步选项：`manual-native`** — `manual-native`文件同步选项提供了对同步的手动控制，为macOS和Windows环境提供了最佳性能。 阅读有关在`manual-native`开发人员模式[中使用](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/developer-mode)选项以及在Docker开发人员环境中同步数据[的信息。](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data#file-synchronization-options)<!--MCLOUD-7977-->
-- ![新图标](../../assets/new.svg) **已从`up`和`down`命令中删除卷删除** — 已从`--volume`和`bin/magento-docker up`命令中删除`bin/magento-docker down`选项，替换为带有数据丢失警告的新`bin/magento-docker init`命令。 此更改有助于防止意外数据丢失。 *[由joeshelton-wagento提交](https://github.com/magento/magento-cloud-docker/pull/319)。*<!--PR #319-->
-- ![修复图标](../../assets/fix.svg) **已更新生成的证书的`CN`值** — 已从Dockerfile中删除硬编码的`CN`值。 此值创建了一个证书错误(`NET::ERR_CERT_INVALID`)，导致忽略了`--host`命令的`ece-docker build:compose`选项。<!--MCLOUD-7934-->
+- ![新图标](../../assets/new.svg) **为PHP 7.4映像**&#x200B;添加了`ioncube`扩展 — 在最初从PHP 7.3升级到PHP 7.4后，`ioncube`扩展已重新添加到PHP 7.4映像。*[由mattskr](https://github.com/magento/magento-cloud-docker/pull/314).*<!--PR #314-->&#x200B;提交
+- ![新图标](../../assets/new.svg) **添加了一个文件同步选项：`manual-native`** — `manual-native`文件同步选项提供了对同步的手动控制，为macOS和Windows环境提供了最佳性能。 阅读有关在[开发人员模式](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/developer-mode)中使用`manual-native`选项以及在Docker开发人员环境中同步数据](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data#file-synchronization-options)的信息。<!--MCLOUD-7977-->[
+- ![新图标](../../assets/new.svg) **已从`up`和`down`命令中删除卷删除** — 已从`bin/magento-docker up`和`bin/magento-docker down`命令中删除`--volume`选项，替换为带有数据丢失警告的新`bin/magento-docker init`命令。 此更改有助于防止意外数据丢失。*[由joeshelton-wagento](https://github.com/magento/magento-cloud-docker/pull/319).*<!--PR #319-->&#x200B;提交
+- ![修复图标](../../assets/fix.svg) **已更新生成的证书的`CN`值** — 已从Dockerfile中删除硬编码的`CN`值。 此值创建了一个证书错误(`NET::ERR_CERT_INVALID`)，导致忽略了`ece-docker build:compose`命令的`--host`选项。<!--MCLOUD-7934-->
 
 ## v1.2.2
 
 发行日期： 2021年4月20日
 
-- ![新图标](../../assets/new.svg) **已更新`host.docker.internal`以独立于平台** — 您现在可以为Ubuntu、Windows和macOS创建相同的Docker撰写脚本。 在Ubuntu上使用Xdebug不再需要单独的环境变量。 由Igor Vitol[提交的](https://github.com/magento/magento-cloud-docker/pull/299)修复。<!--Issue #298-->
-- ![新图标](../../assets/new.svg) **已更新init-docker.sh** — 已将`mounts`对象添加到`MAGENTO_CLOUD_APPLICATION`环境变量。 由Chiranjevi提交的[修复](https://github.com/magento/magento-cloud-docker/pull/299)。<!--Issue #299-->
-- ![新图标](../../assets/new.svg) **已更新init-docker.sh** — 已使用PHP 7.4和Cloud Docker 1.2.1版本更新`init-docker.sh`脚本。 由Adarsh Manickam提交的[修复](https://github.com/magento/magento-cloud-docker/pull/300)。<!--Issue #300-->
+- ![新图标](../../assets/new.svg) **已更新`host.docker.internal`以独立于平台** — 您现在可以为Ubuntu、Windows和macOS创建相同的Docker撰写脚本。 在Ubuntu上使用Xdebug不再需要单独的环境变量。[由Igor Vitol](https://github.com/magento/magento-cloud-docker/pull/299).<!--Issue #298-->提交的修复
+- ![新图标](../../assets/new.svg) **已更新init-docker.sh** — 已将`mounts`对象添加到`MAGENTO_CLOUD_APPLICATION`环境变量。[由Chiranjevi](https://github.com/magento/magento-cloud-docker/pull/299).<!--Issue #299-->提交的修复
+- ![新图标](../../assets/new.svg) **已更新init-docker.sh** — 已使用PHP 7.4和Cloud Docker 1.2.1版本更新`init-docker.sh`脚本。[由Adarsh Manickam](https://github.com/magento/magento-cloud-docker/pull/300).<!--Issue #300-->提交的修复
 - ![新图标](../../assets/new.svg) **默认情况下启用** — 默认情况下在PHP Docker映像中启用`sodium` PHP扩展。<!--MCLOUD-7548-->
 - ![新图标](../../assets/new.svg) **`custom-registry`选项** — 已将`--custom-registry`选项添加到`php ./vendor/bin/ece-docker build:compose`命令以使用您自己的图像注册表。<!--MCLOUD-7476-->
 
@@ -186,7 +194,7 @@ ht-degree: 0%
 - ![修复图标](../../assets/fix.svg) **已启用`opcache.validate_timestamps`** — 在开发人员模式下默认启用`opcache.validate_timestamps` PHP设置。 启用此设置修复了在Docker中无法识别文件系统更改的问题。<!--MCLOUD-7466-->
 - ![修复图标](../../assets/fix.svg) **修复`build:custom:compose`** — 修复了`build:custom:compose`命令，以便在生成过程中无法覆盖文件时引发错误。 引发错误可防止`docker-compose up`使用错误文件的情况。<!--MCLOUD-7457-->
 - ![修复图标](../../assets/fix.svg) **修复`--sync_engine="native"`选项** — 修复了在生产模式(`--mode="production"`)中，`--sync_engine="native"`选项不会在`docker.composer.yml`文件中为本地文件夹创建任何条目的问题。<!--MCLOUD-7254-->
-- ![修复图标](../../assets/fix.svg) **修复的服务版本验证错误** — 已将[!DNL RabbitMQ]、Elasticsearch和其他服务的服务版本添加到`type`变量中的`MAGENTO_CLOUD_RELATIONSHIP`属性。 将这些版本添加到`relationships`变量修复了在部署阶段发生的验证错误。<!--MCLOUD-7572-->
+- ![修复图标](../../assets/fix.svg) **修复的服务版本验证错误** — 已将[!DNL RabbitMQ]、Elasticsearch和其他服务的服务版本添加到`MAGENTO_CLOUD_RELATIONSHIP`变量中的`type`属性。 将这些版本添加到`relationships`变量修复了在部署阶段发生的验证错误。<!--MCLOUD-7572-->
 
 ## v1.2.1
 
@@ -213,7 +221,7 @@ ht-degree: 0%
 
 - ![修复图标](../../assets/fix.svg) **无效的卷命名** — 修复了在开发人员模式下无效的卷命名错误。<!--MCLOUD-7442-->
 
-- ![修复图标](../../assets/fix.svg) **NGINX上游端口** — 已更新Docker NGINX 1.19映像以使用端口8080以避免无限循环。 由Adarsh Manickam提交的[修复](https://github.com/magento/magento-cloud-docker/pull/296)。<!--Issue 295-->
+- ![修复图标](../../assets/fix.svg) **NGINX上游端口** — 已更新Docker NGINX 1.19映像以使用端口8080以避免无限循环。[由Adarsh Manickam](https://github.com/magento/magento-cloud-docker/pull/296).<!--Issue 295-->提交的修复
 
 ## v1.2.0
 
@@ -221,7 +229,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **容器更新 —**
 
-   - ![新图标](../../assets/new.svg) **PHP-FPM容器** — 添加了对gnupg PHP扩展的支持。 G Arvind从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/210).<!--MCLOUD-5981-->
+   - ![新图标](../../assets/new.svg) **PHP-FPM容器** — 添加了对gnupg PHP扩展的支持。[Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/210).<!--MCLOUD-5981-->的G Arvind提交的修复
 
    - ![修复图标](../../assets/fix.svg) **数据库容器** — 通过将所需的数据库密码添加到运行状况检查命令来修复数据库容器运行状况检查。<!--MCLOUD-7122-->
 
@@ -235,19 +243,19 @@ ht-degree: 0%
 
    - ![新图标](../../assets/new.svg) **CLI容器**
 
-      - **在Docker PHP容器中运行命令** — 现在，您可以使用Cloud Docker CLI在Docker环境中的PHP容器中运行命令，而无需在主机上安装PHP。 例如，以下命令构建配置： `./bin/magento-docker php 7.3 vendor/bin/ece-docker build:compose`。 请参阅[Cloud Docker CLI](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli)。 G Arvind从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/209).<!--MCLOUD-5982-->
+      - **在Docker PHP容器中运行命令** — 现在，您可以使用Cloud Docker CLI在Docker环境中的PHP容器中运行命令，而无需在主机上安装PHP。 例如，以下命令构建配置： `./bin/magento-docker php 7.3 vendor/bin/ece-docker build:compose`。 查看[Cloud Docker CLI](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli)。[Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/209).<!--MCLOUD-5982-->的G Arvind提交的修复
 
       - 将OpenSSH-client添加到PHP CLI容器。 现在，如果`composer.json`文件包含需要ssh客户端使用编辑器命令的私有Git存储库，则可以使用Composer的ssh代理转发。<!--MCLOUD-6008-->
 
    - ![修复图标](../../assets/fix.svg) **TLS容器** — 现在，[TLS容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container)基于`https://hub.docker.com/r/magento/magento-cloud-docker-nginx` Docker映像，而不是CentOS映像。 此更改修复了在Cloud Docker环境中的容器之间发送HTTPS请求时导致错误的问题。<!--MCLOUD-6469-->
 
-   - ![新图标](../../assets/new.svg) **测试容器** — 添加了用于应用程序测试的测试容器，并向Docker `--with-test`命令添加了`build:compose`选项，以便仅在Docker环境中测试时创建容器。 查看[应用程序测试](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing).<!--MCLOUD-6394-->
+   - ![新图标](../../assets/new.svg) **测试容器** — 添加了用于应用程序测试的测试容器，并向Docker `build:compose`命令添加了`--with-test`选项，以便仅在Docker环境中测试时创建容器。 查看[应用程序测试](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing).<!--MCLOUD-6394-->
 
    - ![新图标](../../assets/new.svg) **FPM-XDEBUG容器**
 
       - ![新图标](../../assets/new.svg) **在Linux上配置Xdebug** — 已将`--set-docker-host`选项添加到`ece-docker build:compose`命令以在Xdebug容器中配置`host.docker.internal`值。 在Linux系统上使用Xdebug时需要此选项。 请参阅[为Docker配置Xdebug](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug)。<!--MCLOUD-6430-->
 
-      - ![修复图标](../../assets/fix.svg)修复了Docker ENTRYPOINT的Xdebug变量配置以解决日志中的`uninitialized "with_xdebug" variable`错误。 由Florent Olivaud提交的[修复](https://github.com/magento/magento-cloud-docker/pull/218)<!--MCLOUD-6043-->
+      - ![修复图标](../../assets/fix.svg)修复了Docker ENTRYPOINT的Xdebug变量配置以解决日志中的`uninitialized "with_xdebug" variable`错误。[由Florent Olivaud提交的修复](https://github.com/magento/magento-cloud-docker/pull/218)<!--MCLOUD-6043-->
 
 - ![新图标](../../assets/new.svg) **Docker配置更改**
 
@@ -255,7 +263,7 @@ ht-degree: 0%
 
    - 对于Cloud Docker for Commerce 1.2.0及更高版本，Adobe现在为每个修补程序版本提供Docker图像，并且Docker配置生成器使用指定的修补程序版本创建Docker配置，而不是使用最新的修补程序版本。 以前，Docker配置生成器使用最新的修补程序版本构建配置，该版本可能会破坏使用早期版本构建的Commerce环境的Cloud Docker。<!--MCLOUD-7093-->
 
-   - **在自定义Cloud Docker配置中指定自定义图像和版本** — 在生成自定义Docker编写配置文件(`build:custom:compose`)时更新了包含用于指定自定义图像和版本的选项的`docker-compose.yaml`命令。 请参阅[生成自定义Docker撰写配置](https://developer.adobe.com/commerce/cloud-tools/docker/configure/custom-docker-compose)。<!--MCLOUD-7089-->
+   - **在自定义Cloud Docker配置中指定自定义图像和版本** — 在生成自定义Docker编写配置文件(`docker-compose.yaml`)时更新了包含用于指定自定义图像和版本的选项的`build:custom:compose`命令。 请参阅[生成自定义Docker撰写配置](https://developer.adobe.com/commerce/cloud-tools/docker/configure/custom-docker-compose)。<!--MCLOUD-7089-->
 
    - 更新了Docker主机配置以公开端口443，从而允许从所有CLI容器访问Adobe Commerce (`https://magento2.docker`)。 在生成Docker配置文件时，可通过添加`--tls-port`选项更改默认端口。<!--MCLOUD-6806-->
 
@@ -298,7 +306,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **对Adobe Commerce和Magento Open Source部署的支持** — 现在您可以使用适用于Commerce的Cloud Docker为云基础架构上未在Adobe Commerce上托管的项目部署本地开发环境。<!--MCLOUD-5667-->
 
-- ![新图标](../../assets/new.svg) **Blackfire.io支持** — 添加了对使用[Blackfire.io扩展](https://developer.adobe.com/commerce/cloud-tools/docker/test/blackfire)进行自动性能测试的支持。 由Adarsh Manickam从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/202)<!--MCLOUD-5857-->
+- ![新图标](../../assets/new.svg) **Blackfire.io支持** — 添加了对使用[Blackfire.io扩展](https://developer.adobe.com/commerce/cloud-tools/docker/test/blackfire)进行自动性能测试的支持。[Adarsh Manickam从Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/202)<!--MCLOUD-5857-->提交的修复
 
 - ![新图标](../../assets/new.svg) **容器更新**
 
@@ -316,11 +324,11 @@ ht-degree: 0%
 
       - 添加了对PHP 7.4的支持。[Mohanela Murugan从Zilker Technology提交的修复](https://github.com/magento/magento-cloud-docker/pull/198)<!--MCLOUD-198-->
 
-      - 添加了将根项目目录中的`php.ini`文件复制到Cloud Docker环境并将自定义PHP设置应用到PHP-FPM和CLI容器的功能。 请参阅[自定义PHP设置](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#customize-php-settings)。 Mathew Beane从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/130).<!--MCLOUD-6012-->
+      - 添加了将根项目目录中的`php.ini`文件复制到Cloud Docker环境并将自定义PHP设置应用到PHP-FPM和CLI容器的功能。 请参阅[自定义PHP设置](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#customize-php-settings)。[Mathew Beane从Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/130).<!--MCLOUD-6012-->提交的修复
 
-      - 添加了容器运行状况检查。 Visanth Sampath从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/188)。<!--MCLOUD-5752-->
+      - 添加了容器运行状况检查。[Visanth Sampath从Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/188).<!--MCLOUD-5752-->提交的修复
 
-   - ![修复图标](../../assets/fix.svg) **Node.js** — 已将默认Node.js版本从版本8更新到版本10，以提高安全性。 Node.js版本8已弃用，不会再更新为错误修复或安全修补程序。 Mohan Elamurugan从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/183)。<!--MCLOUD-5586-->
+   - ![修复图标](../../assets/fix.svg) **Node.js** — 已将默认Node.js版本从版本8更新到版本10，以提高安全性。 Node.js版本8已弃用，不会再更新为错误修复或安全修补程序。[Mohan Elamurugan从Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/183).<!--MCLOUD-5586-->提交的修复
 
    - ![新图标](../../assets/new.svg) **Elasticsearch**
 
@@ -342,7 +350,7 @@ ht-degree: 0%
 
    - 通过增加Nginx服务器的`fastcgi_buffers`值，改进了处理来自上游PHP-FPM容器的大型响应的能力。<!--MCLOUD-5980-->
 
-   - 通过添加第二个同步会话来同步`vendor`目录中的文件，提高了突变文件同步性能。 此更改可防止突变在文件同步过程中卡住。 Mathew Beane从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
+   - 通过添加第二个同步会话来同步`vendor`目录中的文件，提高了突变文件同步性能。 此更改可防止突变在文件同步过程中卡住。[Mathew Beane从Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->提交的修复
 
    - ![新图标](../../assets/new.svg) **CLI命令更新**
 
@@ -357,17 +365,17 @@ ht-degree: 0%
 | 指定自定义基本URL | `./vendor/bin/ece-docker build:compose --host=<hostname> --port=<port-number>`<!--MCLOUD-3063--> |
 | [添加Xdebug配置的容器](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug) | `.vendor/bin/ece-docker build:compose --mode developer --sync-engine native --with-xdebug`<!--MCLOUD-4098--> |
 
-- ![修复图标](../../assets/fix.svg)修复了mutagen文件同步的配置，以防止创建mutagen过时会话。 Mathew Beane从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
+- ![修复图标](../../assets/fix.svg)修复了mutagen文件同步的配置，以防止创建mutagen过时会话。[Mathew Beane从Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->提交的修复
 
-- ![修复图标](../../assets/fix.svg)修复了在启动PHP-FPM容器时导致Docker撰写日志中出现语法错误的配置问题。 Mathew Beane从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/129)<!--MCLOUD-3958-->
+- ![修复图标](../../assets/fix.svg)修复了在启动PHP-FPM容器时导致Docker撰写日志中出现语法错误的配置问题。[Mathew Beane从Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/129)<!--MCLOUD-3958-->提交的修复
 
-- ![修复图标](../../assets/fix.svg)修复了在使用多个Docker环境时有时发生的卷冲突错误。 G Arvind从Zilker Technology[提交的](https://github.com/magento/magento-cloud-docker/pull/168)修复。
+- ![修复图标](../../assets/fix.svg)修复了在使用多个Docker环境时有时发生的卷冲突错误。[由Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/168)的G Arvind提交的修复。
 
-- ![修复图标](../../assets/fix.svg)修复了在配置包含Blackfire.io时导致`ece-docker build:compose`命令失败的问题。 G Arvind从Zilker Technology[提交的](https://github.com/magento/magento-cloud-docker/pull/199)修复。<!--MCLOUD-5797-->
+- ![修复图标](../../assets/fix.svg)修复了在配置包含Blackfire.io时导致`ece-docker build:compose`命令失败的问题。[Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/199)的G Arvind提交的修复。<!--MCLOUD-5797-->
 
-- ![修复图标](../../assets/fix.svg)更新了PHP CLI映像配置，以防止在使用Cloud Docker for Commerce安装多个包时发生内存不足错误。 Mohan Elamurugan从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/197)。*<!--MCLOUD-5818-->
+- ![修复图标](../../assets/fix.svg)更新了PHP CLI映像配置，以防止在使用Cloud Docker for Commerce安装多个包时发生内存不足错误。[Mohan Elamurugan从Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/197).*<!--MCLOUD-5818-->提交的修复
 
-- ![修复图标](../../assets/fix.svg)在Cloud Docker环境中添加了对多个MySQL用户的支持。 在早期版本中，如果`build:compose`文件指定了多个数据库用户，则`magento.app.yaml`操作失败。 G Arvind从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/181).<!--MCLOUD-5670-->
+- ![修复图标](../../assets/fix.svg)在Cloud Docker环境中添加了对多个MySQL用户的支持。 在早期版本中，如果`magento.app.yaml`文件指定了多个数据库用户，则`build:compose`操作失败。[Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/181).<!--MCLOUD-5670-->的G Arvind提交的修复
 
 - ![修复图标](../../assets/fix.svg)已从Commerce PHP容器的Cloud Docker中删除`rsyslog`以解决在部署期间导致警告通知的兼容性问题。 Cloud Docker不使用rsyslog实用工具。<!--MCLOUD-6173-->
 
@@ -377,7 +385,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **已创建单独的包以交付`Cloud Docker for Commerce`** — 已将用于交付Cloud Docker for Commerce的源代码从`ece-tools`存储库移动到[新`magento-cloud-docker`存储库](https://github.com/magento/magento-cloud-docker)，以保持代码质量并提供独立的版本。 新软件包依赖于ECE-Tools v2002.1.0及更高版本。
 
-  当您更新ece-tools时，您还将`magento/magento-cloud-docker`包更新到1.0.0版本。如果您使用具有早期`ece-tools`版本(2002.0.x)的Cloud Docker for Commerce，请查看[向后不兼容](backward-incompatible-changes.md)，并根据需要以脚本、命令和进程的形式更新您的项目。
+  当您更新ece-tools时，您还将`magento/magento-cloud-docker`包更新到1.0.0版本。 如果您使用具有早期`ece-tools`版本(2002.0.x)的Cloud Docker for Commerce，请查看[向后不兼容](backward-incompatible-changes.md)，并根据需要以脚本、命令和进程的形式更新您的项目。
 
 - ![新图标](../../assets/new.svg) **已向Docker映像添加版本控制** — 您现在必须更新`magento/magento-cloud-docker`包才能获取更新的映像。<!--MAGECLOUD-4737-->
 
@@ -409,17 +417,17 @@ ht-degree: 0%
 
          - **`TimeOut`** — 设置首字节时间(TTFB)超时值。 默认值为300秒。
 
-         - **`RewriteLocation`** — 确定英镑代理是否默认将位置重写到请求URL。 默认值为`0`，以防止重写中断对外部网站（如外部SSO网站）的重定向。 由Sorin Sugar提交的[修复](https://github.com/magento/magento-cloud-docker/pull/37)<!--MAGECLOUD-4061-->
+         - **`RewriteLocation`** — 确定英镑代理是否默认将位置重写到请求URL。 默认值为`0`，以防止重写中断对外部网站（如外部SSO网站）的重定向。[由Sorin Sugar提交的修复](https://github.com/magento/magento-cloud-docker/pull/37)<!--MAGECLOUD-4061-->
 
-      - ![新图标](../../assets/new.svg)已将TLS容器配置中的超时值从15秒增加到300秒。 Mathew Beane从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
+      - ![新图标](../../assets/new.svg)已将TLS容器配置中的超时值从15秒增加到300秒。[Mathew Beane从Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->提交的修复
 
    - ![新图标](../../assets/new.svg) **清漆容器**—
 
       - ![新图标](../../assets/new.svg) **已更新容器基础图像以使用正式图像**— [云上光容器](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#varnish-container)现在基于正式的`centos` Docker图像。<!--MAGECLOUD-4163-->
 
-      - ![新图标](../../assets/new.svg) **已改进默认超时配置** — 已将`.first_byte_timeout`和`.between_bytes_timeout`配置添加到Varnish容器。 这两个超时值都默认为`300s`（5分钟）。 Mathew Beane从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
+      - ![新图标](../../assets/new.svg) **已改进默认超时配置** — 已将`.first_byte_timeout`和`.between_bytes_timeout`配置添加到Varnish容器。 这两个超时值都默认为`300s`（5分钟）。[Mathew Beane从Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->提交的修复
 
-      - ![修复图标](../../assets/fix.svg) **在Xdebug会话期间跳过涂漆** — 更新了涂漆容器配置以在启用Xdebug时收到请求时返回`pass`。 在以前的版本中，如果Docker环境包含Varnish，则无法使用Xdebug。 Mathew Beane从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/111).<!--MAGECLOUD-4873-->
+      - ![修复图标](../../assets/fix.svg) **在Xdebug会话期间跳过涂漆** — 更新了涂漆容器配置以在启用Xdebug时收到请求时返回`pass`。 在以前的版本中，如果Docker环境包含Varnish，则无法使用Xdebug。[Mathew Beane从Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/111).<!--MAGECLOUD-4873-->提交的修复
 
 - ![新图标](../../assets/new.svg) **Docker配置更改**—
 
@@ -435,17 +443,17 @@ ht-degree: 0%
 
    - ![修复图标](../../assets/fix.svg)已将`./bin/docker`文件重命名为`./bin/magento-docker`以修复由于`./bin/docker`文件覆盖现有Docker二进制文件而导致某些Docker环境中断的问题。 这是[向后不兼容的更改](backward-incompatible-changes.md)，需要更新脚本和命令。<!-- MAGECLOUD-4038 -->
 
-   - ![新图标](../../assets/new.svg) **添加了一个服务配置选项以将数据库端口公开给主机** — 在构建`--expose-db-port= [Fix submitted by Adarsh Manickam from Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/101).<PORT>`文件时使用`docker-compose.yml`选项将数据库端口公开给主机： `bin/ece-docker build:compose --expose-db-port=<PORT>`<!--MAGECLOUD-4454-->
+   - ![新图标](../../assets/new.svg) **添加了一个服务配置选项以将数据库端口公开给主机** — 在构建`docker-compose.yml`文件时使用`--expose-db-port= [Fix submitted by Adarsh Manickam from Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/101).<PORT>`选项将数据库端口公开给主机： `bin/ece-docker build:compose --expose-db-port=<PORT>`<!--MAGECLOUD-4454-->
 
-   - ![新图标](../../assets/new.svg) **新部署后命令** — 以前，在使用`.magento.app.yaml`命令将Adobe Commerce部署到Cloud Docker容器后，`cloud-deploy`文件中定义的部署后挂接会自动运行。 现在，您必须发出单独的`cloud-post-deploy`命令以在部署后运行部署后挂接。 查看[开发人员](https://developer.adobe.com/commerce/cloud-tools/docker/deploy)和[生产](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode)模式的更新启动说明。<!--MAGECLOUD-3996-->
+   - ![新图标](../../assets/new.svg) **新部署后命令** — 以前，在使用`cloud-deploy`命令将Adobe Commerce部署到Cloud Docker容器后，`.magento.app.yaml`文件中定义的部署后挂接会自动运行。 现在，您必须发出单独的`cloud-post-deploy`命令以在部署后运行部署后挂接。 查看[开发人员](https://developer.adobe.com/commerce/cloud-tools/docker/deploy)和[生产](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode)模式的更新启动说明。<!--MAGECLOUD-3996-->
 
    - ![新图标](../../assets/new.svg)已将`--rm`选项添加到生成和部署容器的`./bin/magento-docker`命令。 任务完成后，这将删除容器。<!--MAGECLOUD-4205-->
 
    - ![新图标](../../assets/new.svg) **对`build:compose`命令的更新**—
 
-      - ![新图标](../../assets/new.svg)在`--sync-engine="native"`命令中添加了`docker-build`选项，以在开发人员模式下生成Docker撰写配置文件时禁用文件同步。 在Linux系统上开发时，使用此选项，这些系统不需要文件同步以进行本地Docker开发。 请参阅[在Docker环境中同步数据](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data).<!--MCLOUD-3231, MCLOUD-3890-->
+      - ![新图标](../../assets/new.svg)在`docker-build`命令中添加了`--sync-engine="native"`选项，以在开发人员模式下生成Docker撰写配置文件时禁用文件同步。 在Linux系统上开发时，使用此选项，这些系统不需要文件同步以进行本地Docker开发。 请参阅[在Docker环境中同步数据](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data).<!--MCLOUD-3231, MCLOUD-3890-->
 
-   - ![新图标](../../assets/new.svg)已将默认文件同步设置从`docker-sync`更改为`native`。 Mathew Beane从Zilker Technology提交的[修复](https://github.com/magento/magento-cloud-docker/pull/124).<!--MAGECLOUD-5066-->
+   - ![新图标](../../assets/new.svg)已将默认文件同步设置从`docker-sync`更改为`native`。[Mathew Beane从Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/124).<!--MAGECLOUD-5066-->提交的修复
 
 - ![新图标](../../assets/new.svg) **验证改进**—
 
