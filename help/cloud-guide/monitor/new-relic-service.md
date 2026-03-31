@@ -3,9 +3,10 @@ title: New Relic服务
 description: 了解Adobe Commerce在云基础架构项目中提供的New Relic服务。
 feature: Cloud, Observability
 last-substantial-update: 2023-09-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 10966241-311d-4b68-804d-4c9569bf933d
+source-git-commit: 3784e7b2ddc8f6ae20fd2c6fd557f2408d870cf2
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -23,6 +24,8 @@ ht-degree: 0%
 >[!INFO]
 >
 >Adobe Commerce项目上不提供其他New Relic功能。
+>
+>Cloud上的Adobe Commerce客户无法将外部服务器中的数据直接集成或发送到其配置的New Relic帐户中。 New Relic服务仅限用于监控Commerce Cloud应用程序环境。 只有应用程序本身调用的第三方服务（例如，运行时调用的外部API或服务）才能在New Relic中跟踪和监控。
 
 ## NEW RELIC APM
 
