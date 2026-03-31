@@ -19,7 +19,7 @@ ht-degree: 0%
 
 您可以在安装Commerce期间使用下表中的管理员变量覆盖管理员用户凭据。
 
-如果要在安装后更改值，请使用SSH连接到您的环境，并使用Adobe Commerce CLI [`admin:user`命令](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html)创建或编辑Admin用户凭据。
+如果要在安装后更改值，请使用SSH连接到您的环境，并使用Adobe Commerce CLI [`admin:user`命令](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=zh-Hans)创建或编辑Admin用户凭据。
 
 | 变量 | 默认 | 描述 |
 | -------------- | --------------------------- | ----------- |
@@ -38,9 +38,9 @@ ht-degree: 0%
 
 ### 更改管理员URL
 
-默认情况下，[Commerce管理员](https://experienceleague.adobe.com/docs/commerce-admin/start/admin/admin.html) URL设置为&#x200B;*&lt;域名>/管理员*。 出于安全原因，Adobe建议将其更改为不容易猜测的唯一自定义管理员URL。
+默认情况下，[Commerce管理员](https://experienceleague.adobe.com/docs/commerce-admin/start/admin/admin.html?lang=zh-Hans) URL设置为&#x200B;*&lt;域名>/管理员*。 出于安全原因，Adobe建议将其更改为不容易猜测的唯一自定义管理员URL。
 
-**在云基础架构的[!DNL Adobe Commerce]中**，您必须使用（[!DNL Cloud Console]或[!DNL Cloud CLI]）中的`ADMIN_URL`环境变量更改管理员URL。 从[!DNL Admin]修改设置仅适用于内部部署。 对于内部部署，请遵循[使用自定义管理员URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html#use-a-custom-admin-url)。
+**在云基础架构的[!DNL Adobe Commerce]中**，您必须使用（[!DNL Cloud Console]或[!DNL Cloud CLI]）中的`ADMIN_URL`环境变量更改管理员URL。 从[!DNL Admin]修改设置仅适用于内部部署。 对于内部部署，请遵循[使用自定义管理员URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=zh-Hans#use-a-custom-admin-url)。
 
 Adobe建议在安装后更改管理员URL的环境级变量。 在从克隆的`master`环境进行分支之前，出于安全原因配置此设置。 从`master`分支创建的所有分支都会继承环境级变量及其值，除非您将继承设置为false。
 
@@ -50,12 +50,12 @@ Adobe建议在安装后更改管理员URL的环境级变量。 在从克隆的`m
 
 ##### 集成环境
 
-从[Cloud Console](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html)，添加新的变量，其包含：
+从[Cloud Console](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=zh-Hans)，添加新的变量，其包含：
 
 - **名称：** `ADMIN_URL`
 - **值：**&#x200B;您的新管理员URL（例如，`magento_A8v10`）
 
-- 有关详细步骤，请参阅我们的开发人员文档中的[添加环境变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-environment)或[环境变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html)。
+- 有关详细步骤，请参阅我们的开发人员文档中的[添加环境变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=zh-Hans#configure-environment)或[环境变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html?lang=zh-Hans)。
 
 ##### 在[!DNL Cloud Console]中设置管理员URL
 
@@ -73,7 +73,7 @@ Adobe建议在安装后更改管理员URL的环境级变量。 在从克隆的`m
 
 ##### 当暂存和生产在[!DNL Cloud Console]中不可用时
 
-[提交支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，请求为暂存或生产环境添加`ADMIN_URL`变量。 如果可从[!DNL Cloud Console]访问暂存和生产环境，请按照[集成环境](#integration-environment)中的说明添加变量。
+[提交支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，请求为暂存或生产环境添加`ADMIN_URL`变量。 如果可从[!DNL Cloud Console]访问暂存和生产环境，请按照[集成环境](#integration-environment)中的说明添加变量。
 
 #### 选项B：使用[!DNL Cloud CLI]更改管理员URL
 
@@ -86,7 +86,7 @@ magento-cloud variable:update ADMIN_URL --value newAdmin_A8v10 -e master --inher
 ```
 
 - **重新部署：**&#x200B;更改[!DNL Cloud CLI]中的`ADMIN_URL`变量会触发环境的重新部署。
-- **继承：**&#x200B;变量默认可继承。 要防止子环境继承该值，请使用所示的`--inheritable false`选项。 有关详细信息，请参阅[变量级别可见性](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html#visibility)。
+- **继承：**&#x200B;变量默认可继承。 要防止子环境继承该值，请使用所示的`--inheritable false`选项。 有关详细信息，请参阅[变量级别可见性](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html?lang=zh-Hans#visibility)。
 
 >[!NOTE]
 >
