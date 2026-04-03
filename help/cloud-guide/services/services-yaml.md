@@ -39,7 +39,7 @@ ht-degree: 0%
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->您必须在可用版本[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)之间按顺序升级RabbitMQ，例如，您无法直接从3.9升级到4.1
+>您必须在可用版本[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)之间按顺序升级RabbitMQ，例如，您无法直接从3.9升级到4.1
 >
 >升级到新版RabbitMQ后，触发完全部署以确保在RabbitMQ中重新创建自定义消息队列。
 
@@ -181,7 +181,7 @@ mysql:
 
 ## 服务版本
 
-云基础架构上Adobe Commerce的服务版本和兼容性支持取决于在云基础架构上部署和测试的版本，有时与Adobe Commerce内部部署支持的版本不同。 请参阅&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)，获取Adobe已使用特定Adobe Commerce和Magento Open Source版本测试的第三方软件依赖项列表。
+云基础架构上Adobe Commerce的服务版本和兼容性支持取决于在云基础架构上部署和测试的版本，有时与Adobe Commerce内部部署支持的版本不同。 请参阅&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)，获取Adobe已使用特定Adobe Commerce和Magento Open Source版本测试的第三方软件依赖项列表。
 
 ### 软件EOL检查
 
