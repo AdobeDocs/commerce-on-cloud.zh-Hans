@@ -2,9 +2,10 @@
 title: Web属性
 description: 请参阅有关如何在 [!DNL Commerce] 应用程序配置文件中配置Web属性的示例。
 feature: Cloud, Configuration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 6ecf6fb5-57a8-435c-8de3-f66dc56837fe
+source-git-commit: 94a7748348ba590bb4fed740df658c5bac4c31e9
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -31,12 +32,16 @@ web:
 | `rules` | 指定位置的覆盖。 使用正则表达式匹配请求。 如果传入请求与规则匹配，则规则中使用的键会覆盖请求的常规处理。 |
 | `passthru` | 设置当找不到静态文件或PHP文件时使用的URL。 通常，此URL是应用程序（如`/index.php`或`/app.php`）的前端控制器。 |
 | `root` | 设置相对于Web上公开的应用程序根目录的路径。 默认情况下，云项目的公共目录（位置“/”）设置为“pub”。 |
-| `scripts` | 允许在此位置加载脚本。 将值设置为`true`以允许脚本。 |
+| `scripts` | 允许在此位置加载脚本。 将值设置为`true`以允许脚本。 对于`pub/media`和`pub/static`目录，默认配置设置为`scripts: false`以防止执行上载的文件。 |
+
+>[!IMPORTANT]
+>
+>**安全说明：**&#x200B;云中Adobe Commerce的默认属性配置`web`为媒体位置设置`scripts: false`以防止执行上载的文件。 除非您完全了解对实施的安全影响，否则请不要覆盖此设置。
 
 默认配置允许执行以下操作：
 
 - 从根(`/`)路径中，只能访问Web和媒体
-- 从`~/pub/static`和`~/pub/media`路径中，可以访问任何文件
+- 从`~/pub/media`和`~/pub/static`路径中，可以访问任何文件
 
 以下示例显示了`.magento.app.yaml`文件中与[`mounts`属性](properties.md#mounts)中的条目关联的一组可访问Web的位置默认配置：
 
