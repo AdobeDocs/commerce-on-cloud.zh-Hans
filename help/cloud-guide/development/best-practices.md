@@ -2,9 +2,10 @@
 title: 升级项目的最佳实践
 description: 查看升级项目文件的最佳实践列表。
 feature: Cloud, Best Practices, Upgrade
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 64f92739-9170-4cbf-90ef-aab6593a37ca
+source-git-commit: 31494a956babaf15320d0ffa86fcba9e845d53a1
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 
    - 确保任何自定义主题与新的Adobe Commerce版本兼容
 
-   - 升级第三方扩展和自定义扩展后，请使用`magento-cloud local:build`命令在部署之前验证编辑器依赖项。
+   - 升级第三方扩展和自定义扩展后，请在部署之前使用`magento-cloud local:build`命令验证编辑器依赖项，然后运行[升级兼容性工具](#use-the-upgrade-compatibility-tool)以识别当前版本和目标版本之间的代码级不兼容性。 然后使用[升级兼容性工具](https://fluffyjaws.adobe.com/#use-the-upgrade-compatibility-tool)在部署到集成、暂存或生产之前，识别代码级的不兼容性并确定其优先级。
 
    - 查看Adobe Commerce发行说明和扩展文档，确保您已实施解决与升级Adobe Commerce版本和扩展相关的已知功能问题和错误所需的任何解决方法或配置更改。
 
@@ -49,9 +50,24 @@ ht-degree: 0%
 
    - 使用SSH登录到远程服务器并验证以下内容：
 
-      - 检查索引器状态并根据需要重新索引。 请参阅&#x200B;_配置指南_&#x200B;中的[管理索引器](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=zh-Hans)。
+      - 检查索引器状态并根据需要重新索引。 请参阅&#x200B;_配置指南_&#x200B;中的[管理索引器](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)。
 
       - 检查Adobe Commerce数据库中的`cron`日志和`cron_schedule`表以验证cron状态，并根据需要重新运行cron作业。
-请参阅_配置指南_&#x200B;中的[日志记录](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=zh-Hans#logging)。
+请参阅_配置指南_&#x200B;中的[日志记录](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html#logging)。
 
    - 在暂存环境和生产环境中完成升级后用户验收测试UAT，并修复与第三方和自定义扩展升级相关的任何问题。
+
+## 使用升级兼容性工具
+
+作为升级前分析的一部分运行升级兼容性工具(UCT)，以了解升级的范围和影响。
+
+- UCT会将您的当前实例与目标Adobe Commerce版本进行比较，从而返回在升级之前必须修复的关键问题、错误和警告列表。
+- 使用`--coming-version (-c)`与您的计划目标版本进行比较，使用`--ignore-current-version-compatibility-issues`仅关注升级引入的新问题。
+- 将UCT HTML报表与扩展兼容性、服务版本和数据库检查一起作为升级核对清单的输入。
+
+有关设置和使用情况的详细信息，请参阅：
+
+- [升级兼容性工具概述](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
+- [运行升级兼容性工具](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
+
+对于使用站点范围分析工具的云商家，您还可以从功能板触发UCT，并直接从小组件下载HTML报表。 请参阅集成[站点范围分析工具](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool)。
