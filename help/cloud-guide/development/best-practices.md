@@ -50,10 +50,10 @@ ht-degree: 0%
 
    - 使用SSH登录到远程服务器并验证以下内容：
 
-      - 检查索引器状态并根据需要重新索引。 请参阅&#x200B;_配置指南_&#x200B;中的[管理索引器](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)。
+      - 检查索引器状态并根据需要重新索引。 请参阅&#x200B;_配置指南_&#x200B;中的[管理索引器](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=zh-Hans)。
 
       - 检查Adobe Commerce数据库中的`cron`日志和`cron_schedule`表以验证cron状态，并根据需要重新运行cron作业。
-请参阅_配置指南_&#x200B;中的[日志记录](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html#logging)。
+请参阅_配置指南_&#x200B;中的[日志记录](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=zh-Hans#logging)。
 
    - 在暂存环境和生产环境中完成升级后用户验收测试UAT，并修复与第三方和自定义扩展升级相关的任何问题。
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 有关设置和使用情况的详细信息，请参阅：
 
-- [升级兼容性工具概述](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
-- [运行升级兼容性工具](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
+- [升级兼容性工具概述](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
+- [运行升级兼容性工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
 
-对于使用站点范围分析工具的云商家，您还可以从功能板触发UCT，并直接从小组件下载HTML报表。 请参阅集成[站点范围分析工具](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool)。
+对于使用站点范围分析工具的云商家，您还可以从功能板触发UCT，并直接从小组件下载HTML报表。 请参阅集成[站点范围分析工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool)。
