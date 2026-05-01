@@ -23,7 +23,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>在云基础架构上Adobe Commerce的<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web属性配置</a>参考中添加了安全说明，以阐明Web属性的默认配置将<code class="language-plaintext highlighter-rouge">scripts:false</code>用于媒体位置，以防止执行上载的文件。</p>
+      <td><p>在云基础架构上Adobe Commerce的<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web属性配置</a>参考中添加了安全说明，以阐明Web属性的默认配置将<code class="language-plaintext highlighter-rouge">scripts:false</code>用于媒体位置，以防止执行上载的文件。</p>
 </td>
       <td>
         技术，反馈
@@ -45,7 +45,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a>版本，v2002.2.10。</p>
+      <td><p><a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a>版本，v2002.2.10。</p>
 </td>
       <td>
         技术
@@ -67,7 +67,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了说明如何在Adobe Commerce on Cloud中<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">更改管理员URL</a>，而不是内部部署。</p>
+      <td><p>添加了说明如何在Adobe Commerce on Cloud中<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">更改管理员URL</a>，而不是内部部署。</p>
 </td>
       <td>
         重大更新，反馈
