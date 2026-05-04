@@ -3,13 +3,13 @@ title: 登录到 [!DNL Cloud Console]
 description: 了解Adobe Commerce on Cloud基础架构的 [!DNL Cloud Console] 。
 recommendations: noDisplay, catalog
 last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4c68508a-f25a-457b-be6d-36dc8ac428f1
+source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '393'
 ht-degree: 0%
 
 ---
-
 
 # 登录到[!DNL Cloud Console]
 
@@ -39,12 +39,14 @@ ht-degree: 0%
 | -------------- | ----------------------------------- |
 | [活动流](../cloud-guide/project/activity-stream.md) | 与正在运行、待处理或历史操作的可排序列表交互。 选择活动并查看日志或取消正在运行的生成。 |
 | [项目和环境概述](../cloud-guide/project/overview.md#project-overview) | 打开您的项目，然后查看项目概述和环境列表。 环境概述提供了有关环境状态、应用程序访问权限和最近活动的更多详细信息。 |
-| [集成表单](../cloud-guide/integrations/overview.md) | 使用简单的表单和指南来添加集成，例如比特桶或Slack通知。 |
+| [集成表单](../cloud-guide/integrations/overview.md) | 使用简单的表单和指南来添加集成，例如Bitbucket或Slack通知。 |
 | [项目列表](../cloud-guide/project/overview.md#cloud-console) | _所有项目_&#x200B;视图列出您有权访问的所有项目。 您可以单击&#x200B;**[!UICONTROL Show filters]**&#x200B;并按类型、地区或计划筛选项目列表。 |
 | [变量可见性选项](../cloud-guide/environment/variable-levels.md) | 在生成或运行时限制项目级别或环境级别变量的可见性。 |
 
-<!-- The following are features yet to be activated:
-| **Apps and services topology** | The Apps & Services topology is visible on Project and Environment views. This interactive diagram allows you to select a service and view the relationship details, such as name, type, version, port, and more. Click **[!UICONTROL View details]** to access the overview and configuration panel for each service. | -->
+<!--
+The following are features yet to be activated:
+| **Apps and services topology** | The Apps & Services topology is visible on Project and Environment views. This interactive diagram allows you to select a service and view the relationship details, such as name, type, version, port, and more. Click **[!UICONTROL View details]** to access the overview and configuration panel for each service. | 
+-->
 
 ## 控制台问题
 

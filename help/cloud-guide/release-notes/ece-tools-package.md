@@ -4,7 +4,7 @@ description: 请参阅ECE-Tools软件包的最新改进列表。
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: b3d634838e562ceba4221a69e87eda377d8f9363
+source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
 workflow-type: tm+mt
 source-wordcount: '3485'
 ht-degree: 0%
@@ -256,7 +256,9 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **新SCD_NO_PARENT环境变量** — 已添加`SCD_NO_PARENT`环境变量（适用于Adobe Commerce >=2.4.2）以管理父主题的静态内容生成。<!--MCLOUD-7284-->
 
-- ![修复图标](../../assets/fix.svg) **内存限制和命令** — 修复了当`cloud.log`文件的大小超过PHP memory_limit时，`php vendor/bin/ece-tools`命令无法运行的问题。 现在，我们只从日志文件读取较小的数据子集，而不是将整个`cloud.log`文件读入内存。<!--MCLOUD-7275--><!--MCLOUD-7400-->
+- ![修复图标](../../assets/fix.svg) **内存限制和命令** — 修复了当`cloud.log`文件的大小超过PHP memory_limit时，`php vendor/bin/ece-tools`命令无法运行的问题。 现在，我们只从日志文件读取较小的数据子集，而不是将整个`cloud.log`文件读取到内存中。
+  <!--MCLOUD-7275-->
+  <!--MCLOUD-7400-->
 
 - ![修复图标](../../assets/fix.svg) **自定义数据库连接** — 修复了未使用为`DATABASE_CONFIGURATION`定义的自定义数据库连接的`.magento.env.yaml`配置问题。 未将连接设置添加到`app/etc/env.php`.<!--MCLOUD-7426-->
 
@@ -312,7 +314,7 @@ ht-degree: 0%
 
 **验证和日志改进**—
 
-- ![新图标](../../assets/new.svg)添加了`schema.error.yaml`文件，该文件包含在生成、部署和部署后过程中可能发生的所有错误和警告通知以及解决错误的建议。 此文件中的信息也可在&#x200B;_Commerce云指南_&#x200B;中找到。 查看ece-tools[&#128279;](../dev-tools/error-reference.md)的错误消息引用。<!--MCLOUD-5878-->
+- ![新图标](../../assets/new.svg)添加了`schema.error.yaml`文件，该文件包含在生成、部署和部署后过程中可能发生的所有错误和警告通知以及解决错误的建议。 此文件中的信息也可在&#x200B;_Commerce云指南_&#x200B;中找到。 查看ece-tools](../dev-tools/error-reference.md)的[错误消息引用。<!--MCLOUD-5878-->
 
 - ![新图标](../../assets/new.svg)已将云错误日志(`/var/log/cloud.error.log`)条目更改为JSON格式，以使该日志更易于以编程方式解析。<!--MCLOUD-5879-->
 
@@ -332,7 +334,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **基础架构更新**—
 
-   - ![新图标](../../assets/new.svg) **日志记录改进** — 改进了日志跟踪功能，将退出代码分配给严重的部署错误，并在错误消息通知和日志事件中公开退出代码。 查看ece-tools[&#128279;](../dev-tools/error-reference.md)的错误消息引用。<!-- MCLOUD-5637, 5531-->
+   - ![新图标](../../assets/new.svg) **日志记录改进** — 改进了日志跟踪功能，将退出代码分配给严重的部署错误，并在错误消息通知和日志事件中公开退出代码。 查看ece-tools](../dev-tools/error-reference.md)的[错误消息引用。<!-- MCLOUD-5637, 5531-->
 
    - ![新图标](../../assets/new.svg)改进了数据库转储的进程(`vendor/bin/ece-tools db-dump`)并更新了日志消息，以明确说明数据库转储操作将应用程序切换到维护模式，停止使用者队列进程，并在转储开始之前禁用cron作业。<!--MCLOUD-5324, MCLOUD-2062-->
 
@@ -422,7 +424,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在更新到ECE-Tools版本2002.1.0之前，请向后查看[&#x200B;   不兼容的更改](backward-incompatible-changes.md)，以了解可能需要您   在云基础架构项目配置或流程上更新Adobe Commerce。
+>在更新到ECE-Tools版本2002.1.0之前，请查看[向后不兼容的更改](backward-incompatible-changes.md)，以了解可能需要您在云基础架构项目配置或流程上更新Adobe Commerce的更改。
 
 - ![新图标](../../assets/new.svg) **服务更新**—
 
