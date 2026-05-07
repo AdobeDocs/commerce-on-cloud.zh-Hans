@@ -2,11 +2,11 @@
 title: ECE-Tools发行说明
 description: 请参阅ECE-Tools软件包的最新改进列表。
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-08-07T00:00:00Z
+last-substantial-update: 2026-05-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
+source-git-commit: 0781fdfe8b0dbc6312848572ff4b996e51270a3f
 workflow-type: tm+mt
-source-wordcount: '3485'
+source-wordcount: '3563'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,18 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.10 {#latest}
+## v2002.2.11 {#latest}
+
+发行日期： 2026年5月06日
+
+- ![新图标](../../assets/new.svg) **RabbitMQ** — 已添加RabbitMQ 4.2支持。<!-- MCLOUD-14374 -->
+- ![新图标](../../assets/new.svg) **Opensearch** — 为多个Magento版本添加了Opensearch 2.19和3.5支持。<!-- MCLOUD-14682 -->
+- ![新图标](../../assets/new.svg) **Valkey** — 已添加Valkey 8.1和9支持。<!-- MCLOUD-14784/MCLOUD-14625 -->
+- ![新图标](../../assets/new.svg) **ActiveMQ** — 已添加ActiveMQ 2.5.1支持。<!-- MCLOUD-14683 -->
+- ![新图标](../../assets/new.svg) **MariaDB** — 已添加MariaDB 11.8和12.2支持。<!-- MCLOUD-14628 -->
+- ![修复图标](../../assets/fix.svg) **配置和部署** — 修复了云部署警告、更新了编辑器测试弃用并更正了部署时的ECE工具版本可见性。<!-- MCLOUD-14822 -->
+
+## v2002.2.10
 
 发行日期： 2026年3月5日
 
@@ -85,7 +96,7 @@ ht-degree: 0%
 
 发行日期： 2025年4月24日
 
-- ![修复图标](../../assets/fix.svg) **适用于2.4.4/2.4.5**&#x200B;的Opensearch2 — 修复了与Adobe Commerce版本2.4.4/2.4.5中支持`opensearch2`相关的问题。<!-- MCLOUD-13607 -->
+- ![修复图标](../../assets/fix.svg) **适用于2.4.4/2.4.5**&#x200B;的Opensearch2 — 修复了与Adobe Commerce版本2.4.4/2.4.5.<!-- MCLOUD-13607 -->中支持`opensearch2`相关的问题
 
 ## v2002.2.3
 
@@ -93,6 +104,10 @@ ht-degree: 0%
 
 - ![修复图标](../../assets/fix.svg) **修复Valkey**&#x200B;修复了Valkey自定义配置的问题。<!-- MCLOUD-13569 -->
 - ![修复图标](../../assets/fix.svg) **修复验证器** — 适用于RabbitMQ 4.0的修复验证器。<!-- MCLOUD-13560 -->
+
+## v2002.2.2
+
+发行日期： 2025年4月7日
 
 ## v2002.2.2
 
@@ -256,9 +271,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **新SCD_NO_PARENT环境变量** — 已添加`SCD_NO_PARENT`环境变量（适用于Adobe Commerce >=2.4.2）以管理父主题的静态内容生成。<!--MCLOUD-7284-->
 
-- ![修复图标](../../assets/fix.svg) **内存限制和命令** — 修复了当`cloud.log`文件的大小超过PHP memory_limit时，`php vendor/bin/ece-tools`命令无法运行的问题。 现在，我们只从日志文件读取较小的数据子集，而不是将整个`cloud.log`文件读取到内存中。
-  <!--MCLOUD-7275-->
-  <!--MCLOUD-7400-->
+- ![修复图标](../../assets/fix.svg) **内存限制和命令** — 修复了当`cloud.log`文件的大小超过PHP memory_limit时，`php vendor/bin/ece-tools`命令无法运行的问题。 现在，我们只从日志文件读取较小的数据子集，而不是将整个`cloud.log`文件读入内存。<!--MCLOUD-7275--><!--MCLOUD-7400-->
 
 - ![修复图标](../../assets/fix.svg) **自定义数据库连接** — 修复了未使用为`DATABASE_CONFIGURATION`定义的自定义数据库连接的`.magento.env.yaml`配置问题。 未将连接设置添加到`app/etc/env.php`.<!--MCLOUD-7426-->
 
@@ -314,7 +327,7 @@ ht-degree: 0%
 
 **验证和日志改进**—
 
-- ![新图标](../../assets/new.svg)添加了`schema.error.yaml`文件，该文件包含在生成、部署和部署后过程中可能发生的所有错误和警告通知以及解决错误的建议。 此文件中的信息也可在&#x200B;_Commerce云指南_&#x200B;中找到。 查看ece-tools[&#128279;](../dev-tools/error-reference.md)的错误消息引用。<!--MCLOUD-5878-->
+- ![新图标](../../assets/new.svg)添加了`schema.error.yaml`文件，该文件包含在生成、部署和部署后过程中可能发生的所有错误和警告通知以及解决错误的建议。 此文件中的信息也可在&#x200B;_Commerce云指南_&#x200B;中找到。 查看ece-tools](../dev-tools/error-reference.md)的[错误消息引用。<!--MCLOUD-5878-->
 
 - ![新图标](../../assets/new.svg)已将云错误日志(`/var/log/cloud.error.log`)条目更改为JSON格式，以使该日志更易于以编程方式解析。<!--MCLOUD-5879-->
 
@@ -334,7 +347,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **基础架构更新**—
 
-   - ![新图标](../../assets/new.svg) **日志记录改进** — 改进了日志跟踪功能，将退出代码分配给严重的部署错误，并在错误消息通知和日志事件中公开退出代码。 查看ece-tools[&#128279;](../dev-tools/error-reference.md)的错误消息引用。<!-- MCLOUD-5637, 5531-->
+   - ![新图标](../../assets/new.svg) **日志记录改进** — 改进了日志跟踪功能，将退出代码分配给严重的部署错误，并在错误消息通知和日志事件中公开退出代码。 查看ece-tools](../dev-tools/error-reference.md)的[错误消息引用。<!-- MCLOUD-5637, 5531-->
 
    - ![新图标](../../assets/new.svg)改进了数据库转储的进程(`vendor/bin/ece-tools db-dump`)并更新了日志消息，以明确说明数据库转储操作将应用程序切换到维护模式，停止使用者队列进程，并在转储开始之前禁用cron作业。<!--MCLOUD-5324, MCLOUD-2062-->
 
