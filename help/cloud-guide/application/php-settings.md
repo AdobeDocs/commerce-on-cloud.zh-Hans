@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # PHP设置
 
-您可以选择在`.magento.app.yaml`文件中运行的PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)的[版本：
+您可以选择在`.magento.app.yaml`文件中运行的PHP[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)的版本：
 
 ```yaml
 name: mymagento
