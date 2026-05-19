@@ -5,9 +5,9 @@ user-guide-title: 云上 Commerce 指南
 user-guide-description: 了解如何在云基础架构上管理 Adobe Commerce 应用程序。
 product: magento
 feature: Cloud
-source-git-commit: 14964492bc82a50b1eea0636d01b8f7f2583755b
+source-git-commit: 6f70f167bbd29c6a83f4feaf14e5b642cd39e87f
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '389'
 ht-degree: 8%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 8%
    + [云组件](release-notes/cloud-components.md)
    + [云包](release-notes/cloud-packages.md)
    + [向后不兼容的更改](release-notes/backward-incompatible-changes.md)
-   + [发行说明存档](release-notes/cloud-release-archive.md)
+   + {hide-from-toc}[发行说明存档](release-notes/cloud-release-archive.md)
 + 云项目 {#project}
    + [项目概述](project/overview.md)
    + [项目结构](project/file-structure.md)
@@ -148,6 +148,7 @@ ht-degree: 8%
       + [自定义缓存配置](cdn/fastly-custom-cache-configuration.md)
       + [自定义错误和维护页面](cdn/fastly-custom-response.md)
    + [Web应用程序防火墙](cdn/fastly-waf-service.md)
+   + [高级安全性](cdn/advanced-security.md)
    + [图像优化](cdn/fastly-image-optimization.md)
    + 用VCL定制 {#custom-vcl-snippets}
       + [快速入门](cdn/fastly-vcl-custom-snippets.md)
