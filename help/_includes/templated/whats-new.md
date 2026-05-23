@@ -23,7 +23,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>为Adobe Commerce on Cloud Infrastructure添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/advanced-security">高级安全性</a>产品。</p>
+      <td><p>为Adobe Commerce on Cloud Infrastructure添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/advanced-security">高级安全性</a>产品。</p>
 </td>
       <td>
         新主题
