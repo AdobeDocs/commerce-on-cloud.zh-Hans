@@ -1,5 +1,5 @@
 ---
-source-git-commit: e22b5b3508105aa17d397ac299df12f07004383f
+source-git-commit: 8abce85f5a2ed22e344e1489c592ac12415568d8
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 1%
@@ -97,7 +97,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>在云基础架构上Adobe Commerce的<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web属性配置</a>参考中添加了安全说明，以阐明Web属性的默认配置将<code class="language-plaintext highlighter-rouge">scripts:false</code>用于媒体位置，以防止执行上载的文件。</p>
+      <td><p>在云基础架构上Adobe Commerce的<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web属性配置</a>参考中添加了安全说明，以阐明Web属性的默认配置将<code>scripts:false</code>用于媒体位置，以防止执行上载的文件。</p>
 </td>
       <td>
         技术，反馈
