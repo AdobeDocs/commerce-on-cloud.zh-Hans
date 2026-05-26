@@ -25,7 +25,7 @@ ht-degree: 3%
 >
 >有关安全性的更多信息，请参阅[安全性启动项核对清单](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
 
-查看[技术栈栈](architecture/tech-stack.md)的详细信息，或了解有关Commerce ](architecture/cloud-architecture.md)的[云架构中的特定功能和支持的产品的更多信息。
+查看[技术栈栈](architecture/tech-stack.md)的详细信息，或了解有关Commerce [&#128279;](architecture/cloud-architecture.md)的云架构中的特定功能和支持的产品的更多信息。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
