@@ -3,19 +3,19 @@ cloud: Experience Cloud
 type: Documentation
 solution-title: Commerce
 solution: Commerce
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+usetq: true
 landing-page-name: commerce
 landing-page-breadcrumb-title: Commerce
 feature-set: Commerce
 role: Admin, Developer
 topic: Commerce, Development
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/commerce-on-cloud.zh-Hans
+git-repo: https://github.com/AdobeDocs/commerce-on-cloud.en
 description: 《云基础架构上的Adobe Commerce指南》
 index: true
-badgePaas: label="仅限PaaS" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"
-source-git-commit: 6f70f167bbd29c6a83f4feaf14e5b642cd39e87f
+badgePaas: label="仅限PaaS" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"
+source-git-commit: 15897d0d0ae489d5ec2bb73f71d5e0916274f293
 workflow-type: tm+mt
 source-wordcount: 74
 ht-degree: 0%
