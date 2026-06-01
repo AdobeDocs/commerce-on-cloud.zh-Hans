@@ -3,9 +3,9 @@ title: 技术栈栈
 description: 请参阅在云基础架构上形成Commerce的技术栈栈。
 feature: Cloud, Iaas, Paas
 exl-id: 3fac1ab7-6440-4bf9-8169-9fadf51d70dd
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 77d316fd53e477a2b45277db503ea8e5ede78930
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 将云基础架构上的Adobe Commerce视为五个功能层，如下所示：
 
-![云栈叠](../../assets/CloudStack.svg)
+![云栈叠](../../assets/CloudStack.png)
 
 1. [**云基础架构**](pro-architecture.md)：选择Amazon Web Services (AWS)或Microsoft Azure作为您的Adobe Commerce on cloud infrastructure Pro项目的基础架构(IaaS)。
 
-   Adobe会定期分析您的虚拟计算资源(vCPU)使用情况，并自动分配资源以优化您的长期使用情况，并降低超出最大年度vCPU日允许量的风险。 如果预计特定时间段的网站流量会增加，则必须继续打开支持票证以[请求临时扩展](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=zh-Hans)。
+   Adobe会定期分析您的虚拟计算资源(vCPU)使用情况，并自动分配资源以优化您的长期使用情况，并降低超出最大年度vCPU日允许量的风险。 如果预计特定时间段的网站流量会增加，则必须继续打开支持票证以[请求临时扩展](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html)。
 
 1. [**Platform as a Service**](cloud-architecture.md)：云基础架构项目上的每个Adobe Commerce都提供了一个用于开发、测试和集成服务的Platform as a Service (PaaS)集成环境。
 1. [**Adobe Commerce**](../project/overview.md)：云基础架构上的Adobe Commerce提供了预配置的基础架构，其中包括PHP、MySQL (MariaDB)、Redis、消息队列服务（[!DNL RabbitMQ]或[!DNL ActiveMQ]）以及支持的搜索引擎技术。
