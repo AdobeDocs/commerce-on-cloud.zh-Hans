@@ -18,7 +18,7 @@ ht-degree: 0%
 
 1. [**云基础架构**](pro-architecture.md)：选择Amazon Web Services (AWS)或Microsoft Azure作为您的Adobe Commerce on cloud infrastructure Pro项目的基础架构(IaaS)。
 
-   Adobe会定期分析您的虚拟计算资源(vCPU)使用情况，并自动分配资源以优化您的长期使用情况，并降低超出最大年度vCPU日允许量的风险。 如果预计特定时间段的网站流量会增加，则必须继续打开支持票证以[请求临时扩展](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html)。
+   Adobe会定期分析您的虚拟计算资源(vCPU)使用情况，并自动分配资源以优化您的长期使用情况，并降低超出最大年度vCPU日允许量的风险。 如果预计特定时间段的网站流量会增加，则必须继续打开支持票证以[请求临时扩展](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=zh-Hans)。
 
 1. [**Platform as a Service**](cloud-architecture.md)：云基础架构项目上的每个Adobe Commerce都提供了一个用于开发、测试和集成服务的Platform as a Service (PaaS)集成环境。
 1. [**Adobe Commerce**](../project/overview.md)：云基础架构上的Adobe Commerce提供了预配置的基础架构，其中包括PHP、MySQL (MariaDB)、Redis、消息队列服务（[!DNL RabbitMQ]或[!DNL ActiveMQ]）以及支持的搜索引擎技术。
