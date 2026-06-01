@@ -1,7 +1,7 @@
 ---
-source-git-commit: c8effbdb82060e2a2cbcbdef577fed7249a76799
+source-git-commit: 3006f8f7b3eb54f44cf2bda06403441d304b4b81
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
@@ -11,13 +11,13 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->云基础架构上的Adobe Commerce不支持Elasticsearch 7.11及更高版本。 Adobe Commerce版本2.3.7-p3、2.4.3-p2、2.4.4及更高版本支持OpenSearch服务。 内部部署安装将继续支持Elasticsearch。
+>云基础架构上的Adobe Commerce不支持Elasticsearch 7及更高版本。 Adobe Commerce版本2.3.7-p3、2.4.3-p2、2.4.4及更高版本支持OpenSearch服务。
 
 ## 增强的集成 {#enhanced-integration-envs}
 
 >[!NOTE]
 >
->在2020年6月5日之前配置的项目具有多个较小的集成环境。 如果您需要更大的集成环境来进行测试和开发，请请求升级到增强集成环境。 有关详细信息，请参阅&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[集成环境请求](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html?lang=zh-Hans)文章。
+>在2020年6月5日之前配置的项目具有多个较小的集成环境。 如果您需要更大的集成环境来进行测试和开发，请请求升级到增强集成环境。 有关详细信息，请参阅&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[集成环境请求](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html)文章。
 
 ## 合并选项 {#merge-options}
 
@@ -41,15 +41,15 @@ ht-degree: 0%
 >有些&#x200B;**Pro项目**&#x200B;需要Adobe支持部门的帮助来更新`routes.yaml`文件中的路由配置和`.magento.app.yaml`文件中的cron配置。 Adobe建议先在集成环境中进行并验证所有YAML配置更改，然后将其部署到暂存环境。
 >
 >
->如果重新部署后您的更改未反映在暂存站点上，并且日志中没有相关错误消息，则您&#x200B;**必须** [提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。 在票证中，清楚地描述您尝试的配置更改，并在票证中附加任何更新的YAML配置文件。
+>如果重新部署后您的更改未反映在暂存站点上，并且日志中没有相关错误消息，则您&#x200B;**必须** [提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 在票证中，清楚地描述您尝试的配置更改，并在票证中附加任何更新的YAML配置文件。
 
 ## 专业服务支持 {#pro-update-service}
 
 >[!BEGINSHADEBOX]
 
-- 对于Pro项目，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)才能仅在`Staging`和`Production`环境中安装或更新[服务](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html?lang=zh-Hans)。
+- 对于Pro项目，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)才能仅在`Staging`和`Production`环境中安装或更新[服务](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html)。
 
-- 指示所需的服务更改，包括更新的`.magento.app.yaml`和`services.yaml`文件，并在票证中声明PHP版本。 有关对PHP版本、扩展或环境设置的自助更改，请参阅&#x200B;_应用程序配置_&#x200B;中的[PHP设置](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html?lang=zh-Hans)。
+- 指示所需的服务更改，包括更新的`.magento.app.yaml`和`services.yaml`文件，并在票证中声明PHP版本。 有关对PHP版本、扩展或环境设置的自助更改，请参阅&#x200B;_应用程序配置_&#x200B;中的[PHP设置](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html)。
 
   >[!IMPORTANT]
   >
@@ -78,9 +78,9 @@ ht-degree: 0%
 
 >[!TIP]
 >
->在Pro暂存和生产环境中，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以检索票证中注明日期、时间和时区的特定备份。
+>在Pro暂存和生产环境中，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以检索票证中注明日期、时间和时区的特定备份。
 >
->Adobe不会&#x200B;**从自动备份中还原任何环境**。 请参阅[从暂存或生产还原数据库快照](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html?lang=zh-Hans)，以帮助选择还原暂存或生产快照的方法。
+>Adobe不会&#x200B;**从自动备份中还原任何环境**。 请参阅[从暂存或生产还原数据库快照](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html)，以帮助选择还原暂存或生产快照的方法。
 
 ## 重新部署警告 {#redeploy-warning}
 
@@ -118,7 +118,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以更改Pro生产和暂存环境中的服务配置。
+>[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以更改Pro生产和暂存环境中的服务配置。
 
 ## 服务更改 {#service-change-tip}
 
@@ -130,7 +130,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->要获得停滞部署的帮助，请使用&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[Commerce部署疑难解答程序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=zh-Hans)。
+>要获得停滞部署的帮助，请使用&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[Commerce部署疑难解答程序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)。
 
 ## ECE工具的更新 {#ece-tools-package}
 
