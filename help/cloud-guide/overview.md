@@ -2,7 +2,7 @@
 title: 云基础架构上的Commerce
 description: 了解如何在云基础架构上构建、部署与管理 Commerce。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 8abce85f5a2ed22e344e1489c592ac12415568d8
+source-git-commit: 37505db0488204c40ca37356c4d496bba73c537f
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 3%
@@ -40,7 +40,7 @@ ht-degree: 3%
 
 ## AWS地区
 
-![显示AWS地区的图表](../assets/aws-regions.svg){zoomable="yes"}
+![显示AWS地区的图表](../assets/aws-regions.png){zoomable="yes"}
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ ht-degree: 3%
 
 ## Azure地区
 
-![显示Azure地区的图表](../assets/azure-regions.svg){zoomable="yes"}
+![显示Azure地区的图表](../assets/azure-regions.png){zoomable="yes"}
 
 >[!NOTE]
 >

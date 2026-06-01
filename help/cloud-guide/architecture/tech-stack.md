@@ -3,9 +3,9 @@ title: 技术栈栈
 description: 请参阅在云基础架构上形成Commerce的技术栈栈。
 feature: Cloud, Iaas, Paas
 exl-id: 3fac1ab7-6440-4bf9-8169-9fadf51d70dd
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 77d316fd53e477a2b45277db503ea8e5ede78930
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 将云基础架构上的Adobe Commerce视为五个功能层，如下所示：
 
-![云栈叠](../../assets/CloudStack.svg)
+![云栈叠](../../assets/CloudStack.png)
 
 1. [**云基础架构**](pro-architecture.md)：选择Amazon Web Services (AWS)或Microsoft Azure作为您的Adobe Commerce on cloud infrastructure Pro项目的基础架构(IaaS)。
 
