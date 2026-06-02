@@ -3,9 +3,13 @@ title: '[!DNL ECE-Tools]包'
 description: 了解 [!DNL ECE-Tools] 包以及它如何帮助管理和部署Adobe Commerce。
 exl-id: 15d762ef-bca7-480b-b719-caf131dc9180
 TQID: https://experienceleague.adobe.com/YMuy2Ta0Ylkewxb2EhQgpZG8WW8bG4kFzrCXm0A7rX0
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 450
@@ -15,7 +19,7 @@ ht-degree: 0%
 
 # ECE-Tools包
 
-[!DNL ECE-Tools]包是旨在管理和部署[!DNL Commerce]应用程序的一组脚本和工具。 `ece-tools`包简化了许多流程，例如管理cron作业、验证项目配置以及应用Adobe修补程序和修补程序。 您可以在GitHub](https://github.com/magento/ece-tools)上查看并贡献到[开源 [!DNL ECE-Tools] 代码存储库。
+[!DNL ECE-Tools]包是旨在管理和部署[!DNL Commerce]应用程序的一组脚本和工具。 `ece-tools`包简化了许多流程，例如管理cron作业、验证项目配置以及应用Adobe修补程序和修补程序。 您可以在GitHub[&#128279;](https://github.com/magento/ece-tools)上查看并贡献到开源 [!DNL ECE-Tools] 代码存储库。
 
 {{ece-tools-package}}
 
@@ -93,7 +97,7 @@ php ./vendor/bin/ece-tools wizard:ideal-state
 Ideal state is configured
 ```
 
-请参阅ece-tools](../release-notes/cloud-tools-suite.md)的[发行说明。
+请参阅ece-tools[&#128279;](../release-notes/cloud-tools-suite.md)的发行说明。
 
 ## Adobe修补程序和自定义修补程序
 
