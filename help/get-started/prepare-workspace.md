@@ -2,9 +2,15 @@
 title: 准备开发
 description: 收集凭据并了解可用于设置开发工作区的工具，以便在云基础架构项目上与Commerce一起使用。
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: adb7f74f-8007-4f23-bc07-46b0f7d0ebd9
+TQID: https://experienceleague.adobe.com/al-kKS6wmNpCQt5tDRMIO2L10UEShSC2kOf66eThcfw
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: cc250cf1-34eb-4863-80d0-d170d45ea067id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: 498
 ht-degree: 0%
 
 ---
@@ -27,7 +33,7 @@ ht-degree: 0%
 
 - **Adobe Commerce加密密钥**
 
-  仅导入现有系统时，捕获用于保护您对数据库的访问和数据的加密密钥。 有关此密钥的详细信息，请参阅[解决加密密钥的问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html?lang=zh-Hans)
+  仅导入现有系统时，捕获用于保护您对数据库的访问和数据的加密密钥。 有关此密钥的详细信息，请参阅[解决加密密钥的问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html)
 
 ## 开发人员工具
 
@@ -65,4 +71,4 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Adobe使用模板存储库来配置初始项目环境，模板存储库中包含适用于特定版本Adobe Commerce的包说明。 查看[项目文件结构](../cloud-guide/project/file-structure.md)主题，并了解有关重要项目文件和云模板的更多信息。
+>Adobe使用模板存储库来配置初始项目环境，该存储库包含适用于特定版本Adobe Commerce的包说明。 查看[项目文件结构](../cloud-guide/project/file-structure.md)主题，并了解有关重要项目文件和云模板的更多信息。

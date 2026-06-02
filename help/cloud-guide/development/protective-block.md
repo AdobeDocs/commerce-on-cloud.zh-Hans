@@ -3,9 +3,15 @@ title: 保护块
 description: 了解Adobe Commerce在云基础架构上的保护性阻止功能，以及它如何保护您的站点免受已知安全漏洞的攻击。
 feature: Cloud, Configuration, Security
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4a470e75-0b42-4ab7-b3dc-9f50b63bea14
+TQID: https://experienceleague.adobe.com/E0lyCu6cFEaHR0KoauRFmQi9QThzoGDmNetnzYv3hVg
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: 311
 ht-degree: 0%
 
 ---

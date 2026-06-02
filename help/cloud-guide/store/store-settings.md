@@ -2,9 +2,15 @@
 title: 存储配置管理
 description: 了解如何在云基础架构环境的所有Adobe Commerce中管理和同步存储配置设置。
 feature: Cloud, Configuration, SCD
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 01850a7b-2c03-45e8-8051-b24ae95c5f87
+TQID: https://experienceleague.adobe.com/TF-K8g48q2fnuldOLdnwxjAJrxGzsRJlongd7cRqV9U
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: 1507
 ht-degree: 0%
 
 ---
@@ -15,14 +21,14 @@ ht-degree: 0%
 
 存储设置（引用管理员&#x200B;**存储** > **设置** > **配置**&#x200B;节中的配置）基于配置类型存储在部署配置文件中：
 
-- `app/etc/config.php` — 与静态内容部署相关的商店、网站、模块或扩展名的配置设置、静态文件优化和系统值。 请参阅&#x200B;_配置指南_&#x200B;中的[config.php引用](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html?lang=zh-Hans)。
-- `app/etc/env.php` — 系统特定覆盖和敏感设置的值，这些值应该&#x200B;_NOT_&#x200B;存储在源代码管理中。 请参阅&#x200B;_配置指南_&#x200B;中的[env.php引用](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html?lang=zh-Hans)。
+- `app/etc/config.php` — 与静态内容部署相关的商店、网站、模块或扩展名的配置设置、静态文件优化和系统值。 请参阅&#x200B;_配置指南_&#x200B;中的[config.php引用](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html)。
+- `app/etc/env.php` — 系统特定覆盖和敏感设置的值，这些值应该&#x200B;_NOT_&#x200B;存储在源代码管理中。 请参阅&#x200B;_配置指南_&#x200B;中的[env.php引用](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html)。
 
 >[!NOTE]
 >
 >由于云基础架构上的Adobe Commerce仅支持生产和维护模式，因此&#x200B;**高级** > **开发人员**&#x200B;部分无法在管理员中访问。 您必须具有[环境管理员权限](../project/user-access.md)才能完成配置管理任务。 您可以使用[环境变量](../environment/configure-env-yaml.md)配置其他设置。
 
-配置管理提供了一种使用Pipeline部署以最小的停机时间跨环境部署一致存储设置的方法。 云基础架构项目上的Adobe Commerce包括构建服务器、生成和部署脚本，以及设计有[管道部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=zh-Hans)的部署环境。
+配置管理提供了一种使用Pipeline部署以最小的停机时间跨环境部署一致存储设置的方法。 云基础架构项目上的Adobe Commerce包括构建服务器、生成和部署脚本，以及设计有[管道部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html)的部署环境。
 
 ## 配置覆盖方案
 
@@ -36,14 +42,14 @@ ht-degree: 0%
 
 >[!TIP]
 >
->有关管道部署的覆盖方案的详细信息，请参阅&#x200B;_配置指南_&#x200B;中的[配置管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=zh-Hans)。
+>有关管道部署的覆盖方案的详细信息，请参阅&#x200B;_配置指南_&#x200B;中的[配置管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html)。
 
 如果在多个位置配置了相同的设置，则应用程序将依靠以下配置层次结构来确定将哪个值应用于环境：
 
 | 优先级 | 配置<br>方法 | 描述 |
 | -------- | ------------------------ | ----------- |
 | 1 | [!DNL Cloud Console]<br>环境变量 | 从[!DNL Cloud Console]中环境配置的&#x200B;_变量_&#x200B;选项卡添加的值。 在此处为敏感配置或特定于环境的配置指定值。 无法从管理员编辑此处指定的设置。 请参阅[环境配置变量](../project/overview.md#configure-environment)。 |
-| 2 | `.magento.app.yaml` | 在`.magento.app.yaml`文件的`variables`部分中添加的值。 在此处指定值可确保在所有环境中进行一致的配置。 **请勿在`.magento.app.yaml`文件中指定敏感值。**&#x200B;查看[应用程序设置](../application/configure-app-yaml.md)。 |
+| 2 | `.magento.app.yaml` | 在`.magento.app.yaml`文件的`variables`部分中添加的值。 在此处指定值可确保在所有环境中进行一致的配置。 **在`.magento.app.yaml`文件中不指定敏感值。** 请参阅[应用程序设置](../application/configure-app-yaml.md)。 |
 | 3 | `app/etc/env.php` | 使用`app:config:dump`命令添加此处存储的特定于环境的配置值。 使用环境变量或CLI设置特定于系统的敏感值。 查看[敏感数据](#sensitive-data)。 `env.php`文件是&#x200B;**不包括在源代码管理中的**。 |
 | 4 | `app/etc/config.php` | 使用`app:config:dump`命令添加此处存储的值。 共享配置值已添加到`config.php`。 从管理员或使用CLI设置共享配置。 `config.php`文件包含在源代码管理中。 |
 | 5 | 数据库 | 通过在管理员中设置配置来添加此处存储的值。 使用以上任何方法设置的配置将被锁定（灰显），并且无法从管理员中进行编辑。 |
@@ -69,7 +75,7 @@ ht-degree: 0%
 
 使用`bin/magento app:config:dump`命令时将任何敏感配置导出到`app/etc/env.php`文件。 您可以使用CLI命令设置敏感值： `bin/magento config:sensitive:set`。 请参阅&#x200B;_Commerce PHP扩展_&#x200B;指南中的[敏感设置和特定于环境的设置](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/)，了解如何将配置设置指定为敏感设置或特定于系统。
 
-请参阅&#x200B;_配置指南_&#x200B;中的[敏感或系统特定的设置](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html?lang=zh-Hans)列表。
+请参阅&#x200B;_配置指南_&#x200B;中的[敏感或系统特定的设置](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html)列表。
 
 ### SCD性能
 
@@ -77,7 +83,7 @@ ht-degree: 0%
 
 如果在转储配置后启用了配置管理，则应将SCD_*变量从部署阶段移动到构建阶段，以便在构建阶段正确启用静态内容生成。 查看[环境变量](../environment/configure-env-yaml.md#environment-variables)。
 
-配置管理前&#x200B;**&#x200B;**：
+配置管理前&#x200B;****：
 
 ```yaml
   deploy:

@@ -2,9 +2,14 @@
 title: 配置路由
 description: 了解如何为云基础架构环境上的Adobe Commerce的传入HTTPS请求定义路由。
 feature: Cloud, Configuration, Routes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f0d6eefa-1122-4753-8a7c-1fa0c77590f0
+TQID: https://experienceleague.adobe.com/4EUSHNE6YAfXk4e7ooGRjZiICgHueLKrEA-tDskIPl0
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: 910
 ht-degree: 0%
 
 ---
@@ -167,7 +172,7 @@ https://www.example.com/blog
       upstream: "mymagento:http"
   ```
 
-- 对于暂存和生产环境，请从管理UI中启用[强制Fastly上的TLS](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html?lang=zh-Hans)选项。 使用此选项时，Fastly处理到HTTPS的重新定向，因此您不必更新`routes.yaml`配置。
+- 对于暂存和生产环境，请从管理UI中启用[强制Fastly上的TLS](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html)选项。 使用此选项时，Fastly处理到HTTPS的重新定向，因此您不必更新`routes.yaml`配置。
 
 ## 路由选项
 
@@ -177,7 +182,7 @@ https://www.example.com/blog
 | ---------------- | ----------- |
 | `type: upstream` | 为应用程序提供服务。 此外，它有一个`upstream`属性，该属性指定应用程序名称（如`.magento.app.yaml`中所定义）并后跟`:http`终结点。 |
 | `type: redirect` | 重定向到另一条路由。 它后面是`to`属性，该属性是对由其模板标识的另一路由的HTTP重定向。 |
-| `cache:` | 控制路由[&#128279;](caching.md)的缓存。 |
+| `cache:` | 控制路由](caching.md)的[缓存。 |
 | `redirects:` | 控制[重定向规则](redirects.md)。 |
 | `ssi:` | 控件启用[服务器端Include](server-side-includes.md)。 |
 

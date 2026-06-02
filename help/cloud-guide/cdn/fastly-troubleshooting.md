@@ -3,9 +3,14 @@ title: Fastly故障诊断
 description: 了解如何对Adobe Commerce的Fastly CDN模块和服务进行故障诊断和管理。
 feature: Cloud, Configuration, Cache, Services
 exl-id: 69954ef9-9ece-411e-934e-814a56542290
-source-git-commit: f496a4a96936558e6808b3ce74eac32dfdb9db19
+TQID: https://experienceleague.adobe.com/2TJ-5byRz5seZ1tpd4FXjZ6JfeaqtKs6ZQlv81Lkr7c
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: bd989d82-1e15-4534-88db-f1f51dd77ffaid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: 1911
 ht-degree: 0%
 
 ---
@@ -32,13 +37,13 @@ ht-degree: 0%
 log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 ```
 
-您可以对生产和暂存环境使用相同的VCL。 请参阅[`vcl_log`Fastly文档](https://www.fastly.com/documentation/reference/vcl/subroutines/log/)中的&#x200B;__。
+您可以对生产和暂存环境使用相同的VCL。 请参阅&#x200B;_Fastly文档_&#x200B;中的[`vcl_log`](https://www.fastly.com/documentation/reference/vcl/subroutines/log/)。
 
 ## 站点性能、清除和缓存问题
 
 使用以下列表可识别并解决与云基础架构环境中Adobe Commerce的Fastly服务配置相关的问题。
 
-- **商店菜单不显示或不起作用** — 您可能使用了直接指向原始服务器的链接或临时链接，而不是使用实时站点URL，或者您在`-H "host:URL"`cURL命令[中使用了](#check-live-site-through-fastly)。 如果绕过Fastly到原始服务器，主菜单将不起作用，并且显示的标头不正确，这允许在浏览器端进行缓存。
+- **商店菜单不显示或不起作用** — 您可能使用了直接指向原始服务器的链接或临时链接，而不是使用实时站点URL，或者您在[cURL命令](#check-live-site-through-fastly)中使用了`-H "host:URL"`。 如果绕过Fastly到原始服务器，主菜单将不起作用，并且显示的标头不正确，这允许在浏览器端进行缓存。
 
 - **顶部导航不起作用** — 顶部导航依赖于Edge Side Include (ESI)处理，该处理在您上传默认的Magento Fastly VCL代码片段时启用。 如果导航不起作用，[上传Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)并重新检查站点。
 
@@ -243,7 +248,7 @@ php bin/magento module:status Fastly_Cdn
 
   如果您使用[配置管理](../store/store-settings.md#configure-store)，请先检查`app/etc/config.php`配置文件中的Fastly CDN模块状态，然后再将更改推送到生产或暂存环境。
 
-  如果未在`Fastly_CDN => 0`文件中启用该模块(`config.php`)，请删除该文件并运行以下命令以使用最新的配置设置更新`config.php`。
+  如果未在`config.php`文件中启用该模块(`Fastly_CDN => 0`)，请删除该文件并运行以下命令以使用最新的配置设置更新`config.php`。
 
   ```bash
   bin/magento magento-cloud:scd-dump

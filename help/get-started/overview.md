@@ -2,9 +2,13 @@
 title: Adobe Commerce入门
 description: 在云基础架构上开始使用新的自助服务Adobe Commerce，并了解如何在几分钟内构建和部署Adobe Commerce应用商店。
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: be93ef73-ae10-4d87-83ed-8da90bb5527c
+TQID: https://experienceleague.adobe.com/Dc7EadNPF5I2NrEZKD2TvV9otmLoN6-gnTF-c2k20wA
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: 172
 ht-degree: 0%
 
 ---
@@ -17,9 +21,9 @@ ht-degree: 0%
 
 本指南假定您对[!DNL Commerce]应用程序有一些实际知识和了解。 您可以参考最新的《Commerce开发人员和Commerce用户指南》 ：
 
-- [Adobe Commerce开发人员文档](https://developer.adobe.com/commerce/docs/) (Adobe Developer站点) — 开发、自定义、集成、扩展和使用高级功能
+- [Adobe Commerce开发人员文档](https://developer.adobe.com/commerce/docs/) （Adobe Developer站点） — 开发、自定义、集成、扩展和使用高级功能
 
-- [Adobe Commerce文档](https://experienceleague.adobe.com/docs/commerce.html?lang=zh-Hans) (Adobe Experience League) — 规划、实施、运营、升级和维护您的Commerce项目
+- [Adobe Commerce文档](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League) — 规划、实施、运营、升级和维护您的Commerce项目
 
 >[!TIP]
 >

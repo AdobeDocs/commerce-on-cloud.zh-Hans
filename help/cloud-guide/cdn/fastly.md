@@ -3,9 +3,15 @@ title: Fastly服务概述
 description: 了解云基础架构上Adobe Commerce中包含的Fastly服务如何帮助您优化和保护Adobe Commerce站点的内容交付操作。
 feature: Cloud, Configuration, Iaas, Paas, Cache, Security, Services
 exl-id: 429b6762-0b01-438b-a962-35376306895b
-source-git-commit: 0300930577959631a2331997ebb104381136f240
+TQID: https://experienceleague.adobe.com/Lq2rzR14xlcj5y3ycfAWGHEKAIxboekZX8YtyOJPQXA
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: b5f00040-57a0-4a6d-a39e-383b1936c2c9id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: bd989d82-1e15-4534-88db-f1f51dd77ffaid: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+subfeature_v2: id: f2261633-201d-46c5-8a66-999e70527a83
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: 1637
 ht-degree: 0%
 
 ---
@@ -14,7 +20,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->要维护部署在Cloud平台上的Adobe Commerce站点的PCI合规性，请在您的Starter主分支、 Pro生产和暂存环境中设置Fastly。 如果在Headless部署中使用Adobe Commerce，我们强烈建议您使用Fastly缓存GraphQL响应。 请参阅[GraphQL开发人员指南](https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly)中的&#x200B;*使用Fastly缓存*。
+>要维护部署在Cloud平台上的Adobe Commerce站点的PCI合规性，请在您的Starter主分支、 Pro生产和暂存环境中设置Fastly。 如果在Headless部署中使用Adobe Commerce，我们强烈建议您使用Fastly缓存GraphQL响应。 请参阅&#x200B;*GraphQL开发人员指南*&#x200B;中的[使用Fastly缓存](https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly)。
 
 Fastly提供以下服务，以优化和保护Adobe Commerce在云基础架构项目上的内容交付操作。 这些服务包含在云基础架构的Adobe Commerce中，无需支付额外费用。
 
@@ -90,7 +96,7 @@ mywebsite.com/rest/default/V1/inventory/source-items
 
 ## 适用于Magento 2的Fastly CDN模块
 
-云基础架构上Adobe Commerce的Fastly服务使用安装在以下环境中的Magento 2[的]Fastly CDN模块： Pro Staging and Production， Starter Production （`master`分支）。
+云基础架构上Adobe Commerce的Fastly服务使用安装在以下环境中的Magento 2]的[Fastly CDN模块： Pro Staging and Production， Starter Production （`master`分支）。
 
 在初始配置或升级Adobe Commerce项目时，Adobe会在暂存和生产环境中安装最新版本的Fastly CDN模块。 当Fastly发布模块更新时，您会在管理员中收到有关环境的通知。 Adobe建议您更新环境以使用最新版本。 查看[快速升级](fastly-configuration.md#upgrade-the-fastly-module)。
 
@@ -104,13 +110,13 @@ mywebsite.com/rest/default/V1/inventory/source-items
 
 ### 更改Fastly API标记
 
-提交Adobe Commerce支持票证，以便在验证失败/已过期[或您认为其已受到侵害时，颁发新的Fastly API令牌凭据](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials)。
+提交Adobe Commerce支持票证，以便在验证失败/已过期](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials)或您认为其已受到侵害时，颁发新的Fastly API令牌凭据[。
 
 当您收到新令牌时，请更新您的暂存或生产环境以使用新令牌。
 
 **要更改Fastly API令牌凭据**：
 
-1. [提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)，请求新的Fastly API凭据。
+1. [提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，请求新的Fastly API凭据。
 
    在云基础架构项目ID和需要新凭据的环境中包含您的Adobe Commerce。
 
@@ -158,18 +164,18 @@ DDOS保护内置于Fastly CDN服务中。 一旦您为Adobe Commerce站点启用
 
 >[!NOTE]
 >
->与Adobe Commerce集成的Fastly CDN服务不包含针对第7层攻击的保护。 有关防御第7层攻击的提示，请参阅[Adobe Commerce知识库](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli)中的[检查DDoS攻击](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)和&#x200B;*如何阻止恶意攻击*。
+>与Adobe Commerce集成的Fastly CDN服务不包含针对第7层攻击的保护。 有关防御第7层攻击的提示，请参阅&#x200B;*Adobe Commerce知识库*&#x200B;中的[检查DDoS攻击](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli)和[如何阻止恶意攻击](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)。
 
 <!--Link definitions-->
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=zh-Hans
+[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
 
 [适用于Magento 2的Fastly CDN模块]: https://github.com/fastly/fastly-magento2
 
 [Fastly支持票]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=zh-Hans
+[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html
 
 [使用域]: https://docs.fastly.com/en/guides/working-with-domains

@@ -3,9 +3,16 @@ title: 使用 [!DNL Cloud Console]管理分支
 description: 了解如何使用 [!DNL Cloud Console]在云基础架构上管理Adobe Commerce的环境分支。
 role: Developer
 feature: Cloud, Install
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 2c254586-b670-4dd7-8f82-edcc139e9800
+TQID: https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1589'
+source-wordcount: 1638
 ht-degree: 0%
 
 ---
@@ -31,9 +38,9 @@ ht-degree: 0%
 - 首先，从`master`分支创建`staging`分支，然后从`staging`分支进行开发。
 - 对于Pro，从`Integration`环境创建一个开发分支。
 
-您的帐户支持有限数量的![活动分支](../../assets/icon-active.png){width="32"} (active) and an unlimited number of ![inactive branch](../../assets/icon-inactive.png){width="32"} （非活动）开发分支。 通过仅使用[!DNL Cloud Console]或Cloud CLI添加或删除分支来管理活动和不活动分支。 在删除分支之前，请先取消激活该分支，它仍保留在&#x200B;_环境_&#x200B;列表中，作为&#x200B;_不活动_。 您可以稍后重新激活分支，也可以[在环境设置中或使用云CLI删除分支](../dev-tools/cloud-cli-overview.md#)。
+您的帐户支持有限数量的![活动分支](../../assets/icon-active.png){width="32"} （活动）和无限数量的![非活动分支](../../assets/icon-inactive.png){width="32"} （非活动）开发分支。 通过仅使用[!DNL Cloud Console]或Cloud CLI添加或删除分支来管理活动和不活动分支。 在删除分支之前，请先取消激活该分支，它仍保留在&#x200B;_环境_&#x200B;列表中，作为&#x200B;_不活动_。 您可以稍后重新激活分支，也可以[在环境设置中或使用云CLI删除分支](../dev-tools/cloud-cli-overview.md#)。
 
-如果需要其他活动环境进行开发，请提交[支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。
+如果需要其他活动环境进行开发，请提交[支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。
 
 **添加分支**：
 
@@ -87,7 +94,7 @@ git push -o "environment.Parent=<parent branch>" <origin> <branch>
 
 1. 单击顶部导航栏右侧的配置图标，打开环境设置。
 
-1. 在&#x200B;_[!UICONTROL General]_&#x200B;选项卡上，向下滚动到&#x200B;_[!UICONTROL Deactivate environment]_&#x200B;部分，然后单击&#x200B;**[!UICONTROL Deactivate environment and delete data]**&#x200B;并按照说明操作。
+1. 在&#x200B;_[!UICONTROL General]_选项卡上，向下滚动到_[!UICONTROL Deactivate environment]_&#x200B;部分，然后单击&#x200B;**[!UICONTROL Deactivate environment and delete data]**&#x200B;并按照说明操作。
 
 ## 同步环境
 

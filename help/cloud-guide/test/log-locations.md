@@ -1,11 +1,16 @@
 ---
 title: 查看和管理日志
 description: 了解云基础架构中可用的日志文件类型以及在何处查找它们。
-last-substantial-update: 2023-05-23T00:00:00Z
+last-substantial-update: 2023-05-23T00:00:00.000Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
-source-git-commit: 445c5162f9d3436d9e5fe3df41af47189e344cfd
+TQID: https://experienceleague.adobe.com/VAsmOv6sBa37A2IAubUnWd4UAMRIuKTNt8JGKNJlrCI
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: 1287
 ht-degree: 0%
 
 ---
@@ -107,14 +112,14 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 
 >[!TIP]
 >
->对于Pro Staging和Pro Production环境，为具有固定文件名的日志文件启用自动日志旋转、压缩和删除。 每种日志文件类型都有一个旋转模式和生命周期。
+>对于Pro Staging和Pro Production环境，为具有固定文件名的日志文件启用自动日志旋转、压缩和删除。每种日志文件类型都有一个旋转模式和生命周期。
 >有关环境的日志轮换和压缩日志的生命周期的完整详细信息，请参见： `/etc/logrotate.conf`和`/etc/logrotate.d/<various>`。
->对于Pro Staging和Pro Production环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以请求更改日志轮换配置。
+>对于Pro Staging和Pro Production环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以请求更改日志轮换配置。
 
 >[!TIP]
 >
 >无法在Pro Integration环境中配置日志轮换。
->对于Pro集成，您必须实施自定义解决方案/脚本，并[配置cron](../application/crons-property.md)以根据需要运行脚本。
+>对于Pro集成，您必须实施自定义解决方案/脚本并[配置cron](../application/crons-property.md)以根据需要运行脚本。
 
 >[!NOTE]
 >
@@ -220,7 +225,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-大多数错误消息都包含说明和建议的操作。 使用ECE-Tools[的](../dev-tools/error-reference.md)错误消息引用查找错误代码以获得进一步的指导。 有关进一步指导，请使用[Adobe Commerce部署疑难解答程序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=zh-Hans)。
+大多数错误消息都包含说明和建议的操作。 使用ECE-Tools](../dev-tools/error-reference.md)的[错误消息引用查找错误代码以获得进一步的指导。 有关进一步指导，请使用[Adobe Commerce部署疑难解答程序](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)。
 
 ## 应用程序日志
 
@@ -258,7 +263,7 @@ type: warning
 
 存档的日志文件始终存储在压缩前原始文件所在的目录中。
 
-您可以[提交支持票证](https://experienceleague.adobe.com/home?lang=zh-Hans&support-tab=home#support)以请求对您的日志保留期或logrotate配置进行更改。 您可以将保留期增加到最多365天，减少保留期以节省存储配额，或向logrotate配置添加其他日志路径。 这些更改可用于Pro暂存和生产群集。
+您可以[提交支持票证](https://experienceleague.adobe.com/home?support-tab=home#support)以请求对您的日志保留期或logrotate配置进行更改。 您可以将保留期增加到最多365天，减少保留期以节省存储配额，或向logrotate配置添加其他日志路径。 这些更改可用于Pro暂存和生产群集。
 
 例如，如果您创建自定义路径以在`var/log/mymodule`目录中存储日志，则可以请求此路径的日志轮换。 但是，当前的基础架构需要一致的文件名才能使Adobe正确配置日志轮换。 Adobe建议保持日志名称一致以避免配置问题。
 
@@ -282,7 +287,7 @@ type: warning
 
 >[!TIP]
 >
->在缩放的体系结构中，日志文件位置取决于节点类型。 请参阅缩放体系结构[主题中的](../architecture/scaled-architecture.md#log-locations)日志位置。
+>在缩放的体系结构中，日志文件位置取决于节点类型。 请参阅缩放体系结构](../architecture/scaled-architecture.md#log-locations)主题中的[日志位置。
 
 ## 记录用于专业生产和暂存的数据
 

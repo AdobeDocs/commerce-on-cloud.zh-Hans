@@ -3,9 +3,13 @@ title: 备份管理
 description: 了解如何在Cloud Infrastructure项目中手动创建和恢复Adobe Commerce的备份。
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
+TQID: https://experienceleague.adobe.com/UHzlr5FQsXz6FEDpwWzYE5JxThIHAMXI-MKM-7DF2P0
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: 865
 ht-degree: 0%
 
 ---
@@ -37,7 +41,7 @@ ht-degree: 0%
 
 **创建Pro环境的数据库备份**：
 
-要创建任何Pro环境（包括暂存环境和生产环境）的数据库转储，请参阅[创建数据库转储](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知识库文章。
+要创建任何Pro环境（包括暂存环境和生产环境）的数据库转储，请参阅[创建数据库转储](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)知识库文章。
 
 **要使用[!DNL Cloud Console]**&#x200B;创建任何Starter环境的备份：
 
@@ -150,7 +154,7 @@ ht-degree: 0%
 
 ## 恢复灾难恢复快照
 
-要在Pro暂存和生产环境中还原灾难恢复快照，请[直接从服务器](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)导入数据库转储。
+要在Pro暂存和生产环境中还原灾难恢复快照，请[直接从服务器](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)导入数据库转储。
 
 ## 回滚代码
 

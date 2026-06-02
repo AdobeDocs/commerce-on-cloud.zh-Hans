@@ -1,9 +1,14 @@
 ---
 title: 启动步骤
 description: 了解如何完成站点启动。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e7a3cd6b-32de-4fd0-9fbd-da8299e77114
+TQID: https://experienceleague.adobe.com/Nl8YFJUZUkxtsm0eqBgJklsTysKuUE31PkEDsJmvBMU
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c1256247-af4b-46d8-9dca-0c654ecfa157id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: 347
 ht-degree: 0%
 
 ---
@@ -38,6 +43,6 @@ Adobe支持人员将与您一起完成该过程，检查状态，并在出现任
 
 ## 启动后
 
-Adobe检查并监视站点，确保所有服务和访问都处于绿色状态。 我们将根据需要随时为您提供帮助，以逐步了解并检查所有系统日志、服务、缓存和功能是否都能根据您和客户的需要工作。
+Adobe检查并监控站点，确保所有服务和访问均呈绿色显示。 我们将根据需要随时为您提供帮助，以逐步了解并检查所有系统日志、服务、缓存和功能是否都能根据您和客户的需要工作。
 
 如果发生任何问题，请使用支持创建并跟踪问题。 包括尽可能多的信息，如日期/时间、存在问题的特定功能、症状和异常行为、扩展等。 我们会调查日志和问题，并与您合作以尽快解决。
