@@ -3,9 +3,23 @@ title: Pro项目工作流
 description: 了解如何使用专业开发和部署工作流。
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-source-git-commit: 7758ca69fc8232a8e1798c536410dc028c87fee6
+TQID: https://experienceleague.adobe.com/bRmbWxABneX08LwTxhlUMFX2H7WbCqVg8DDS9RRxQNI
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: 904
 ht-degree: 0%
 
 ---
@@ -22,7 +36,7 @@ Pro项目包含一个具有全局`master`分支和三个主要环境的Git存储
 
 这些环境是`read-only`，仅接受从本地工作区推送的分支部署的代码更改。
 
-下图演示了Pro开发和部署工作流，该工作流使用简单的Git分支方法。 您[使用基于](#development-workflow)环境的活动分支来开发`integration`代码，_正在推送_&#x200B;和&#x200B;_正在提取_&#x200B;代码更改到您的远程活动分支，或者从您的远程活动分支获取更改。 您通过&#x200B;_将远程分支_&#x200B;合并到基础分支来部署已验证的代码，这将为该环境激活自动[生成和部署](#deployment-workflow)进程。
+下图演示了Pro开发和部署工作流，该工作流使用简单的Git分支方法。 您[使用基于`integration`环境的活动分支来开发](#development-workflow)代码，_正在推送_&#x200B;和&#x200B;_正在提取_&#x200B;代码更改到您的远程活动分支，或者从您的远程活动分支获取更改。 您通过&#x200B;_将远程分支_&#x200B;合并到基础分支来部署已验证的代码，这将为该环境激活自动[生成和部署](#deployment-workflow)进程。
 
 ![专业体系结构开发工作流的高级视图](../../assets/pro-dev-workflow.png)
 
@@ -45,11 +59,11 @@ The disk hosting /app/<cluster_ID> is full
 
 项目环境支持灵活、连续的集成过程。 首先，将`integration`分支克隆到本地项目文件夹。 创建一个或多个分支、开发新功能、配置更改、添加扩展和部署更新：
 
-- **从**&#x200B;获取`integration`更改
+- **从`integration`获取**&#x200B;更改
 
-- 来自&#x200B;**的**&#x200B;分支`integration`
+- 来自`integration`的&#x200B;**分支**
 
-- 在本地工作站上开发&#x200B;**代码，包括**&#x200B;更新[!DNL Composer]
+- 在本地工作站上开发&#x200B;**代码，包括[!DNL Composer]更新**
 
 - 将&#x200B;**推送**&#x200B;代码更改到远程并进行验证
 
@@ -61,7 +75,7 @@ The disk hosting /app/<cluster_ID> is full
 
 - **正在生成配置管理文件** — 在已部署的环境中，某些配置设置是&#x200B;_只读_。
 
-- **正在配置您的商店** — 您应该使用集成环境完全配置所有商店设置。 您可以在&#x200B;**中的**&#x200B;集成&#x200B;_环境视图上找到_&#x200B;存储管理员URL _[!DNL Cloud Console]_。
+- **正在配置您的商店** — 您应该使用集成环境完全配置所有商店设置。 您可以在&#x200B;_[!DNL Cloud Console]_&#x200B;中的_&#x200B;集成&#x200B;_环境视图上找到&#x200B;**存储管理员URL**。
 
 ## 部署工作流
 

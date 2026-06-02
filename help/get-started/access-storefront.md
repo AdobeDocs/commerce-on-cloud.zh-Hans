@@ -2,9 +2,22 @@
 title: 访问Commerce管理面板
 description: 了解如何访问Commerce管理面板。
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 827417b0-9048-44d8-8c82-07befba476c7
+TQID: https://experienceleague.adobe.com/V3BXuCc9aqT5YuyIS8WAZgUdPAYNhQunAgg2i2FCaOs
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: 361
 ht-degree: 0%
 
 ---
@@ -19,7 +32,7 @@ ht-degree: 0%
 
 - 找到发送到许可证所有者电子邮件地址的欢迎电子邮件，然后按照链接更改密码。
 
-- 将商店URL从[[!DNL Cloud Console]](../cloud-guide/project/overview.md)复制到浏览器中。 然后，将`/admin`附加到URL的末尾以打开登录页面。 单击&#x200B;**忘记密码？**&#x200B;链接，用于将密码更改请求发送到许可证所有者电子邮件地址。
+- 将商店URL从[[!DNL Cloud Console]](../cloud-guide/project/overview.md)复制到浏览器中。 然后，将`/admin`附加到URL的末尾以打开登录页面。 单击&#x200B;**忘记密码？** 用于将密码更改请求发送到许可证所有者电子邮件地址的链接。
 
 提交密码更改请求后，请查看电子邮件中的密码重置通知。 如果未收到电子邮件，请检查垃圾邮件文件夹。
 

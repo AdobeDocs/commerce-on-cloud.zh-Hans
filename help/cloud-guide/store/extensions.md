@@ -2,9 +2,21 @@
 title: 管理扩展
 description: 了解如何在云基础架构上的Adobe Commerce中安装和管理扩展。
 feature: Cloud, Extensions, Upgrade
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 88c5ea06-fe79-4105-8b67-f16e9ef06210
+TQID: https://experienceleague.adobe.com/7ZNXOai-hYkUS4ff3bNW32Ny63DfJLMBG2Zti5OVxRM
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: 672
 ht-degree: 0%
 
 ---
@@ -19,11 +31,11 @@ ht-degree: 0%
 
 ## 扩展的编辑器名称
 
-尽管本节讨论如何从Commerce Marketplace获取扩展名的编辑器名称和版本，但您可以在模块的编辑器文件中找到&#x200B;_any_&#x200B;模块的名称和版本。 在文本编辑器中打开`composer.json`文件并记下`"name"`和`"version"`值。
+尽管本节讨论如何从Commerce Marketplace获取扩展的编辑器名称和版本，但您可以在模块的编辑器文件中找到&#x200B;_any_&#x200B;模块的名称和版本。 在文本编辑器中打开`composer.json`文件并记下`"name"`和`"version"`值。
 
-**要从Commerce Marketplace**&#x200B;中获取模块的编辑器名称，请执行以下操作：
+**要从Commerce Marketplace中获取模块的编辑器名称**：
 
-1. 使用用于购买该组件的用户名和密码登录到[Commerce Marketplace](https://marketplace.magento.com)。
+1. 使用您用于购买该组件的用户名和密码登录到[Commerce Marketplace](https://marketplace.magento.com)。
 
 1. 单击右上角的用户名并选择&#x200B;**我的个人资料**。
 

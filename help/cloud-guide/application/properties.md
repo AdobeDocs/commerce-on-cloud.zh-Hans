@@ -3,16 +3,24 @@ title: 属性
 description: 在配置 [!DNL Commerce] 应用程序以生成并部署到云基础架构时，请使用属性列表作为参考。
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
 exl-id: 32bd1f64-43d6-48a3-84b7-bea22f125bb0
-source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
+TQID: https://experienceleague.adobe.com/5HoI8DnJqL6pyBZRt3u-jVlQvhP1UGqN70B9fq2c9-Y
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: 855
 ht-degree: 0%
 
 ---
 
 # 应用程序配置的属性
 
-`.magento.app.yaml`文件使用属性管理[!DNL Commerce]应用程序的环境支持。
+`.magento.app.yaml`文件使用属性来管理[!DNL Commerce]应用程序的环境支持。
 
 | 名称 | 描述 | 默认 | 必填 |
 | ------ | --------------------------------- | ------- | -------- |
@@ -25,7 +33,7 @@ ht-degree: 0%
 | [`mounts`](#mounts) | 设置路径 | 路径：<ul><li>`"var": "shared:files/var"`</li><li>`"app/etc": "shared:files/etc"`</li><li>`"pub/media": "shared:files/media"`</li><li>`"pub/static": "shared:files/static"`</li></ul> | 否 |
 | [`name`](#name) | 定义应用程序名称 | `mymagento` | 是 |
 | [`relationships`](#relationships) | 映射服务 | 服务：<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | 否 |
-| [`runtime`](#runtime) | 运行时属性包含[!DNL Commerce]应用程序所需的扩展。 | 扩展名：<ul><li>`xsl`</li><li>`newrelic`</li><li>`sodium`</li></ul> | 是 |
+| [`runtime`](#runtime) | 运行时属性包含[!DNL Commerce]应用程序所需的扩展。 | 扩展：<ul><li>`xsl`</li><li>`newrelic`</li><li>`sodium`</li></ul> | 是 |
 | [`type`](#type-and-build) | 设置基本容器图像 | `php:8.3` | 是 |
 | [`variables`](variables-property.md) | 为特定Commerce版本应用环境变量 | — | 否 |
 | [`web`](web-property.md) | 处理外部请求 | — | 是 |
@@ -68,8 +76,8 @@ dependencies:
 
 `build: flavor:`属性不用于Composer 2.x；因此，您必须在构建阶段手动安装Composer。 要在入门和专业版项目中安装并使用Composer 2.x，您必须对`.magento.app.yaml`配置进行三项更改：
 
-1. 移除`composer`作为`build: flavor:`并添加`none`。 此更改阻止Cloud使用默认的1.x版本的Composer运行生成任务。
-1. 将`composer/composer: '^2.0'`添加为安装Composer 2.x的`php`依赖项。
+1. 移除`composer`作为`build: flavor:`并添加`none`。 此更改会阻止Cloud使用默认的1.x版本的Composer来运行构建任务。
+1. 添加`composer/composer: '^2.0'`作为安装Composer 2.x的`php`依赖项。
 1. 将`composer`生成任务添加到`build`挂接以使用Composer 2.x运行生成任务。
 
 在您自己的`.magento.app.yaml`配置中使用以下配置片段：
@@ -91,19 +99,19 @@ hooks:
         composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
 ```
 
-有关Composer的详细信息，请参阅[必需的包](../development/overview.md#required-packages)。
+有关Composer的详细信息，请参阅[必需包](../development/overview.md#required-packages)。
 
 ## `dependencies`
 
 指定应用程序在构建过程中可能需要的依赖关系。
 
-Adobe Commerce支持对以下语言的依赖项：
+Adobe Commerce支持对以下语言的依赖性：
 
 - PHP
-- 拼音
+- Ruby
 - Node.js
 
-这些依赖关系独立于应用程序的最终依赖关系，在`PATH`中、生成过程中以及应用程序的运行时环境中均可用。
+这些依赖项与应用程序的最终依赖项无关，可以在`PATH`、构建过程和应用程序的运行时环境中使用。
 
 您可以按如下方式指定这些从属关系：
 
@@ -204,7 +212,7 @@ mounts:
 `access`属性指明允许通过SSH访问环境的最低用户角色级别。 可用的用户角色包括：
 
 - `admin` — 可以在环境中更改设置并执行操作；具有&#x200B;_参与者_&#x200B;和&#x200B;_查看器_&#x200B;权限。
-- `contributor` — 可将代码推送到此环境并从环境分支；具有&#x200B;_查看者_&#x200B;权限。
+- `contributor` — 可以将代码推送到此环境并从环境分支；具有&#x200B;_查看器_&#x200B;权限。
 - `viewer` — 只能查看环境。
 
 默认用户角色为`contributor`，它限制仅具有&#x200B;_查看器_&#x200B;权限的用户的SSH访问。 您可以将用户角色更改为`viewer`，以允许仅具有&#x200B;_查看器_&#x200B;权限的用户进行SSH访问：

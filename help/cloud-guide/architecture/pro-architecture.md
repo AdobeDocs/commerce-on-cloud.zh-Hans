@@ -3,9 +3,24 @@ title: 专业体系结构
 description: 了解Pro架构支持的环境。
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: a6eb562b-1b97-4285-a271-989d9fddc4f9
+TQID: https://experienceleague.adobe.com/Es-cmVlUrzd4xMf9unOJD-Z-h0OvL-ycoullKVO-yRA
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: 1587
 ht-degree: 0%
 
 ---
@@ -33,7 +48,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe提供了Cloud Docker for Commerce工具，可用于部署到本地Cloud Docker环境，以便您能够开发和测试Adobe Commerce项目。 请参阅[Docker开发](../dev-tools/cloud-docker.md)。
+>Adobe提供了Cloud Docker for Commerce工具，可用于部署到本地Cloud Docker环境，以便您可以开发和测试Adobe Commerce项目。 请参阅[Docker开发](../dev-tools/cloud-docker.md)。
 
 ## 环境架构
 
@@ -65,7 +80,7 @@ ht-degree: 0%
 
 要在集成环境中获得最佳性能，请遵循以下最佳实践：
 
-- 限制目录大小 — 作为参考，示例数据包含约2,048个产品。 尝试将目录大小缩减到4,000-5,000个产品左右。
+- 限制目录大小 — 作为参考，示例数据包含约2,048个产品。尝试将目录大小缩减到4,000-5,000个产品左右。
 要检查目录中的产品数，请运行以下MySQL查询：
 
   ```sql
@@ -170,7 +185,7 @@ ht-degree: 0%
 
 ## 备份和灾难恢复
 
-云基础架构上的Adobe Commerce使用高可用性体系结构，该体系结构在三个单独的AWS或Azure可用区上复制每个Pro项目，每个区都有一个单独的数据中心。 除此冗余外，专业级暂存和生产环境还会接收常规实时备份，这些备份专为在&#x200B;_灾难性故障_&#x200B;的情况下使用而设计。
+云基础架构上的Adobe Commerce使用高可用性体系结构，该体系结构在三个单独的AWS或Azure可用区上复制每个Pro项目，每个区具有一个单独的数据中心。 除此冗余外，专业级暂存和生产环境还会接收常规实时备份，这些备份专为在&#x200B;_灾难性故障_&#x200B;的情况下使用而设计。
 
 **自动备份**&#x200B;包含来自所有正在运行的服务（如MySQL数据库和装载的卷上存储的文件）的永久数据。 备份将保存到与生产环境位于同一区域的加密弹性块存储(EBS)中。 不能公开访问自动备份，因为它们存储在单独的系统中。
 
@@ -188,7 +203,7 @@ ht-degree: 0%
 
 ### 保留策略
 
-Adobe根据以下数据保留策略保留自动备份：
+Adobe会根据以下数据保留策略保留自动备份：
 
 | 时间段 | 备份保留策略 |
 | ------------------ | ----------------------- |
@@ -202,12 +217,12 @@ Adobe根据以下数据保留策略保留自动备份：
 
 ### 恢复时间目标
 
-RTO取决于存储的大小。 大型EBS卷需要更多时间来恢复。 恢复时间可能因数据库的大小而异。 请联系您的Adobe客户成功经理以了解详细信息。
+RTO取决于存储的大小。 大型EBS卷需要更多时间来恢复。 恢复时间可能因数据库的大小而异。 有关详细信息，请联系您的Adobe客户成功经理。
 
 ## 专业群集扩展
 
-Pro群集大小和&#x200B;_计算_&#x200B;配置因所选的云提供商(AWS、Azure)、地区和服务依赖项而异。 Adobe云基础架构可以扩展Pro群集，以随着需求的变化满足流量期望和服务要求。
+Pro群集大小和&#x200B;_计算_&#x200B;配置因所选的云提供商(AWS、Azure)、地区和服务依赖项而异。 Adobe云基础架构可以扩展Pro群集，以适应需求变化的流量预期和服务要求。
 
-冗余体系结构使Adobe云基础架构能够在不停机的情况下进行扩展。 在升级时，这三个实例中的每一个都会轮换以升级容量，而不会影响站点操作。 例如，如果约束位于PHP级别而不是数据库级别，则可以将额外的Web服务器添加到现有群集。 这提供了&#x200B;_水平缩放_，以补充数据库级别上额外CPU提供的垂直缩放。 请参阅[缩放的体系结构](scaled-architecture.md)。
+冗余架构使Adobe云基础架构能够在不停机的情况下进行扩展。 在升级时，这三个实例中的每一个都会轮换以升级容量，而不会影响站点操作。 例如，如果约束位于PHP级别而不是数据库级别，则可以将额外的Web服务器添加到现有群集。 这提供了&#x200B;_水平缩放_，以补充数据库级别上额外CPU提供的垂直缩放。 请参阅[缩放的体系结构](scaled-architecture.md)。
 
 如果您预计某个事件或其他原因会导致流量显着增加，则可以请求临时增加容量。 请参阅[如何在&#x200B;_Commerce帮助中心_&#x200B;中请求临时扩展](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=zh-Hans)。

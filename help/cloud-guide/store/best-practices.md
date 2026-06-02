@@ -2,9 +2,22 @@
 title: 存储配置的最佳实践
 description: 了解在云基础架构上在Adobe Commerce上配置存储的最佳实践。
 feature: Cloud, Best Practices
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ae7da73b-f874-4623-bf29-821ee0a00eb9
+TQID: https://experienceleague.adobe.com/dhZ3IlMZ-8xCdbEQzjDNWoFALPxUIaIFN1ch0w6O6R0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: 1178
 ht-degree: 0%
 
 ---

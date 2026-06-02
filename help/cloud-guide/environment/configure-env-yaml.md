@@ -3,9 +3,19 @@ title: 配置环境
 description: 了解如何使用环境变量在云基础架构环境（包括Pro Staging和Production）上跨所有Commerce配置构建和部署操作。
 feature: Cloud, Build, Configuration, Deploy, SCD
 role: Developer
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f39c73fc-351a-41ed-9e74-2c3f14871246
+TQID: https://experienceleague.adobe.com/Ub0FWkUN9uOVzLhVbNbPhUV5kj808ODlbjVrRDDA-4E
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: 706
 ht-degree: 0%
 
 ---
@@ -28,7 +38,7 @@ ht-degree: 0%
    - `deploy` — 仅在部署阶段控制操作。 如果未在此部分中指定设置，则部署阶段将使用全局部分中的设置。
    - `post-deploy` — 控制部署应用程序后&#x200B;_的操作_&#x200B;和&#x200B;_容器开始接受连接_。
 - `log` — 使用日志部分配置[通知](set-up-notifications.md)，包括通知类型和详细级别。
-   - `slack` — 配置要发送给Slack机器人的消息。
+   - `slack` — 配置要发送到Slack机器人的消息。
    - `email` — 配置要发送给一个或多个电子邮件收件人的电子邮件。
    - [日志处理程序](log-handlers.md) — 配置发送到远程日志服务器的硬件和软件应用程序消息。
 

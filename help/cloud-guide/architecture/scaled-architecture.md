@@ -2,9 +2,22 @@
 title: 可扩展的体系结构
 description: 了解分层的体系结构以及它如何根据需求进行扩展。
 feature: Cloud, Auto Scaling, Iaas, Logs
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 45c0cf14-99e6-4643-88f0-98ebcdb3a98c
+TQID: https://experienceleague.adobe.com/jbO3zavC7ZZs6nlYlMC0Isj0QLl-wlr-opAfxOKCNao
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: 828
 ht-degree: 0%
 
 ---
@@ -45,9 +58,9 @@ ht-degree: 0%
 
 最低限度，具有可扩展体系结构的Pro项目具有6个可用节点。
 
-- 3个Web节点c5.2xlarge(8个CPU，16 Gb RAM)
+- 3个Web节点c5.2xlarge（8个CPU，16 Gb RAM）
 
-- 3个服务节点m5.2xlarge(8个CPU，32 Gb RAM)
+- 3个服务节点m5.2xlarge（8个CPU，32 Gb RAM）
 
 但是，每个项目都是独一无二的，需要进行性能监控才能正确分析资源管理。 每个帐户都包含[New Relic服务](../monitor/new-relic-service.md)，该服务会自动与应用程序数据和性能分析连接，以提供动态服务器监控。 具体来说，您可以使用New Relic服务监控CPU和RAM利用率，以确定哪些节点需要其他资源。 当资源达到容量或您注意到基于分析的性能下降时，您可以创建请求来扩展基础架构以满足需求。
 

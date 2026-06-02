@@ -1,16 +1,25 @@
 ---
 title: 第二个暂存环境
 description: 了解第二个暂存环境用于并行测试、问题隔离、版本控制等的好处和用法。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 300019bd-07cb-4efb-8740-a49a5a3cf01b
+TQID: https://experienceleague.adobe.com/GFIisldCx779874WoAb0gmXHlE52dN-3COiIsfYDYCU
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: 719
 ht-degree: 0%
 
 ---
 
 # 第二个暂存环境
 
-在Adobe Commerce Cloud基础架构中，暂存环境确保在可以镜像生产环境的设置中进行全面的测试和验证。 利用此环境，您可以安全地识别和解决Bug，同时确保在所有新功能或更改影响您的实时网站之前无缝集成。
+在Adobe Commerce云基础架构中，暂存环境确保在可以镜像生产环境的设置中进行全面测试和验证。 利用此环境，您可以安全地识别和解决Bug，同时确保在所有新功能或更改影响您的实时网站之前无缝集成。
 
 有些项目需要更复杂的开发工作流。 为了满足此需求，Adobe提供了额外的暂存环境，作为云基础架构的附加选项。 拥有两个暂存环境对于复杂的项目和跨团队的同步协作很有利。
 
@@ -40,7 +49,7 @@ ht-degree: 0%
 
 如果您的项目已经有一个额外的暂存环境，或者您考虑升级当前项目，请考虑以下预配时间表和责任：
 
-- 向Adobe销售代表确认请求后，资源调配过程最长可能需要两周时间。
+- 在向Adobe销售代表确认请求后，配置过程最长可能需要两周时间。
 
 - 新的暂存环境仅与您当前的暂存环境和生产环境位于同一区域。
 
@@ -58,7 +67,7 @@ ht-degree: 0%
 
 1. 请联系您的销售代表。
 
-   请联系您的Adobe销售代表，向他们提供要用作新暂存环境基础的特定分支（集成或主环境）。
+   请联系您的Adobe销售代表，向他们提供要用作新暂存环境基础的特定分支（集成或母版）。
 
 1. 确认详细信息。
 

@@ -2,9 +2,20 @@
 title: Crons属性
 description: 请参阅有关如何在 [!DNL Commerce] 应用程序配置文件中配置“crons”属性的示例。
 feature: Cloud, Configuration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ff176cb1-5b6c-48a0-ad3c-56cc1d606c97
+TQID: https://experienceleague.adobe.com/E7qXe1VmZezG9AqJ2rchTUmbTibU0pNaGdqb00MkcXo
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: 1172
 ht-degree: 0%
 
 ---
@@ -86,7 +97,7 @@ Adobe Commerce为`crons`规范（规范）使用五值表达式： `* * * * *`
 
 一些示例：
 
-- `00 */3 * * *`每三小时在第一分钟运行一次(12:00 am、3:00 am、6:00 am)
+- `00 */3 * * *`在首分钟（上午12:00，上午3:00，上午6:00）每三小时运行一次
 - `20 */8 * * *`在分钟20每8小时运行一次（上午12:20，上午8:20，下午4:20）
 - `00 00 * * *`每天午夜运行一次
 - `00 * * * 1`在星期一午夜每周运行一次。
@@ -197,6 +208,6 @@ Adobe更新了Adobe Commerce on cloud基础架构包，以优化Adobe Commerce o
 
 请参阅以下Adobe Commerce支持文章，以获取有关排查cron相关问题的帮助：
 
-- [Cron任务锁定来自其他组的任务](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups.html?lang=zh-Hans)
+- [Cron任务从其他组锁定任务](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups.html?lang=zh-Hans)
 
-- [在云上手动重置卡住cron作业](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud.html?lang=zh-Hans)
+- [在云上手动重置受阻的CRON作业](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud.html?lang=zh-Hans)

@@ -2,9 +2,24 @@
 title: 暂存和生产测试
 description: 了解如何在暂存和生产环境中测试。
 exl-id: 39625c97-5eb0-4039-ac5f-ddaeb43156de
-source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
+TQID: https://experienceleague.adobe.com/kcmgbPlj1Pa0JW6daRzbr40HMfoy64ETmowCiWzXD-A
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+  - id: c32adafa-ed01-4b31-997e-2413013911b0
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: 1368
 ht-degree: 0%
 
 ---
@@ -64,7 +79,7 @@ ht-degree: 0%
    - 暂存： `dig https://mcstaging.<your-domain>.com`
    - 生产： `dig https://mcprod.<your-domain>.com`
 
-   有关其他`dig`测试，请在更改DNS[之前参阅Fastly的](https://docs.fastly.com/en/guides/working-with-domains)测试。
+   有关其他`dig`测试，请在更改DNS[&#128279;](https://docs.fastly.com/en/guides/working-with-domains)之前参阅Fastly的测试。
 
 1. 使用`cURL`验证响应标头信息。
 
@@ -212,7 +227,7 @@ ht-degree: 0%
 
 ## 功能测试
 
-您可以使用Magento功能测试框架(MFTF)从Cloud Docker环境中完成Adobe Commerce的功能测试。 请参阅[Cloud Docker for Commerce指南](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing)中的&#x200B;_应用程序测试_。
+您可以使用Magento功能测试框架(MFTF)从Cloud Docker环境中完成Adobe Commerce的功能测试。 请参阅&#x200B;_Cloud Docker for Commerce指南_&#x200B;中的[应用程序测试](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing)。
 
 ## 设置安全扫描工具
 

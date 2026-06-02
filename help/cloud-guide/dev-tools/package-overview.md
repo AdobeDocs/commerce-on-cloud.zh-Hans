@@ -2,16 +2,24 @@
 title: '[!DNL ECE-Tools]包'
 description: 了解 [!DNL ECE-Tools] 包以及它如何帮助管理和部署Adobe Commerce。
 exl-id: 15d762ef-bca7-480b-b719-caf131dc9180
-source-git-commit: db34528be490f92cc61c609ca143c01ef3284157
+TQID: https://experienceleague.adobe.com/YMuy2Ta0Ylkewxb2EhQgpZG8WW8bG4kFzrCXm0A7rX0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: 450
 ht-degree: 0%
 
 ---
 
 # ECE-Tools包
 
-[!DNL ECE-Tools]包是旨在管理和部署[!DNL Commerce]应用程序的一组脚本和工具。 `ece-tools`包简化了许多流程，例如管理cron作业、验证项目配置以及应用Adobe修补程序和修补程序。 您可以在GitHub[上查看并贡献到 [!DNL ECE-Tools] 开源](https://github.com/magento/ece-tools)代码存储库。
+[!DNL ECE-Tools]包是旨在管理和部署[!DNL Commerce]应用程序的一组脚本和工具。 `ece-tools`包简化了许多流程，例如管理cron作业、验证项目配置以及应用Adobe修补程序和修补程序。 您可以在GitHub[&#128279;](https://github.com/magento/ece-tools)上查看并贡献到开源 [!DNL ECE-Tools] 代码存储库。
 
 {{ece-tools-package}}
 
@@ -27,7 +35,7 @@ php ./vendor/bin/ece-tools list
 
 `ece-tools`包中包含一些命令，这些命令用于执行在云基础架构上启动Adobe Commerce的生成、部署和部署后阶段的操作。 例如，`php ./vendor/bin/ece-tools build`命令开始应用程序构建过程。
 
-默认情况下，这些`ece-tools`命令位于[配置文件的](../application/hooks-property.md)挂接属性`.magento.app.yaml`中。
+默认情况下，这些`ece-tools`命令位于`.magento.app.yaml`配置文件的[挂接属性](../application/hooks-property.md)中。
 
 ## Docker配置生成器
 
@@ -73,7 +81,7 @@ Magento Cloud Services:
 
 ## 验证环境配置
 
-有一组验证命令可用于帮助评估项目的配置。 有关每个向导命令的详细说明，请参阅[优化部署](../deploy/smart-wizards.md)部分中的&#x200B;_智能向导_。 `wizard:ideal-state`命令在生成阶段自动运行。 验证项目的理想状态：
+有一组验证命令可用于帮助评估项目的配置。 有关每个向导命令的详细说明，请参阅&#x200B;_优化部署_&#x200B;部分中的[智能向导](../deploy/smart-wizards.md)。 `wizard:ideal-state`命令在生成阶段自动运行。 验证项目的理想状态：
 
 ```bash
 php ./vendor/bin/ece-tools wizard:ideal-state
@@ -89,7 +97,7 @@ php ./vendor/bin/ece-tools wizard:ideal-state
 Ideal state is configured
 ```
 
-请参阅ece-tools[的](../release-notes/cloud-tools-suite.md)发行说明。
+请参阅ece-tools[&#128279;](../release-notes/cloud-tools-suite.md)的发行说明。
 
 ## Adobe修补程序和自定义修补程序
 

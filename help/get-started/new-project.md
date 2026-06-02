@@ -3,9 +3,20 @@ title: 在Cloud上配置Commerce
 description: 了解如何准备Adobe客户技术顾问以在云基础架构项目上配置您的Adobe Commerce。
 recommendations: noDisplay, catalog
 role: Admin
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 77e8c9fb-8c4a-4c98-adbc-e57871c5bdbc
+TQID: https://experienceleague.adobe.com/GzCPqYxn0-ACS34UfvHypqv6BveTRpbLJNN2jNmCL-E
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: 774
 ht-degree: 0%
 
 ---
@@ -14,7 +25,7 @@ ht-degree: 0%
 
 让我们开始并初始化您在云基础架构上的Commerce项目！
 
-在Adobe上预配Commerce项目环境之前，建议您考虑以下策略并准备答案，以首次咨询Adobe客户团队。 将以下部分用作核对清单，帮助您准备好与客户技术顾问进行对话以配置云项目：
+在Adobe在云项目环境中预配Commerce之前，建议您考虑以下策略并准备答案，以首次咨询Adobe客户团队。 将以下部分用作核对清单，帮助您准备好与客户技术顾问进行对话以配置云项目：
 
 ## 域定义
 
@@ -31,7 +42,7 @@ ht-degree: 0%
 
 有关多个域或唯一域的进一步指导，请参阅&#x200B;_Commerce on Cloud Infrastructure_&#x200B;指南中的[设置多个网站或商店](../cloud-guide/store/multiple-sites.md)。
 
-如果您现有的Fastly帐户链接了您Adobe Commerce网站上使用的相同顶点和子域，请参阅[多个Fastly帐户和分配的域](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}。
+如果您现有的Fastly帐户链接了您的Adobe Commerce网站上使用的相同顶点和子域，请参阅[多个Fastly帐户和分配的域](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}。
 
 ## 事务性电子邮件域
 
@@ -59,7 +70,7 @@ SendGrid域示例： `example@your-store.com`
 
 **问题4**：_哪个云服务区域最适合您的邻近地区？_
 
-选择Amazon Web Services (AWS)或Microsoft Azure作为您的Adobe Commerce on cloud infrastructure Pro项目上的基础架构即服务(IaaS)基础。 每个服务提供商都在多个区域运营，并提供多个可用区。 选择适合您所在位置的区域，降低延迟和成本提升的可能性。
+选择Amazon Web Services (AWS)或Microsoft Azure作为您的Adobe Commerce on cloud infrastructure Pro项目的基础架构(IaaS)。 每个服务提供商都在多个区域运营，并提供多个可用区。 选择适合您所在位置的区域，降低延迟和成本提升的可能性。
 
 查看[Adobe Commerce云区域地图](../cloud-guide/overview.md)。
 
@@ -69,13 +80,13 @@ SendGrid域示例： `example@your-store.com`
 
 云基础架构上的Adobe Commerce支持与AWS PrivateLink或Azure Private Link服务的集成。 尽管此服务是可选的，但是PrivateLink用于在云基础架构环境与托管在外部系统上的服务和应用程序之间建立安全的私有通信。
 
-请务必考虑您的云服务策略(AWS或Azure)，以便Adobe Commerce实例可在同一区域内访问。 有关区域可访问性的进一步说明，请参阅&#x200B;_Commerce on Cloud Infrastructure_&#x200B;指南中的[PrivateLink服务](../cloud-guide/development/privatelink-service.md)。
+请务必考虑您的云服务策略（AWS或Azure），以便Adobe Commerce实例可在同一区域内访问。 有关区域可访问性的进一步说明，请参阅&#x200B;_Commerce on Cloud Infrastructure_&#x200B;指南中的[PrivateLink服务](../cloud-guide/development/privatelink-service.md)。
 
 ## Target站点启动
 
 **问题6**：_您预计的目标启动日期是多久？_
 
-启动站点需要反复进行配置和测试，以确保站点启动成功。 设置目标日期可帮助您和您的Adobe客户团队为启动前的最终活动做好准备，其中包括用于协调最终步骤的调用。
+启动站点需要反复进行配置和测试，以确保站点启动成功。 设置目标日期可帮助您和您的Adobe客户团队为最终的启动前活动做好准备，其中包括用于协调最终步骤的调用。
 
 请参阅&#x200B;_云基础架构上的Commerce_&#x200B;指南中的[启动站点概述](../cloud-guide/launch/overview.md)，以查看完整过程并下载启动清单副本。
 

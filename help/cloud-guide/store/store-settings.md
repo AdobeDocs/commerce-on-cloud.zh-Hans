@@ -2,9 +2,20 @@
 title: 存储配置管理
 description: 了解如何在云基础架构环境的所有Adobe Commerce中管理和同步存储配置设置。
 feature: Cloud, Configuration, SCD
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 01850a7b-2c03-45e8-8051-b24ae95c5f87
+TQID: https://experienceleague.adobe.com/TF-K8g48q2fnuldOLdnwxjAJrxGzsRJlongd7cRqV9U
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: 1507
 ht-degree: 0%
 
 ---
@@ -43,7 +54,7 @@ ht-degree: 0%
 | 优先级 | 配置<br>方法 | 描述 |
 | -------- | ------------------------ | ----------- |
 | 1 | [!DNL Cloud Console]<br>环境变量 | 从[!DNL Cloud Console]中环境配置的&#x200B;_变量_&#x200B;选项卡添加的值。 在此处为敏感配置或特定于环境的配置指定值。 无法从管理员编辑此处指定的设置。 请参阅[环境配置变量](../project/overview.md#configure-environment)。 |
-| 2 | `.magento.app.yaml` | 在`.magento.app.yaml`文件的`variables`部分中添加的值。 在此处指定值可确保在所有环境中进行一致的配置。 **请勿在`.magento.app.yaml`文件中指定敏感值。**&#x200B;查看[应用程序设置](../application/configure-app-yaml.md)。 |
+| 2 | `.magento.app.yaml` | 在`.magento.app.yaml`文件的`variables`部分中添加的值。 在此处指定值可确保在所有环境中进行一致的配置。 **在`.magento.app.yaml`文件中不指定敏感值。** 请参阅[应用程序设置](../application/configure-app-yaml.md)。 |
 | 3 | `app/etc/env.php` | 使用`app:config:dump`命令添加此处存储的特定于环境的配置值。 使用环境变量或CLI设置特定于系统的敏感值。 查看[敏感数据](#sensitive-data)。 `env.php`文件是&#x200B;**不包括在源代码管理中的**。 |
 | 4 | `app/etc/config.php` | 使用`app:config:dump`命令添加此处存储的值。 共享配置值已添加到`config.php`。 从管理员或使用CLI设置共享配置。 `config.php`文件包含在源代码管理中。 |
 | 5 | 数据库 | 通过在管理员中设置配置来添加此处存储的值。 使用以上任何方法设置的配置将被锁定（灰显），并且无法从管理员中进行编辑。 |

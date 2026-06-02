@@ -3,9 +3,20 @@ title: 用于允许请求的自定义VCL
 description: 使用Fastly Edge ACL列表和自定义VCL代码片段，过滤传入请求并允许按IP地址访问Adobe Commerce站点。
 feature: Cloud, Configuration, Security
 exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+TQID: https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: 873
 ht-degree: 0%
 
 ---
@@ -87,11 +98,11 @@ Edge ACL创建IP地址列表来管理对站点的访问。 在此示例中，您
 
   如果管理员的URL已更改，请将示例值`/admin`替换为环境的URL。 例如，`/company-admin`。
 
-在代码示例中，使用`!req.http.Fastly-FF`原始屏蔽[时，条件](fastly-custom-cache-configuration.md#configure-back-ends-and-origin-shielding)很重要。 请勿删除或编辑此代码。
+在代码示例中，使用[原始屏蔽](fastly-custom-cache-configuration.md#configure-back-ends-and-origin-shielding)时，条件`!req.http.Fastly-FF`很重要。 请勿删除或编辑此代码。
 
 查看并更新环境的代码后，使用以下任一方法将自定义VCL代码段添加到Fastly服务配置中：
 
-- [从Admin](#add-the-custom-vcl-snippet)添加自定义VCL代码片段。 如果您可以访问管理员，则建议使用此方法。 (需要Magento 2版本1.2.58[或更高版本的](fastly-configuration.md#upgrade)Fastly CDN模块。)
+- [从Admin](#add-the-custom-vcl-snippet)添加自定义VCL代码片段。 如果您可以访问管理员，则建议使用此方法。 （需要Magento 2版本1.2.58[&#128279;](fastly-configuration.md#upgrade)或更高版本的Fastly CDN模块。）
 
 - 将JSON代码示例保存到文件（例如，`allowlist.json`）中，然后[使用Fastly API](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)上载它。 如果您无法访问管理员，请使用此方法。
 
@@ -121,7 +132,7 @@ Edge ACL创建IP地址列表来管理对站点的访问。 在此示例中，您
 
 1. 单击&#x200B;**创建**&#x200B;以生成名称模式为`type_priority_name.vcl`的VCL代码片段文件，例如`recv_5_allowlist.vcl`
 
-1. 重新加载页面后，单击&#x200B;**Fastly配置**&#x200B;部分中的&#x200B;*将VCL上传到Fastly*&#x200B;以将文件添加到Fastly服务配置。
+1. 重新加载页面后，单击&#x200B;*Fastly配置*&#x200B;部分中的&#x200B;**将VCL上传到Fastly**&#x200B;以将文件添加到Fastly服务配置。
 
 1. 上载完成后，根据页面顶部的通知刷新缓存。
 

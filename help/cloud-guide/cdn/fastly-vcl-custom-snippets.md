@@ -3,9 +3,20 @@ title: 开始使用自定义VCL代码片段
 description: 了解如何使用Varnish控制语言代码片段自定义Adobe Commerce的Fastly服务配置。
 feature: Cloud, Configuration, Services
 exl-id: 90f0bea6-4365-4657-94e9-92a0fd1145fd
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+TQID: https://experienceleague.adobe.com/1grH8E6w-CgPS2ANraTxdM1NZ6Jjb8G4i7tgSswcuJE
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '2037'
+source-wordcount: 2179
 ht-degree: 0%
 
 ---
@@ -86,15 +97,15 @@ Fastly支持两种类型的自定义VCL片段：
 | `API_KEY` | 用于访问您的Fastly帐户的API密钥。 请参阅[获取凭据](fastly-configuration.md)。 |
 | `active` | 代码片段或版本的活动状态。 返回`true`或`false`。 如果为true，则表示正在使用代码片段或版本。 使用活动片段的版本号对其进行克隆。 |
 | `content` | 要运行的VCL代码段。 Fastly不支持所有VCL语言功能。 此外，Fastly为扩展提供了自定义功能。 有关支持的功能的详细信息，请参阅[Fastly VCL编程参考](https://docs.fastly.com/vcl/reference/)。 |
-| `dynamic` | 代码片段的动态状态。 为Fastly服务配置的版本化VCL中包含的`false`常规代码段[返回](https://docs.fastly.com/en/guides/about-vcl-snippets)。 返回`true`动态代码片段[的](https://docs.fastly.com/vcl/vcl-snippets/using-dynamic-vcl-snippets/)，该代码片段可以修改和部署，而无需新的VCL版本。 |
+| `dynamic` | 代码片段的动态状态。 为Fastly服务配置的版本化VCL中包含的[常规代码段](https://docs.fastly.com/en/guides/about-vcl-snippets)返回`false`。 返回[动态代码片段](https://docs.fastly.com/vcl/vcl-snippets/using-dynamic-vcl-snippets/)的`true`，该代码片段可以修改和部署，而无需新的VCL版本。 |
 | `number` | 包含代码片段的VCL版本号。 Fastly在其示例值中使用&#x200B;*可编辑版本#*。 如果从API添加自定义代码片段，请在API请求中包含版本号。 如果从“管理员”添加自定义VCL，则会为您提供版本。 |
-| `priority` | 从`1`到`100`的数值，指定自定义VCL代码片段的运行时间。 优先级值较低的代码片段首先运行。 如果未指定，则`priority`值默认为`100`。<p>列入允许列表任何优先级值为`5`的自定义VCL代码段都会立即运行，这最适合实现请求路由（块和以及重定向）的VCL代码。 优先级`100`最适合覆盖默认VCL代码片段。<p>Magento-Fastly模块中包含的所有[默认VCL片段](fastly-configuration.md#upload-vcl-snippets)具有`priority=50`。<ul><li>分配高优先级（如`100`）以在所有其他VCL函数之后运行自定义VCL代码并覆盖默认VCL代码。</li></ul> |
+| `priority` | 从`1`到`100`的数值，指定自定义VCL代码片段的运行时间。 优先级值较低的代码片段首先运行。 如果未指定，则`priority`值默认为`100`。<p>任何优先级值为`5`的自定义VCL代码段都会立即运行，这最适合实现请求路由（块和以及重定向）的VCL代码。 优先级`100`最适合覆盖默认VCL代码片段。<p>Magento-Fastly模块中包含的所有[默认VCL片段](fastly-configuration.md#upload-vcl-snippets)具有`priority=50`。<ul><li>分配高优先级（如`100`）以在所有其他VCL函数之后运行自定义VCL代码并覆盖默认VCL代码。</li></ul> |
 | `service_id` | 特定暂存或生产环境的Fastly服务ID。 将您的项目添加到云基础架构[Fastly服务帐户](fastly.md#fastly-service-account-and-credentials)上的Adobe Commerce时，将分配此ID。 |
 | `type` | 指定用于插入生成的代码片段的位置，如`init`（子例程上方）和`recv`（子例程内）。 有关详细信息，请参阅Fastly [VCL片段](https://docs.fastly.com/api/config#api-section-snippet)参考。 |
 
 ## 从管理员管理自定义VCL
 
-您可以从Admin的[Fastly配置](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/CUSTOM-VCL-SNIPPETS.md) > *自定义VCL片段*&#x200B;部分&#x200B;*添加自定义VCL片段*。
+您可以从Admin的&#x200B;*Fastly配置* > *自定义VCL片段*&#x200B;部分[添加自定义VCL片段](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/CUSTOM-VCL-SNIPPETS.md)。
 
 ![管理自定义VCL代码片段](../../assets/cdn/fastly-edit-snippets.png)
 
@@ -105,8 +116,8 @@ Fastly支持两种类型的自定义VCL片段：
 - [将请求重新路由到CMS后端](fastly-vcl-wordpress.md)
 - [阻止反向链接垃圾邮件](fastly-vcl-badreferer.md)
 - [阻止反向链接垃圾邮件](fastly-vcl-badreferer.md)
-- [列入允许列表 IP的自定义VCL](fastly-vcl-allowlist.md)
-- [列入阻止列表 IP的自定义VCL](fastly-vcl-blocking.md)
+- [IP的自定义VCL](fastly-vcl-allowlist.md)
+- [IP的自定义VCL](fastly-vcl-blocking.md)
 - [绕过Fastly缓存](fastly-vcl-bypass-to-origin.md)
 
 ## 无法在Commerce管理员中查看/修改的代码片段
@@ -118,7 +129,7 @@ Fastly支持两种类型的自定义VCL片段：
 
 1. 转到&#x200B;**工具**&#x200B;部分。
 
-1. 单击&#x200B;**版本历史记录**&#x200B;旁边的&#x200B;_列出所有版本_。
+1. 单击&#x200B;_版本历史记录_&#x200B;旁边的&#x200B;**列出所有版本**。
 
 1. 单击适用的VCL版本旁边的眼睛图标以查看现有代码片段。
 

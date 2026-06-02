@@ -3,9 +3,18 @@ title: 设置多个网站或商店
 description: 了解如何在云基础架构上为Adobe Commerce配置多个网站或商店。
 feature: Cloud, Configuration, Routes, Site Navigation
 exl-id: 773d8d64-d235-4c2b-87e9-aadbf8471b2c
-source-git-commit: db34528be490f92cc61c609ca143c01ef3284157
+TQID: https://experienceleague.adobe.com/532nrO6XkiqiNDfRMT6gZ4mVRqlv5PszegPJLuemmyc
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: 1094
 ht-degree: 0%
 
 ---
@@ -36,7 +45,7 @@ https://store.com/second/
 
 >[!TIP]
 >
->要将商店视图添加到站点基本URL，您不必创建多个目录。 请参阅[配置指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=zh-Hans)中的&#x200B;_将存储代码添加到基本URL_。
+>要将商店视图添加到站点基本URL，您不必创建多个目录。 请参阅&#x200B;_配置指南_&#x200B;中的[将存储代码添加到基本URL](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=zh-Hans)。
 
 ## 添加域
 
@@ -50,11 +59,11 @@ https://store.com/second/
 
 - 仅用于入门级生产
 
-  将新域添加到Fastly，请参阅[管理域](../cdn/fastly-custom-cache-configuration.md#manage-domains)或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以请求帮助。 此外，您必须将新域添加到&#x200B;**中的**&#x200B;域[!DNL Cloud Console]选项卡： `https://<zone>.magento.cloud/projects/<project-ID>/edit`
+  将新域添加到Fastly，请参阅[管理域](../cdn/fastly-custom-cache-configuration.md#manage-domains)或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以请求帮助。 此外，您必须将新域添加到[!DNL Cloud Console]中的&#x200B;**域**&#x200B;选项卡： `https://<zone>.magento.cloud/projects/<project-ID>/edit`
 
 ## 配置本地安装
 
-若要将本地安装配置为使用多个商店，请参阅[配置指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html?lang=zh-Hans)中的&#x200B;_多个网站或商店_。
+若要将本地安装配置为使用多个商店，请参阅&#x200B;_配置指南_&#x200B;中的[多个网站或商店](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html?lang=zh-Hans)。
 
 在成功创建和测试本地安装以使用多个存储区后，必须准备集成环境：
 
@@ -64,7 +73,7 @@ https://store.com/second/
    - [共享域的位置](#configure-locations-for-shared-domains)
 
 1. **设置网站、商店和商店视图** — 使用Adobe Commerce管理UI进行配置
-1. **修改变量** — 在`MAGE_RUN_TYPE`文件中指定`MAGE_RUN_CODE`和`magento-vars.php`变量的值
+1. **修改变量** — 在`magento-vars.php`文件中指定`MAGE_RUN_TYPE`和`MAGE_RUN_CODE`变量的值
 1. **部署和测试环境** — 部署和测试`integration`分支
 
 >[!TIP]
@@ -101,7 +110,7 @@ https://store.com/second/
 
 ### 为共享域配置位置
 
-在路由配置定义如何处理URL的情况下，`web`文件中的`.magento.app.yaml`属性定义应用程序向Web公开的方式。 Web _位置_&#x200B;允许传入请求的更多粒度。 例如，如果您的域是`store.com`，则可以使用`/first` （默认站点）和`/second`来请求共享域的两个不同存储。
+在路由配置定义如何处理URL的情况下，`.magento.app.yaml`文件中的`web`属性定义应用程序向Web公开的方式。 Web _位置_&#x200B;允许传入请求的更多粒度。 例如，如果您的域是`store.com`，则可以使用`/first` （默认站点）和`/second`来请求共享域的两个不同存储。
 
 **要配置新的Web位置**：
 
@@ -213,13 +222,13 @@ https://store.com/second/
 
 ### 设置网站、商店和商店视图
 
-在&#x200B;_管理UI_&#x200B;中，设置您的Adobe Commerce **网站**、**商店**&#x200B;和&#x200B;**商店视图**。 请参阅[配置指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=zh-Hans)的“管理员”_中的_&#x200B;设置多个网站、商店和商店视图。
+在&#x200B;_管理UI_&#x200B;中，设置您的Adobe Commerce **网站**、**商店**&#x200B;和&#x200B;**商店视图**。 请参阅&#x200B;_配置指南_&#x200B;的“管理员”[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=zh-Hans)中的设置多个网站、商店和商店视图。
 
 设置本地安装时，请务必使用管理员提供的网站、商店和商店视图的相同名称和代码。 更新`magento-vars.php`文件时需要这些值。
 
 ### 修改变量
 
-请使用项目根目录中的`MAGE_RUN_CODE`文件传递`MAGE_RUN_TYPE`和`magento-vars.php`变量，而不是配置NGINX虚拟主机。
+请使用项目根目录中的`magento-vars.php`文件传递`MAGE_RUN_CODE`和`MAGE_RUN_TYPE`变量，而不是配置NGINX虚拟主机。
 
 **要使用`magento-vars.php`文件传递变量**：
 
@@ -244,7 +253,7 @@ https://store.com/second/
    }
    ```
 
-1. 移动评论的`if`块，使其位于&#x200B;_块的_&#x200B;之后`function`且不再评论。
+1. 移动评论的`if`块，使其位于`function`块的&#x200B;_之后_&#x200B;且不再评论。
 
    ```php
    <?php

@@ -3,9 +3,22 @@ title: 入门级架构
 description: 了解Starter架构支持的环境。
 feature: Cloud, Paas
 exl-id: 2f16cc60-b5f7-4331-b80e-43042a3f9b8f
-source-git-commit: 2236d0b853e2f2b8d1bafcbefaa7c23ebd5d26b3
+TQID: https://experienceleague.adobe.com/NZ2ea2-D3coPcwXTEHL7viNlgpIBSVA0zO2-iVUIhB0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: 1011
 ht-degree: 0%
 
 ---
@@ -18,7 +31,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->无法更改任何入门环境中只读文件夹的权限。 此限制保护应用程序的完整性和安全性。 无法更改这些只读文件系统中的文件夹权限 — 即使支持人员也无法修改它们。 任何更改都必须从本地开发环境中的分支中进行，并推送到应用程序环境中。 您可以使用喜欢的任何开发和分支方法。 获得对项目的初始访问权限后，请从`staging`环境创建`master`环境。 然后，通过从`integration`分支来创建`staging`环境。
+>无法更改任何入门环境中只读文件夹的权限。 此限制保护应用程序的完整性和安全性。 无法更改这些只读文件系统中的文件夹权限 — 即使支持人员也无法修改它们。 任何更改都必须从本地开发环境中的分支中进行，并推送到应用程序环境中。 您可以使用喜欢的任何开发和分支方法。 获得对项目的初始访问权限后，请从`master`环境创建`staging`环境。 然后，通过从`staging`分支来创建`integration`环境。
 
 ## 入门环境体系结构
 
@@ -36,7 +49,7 @@ Adobe建议先在您的`staging`分支中进行全面测试，然后再推送到
 
 ## 暂存环境
 
-Adobe建议从`staging`创建一个名为`master`的分支。 `staging`分支将代码部署到暂存环境，以提供预生产环境以测试代码、模块和扩展、付款网关、运输、产品数据等。 此环境为所有服务提供配置以匹配生产环境，包括Fastly、New Relic APM和搜索。
+Adobe建议从`master`创建一个名为`staging`的分支。 `staging`分支将代码部署到暂存环境，以提供预生产环境以测试代码、模块和扩展、付款网关、运输、产品数据等。 此环境为所有服务提供配置以匹配生产环境，包括Fastly、New Relic APM和搜索。
 
 本指南中的其他部分提供了有关最终代码部署和在安全的暂存环境中测试生产级别交互的说明。 要获得最佳性能和功能测试，请将数据库复制到暂存环境中。
 
@@ -66,7 +79,7 @@ Adobe建议从`staging`创建一个名为`master`的分支。 `staging`分支将
 
 要在集成环境中获得最佳性能，请遵循以下最佳实践：
 
-- 限制目录大小 — 作为参考，示例数据包含约2,048个产品。 尝试将目录大小缩减到4,000-5,000个产品左右。
+- 限制目录大小 — 作为参考，示例数据包含约2,048个产品。尝试将目录大小缩减到4,000-5,000个产品左右。
 要检查目录中的产品数，请运行以下MySQL查询：
 
   ```sql
@@ -98,7 +111,7 @@ Adobe建议从`staging`创建一个名为`master`的分支。 `staging`分支将
 
 ### 服务
 
-云基础架构上的Adobe Commerce当前支持以下服务：PHP、MySQL (MariaDB)、Elasticsearch (Adobe Commerce 2.2到2.4.3-p2)、OpenSearch （2.3.7-p3、2.4.3-p2、2.4.4及更高版本）、Redis和[!DNL RabbitMQ]。
+云基础架构上的Adobe Commerce当前支持以下服务：PHP、MySQL (MariaDB)、Elasticsearch （Adobe Commerce 2.2到2.4.3-p2）、OpenSearch （2.3.7-p3、2.4.3-p2、2.4.4及更高版本）、Redis和[!DNL RabbitMQ]。
 
 每个服务都在一个单独的安全容器中运行。 容器在项目中一起管理。 某些服务是标准服务，例如：
 
@@ -126,15 +139,15 @@ Adobe建议从`staging`创建一个名为`master`的分支。 `staging`分支将
 
 - [OpenSearch](../services/opensearch.md)
 
-在暂存和生产环境中，您可以使用Fastly进行CDN和缓存。 最新版本的Fastly CDN扩展将在项目初始配置期间安装。 您可以升级扩展以获取最新的错误修复和改进。 查看Magento 2[的](https://github.com/fastly/fastly-magento2)Fastly CDN模块。 此外，您还有权访问[New Relic](../monitor/account-management.md)以进行性能监控。
+在暂存和生产环境中，您可以使用Fastly进行CDN和缓存。 最新版本的Fastly CDN扩展将在项目初始配置期间安装。 您可以升级扩展以获取最新的错误修复和改进。 查看Magento 2[&#128279;](https://github.com/fastly/fastly-magento2)的Fastly CDN模块。 此外，您还有权访问[New Relic](../monitor/account-management.md)以进行性能监控。
 
 使用以下文件配置要在实施中使用的软件版本。
 
-- [&#39;.magento.app.yaml&#39;](../application/configure-app-yaml.md)
+- [`.magento.app.yaml`](../application/configure-app-yaml.md)
 
-- [&#39;路由.yaml&#39;](../routes/routes-yaml.md)
+- [`routes.yaml`](../routes/routes-yaml.md)
 
-- [&#39;services.yaml&#39;](../services/services-yaml.md)
+- [`services.yaml`](../services/services-yaml.md)
 
 ### 备份和灾难恢复
 
@@ -148,7 +161,7 @@ Adobe建议从`staging`创建一个名为`master`的分支。 `staging`分支将
 
 1. 将`master`分支克隆到本地环境
 
-1. 从`staging`创建`master`分支
+1. 从`master`创建`staging`分支
 
 1. 从`staging`创建开发分支
 
@@ -158,7 +171,7 @@ Adobe建议从`staging`创建一个名为`master`的分支。 `staging`分支将
 
 - [入门开发和部署工作流程](starter-develop-deploy-workflow.md)
 
-- [Docker开发](../dev-tools/cloud-docker.md) (Cloud Docker for Commerce启用的本地开发环境)
+- [Docker开发](../dev-tools/cloud-docker.md) （Cloud Docker for Commerce启用的本地开发环境）
 
 - [管理分支](../project/console-branches.md)
 

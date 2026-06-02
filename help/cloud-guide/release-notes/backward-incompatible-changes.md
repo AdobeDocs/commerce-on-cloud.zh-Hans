@@ -4,9 +4,18 @@ description: 了解在升级现有云项目时的向后兼容性。
 feature: Cloud, Release Notes
 recommendations: noDisplay, catalog
 exl-id: 3f3c1036-bfd0-4c70-8309-6c5e442134cd
-source-git-commit: de50fda78c28a57d76e5c0a4d5dac0f8d4d844a0
+TQID: https://experienceleague.adobe.com/ekS7f5swOsG2xgXP6ybN6hzwYm2xBbPWvl5oabv7Crc
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: 822
 ht-degree: 0%
 
 ---
@@ -23,11 +32,11 @@ ht-degree: 0%
 
 ### 服务版本要求更改
 
-对于使用`ece-tools` v2002.1.0及更高版本的云项目，我们将PHP的最低版本要求从7.0.x更改为7.1.x。 如果您的环境配置指定了PHP 7.0，请更新[文件中的](../application/php-settings.md)php配置`.magento.app.yaml`。
+对于使用`ece-tools` v2002.1.0及更高版本的云项目，我们将PHP的最低版本要求从7.0.x更改为7.1.x。 如果您的环境配置指定了PHP 7.0，请更新`.magento.app.yaml`文件中的[php配置](../application/php-settings.md)。
 
 >[!WARNING]
 >
->由于PHP版本要求的更改，`ece-tools` 2002.1.0在运行Adobe Commerce 2.1.15或更高版本的云基础架构项目中仅支持Adobe Commerce。 如果您的项目使用早期版本，则必须在更新到[&#x200B; 2002.1.0之前](../development/commerce-version.md)升级`ece-tools`。
+>由于PHP版本要求的更改，`ece-tools` 2002.1.0在运行Adobe Commerce 2.1.15或更高版本的云基础架构项目中仅支持Adobe Commerce。 如果您的项目使用早期版本，则必须在更新到`ece-tools` 2002.1.0之前[升级](../development/commerce-version.md)。
 
 ### 环境配置更改
 
@@ -54,7 +63,7 @@ ht-degree: 0%
 | `vendor/bin/ece-tools docker:build` | `vendor/bin/ece-docker build:compose` |
 | `vendor/bin/ece-tools docker:config:convert` | `vendor/bin/ece-docker  image:generate:php` |
 
-在早期的ECE-Tools版本中，您可以使用`m2-ece-build`和`m2-ece-deploy`命令在`.magento.app.yaml`文件中配置部署挂接。 当您更新到v2002.1.0时，请检查`hooks`文件中的`.magento.app.yaml`配置以了解过时的命令，并根据需要替换它们。
+在早期的ECE-Tools版本中，您可以使用`m2-ece-build`和`m2-ece-deploy`命令在`.magento.app.yaml`文件中配置部署挂接。 当您更新到v2002.1.0时，请检查`.magento.app.yaml`文件中的`hooks`配置以了解过时的命令，并根据需要替换它们。
 
 ## 云修补程序更改
 
@@ -84,7 +93,7 @@ ht-degree: 0%
 
    - **正在更新Cloud Docker-compose命令** — 我们已将命令文件的路径从`./bin/docker`重命名为`./bin/magento-docker`。 更新脚本和命令以使用新路径。
 
-   - **Cron容器不再包含在默认Docker配置中** — 现在，您必须将`--with-cron`选项添加到`ece-docker build:compose`命令以在Docker环境配置中包含Cron容器。 请参阅[Cloud Docker for Commerce](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs)指南中的&#x200B;_管理cron作业_。
+   - **Cron容器不再包含在默认Docker配置中** — 现在，您必须将`--with-cron`选项添加到`ece-docker build:compose`命令以在Docker环境配置中包含Cron容器。 请参阅&#x200B;_Cloud Docker for Commerce_&#x200B;指南中的[管理cron作业](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs)。
 
      以前使用cron作业生成的容器现在不包含cron容器。
 

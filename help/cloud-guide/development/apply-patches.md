@@ -2,9 +2,16 @@
 title: 应用修补程序
 description: 了解如何在Adobe Commerce on cloud infrastructure项目中应用修补程序。
 feature: Cloud, Upgrade
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 923c1e43-45da-450f-bdfc-de84a901400d
+TQID: https://experienceleague.adobe.com/SyS-AIRHp0LW7Z4JwZw2FNtbvy9FVzISUID12MjlMrc
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: 910
 ht-degree: 0%
 
 ---
@@ -112,7 +119,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 **要在本地开发环境中应用单个修补程序**：
 
-1. 将“QUALITY_PATCH”变量添加到`.magento.env.yaml`文件中，并在下面列出所需的修补程序。
+1. 将“QUALITY_PATCHES”变量添加到`.magento.env.yaml`文件中，并在下面列出所需的修补程序。
 
    ```yaml
    stage:
@@ -239,7 +246,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 ## 将修补程序应用到非云项目
 
-使用[Quality Patches Tool](https://github.com/magento/quality-patches)进行Magento Open Source和Adobe Commerce项目。
+对Magento Open Source和Adobe Commerce项目使用[Quality Patches Tool](https://github.com/magento/quality-patches)。
 
 ## 还原本地环境中的修补程序
 

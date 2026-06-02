@@ -3,9 +3,20 @@ title: 静态内容部署
 description: 了解在Adobe Commerce上针对云基础架构项目部署静态内容（如图像、脚本和CSS）的策略。
 feature: Cloud, Build, Deploy, SCD
 exl-id: 8f30cae7-a3a0-4ce4-9c73-d52649ef4d7a
-source-git-commit: 325b7584daa38ad788905a6124e6d037cf679332
+TQID: https://experienceleague.adobe.com/bl2z1YM8u-HNuBYuQH3uqoRwiU4lfHGOQyr8Vbwyef8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: 768
 ht-degree: 0%
 
 ---
@@ -41,9 +52,9 @@ ht-degree: 0%
 生成静态内容需要访问主题和区域设置。 Adobe Commerce将主题存储在文件系统中（可在构建阶段访问）；但是，Adobe Commerce将区域设置存储在数据库中。 在生成阶段，数据库&#x200B;_不可用_。 为了在生成阶段生成静态内容，您必须使用`ece-tools`包中的`config:dump`命令将区域设置移动到文件系统。 它读取区域设置并将它们保存在`app/etc/config.php`文件中。
 
 >[!NOTE]
->运行`ece-tools`包中的`config:dump`命令后，转储到`config.php`文件[的配置在管理员仪表板](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin)中将被锁定（灰显）。 在管理员中更新这些配置的唯一方法是从本地文件删除它们，然后重新部署项目。
->&#x200B;>此外，每次向实例添加新的商店/商店组/网站时，都应记得运行`config:dump`命令以确保数据库同步。 您还可以选择应将哪些配置[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)转储到`config.php`文件中的。
->&#x200B;>如果由于字段灰显而忽略执行此步骤而从`config.php`文件中删除商店/商店组/网站配置，则下次部署时将从数据库中删除未转储的新实体。
+>运行`ece-tools`包中的`config:dump`命令后，转储到`config.php`文件[的配置在管理员功能板](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin)中将被锁定（灰显）。在管理员中更新这些配置的唯一方法是从文件本地删除它们，然后重新部署项目。
+>此外，每次向实例添加新的商店/商店组/网站时，都应记得运行`config:dump`命令以确保数据库同步。您还可以选择应将哪些配置[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)转储到`config.php`文件中。
+>如果从`config.php`文件中删除商店/商店组/网站配置，原因是字段呈灰色但未执行此步骤，则在下次部署时，将从数据库中删除未转储的新实体。
 
 **要将项目配置为在生成**&#x200B;时生成SCD，请执行以下操作：
 

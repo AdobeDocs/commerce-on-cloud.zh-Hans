@@ -3,9 +3,17 @@ title: 零停机部署
 description: 了解在云基础架构项目上部署Adobe Commerce时如何减少总体停机时间。
 feature: Cloud, Deploy, SCD, Themes
 exl-id: c216c5e9-d787-4428-b67a-b6aee814ded5
-source-git-commit: b831bc5bce0f76ec8972b3578c500508dd4d7d41
+TQID: https://experienceleague.adobe.com/wYFZNd42AoVZxdlWWG6Jr-K6FV2XhTdWp-9HFoof4rE
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: 502
 ht-degree: 0%
 
 ---
@@ -23,7 +31,7 @@ ht-degree: 0%
 使用以下步骤可减少存储将更新部署到生产环境所需的时间：
 
 1. [升级到`ece-tools`包](../dev-tools/install-package.md)或[更新`ece-tools`版本](../dev-tools/update-package.md)
-您的Adobe Commerce on cloud infrastructure项目必须具有最新的`ece-tools`包，以便您有可用的工具来配置最佳部署。 如果您有最新的`ece-tools`，请继续执行下一步。
+您的Adobe Commerce on cloud基础架构项目必须具有最新的`ece-tools`包，以便您拥有可用于配置最佳部署的工具。 如果您有最新的`ece-tools`，请继续执行下一步。
 
    >[!NOTE]
    >

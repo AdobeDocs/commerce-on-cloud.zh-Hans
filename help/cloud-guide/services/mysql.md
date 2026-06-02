@@ -2,9 +2,21 @@
 title: 设置MySQL服务
 description: 了解如何在云基础架构上使用Adobe Commerce管理用于永久数据存储的MySQL服务。
 feature: Cloud, Services, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 37b893ef-43cf-466b-9d18-ee3b80fdf2d8
+TQID: https://experienceleague.adobe.com/xPikS7qhOEhhWDRuUYBJEqL7EUPObzPDxJEZ4xjKkuE
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: 921
 ht-degree: 1%
 
 ---
@@ -17,7 +29,7 @@ ht-degree: 1%
 
 >[!WARNING]
 >
->将MariaDB从版本10.1升级到10.2时要小心。MariaDB 10.1是支持&#x200B;_XtraDB_&#x200B;作为存储引擎的最新版本。 MariaDB 10.2使用&#x200B;_InnoDB_&#x200B;作为存储引擎。 从10.1升级到10.2后，无法回滚更改。 Adobe Commerce支持这两个存储引擎；但是，您必须检查项目使用的扩展和其他系统，以确保它们与MariaDB 10.2兼容。查看[10.1和10.2](https://mariadb.com/kb/en/upgrading-from-mariadb-101-to-mariadb-102/#incompatible-changes-between-101-and-102)之间的不兼容更改。
+>将MariaDB从版本10.1升级到10.2时要小心。 MariaDB 10.1是支持&#x200B;_XtraDB_&#x200B;作为存储引擎的最新版本。 MariaDB 10.2使用&#x200B;_InnoDB_&#x200B;作为存储引擎。 从10.1升级到10.2后，无法回滚更改。 Adobe Commerce支持这两个存储引擎；但是，您必须检查项目使用的扩展和其他系统，以确保它们与MariaDB 10.2兼容。 查看[10.1和10.2](https://mariadb.com/kb/en/upgrading-from-mariadb-101-to-mariadb-102/#incompatible-changes-between-101-and-102)之间的不兼容更改。
 
 {{service-instruction}}
 
@@ -220,5 +232,5 @@ relationships:
 
 - [正在检查慢查询和进程MySQL](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql.html?lang=zh-Hans)
 - [在云上创建数据库转储](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud.html?lang=zh-Hans)
-- [数据迁移工具疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=zh-Hans)
-- [Adobe Commerce升级：压缩到动态表2.2.x，从2.3.x到2.4.x](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.html?lang=zh-Hans)
+- [数据迁移工具故障排除](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=zh-Hans)
+- [Adobe Commerce升级：压缩到动态表2.2.x、从2.3.x到2.4.x](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.html?lang=zh-Hans)
