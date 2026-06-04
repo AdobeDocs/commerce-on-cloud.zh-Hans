@@ -3,9 +3,9 @@ title: Adobe Commerce高级安全性
 description: 了解Advanced Security如何在Adobe Commerce on Cloud Infrastructure中添加机器人管理、高级速率限制和第7层DDoS保护。
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 3cc2b8aa0c70e56288de270c8bdf9a317ef22cc7
+source-git-commit: 0b3ef117f85c990c2a01ecb655c930b8c4f61acb
 workflow-type: tm+mt
-source-wordcount: '1986'
+source-wordcount: '2474'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,80 @@ ht-degree: 0%
 >[!NOTE]
 >
 >[!DNL Advanced Security]配置当前需要提交支持票证。 计划在未来版本中通过管理员UI进行自助配置。 有关详细信息，请参阅[请求 [!DNL Advanced Security]](#request-advanced-security)。
+
+>[!IMPORTANT]
+>
+>**当前限制**
+>
+>在2026年第3季度结束之前，客户不能直接修改或管理机器人管理规则。
+>
+>有关任何规则的添加、修改或调整，请通过[支持票证](https://experienceleague.adobe.com/home?lang=zh-Hans&support-tab=home#support)联系Adobe Commerce支持部门。 支持团队将实施请求的更改。
+>
+>从2026年第4季度开始，Fastly计划发布一项附加功能，允许客户在Commerce管理面板中管理机器人管理规则。
+
+## 默认规则和保护
+
+以下默认规则和保护适用于[!DNL Advanced Security]。
+
+### 第7层DDo
+
+- DDoS阈值内置于Fastly CDN平台中，当前无法根据客户进行自定义。
+- 客户无法直接看到受DDoS保护阻止的流量日志。
+- Adobe Commerce支持部门可以根据要求提供与被阻止的DDoS流量相关的详细信息。
+- 本机DDoS日志转发功能预计将在未来版本中推出。
+
+### 机器人管理
+
+以下基线机器人管理保护可通过Fastly的Signal Sciences仪表板提供。
+
+| 规则类型 | 状态 | 可见性 |
+|---|---|---|
+| 阻止标记为疑似不良机器人的流量 | 载入期间默认启用 | 在`sigsci_tags`下的New Relic日志中可见 |
+| 阻止基于任何特定标记（sigsci标记）的流量 | 仅在需要与客户协作时配置 | 在`sigsci_tags`下的New Relic日志中可见 |
+| 针对特定API或URL模式的速率限制 | 仅在需要与客户协作时配置 | 被阻止的流量显示在`Agent_response`下的New Relic日志中 |
+| 特定API或URL模式的动态挑战 | 仅在需要与客户协作时配置 | 被阻止的流量显示在`Agent_response`下的New Relic日志中 |
+| 浏览器质询 | 仅在需要与客户协作时配置 | 被阻止的流量显示在`Agent_response`下的New Relic日志中 |
+
+## 可观察性 — 监视机器人保护和NGWAF活动
+
+CDN日志会自动转发到客户的New Relic帐户。 有关其他详细信息，请参阅[日志管理](../monitor/log-management.md)。
+
+CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置遥测功能，允许客户直接在New Relic中监控安全事件。
+
+关键字段包括：
+
+- **`Sigsci_Tags`** — 指示Signal Sciences应用的分类和标记。
+- **`Agent_response`** — 指示机器人保护/NGWAF代理执行的操作。
+
+示例：
+
+- 要识别由机器人保护或NGWAF规则阻止的流量，请执行以下操作：
+
+  `Agent_response:"406"`
+
+  响应代码406表示安全控件阻止了请求。
+
+- 要识别标记为可疑不良机器人的请求，请执行以下操作：
+
+  `Sigsci_Tags:"*SUSPECTED-BAD-BOT*"`
+
+这些字段可用于在New Relic中创建仪表板、警报和调查，以监控机器人活动、阻止的请求和其他与安全相关的事件。
+
+## 现有VCL功能保持不变
+
+启用[!DNL Advanced Security]加载项不会修改或替换现有的基于Fastly VCL的安全控件。
+
+下列现有VCL阻塞功能可继续运行，且不会发生任何更改：
+
+- 基于IP的阻止
+- 地理分块
+- 基于用户代理的阻止
+- 基于JA3签名的阻止
+- JA4基于签名的阻止
+
+客户可以继续使用现有的自定义VCL配置和安全规则以及[!DNL Advanced Security]附加功能。
+
+[!DNL Advanced Security]加载项在[!DNL Adobe Commerce on Cloud Infrastructure]中已提供的标准Fastly CDN和现有VCL保护之外运行。
 
 ## 威胁覆盖
 
