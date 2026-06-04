@@ -3,9 +3,9 @@ title: Adobe Commerce高级安全性
 description: 了解Advanced Security如何在Adobe Commerce on Cloud Infrastructure中添加机器人管理、高级速率限制和第7层DDoS保护。
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 3cc2b8aa0c70e56288de270c8bdf9a317ef22cc7
+source-git-commit: 0b3ef117f85c990c2a01ecb655c930b8c4f61acb
 workflow-type: tm+mt
-source-wordcount: '1986'
+source-wordcount: '2474'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 [!DNL Adobe Commerce Advanced Security]是与[!DNL Adobe Commerce on Cloud Infrastructure]一起使用的产品，可让您的在线商店保持快速、可用和安全。 这有助于在流量高峰期事件和自动攻击期间保护收入、减少停机时间，并维护客户信任。
 
-[!DNL Adobe Commerce on Cloud Infrastructure]包含内置[第3层和第4层DDoS保护](./fastly.md#ddos-protection)以及[Web应用程序防火墙(WAF)](./fastly-waf-service.md)。 在[责任分担模型](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/security-and-compliance/shared-responsibility)中，第7层DDoS检测、机器人保护和主动IP阻止是商家责任，而[!DNL Adobe Commerce Advanced Security]旨在解决这些责任。
+[!DNL Adobe Commerce on Cloud Infrastructure]包含内置[第3层和第4层DDoS保护](./fastly.md#ddos-protection)以及[Web应用程序防火墙(WAF)](./fastly-waf-service.md)。 在[责任分担模型](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)中，第7层DDoS检测、机器人保护和主动IP阻止是商家责任，而[!DNL Adobe Commerce Advanced Security]旨在解决这些责任。
 
 [!DNL Advanced Security]通过Fastly支持的边缘安全功能扩展了店面保护，该功能提供了机器人管理、高级速率限制和第7层DDoS保护，是整合了网络边缘的规模、性能和安全性的统一边缘平台的一部分。
 
@@ -35,6 +35,80 @@ ht-degree: 0%
 >[!NOTE]
 >
 >[!DNL Advanced Security]配置当前需要提交支持票证。 计划在未来版本中通过管理员UI进行自助配置。 有关详细信息，请参阅[请求 [!DNL Advanced Security]](#request-advanced-security)。
+
+>[!IMPORTANT]
+>
+>**当前限制**
+>
+>在2026年第3季度结束之前，客户不能直接修改或管理机器人管理规则。
+>
+>有关任何规则的添加、修改或调整，请通过[支持票证](https://experienceleague.adobe.com/home?support-tab=home#support)联系Adobe Commerce支持部门。 支持团队将实施请求的更改。
+>
+>从2026年第4季度开始，Fastly计划发布一项附加功能，允许客户在Commerce管理面板中管理机器人管理规则。
+
+## 默认规则和保护
+
+以下默认规则和保护适用于[!DNL Advanced Security]。
+
+### 第7层DDo
+
+- DDoS阈值内置于Fastly CDN平台中，当前无法根据客户进行自定义。
+- 客户无法直接看到受DDoS保护阻止的流量日志。
+- Adobe Commerce支持部门可以根据要求提供与被阻止的DDoS流量相关的详细信息。
+- 本机DDoS日志转发功能预计将在未来版本中推出。
+
+### 机器人管理
+
+以下基线机器人管理保护可通过Fastly的Signal Sciences仪表板提供。
+
+| 规则类型 | 状态 | 可见性 |
+|---|---|---|
+| 阻止标记为疑似不良机器人的流量 | 载入期间默认启用 | 在`sigsci_tags`下的New Relic日志中可见 |
+| 阻止基于任何特定标记（sigsci标记）的流量 | 仅在需要与客户协作时配置 | 在`sigsci_tags`下的New Relic日志中可见 |
+| 针对特定API或URL模式的速率限制 | 仅在需要与客户协作时配置 | 被阻止的流量显示在`Agent_response`下的New Relic日志中 |
+| 特定API或URL模式的动态挑战 | 仅在需要与客户协作时配置 | 被阻止的流量显示在`Agent_response`下的New Relic日志中 |
+| 浏览器质询 | 仅在需要与客户协作时配置 | 被阻止的流量显示在`Agent_response`下的New Relic日志中 |
+
+## 可观察性 — 监视机器人保护和NGWAF活动
+
+CDN日志会自动转发到客户的New Relic帐户。 有关其他详细信息，请参阅[日志管理](../monitor/log-management.md)。
+
+CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置遥测功能，允许客户直接在New Relic中监控安全事件。
+
+关键字段包括：
+
+- **`Sigsci_Tags`** — 指示Signal Sciences应用的分类和标记。
+- **`Agent_response`** — 指示机器人保护/NGWAF代理执行的操作。
+
+示例：
+
+- 要识别由机器人保护或NGWAF规则阻止的流量，请执行以下操作：
+
+  `Agent_response:"406"`
+
+  响应代码406表示安全控件阻止了请求。
+
+- 要识别标记为可疑不良机器人的请求，请执行以下操作：
+
+  `Sigsci_Tags:"*SUSPECTED-BAD-BOT*"`
+
+这些字段可用于在New Relic中创建仪表板、警报和调查，以监控机器人活动、阻止的请求和其他与安全相关的事件。
+
+## 现有VCL功能保持不变
+
+启用[!DNL Advanced Security]加载项不会修改或替换现有的基于Fastly VCL的安全控件。
+
+下列现有VCL阻塞功能可继续运行，且不会发生任何更改：
+
+- 基于IP的阻止
+- 地理分块
+- 基于用户代理的阻止
+- 基于JA3签名的阻止
+- JA4基于签名的阻止
+
+客户可以继续使用现有的自定义VCL配置和安全规则以及[!DNL Advanced Security]附加功能。
+
+[!DNL Advanced Security]加载项在[!DNL Adobe Commerce on Cloud Infrastructure]中已提供的标准Fastly CDN和现有VCL保护之外运行。
 
 ## 威胁覆盖
 
@@ -142,7 +216,7 @@ ht-degree: 0%
 - **合规性工具** — PCI扫描、SOC合规性报告和法规审核工具。
 - **应用程序级强化** — 基于令牌的API身份验证、查询参数规范化和缓存策略设计。
 
-有关Adobe和客户安全责任的完整概述，请参阅[责任分担模型](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/security-and-compliance/shared-responsibility)。
+有关Adobe和客户安全责任的完整概述，请参阅[责任分担模型](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)。
 
 ## 常见攻击模式和保护
 
@@ -180,7 +254,7 @@ ht-degree: 0%
 
 1. 请联系您的Adobe客户团队或Adobe销售代表，讨论您项目的[!DNL Advanced Security]。
 
-1. 购买[!DNL Advanced Security]后，[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)，请求[!DNL Advanced Security]启用。 包括您的[!DNL Adobe Commerce on Cloud Infrastructure]项目ID和需要启用的环境（例如，生产和暂存）。
+1. 购买[!DNL Advanced Security]后，[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，请求[!DNL Advanced Security]启用。 包括您的[!DNL Adobe Commerce on Cloud Infrastructure]项目ID和需要启用的环境（例如，生产和暂存）。
 
 1. Adobe在您的Fastly服务上激活[!DNL Advanced Security]并配置初始保护策略。 启用通常在提交票证后的几个工作日内完成。
 
@@ -188,7 +262,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->对[!DNL Advanced Security]的配置更改当前需要[提交支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。 计划在未来版本中通过管理员UI进行自助配置。
+>对[!DNL Advanced Security]的配置更改当前需要[提交支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 计划在未来版本中通过管理员UI进行自助配置。
 
 ## 限制
 
