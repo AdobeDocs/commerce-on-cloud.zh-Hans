@@ -1,7 +1,7 @@
 ---
-source-git-commit: 3a36ada0dd3bdb4952b71f9ff851af20766c91ed
+source-git-commit: a15ae4e0e11a84662c980ad351e32362f14e69e1
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '442'
 ht-degree: 2%
 
 ---
@@ -10,6 +10,50 @@ ht-degree: 2%
 ## 新增功能
 
 本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+
+### 2026年6月4日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/advanced-security">高级安全性</a>主题，其中包含有关限制和可观察性的信息。</p>
+</td>
+      <td>
+        重大更新
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/54fcde91fb6fd159edadf85146da375692cce0d6">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年6月2日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>阐明了默认锁定配置以及<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a>和<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a>环境变量对Pro和Starter环境的影响。</p>
+</td>
+      <td>
+        技术
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/17ecf47f8cad5dcb53ef92b32377a7074e16bb52">提交</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026年6月1日
 
