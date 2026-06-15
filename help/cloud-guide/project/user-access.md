@@ -1,26 +1,16 @@
 ---
 title: 管理用户访问权限
-description: 了解如何在云基础架构项目和环境中管理用户对Adobe Commerce的访问权限。
+description: 了解如何使用magento-cloud CLI或Cloud Console在Adobe Commerce上为云基础架构项目和环境添加用户和分配角色。
 role: Admin
 feature: Cloud, Roles/Permissions
-last-substantial-update: 2023-06-27T00:00:00.000Z
+level: Beginner
+short-description: 在Cloud Console或CLI中添加用户并分配项目和环境角色。
+last-substantial-update: 2026-06-11T00:00:00Z
 topic: Security
 exl-id: 953593de-f675-49fd-988f-f11306f67fbd
-TQID: https://experienceleague.adobe.com/hoRda1DXcWU5ZfsEnOf0JSe-JbCQy0GkXQ4Tw3HIU0g
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: de324897e87232393f20d95b2867d8a95605fa23
 workflow-type: tm+mt
-source-wordcount: 1518
+source-wordcount: '1690'
 ht-degree: 0%
 
 ---
@@ -37,7 +27,7 @@ ht-degree: 0%
 环境级访问基于环境类型：生产、暂存和开发。 向用户&#x200B;_查看器_&#x200B;授予&#x200B;_开发_&#x200B;环境的权限意味着他们可以查看项目中的&#x200B;**所有**&#x200B;开发环境。 下表说明了授予各个权限级别的功能：
 
 | 权限级别 | 访问 | SSH访问 |
-| ------------------ | ----------- | :----------: |
+| ---------------- | ------ | :--------: |
 | **管理员** | 执行管理员任务，如更改设置、推送代码、执行任务和分支管理（包括与父环境合并） | 是 |
 | **参与者** | 推送代码并分支环境；无法更改设置或执行操作 | 是 |
 | **查看器** | 对环境类型的仅查看访问权限 | 否 |
@@ -47,14 +37,10 @@ ht-degree: 0%
 
 您可以使用`magento-cloud` CLI或[!DNL Cloud Console]添加用户和分配角色。
 
->[!BEGINSHADEBOX]
-
-**先决条件：**
-
-- Adobe ID的注册用户。 用户必须[注册Adobe帐户](https://account.adobe.com)，然后通过访问[https://console.adobecommerce.com](https://console.adobecommerce.com)初始化其[Cloud帐户](https://console.adobecommerce.com)，然后才能将其添加到Cloud项目。
-- 分配了&#x200B;**管理员**&#x200B;角色的用户无法使用`magento-cloud` CLI管理用户。 只有被授予&#x200B;**帐户所有者**&#x200B;角色的用户才能管理用户。
-
->[!ENDSHADEBOX]
+>[!PREREQUISITES]
+>
+>- Adobe ID的注册用户。 用户必须[注册Adobe帐户](https://account.adobe.com)，然后初始化其[Cloud帐户](https://console.adobecommerce.com)，然后才能将其添加到Cloud项目。
+>- 分配了&#x200B;**管理员**&#x200B;角色的用户无法使用`magento-cloud` CLI管理用户。 只有被授予&#x200B;**帐户所有者**&#x200B;角色的用户才能管理用户。
 
 ## 使用CLI管理用户
 
@@ -78,13 +64,13 @@ ht-degree: 0%
 
    >[!IMPORTANT]
    >
-   >用户必须具有Adobe ID；请参阅[先决条件](#add-users-and-manage-access)。
+   >用户必须具有Adobe ID。 请参阅先决条件。
 
 1. 按照提示操作：指定用户电子邮件地址，设置项目和环境类型角色，并添加用户。
 
    > 示例提示
 
-   ```
+   ```text
    Enter the user's email address: alice@example.com
    
    Email address: alice@example.com
@@ -118,7 +104,7 @@ magento-cloud user:get alice@example.com
 
 >示例响应：
 
-```
+```text
 Current role(s) of User (alice@example.com) on Production (project_id):
   Project role: admin
 ```
@@ -145,7 +131,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 >[!IMPORTANT]
 >
->用户必须具有Adobe ID；请参阅[先决条件](#add-users-and-manage-access)。
+>用户必须具有Adobe ID。 请参阅先决条件。
 
 ### 在项目中添加用户
 
@@ -159,7 +145,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. 在&#x200B;_访问_&#x200B;视图中，单击&#x200B;**[!UICONTROL Add]**。
 
-1. 完成&#x200B;_[!UICONTROL Add User]_&#x200B;表单：
+1. 完成&#x200B;_[!UICONTROL Add User]_表单：
 
    - 输入用户电子邮件地址。
 
@@ -177,9 +163,25 @@ magento-cloud user:update alice@example.com -r production:a
    >
    >添加用户不会自动触发部署。
 
-1. 添加用户后，重新部署所有环境以应用更改。 添加用户不会自动触发部署。 重新部署是确保用户可以使用SSH访问环境或执行管理员任务的重要步骤。
+1. 添加用户后，重新部署所有环境以应用更改。
+
+   重新部署确保用户可以使用SSH访问环境或执行管理员任务。
 
 添加用户后，Adobe会向指定地址发送一封电子邮件，说明如何访问Adobe Commerce on cloud infrastructure项目。
+
+### 邀请国
+
+在[!DNL Cloud Console]中，管理员可以在帐户初始化完成之前发送邀请。 在这种情况下，访问列表会显示状态为[!UICONTROL Invite pending]的用户。 在载入完成之前，访问未完全激活。
+
+根据控制台和用户的帐户状态，用户可以以下列状态之一出现：
+
+- **[!UICONTROL Not invited]** — 不存在项目访问记录。
+- **[!UICONTROL Invite pending]** — 已发送邀请，但帐户初始化或接受不完整。
+- **[!UICONTROL Active]** — 用户已完成入门培训并具有有效的项目访问权限。
+
+>[!NOTE]
+>
+>[!DNL Cloud Console]显示的邀请状态比[!DNL Legacy Cloud Console] (`https://<region-id>.magento.cloud/projects/<project_id>`)更明确。 可见的用户或邀请条目并不总是意味着用户可以立即访问所有环境。 可能仍需要SSH密钥设置或其他传播步骤。 请参阅[用户身份验证要求](#user-authentication-requirements)。
 
 ## 用户身份验证要求
 
@@ -222,7 +224,7 @@ magento-cloud user:update alice@example.com -r production:a
 
    - 在移动设备上，打开验证器应用程序。 然后，将设置代码添加到应用程序中。
 
-   - 在[!UICONTROL **[!UICONTROL TFA set up - Application]**]页面的&#x200B;**[!UICONTROL Application verification code]**&#x200B;字段中键入移动设备中的TFA代码。
+   - 在&#x200B;**[!UICONTROL TFA set up - Application]**&#x200B;页面的&#x200B;**[!UICONTROL Application verification code]**&#x200B;字段中键入移动设备中的TFA代码。
 
    - 单击&#x200B;**[!UICONTROL Verify and save]**。
 
@@ -244,7 +246,7 @@ magento-cloud user:update alice@example.com -r production:a
 
      >[!WARNING]
      >
-     >如果您无法访问具有TFA的帐户，并且没有恢复代码列表，则必须联系项目管理员，或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以重置TFA应用程序。
+     >如果您无法访问具有TFA的帐户，并且没有恢复代码列表，则必须联系项目管理员，或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以重置TFA应用程序。
 
 1. 完成TFA设置后，单击&#x200B;**保存**&#x200B;以更新您的帐户。
 
@@ -291,6 +293,10 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. 单击&#x200B;**[!UICONTROL Create API token]**&#x200B;并输入名称，例如，指定与计算机用户或使用API令牌的自动化进程匹配的名称。
 
-   ![API令牌](../../assets/api-token-name.png)
+   ![包含“创建API令牌名称”字段的“云控制台API令牌”选项卡](../../assets/api-token-name.png)
 
 1. 单击&#x200B;**[!UICONTROL Create API token]**。
+
+## 有关此主题的更多帮助
+
+- [无法向Adobe Commerce云项目添加用户](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/unable-add-user-adobe-commerce-cloud-project) — 添加用户时疑难解答失败。
