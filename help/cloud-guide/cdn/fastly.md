@@ -21,9 +21,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: e0e1d3994a6b9ceef9e45b55cc9946bc62203ddb
 workflow-type: tm+mt
-source-wordcount: 1637
+source-wordcount: 1667
 ht-degree: 0%
 
 ---
@@ -114,7 +114,7 @@ mywebsite.com/rest/default/V1/inventory/source-items
 
 ## Fastly服务帐户和凭据
 
-云基础架构项目上的Adobe Commerce未获得专用的Fastly帐户。 Fastly服务在注册到Adobe的集中帐户中进行管理，并且管理功能板仅供云支持团队访问。
+云基础架构项目上的Adobe Commerce未获得专用的Fastly帐户。 Fastly服务在注册到Adobe的集中帐户中进行管理，并且仪表板访问仅限于Cloud支持团队。 因此，支持人员无法提供Fastly仪表板访问权限来响应客户请求。 使用Adobe Commerce管理员和特定于环境的Fastly凭据来执行支持的Fastly配置和管理任务。
 
 相反，每个暂存和生产环境都具有唯一的Fastly凭据（API令牌和服务ID），以便从Commerce管理员配置和管理Fastly服务。 Fastly API可用于执行Fastly服务的高级管理，这需要凭据才能提交这些请求。
 
