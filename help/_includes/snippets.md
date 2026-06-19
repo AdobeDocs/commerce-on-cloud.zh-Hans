@@ -1,7 +1,7 @@
 ---
-source-git-commit: 3006f8f7b3eb54f44cf2bda06403441d304b4b81
+source-git-commit: 020a2699befa042a37170a638ded9657a72933e8
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1382'
 ht-degree: 0%
 
 ---
@@ -143,6 +143,16 @@ ht-degree: 0%
 >[!TIP]
 >
 >在开始升级或修补过程之前，请从集成环境创建一个活动分支，并将新分支签出到您的本地工作站。 将分支专用于升级或修补过程有助于避免干扰正在进行的工作。
+
+## New Relic中的Valkey {#valkey-newrelic}
+
+>[!NOTE]
+>
+>即使在迁移到Valkey后，New Relic仍可能会显示Redis
+>
+>预计New Relic可能会继续将缓存服务称为Redis，即使环境已迁移到Valkey也是如此。
+>
+>Valkey是Redis的开源分支，一些工具和集成继续使用Redis命名而不是不同的Valkey标签来标识服务。 这并不一定表明仍然安装了Redis。
 
 <!-- Fastly-related snippets begin -->
 
