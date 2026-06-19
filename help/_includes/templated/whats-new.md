@@ -1,7 +1,7 @@
 ---
-source-git-commit: e0e4b21e76a5c1fa9e146695a183a29ec79e6cc1
+source-git-commit: 0d5ff7b5e81c76961900560d917dd97cdfac72ee
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '420'
 ht-degree: 2%
 
 ---
@@ -10,6 +10,28 @@ ht-degree: 2%
 ## 新增功能
 
 本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+
+### 2026年6月15日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>更新了<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access">管理用户访问权限</a>，其中包含更清晰的先决条件、Cloud Console邀请状态、重新部署指导和相关疑难解答。</p>
+</td>
+      <td>
+        反馈
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/747367a8808b0b22f810f4e26b94a06ee995281d">提交</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026年6月4日
 
@@ -23,7 +45,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/advanced-security">高级安全性</a>主题，其中包含有关限制和可观察性的信息。</p>
+      <td><p>更新了<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/advanced-security">高级安全性</a>主题，其中包含有关限制和可观察性的信息。</p>
 </td>
       <td>
         重大更新
@@ -45,7 +67,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>阐明了默认锁定配置以及<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a>和<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a>环境变量对Pro和Starter环境的影响。</p>
+      <td><p>阐明了默认锁定配置以及<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a>和<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a>环境变量对Pro和Starter环境的影响。</p>
 </td>
       <td>
         技术
@@ -67,7 +89,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>在<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Elasticsearch支持警告</a>中删除了Elasticsearch对内部部署的支持声明。</p>
+      <td><p>在<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Elasticsearch支持警告</a>中删除了Elasticsearch对内部部署的支持声明。</p>
 </td>
       <td>
         技术
@@ -89,7 +111,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>为Adobe Commerce on Cloud Infrastructure添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/advanced-security">高级安全性</a>产品。</p>
+      <td><p>为Adobe Commerce on Cloud Infrastructure添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/advanced-security">高级安全性</a>产品。</p>
 </td>
       <td>
         新主题
@@ -111,7 +133,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>在云工具文档中更新发行说明，以反映最近的版本添加、兼容性更新和修复。 请参阅<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Commerce Cloud Tools Suite的发行说明</a>。</p>
+      <td><p>在云工具文档中更新发行说明，以反映最近的版本添加、兼容性更新和修复。 请参阅<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Commerce Cloud Tools Suite的发行说明</a>。</p>
 </td>
       <td>
         技术
@@ -119,7 +141,7 @@ ht-degree: 2%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/812482f88f6ab6400c77b6ec36db73956dd3f202">提交</a></td>
     </tr>
     <tr>
-      <td><p>在ECE-Tools版本v2002.2.11之后更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI引用</a>和<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">错误消息</a>。</p>
+      <td><p>在ECE-Tools版本v2002.2.11之后更新了<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI引用</a>和<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">错误消息</a>。</p>
 </td>
       <td>
         技术
@@ -141,7 +163,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions">PHP设置</a>以列出可选PHP扩展中的LDAP，并注意LDAP和类似扩展是特定于环境的（例如，不是Pro暂存/生产上的自助服务）。</p>
+      <td><p>更新了<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions">PHP设置</a>以列出可选PHP扩展中的LDAP，并注意LDAP和类似扩展是特定于环境的（例如，不是Pro暂存/生产上的自助服务）。</p>
 </td>
       <td>
         技术
