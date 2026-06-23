@@ -14,9 +14,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: bec442a5b442adafbd23c7c8eac1adbdb7b93b65
 workflow-type: tm+mt
-source-wordcount: 321
+source-wordcount: 328
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 [Redis](https://redis.io)是一个可选的后端缓存解决方案，它取代了Adobe Commerce默认使用的Zend Framework Zend_Cache_Backend_File。
 
-请参阅&#x200B;_配置指南_&#x200B;中的[配置红色](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/config-redis.html?lang=zh-Hans)。
+请参阅&#x200B;_实施行动手册最佳实践指南_&#x200B;中的[配置红色](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
 
 {{service-instruction}}
 
@@ -141,6 +141,6 @@ echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
 请参阅以下Adobe Commerce支持文章，以获取有关Redis问题疑难解答的帮助：
 
 - [Redis问题延迟管理员登录或签出](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html)
-- [扩展Redis缓存实施Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html?lang=zh-Hans)
+- [扩展Redis缓存实施Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html)
 - [Adobe Commerce上的托管警报： Redis内存警告警报](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html?lang=zh-Hans)
 - [Adobe Commerce上的托管警报：Redis内存严重警报](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html?lang=zh-Hans)
