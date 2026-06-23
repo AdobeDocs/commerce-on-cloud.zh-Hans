@@ -4,24 +4,12 @@ description: 请参阅在云基础架构上形成Commerce的技术栈栈。
 feature: Cloud, Iaas, Paas
 exl-id: 3fac1ab7-6440-4bf9-8169-9fadf51d70dd
 TQID: https://experienceleague.adobe.com/2-uZdx1Oi-3LQUK-L7rC4kZWYcYobEhnVcUDNwOHpFs
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
-  - id: f2261633-201d-46c5-8a66-999e70527a83
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: efe0f95c16d9aab9af6a9c263034b08dce4d7c93
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: b5f00040-57a0-4a6d-a39e-383b1936c2c9id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c1256247-af4b-46d8-9dca-0c654ecfa157id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: df5e974b-6742-4873-a687-a6bedaafdaa2id: f2261633-201d-46c5-8a66-999e70527a83
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 405
 ht-degree: 0%
@@ -36,7 +24,7 @@ ht-degree: 0%
 
 1. [**云基础架构**](pro-architecture.md)：选择Amazon Web Services (AWS)或Microsoft Azure作为您的Adobe Commerce on cloud infrastructure Pro项目的基础架构(IaaS)。
 
-   Adobe会定期分析您的虚拟计算资源(vCPU)使用情况，并自动分配资源以优化您的长期使用情况，并降低超出最大年度vCPU日允许量的风险。 如果预计特定时间段的网站流量会增加，则必须继续打开支持票证以[请求临时扩展](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=zh-Hans)。
+   Adobe会定期分析您的虚拟计算资源(vCPU)使用情况，并自动分配资源以优化您的长期使用情况，并降低超出最大年度vCPU日允许量的风险。 如果预计特定时间段的网站流量会增加，则必须继续打开支持票证以[请求临时扩展](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html)。
 
 1. [**Platform as a Service**](cloud-architecture.md)：云基础架构项目上的每个Adobe Commerce都提供了一个用于开发、测试和集成服务的Platform as a Service (PaaS)集成环境。
 1. [**Adobe Commerce**](../project/overview.md)：云基础架构上的Adobe Commerce提供了预配置的基础架构，其中包括PHP、MySQL (MariaDB)、Redis、消息队列服务（[!DNL RabbitMQ]或[!DNL ActiveMQ]）以及支持的搜索引擎技术。
@@ -50,3 +38,4 @@ ht-degree: 0%
 单一应用程序需要大量资源，难以快速扩展和提供服务。 借助云基础架构，Commerce客户可获得对基于SaaS的丰富、智能和高性能微服务的无与伦比的访问权限。 请参阅[支持的软件和服务](cloud-architecture.md#supported-software-and-services)。
 
 使用[Commerce入门指南](../../get-started/overview.md)设置新的Cloud项目并开始在云原生环境中管理您的[!DNL Commerce]应用程序。
+

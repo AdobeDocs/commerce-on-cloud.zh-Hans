@@ -4,18 +4,11 @@ description: 了解如何使用入门开发和部署工作流。
 feature: Cloud, Paas
 exl-id: 75d170b6-1ec2-4099-82c8-5c4df3442843
 TQID: https://experienceleague.adobe.com/ohBEYApu-9AJmxBvtoxGxpQcmK67ppeACPl7xNvycsQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 2168
 ht-degree: 0%
@@ -117,9 +110,9 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 有关配置的最佳信息，请查看Adobe Commerce文档和已安装的扩展。 以下是帮助您入门的一些链接和想法：
 
 - 针对云中的特定最佳实践，[存储配置的最佳实践](../store/best-practices.md)
-- [商店管理员访问权限、名称、语言、货币、品牌、网站、商店视图等的](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/setup/store-details)基本配置
-- [主题](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/content-design/content-menu#design-features)，用于显示您的网站和存储（包括CSS和布局）的外观
-- [系统配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/guide-overview)，用于角色、工具、通知和数据库的加密密钥
+- [商店管理员访问权限、名称、语言、货币、品牌、网站、商店视图等的](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/store-details)基本配置
+- [主题](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu#design-features)，用于显示您的网站和存储（包括CSS和布局）的外观
+- [系统配置](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/guide-overview)，用于角色、工具、通知和数据库的加密密钥
 - 扩展设置使用其文档
 
 除了商店设置之外，您还可以进一步配置多个站点和商店、配置的服务等。 请参阅[配置您的商店](../store/overview.md)。
@@ -175,9 +168,9 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 
 要帮助将生产数据导出为测试数据，以便在暂存和集成环境中使用，请执行以下操作：
 
-- [使用Adobe Commerce加密密钥导出客户的受保护备份并存储数据时，运行支持实用程序](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=zh-Hans) CLI命令（推荐）
+- [使用Adobe Commerce加密密钥导出客户的受保护备份并存储数据时，运行支持实用程序](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) CLI命令（推荐）
 
-- 用于生成和导出数据的[数据收集](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/support#data-collector)工具
+- 用于生成和导出数据的[数据收集](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector)工具
 
 要迁移此数据，请参阅[迁移和部署静态文件和数据](../deploy/staging-production.md#migrate-static-files)。
 
@@ -185,7 +178,7 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 
 >[!NOTE]
 >
->将数据推送到其他环境之前，应考虑清理您的数据。 您有几个选项，包括[使用支持实用程序](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=zh-Hans)或开发脚本以清除客户数据。
+>将数据推送到其他环境之前，应考虑清理您的数据。 您有几个选项，包括[使用支持实用程序](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html)或开发脚本以清除客户数据。
 
 >[!WARNING]
 >
@@ -258,3 +251,4 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 - 在`staging`环境中部署和测试
 
 - 部署到`production`环境
+

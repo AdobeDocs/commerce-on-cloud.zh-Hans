@@ -4,20 +4,11 @@ description: 了解如何使用PrivateLink服务在同一地区的专用云和Ad
 feature: Cloud, Iaas, Security
 exl-id: 13a7899f-9eb5-4c84-b4c9-993c39d611cc
 TQID: https://experienceleague.adobe.com/AxpzTY-Nb7UoKhW-wzAOuWLm5O7XS4OFxjSaIfFUR-I
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1798
 ht-degree: 0%
@@ -51,7 +42,7 @@ ht-degree: 0%
 - Adobe Commerce支持不涵盖对AWS PrivateLink初始启用以外的问题进行故障诊断。
 - 客户负责与管理自己的VPC相关的成本。
 - 平台&#x200B;**支持** HTTPS协议（端口443）
-   - **Azure专用链接**：无法使用HTTPS协议（端口443）连接到Adobe Commerce on cloud infrastructure，因为[Fastly源遮蔽](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=zh-Hans)。
+   - **Azure专用链接**：无法使用HTTPS协议（端口443）连接到Adobe Commerce on cloud infrastructure，因为[Fastly源遮蔽](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html)。
    - **AWS PrivateLink**：支持HTTPS协议（端口443）连接。
 - PrivateDNS不可用。
 
@@ -121,7 +112,7 @@ ht-degree: 0%
 
 以下工作流程概述了PrivateLink与Adobe Commerce在云基础架构上集成的实施过程。
 
-1. **客户**&#x200B;提交请求主题行`PrivateLink support for <company>`启用PrivateLink的支持票证。 在票证中包含启用[&#128279;](#prerequisites)所需的数据。 Adobe使用支持工单在启用过程中协调通信。
+1. **客户**&#x200B;提交请求主题行`PrivateLink support for <company>`启用PrivateLink的支持票证。 在票证中包含启用](#prerequisites)所需的[数据。 Adobe使用支持工单在启用过程中协调通信。
 
 1. **Adobe**&#x200B;允许客户帐户访问Adobe VPC中的端点服务。
 
@@ -219,7 +210,7 @@ ht-degree: 0%
 
 ## 更改PrivateLink配置
 
-[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以更改现有的PrivateLink配置。 例如，您可以请求进行如下更改：
+[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以更改现有的PrivateLink配置。 例如，您可以请求进行如下更改：
 
 - 在云基础架构Pro生产或暂存环境中从Adobe Commerce中删除PrivateLink连接。
 - 更改用于访问Adobe端点服务的客户Cloud平台帐号。
