@@ -15,7 +15,7 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 828
 ht-degree: 0%
@@ -117,3 +117,4 @@ project-id@server-id:~$
 日志位置会因节点而略有不同。 例如，数据库日志，如&#x200B;**MySQL错误日志**，在服务节点(`/var/log/mysql/mysql-error.log`)上可用，但在Web节点上不可用。
 
 每个Pro帐户都包含[New Relic日志服务](../monitor/new-relic-service.md)，该服务会自动与来自应用程序的日志数据连接以提供动态日志管理。 来自所有节点的聚合日志数据将显示在New Relic日志应用程序中，以便您可以从单个功能板排除特定节点的性能问题。
+

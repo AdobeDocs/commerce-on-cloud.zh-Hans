@@ -11,7 +11,7 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 462
 ht-degree: 0%
@@ -92,3 +92,4 @@ web:
 >[!NOTE]
 >
 >此示例显示配置为支持单个域的云项目的默认Web配置。 对于需要支持多个网站或商店的项目，必须将`web`配置设置为支持共享域。 请参阅[为共享域配置位置](../store/multiple-sites.md#configure-locations-for-shared-domains)。
+

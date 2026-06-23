@@ -21,7 +21,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 987
 ht-degree: 0%
@@ -96,3 +96,4 @@ Adobe和Fastly管理更新过程，以确保新的或修改的WAF规则在您的
 WAF服务允许您根据IP地址阻止或允许流量。 您可以向Fastly服务添加访问控制列表(ACL)和自定义VCL片段，以指定用于阻止或允许流量的IP地址和VCL逻辑。 查看[自定义Fastly VCL片段](fastly-vcl-custom-snippets.md)。
 
 WAF服务不支持筛选TCP、UDP或ICMP请求。 但是，此功能由Fastly CDN服务中包含的内置DDoS保护提供。 请参阅[DDoS保护](fastly.md#ddos-protection)。
+

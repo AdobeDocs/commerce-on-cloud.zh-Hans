@@ -21,7 +21,7 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: efe0f95c16d9aab9af6a9c263034b08dce4d7c93
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 405
 ht-degree: 0%
@@ -50,3 +50,4 @@ ht-degree: 0%
 单一应用程序需要大量资源，难以快速扩展和提供服务。 借助云基础架构，Commerce客户可获得对基于SaaS的丰富、智能和高性能微服务的无与伦比的访问权限。 请参阅[支持的软件和服务](cloud-architecture.md#supported-software-and-services)。
 
 使用[Commerce入门指南](../../get-started/overview.md)设置新的Cloud项目并开始在云原生环境中管理您的[!DNL Commerce]应用程序。
+

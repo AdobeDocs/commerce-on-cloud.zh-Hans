@@ -11,7 +11,7 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 190
 ht-degree: 0%
@@ -34,3 +34,4 @@ ht-degree: 0%
 >[!NOTE]
 >
 >`.magento.app.yaml`文件在本地或Git存储库中进行管理。 仅出于部署和构建过程的目的读取配置，并在部署完成后删除配置，因此您无法在服务器上找到它。
+

@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1211
 ht-degree: 0%
@@ -172,3 +172,4 @@ Fastly图像优化(Fastly IO)提供实时图像处理和优化，以加快图像
 ## 验证Fastly IO
 
 启用和配置Fastly IO后，无论是否启用Fastly IO，都可通过执行网页速度测试来验证配置。 此外，检查存储中的图像以检查图像大小和外观是否存在问题。
+

@@ -12,7 +12,7 @@ feature_v2:
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 688
 ht-degree: 0%
@@ -205,3 +205,4 @@ ht-degree: 0%
 ## 与远程环境交互
 
 在您[设置SSH密钥](../development/secure-connections.md)后，您可以[从本地工作区连接到远程环境](../development/secure-connections.md#connect-to-a-remote-environment)，并与项目服务交互并修改设置。
+

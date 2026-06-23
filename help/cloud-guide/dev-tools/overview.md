@@ -15,7 +15,7 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 125
 ht-degree: 0%
@@ -31,3 +31,4 @@ Adobe提供了适用于Commerce的Cloud Tools Suite，其中包括用于在Cloud
 - [云修补程序](../development/apply-patches.md) — 应用修补程序以将Commerce版本与云环境集成并快速提供关键修补程序。
 - [ECE-Tools包](package-overview.md) — 管理配置、生成Adobe Commerce应用程序并将其部署到远程云环境。
 - [集成](../integrations/overview.md) — 集成通用开发工具，如通知、webhook和基于Git的服务。
+

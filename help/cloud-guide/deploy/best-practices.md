@@ -18,7 +18,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1979
 ht-degree: 0%
@@ -207,3 +207,4 @@ ht-degree: 0%
 使用`SCD_ON_DEMAND`变量启用静态内容生成并配置[`post_deploy`挂接](../application/hooks-property.md)，以便它清除缓存并在&#x200B;_之后预加载(warms)缓存_，容器开始接受连接并在&#x200B;_正常传入流量期间接受_。
 
 要查看生成和部署日志，请参阅[查看日志](../test/log-locations.md#view-and-manage-logs)。
+

@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 413
 ht-degree: 0%
@@ -54,3 +54,4 @@ _部署后_&#x200B;阶段运行`.magento.app.yaml`文件中定义的部署后挂
 >[!NOTE]
 >
 >使用`ece-tools` 2002.1.0及更高版本，您可以使用基于方案的部署功能在云基础架构项目上自定义Adobe Commerce的生成、部署和部署后流程。 请参阅[基于方案的部署](scenario-based.md)。
+
