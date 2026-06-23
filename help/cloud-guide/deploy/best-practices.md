@@ -4,10 +4,20 @@ description: 探索在云基础架构上部署Adobe Commerce的最佳实践。
 feature: Cloud, Deploy, Best Practices
 exl-id: 87aabee7-4629-4a3c-9587-dbde4cf268e1
 TQID: https://experienceleague.adobe.com/sXtq-V7nDHm5IvDX0CqpxLcO3eQXem-YlMPG-kxTsmc
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c32adafa-ed01-4b31-997e-2413013911b0id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: c32adafa-ed01-4b31-997e-2413013911b0
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1979
@@ -35,7 +45,7 @@ ht-degree: 0%
 >
 >在集成环境中，您无法从[!DNL Cloud Console]查看部署日志。 此功能仅适用于生产和暂存环境。 但是，您可以使用[生成和部署](../test/log-locations.md#build-and-deploy-logs)日志在任何环境中查看部署的每个阶段的日志。 有关疑难解答信息，请参阅[部署错误引用](../dev-tools/error-reference.md)。
 
-您可以使用New Relic](../monitor/track-deployments.md)启用[跟踪部署，以监视部署事件并分析部署之间的性能。
+您可以使用New Relic[&#128279;](../monitor/track-deployments.md)启用跟踪部署，以监视部署事件并分析部署之间的性能。
 
 ## 构建和部署的最佳实践
 
@@ -178,7 +188,7 @@ ht-degree: 0%
 
 - 如果Adobe Commerce是&#x200B;**未安装**，则它随`bin/magento setup:install`一起安装，更新部署配置`app/etc/env.php`以及指定环境（如Redis和网站URL）的数据库。 **重要信息：**&#x200B;当您在安装程序期间完成[首次部署](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html)时，在所有环境中都安装和部署了Adobe Commerce。
 
-- 如果已安装Adobe Commerce ****，请执行任何必要的升级。 部署脚本运行`bin/magento setup:upgrade`以更新数据库架构和数据（在扩展或核心代码更新后必需），并更新环境的部署配置、`app/etc/env.php`和数据库。 最后，部署脚本清除Adobe Commerce缓存。
+- 如果已安装Adobe Commerce **&#x200B;**，请执行任何必要的升级。 部署脚本运行`bin/magento setup:upgrade`以更新数据库架构和数据（在扩展或核心代码更新后必需），并更新环境的部署配置、`app/etc/env.php`和数据库。 最后，部署脚本清除Adobe Commerce缓存。
 
 - 脚本可以选择使用命令`magento setup:static-content:deploy`生成静态Web内容。
 
