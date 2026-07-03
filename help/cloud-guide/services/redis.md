@@ -14,9 +14,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: bec442a5b442adafbd23c7c8eac1adbdb7b93b65
+source-git-commit: 5951c3001d665423634f06cd7cc277cd0fd80bbd
 workflow-type: tm+mt
-source-wordcount: 328
+source-wordcount: 391
 ht-degree: 0%
 
 ---
@@ -25,7 +25,9 @@ ht-degree: 0%
 
 [Redis](https://redis.io)是一个可选的后端缓存解决方案，它取代了Adobe Commerce默认使用的Zend Framework Zend_Cache_Backend_File。
 
-请参阅&#x200B;_实施行动手册最佳实践指南_&#x200B;中的[配置红色](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
+>[!IMPORTANT]
+>
+>Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p5修补程序不支持Redis缓存。 在不支持Redis的缓存配置中使用Valkey。 按版本查看支持的缓存服务的[系统要求](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)。
 
 {{service-instruction}}
 
@@ -65,6 +67,10 @@ ht-degree: 0%
 1. [验证服务关系](services-yaml.md#service-relationships)。
 
 {{service-change-tip}}
+
+## 自定义Redis配置
+
+有关自定义Redis配置的详细信息，请参阅&#x200B;_实施行动手册最佳实践指南_&#x200B;中的[配置Redis](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
 
 ## 使用Redis CLI
 

@@ -11,16 +11,16 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d962353ed14bd976cf19560edf1802836cb76c4b
+source-git-commit: f1e6c9da5dacb144dc3e1a09885c1a9b11ce54ee
 workflow-type: tm+mt
-source-wordcount: 229
+source-wordcount: 259
 ht-degree: 0%
 
 ---
 
 # 设置Valkey服务
 
-[Valkey](https://valkey.io)是一个可选的后端缓存解决方案，它取代了Adobe Commerce默认使用的`Zend Framework Zend_Cache_Backend_File`。
+[Valkey](https://valkey.io)是一个可选的后端缓存解决方案，它取代了Adobe Commerce默认使用的`Zend Framework Zend_Cache_Backend_File`。 如果覆盖Commerce版本2.4.9+或高于2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p5版本线的修补程序版本上的默认设置，则必须使用Valkey。
 
 请参阅&#x200B;_实施行动手册最佳实践指南_&#x200B;中的[配置Valkey](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration){target="_blank"}。
 
