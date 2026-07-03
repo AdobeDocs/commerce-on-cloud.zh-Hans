@@ -14,9 +14,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: c43a709ee9c3b974cef08e36170dbb2ab240564f
 workflow-type: tm+mt
-source-wordcount: 541
+source-wordcount: 572
 ht-degree: 0%
 
 ---
@@ -170,5 +170,7 @@ dependencies:
 >[!IMPORTANT]
 >
 >在集成环境中升级[!DNL RabbitMQ]时，请勿跳过版本。 仅支持[连续升级](https://www.rabbitmq.com/docs/upgrade#rabbitmq-version-upgradability)（例如，3.8 → 3.9 → 3.10 → 3.11 → 3.12 → 3.13 → 4.0 → 4.1），并且每个版本增量都必须对应于云环境的实际成功部署。
+>
+>更改RabbitMQ服务版本（包括升级或降级）后，重新部署环境。 在部署期间，Adobe Commerce运行设置任务，重新创建所需的RabbitMQ队列、交换和绑定。
 >
 >有关一般服务升级说明，请参阅[更改服务版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)。
