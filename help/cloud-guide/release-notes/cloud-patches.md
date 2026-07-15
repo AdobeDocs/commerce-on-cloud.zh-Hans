@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: a7cd55b31bf909047e449e5f984fcb082706c2b9
 workflow-type: tm+mt
-source-wordcount: 2889
+source-wordcount: 2904
 ht-degree: 0%
 
 ---
@@ -44,7 +44,13 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 <!--Add release notes below-->
 
-## v1.1.14 {#latest}
+## v1.1.15 {#latest}
+
+发行日期： 2026年7月14日
+
+- ![修复图标](../../assets/fix.svg) **安全改进** — 应用了最新的安全修补程序。<!--MCLOUD-15066 -->
+
+## v1.1.14
 
 发行日期： 2026年5月06日
 
