@@ -27,7 +27,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4修补程序不支持Redis缓存。 在不支持Redis的缓存配置中使用Valkey。 按版本查看支持的缓存服务的[系统要求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)。
+>Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4修补程序不支持Redis缓存。 在不支持Redis的缓存配置中使用Valkey。 按版本查看支持的缓存服务的[系统要求](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)。
 
 {{service-instruction}}
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 ## 自定义Redis配置
 
-有关自定义Redis配置的详细信息，请参阅&#x200B;_实施行动手册最佳实践指南_&#x200B;中的[配置Redis](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
+有关自定义Redis配置的详细信息，请参阅&#x200B;_实施行动手册最佳实践指南_&#x200B;中的[配置Redis](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
 
 ## 使用Redis CLI
 
@@ -147,6 +147,6 @@ echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
 请参阅以下Adobe Commerce支持文章，以获取有关Redis问题疑难解答的帮助：
 
 - [Redis问题延迟管理员登录或签出](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html)
-- [扩展Redis缓存实施Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html)
-- [Adobe Commerce上的托管警报： Redis内存警告警报](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html)
-- [Adobe Commerce上的托管警报：Redis内存严重警报](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html)
+- [扩展Redis缓存实施Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html?lang=zh-Hans)
+- [Adobe Commerce上的托管警报： Redis内存警告警报](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html?lang=zh-Hans)
+- [Adobe Commerce上的托管警报：Redis内存严重警报](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html?lang=zh-Hans)
