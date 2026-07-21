@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: ab64bb5a3cc159844015072738404274fdea97cd
+source-git-commit: c16f4ad68bb3d57f021c552f7aca2d2ee2e8c365
 workflow-type: tm+mt
-source-wordcount: 2575
+source-wordcount: 2798
 ht-degree: 0%
 
 ---
@@ -792,6 +792,52 @@ stage:
   deploy:
     UPDATE_URLS: false
 ```
+
+## `USE_LUA`
+
+- **默认**—`false`
+- **版本**—Adobe Commerce 2.4.7及更高版本
+
+控制`env.php`中默认缓存前端的`use_lua`缓存后端选项（在使用`symfony_l2`后端时，控制`stale_cache_enabled`前端中的远程后端选项）。 此选项不应用于`page_cache`前端。
+
+使用默认值`false`，除非Adobe支持明确另有指示。
+
+```yaml
+stage:
+  deploy:
+    USE_LUA: false
+```
+
+>[!WARNING]
+>
+>在Adobe Commerce 2.4.7和2.4.8上，设置`USE_LUA: true`可能会导致缓存损坏和GraphQL缓存缺失问题。
+>
+>从Adobe Commerce 2.4.9开始，对您的Commerce版本使用Valkey缓存配置指南，并且不要依赖`USE_LUA`进行新部署。 请参阅[为默认和页面缓存配置Redis](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)。
+
+## `LUA_KEY`
+
+`LUA_KEY`变量已弃用。 如果`LUA_KEY`包含在`.magento.env.yaml`中，请在迁移期间将其删除。 请改用`USE_LUA`和`USE_LUA_ON_GC`变量。
+
+## `USE_LUA_ON_GC`
+
+- **默认**—`true`
+- **版本**—Adobe Commerce 2.4.8及更高版本
+
+控制`env.php`中用于默认缓存前端的`use_lua_on_gc`缓存后端选项（在使用`symfony_l2`后端时，控制`stale_cache_enabled`前端中的远程后端选项）以进行垃圾收集。 此选项不应用于`page_cache`前端。
+
+使用默认值`true`在`backend_clean_cache` cron作业期间保留原子缓存标记清理。
+
+```yaml
+stage:
+  deploy:
+    USE_LUA_ON_GC: true
+```
+
+>[!WARNING]
+>
+>在Adobe Commerce 2.4.8上，设置`USE_LUA_ON_GC: false`可能会导致基于标记的缓存失效静默失败，并且需要完全缓存刷新才能恢复。
+>
+>在2.4.9及更高版本上，按照已安装版本的[缓存服务指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)操作。
 
 ## `VERBOSE_COMMANDS`
 
