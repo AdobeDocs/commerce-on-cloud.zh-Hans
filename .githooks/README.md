@@ -1,7 +1,7 @@
 ---
-source-git-commit: ee2ed3a78939af36572f0baa6672b2e9f9a2557f
+source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -11,10 +11,11 @@ ht-degree: 0%
 
 ## 钩子做什么
 
-- **自动检测**&#x200B;个暂存的图像文件(PNG、JPG、JPEG、GIF)
-- **运行`image_optim`**&#x200B;以压缩和优化图像
+- **自动检测**&#x200B;个暂存的图像文件(PNG、JPEG、GIF、SVG)
+- **运行`image_optim`**&#x200B;以压缩和优化光栅图像(PNG、JPEG、GIF)
 - **自动重新存放优化映像**
-- **确保所有已提交的映像**&#x200B;都已正确优化
+- **确保所有已提交的光栅图像**&#x200B;都已正确优化
+- **根据大小限制检查暂存的SVG**，如果任何SVG超过该限制，则中止提交
 
 ## 优点
 
@@ -87,9 +88,16 @@ Image optimization complete!
 - **PNG**：用于屏幕截图和UI元素（将自动优化）
 - **JPEG**：用于照片（将自动优化）
 - **GIF**：用于动画（将自动优化）
-- **SVG**：用于图标和简单图形（不由挂接处理，按原样提交）
+- **SVG**：用于图标和简单图形（未优化，但针对大小限制进行了检查；如果超过限制，提交将失败）
 
-预提交挂接将在提交时自动优化PNG、JPEG和GIF图像。
+预提交挂接将在提交时自动优化PNG、JPEG和GIF图像，并检查暂存的SVG是否符合大小限制(140 KB)。
+
+如果暂存的SVG超出限制，提交将中止。 请将其转换为PNG：
+
+```bash
+cd _jekyll
+bundle exec rake images:svg_to_png path=path/to/image.svg
+```
 
 ## 手动优化
 
@@ -107,7 +115,7 @@ bundle exec rake images:optimize path=../path/to/images
 - **PNG**：使用`advpng`、`optipng`和`pngquant`
 - **JPEG**：使用`jhead`、`jpegoptim`和`jpegtran`
 - **GIF**：使用`gifsicle`
-- **SVG**：未处理（从检测中排除，以保留矢量图形和动画）
+- **SVG**：未优化（从`image_optim`中排除以保留矢量图形和动画），但检查时使用了140 KB大小限制
 
 ## 故障排除
 
@@ -123,6 +131,12 @@ bundle exec rake images:optimize path=../path/to/images
 - 检查是否已安装`adobe-comdox-exl-rake-tasks` gem（提供`image_optim`）
 - 查看`.image_optim.yml`配置文件
 
+### SVG超出大小限制
+
+- 如果暂存的SVG超过140 KB，提交将中止
+- 将SVG转换为PNG： `cd _jekyll && bundle exec rake images:svg_to_png path=path/to/image.svg`
+- 然后，暂存PNG代替SVG并再次提交
+
 ### 性能问题
 
 - 在`_jekyll/.image_optim.yml`中调整线程计数
@@ -132,16 +146,17 @@ bundle exec rake images:optimize path=../path/to/images
 
 1. **预提交触发器**：运行`git commit`时，挂接会自动执行
 2. **图像检测**：扫描暂存文件以获取图像扩展名
-3. **优化**：在每个暂存映像上运行`image_optim`
+3. **优化**：在每个暂存的PNG、JPEG或GIF上运行`image_optim`
 4. **正在重新暂存**：自动将已优化的映像添加回暂存区
-5. **提交继续进行**：如果优化成功，提交将正常继续
+5. **SVG大小检查**：检查每个暂存的SVG是否超过140 KB大小限制
+6. **提交继续**：如果优化成功，并且没有SVG超过大小限制，则提交将正常继续；否则，提交将中止
 
 ## 支持的图像格式
 
 - **PNG** (`.png`) — 无损和有损压缩
 - **JPEG** (`.jpg`， `.jpeg`) — 包含元数据清理的有损压缩
 - **GIF** (`.gif`) — 动画和静态优化
-- **SVG** (`.svg`) — 未由挂接处理（按原样提交以保留质量）
+- **SVG** (`.svg`) — 未优化（按原样提交以保留质量），但根据140 KB大小限制进行了检查；如果超过限制，提交将中止
 
 ## 最佳实践
 
