@@ -1,7 +1,7 @@
 ---
-source-git-commit: 55206749cd121ef6d6139a71af6ff905d4109859
+source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 关于您对Adobe内容的投稿
 
-请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/zh-hans/docs/contributor/contributor-guide/introduction)。
+请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 您的参与方式取决于您的身份以及您想参与的更改类型：
 
@@ -34,13 +34,13 @@ ht-degree: 0%
 
 ### Adobe员工做出的主要更改
 
-如果您是来自Adobe Experience Cloud解决方案产品团队的技术文档撰稿人、项目经理或开发人员，并且您的工作就是撰写或创作技术文章，那么您应当使用位于`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.zh-Hans`的专用存储库。
+如果您是产品团队中负责提供Adobe Experience Cloud解决方案的技术作家、项目经理或开发人员，并且您的工作是撰写或创作技术文章，则应使用位于`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.zh-Hans`的专用存储库。
 
 ## 工具和设置
 
 社区参与者可以使用GitHub UI进行基本编辑或创建存储库分支以进行重大更改。
 
-有关详细信息，请参阅[Adobe Docs参与者指南](https://experienceleague.adobe.com/zh-hans/docs/contributor/contributor-guide/introduction)。
+有关详细信息，请参阅[Adobe Docs参与者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 ## 如何使用Markdown格式化主题
 
@@ -134,7 +134,9 @@ ht-degree: 0%
 
 ## 可用的Rake任务
 
-此存储库使用`adobe-comdox-exl-rake-tasks` gem提供的Rake任务。 要查看所有可用任务，请运行：
+此存储库使用
+[`adobe-comdox-exl-rake-tasks`](https://github.com/commerce-docs/adobe-comdox-exl-rake-tasks)
+宝石。要查看所有可用任务，请运行：
 
 ```bash
 cd _jekyll
@@ -155,10 +157,11 @@ bundle exec rake --tasks
 
 ### 钩子做什么
 
-- 自动检测暂存的图像文件(PNG、JPG、JPEG、GIF、SVG)
-- 运行`image_optim`以压缩和优化图像
+- 自动检测暂存的图像文件(PNG、JPEG、GIF、SVG)
+- 运行`image_optim`以压缩和优化光栅图像(PNG、JPEG、GIF)
 - 自动重新存放优化的图像
-- 确保所有提交的映像都得到了正确优化
+- 确保所有已提交的光栅图像都已正确优化
+- 根据大小限制检查暂存的SVG，如果任何SVG超过该限制，则中止提交
 
 ### 优点
 
