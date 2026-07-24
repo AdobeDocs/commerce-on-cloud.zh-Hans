@@ -9,8 +9,8 @@ ht-degree: 0%
 
 本网站包含有关云基础架构上的Commerce的最新开发人员文档。
 
-- [《云基础架构上的Commerce指南》](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
-- 在云基础架构上[开始使用Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
+- [《云基础架构上的Commerce指南》](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)
+- 在云基础架构上[开始使用Commerce](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/start/overview)
 
 ## Adobe Open Source行为准则
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ### Adobe员工做出的主要更改
 
-如果您是产品团队中负责提供Adobe Experience Cloud解决方案的技术作家、项目经理或开发人员，并且您的工作是撰写或创作技术文章，则应使用位于`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.en`的专用存储库。
+如果您是产品团队中负责提供Adobe Experience Cloud解决方案的技术作家、项目经理或开发人员，并且您的工作是撰写或创作技术文章，则应使用位于`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.zh-Hans`的专用存储库。
 
 ## 工具和设置
 
