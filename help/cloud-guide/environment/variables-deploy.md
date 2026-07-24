@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: c16f4ad68bb3d57f021c552f7aca2d2ee2e8c365
+source-git-commit: 1aaf04500648a72b061db67af39a732871f4e886
 workflow-type: tm+mt
-source-wordcount: 2798
+source-wordcount: 3031
 ht-degree: 0%
 
 ---
@@ -495,17 +495,21 @@ stage:
 ## `VALKEY_BACKEND`
 
 - **默认**—`Cm_Cache_Backend_Redis`
-- **版本**—Adobe Commerce 2.8.0及更高版本
+- **版本**—Adobe Commerce 2.4.8及更高版本
 
 `VALKEY_BACKEND`指定Valkey缓存的后端模型配置。
 
-Adobe Commerce版本2.8.0及更高版本包含以下后端模型：
+Adobe Commerce版本2.4.8及更高版本包含以下后端模型：
 
 - `Cm_Cache_Backend_Redis`
 - `\Magento\Framework\Cache\Backend\Redis`
 - `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`
 
-以下示例说明如何设置`VALKEY_BACKEND`：
+Adobe Commerce 2.4.9及更高版本还支持`symfony_l2`后端模型，该模型支持基于Symfony缓存的现代L2缓存实现。
+
+### 配置远程同步缓存
+
+对于Adobe Commerce 2.4.8，以下示例描述了如何将`VALKEY_BACKEND`设置为远程同步缓存：
 
 ```yaml
 stage:
@@ -514,9 +518,23 @@ stage:
   VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
+将远程同步缓存指定为Valkey后端模型可启用[二级缓存](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hans)，并且`ece-tools`会自动生成缓存配置。 查看[示例配置文件](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hans#configuration-example)。 要覆盖配置，请使用[CACHE_CONFIGURATION](#cache_configuration)部署变量。
+
+### 配置现代Symfony L2缓存实施
+
+对于Adobe Commerce 2.4.9及更高版本，以下示例描述了如何将`VALKEY_BACKEND`设置为现代Symfony L2缓存实现：
+
+```yaml
+stage:
+  deploy:
+    VALKEY_BACKEND: symfony_l2
+```
+
+将`symfony_l2`指定为Valkey后端模型将启用[二级缓存](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hans){target="_blank"}，并且`ece-tools`会自动从您的Valkey服务连接详细信息中生成二级缓存配置，包括`default`前端和`stale_cache_enabled`前端。 定义`CACHE_CONFIGURATION`是可选的，仅需要自定义特定的后端选项，如本地缓存目录。 有关自定义示例，请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[Modern Symfony L2缓存实现](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hans#modern-symfony-l2-cache-implementation){target="_blank"}和&#x200B;_实现行动手册_&#x200B;中的[配置Symfony L2缓存](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}。
+
 >[!NOTE]
 >
->如果将`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`指定为Valkey后端模型以启用[二级缓存](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hans)，`ece-tools`将自动生成缓存配置。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的示例[配置文件](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hans#configuration-example)。 要覆盖生成的缓存配置，请使用[CACHE_CONFIGURATION](#cache_configuration)部署变量。
+>Adobe Commerce 2.4.9包括Symfony L2缓存改进（包括缓存标记存储、失效和压缩），该改进包括使用修补程序ACP2E-5132，减少磁盘I/O，消除过时的缓存条目，以及减少内存和网络开销。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[增强的Symfony L2缓存性能和可靠性](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hans#enhanced-symfony-l2-cache-performance-and-reliability)。
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 
