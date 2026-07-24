@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
+source-git-commit: 3d3df68ab5e1781974348190b30372c0b8169d1d
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
@@ -11,11 +11,11 @@ ht-degree: 0%
 
 ## 钩子做什么
 
-- **自动检测**&#x200B;个暂存的图像文件(PNG、JPEG、GIF、SVG)
-- **运行`image_optim`**&#x200B;以压缩和优化光栅图像(PNG、JPEG、GIF)
+- **自动检测**&#x200B;暂存的图像文件(`.png`、`.jpeg`、`.jpg`、`.gif`、`.svg`)
+- **运行`image_optim`**&#x200B;以压缩和优化光栅图像(`.png`、`.jpeg`、`.jpg`、`.gif`)
 - **自动重新存放优化映像**
 - **确保所有已提交的光栅图像**&#x200B;都已正确优化
-- **根据大小限制检查暂存的SVG**，如果任何SVG超过该限制，则中止提交
+- **根据大小限制检查暂存的SVG**，如果从`help/`中的任何文件引用了超大的SVG，则中止提交（否则仅警告）
 
 ## 优点
 
@@ -78,9 +78,18 @@ chmod +x .githooks/*
 
 ```bash
 Found 1 staged image(s). Running optimization...
-Optimizing: path/to/your/image.png
-Re-staged optimized image: path/to/your/image.png
-Image optimization complete!
+
+Checking images ...
+path/to/your/image.png    100.00%
+Pre-commit image checks complete!
+```
+
+### 单元测试
+
+挂接的SVG链接检测逻辑（用于确定是否从`help/`引用过大的SVG）由单元测试涵盖，这些单元测试只需要Ruby的捆绑的`minitest` — 无gems或`_jekyll`设置：
+
+```bash
+ruby .githooks/test/svg_link_checker_test.rb
 ```
 
 ## 图像准则
@@ -88,16 +97,18 @@ Image optimization complete!
 - **PNG**：用于屏幕截图和UI元素（将自动优化）
 - **JPEG**：用于照片（将自动优化）
 - **GIF**：用于动画（将自动优化）
-- **SVG**：用于图标和简单图形（未优化，但针对大小限制进行了检查；如果超过限制，提交将失败）
+- **SVG**：用于图标和简单图形（未优化，但针对大小限制进行了检查；仅当从`help/`链接了超大的SVG时，提交才会失败）
 
-预提交挂接将在提交时自动优化PNG、JPEG和GIF图像，并检查暂存的SVG是否符合大小限制(140 KB)。
+预提交挂接将在提交时自动优化`.png`、`.jpeg`/`.jpg`和`.gif`图像，并将检查暂存的SVG是否符合大小限制(140 KB)。
 
-如果暂存的SVG超出限制，提交将中止。 请将其转换为PNG：
+如果暂存的SVG超出限制并从`help/`中的文件引用，则提交将中止。 如果`help/`中的任何位置均未引用超大的SVG，则挂接将只打印警告，并继续提交。 将过大的SVG转换为PNG：
 
 ```bash
 cd _jekyll
-bundle exec rake images:svg_to_png path=path/to/image.svg
+bundle exec rake images:svg_to_png path=../help/assets/image.svg
 ```
+
+路径相对于`_jekyll`，因此`help/`下的图像被引用为`../help/...`。
 
 ## 手动优化
 
@@ -128,13 +139,13 @@ bundle exec rake images:optimize path=../path/to/images
 ### 优化失败
 
 - 验证`bundle install`是否已在`_jekyll`目录中运行
-- 检查是否已安装`adobe-comdox-exl-rake-tasks` gem（提供`image_optim`）
+- 检查是否已安装`adobe-comdox-exl-rake-tasks` gem（提供挂接运行的`images:optimize`、`images:check_size`和`images:svg_to_png` Rake任务）
 - 查看`.image_optim.yml`配置文件
 
 ### SVG超出大小限制
 
-- 如果暂存的SVG超过140 KB，提交将中止
-- 将SVG转换为PNG： `cd _jekyll && bundle exec rake images:svg_to_png path=path/to/image.svg`
+- 如果暂存的SVG超过140 KB，并且从`help/`中的文件引用，则提交将中止（否则，挂接将仅警告并继续提交）
+- 将SVG转换为PNG： `cd _jekyll && bundle exec rake images:svg_to_png path=../help/assets/image.svg`（路径相对于`_jekyll`，因此`help/`下的图像被引用为`../help/...`）
 - 然后，暂存PNG代替SVG并再次提交
 
 ### 性能问题
@@ -149,14 +160,14 @@ bundle exec rake images:optimize path=../path/to/images
 3. **优化**：在每个暂存的PNG、JPEG或GIF上运行`image_optim`
 4. **正在重新暂存**：自动将已优化的映像添加回暂存区
 5. **SVG大小检查**：检查每个暂存的SVG是否超过140 KB大小限制
-6. **提交继续**：如果优化成功，并且没有SVG超过大小限制，则提交将正常继续；否则，提交将中止
+6. **提交继续**：如果优化成功，并且没有从`help/`引用过大的SVG，则提交正常继续；否则，提交中止（没有从`help/`引用的过大的SVG只触发警告）
 
 ## 支持的图像格式
 
 - **PNG** (`.png`) — 无损和有损压缩
 - **JPEG** (`.jpg`， `.jpeg`) — 包含元数据清理的有损压缩
 - **GIF** (`.gif`) — 动画和静态优化
-- **SVG** (`.svg`) — 未优化（按原样提交以保留质量），但根据140 KB大小限制进行了检查；如果超过限制，提交将中止
+- **SVG** (`.svg`) — 未优化（按原样提交以保留质量），但针对140 KB大小限制进行了检查；如果超过限制并且从`help/`引用了SVG，则提交将中止（否则，挂接将仅警告）
 
 ## 最佳实践
 

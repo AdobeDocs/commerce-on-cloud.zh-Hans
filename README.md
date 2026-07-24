@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
+source-git-commit: 3d3df68ab5e1781974348190b30372c0b8169d1d
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 0%
 
 本网站包含有关云基础架构上的Commerce的最新开发人员文档。
 
-- [《云基础架构上的Commerce指南》](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)
-- 在云基础架构上[开始使用Commerce](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/start/overview)
+- [《云基础架构上的Commerce指南》](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- 在云基础架构上[开始使用Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
 
 ## Adobe Open Source行为准则
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ### Adobe员工做出的主要更改
 
-如果您是产品团队中负责提供Adobe Experience Cloud解决方案的技术作家、项目经理或开发人员，并且您的工作是撰写或创作技术文章，则应使用位于`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.zh-Hans`的专用存储库。
+如果您是产品团队中负责提供Adobe Experience Cloud解决方案的技术作家、项目经理或开发人员，并且您的工作是撰写或创作技术文章，则应使用位于`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.en`的专用存储库。
 
 ## 工具和设置
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 >**注释：**
 >
 >- 生成模板化内容需要在终端中的命令行上工作。
->- 必须安装Ruby才能运行渲染脚本。 有关所需版本，请参阅[_jekyll/.ruby-version] (_jekyll/.ruby-version)。
+>- 必须安装Ruby才能运行渲染脚本。 有关所需版本，请参阅[_jekyll/.ruby-version](_jekyll/.ruby-version)。
 
 有关模板化内容的文件结构的描述，请参阅以下内容：
 
@@ -157,11 +157,11 @@ bundle exec rake --tasks
 
 ### 钩子做什么
 
-- 自动检测暂存的图像文件(PNG、JPEG、GIF、SVG)
-- 运行`image_optim`以压缩和优化光栅图像(PNG、JPEG、GIF)
+- 自动检测暂存的图像文件(`.png`、`.jpeg`、`.jpg`、`.gif`、`.svg`)
+- 运行`image_optim`以压缩和优化光栅图像(`.png`， `.jpeg`， `.jpg`， `.gif`)
 - 自动重新存放优化的图像
 - 确保所有已提交的光栅图像都已正确优化
-- 根据大小限制检查暂存的SVG，如果任何SVG超过该限制，则中止提交
+- 根据大小限制检查暂存的SVG，如果从`help/`引用了超大的SVG，则中止提交（否则仅警告）
 
 ### 优点
 
