@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
+source-git-commit: 3d3df68ab5e1781974348190b30372c0b8169d1d
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -157,11 +157,11 @@ bundle exec rake --tasks
 
 ### 钩子做什么
 
-- 自动检测暂存的图像文件(PNG、JPEG、GIF、SVG)
-- 运行`image_optim`以压缩和优化光栅图像(PNG、JPEG、GIF)
+- 自动检测暂存的图像文件(`.png`、`.jpeg`、`.jpg`、`.gif`、`.svg`)
+- 运行`image_optim`以压缩和优化光栅图像(`.png`， `.jpeg`， `.jpg`， `.gif`)
 - 自动重新存放优化的图像
 - 确保所有已提交的光栅图像都已正确优化
-- 根据大小限制检查暂存的SVG，如果任何SVG超过该限制，则中止提交
+- 根据大小限制检查暂存的SVG，如果从`help/`引用了超大的SVG，则中止提交（否则仅警告）
 
 ### 优点
 
