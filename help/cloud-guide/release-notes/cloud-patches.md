@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 9f2b598b52d26b3d9239c54c778f07a5b10f9a60
+source-git-commit: 898bbc1b96478de6693d7634d4f0cff359ccc12f
 workflow-type: tm+mt
-source-wordcount: 2965
+source-wordcount: 3019
 ht-degree: 0%
 
 ---
@@ -44,7 +44,14 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 <!--Add release notes below-->
 
-## v1.1.16 {#latest}
+## v1.1.17 {#latest}
+
+发行日期： 2026年7月29日
+
+- ![修复图标](../../assets/fix.svg) **优化了Symfony L2缓存性能、可靠性和标记管理** — 改进了缓存可扩展性、减少了不必要的文件系统I/O、增强了缓存一致性、解决了过时的标记成员资格、冗余远程写入和一级缓存逐出清理。<!-- ACP2E-5132 -->
+- ![修复图标](../../assets/fix.svg) **安全改进** — 改进了2026年7月隔离安全修补程序的兼容性。<!-- AC-17674 -->
+
+## v1.1.16
 
 发行日期： 2026年7月23日
 
