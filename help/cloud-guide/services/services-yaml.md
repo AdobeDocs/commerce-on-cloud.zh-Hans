@@ -14,9 +14,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: ce1afe358fc8596fa6eba1c2cf76a721060164c6
 workflow-type: tm+mt
-source-wordcount: 1136
+source-wordcount: 1186
 ht-degree: 0%
 
 ---
@@ -27,9 +27,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`.magento/services.yaml`文件是在项目的`.magento`目录中本地管理的。 在构建过程中仅访问配置以在集成环境中定义所需的服务版本，并在部署完成后删除，这样在服务器上就找不到它们。
+>`.magento/services.yaml`文件是在项目的`.magento`目录中本地管理的。 在部署期间，云基础架构上的Adobe Commerce使用此配置为目标环境配置支持的服务。 `.magento`目录在部署后已从远程服务器中删除，因此在已部署的环境中找不到`services.yaml`。
 
 部署脚本使用`.magento`目录中的配置文件为环境配置配置的服务。 如果某个服务包含在`.magento.app.yaml`文件的[`relationships`](../application/properties.md#relationships)属性中，则该服务对您的应用程序可用。 `services.yaml`文件包含&#x200B;_类型_&#x200B;和&#x200B;_磁盘_&#x200B;值。 服务类型定义服务&#x200B;_name_&#x200B;和&#x200B;_version_。
+
+`.magento/services.yaml`中的服务配置不同于`composer.json`中定义的PHP和编辑器包依赖项，并且锁定在`composer.lock`中。
+
+## 服务更改适用的位置
 
 更改服务配置会导致部署为环境提供更新的服务，这会对以下环境造成影响：
 
@@ -40,10 +44,11 @@ ht-degree: 0%
 
 ## 默认服务和支持的服务
 
-云基础架构支持和部署以下服务：
+云基础架构上的Adobe Commerce支持以下服务，您可以为您的项目配置这些服务：
 
 - [ActiveMQ](activemq.md)
 - [MySQL](mysql.md)
+- [Valkey](valkey.md)
 - [Redis](redis.md)
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
@@ -54,22 +59,26 @@ ht-degree: 0%
 >
 >升级到新版RabbitMQ后，触发完全部署以确保在RabbitMQ中重新创建自定义消息队列。
 
-您可以在当前[默认`services.yaml`文件](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)中查看默认版本和磁盘值。 以下示例显示了`services.yaml`配置文件中定义的`mysql`、`redis`、`opensearch`或`elasticsearch`、`rabbitmq`和`activemq-artemis`服务：
+## 查看配置的服务和版本
+
+您可以在当前模板[`services.yaml`文件](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)中查看示例服务定义和磁盘值。 实际的默认服务版本和支持的服务版本取决于您的Adobe Commerce版本和当前的云模板。
+
+以下示例显示了`services.yaml`配置文件中的服务定义：
 
 ```yaml
 mysql:
-    type: mysql:10.4
+    type: mysql:11.8
     disk: 5120
 
-redis:
-    type: redis:6.2
+cache:
+    type: valkey:9.0
 
 opensearch:
-    type: opensearch:2  # minor version not required; uses latest
+    type: opensearch:3  # minor version not required; uses latest
     disk: 1024
 
 rabbitmq:
-    type: rabbitmq:3.9
+    type: rabbitmq:4.3
     disk: 1024
 
 activemq-artemis:
@@ -142,9 +151,9 @@ mysql:
 
 您可以从[`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md)环境变量检索所有服务关系的配置数据。 配置数据包括服务名称、类型和版本，以及任何所需的连接详细信息，如端口号和登录凭据。
 
-**验证本地环境中的关系**：
+**验证来自本地开发环境的关系**：
 
-1. 在本地环境中，显示活动环境的关系。
+1. 从本地开发环境中，显示活动环境的关系。
 
    ```bash
    magento-cloud relationships
@@ -160,7 +169,7 @@ mysql:
    ...
            type: 'redis:7.0'
            port: 6379
-   elasticsearch:
+   opensearch:
        -
    ...
            type: 'opensearch:2'
@@ -168,7 +177,7 @@ mysql:
    database:
        -
    ...
-           type: 'mysql:10.6'
+           type: 'mysql:11.8'
            port: 3306
    ```
 
@@ -225,7 +234,7 @@ mysql:
 
    ```yaml
    mysql:
-       type: mysql:10.3
+       type: mysql:11.8
        disk: 2048
    ```
 
@@ -233,7 +242,7 @@ mysql:
 
    ```yaml
    mysql:
-       type: mysql:10.4
+       type: mysql:12.3
        disk: 5120
    ```
 
@@ -244,7 +253,7 @@ mysql:
    ```
 
    ```bash
-   git commit -m "Upgrade MySQL from MariaDB 10.3 to 10.4."
+   git commit -m "Upgrade MySQL from MariaDB 11.8 to 12.3."
    ```
 
    ```bash
