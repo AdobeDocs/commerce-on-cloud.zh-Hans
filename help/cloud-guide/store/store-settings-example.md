@@ -4,7 +4,7 @@ description: 请参阅有关如何跨云基础架构环境中的所有Adobe Comm
 hidefromtoc: true
 source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
