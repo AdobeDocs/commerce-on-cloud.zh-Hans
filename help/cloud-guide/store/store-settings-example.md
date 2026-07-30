@@ -56,7 +56,7 @@ _静态文件优化_&#x200B;是指合并和缩小JavaScript和层叠样式表，
    ![更改区域设置](../../assets/locale-options.png)
 
 1. 单击&#x200B;**保存配置**。
-1. 如果出现提示，[刷新缓存](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)。
+1. 如果出现提示，[刷新缓存](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/cache-management)。
 1. 从管理员注销。
 
 ## 导出值并将config.php传输到本地系统
@@ -159,7 +159,7 @@ git add app/etc/config.php && git commit -m "Add system-specific configuration" 
 1. 在右窗格中，展开&#x200B;**JavaScript设置**。
 1. 从&#x200B;**合并JavaScript文件**&#x200B;列表中，单击&#x200B;**是**。
 1. 单击&#x200B;**保存配置**。
-1. 如果出现提示，[刷新缓存](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)。
+1. 如果出现提示，[刷新缓存](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/cache-management)。
 1. 从管理员注销。
 
 通过再次运行dump命令，新配置将附加到文件中。
