@@ -4,14 +4,11 @@ description: 了解在云基础架构中用于Commerce应用程序配置的最�
 feature: Cloud, Configuration, Extensions
 exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
 TQID: https://experienceleague.adobe.com/2UjlXGZV6AJQuNf0XOdzZ09aF-23TSk7Q0NqvLyhGRs
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: bcac8986e748f6e513d4db22ee7eb7f64bac1a3a
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+last-update: 2026-05-05
+source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
 workflow-type: tm+mt
 source-wordcount: 605
 ht-degree: 0%
@@ -20,7 +17,7 @@ ht-degree: 0%
 
 # PHP设置
 
-您可以选择在`.magento.app.yaml`文件中运行的PHP[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)的版本：
+您可以选择在`.magento.app.yaml`文件中运行的PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)的[版本：
 
 ```yaml
 name: mymagento
@@ -71,7 +68,7 @@ realpath_cache_ttl = 7200
 
 >[!NOTE]
 >
->有关推荐的PHP配置设置列表，请参阅&#x200B;_安装指南_&#x200B;中的[必需的PHP设置](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=zh-Hans)。
+>有关推荐的PHP配置设置列表，请参阅&#x200B;_安装指南_&#x200B;中的[必需的PHP设置](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)。
 
 ### 检查自定义PHP设置
 
@@ -126,7 +123,7 @@ php -m
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-PHP模块要求与Adobe Commerce版本相关联。 请参阅[PHP要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=zh-Hans)。
+PHP模块要求与Adobe Commerce版本相关联。 请参阅[PHP要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)。
 
 ### 扩展支持
 
@@ -144,7 +141,7 @@ sourceguardian.restrict_unencoded = "1"
 
 请参阅SourceGuardian文档的[第3.5节](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf)。 _这是指向PDF_&#x200B;的链接。
 
-[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)，以获得在所有生产环境和Pro暂存环境中安装这些PHP扩展的帮助。 包含更新的`.magento/services.yaml`文件、`.magento.app.yaml`文件（包含更新的PHP版本和任何其他PHP扩展名）。 对于实时生产环境的更改，您必须至少提供48小时的通知。 Cloud Infrastructure团队更新项目最多可能需要48小时。
+[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，以获得在所有生产环境和Pro暂存环境中安装这些PHP扩展的帮助。 包含更新的`.magento/services.yaml`文件、`.magento.app.yaml`文件（包含更新的PHP版本和任何其他PHP扩展名）。 对于实时生产环境的更改，您必须至少提供48小时的通知。 Cloud Infrastructure团队更新项目最多可能需要48小时。
 
 >[!WARNING]
 >
