@@ -4,9 +4,13 @@ description: 了解在云基础架构中用于Commerce应用程序配置的最�
 feature: Cloud, Configuration, Extensions
 exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
 TQID: https://experienceleague.adobe.com/2UjlXGZV6AJQuNf0XOdzZ09aF-23TSk7Q0NqvLyhGRs
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 last-update: 2026-05-05
 source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
 workflow-type: tm+mt
@@ -17,7 +21,7 @@ ht-degree: 0%
 
 # PHP设置
 
-您可以选择在`.magento.app.yaml`文件中运行的PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)的[版本：
+您可以选择在`.magento.app.yaml`文件中运行的PHP[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)的版本：
 
 ```yaml
 name: mymagento
