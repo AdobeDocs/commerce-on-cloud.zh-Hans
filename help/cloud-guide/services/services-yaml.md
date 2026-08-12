@@ -4,17 +4,11 @@ description: 了解如何在云基础架构上配置Adobe Commerce使用的服�
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
 TQID: https://experienceleague.adobe.com/qvCjqNc8E9QGme-zM42vMg-kb1WjwTlWUqjbm-NI2bg
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: ce1afe358fc8596fa6eba1c2cf76a721060164c6
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
 workflow-type: tm+mt
 source-wordcount: 1186
 ht-degree: 0%
@@ -55,7 +49,7 @@ ht-degree: 0%
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->您必须在可用版本[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)之间按顺序升级RabbitMQ，例如，您无法直接从3.9升级到4.1
+>您必须在可用版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)之间按顺序[升级RabbitMQ，例如，您无法直接从3.9升级到4.1
 >
 >升级到新版RabbitMQ后，触发完全部署以确保在RabbitMQ中重新创建自定义消息队列。
 
@@ -172,7 +166,7 @@ mysql:
    opensearch:
        -
    ...
-           type: 'opensearch:2'
+           type: 'opensearch:3'
            port: 9200
    database:
        -
@@ -201,7 +195,7 @@ mysql:
 
 ## 服务版本
 
-云基础架构上Adobe Commerce的服务版本和兼容性支持取决于在云基础架构上部署和测试的版本，有时与Adobe Commerce内部部署支持的版本不同。 请参阅&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)，获取Adobe已使用特定Adobe Commerce和Magento Open Source版本测试的第三方软件依赖项列表。
+云基础架构上Adobe Commerce的服务版本和兼容性支持取决于在云基础架构上部署和测试的版本，有时与Adobe Commerce内部部署支持的版本不同。 请参阅&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)，获取Adobe已使用特定Adobe Commerce和Magento Open Source版本测试的第三方软件依赖项列表。
 
 ### 软件EOL检查
 

@@ -3,19 +3,11 @@ title: SendGrid电子邮件服务
 description: 了解云基础架构上适用于Adobe Commerce的SendGrid电子邮件服务，以及如何测试您的DNS配置。
 exl-id: 06236068-df32-468f-99ec-c379984be136
 TQID: https://experienceleague.adobe.com/I4giHpOngkQ0KZYBXZoGJGBXLWme2fxE39uIOGnON-k
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: beb7a3c1-66ab-4786-b879-7621375b3c40
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: beb7a3c1-66ab-4786-b879-7621375b3c40id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
 workflow-type: tm+mt
 source-wordcount: 1702
 ht-degree: 0%
@@ -44,7 +36,7 @@ SendGrid SMTP代理不能用作接收传入电子邮件的通用电子邮件服�
 
 默认情况下，在Pro生产和暂存环境中启用传出电子邮件。 但是，在您通过[命令行](outgoing-emails.md#enable-emails-in-the-cli)或[Cloud Console](outgoing-emails.md#enable-emails-in-the-cloud-console)设置`enable_smtp`属性之前，[!UICONTROL Outgoing emails]可能在环境设置中显示为禁用。 您可以为集成和暂存环境启用传出电子邮件，以发送双重身份验证或重置云项目用户的密码电子邮件。 请参阅[配置电子邮件以进行测试](outgoing-emails.md)。
 
-如果必须在专业生产或暂存环境中禁用或重新启用传出电子邮件，则可以提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)。
+如果必须在专业生产或暂存环境中禁用或重新启用传出电子邮件，则可以提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)。
 
 >[!TIP]
 >
@@ -54,7 +46,7 @@ SendGrid SMTP代理不能用作接收传入电子邮件的通用电子邮件服�
 
 所有云项目都在中央帐户下管理，因此仅支持人员有权访问SendGrid功能板。 SendGrid不提供子帐户限制功能。
 
-要查看活动日志中的投放状态或已退回、被拒绝或阻止电子邮件地址的列表，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)。 支持团队&#x200B;**无法**&#x200B;检索超过30天的活动日志。
+要查看活动日志中的投放状态或已退回、被拒绝或阻止电子邮件地址的列表，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)。 支持团队&#x200B;**无法**&#x200B;检索超过30天的活动日志。
 
 如有可能，请在请求中包含以下信息：
 
@@ -62,13 +54,13 @@ SendGrid SMTP代理不能用作接收传入电子邮件的通用电子邮件服�
 * 相关时间范围（仅限过去30天内）
 * 电子邮件的主题
 
-若要更好地管理您的电子邮件投放设置，请使用您自己的[SMTP服务器或电子邮件投放服务提供商](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/communications/email-communications)。 您还可以注册自己的SendGrid服务，以严格遵循云服务栈栈。
+若要更好地管理您的电子邮件投放设置，请使用您自己的[SMTP服务器或电子邮件投放服务提供商](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/communications/email-communications)。 您还可以注册自己的SendGrid服务，以严格遵循云服务栈栈。
 
 >[!IMPORTANT]
 >
 >如果您使用自己的SendGrid帐户，您将不再通过Adobe获得SendGrid支持。
 >
->要启用专有SendGrid服务或更新现有的API密钥，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)，并包含您的SendGrid帐户的API密钥。
+>要启用专有SendGrid服务或更新现有的API密钥，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)，并包含您的SendGrid帐户的API密钥。
 
 ## 域密钥识别邮件(DKIM)
 
@@ -80,7 +72,7 @@ DKIM是一种电子邮件身份验证技术，它使Internet服务提供商(ISP)
 >
 >因此，从入门环境发送的事务性电子邮件更有可能标记为垃圾邮件，因为它们无法完全进行身份验证。  在Pro环境中，启用DKIM将对您的发送域进行身份验证，这显着提高了电子邮件可投放性，降低了将邮件过滤为垃圾邮件的可能性。
 >
->为了提高邮件投放率，请从Starter升级到Pro，或者使用您自己的SMTP服务器或电子邮件投放服务提供商。 请参阅&#x200B;_管理员系统指南_&#x200B;中的[配置电子邮件连接](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/communications/email-communications)。
+>为了提高邮件投放率，请从Starter升级到Pro，或者使用您自己的SMTP服务器或电子邮件投放服务提供商。 请参阅&#x200B;_管理员系统指南_&#x200B;中的[配置电子邮件连接](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/communications/email-communications)。
 
 ### 发件人和域身份验证
 
@@ -88,11 +80,11 @@ DKIM是一种电子邮件身份验证技术，它使Internet服务提供商(ISP)
 
 >[!TIP]
 >
->请确保在&#x200B;**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**&#x200B;中使用&#x200B;**[!UICONTROL S的适当域配置&lbrace;store电子邮件地址]**。 对发件人的电子邮件地址执行域身份验证。 如果配置了默认设置(`example.com`)，来自`example.com`的电子邮件将被Sendgrid阻止。
+>请确保在&#x200B;**[!UICONTROL Stores > Configuration > General > Store Email Addresses]**&#x200B;中使用&#x200B;**[!UICONTROLS的适当域配置{store电子邮件地址]**。 对发件人的电子邮件地址执行域身份验证。 如果配置了默认设置(`example.com`)，来自`example.com`的电子邮件将被Sendgrid阻止。
 
 **要启用域身份验证**：
 
-1. 提交[支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)以请求为特定域启用DKIM（仅限&#x200B;**专业暂存和生产环境**）。
+1. 提交[支持票证](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)以请求为特定域启用DKIM（仅限&#x200B;**专业暂存和生产环境**）。
 1. 使用在支持票证中提供给您的`TXT`和`CNAME`记录更新您的DNS配置。
 
 **帐户ID为**&#x200B;的示例`TXT`记录：
@@ -143,7 +135,7 @@ dig CNAME s2._domainkey.domain_name
 
 事务性电子邮件阈值是指在特定时间段内可从Pro环境发送的事务性电子邮件消息数，例如每月从非生产环境发送12,000封电子邮件。 阈值旨在防止发送垃圾邮件并防止可能对您的电子邮件信誉造成损害。
 
-只要发件人信誉得分超过95%，就可以在“生产”环境中发送的电子邮件数量就没有任何硬性限制。 信誉受退回或拒绝的电子邮件数量以及基于DNS的垃圾邮件注册是否已将您的域标记为潜在垃圾邮件来源的影响。 在&#x200B;_Commerce支持知识库_&#x200B;中，查看Adobe Commerce[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded)上超过SendGrid积分时未发送的电子邮件。
+只要发件人信誉得分超过95%，就可以在“生产”环境中发送的电子邮件数量就没有任何硬性限制。 信誉受退回或拒绝的电子邮件数量以及基于DNS的垃圾邮件注册是否已将您的域标记为潜在垃圾邮件来源的影响。 在&#x200B;_Commerce支持知识库_&#x200B;中，查看Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded)上超过SendGrid积分时未发送的[电子邮件。
 
 **若要检查是否超过最大积分**：
 
@@ -157,7 +149,7 @@ dig CNAME s2._domainkey.domain_name
 
 1. 在`/var/log/mail.log`中检查`authentication failed : Maxium credits exceeded`条目。
 
-   如果您看到任何`authentication failed`个日志条目，并且&#x200B;**电子邮件发送信誉**&#x200B;至少为95，您可以[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)以请求增加信用额度。
+   如果您看到任何`authentication failed`个日志条目，并且&#x200B;**电子邮件发送信誉**&#x200B;至少为95，您可以[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)以请求增加信用额度。
 
 >[!NOTE]
 >
@@ -173,6 +165,6 @@ dig CNAME s2._domainkey.domain_name
 
 若要首先防止将电子邮件发送到垃圾邮件文件夹，请遵循Sendgrid的最佳实践文章： [为什么我的电子邮件会进入垃圾邮件？](https://sendgrid.com/en-us/blog/10-tips-to-keep-email-out-of-the-spam-folder)。
 
-如果某些收件人没有收到您的电子邮件，您可以[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)以请求查看禁止显示列表并在必要时删除收件人。
+如果某些收件人没有收到您的电子邮件，您可以[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)以请求查看禁止显示列表并在必要时删除收件人。
 
 有关更多详细信息，请参阅[什么是禁止显示列表？](https://sendgrid.com/en-us/blog/what-is-a-suppression-list)
