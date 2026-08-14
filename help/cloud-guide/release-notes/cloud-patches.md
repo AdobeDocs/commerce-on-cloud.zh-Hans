@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 643134d5bf2ab03b0c9cace884e9a020a2aebdb7
+source-git-commit: 1a0261c2c7ca9c058e18af5cbc86319501d75e57
 workflow-type: tm+mt
-source-wordcount: 3054
+source-wordcount: 3086
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 发行日期： 2026年8月11日
 
 - ![修复图标](../../assets/fix.svg) **改进的修补程序处理** — 修补程序现在跳过通过`composer.json` `replace`删除的定位模块的栈栈，并继续应用剩余的安装部分。<!-- MCLOUD-15325 -->
-- ![修复图标](../../assets/fix.svg) **安全改进** — 应用了最新的安全修补程序。<!--MCLOUD-15035 -->
+- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-92](https://helpx.adobe.com/cn/security/products/magento/apsb26-92.html)中引用的安全修复。<!--MCLOUD-15035 -->
 
 ## v1.1.17
 
@@ -68,7 +68,7 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 发行日期： 2026年7月14日
 
-- ![修复图标](../../assets/fix.svg) **安全改进** — 应用了最新的安全修补程序。<!--MCLOUD-15066 -->
+- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-73](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-37421)中引用的安全修复。<!--MCLOUD-15066 -->
 
 ## v1.1.14
 
