@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 1aaf04500648a72b061db67af39a732871f4e886
+source-git-commit: f09934f41676922dc4b4001f24ee94062a5e9c0a
 workflow-type: tm+mt
-source-wordcount: 3031
+source-wordcount: 3035
 ht-degree: 0%
 
 ---
@@ -357,7 +357,7 @@ stage:
 
 ## `LOCK_PROVIDER`
 
-- **默认** — 在生产环境和暂存环境中，默认为`file`。 对于Pro集成和入门环境，默认为`db`。
+- **默认值** — 在生产环境和暂存环境中，默认为`file`，无法更改。 对于Pro集成和入门环境，默认为`db`。
 - **版本**—Adobe Commerce 2.2.5及更高版本
 
 锁定提供程序阻止启动重复的cron作业和cron组。 Cloud上的Commerce仅支持`file`和`db`锁定提供程序。
@@ -367,7 +367,7 @@ stage:
 ```yaml
 stage:
   deploy:
-    LOCK_PROVIDER: "db"
+    LOCK_PROVIDER: "file"
 ```
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
