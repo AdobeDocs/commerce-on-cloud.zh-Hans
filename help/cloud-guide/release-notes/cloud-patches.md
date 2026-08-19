@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 956405dea6be29d239b663f5eebb19a8e043354d
+source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
 workflow-type: tm+mt
-source-wordcount: 2927
+source-wordcount: 2969
 ht-degree: 0%
 
 ---
@@ -44,12 +44,19 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 <!--Add release notes below-->
 
-## v1.1.18 {#latest}
+## v1.1.19 {#latest}
+
+发行日期： 2026年8月19日
+
+- ![修复图标](../../assets/fix.svg) **修补程序可靠性** — 改进了可靠Cloud部署的修补程序处理。<!-- MCLOUD-15325/ACSEC-561/MCLOUD-15451/MCLOUD-15455 -->
+- ![修复图标](../../assets/fix.svg) **缓存改进** — 增强了Symfony_l2缓存对Redis和Valkey从属连接的支持，并解决了相关的缓存、标记索引、预加载和静态部署问题。<!-- MCLOUD-15433 -->
+
+## v1.1.18
 
 发行日期： 2026年8月11日
 
 - ![修复图标](../../assets/fix.svg) **改进的修补程序处理** — 修补程序现在跳过通过`composer.json` `replace`删除的定位模块的栈栈，并继续应用剩余的安装部分。<!-- MCLOUD-15325 -->
-- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-92](https://helpx.adobe.com/cn/security/products/magento/apsb26-92.html)中引用的安全修复。<!--MCLOUD-15035 -->
+- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-92](https://helpx.adobe.com/security/products/magento/apsb26-92.html)中引用的安全修复。<!--MCLOUD-15035 -->
 
 ## v1.1.17
 
@@ -252,7 +259,7 @@ Adobe Commerce 2.3.3-p1及更高版本的关键修补程序：
 
 更新了修补程序以解决导致未经身份验证的远程代码执行的&#x200B;**关键**&#x200B;漏洞。<!-- MCLOUD-8479 -->
 
-请参阅[Adobe安全公告APSB22-12](https://helpx.adobe.com/cn/security/products/magento/apsb22-12.html)。
+请参阅[Adobe安全公告APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)。
 
 ## v1.0.15
 
@@ -269,7 +276,7 @@ Adobe Commerce 2.3.3-p1及更高版本的关键修补程序：
 
 添加了修补程序，以解决导致远程代码执行未经身份验证的&#x200B;**关键**&#x200B;漏洞。<!-- MCLOUD-8461 -->
 
-请参阅[Adobe安全公告APSB22-12](https://helpx.adobe.com/cn/security/products/magento/apsb22-12.html)。
+请参阅[Adobe安全公告APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)。
 
 ## v1.0.13
 

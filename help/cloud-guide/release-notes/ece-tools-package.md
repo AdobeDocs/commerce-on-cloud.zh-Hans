@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: e7db7e06142322898d7d9a28ae0dd06458fdcf6d
+source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
 workflow-type: tm+mt
-source-wordcount: 3580
+source-wordcount: 3631
 ht-degree: 0%
 
 ---
@@ -40,7 +40,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.12 {#latest}
+## v2002.2.13 {#latest}
+
+发行日期： 2026年8月19日
+
+- ![修复图标](../../assets/fix.svg) **缓存改进**&#x200B;增强了Symfony_l2缓存对Redis和Valkey从属连接的支持，并解决了相关的缓存、标记索引、预加载和静态部署问题。<!-- MCLOUD-15433 -->
+
+## v2002.2.12
 
 发行日期： 2026年7月20日
 
@@ -291,7 +297,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **新SCD_NO_PARENT环境变量** — 已添加`SCD_NO_PARENT`环境变量（适用于Adobe Commerce >=2.4.2）以管理父主题的静态内容生成。<!--MCLOUD-7284-->
 
-- ![修复图标](../../assets/fix.svg) **内存限制和命令** — 修复了当`cloud.log`文件的大小超过PHP memory_limit时，`php vendor/bin/ece-tools`命令无法运行的问题。现在，我们只从日志文件读取较小的数据子集，而不是将整个`cloud.log`文件读取到内存中。
+- ![修复图标](../../assets/fix.svg) **内存限制和命令** — 修复了当`cloud.log`文件的大小超过PHP memory_limit时，`php vendor/bin/ece-tools`命令无法运行的问题。 现在，我们只从日志文件读取较小的数据子集，而不是将整个`cloud.log`文件读取到内存中。
   <!--MCLOUD-7275-->
   <!--MCLOUD-7400-->
 
