@@ -31,14 +31,14 @@ ht-degree: 0%
 
 ## 启用自动缩放
 
-要启用或禁用[!DNL Adobe Commerce on cloud infrastructure]项目的水平或垂直自动缩放，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 在票证中选择以下原因：
+要启用或禁用[!DNL Adobe Commerce on cloud infrastructure]项目的水平或垂直自动缩放，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 在票证中选择以下原因：
 
 - **联系原因**：基础架构更改请求
 - **Adobe Commerce基础架构联系原因**：其他基础架构更改请求
 
 >[!IMPORTANT]
 >
->自动缩放功能会捕获意外事件。 即使您启用了自动缩放，如果您预计即将发生事件，Adobe仍建议您继续[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
+>自动缩放功能会捕获意外事件。 即使您启用了自动缩放，如果您预计即将发生事件，Adobe仍建议您继续[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
 
 ### 负载测试
 
