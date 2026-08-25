@@ -15,9 +15,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 2168
+source-wordcount: 2170
 ht-degree: 0%
 
 ---
@@ -175,7 +175,7 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 
 要帮助将生产数据导出为测试数据，以便在暂存和集成环境中使用，请执行以下操作：
 
-- [使用Adobe Commerce加密密钥导出客户的受保护备份并存储数据时，运行支持实用程序](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=zh-Hans) CLI命令（推荐）
+- [使用Adobe Commerce加密密钥导出客户的受保护备份并存储数据时，运行支持实用程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/run-support-utilities) CLI命令（推荐）
 
 - 用于生成和导出数据的[数据收集](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/support#data-collector)工具
 
@@ -185,7 +185,7 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 
 >[!NOTE]
 >
->将数据推送到其他环境之前，应考虑清理您的数据。 您有几个选项，包括[使用支持实用程序](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=zh-Hans)或开发脚本以清除客户数据。
+>将数据推送到其他环境之前，应考虑清理您的数据。 您有几个选项，包括[使用支持实用程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/run-support-utilities)或开发脚本以清除客户数据。
 
 >[!WARNING]
 >

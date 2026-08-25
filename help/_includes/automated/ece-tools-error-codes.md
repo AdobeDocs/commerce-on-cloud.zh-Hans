@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7f2934af84c947046fed3a32c3b6e2937aed418a
+source-git-commit: 5fefabb5795e68abd467a7115bc2a6e554e0d832
 workflow-type: tm+mt
-source-wordcount: '2554'
+source-wordcount: '2714'
 ht-degree: 4%
 
 ---
@@ -53,22 +53,22 @@ ht-degree: 4%
 | 104 |  | 未能分析`.magento.env.yaml`文件 | 未在`./vendor/magento/ece-tools/config/schema.yaml`文件中定义配置。 检查配置变量名称是否正确，以及它是否已定义。 |
 | 105 |  | 无法读取`.magento.env.yaml`文件 | 无法读取`./.magento.env.yaml`文件。 检查文件权限。 |
 | 106 |  | 无法读取`.schema.yaml`文件 |  |
-| 107 | pre-deploy： clean-redis-cache | 未能清除Redis缓存 | 未能清除Redis缓存。 检查Redis缓存配置是否正确，以及Redis服务是否可用。 查看[安装Redis服务](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/redis.html?lang=zh-Hans)。 |
-| 140 | 预部署： clean-valkey-cache | 未能清除Valkey缓存 | 未能清除Valkey缓存。 检查Valkey缓存配置是否正确，以及Valkey服务是否可用。 请参阅[Setup Valkey服务](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/valkey.html?lang=zh-Hans)。 |
+| 107 | pre-deploy： clean-redis-cache | 未能清除Redis缓存 | 未能清除Redis缓存。 检查Redis缓存配置是否正确，以及Redis服务是否可用。 查看[安装Redis服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/redis)。 |
+| 140 | 预部署： clean-valkey-cache | 未能清除Valkey缓存 | 未能清除Valkey缓存。 检查Valkey缓存配置是否正确，以及Valkey服务是否可用。 请参阅[Setup Valkey服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/valkey)。 |
 | 108 | 预部署：set-production-mode | 命令`/bin/magento maintenance:enable`失败 | 有关详细信息，请查看`cloud.log`。 有关更详细的命令输出，请将`VERBOSE_COMMANDS: '-vvv'`选项添加到`.magento.env.yaml`文件中。 |
 | 109 | validate-config | 数据库配置不正确 | 检查是否正确配置了`DATABASE_CONFIGURATION`环境变量。 |
 | 110 | validate-config | 会话配置不正确 | 检查是否正确配置了`SESSION_CONFIGURATION`环境变量。 配置必须至少包含`save`参数。 |
 | 111 | validate-config | 搜索配置不正确 | 检查是否正确配置了`SEARCH_CONFIGURATION`环境变量。 配置必须至少包含`engine`参数。 |
 | 112 | validate-config | 资源配置不正确 | 检查是否正确配置了`RESOURCE_CONFIGURATION`环境变量。 配置必须包含至少`connection`个参数。 |
-| 113 | validate-config：elasticsuite-integrity | ElasticSuite已安装，但Elasticsearch服务不可用 | 检查`SEARCH_CONFIGURATION`环境变量是否配置正确，并验证Elasticsearch服务是否可用。 |
-| 114 | validate-config：elasticsuite-integrity | ElasticSuite已安装，但使用了其他搜索引擎 | ElasticSuite已安装，但已配置另一个搜索引擎。 更新`SEARCH_CONFIGURATION`环境变量以启用Elasticsearch，并在`services.yaml`文件中验证Elasticsearch服务配置。 |
+| 113 | validate-config:elasticsuite-integrity | ElasticSuite已安装，但Elasticsearch服务不可用 | 检查`SEARCH_CONFIGURATION`环境变量是否配置正确，并验证Elasticsearch服务是否可用。 |
+| 114 | validate-config:elasticsuite-integrity | ElasticSuite已安装，但使用了其他搜索引擎 | ElasticSuite已安装，但已配置另一个搜索引擎。 更新`SEARCH_CONFIGURATION`环境变量以启用Elasticsearch，并在`services.yaml`文件中验证Elasticsearch服务配置。 |
 | 115 |  | 数据库查询执行失败 |  |
 | 116 | install-update： setup | 命令`/bin/magento setup:install`失败 | 有关详细信息，请查看`cloud.log`和`install_upgrade.log`。 有关更详细的命令输出，请将`VERBOSE_COMMANDS: '-vvv'`选项添加到`.magento.env.yaml`文件中。 |
 | 117 | install-update： config-import | 命令`app:config:import`失败 | 有关详细信息，请查看`cloud.log`。 有关更详细的命令输出，请将`VERBOSE_COMMANDS: '-vvv'`选项添加到`.magento.env.yaml`文件中。 |
 | 118 |  | 未找到所需的实用程序（超时，破折号） |  |
 | 119 | install-update： deploy-static-content | 命令`/bin/magento setup:static-content:deploy`失败 | 有关详细信息，请查看`cloud.log`。 有关更详细的命令输出，请将`VERBOSE_COMMANDS: '-vvv'`选项添加到`.magento.env.yaml`文件中。 |
 | 120 | compress-static-content | 静态内容压缩失败 | 有关详细信息，请查看`cloud.log`。 |
-| 121 | deploy-static-content：generate | 无法更新已部署的版本 | 无法更新`./pub/static/deployed_version.txt`文件。 检查您的文件系统权限。 |
+| 121 | deploy-static-content:generate | 无法更新已部署的版本 | 无法更新`./pub/static/deployed_version.txt`文件。 检查您的文件系统权限。 |
 | 122 | clean-static-content | 未能清除静态内容文件 |  |
 | 123 | install-update： split-db | 命令`/bin/magento setup:db-schema:split`失败 | 有关详细信息，请查看`cloud.log`。 有关更详细的命令输出，请将`VERBOSE_COMMANDS: '-vvv'`选项添加到`.magento.env.yaml`文件中。 |
 | 124 | clean-view-preprocessed | 未能清除`var/view_preprocessed`文件夹 | 无法清除`./var/view_preprocessed`文件夹。 检查您的文件系统权限。 |
@@ -78,7 +78,7 @@ ht-degree: 4%
 | 128 | disable-maintenance-mode | 命令`/bin/magento maintenance:disable`失败 | 有关详细信息，请查看`cloud.log`。 将`VERBOSE_COMMANDS: '-vvv'`添加到`.magento.env.yaml`中，以获取更详细的命令输出。 |
 | 129 | install-update： reset-password | 无法读取重置密码模板 |  |
 | 130 | install-update： cache_type | 命令失败： `php ./bin/magento cache:enable` | 命令`php ./bin/magento cache:enable`仅在安装了Adobe Commerce但部署开始时`./app/etc/env.php`文件不存在或为空时运行。 有关详细信息，请查看`cloud.log`。 将`VERBOSE_COMMANDS: '-vvv'`添加到`.magento.env.yaml`中，以获取更详细的命令输出。 |
-| 131 | install-update | `crypt/key`键值在`./app/etc/env.php`文件或`CRYPT_KEY`云环境变量中不存在 | 如果Adobe Commerce部署开始时`./app/etc/env.php`文件不存在，或者未定义`crypt/key`值，则会出现此错误。 如果您从其他环境迁移了数据库，请从该环境中检索加密密钥值。 然后，将该值添加到当前环境中的[CRYPT_KEY](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#crypt_key)云环境变量。 请参阅[Adobe Commerce加密密钥](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/overview.html?lang=zh-Hans#gather-credentials)。 如果意外删除了`./app/etc/env.php`文件，请使用以下命令从从先前部署创建的备份文件中恢复该文件： `./vendor/bin/ece-tools backup:restore` CLI命令。” |
+| 131 | install-update | `crypt/key`键值在`./app/etc/env.php`文件或`CRYPT_KEY`云环境变量中不存在 | 如果Adobe Commerce部署开始时`./app/etc/env.php`文件不存在，或者未定义`crypt/key`值，则会出现此错误。 如果您从其他环境迁移了数据库，请从该环境中检索加密密钥值。 然后，将该值添加到当前环境中的[CRYPT_KEY](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#crypt_key)云环境变量。 请参阅[Adobe Commerce加密密钥](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/overview#gather-credentials)。 如果意外删除了`./app/etc/env.php`文件，请使用以下命令从从先前部署创建的备份文件中恢复该文件： `./vendor/bin/ece-tools backup:restore` CLI命令。” |
 | 132 |  | 无法连接到Elasticsearch服务 | 检查有效的Elasticsearch凭据并验证服务是否正在运行 |
 | 137 |  | 无法连接到OpenSearch服务 | 检查有效的OpenSearch凭据并验证服务是否正在运行 |
 | 133 | validate-config | 删除Magento Braintree或Magento Open Source 2.4及更高版本中不再支持的Adobe Commerce模块配置。 | Adobe Commerce或Magento Open Source 2.4.0及更高版本不再支持Braintree模块。 从`.magento.app.yaml`文件的变量部分删除CONFIG__STORES__DEFAULT__PAYMENT__BRAINTREE__CHANNEL变量。 要获得Braintree支持，请改用Commerce Marketplace中的官方Braintree Payments扩展。 |
@@ -124,7 +124,7 @@ ht-degree: 4%
 | 错误代码 | 构建步骤 | 错误描述（标题） | 建议的操作 |
 | - | - | - | - |
 | 1001 | validate-config | 文件app/etc/config.php不存在 |  |
-| 1002 | validate-config | 的。不再支持/build_options.ini文件 |  |
+| 1002 | validate-config | 不再支持./build_options.ini文件 |  |
 | 1003 | validate-config | 共享配置文件中缺少模块部分 |  |
 | 1004 | validate-config | 该配置与此版本的Magento不兼容 |  |
 | 1005 | validate-config | 已忽略SCD选项 |  |
@@ -135,11 +135,11 @@ ht-degree: 4%
 
 | 错误代码 | 部署步骤 | 错误描述（标题） | 建议的操作 |
 | - | - | - | - |
-| 2001 | 预部署：缓存 | 为不可用的Redis服务配置了缓存。 配置被忽略。 |  |
-| 2032 | 预部署：缓存 | 缓存是为不可用的Valkey服务配置的。 配置被忽略。 |  |
+| 2001 | 预部署:cache | 为不可用的Redis服务配置了缓存。 配置被忽略。 |  |
+| 2032 | 预部署:cache | 缓存是为不可用的Valkey服务配置的。 配置被忽略。 |  |
 | 2002 | validate-config | 配置的状态不理想 |  |
 | 2003 | validate-config | 尚未配置错误报告的目录嵌套级别值 |  |
-| 2004 | validate-config | 中的配置无效。/pub/errors/local.xml文件。 |  |
+| 2004 | validate-config | ./pub/errors/local.xml文件中的配置无效。 |  |
 | 2005 | validate-config | 管理员数据仅在初始安装期间用于创建管理员用户。 在升级过程中，会忽略对管理员数据所做的任何更改。 | 初始安装后，您可以从配置中删除管理员数据。 |
 | 2006 | validate-config | 未创建管理员用户，因为未设置管理员电子邮件 | 安装后，您可以手动创建管理员用户：使用ssh连接到您的环境。 然后，运行`bin/magento admin:user:create`命令。 |
 | 2007 | validate-config | 将php版本更新为建议的版本 |  |
@@ -157,13 +157,13 @@ ht-degree: 4%
 | 2019 | validate-config | MySQL搜索配置选项已弃用 | 请改用Elasticsearch。 |
 | 2029 | validate-config | 在Adobe Commerce和Magento Open Source 2.4.2中已弃用拆分数据库，将在2.5中删除。 | 如果使用拆分数据库，则应开始计划恢复或迁移到单个数据库，或者使用替代方法。 |
 | 2020 | install-update | Adobe Commerce安装已完成，但`app/etc/env.php`配置文件缺失或为空。 | 所需的数据从环境配置和.magento.env.yaml文件中恢复。 |
-| 2021 | install-update：db-connection | 对于使用自定义连接的拆分数据库 |  |
-| 2022 | install-update：db-connection | 您已经更改为与从属连接不兼容的数据库配置。 |  |
-| 2023 | install-update：split-db | 跳过启用拆分数据库。 |  |
-| 2024 | install-update：split-db | SPLIT_DB变量缺少拆分连接类型的配置。 |  |
-| 2025 | install-update：split-db | 未设置从属连接。 |  |
-| 2026 | pre-deploy：restore-writable-dirs | 未能将构建阶段生成的一些数据还原到已装入的目录 | 有关详细信息，请查看`cloud.log`。 |
-| 2027 | validate-config：mage-mode-variable | 不支持MAGE_MODE环境变量的模式值 | 移除MAGE_MODE环境变量，或将其值更改为“production”。 云基础架构上的Adobe Commerce仅支持“生产”模式。 |
+| 2021 | install-update:db-connection | 对于使用自定义连接的拆分数据库 |  |
+| 2022 | install-update:db-connection | 您已经更改为与从属连接不兼容的数据库配置。 |  |
+| 2023 | install-update:split-db | 跳过启用拆分数据库。 |  |
+| 2024 | install-update:split-db | SPLIT_DB变量缺少拆分连接类型的配置。 |  |
+| 2025 | install-update:split-db | 未设置从属连接。 |  |
+| 2026 | 预部署:restore-writable-dirs | 未能将构建阶段生成的一些数据还原到已装入的目录 | 有关详细信息，请查看`cloud.log`。 |
+| 2027 | validate-config:mage-mode-variable | 不支持MAGE_MODE环境变量的模式值 | 移除MAGE_MODE环境变量，或将其值更改为“production”。 云基础架构上的Adobe Commerce仅支持“生产”模式。 |
 | 2028 | 远程存储 | 无法启用远程存储。 | 验证远程存储凭据。 |
 | 2030 | validate-config | Elasticsearch和OpenSearch服务都安装在基础设施层。 Adobe Commerce和Magento Open Source 2.4.4及更高版本默认使用OpenSearch | 请考虑从基础架构层删除Elasticsearch或OpenSearch服务以优化资源使用。 |
 

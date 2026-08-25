@@ -20,9 +20,9 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 30e6d068126e2713dcaa23292db5704c23c272ad
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1690
+source-wordcount: 1694
 ht-degree: 0%
 
 ---
@@ -258,7 +258,7 @@ magento-cloud user:update alice@example.com -r production:a
 
      >[!WARNING]
      >
-     >如果您无法访问具有TFA的帐户，并且没有恢复代码列表，则必须联系项目管理员，或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以重置TFA应用程序。
+     >如果您无法访问具有TFA的帐户，并且没有恢复代码列表，则必须联系项目管理员，或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以重置TFA应用程序。
 
 1. 完成TFA设置后，单击&#x200B;**保存**&#x200B;以更新您的帐户。
 

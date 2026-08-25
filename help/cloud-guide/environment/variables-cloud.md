@@ -12,9 +12,9 @@ feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: ab64bb5a3cc159844015072738404274fdea97cd
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 343
+source-wordcount: 344
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->要使用[[!DNL Cloud Console]](../project/overview.md)将环境变量添加到[覆盖配置设置](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=zh-Hans)，您必须在变量名称前面加上`env:`，如以下示例所示：
+>要使用[[!DNL Cloud Console]](../project/overview.md)将环境变量添加到[覆盖配置设置](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/paths/override-config-settings)，您必须在变量名称前面加上`env:`，如以下示例所示：
 >
 >![环境变量示例](../../assets/set-env-variable-ui.png)
 

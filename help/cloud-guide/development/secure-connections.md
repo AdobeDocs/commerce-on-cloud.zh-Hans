@@ -14,9 +14,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1071
+source-wordcount: 1079
 ht-degree: 0%
 
 ---
@@ -164,10 +164,10 @@ Secure Shell (SSH)是用于安全登录到远程服务器和系统的常用协�
 
 对于&#x200B;**入门环境和Pro集成环境**，您可能还想考虑[添加`mount`](../application/properties.md#mounts)以访问特定目录。 您要将装载添加到`.magento.app.yaml`文件中。 有关可写目录的列表，请参阅[项目结构](../project/file-structure.md)。 此挂载点仅适用于这些环境。
 
-对于&#x200B;**Pro暂存和生产环境**，如果您没有该环境的SSH访问权限，则必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以请求sFTP访问权限和装入点以访问特定文件夹，例如`pub/media`。
+对于&#x200B;**Pro暂存和生产环境**，如果您没有该环境的SSH访问权限，则必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以请求sFTP访问权限和装入点以访问特定文件夹，例如`pub/media`。
 
 >[!NOTE]
->对于Pro暂存和生产环境，如果sFTP连接针对的是&#x200B;_通用_、**非**&#x200B;的用户，需要将[添加到云项目](../project/user-access.md)，则您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)，并附加其&#x200B;**公共**&#x200B;密钥。 **从不提供您的私有SSH密钥。**
+>对于Pro暂存和生产环境，如果sFTP连接针对的是&#x200B;_通用_、**非**&#x200B;的用户，需要将[添加到云项目](../project/user-access.md)，则您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，并附加其&#x200B;**公共**&#x200B;密钥。 **从不提供您的私有SSH密钥。**
 
 ## SSH隧道
 

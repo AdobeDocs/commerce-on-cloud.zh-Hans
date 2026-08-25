@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 774
+source-wordcount: 775
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ stage:
 - **默认值**-_未设置_
 - **版本**—Adobe Commerce 2.4.4及更高版本
 
-当设置为`true`时，启用Commerce Webhook。 webhook在外部端点上运行，例如App Builder运行时操作或第三方清单管理系统。 [_Webhooks指南_](https://developer.adobe.com/commerce/extensibility/webhooks)详细描述了此功能。
+当设置为`true`时，启用Commerce Webhook。 webhook在外部端点上运行，例如App Builder运行时操作或第三方清单管理系统。 [_Webhooks指南_](https://developer.adobe.com/commerce/extensibility/webhooks/)详细描述了此功能。
 
 ```yaml
 stage:
@@ -167,8 +167,8 @@ stage:
 ## `SKIP_HTML_MINIFICATION`
 
 - **默认值**：
-   - `true` — 适用于`ece-tools` 2002.0.13及更高版本
-   - `false` — 适用于早期版本的`ece-tools`
+  - `true` — 适用于`ece-tools` 2002.0.13及更高版本
+  - `false` — 适用于早期版本的`ece-tools`
 - **版本**—Adobe Commerce 2.1.4及更高版本
 
 启用或禁用在生成阶段结束时将静态视图文件复制到`<magento_root>/init/`目录。 如果设置为`true`，将不会复制文件，并且HTML缩小功能可应请求使用。 将此值设置为`true`可减少部署到暂存和生产环境时的停机时间。
@@ -189,7 +189,7 @@ stage:
 - **默认值**—_未设置_
 - **版本**—Adobe Commerce 2.1.4及更高版本
 
-使用`X_FRAME_CONFIGURATION`变量更改Adobe Commerce站点的[`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html?lang=zh-Hans)标头配置。 此配置控制浏览器如何呈现`<frame>`、`<iframe>`或`<object>`中的页面。 使用以下选项之一：
+使用`X_FRAME_CONFIGURATION`变量更改Adobe Commerce站点的[`X-Frame-Options`](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/security/xframe-options)标头配置。 此配置控制浏览器如何呈现`<frame>`、`<iframe>`或`<object>`中的页面。 使用以下选项之一：
 
 - `DENY` — 页面无法显示在框架中。
 - `SAMEORIGIN` — （默认Adobe Commerce设置。） 页面只能在与页面本身同源的框架中显示。

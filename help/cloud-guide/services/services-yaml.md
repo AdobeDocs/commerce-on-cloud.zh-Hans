@@ -14,9 +14,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1186
+source-wordcount: 1187
 ht-degree: 0%
 
 ---
@@ -201,7 +201,7 @@ mysql:
 
 ## 服务版本
 
-云基础架构上Adobe Commerce的服务版本和兼容性支持取决于在云基础架构上部署和测试的版本，有时与Adobe Commerce内部部署支持的版本不同。 请参阅&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)，获取Adobe已使用特定Adobe Commerce和Magento Open Source版本测试的第三方软件依赖项列表。
+云基础架构上Adobe Commerce的服务版本和兼容性支持取决于在云基础架构上部署和测试的版本，有时与Adobe Commerce内部部署支持的版本不同。 请参阅&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)，获取Adobe已使用特定Adobe Commerce和Magento Open Source版本测试的第三方软件依赖项列表。
 
 ### 软件EOL检查
 

@@ -18,9 +18,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1979
+source-wordcount: 1982
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 - **验证服务版本和关系以及连接能力**
 
-  验证应用程序可用的服务，并确保您使用的是最新的兼容版本。 有关推荐的版本，请参阅&#x200B;_安装指南_&#x200B;中的[服务关系](../services/services-yaml.md#service-relationships)和[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)。
+  验证应用程序可用的服务，并确保您使用的是最新的兼容版本。 有关推荐的版本，请参阅&#x200B;_安装指南_&#x200B;中的[服务关系](../services/services-yaml.md#service-relationships)和[系统要求](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)。
 
 - **在部署到暂存和生产环境之前，在本地和集成环境中进行测试**
 
@@ -95,11 +95,11 @@ ht-degree: 0%
 
   在部署到生产环境之前，请完成以下任务：
 
-   - 确保您可以使用[SSH](../development/secure-connections.md)连接到生产环境中的所有三个节点。
+  - 确保您可以使用[SSH](../development/secure-connections.md)连接到生产环境中的所有三个节点。
 
-   - 验证索引器是否设置为计划&#x200B;_上的_&#x200B;更新。 请参阅&#x200B;_扩展开发人员指南_&#x200B;中的[索引模式](https://developer.adobe.com/commerce/php/development/components/indexing/)。
+  - 验证索引器是否设置为计划&#x200B;_上的_&#x200B;更新。 请参阅&#x200B;_扩展开发人员指南_&#x200B;中的[索引模式](https://developer.adobe.com/commerce/php/development/components/indexing/)。
 
-   - 通过更新生产代码中的任何特定于环境的变量、验证服务可用性和兼容性并进行任何其他所需的配置更改来准备环境。
+  - 通过更新生产代码中的任何特定于环境的变量、验证服务可用性和兼容性并进行任何其他所需的配置更改来准备环境。
 
 - **监视部署进程**
 
@@ -186,13 +186,13 @@ ht-degree: 0%
 
 有两个部署挂钩。 `pre-deploy.php`挂接完成对生成挂接中生成的资源和代码进行必要的清理和检索。 `php ./vendor/bin/ece-tools deploy`挂接运行一系列命令和脚本：
 
-- 如果Adobe Commerce是&#x200B;**未安装**，则它随`bin/magento setup:install`一起安装，更新部署配置`app/etc/env.php`以及指定环境（如Redis和网站URL）的数据库。 **重要信息：**&#x200B;当您在安装程序期间完成[首次部署](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html?lang=zh-Hans)时，在所有环境中都安装和部署了Adobe Commerce。
+- 如果Adobe Commerce是&#x200B;**未安装**，则它随`bin/magento setup:install`一起安装，更新部署配置`app/etc/env.php`以及指定环境（如Redis和网站URL）的数据库。 **重要信息：**&#x200B;当您在安装程序期间完成[首次部署](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/launch/overview)时，在所有环境中都安装和部署了Adobe Commerce。
 
 - 如果已安装Adobe Commerce **&#x200B;**，请执行任何必要的升级。 部署脚本运行`bin/magento setup:upgrade`以更新数据库架构和数据（在扩展或核心代码更新后必需），并更新环境的部署配置、`app/etc/env.php`和数据库。 最后，部署脚本清除Adobe Commerce缓存。
 
 - 脚本可以选择使用命令`magento setup:static-content:deploy`生成静态Web内容。
 
-- 为静态内容部署策略使用默认设置为`quick`的作用域（生成脚本中的`-s`标志）。 您可以使用环境变量[`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)自定义策略。 有关这些选项和功能的详细信息，请参阅[部署静态视图文件](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=zh-Hans)的[静态文件部署策略](../deploy/static-content.md)和`-s`标志。
+- 为静态内容部署策略使用默认设置为`quick`的作用域（生成脚本中的`-s`标志）。 您可以使用环境变量[`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)自定义策略。 有关这些选项和功能的详细信息，请参阅[部署静态视图文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)的[静态文件部署策略](../deploy/static-content.md)和`-s`标志。
 
 >[!NOTE]
 >

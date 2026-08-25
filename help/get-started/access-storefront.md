@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
-source-wordcount: 361
+source-wordcount: 362
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->如果密码重置失败或您无法登录到“管理员”面板，则具有管理员访问权限的用户可以使用SSH连接到项目，并使用`admin:user:create` CLI命令添加管理员用户。 请参阅&#x200B;_安装指南_&#x200B;中的[创建、编辑或解锁管理员帐户](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=zh-Hans)。
+>如果密码重置失败或您无法登录到“管理员”面板，则具有管理员访问权限的用户可以使用SSH连接到项目，并使用`admin:user:create` CLI命令添加管理员用户。 请参阅&#x200B;_安装指南_&#x200B;中的[创建、编辑或解锁管理员帐户](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/tutorials/admin)。
 
 ## 监测站点运行状况
 

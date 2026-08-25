@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 430
+source-wordcount: 431
 ht-degree: 0%
 
 ---
@@ -139,7 +139,7 @@ cache:
 
 Cookie具有以下限制：
 
-- 系统中设置的最大值为&#x200B;**50 Cookie**。 否则，应用程序会引发`Unable to send the cookie. Maximum number of cookies would be exceeded`异常。 若要将Cookie数量增加到200，请使用[Quality Patches Tool](https://experienceleague.adobe.com/zh-hans/docs/commerce-learn/tutorials/tools/quality-patch-tool)应用[MDVA-12304修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html?lang=zh-Hans)。
+- 系统中设置的最大值为&#x200B;**50 Cookie**。 否则，应用程序会引发`Unable to send the cookie. Maximum number of cookies would be exceeded`异常。 若要将Cookie数量增加到200，请使用[Quality Patches Tool](https://experienceleague.adobe.com/zh-hans/docs/commerce-learn/tutorials/tools/quality-patch-tool)应用[MDVA-12304修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/release-notes)。
 - Cookie最大大小为&#x200B;**4096字节**。 否则，应用程序会引发`Unable to send the cookie. Size of '%name' is %size bytes`异常。
 
 ### `default_ttl`

@@ -21,9 +21,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 987
+source-wordcount: 990
 ht-degree: 0%
 
 ---
@@ -38,9 +38,9 @@ WAF服务提供以下优势：
 - **默认WAF策略** — 由Fastly配置和维护的默认WAF策略提供专为保护Adobe Commerce Web应用程序而设计的安全规则集合，这些安全规则包括注入攻击、恶意输入、跨站点脚本、数据导出、HTTP协议违规和其他[OWASP十大](https://owasp.org/www-project-top-ten/)安全威胁。
 - **WAF载入和启用** — Adobe会在最终配置后的2到3周内，在您的生产环境中部署和启用默认的WAF策略。
 - **操作和维护支持**—
-   - Adobe和Fastly可设置和管理WAF服务的日志、规则和警报。
-   - Adobe会分类与WAF服务问题相关的客户支持工单，这些工单将阻止合法流量作为优先级1问题。
-   - 自动升级到WAF服务版本可确保即时覆盖新的或正在演变的利用漏洞攻击。 请参阅[WAF维护和升级](#waf-maintenance-and-updates)。
+  - Adobe和Fastly可设置和管理WAF服务的日志、规则和警报。
+  - Adobe会分类与WAF服务问题相关的客户支持工单，这些工单将阻止合法流量作为优先级1问题。
+  - 自动升级到WAF服务版本可确保即时覆盖新的或正在演变的利用漏洞攻击。 请参阅[WAF维护和升级](#waf-maintenance-and-updates)。
 
 >[!TIP]
 >
@@ -68,7 +68,7 @@ WAF服务会针对WAF规则集检查HTTP和HTTPS流量（GET和POST请求），�
 
 您可以从管理员自定义此错误响应页面。 请参阅[自定义WAF响应页面](fastly-custom-response.md#customize-the-waf-error-page)。
 
-如果您的Adobe Commerce管理页面或店面在响应合法URL请求时返回`403 Forbidden`错误页面，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)。 复制错误响应页面中的引用ID，并将其粘贴到票证描述中。
+如果您的Adobe Commerce管理页面或店面在响应合法URL请求时返回`403 Forbidden`错误页面，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)。 复制错误响应页面中的引用ID，并将其粘贴到票证描述中。
 
 要使用New Relic识别特定请求的WAF响应，请参阅以下内容：
 
@@ -90,7 +90,7 @@ Adobe和Fastly管理更新过程，以确保新的或修改的WAF规则在您的
 由Fastly提供的标准WAF服务不支持以下功能：
 
 - 防止恶意软件或机器人减轻 — 考虑使用[访问控制列表](./fastly-vcl-allowlist.md)或第三方服务。
-- 速率限制 — 请参阅Fastly文档中的[速率限制](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md)，或参阅&#x200B;_Commerce Web API_&#x200B;安全部分中的[速率限制](https://developer.adobe.com/commerce/webapi/get-started/rate-limiting/)。
+- 速率限制 — 请参阅Fastly文档中的[速率限制](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md)，或参阅&#x200B;_Commerce Web API_&#x200B;安全部分中的[速率限制](https://developer.adobe.com/commerce/webapi/get-started/rate-limiting)。
 - 配置客户的日志记录终结点 — 另请参阅[PrivateLink服务](../development/privatelink-service.md)。
 
 WAF服务允许您根据IP地址阻止或允许流量。 您可以向Fastly服务添加访问控制列表(ACL)和自定义VCL片段，以指定用于阻止或允许流量的IP地址和VCL逻辑。 查看[自定义Fastly VCL片段](fastly-vcl-custom-snippets.md)。

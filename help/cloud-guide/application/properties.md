@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: de2e5072775d032d46f91394ed870768271fa9a1
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 849
+source-wordcount: 857
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ disk: 5120
 
 >[!NOTE]
 >
->对于Pro暂存环境和生产环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以更新应用程序的`mounts`和`disk`配置。 提交票证时，请指示所需的配置更改并包含`.magento.app.yaml`文件的更新版本。
+>对于Pro暂存环境和生产环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以更新应用程序的`mounts`和`disk`配置。 提交票证时，请指示所需的配置更改并包含`.magento.app.yaml`文件的更新版本。
 >
 >暂时无法在暂存或生产环境中增加磁盘存储；此过程不可逆。
 
@@ -198,7 +198,7 @@ mounts:
 
 >[!NOTE]
 >
->对于Pro暂存环境和生产环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以更新应用程序的`mounts`和`disk`配置。 提交票证时，请指示所需的配置更改并包含`.magento.app.yaml`文件的更新版本。
+>对于Pro暂存环境和生产环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以更新应用程序的`mounts`和`disk`配置。 提交票证时，请指示所需的配置更改并包含`.magento.app.yaml`文件的更新版本。
 
 通过将挂载Web添加到位置的[`web`](web-property.md)块，可以使挂载Web可访问。
 

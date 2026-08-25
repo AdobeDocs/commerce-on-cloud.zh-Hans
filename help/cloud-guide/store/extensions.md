@@ -14,9 +14,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 672
+source-wordcount: 675
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 ## 安装扩展
 
-在向实施中添加扩展时，Adobe建议在开发分支中工作。 安装扩展时，扩展名(`<VendorName>_<ComponentName>`)会自动插入到[`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html?lang=zh-Hans)文件中。 无需直接编辑文件。
+在向实施中添加扩展时，Adobe建议在开发分支中工作。 安装扩展时，扩展名(`<VendorName>_<ComponentName>`)会自动插入到[`app/etc/config.php`](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/files/deployment-files)文件中。 无需直接编辑文件。
 
 **要安装扩展**：
 
@@ -167,7 +167,7 @@ ht-degree: 0%
 
 ## 升级扩展
 
-在继续之前，您需要具有扩展的编辑器名称和版本。 此外，请确认该扩展与您的项目和Adobe Commerce版本兼容。 特别是，[在开始之前检查所需的PHP版本](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)。
+在继续之前，您需要具有扩展的编辑器名称和版本。 此外，请确认该扩展与您的项目和Adobe Commerce版本兼容。 特别是，[在开始之前检查所需的PHP版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)。
 
 **要更新扩展**：
 
@@ -201,4 +201,4 @@ ht-degree: 0%
    git push origin <branch-names>
    ```
 
-如果遇到错误，请参阅[从组件故障中恢复](../deploy/recover-failed-deployment.md)。 要了解有关将扩展与Adobe Commerce结合使用的更多信息，请参阅&#x200B;_管理员指南_&#x200B;中的[扩展](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html?lang=zh-Hans)。
+如果遇到错误，请参阅[从组件故障中恢复](../deploy/recover-failed-deployment.md)。 要了解有关将扩展与Adobe Commerce结合使用的更多信息，请参阅&#x200B;_管理员指南_&#x200B;中的[扩展](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/resources/extensions)。

@@ -18,9 +18,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1587
+source-wordcount: 1619
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 要在集成环境中获得最佳性能，请遵循以下最佳实践：
 
-- 限制目录大小 — 作为参考，示例数据包含约2,048个产品。尝试将目录大小缩减到4,000-5,000个产品左右。
+- 限制目录大小 — 作为参考，示例数据包含约2,048个产品。 尝试将目录大小缩减到4,000-5,000个产品左右。
 要检查目录中的产品数，请运行以下MySQL查询：
 
   ```sql
@@ -155,10 +155,10 @@ ht-degree: 0%
 
 - **GlusterFS** — 用于管理所有静态文件部署并通过四个目录装载进行同步的文件服务器：
 
-   - `var`
-   - `pub/media`
-   - `pub/static`
-   - `app/etc`
+  - `var`
+  - `pub/media`
+  - `pub/static`
+  - `app/etc`
 
 - **Redis** — 每个虚拟机一个服务器，只有一个处于活动状态，另外两个作为副本
 
@@ -225,4 +225,4 @@ Pro群集大小和&#x200B;_计算_&#x200B;配置因所选的云提供商(AWS、A
 
 冗余架构使Adobe云基础架构能够在不停机的情况下进行扩展。 在升级时，这三个实例中的每一个都会轮换以升级容量，而不会影响站点操作。 例如，如果约束位于PHP级别而不是数据库级别，则可以将额外的Web服务器添加到现有群集。 这提供了&#x200B;_水平缩放_，以补充数据库级别上额外CPU提供的垂直缩放。 请参阅[缩放的体系结构](scaled-architecture.md)。
 
-如果您预计某个事件或其他原因会导致流量显着增加，则可以请求临时增加容量。 请参阅[如何在&#x200B;_Commerce帮助中心_&#x200B;中请求临时扩展](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=zh-Hans)。
+如果您预计某个事件或其他原因会导致流量显着增加，则可以请求临时增加容量。 请参阅[如何在&#x200B;_Commerce帮助中心_&#x200B;中请求临时扩展](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)。

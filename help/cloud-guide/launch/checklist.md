@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1155
+source-wordcount: 1180
 ht-degree: 0%
 
 ---
@@ -85,7 +85,8 @@ Adobe为每个环境提供让我们加密SSL/TLS证书。 Fastly需要此证书�
 
 >[!IMPORTANT]
 >
->[RFC1034](https://www.rfc-editor.org/rfc/rfc1912) （**第2.4**&#x200B;节）中的DNS说明指出：>_CNAME记录不允许与任何其他数据共存。换言之，如果suzy.podunk.xx是sue.podunk.xx的别名，则不能同时具有suzy.podunk.edu的MX记录、A记录甚至TXT记录。_
+>[RFC1034](https://www.rfc-editor.org/rfc/rfc1912) （**第2.4**&#x200B;节）中的DNS说明指出：
+>_CNAME记录不允许与任何其他数据共存。 换言之，如果suzy.podunk.xx是sue.podunk.xx的别名，则不能同时具有suzy.podunk.edu的MX记录、A记录甚至TXT记录。_
 >
 >因此，子域的DNS记录应为`CNAME`类型，apex域（根域）应为`A`类型。 放弃此规则可能会导致邮件服务或DNS传播中断，因为您将失去添加其他记录（如MX或NS）的能力。 某些DNS提供商可能会通过使用内部自定义来绕过此要求，但遵循此标准可确保稳定性和灵活性（例如，更改DNS提供商）。
 
@@ -103,7 +104,7 @@ Adobe为每个环境提供让我们加密SSL/TLS证书。 Fastly需要此证书�
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **注意**：您还可以从管理员更新基本URL。 请参阅&#x200B;_Adobe Commerce商店和购买体验指南_&#x200B;中的[商店URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=zh-Hans)。
+   **注意**：您还可以从管理员更新基本URL。 请参阅&#x200B;_Adobe Commerce商店和购买体验指南_&#x200B;中的[商店URL](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-urls)。
 
 1. 请等待几分钟，以便网站更新。
 
@@ -155,7 +156,7 @@ Adobe为每个环境提供让我们加密SSL/TLS证书。 Fastly需要此证书�
 
 - [删除云基础架构项目上的Adobe Commerce上不再存在的所有用户](../project/user-access.md)
 
-- [配置双重身份验证](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/)
+- [配置双重身份验证](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication)
 
 ## 性能监控
 

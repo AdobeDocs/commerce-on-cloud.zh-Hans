@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: f09934f41676922dc4b4001f24ee94062a5e9c0a
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 3035
+source-wordcount: 3049
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ stage:
             database: 11
 ```
 
-以下示例使用&#x200B;_配置指南_&#x200B;中定义的[Redis预加载功能](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html?lang=zh-Hans#redis-preload-feature)：
+以下示例使用&#x200B;_配置指南_&#x200B;中定义的[Redis预加载功能](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache#redis-preload-feature)：
 
 ```yaml
 stage:
@@ -109,7 +109,7 @@ stage:
 - **默认**—`true`
 - **版本**—Adobe Commerce 2.1.4及更高版本
 
-启用或禁用清理在生成或部署阶段生成的[静态内容文件](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=zh-Hans)。 在开发中使用默认值&#x200B;_true_&#x200B;作为最佳实践。
+启用或禁用清理在生成或部署阶段生成的[静态内容文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)。 在开发中使用默认值&#x200B;_true_&#x200B;作为最佳实践。
 
 - **`true`** — 在部署更新的静态内容之前删除所有现有的静态内容。
 - **`false`** — 仅当生成的内容包含较新版本时，部署才会覆盖现有的静态内容文件。
@@ -122,7 +122,7 @@ stage:
     CLEAN_STATIC_FILES: false
 ```
 
-如果在部署之前未能清除静态视图文件，则在未删除先前版本的情况下将更新部署到现有文件时，可能会导致出现问题。 由于[静态文件回退](https://developer.adobe.com/commerce/frontend-core/guide/caching/#clean-static-files-cache)规则，如果目录包含同一文件的多个版本，则回退操作可能会显示错误的文件。
+如果在部署之前未能清除静态视图文件，则在未删除先前版本的情况下将更新部署到现有文件时，可能会导致出现问题。 由于[静态文件回退](https://developer.adobe.com/commerce/frontend-core/guide/css/preprocess#clean-static-view-files)规则，如果目录包含同一文件的多个版本，则回退操作可能会显示错误的文件。
 
 ## `CRON_CONSUMERS_RUNNER`
 
@@ -168,7 +168,7 @@ stage:
       consumers: []
 ```
 
-默认情况下，部署进程将覆盖`env.php`文件中的所有设置。 请参阅本地Adobe Commerce的&#x200B;_Commerce配置指南_&#x200B;中的[管理消息队列](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html?lang=zh-Hans)。
+默认情况下，部署进程将覆盖`env.php`文件中的所有设置。 请参阅本地Adobe Commerce的&#x200B;_Commerce配置指南_&#x200B;中的[管理消息队列](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues)。
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -198,7 +198,7 @@ stage:
 
 >[!WARNING]
 >
->通过[!DNL Cloud Console]而不是`.magento.env.yaml`文件设置`CRYPT_KEY`值，以避免在您的环境的源代码存储库中公开密钥。 请参阅[设置环境和项目变量](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html?lang=zh-Hans#configure-environment)。
+>通过[!DNL Cloud Console]而不是`.magento.env.yaml`文件设置`CRYPT_KEY`值，以避免在您的环境的源代码存储库中公开密钥。 请参阅[设置环境和项目变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/project/overview#configure-environment)。
 
 在没有安装过程的情况下将数据库从一个环境移动到另一个环境时，需要相应的加密信息。 Adobe Commerce使用[!DNL Cloud Console]中设置的加密密钥值作为`env.php`文件中的`crypt/key`值。
 
@@ -467,7 +467,7 @@ stage:
 
 >[!NOTE]
 >
->如果将`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`指定为Redis后端模型以启用[二级缓存](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hans)，`ece-tools`将自动生成缓存配置。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的示例[配置文件](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hans#configuration-example)。 要覆盖生成的缓存配置，请使用[CACHE_CONFIGURATION](#cache_configuration)部署变量。
+>如果将`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`指定为Redis后端模型以启用[二级缓存](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache)，`ece-tools`将自动生成缓存配置。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的示例[配置文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache#configuration-example)。 要覆盖生成的缓存配置，请使用[CACHE_CONFIGURATION](#cache_configuration)部署变量。
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
@@ -518,7 +518,7 @@ stage:
   VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-将远程同步缓存指定为Valkey后端模型可启用[二级缓存](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hans)，并且`ece-tools`会自动生成缓存配置。 查看[示例配置文件](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hans#configuration-example)。 要覆盖配置，请使用[CACHE_CONFIGURATION](#cache_configuration)部署变量。
+将远程同步缓存指定为Valkey后端模型可启用[二级缓存](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache)，并且`ece-tools`会自动生成缓存配置。 查看[示例配置文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache#configuration-example)。 要覆盖配置，请使用[CACHE_CONFIGURATION](#cache_configuration)部署变量。
 
 ### 配置现代Symfony L2缓存实施
 
@@ -530,11 +530,11 @@ stage:
     VALKEY_BACKEND: symfony_l2
 ```
 
-将`symfony_l2`指定为Valkey后端模型将启用[二级缓存](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hans){target="_blank"}，并且`ece-tools`会自动从您的Valkey服务连接详细信息中生成二级缓存配置，包括`default`前端和`stale_cache_enabled`前端。 定义`CACHE_CONFIGURATION`是可选的，仅需要自定义特定的后端选项，如本地缓存目录。 有关自定义示例，请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[Modern Symfony L2缓存实现](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hans#modern-symfony-l2-cache-implementation){target="_blank"}和&#x200B;_实现行动手册_&#x200B;中的[配置Symfony L2缓存](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}。
+将`symfony_l2`指定为Valkey后端模型将启用[二级缓存](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache){target="_blank"}，并且`ece-tools`会自动从您的Valkey服务连接详细信息中生成二级缓存配置，包括`default`前端和`stale_cache_enabled`前端。 定义`CACHE_CONFIGURATION`是可选的，仅需要自定义特定的后端选项，如本地缓存目录。 有关自定义示例，请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[Modern Symfony L2缓存实现](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache#modern-symfony-l2-cache-implementation){target="_blank"}和&#x200B;_实现行动手册_&#x200B;中的[配置Symfony L2缓存](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}。
 
 >[!NOTE]
 >
->Adobe Commerce 2.4.9包括Symfony L2缓存改进（包括缓存标记存储、失效和压缩），该改进包括使用修补程序ACP2E-5132，减少磁盘I/O，消除过时的缓存条目，以及减少内存和网络开销。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[增强的Symfony L2缓存性能和可靠性](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=zh-Hans#enhanced-symfony-l2-cache-performance-and-reliability)。
+>Adobe Commerce 2.4.9包括Symfony L2缓存改进（包括缓存标记存储、失效和压缩），该改进包括使用修补程序ACP2E-5132，减少磁盘I/O，消除过时的缓存条目，以及减少内存和网络开销。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[增强的Symfony L2缓存性能和可靠性](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache#enhanced-symfony-l2-cache-performance-and-reliability)。
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 
@@ -669,7 +669,7 @@ stage:
 - **默认**—`quick`
 - **版本**—Adobe Commerce 2.2.0及更高版本
 
-允许您自定义静态内容的[部署策略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=zh-Hans)。 请参阅[部署静态视图文件](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=zh-Hans)。
+允许您自定义静态内容的[部署策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)。 请参阅[部署静态视图文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)。
 
 如果您有多个区域设置，请仅使用这些选项&#x200B;__：
 

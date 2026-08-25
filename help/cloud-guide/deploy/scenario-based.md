@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 874
+source-wordcount: 884
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ hooks:
 
 >[!NOTE]
 >
->随着`ece-tools` 2002.1.x的发布，有新的[挂接配置](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=zh-Hans)格式。 仍支持`ece-tools` 2002.0.x版本的旧格式。 但是，必须更新为新格式才能使用基于场景的部署功能。
+>随着`ece-tools` 2002.1.x的发布，有新的[挂接配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property)格式。 仍支持`ece-tools` 2002.0.x版本的旧格式。 但是，必须更新为新格式才能使用基于场景的部署功能。
 
 ## 查看方案步骤
 
@@ -92,9 +92,9 @@ hooks:
 
   在本例中，这些方案的优先级如下：
 
-   1. `vendor/vendor-name/module-name/deploy2.xml`
-   1. `vendor/vendor-name/module-name/deploy.xml`
-   1. `scenario/deploy.xml` （默认或基线方案）
+  1. `vendor/vendor-name/module-name/deploy2.xml`
+  1. `vendor/vendor-name/module-name/deploy.xml`
+  1. `scenario/deploy.xml` （默认或基线方案）
 
 - 最高优先级方案中的步骤将覆盖其他方案中具有相同名称的步骤。 新步骤将添加到配置中。 相同的规则适用于两个以上的场景，每个场景从右到左排列优先级，例如(C → B → A)。
 

@@ -13,7 +13,7 @@ feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 574
 ht-degree: 0%
@@ -74,7 +74,7 @@ magento-cloud integration:list
 
 ## Commerce webhook
 
-您可以使用[ENABLE_WEBHOOKS全局变量](../environment/variables-global.md#enable_webhooks)在Cloud项目中配置Commerce Webhooks。 Commerce webhook将请求发送到外部服务器，以响应Commerce生成的事件。 [_Webhooks指南_](https://developer.adobe.com/commerce/extensibility/webhooks)详细描述了此功能。
+您可以使用[ENABLE_WEBHOOKS全局变量](../environment/variables-global.md#enable_webhooks)在Cloud项目中配置Commerce Webhooks。 Commerce webhook将请求发送到外部服务器，以响应Commerce生成的事件。 [_Webhooks指南_](https://developer.adobe.com/commerce/extensibility/webhooks/)详细描述了此功能。
 
 ## 通用Webhook
 

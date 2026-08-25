@@ -16,7 +16,7 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 3631
 ht-degree: 0%
@@ -206,7 +206,7 @@ ht-degree: 0%
 
 发行日期： 2022年10月27日
 
-- ![新图标](../../assets/new.svg) **已添加对Adobe Commerce的Adobe I/O Events的支持**。 扩展开发人员现在可以使用[Adobe I/O Events](https://developer.adobe.com/events/docs/)框架将云实例中的Commerce事件信息发送到其为[Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/)编写的应用程序。 适用于Adobe Commerce的Adobe I/O Events在“合作伙伴预览”中。<!-- CEXT-932 -->
+- ![新图标](../../assets/new.svg) **已添加对Adobe Commerce的Adobe I/O Events的支持**。 扩展开发人员现在可以使用[Adobe I/O Events](https://developer.adobe.com/events/docs/)框架将云实例中的Commerce事件信息发送到其为[Adobe App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/)编写的应用程序。 适用于Adobe Commerce的Adobe I/O Events在“合作伙伴预览”中。<!-- CEXT-932 -->
 - ![新图标](../../assets/new.svg) **OPcache配置的验证器** — 已添加验证器以检查排除路径的OPcache配置。<!-- MCLOUD-9485 -->
 - ![修复图标](../../assets/fix.svg) **修复了GraphQL缓存配置的问题** — 现在，ECE-Tools在`app/etc/env.php`文件中保留`cache`配置中的GraphQL `id_salt`值。<!-- MCLOUD-9486 -->
 

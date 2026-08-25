@@ -13,9 +13,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 860
+source-wordcount: 862
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 **安装`magento-cloud` CLI**：
 
-1. 在您的&#x200B;_本地工作站_&#x200B;上，切换到您打算克隆云项目且[文件系统所有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=zh-Hans)具有&#x200B;_写入_&#x200B;访问权限的目录。
+1. 在您的&#x200B;_本地工作站_&#x200B;上，切换到您打算克隆云项目且[文件系统所有者](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)具有&#x200B;_写入_&#x200B;访问权限的目录。
 
 1. 安装`magento-cloud` CLI。
 
@@ -148,7 +148,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
 
 1. 在本地工作站上，转到您的项目目录。
 
-1. 切换到[文件系统所有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=zh-Hans)。
+1. 切换到[文件系统所有者](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)。
 
 1. 登录到您的项目。
 

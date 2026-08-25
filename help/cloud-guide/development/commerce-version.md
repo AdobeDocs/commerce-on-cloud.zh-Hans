@@ -15,24 +15,24 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1020
+source-wordcount: 1024
 ht-degree: 0%
 
 ---
 
 # 升级Commerce版本
 
-您可以将Adobe Commerce代码库升级到较新版本。 在升级环境之前，请查看&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)以了解最新的软件版本要求。
+您可以将Adobe Commerce代码库升级到较新版本。 在升级环境之前，请查看&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)以了解最新的软件版本要求。
 
 根据环境类型（“开发”、“暂存”或“生产”），您的升级任务可能包括：
 
 - 将第三方扩展升级到支持的最新版本。
 - 对于Pro项目，您必须提交Adobe Commerce支持工单以在暂存环境和生产环境中安装或更新服务。
 - 对于开发/集成/PR分支：
-   - 使用MariaDB (MySQL)、OpenSearch、RabbitMQ和Redis的新版本更新`.magento/services.yaml`文件，以便与新的Adobe Commerce版本兼容。
-   - 使用挂接和环境变量的新设置更新`.magento.app.yaml`文件。
+  - 使用MariaDB (MySQL)、OpenSearch、RabbitMQ和Redis的新版本更新`.magento/services.yaml`文件，以便与新的Adobe Commerce版本兼容。
+  - 使用挂接和环境变量的新设置更新`.magento.app.yaml`文件。
 
 {{upgrade-tip}}
 
@@ -156,7 +156,7 @@ ht-degree: 0%
 
 1. 查看当前应用的修补程序：
 
-   - 如果`m2-hotfixes`目录中安装了任何修补程序，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)，并与Adobe Commerce支持部门合作，验证哪些修补程序仍可以应用于新版本。 从`m2-hotfixes`目录中删除不适用的修补程序。
+   - 如果`m2-hotfixes`目录中安装了任何修补程序，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)，并与Adobe Commerce支持部门合作，验证哪些修补程序仍可以应用于新版本。 从`m2-hotfixes`目录中删除不适用的修补程序。
 
    - 如果`.magento.env.yaml`文件中应用了任何[质量修补程序]，请验证它们是否仍可应用于新版本。 从`.magento.env.yaml`文件的`QUALITY_PATCHES`部分删除不适用的修补程序。
 

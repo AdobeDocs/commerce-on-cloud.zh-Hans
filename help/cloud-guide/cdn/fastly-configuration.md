@@ -16,9 +16,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 2234
+source-wordcount: 2254
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Fastly与Varnish合作，提供快速缓存功能以及用于静态资产的内�
 
 在云基础架构上使用Adobe Commerce，您无法直接访问Fastly管理仪表板。
 
-使用Adobe Commerce管理员查看和更新环境的Fastly配置。 如果您无法在管理员中使用Fastly功能解决问题，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans)。
+使用Adobe Commerce管理员查看和更新环境的Fastly配置。 如果您无法在管理员中使用Fastly功能解决问题，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)。
 
 ## 获取Fastly凭据
 
@@ -75,9 +75,9 @@ Fastly与Varnish合作，提供快速缓存功能以及用于静态资产的内�
 
 - 从[!DNL Cloud Console]中，检查[环境配置](../project/overview.md#configure-environment)中的以下环境变量。
 
-   - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_API_KEY`
+  - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_API_KEY`
 
-   - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_SERVICE_ID`
+  - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_SERVICE_ID`
 
 - 从本地工作区的命令行中，使用`magento-cloud` CLI将[列出并查看](../environment/variables-cloud.md#viewing-environment-variables) Fastly环境变量。
 
@@ -198,12 +198,12 @@ Adobe提供了一个域验证的Let’s Encrypt SSL/TLS证书，为来自Fastly�
 
 - 对于Pro暂存和生产：
 
-   - `mcprod.<your-domain>.com`
-   - `mcstaging.<your-domain>.com`
+  - `mcprod.<your-domain>.com`
+  - `mcstaging.<your-domain>.com`
 
 - 仅用于入门级生产：
 
-   - `mcprod.<your-domain>.com`
+  - `mcprod.<your-domain>.com`
 
 在配置项目后，这些默认的预生产URL将可用。 `"your-domain"`的值是您在载入流程中指定的域名。
 
@@ -350,4 +350,4 @@ Adobe建议您将暂存和生产环境中的Fastly模块更新到[最新版本](
 
 >[!TIP]
 >
-> 如果您在Adobe Commerce环境中遇到Fastly服务问题，请参阅[Adobe Commerce Fastly疑难解答程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter)。
+> 如果您在Adobe Commerce环境中遇到Fastly服务问题，请参阅[Adobe Commerce Fastly疑难解答程序](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-29661)。

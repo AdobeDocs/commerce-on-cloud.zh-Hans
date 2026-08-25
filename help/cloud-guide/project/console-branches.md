@@ -17,9 +17,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1638
+source-wordcount: 1642
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 您的帐户支持有限数量的![活动分支](../../assets/icon-active.png){width="32"} （活动）和无限数量的![非活动分支](../../assets/icon-inactive.png){width="32"} （非活动）开发分支。 通过仅使用[!DNL Cloud Console]或Cloud CLI添加或删除分支来管理活动和不活动分支。 在删除分支之前，请先取消激活该分支，它仍保留在&#x200B;_环境_&#x200B;列表中，作为&#x200B;_不活动_。 您可以稍后重新激活分支，也可以[在环境设置中或使用云CLI删除分支](../dev-tools/cloud-cli-overview.md#)。
 
-如果需要其他活动环境进行开发，请提交[支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。
+如果需要其他活动环境进行开发，请提交[支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
 
 **添加分支**：
 

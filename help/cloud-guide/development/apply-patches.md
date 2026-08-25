@@ -9,9 +9,9 @@ product_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 910
+source-wordcount: 911
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 [适用于Commerce的云修补程序](https://github.com/magento/magento-cloud-patches)和[Quality Patches Tool](https://github.com/magento/quality-patches)，可为您安装的Adobe Commerce应用程序提供修补程序。
 
 - Commerce云修补程序包提供了所需的修补程序以及关键修补程序
-- 质量修补程序提供可选的、低影响的质量修补程序，作为[不包含向后不兼容更改的单个修补程序](https://experienceleague.adobe.com/docs/commerce-operations/release/planning/versioning-policy.html?lang=zh-Hans#individual-patch)
+- 质量修补程序提供可选的、低影响的质量修补程序，作为[不包含向后不兼容更改的单个修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/versioning-policy#individual-patch)
 
 请参阅&#x200B;_Commerce Operations Tools Guide_&#x200B;中的[可用修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
 
@@ -98,20 +98,20 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 状态表包含以下类型的信息：
 
 - **类型**：
-   - `Optional` - Quality Patches Tool和Cloud Patches包中的所有修补程序对于Adobe Commerce和Magento Open Source安装都是可选的。 对于云基础架构上的Adobe Commerce，所有修补程序都是可选的。
-   - `Required` - Cloud客户需要Commerce软件包的Cloud修补程序中的所有修补程序。
-   - `Deprecated` — 单个修补程序已标记为已弃用，如果您已应用它，我们建议恢复它。 还原已弃用的修补程序后，该修补程序将不再显示在状态表中。
-   - `Custom` — “m2-hotfixes”目录中的所有修补程序。
+  - `Optional` - Quality Patches Tool和Cloud Patches包中的所有修补程序对于Adobe Commerce和Magento Open Source安装都是可选的。 对于云基础架构上的Adobe Commerce，所有修补程序都是可选的。
+  - `Required` - Cloud客户需要Commerce软件包的Cloud修补程序中的所有修补程序。
+  - `Deprecated` — 单个修补程序已标记为已弃用，如果您已应用它，我们建议恢复它。 还原已弃用的修补程序后，该修补程序将不再显示在状态表中。
+  - `Custom` — “m2-hotfixes”目录中的所有修补程序。
 
 - **状态**：
-   - `Applied` — 已应用修补程序。
-   - `Not applied` — 尚未应用该修补程序。
-   - `N/A` — 由于存在冲突，无法定义修补程序的状态。
+  - `Applied` — 已应用修补程序。
+  - `Not applied` — 尚未应用该修补程序。
+  - `N/A` — 由于存在冲突，无法定义修补程序的状态。
 
 - **详细信息**：
-   - `Affected components` — 受影响的模块列表。
-   - `Required patches` — 所需的修补程序（依赖项）列表。
-   - `Recommended replacement` — 建议用于替代已弃用修补程序的修补程序。
+  - `Affected components` — 受影响的模块列表。
+  - `Required patches` — 所需的修补程序（依赖项）列表。
+  - `Recommended replacement` — 建议用于替代已弃用修补程序的修补程序。
 
 ## 在本地环境中应用修补程序
 
