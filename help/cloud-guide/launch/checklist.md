@@ -1,23 +1,15 @@
 ---
 title: 启动项核对清单
-description: 查看站点启动项的清单项目。
+description: 查看Adobe Commerce云基础架构的Launch核对清单，以在部署到生产环境之前确认配置、测试和快速设置。
 exl-id: efc97d4a-a9f3-49fa-b977-061282765e90
 TQID: https://experienceleague.adobe.com/-27J2-qKGpa71AJliIomIC7heTbTelOnFf960NODt0E
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: bd989d82-1e15-4534-88db-f1f51dd77ffaid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 1180
+source-wordcount: 1194
 ht-degree: 0%
 
 ---
@@ -85,7 +77,7 @@ Adobe为每个环境提供让我们加密SSL/TLS证书。 Fastly需要此证书�
 
 >[!IMPORTANT]
 >
->[RFC1034](https://www.rfc-editor.org/rfc/rfc1912) （**第2.4**&#x200B;节）中的DNS说明指出：
+>[RFC1034](https://www.rfc-editor.org/rfc/rfc1912) （**第2.4**节）中的DNS说明指出：
 >_CNAME记录不允许与任何其他数据共存。 换言之，如果suzy.podunk.xx是sue.podunk.xx的别名，则不能同时具有suzy.podunk.edu的MX记录、A记录甚至TXT记录。_
 >
 >因此，子域的DNS记录应为`CNAME`类型，apex域（根域）应为`A`类型。 放弃此规则可能会导致邮件服务或DNS传播中断，因为您将失去添加其他记录（如MX或NS）的能力。 某些DNS提供商可能会通过使用内部自定义来绕过此要求，但遵循此标准可确保稳定性和灵活性（例如，更改DNS提供商）。
@@ -104,7 +96,7 @@ Adobe为每个环境提供让我们加密SSL/TLS证书。 Fastly需要此证书�
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **注意**：您还可以从管理员更新基本URL。 请参阅&#x200B;_Adobe Commerce商店和购买体验指南_&#x200B;中的[商店URL](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-urls)。
+   **注意**：您还可以从管理员更新基本URL。 请参阅&#x200B;_Adobe Commerce商店和购买体验指南_&#x200B;中的[商店URL](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)。
 
 1. 请等待几分钟，以便网站更新。
 
@@ -118,7 +110,7 @@ Adobe为每个环境提供让我们加密SSL/TLS证书。 Fastly需要此证书�
 
 - [已完成传出电子邮件的测试](../project/outgoing-emails.md)
 
-- [管理员凭据和基本管理员URL的安全配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-admin)
+- [管理员凭据和基本管理员URL的安全配置](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
 - [为Web优化所有图像](../cdn/fastly-image-optimization.md)
 
@@ -150,9 +142,9 @@ Adobe为每个环境提供让我们加密SSL/TLS证书。 Fastly需要此证书�
 
 - [设置安全扫描](overview.md#set-up-the-security-scan-tool)
 
-- [管理员用户的安全配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-admin)
+- [管理员用户的安全配置](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
-- [管理员URL的安全配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
+- [管理员URL的安全配置](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [删除云基础架构项目上的Adobe Commerce上不再存在的所有用户](../project/user-access.md)
 
