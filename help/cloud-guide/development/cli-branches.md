@@ -39,7 +39,7 @@ ht-degree: 0%
 
 **克隆项目`master`环境**：
 
-1. 使用[文件系统所有者](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)帐户登录到本地工作站。
+1. 使用[文件系统所有者](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)帐户登录到本地工作站。
 
 1. 更改为Web服务器或虚拟主机&#x200B;_docroot_&#x200B;目录。
 

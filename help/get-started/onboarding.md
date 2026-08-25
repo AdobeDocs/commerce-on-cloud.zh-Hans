@@ -28,7 +28,7 @@ Adobe在云基础架构订阅上激活Commerce后，初始项目和代码访问�
 
 ## 注册云帐户
 
-如果您在云基础架构上没有Adobe Commerce，请联系[销售人员](https://business.adobe.com/products/magento/get-demo.html)。 注册后，Adobe会创建您的帐户并向您发送一封欢迎电子邮件，为您提供有关如何访问项目界面的说明。 该电子邮件包含一个链接，以便您可以登录到帐户并完成初始项目设置。
+如果您在云基础架构上没有Adobe Commerce，请联系[销售人员](https://business.adobe.com/cn/products/magento/get-demo.html)。 注册后，Adobe会创建您的帐户并向您发送一封欢迎电子邮件，为您提供有关如何访问项目界面的说明。 该电子邮件包含一个链接，以便您可以登录到帐户并完成初始项目设置。
 
 ## 访问项目并添加用户
 
@@ -40,7 +40,7 @@ Adobe在云基础架构订阅上激活Commerce后，初始项目和代码访问�
 
 ### 共享帐户访问权限
 
-许可证所有者可以设置帐户的共享访问权限。 共享访问允许受信任的员工和服务提供商使用帮助中心提交和跟踪与云基础架构项目上的Adobe Commerce相关的支持工单。 有关设置说明，请参阅帮助中心中的[共享访问](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#shared-access)文章。
+许可证所有者可以设置帐户的共享访问权限。 共享访问允许受信任的员工和服务提供商使用帮助中心提交和跟踪与云基础架构项目上的Adobe Commerce相关的支持工单。 有关设置说明，请参阅帮助中心中的[共享访问](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#shared-access)文章。
 
 ### [!DNL Cloud Console]
 
@@ -48,7 +48,7 @@ Adobe在云基础架构订阅上激活Commerce后，初始项目和代码访问�
 
 ## 注册Adobe状态
 
-从[状态页面](https://status.adobe.com/products/503473)获取有关Adobe Commerce on cloud infrastructure platform环境和相关服务的更新。
+从[状态页面](https://status.adobe.com/cn/products/503473)获取有关Adobe Commerce on cloud infrastructure platform环境和相关服务的更新。
 
 此页提供了Adobe Commerce组件与服务的状态，随后提供了有关事件报告、服务升级、计划内中断和计划内维护的通知。 在您的项目上工作的任何人都可以订阅Adobe Commerce状态网站，通过电子邮件或Slack接收事件通知和更新。 您可以自定义Adobe状态订阅，以按地区和事件跟踪特定产品。
 

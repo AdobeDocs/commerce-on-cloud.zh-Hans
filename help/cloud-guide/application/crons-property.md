@@ -24,9 +24,9 @@ ht-degree: 0%
 
 Adobe Commerce使用`crons`属性来计划重复活动。 它非常适合安排在一天中的特定时间运行特定任务。 由于只读环境的性质，在云基础架构项目上的Adobe Commerce的Web实例上，一次只能运行一个cron作业。 最佳做法是将长时间运行的任务划分为较小的排队任务。 或者，您可以构建[辅助实例](workers-property.md)。
 
-Adobe建议您以[文件系统所有者](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)的身份运行`crons`。 请&#x200B;_不要_&#x200B;以`root`或Web服务器用户的身份运行`crons`。
+Adobe建议您以[文件系统所有者](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)的身份运行`crons`。 请&#x200B;_不要_&#x200B;以`root`或Web服务器用户的身份运行`crons`。
 
-此配置不同于Adobe Commerce的内部部署，后者有多个默认cron作业。 请参阅&#x200B;_配置指南_&#x200B;中的[配置cron作业](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs)。
+此配置不同于Adobe Commerce的内部部署，后者有多个默认cron作业。 请参阅&#x200B;_配置指南_&#x200B;中的[配置cron作业](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs)。
 
 ## 设置cron作业
 
@@ -66,7 +66,7 @@ Adobe Commerce仅向Pro项目添加了auto-crons配置选项，以支持暂存�
 
    >[!NOTE]
    >
-   >如果`crontab -l`命令返回`Command not found`错误（仅在Pro暂存和生产环境中），您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以在您的项目上启用auto-crons自助服务配置选项。
+   >如果`crontab -l`命令返回`Command not found`错误（仅在Pro暂存和生产环境中），您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以在您的项目上启用auto-crons自助服务配置选项。
 
 以下示例显示仅具有默认`crons`配置的环境的`crontab`输出：
 
@@ -134,7 +134,7 @@ crons:
 >
 >对于入门环境和Pro `integration`环境，最小间隔为每5分钟一次。 对于Pro暂存环境和生产环境，最小间隔为每分钟一次。 您不能配置比默认最小值更频繁的间隔。
 
-在Adobe Commerce Pro项目中，必须先在项目上启用[自动cron功能](#set-up-cron-jobs)，然后才能使用`.magento.app.yaml`文件将自定义cron作业添加到暂存环境和生产环境。 如果未启用此功能，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以启用自动登录。
+在Adobe Commerce Pro项目中，必须先在项目上启用[自动cron功能](#set-up-cron-jobs)，然后才能使用`.magento.app.yaml`文件将自定义cron作业添加到暂存环境和生产环境。 如果未启用此功能，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以启用自动登录。
 
 **要添加自定义cron作业**：
 
@@ -208,7 +208,7 @@ Adobe更新了Adobe Commerce on cloud基础架构包，以优化Adobe Commerce o
 
 请参阅以下Adobe Commerce支持文章，以获取有关排查cron相关问题的帮助：
 
-- [Cron任务从其他组锁定任务](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups)
+- [Cron任务从其他组锁定任务](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups)
 
-- [在云上手动重置受阻的CRON作业](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud)
+- [在云上手动重置受阻的CRON作业](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud)
 

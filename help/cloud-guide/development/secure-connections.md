@@ -38,7 +38,7 @@ Secure Shell (SSH)是用于安全登录到远程服务器和系统的常用协�
 
 ## 向帐户添加SSH公钥
 
-在向Adobe Commerce on cloud infrastructure帐户中添加或更新SSH公钥后，在您的帐户上[重新部署所有活动环境](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy)以安装密钥。
+在向Adobe Commerce on cloud infrastructure帐户中添加或更新SSH公钥后，在您的帐户上[重新部署所有活动环境](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy)以安装密钥。
 
 您可以使用以下方法之一将SSH密钥添加到您的帐户： Cloud CLI或[!DNL Cloud Console]。
 
@@ -164,10 +164,10 @@ Secure Shell (SSH)是用于安全登录到远程服务器和系统的常用协�
 
 对于&#x200B;**入门环境和Pro集成环境**，您可能还想考虑[添加`mount`](../application/properties.md#mounts)以访问特定目录。 您要将装载添加到`.magento.app.yaml`文件中。 有关可写目录的列表，请参阅[项目结构](../project/file-structure.md)。 此挂载点仅适用于这些环境。
 
-对于&#x200B;**Pro暂存和生产环境**，如果您没有该环境的SSH访问权限，则必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以请求sFTP访问权限和装入点以访问特定文件夹，例如`pub/media`。
+对于&#x200B;**Pro暂存和生产环境**，如果您没有该环境的SSH访问权限，则必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以请求sFTP访问权限和装入点以访问特定文件夹，例如`pub/media`。
 
 >[!NOTE]
->对于Pro暂存和生产环境，如果sFTP连接针对的是&#x200B;_通用_、**非**&#x200B;的用户，需要将[添加到云项目](../project/user-access.md)，则您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，并附加其&#x200B;**公共**&#x200B;密钥。 **从不提供您的私有SSH密钥。**
+>对于Pro暂存和生产环境，如果sFTP连接针对的是&#x200B;_通用_、**非**&#x200B;的用户，需要将[添加到云项目](../project/user-access.md)，则您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，并附加其&#x200B;**公共**&#x200B;密钥。 **从不提供您的私有SSH密钥。**
 
 ## SSH隧道
 

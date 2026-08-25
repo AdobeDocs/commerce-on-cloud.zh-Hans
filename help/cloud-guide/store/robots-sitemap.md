@@ -57,7 +57,7 @@ Please make sure that "/" is writable by the web-server.
 
 >[!NOTE]
 >
->如果`<domain.your.project>/robots.txt`文件生成`404 error`，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以移除从`/robots.txt`到`/media/robots.txt`的重定向。
+>如果`<domain.your.project>/robots.txt`文件生成`404 error`，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以移除从`/robots.txt`到`/media/robots.txt`的重定向。
 
 ## 使用Fastly VCL代码片段重写
 

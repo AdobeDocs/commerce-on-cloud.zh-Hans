@@ -53,8 +53,8 @@ ht-degree: 4%
 | 104 |  | 未能分析`.magento.env.yaml`文件 | 未在`./vendor/magento/ece-tools/config/schema.yaml`文件中定义配置。 检查配置变量名称是否正确，以及它是否已定义。 |
 | 105 |  | 无法读取`.magento.env.yaml`文件 | 无法读取`./.magento.env.yaml`文件。 检查文件权限。 |
 | 106 |  | 无法读取`.schema.yaml`文件 |  |
-| 107 | pre-deploy： clean-redis-cache | 未能清除Redis缓存 | 未能清除Redis缓存。 检查Redis缓存配置是否正确，以及Redis服务是否可用。 查看[安装Redis服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/redis)。 |
-| 140 | 预部署： clean-valkey-cache | 未能清除Valkey缓存 | 未能清除Valkey缓存。 检查Valkey缓存配置是否正确，以及Valkey服务是否可用。 请参阅[Setup Valkey服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/valkey)。 |
+| 107 | pre-deploy： clean-redis-cache | 未能清除Redis缓存 | 未能清除Redis缓存。 检查Redis缓存配置是否正确，以及Redis服务是否可用。 查看[安装Redis服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/redis)。 |
+| 140 | 预部署： clean-valkey-cache | 未能清除Valkey缓存 | 未能清除Valkey缓存。 检查Valkey缓存配置是否正确，以及Valkey服务是否可用。 请参阅[Setup Valkey服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/valkey)。 |
 | 108 | 预部署：set-production-mode | 命令`/bin/magento maintenance:enable`失败 | 有关详细信息，请查看`cloud.log`。 有关更详细的命令输出，请将`VERBOSE_COMMANDS: '-vvv'`选项添加到`.magento.env.yaml`文件中。 |
 | 109 | validate-config | 数据库配置不正确 | 检查是否正确配置了`DATABASE_CONFIGURATION`环境变量。 |
 | 110 | validate-config | 会话配置不正确 | 检查是否正确配置了`SESSION_CONFIGURATION`环境变量。 配置必须至少包含`save`参数。 |
@@ -78,7 +78,7 @@ ht-degree: 4%
 | 128 | disable-maintenance-mode | 命令`/bin/magento maintenance:disable`失败 | 有关详细信息，请查看`cloud.log`。 将`VERBOSE_COMMANDS: '-vvv'`添加到`.magento.env.yaml`中，以获取更详细的命令输出。 |
 | 129 | install-update： reset-password | 无法读取重置密码模板 |  |
 | 130 | install-update： cache_type | 命令失败： `php ./bin/magento cache:enable` | 命令`php ./bin/magento cache:enable`仅在安装了Adobe Commerce但部署开始时`./app/etc/env.php`文件不存在或为空时运行。 有关详细信息，请查看`cloud.log`。 将`VERBOSE_COMMANDS: '-vvv'`添加到`.magento.env.yaml`中，以获取更详细的命令输出。 |
-| 131 | install-update | `crypt/key`键值在`./app/etc/env.php`文件或`CRYPT_KEY`云环境变量中不存在 | 如果Adobe Commerce部署开始时`./app/etc/env.php`文件不存在，或者未定义`crypt/key`值，则会出现此错误。 如果您从其他环境迁移了数据库，请从该环境中检索加密密钥值。 然后，将该值添加到当前环境中的[CRYPT_KEY](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#crypt_key)云环境变量。 请参阅[Adobe Commerce加密密钥](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/overview#gather-credentials)。 如果意外删除了`./app/etc/env.php`文件，请使用以下命令从从先前部署创建的备份文件中恢复该文件： `./vendor/bin/ece-tools backup:restore` CLI命令。” |
+| 131 | install-update | `crypt/key`键值在`./app/etc/env.php`文件或`CRYPT_KEY`云环境变量中不存在 | 如果Adobe Commerce部署开始时`./app/etc/env.php`文件不存在，或者未定义`crypt/key`值，则会出现此错误。 如果您从其他环境迁移了数据库，请从该环境中检索加密密钥值。 然后，将该值添加到当前环境中的[CRYPT_KEY](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#crypt_key)云环境变量。 请参阅[Adobe Commerce加密密钥](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/overview#gather-credentials)。 如果意外删除了`./app/etc/env.php`文件，请使用以下命令从从先前部署创建的备份文件中恢复该文件： `./vendor/bin/ece-tools backup:restore` CLI命令。” |
 | 132 |  | 无法连接到Elasticsearch服务 | 检查有效的Elasticsearch凭据并验证服务是否正在运行 |
 | 137 |  | 无法连接到OpenSearch服务 | 检查有效的OpenSearch凭据并验证服务是否正在运行 |
 | 133 | validate-config | 删除Magento Braintree或Magento Open Source 2.4及更高版本中不再支持的Adobe Commerce模块配置。 | Adobe Commerce或Magento Open Source 2.4.0及更高版本不再支持Braintree模块。 从`.magento.app.yaml`文件的变量部分删除CONFIG__STORES__DEFAULT__PAYMENT__BRAINTREE__CHANNEL变量。 要获得Braintree支持，请改用Commerce Marketplace中的官方Braintree Payments扩展。 |
