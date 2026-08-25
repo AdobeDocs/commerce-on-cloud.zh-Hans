@@ -6,15 +6,12 @@ recommendations: noDisplay, catalog
 role: Developer
 exl-id: 82923b6f-221d-4902-a1b8-5ba6c7b3339a
 TQID: https://experienceleague.adobe.com/Zk52OMqjrB74v9djO1PVOYd3wOS8EbdfL1rnqIdA8B4
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: ab64bb5a3cc159844015072738404274fdea97cd
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 343
+source-wordcount: 344
 ht-degree: 0%
 
 ---
@@ -39,7 +36,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->要使用[[!DNL Cloud Console]](../project/overview.md)将环境变量添加到[覆盖配置设置](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=zh-Hans)，您必须在变量名称前面加上`env:`，如以下示例所示：
+>要使用[[!DNL Cloud Console]](../project/overview.md)将环境变量添加到[覆盖配置设置](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/paths/override-config-settings)，您必须在变量名称前面加上`env:`，如以下示例所示：
 >
 >![环境变量示例](../../assets/set-env-variable-ui.png)
 

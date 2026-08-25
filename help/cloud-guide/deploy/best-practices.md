@@ -4,23 +4,13 @@ description: 探索在云基础架构上部署Adobe Commerce的最佳实践。
 feature: Cloud, Deploy, Best Practices
 exl-id: 87aabee7-4629-4a3c-9587-dbde4cf268e1
 TQID: https://experienceleague.adobe.com/sXtq-V7nDHm5IvDX0CqpxLcO3eQXem-YlMPG-kxTsmc
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: c32adafa-ed01-4b31-997e-2413013911b0
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c32adafa-ed01-4b31-997e-2413013911b0id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1979
+source-wordcount: 1982
 ht-degree: 0%
 
 ---
@@ -45,7 +35,7 @@ ht-degree: 0%
 >
 >在集成环境中，您无法从[!DNL Cloud Console]查看部署日志。 此功能仅适用于生产和暂存环境。 但是，您可以使用[生成和部署](../test/log-locations.md#build-and-deploy-logs)日志在任何环境中查看部署的每个阶段的日志。 有关疑难解答信息，请参阅[部署错误引用](../dev-tools/error-reference.md)。
 
-您可以使用New Relic[&#128279;](../monitor/track-deployments.md)启用跟踪部署，以监视部署事件并分析部署之间的性能。
+您可以使用New Relic](../monitor/track-deployments.md)启用[跟踪部署，以监视部署事件并分析部署之间的性能。
 
 ## 构建和部署的最佳实践
 
@@ -77,7 +67,7 @@ ht-degree: 0%
 
 - **验证服务版本和关系以及连接能力**
 
-  验证应用程序可用的服务，并确保您使用的是最新的兼容版本。 有关推荐的版本，请参阅&#x200B;_安装指南_&#x200B;中的[服务关系](../services/services-yaml.md#service-relationships)和[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)。
+  验证应用程序可用的服务，并确保您使用的是最新的兼容版本。 有关推荐的版本，请参阅&#x200B;_安装指南_&#x200B;中的[服务关系](../services/services-yaml.md#service-relationships)和[系统要求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)。
 
 - **在部署到暂存和生产环境之前，在本地和集成环境中进行测试**
 
@@ -95,11 +85,11 @@ ht-degree: 0%
 
   在部署到生产环境之前，请完成以下任务：
 
-   - 确保您可以使用[SSH](../development/secure-connections.md)连接到生产环境中的所有三个节点。
+  - 确保您可以使用[SSH](../development/secure-connections.md)连接到生产环境中的所有三个节点。
 
-   - 验证索引器是否设置为计划&#x200B;_上的_&#x200B;更新。 请参阅&#x200B;_扩展开发人员指南_&#x200B;中的[索引模式](https://developer.adobe.com/commerce/php/development/components/indexing/)。
+  - 验证索引器是否设置为计划&#x200B;_上的_&#x200B;更新。 请参阅&#x200B;_扩展开发人员指南_&#x200B;中的[索引模式](https://developer.adobe.com/commerce/php/development/components/indexing/)。
 
-   - 通过更新生产代码中的任何特定于环境的变量、验证服务可用性和兼容性并进行任何其他所需的配置更改来准备环境。
+  - 通过更新生产代码中的任何特定于环境的变量、验证服务可用性和兼容性并进行任何其他所需的配置更改来准备环境。
 
 - **监视部署进程**
 
@@ -133,7 +123,7 @@ ht-degree: 0%
 此阶段构建代码库并在`.magento.app.yaml`的`build`部分中运行挂接。 默认的生成挂接是`php ./vendor/bin/ece-tools`命令，并执行以下操作：
 
 - 在`vendor/magento/ece-patches`中应用修补程序，在`m2-hotfixes`中应用项目特定的可选修补程序
-- 使用`bin/magento setup:di:compile`重新生成代码和[依赖项注入](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/glossary)配置（即`generated/`目录，包括`generated/code`和`generated/metapackage`）。
+- 使用`bin/magento setup:di:compile`重新生成代码和[依赖项注入](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)配置（即`generated/`目录，包括`generated/code`和`generated/metapackage`）。
 - 检查代码库中是否存在[`app/etc/config.php`](../store/store-settings.md)文件。 如果Adobe Commerce在构建阶段未检测到此文件并包含模块和扩展名的列表，则会自动生成此文件。 如果存在，则构建阶段将照常继续，使用GZIP压缩静态文件并进行部署，从而减少部署阶段的停机时间。 请参阅[生成选项](../environment/variables-build.md)，了解有关自定义或禁用文件压缩的信息。
 
 >[!WARNING]
@@ -160,7 +150,7 @@ ht-degree: 0%
 
 ### 阶段4：部署Slug和群集
 
-您的应用程序和所有[后端](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/glossary)服务预配，如下所示：
+您的应用程序和所有[后端](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)服务预配，如下所示：
 
 - 将每个服务挂载到容器中，如Web服务器、OpenSearch、[!DNL RabbitMQ]
 - 装载读写文件系统（装载在高可用分布式存储网格上）
@@ -186,13 +176,13 @@ ht-degree: 0%
 
 有两个部署挂钩。 `pre-deploy.php`挂接完成对生成挂接中生成的资源和代码进行必要的清理和检索。 `php ./vendor/bin/ece-tools deploy`挂接运行一系列命令和脚本：
 
-- 如果Adobe Commerce是&#x200B;**未安装**，则它随`bin/magento setup:install`一起安装，更新部署配置`app/etc/env.php`以及指定环境（如Redis和网站URL）的数据库。 **重要信息：**&#x200B;当您在安装程序期间完成[首次部署](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html?lang=zh-Hans)时，在所有环境中都安装和部署了Adobe Commerce。
+- 如果Adobe Commerce是&#x200B;**未安装**，则它随`bin/magento setup:install`一起安装，更新部署配置`app/etc/env.php`以及指定环境（如Redis和网站URL）的数据库。 **重要信息：**&#x200B;当您在安装程序期间完成[首次部署](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/overview)时，在所有环境中都安装和部署了Adobe Commerce。
 
-- 如果已安装Adobe Commerce **&#x200B;**，请执行任何必要的升级。 部署脚本运行`bin/magento setup:upgrade`以更新数据库架构和数据（在扩展或核心代码更新后必需），并更新环境的部署配置、`app/etc/env.php`和数据库。 最后，部署脚本清除Adobe Commerce缓存。
+- 如果已安装Adobe Commerce ****，请执行任何必要的升级。 部署脚本运行`bin/magento setup:upgrade`以更新数据库架构和数据（在扩展或核心代码更新后必需），并更新环境的部署配置、`app/etc/env.php`和数据库。 最后，部署脚本清除Adobe Commerce缓存。
 
 - 脚本可以选择使用命令`magento setup:static-content:deploy`生成静态Web内容。
 
-- 为静态内容部署策略使用默认设置为`quick`的作用域（生成脚本中的`-s`标志）。 您可以使用环境变量[`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)自定义策略。 有关这些选项和功能的详细信息，请参阅[部署静态视图文件](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=zh-Hans)的[静态文件部署策略](../deploy/static-content.md)和`-s`标志。
+- 为静态内容部署策略使用默认设置为`quick`的作用域（生成脚本中的`-s`标志）。 您可以使用环境变量[`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)自定义策略。 有关这些选项和功能的详细信息，请参阅[部署静态视图文件](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)的[静态文件部署策略](../deploy/static-content.md)和`-s`标志。
 
 >[!NOTE]
 >

@@ -5,18 +5,11 @@ recommendations: noDisplay, catalog
 last-substantial-update: 2026-05-07T00:00:00.000Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
 TQID: https://experienceleague.adobe.com/pa4D-RsauRtCBS7puKWVBQtA37-Mcv9IZG4lah41l1U
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 3631
 ht-degree: 0%
@@ -206,7 +199,7 @@ ht-degree: 0%
 
 发行日期： 2022年10月27日
 
-- ![新图标](../../assets/new.svg) **已添加对Adobe Commerce的Adobe I/O Events的支持**。 扩展开发人员现在可以使用[Adobe I/O Events](https://developer.adobe.com/events/docs/)框架将云实例中的Commerce事件信息发送到其为[Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/)编写的应用程序。 适用于Adobe Commerce的Adobe I/O Events在“合作伙伴预览”中。<!-- CEXT-932 -->
+- ![新图标](../../assets/new.svg) **已添加对Adobe Commerce的Adobe I/O Events的支持**。 扩展开发人员现在可以使用[Adobe I/O Events](https://developer.adobe.com/events/docs/)框架将云实例中的Commerce事件信息发送到其为[Adobe App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/)编写的应用程序。 适用于Adobe Commerce的Adobe I/O Events在“合作伙伴预览”中。<!-- CEXT-932 -->
 - ![新图标](../../assets/new.svg) **OPcache配置的验证器** — 已添加验证器以检查排除路径的OPcache配置。<!-- MCLOUD-9485 -->
 - ![修复图标](../../assets/fix.svg) **修复了GraphQL缓存配置的问题** — 现在，ECE-Tools在`app/etc/env.php`文件中保留`cache`配置中的GraphQL `id_salt`值。<!-- MCLOUD-9486 -->
 
@@ -355,7 +348,7 @@ ht-degree: 0%
 
 **验证和日志改进**—
 
-- ![新图标](../../assets/new.svg)添加了`schema.error.yaml`文件，该文件包含在生成、部署和部署后过程中可能发生的所有错误和警告通知以及解决错误的建议。 此文件中的信息也可在&#x200B;_Commerce云指南_&#x200B;中找到。 查看ece-tools[&#128279;](../dev-tools/error-reference.md)的错误消息引用。<!--MCLOUD-5878-->
+- ![新图标](../../assets/new.svg)添加了`schema.error.yaml`文件，该文件包含在生成、部署和部署后过程中可能发生的所有错误和警告通知以及解决错误的建议。 此文件中的信息也可在&#x200B;_Commerce云指南_&#x200B;中找到。 查看ece-tools](../dev-tools/error-reference.md)的[错误消息引用。<!--MCLOUD-5878-->
 
 - ![新图标](../../assets/new.svg)已将云错误日志(`/var/log/cloud.error.log`)条目更改为JSON格式，以使该日志更易于以编程方式解析。<!--MCLOUD-5879-->
 
@@ -375,7 +368,7 @@ ht-degree: 0%
 
 - ![新图标](../../assets/new.svg) **基础架构更新**—
 
-  - ![新图标](../../assets/new.svg) **日志记录改进** — 改进了日志跟踪功能，将退出代码分配给严重的部署错误，并在错误消息通知和日志事件中公开退出代码。 查看ece-tools[&#128279;](../dev-tools/error-reference.md)的错误消息引用。<!-- MCLOUD-5637, 5531-->
+  - ![新图标](../../assets/new.svg) **日志记录改进** — 改进了日志跟踪功能，将退出代码分配给严重的部署错误，并在错误消息通知和日志事件中公开退出代码。 查看ece-tools](../dev-tools/error-reference.md)的[错误消息引用。<!-- MCLOUD-5637, 5531-->
 
   - ![新图标](../../assets/new.svg)改进了数据库转储的进程(`vendor/bin/ece-tools db-dump`)并更新了日志消息，以明确说明数据库转储操作将应用程序切换到维护模式，停止使用者队列进程，并在转储开始之前禁用cron作业。<!--MCLOUD-5324, MCLOUD-2062-->
 

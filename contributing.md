@@ -1,8 +1,8 @@
 ---
-source-git-commit: 305df8acb8c41369b34e2c20d9c7df6824222931
+source-git-commit: eab32e2f5155e3aa6c0924fa332cbef6e4dc502d
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 1%
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 # 投稿
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 ## 行为准则
 
-此项目遵循 Adobe [行为准则](code-of-conduct.md)。通过参与，
+此项目遵守Adobe [行为准则](code-of-conduct.md)。 通过参与，
 您应遵守本准则。 请将不可接受的行为报告给
 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com)。
 
 ## 参与者指南文档
 
-请参阅[参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hans)。
+请参阅[参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)。
 
 ## 有疑问吗？
 
@@ -55,11 +55,11 @@ ht-degree: 1%
 
 ## 安全问题
 
-不应在此问题跟踪器上报告安全问题。 相反，[请向我们的安全专家提出问题](https://helpx.adobe.com/cn/security/alertus.html)
+不应在此问题跟踪器上报告安全问题。 相反，[请向我们的安全专家提出问题](https://helpx.adobe.com/security/alertus.html)
 
 ## 新增功能亮点
 
-如果您的更改引入新主题、重大更新或需要突出显示的更正，则可以在拉取请求正文的[新增功能部分](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/overview#whats-new)中添加简短描述。
+如果您的更改引入新主题、重大更新或需要突出显示的更正，则可以在拉取请求正文的[新增功能部分](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview#whats-new)中添加简短描述。
 
 添加“新增功能”高亮显示：
 
@@ -67,29 +67,29 @@ ht-degree: 1%
 
    ```text
    whatsnew
-   Short description of the change in the [target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/target-topic.html).
+   Short description of the change in the [target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/target-topic.html).
    ```
 
    或者，如果有多个主题：
 
    ```text
    whatsnew
-   Short description of the changes in the [first target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/target-topic.html), [second target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-target-topic.html), and [third target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/third-target-topic.html).
+   Short description of the changes in the [first target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/target-topic.html), [second target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-target-topic.html), and [third target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/third-target-topic.html).
    ```
 
    您还可以将列表用于多个高亮：
 
    ```text
    whatsnew
-   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/first-topic.html).
-   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-topic.html).
+   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/first-topic.html).
+   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-topic.html).
    ```
 
    ```text
    whatsnew
    The following changes were made to the documentation:
-   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/first-topic.html).
-   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-topic.html).
+   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/first-topic.html).
+   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-topic.html).
    ```
 
 1. 添加受支持的标签以指示更改类型。 支持的标签包括适用于每种更改类型的标签，例如：
@@ -103,4 +103,4 @@ ht-degree: 1%
 1. `whatsnew`部分必须从`whatsnew`标记开始，并且位于拉取请求正文的最末尾。
 1. 对更改的描述必须包含工作链接。 请确保链接正确无误并指向预期的主题。 如果主题是新主题，请在合并拉取请求并发布新主题后，验证链接是否正常工作。 可以在合并拉取请求后修复链接。
 
-例如，在存储库的已关闭拉取请求中搜索以查看现有高亮的格式设置，并将它们与[新增功能部分](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/overview#whats-new)进行比较，以查看它们在文档中的显示方式。
+例如，在存储库的已关闭拉取请求中搜索以查看现有高亮的格式设置，并将它们与[新增功能部分](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview#whats-new)进行比较，以查看它们在文档中的显示方式。

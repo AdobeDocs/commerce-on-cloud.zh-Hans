@@ -4,18 +4,13 @@ description: 了解部署如何适用于Adobe Commerce的云基础架构项目�
 feature: Cloud, Build, Deploy, SCD
 exl-id: 76806381-0ecc-4d76-974a-f203d3bf44da
 TQID: https://experienceleague.adobe.com/mSJOsLfNVGbkSNSrUzJgszxsqc07c-4KFhrJxm5I72U
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 413
+source-wordcount: 414
 ht-degree: 0%
 
 ---
@@ -32,7 +27,7 @@ _生成_&#x200B;阶段为配置文件中定义的服务组装容器，安装基�
 
 ## ![部署阶段](../../assets/status-deploy.png)部署阶段
 
-_部署_&#x200B;阶段对传入的请求进行临时保留，并将站点转换到[维护模式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=zh-Hans)。 部署阶段使用新容器，在装入文件系统后打开网络连接，激活`.magento.app.yaml`文件的`relationships`部分中定义的服务，并运行`.magento.app.yaml`文件中定义的部署挂接。 除`.magento.app.yaml`文件中定义的目录外，所有内容均为&#x200B;_只读_。 默认情况下，[`mounts`属性](../application/properties.md#mounts)包含以下目录：
+_部署_&#x200B;阶段对传入的请求进行临时保留，并将站点转换到[维护模式](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/setup/application-modes)。 部署阶段使用新容器，在装入文件系统后打开网络连接，激活`.magento.app.yaml`文件的`relationships`部分中定义的服务，并运行`.magento.app.yaml`文件中定义的部署挂接。 除`.magento.app.yaml`文件中定义的目录外，所有内容均为&#x200B;_只读_。 默认情况下，[`mounts`属性](../application/properties.md#mounts)包含以下目录：
 
 - `app/etc` — 包含`env.php`和`config.php`配置文件
 - `pub/media` — 包含所有媒体数据，如产品或类别

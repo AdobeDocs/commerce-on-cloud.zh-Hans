@@ -4,26 +4,20 @@ description: 了解如何启用RabbitMQ服务来管理云基础架构上Adobe Co
 feature: Cloud, Services
 exl-id: 64af1dfa-e3f0-4404-a352-659ca47c1121
 TQID: https://experienceleague.adobe.com/oweBbN2F8xg9ISmnP-31-ymXpHIdBzQsDbYHDPK-SSM
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: c43a709ee9c3b974cef08e36170dbb2ab240564f
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 572
+source-wordcount: 573
 ht-degree: 0%
 
 ---
 
 # 设置[!DNL RabbitMQ]服务
 
-[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=zh-Hans)是Adobe Commerce中的系统，它允许[模块](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/glossary#module)将消息发布到队列。 它还定义了异步接收消息的消费者。
+[Message Queue Framework (MQF)](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework)是Adobe Commerce中的系统，它允许[模块](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module)将消息发布到队列。 它还定义了异步接收消息的消费者。
 
 MQF使用[RabbitMQ](https://www.rabbitmq.com/)作为消息代理，该消息代理提供了一个用于发送和接收消息的可伸缩平台。 它还包括用于存储未传递消息的机制。 [!DNL RabbitMQ]基于高级消息队列协议(AMQP) 0.9.1规范。
 
@@ -163,7 +157,7 @@ dependencies:
 
 ## [!DNL RabbitMQ]服务疑难解答
 
-请参阅[无法连接到Adobe Commerce Cloud中的RabbitMQ](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27688)。
+请参阅[无法连接到Adobe Commerce Cloud中的RabbitMQ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27688)。
 
 ## 正在升级[!DNL RabbitMQ]服务
 
@@ -173,4 +167,4 @@ dependencies:
 >
 >更改RabbitMQ服务版本（包括升级或降级）后，重新部署环境。 在部署期间，Adobe Commerce运行设置任务，重新创建所需的RabbitMQ队列、交换和绑定。
 >
->有关一般服务升级说明，请参阅[更改服务版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)。
+>有关一般服务升级说明，请参阅[更改服务版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)。

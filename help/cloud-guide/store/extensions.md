@@ -4,19 +4,13 @@ description: 了解如何在云基础架构上的Adobe Commerce中安装和管�
 feature: Cloud, Extensions, Upgrade
 exl-id: 88c5ea06-fe79-4105-8b67-f16e9ef06210
 TQID: https://experienceleague.adobe.com/7ZNXOai-hYkUS4ff3bNW32Ny63DfJLMBG2Zti5OVxRM
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 672
+source-wordcount: 675
 ht-degree: 0%
 
 ---
@@ -61,7 +55,7 @@ ht-degree: 0%
 
 ## 安装扩展
 
-在向实施中添加扩展时，Adobe建议在开发分支中工作。 安装扩展时，扩展名(`<VendorName>_<ComponentName>`)会自动插入到[`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html?lang=zh-Hans)文件中。 无需直接编辑文件。
+在向实施中添加扩展时，Adobe建议在开发分支中工作。 安装扩展时，扩展名(`<VendorName>_<ComponentName>`)会自动插入到[`app/etc/config.php`](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/files/deployment-files)文件中。 无需直接编辑文件。
 
 **要安装扩展**：
 
@@ -167,7 +161,7 @@ ht-degree: 0%
 
 ## 升级扩展
 
-在继续之前，您需要具有扩展的编辑器名称和版本。 此外，请确认该扩展与您的项目和Adobe Commerce版本兼容。 特别是，[在开始之前检查所需的PHP版本](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)。
+在继续之前，您需要具有扩展的编辑器名称和版本。 此外，请确认该扩展与您的项目和Adobe Commerce版本兼容。 特别是，[在开始之前检查所需的PHP版本](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)。
 
 **要更新扩展**：
 
@@ -201,4 +195,4 @@ ht-degree: 0%
    git push origin <branch-names>
    ```
 
-如果遇到错误，请参阅[从组件故障中恢复](../deploy/recover-failed-deployment.md)。 要了解有关将扩展与Adobe Commerce结合使用的更多信息，请参阅&#x200B;_管理员指南_&#x200B;中的[扩展](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html?lang=zh-Hans)。
+如果遇到错误，请参阅[从组件故障中恢复](../deploy/recover-failed-deployment.md)。 要了解有关将扩展与Adobe Commerce结合使用的更多信息，请参阅&#x200B;_管理员指南_&#x200B;中的[扩展](https://experienceleague.adobe.com/en/docs/commerce-admin/start/resources/extensions)。

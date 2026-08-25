@@ -4,22 +4,13 @@ description: 了解如何使用PrivateLink服务在同一地区的专用云和Ad
 feature: Cloud, Iaas, Security
 exl-id: 13a7899f-9eb5-4c84-b4c9-993c39d611cc
 TQID: https://experienceleague.adobe.com/AxpzTY-Nb7UoKhW-wzAOuWLm5O7XS4OFxjSaIfFUR-I
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1798
+source-wordcount: 1799
 ht-degree: 0%
 
 ---
@@ -30,7 +21,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->PrivateLink最适合用于保护非HTTP集成（如数据库或文件传输）的连接。 如果您计划将应用程序与Adobe Commerce API集成，请参阅如何在&#x200B;_适用于Adobe Developer App Builder的Adobe API Mesh_&#x200B;中创建[API Mesh](https://developer.adobe.com/graphql-mesh-gateway/gateway/create-mesh/)。
+>PrivateLink最适合用于保护非HTTP集成（如数据库或文件传输）的连接。 如果您计划将应用程序与Adobe Commerce API集成，请参阅如何在&#x200B;_适用于Adobe Developer App Builder的Adobe API Mesh_&#x200B;中创建[API Mesh](https://developer.adobe.com/graphql-mesh-gateway/mesh/basic/)。
 
 ## 功能和支持
 
@@ -40,9 +31,9 @@ ht-degree: 0%
 - 支持Adobe和客户VPC提供的端点服务之间的单向或双向通信。
 - 服务启用：
 
-   - 在云基础架构环境上的Adobe Commerce中打开所需的端口
-   - 建立客户与Adobe VPC之间的初始连接
-   - 启用期间的连接问题疑难解答
+  - 在云基础架构环境上的Adobe Commerce中打开所需的端口
+  - 建立客户与Adobe VPC之间的初始连接
+  - 启用期间的连接问题疑难解答
 
 ## 限制
 
@@ -51,8 +42,8 @@ ht-degree: 0%
 - Adobe Commerce支持不涵盖对AWS PrivateLink初始启用以外的问题进行故障诊断。
 - 客户负责与管理自己的VPC相关的成本。
 - 平台&#x200B;**支持** HTTPS协议（端口443）
-   - **Azure专用链接**：无法使用HTTPS协议（端口443）连接到Adobe Commerce on cloud infrastructure，因为[Fastly源遮蔽](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=zh-Hans)。
-   - **AWS PrivateLink**：支持HTTPS协议（端口443）连接。
+  - **Azure专用链接**：无法使用HTTPS协议（端口443）连接到Adobe Commerce on cloud infrastructure，因为[Fastly源遮蔽](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly)。
+  - **AWS PrivateLink**：支持HTTPS协议（端口443）连接。
 - PrivateDNS不可用。
 
 ## PrivateLink连接类型
@@ -66,8 +57,8 @@ ht-degree: 0%
 - **单向PrivateLink** — 选择此配置以安全地从Adobe Commerce上的云基础架构存储检索数据。
 - **双向PrivateLink** — 选择此配置以在云基础架构环境上建立与Adobe Commerce外部系统的安全连接。 双向选项需要两个连接：
 
-   - 客户VPC和Adobe VPC之间的连接
-   - Adobe VPC与客户VPC之间的连接
+  - 客户VPC和Adobe VPC之间的连接
+  - Adobe VPC与客户VPC之间的连接
 
 >[!TIP]
 >
@@ -106,12 +97,12 @@ ht-degree: 0%
 - 提供群集ID；使用SSH登录到远程并使用命令： `cat /etc/platform_cluster`
 - 对于要连接到Adobe Commerce Pro群集的外部服务，您需要：
 
-   - 要向新的外部专用端点公开的Pro群集上的端口列表
-   - 专用端点连接的Azure订阅ID列表
+  - 要向新的外部专用端点公开的Pro群集上的端口列表
+  - 专用端点连接的Azure订阅ID列表
 
 - 要将Adobe Commerce Pro群集连接到外部服务，您需要：
 
-   - 目标服务的资源ID列表。 外部专用链接服务ID类似于以下内容：
+  - 目标服务的资源ID列表。 外部专用链接服务ID类似于以下内容：
 
   ```text
   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{svcNameID}
@@ -121,7 +112,7 @@ ht-degree: 0%
 
 以下工作流程概述了PrivateLink与Adobe Commerce在云基础架构上集成的实施过程。
 
-1. **客户**&#x200B;提交请求主题行`PrivateLink support for <company>`启用PrivateLink的支持票证。 在票证中包含启用[&#128279;](#prerequisites)所需的数据。 Adobe使用支持工单在启用过程中协调通信。
+1. **客户**&#x200B;提交请求主题行`PrivateLink support for <company>`启用PrivateLink的支持票证。 在票证中包含启用](#prerequisites)所需的[数据。 Adobe使用支持工单在启用过程中协调通信。
 
 1. **Adobe**&#x200B;允许客户帐户访问Adobe VPC中的端点服务。
 
@@ -142,12 +133,12 @@ ht-degree: 0%
    - **Adobe**&#x200B;提供Adobe帐户主体（AWS或Azure帐户的根用户）并请求访问客户VPC端点服务。
    - **客户**&#x200B;允许Adobe访问客户VPC中的端点服务。 这假定Adobe帐户主体具有对`arn:aws:iam::402592597372:root`的访问权限，如之前在授予&#x200B;**必备项的**&#x200B;端点服务访问权限中所述。
 
-      - 更新客户端点服务配置以接受从Adobe帐户发起的请求。 有关说明，请参阅云平台文档：
+     - 更新客户端点服务配置以接受从Adobe帐户发起的请求。 有关说明，请参阅云平台文档：
 
-         - 对于AWS，请参阅[添加和删除端点服务的权限]。
-         - 对于Azure，请参阅[管理专用终结点连接]
+       - 对于AWS，请参阅[添加和删除端点服务的权限]。
+       - 对于Azure，请参阅[管理专用终结点连接]
 
-      - 为Adobe提供客户VPC的端点服务名称。
+     - 为Adobe提供客户VPC的端点服务名称。
 
    - **Adobe**&#x200B;将客户端点服务添加到Adobe平台帐户（AWS或Azure），这会触发与客户VPC的连接请求。
    - **客户**&#x200B;批准了来自Adobe的连接请求以完成设置。
@@ -219,7 +210,7 @@ ht-degree: 0%
 
 ## 更改PrivateLink配置
 
-[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)以更改现有的PrivateLink配置。 例如，您可以请求进行如下更改：
+[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以更改现有的PrivateLink配置。 例如，您可以请求进行如下更改：
 
 - 在云基础架构Pro生产或暂存环境中从Adobe Commerce中删除PrivateLink连接。
 - 更改用于访问Adobe端点服务的客户Cloud平台帐号。
@@ -241,14 +232,14 @@ ht-degree: 0%
 有关PrivateLink设置说明，请参阅云平台文档：
 
 - **AWS PrivateLink文档**
-   - [创建网络负载平衡器]
-   - [创建终结点服务配置]
-   - [创建接口终结点]
-   - [接口终结点生命周期]
+  - [创建网络负载平衡器]
+  - [创建终结点服务配置]
+  - [创建接口终结点]
+  - [接口终结点生命周期]
 
 - **Azure PrivateLink文档**
-   - [创建负载平衡器]
-   - [Azure专用链接工作流]
+  - [创建负载平衡器]
+  - [Azure专用链接工作流]
 
 <!--Link definitions-->
 

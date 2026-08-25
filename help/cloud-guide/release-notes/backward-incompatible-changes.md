@@ -5,17 +5,12 @@ feature: Cloud, Release Notes
 recommendations: noDisplay, catalog
 exl-id: 3f3c1036-bfd0-4c70-8309-6c5e442134cd
 TQID: https://experienceleague.adobe.com/ekS7f5swOsG2xgXP6ybN6hzwYm2xBbPWvl5oabv7Crc
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 822
+source-wordcount: 823
 ht-degree: 0%
 
 ---
@@ -67,7 +62,7 @@ ht-degree: 0%
 
 ## 云修补程序更改
 
-- **删除已下载的修补程序**- `magento/magento-cloud-patches`包捆绑了[软件下载](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=zh-Hans)页面中的所有可用修补程序，并在您部署到云时自动应用这些修补程序。 要防止升级到ECE-Tools 2002.1.0或更高版本后出现补丁程序冲突，请删除手动下载并添加到项目中的Adobe提供的任何补丁程序。
+- **删除已下载的修补程序**- `magento/magento-cloud-patches`包捆绑了[软件下载](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/commerce)页面中的所有可用修补程序，并在您部署到云时自动应用这些修补程序。 要防止升级到ECE-Tools 2002.1.0或更高版本后出现补丁程序冲突，请删除手动下载并添加到项目中的Adobe提供的任何补丁程序。
 
 - **正在更新应用修补程序命令** — 我们将用于应用修补程序的命令从`vendor/bin/ece-tools`目录移动到`vendor/bin/ece-patches`目录。 如果使用此命令手动应用修补程序，请使用新路径。
 
@@ -83,45 +78,45 @@ ht-degree: 0%
 
 - **适用于Commerce的Cloud Docker命令更改**-
 
-   - **正在为Docker生成操作更新Commerce命令的Cloud Docker** — 我们将Commerce命令的Cloud Docker从`vendor/bin/ece-tools`目录移动到`vendor/bin/ece-docker`目录。 更新脚本和命令以使用新路径。
+  - **正在为Docker生成操作更新Commerce命令的Cloud Docker** — 我们将Commerce命令的Cloud Docker从`vendor/bin/ece-tools`目录移动到`vendor/bin/ece-docker`目录。 更新脚本和命令以使用新路径。
 
-     升级到`ece-tools` 2002.1.0后，使用以下命令查看可用的`ece-docker`命令。
+    升级到`ece-tools` 2002.1.0后，使用以下命令查看可用的`ece-docker`命令。
 
-     ```bash
-     php ./vendor/bin/ece-docker list
-     ```
+    ```bash
+    php ./vendor/bin/ece-docker list
+    ```
 
-   - **正在更新Cloud Docker-compose命令** — 我们已将命令文件的路径从`./bin/docker`重命名为`./bin/magento-docker`。 更新脚本和命令以使用新路径。
+  - **正在更新Cloud Docker-compose命令** — 我们已将命令文件的路径从`./bin/docker`重命名为`./bin/magento-docker`。 更新脚本和命令以使用新路径。
 
-   - **Cron容器不再包含在默认Docker配置中** — 现在，您必须将`--with-cron`选项添加到`ece-docker build:compose`命令以在Docker环境配置中包含Cron容器。 请参阅&#x200B;_Cloud Docker for Commerce_&#x200B;指南中的[管理cron作业](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs)。
+  - **Cron容器不再包含在默认Docker配置中** — 现在，您必须将`--with-cron`选项添加到`ece-docker build:compose`命令以在Docker环境配置中包含Cron容器。 请参阅&#x200B;_Cloud Docker for Commerce_&#x200B;指南中的[管理cron作业](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs)。
 
-     以前使用cron作业生成的容器现在不包含cron容器。
+    以前使用cron作业生成的容器现在不包含cron容器。
 
-   - **使用临时容器** — 在以前的版本中，未删除由`bin/magento-docker`命令操作创建的容器，因此您可以将它们用于其他操作。 现在，`magento-docker`命令会移除在该命令完成后创建的所有容器。
+  - **使用临时容器** — 在以前的版本中，未删除由`bin/magento-docker`命令操作创建的容器，因此您可以将它们用于其他操作。 现在，`magento-docker`命令会移除在该命令完成后创建的所有容器。
 
-     如果要保留通过Docker撰写操作创建的容器，请使用`docker-compose run`命令而不是`bin/magento-docker`命令。
+    如果要保留通过Docker撰写操作创建的容器，请使用`docker-compose run`命令而不是`bin/magento-docker`命令。
 
-   - **正在运行部署后挂接**- `cloud-deploy`命令不再运行部署后挂接。 使用新的`cloud-post-deploy`命令在部署后运行部署后挂接。 更新脚本以添加命令以运行部署后挂接。
+  - **正在运行部署后挂接**- `cloud-deploy`命令不再运行部署后挂接。 使用新的`cloud-post-deploy`命令在部署后运行部署后挂接。 更新脚本以添加命令以运行部署后挂接。
 
-     ```shell
-     bin/magento-docker ece-deploy
-     bin/magento-docker ece-post-deploy
-     ```
+    ```shell
+    bin/magento-docker ece-deploy
+    bin/magento-docker ece-post-deploy
+    ```
 
-     或者，如果您直接使用`docker-compose`命令，请在部署命令之后运行`docker-compose run deploy cloud-post-deploy`命令。
+    或者，如果您直接使用`docker-compose`命令，请在部署命令之后运行`docker-compose run deploy cloud-post-deploy`命令。
 
 - **正在刷新数据库** — 数据库容器现在存储在`magento-db`永久Docker卷中。 刷新Docker环境时，不再自动删除数据库。 如果需要，请使用以下命令之一手动删除它。
 
-   - 删除`magento-db`容器：
+  - 删除`magento-db`容器：
 
-     ```bash
-     docker volume rm magento-db
-     ```
+    ```bash
+    docker volume rm magento-db
+    ```
 
-   - 关闭Docker容器时删除所有关联的卷：
+  - 关闭Docker容器时删除所有关联的卷：
 
-     ```bash
-     docker-compose down -v
-     ```
+    ```bash
+    docker-compose down -v
+    ```
 
 - **覆盖存档和备份文件的文件同步设置** — 使用docker-sync或mutagen时，具有以下扩展名的存档和备份文件不再同步：SQL、GZ、ZIP和BZ2。 您可以通过重命名文件以其他扩展名结尾，来覆盖这些文件类型的默认文件同步。 例如： `synchronize-me.zip-backup`

@@ -4,23 +4,19 @@ description: 了解在云基础架构项目上部署Adobe Commerce时如何减�
 feature: Cloud, Deploy, SCD, Themes
 exl-id: c216c5e9-d787-4428-b67a-b6aee814ded5
 TQID: https://experienceleague.adobe.com/wYFZNd42AoVZxdlWWG6Jr-K6FV2XhTdWp-9HFoof4rE
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 502
+source-wordcount: 503
 ht-degree: 0%
 
 ---
 
 # 零停机部署
 
-云基础架构上的Adobe Commerce在部署阶段以&#x200B;[_维护_&#x200B;模式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=zh-Hans#production-mode)运行应用程序，该模式将使您的网站脱机，直到部署完成。 生产站点处于维护模式的时长取决于站点的大小、部署期间应用的更改数以及静态内容部署的配置。 可以配置您的项目，使其部署时具有&#x200B;**零**&#x200B;停机影响。
+云基础架构上的Adobe Commerce在部署阶段以&#x200B;[_维护_&#x200B;模式](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/setup/application-modes#production-mode)运行应用程序，该模式将使您的网站脱机，直到部署完成。 生产站点处于维护模式的时长取决于站点的大小、部署期间应用的更改数以及静态内容部署的配置。 可以配置您的项目，使其部署时具有&#x200B;**零**&#x200B;停机影响。
 
 在部署过程中，所有连接将排队长达5分钟，以保留任何活动会话和待定操作，例如添加到购物车或结帐。 部署后，队列将释放，连接将继续而不会中断。 若要使用此&#x200B;_连接保持_&#x200B;的优势并将部署减少到&#x200B;_零_&#x200B;停机时间，必须将项目配置为使用最有效的部署策略。
 
