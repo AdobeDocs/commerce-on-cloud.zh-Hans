@@ -4,10 +4,18 @@ description: 了解如何为您的Adobe Commerce项目设置和配置Fastly服�
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
 TQID: https://experienceleague.adobe.com/sDx6n5Qgt1lI3-3FDzhUR-JyKgI59woXmoVHSjKFT9w
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 2254
@@ -95,7 +103,7 @@ Adobe Commerce支持已有权访问必要的密钥，因此在寻求帮助时，
 
 您需要以下组件来启用和配置Fastly服务：
 
-- 暂存环境和生产环境中安装了适用于Magento 2模块](fastly.md#fastly-cdn-module-for-magento-2)的最新版本的[Fastly CDN。 查看[快速升级](#upgrade-the-fastly-module)。
+- 暂存环境和生产环境中安装了适用于Magento 2模块[&#128279;](fastly.md#fastly-cdn-module-for-magento-2)的最新版本的Fastly CDN。 查看[快速升级](#upgrade-the-fastly-module)。
 
 - 云基础架构暂存和生产环境上的Adobe Commerce的[Fastly凭据](#get-fastly-credentials)
 
@@ -129,7 +137,7 @@ Adobe Commerce支持已有权访问必要的密钥，因此在寻求帮助时，
 
    >[!NOTE]
    >
-   >请勿选择链接以创建Fastly API令牌。 请改用Adobe](#get-fastly-credentials)提供的[Fastly凭据（服务ID和API令牌）。
+   >请勿选择链接以创建Fastly API令牌。 请改用Adobe[&#128279;](#get-fastly-credentials)提供的Fastly凭据（服务ID和API令牌）。
 
 1. 单击&#x200B;**测试凭据**。
 

@@ -4,10 +4,15 @@ description: 了解如何使用自定义配置文件在云基础架构部署中�
 feature: Cloud, Configuration, Deploy, Build
 exl-id: 44c2a73e-4ea2-49a6-86c1-9fa8cfc8b66e
 TQID: https://experienceleague.adobe.com/BttmvnP2iMbN-EAaPR9g2i9mv7fH4REAEwHFTu-2sw0
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 884
@@ -18,7 +23,7 @@ ht-degree: 0%
 # 基于方案的部署
 
 对于`ece-tools` 2002.1.0及更高版本，您可以使用基于方案的部署功能自定义默认部署行为。
-此功能在配置中使用**方案**&#x200B;和&#x200B;**步骤**：
+此功能在配置中使用&#x200B;**方案**&#x200B;和&#x200B;**步骤**：
 
 - **方案配置** — 每个部署挂接都是&#x200B;*方案*，这是一个XML配置文件，用于描述完成部署任务的顺序和配置参数。 您可以在`.magento.app.yaml`文件的`hooks`部分中配置方案。
 
