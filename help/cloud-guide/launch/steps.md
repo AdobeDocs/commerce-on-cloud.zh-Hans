@@ -1,6 +1,6 @@
 ---
 title: 启动步骤
-description: 了解如何完成站点启动。
+description: 了解如何完成启动您的Adobe Commerce云基础架构存储的最后步骤，包括支持票证、DNS直接转换和站点验证。
 exl-id: e7a3cd6b-32de-4fd0-9fbd-da8299e77114
 TQID: https://experienceleague.adobe.com/Nl8YFJUZUkxtsm0eqBgJklsTysKuUE31PkEDsJmvBMU
 product_v2:
@@ -12,9 +12,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 347
+source-wordcount: 363
 ht-degree: 0%
 
 ---
