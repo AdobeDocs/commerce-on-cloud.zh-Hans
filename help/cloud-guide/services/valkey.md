@@ -98,7 +98,7 @@ git push origin <branch-name>
 
 ## 自定义Valkey配置
 
-有关缓存、会话、L2和副本连接建议，请参阅&#x200B;_实施行动手册最佳实践指南_&#x200B;中的[Valkey和Redis服务配置的最佳实践](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
+有关缓存、会话、L2和副本连接建议，请参阅&#x200B;_实施行动手册最佳实践指南_&#x200B;中的[Valkey和Redis服务配置的最佳实践](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
 
 ## 验证服务关系
 

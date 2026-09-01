@@ -48,11 +48,11 @@ stage:
 
 使用`VALKEY_BACKEND`或`REDIS_BACKEND`为确切的Adobe Commerce版本选择支持的缓存或L2实现。 使用`CACHE_CONFIGURATION`自定义连接重试、读取超时、缓存前缀或预加载密钥等选项。
 
-支持的后端和缓存服务组合取决于Commerce发行版和修补程序级别。 Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4修补程序不支持Redis。 对于[系统要求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)所需的版本，请使用Valkey。
+支持的后端和缓存服务组合取决于Commerce发行版和修补程序级别。 Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4修补程序不支持Redis。 对于[系统要求](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)所需的版本，请使用Valkey。
 
 >[!NOTE]
 >
->有关更详细的Redis和Valkey服务配置指导，请参阅[Valkey和Redis服务配置的最佳实践](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)
+>有关更详细的Redis和Valkey服务配置指导，请参阅[Valkey和Redis服务配置的最佳实践](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)
 
 默认情况下，部署过程会覆盖相应的缓存配置。 要将指定的值与生成的配置合并，请将`_merge`设置为`true`：
 
@@ -91,7 +91,7 @@ stage:
             database: 11
 ```
 
-以下示例使用&#x200B;_配置指南_&#x200B;中定义的[Redis预加载功能](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache#redis-preload-feature)。 对于使用Valkey的版本，请使用相应的Valkey指南。
+以下示例使用&#x200B;_配置指南_&#x200B;中定义的[Redis预加载功能](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache#redis-preload-feature)。 对于使用Valkey的版本，请使用相应的Valkey指南。
 
 ```yaml
 stage:
@@ -125,7 +125,7 @@ stage:
 
 - **默认**—`true`
 
-启用或禁用清理在生成或部署阶段生成的[静态内容文件](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)。 在开发中使用默认值&#x200B;_true_&#x200B;作为最佳实践。
+启用或禁用清理在生成或部署阶段生成的[静态内容文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)。 在开发中使用默认值&#x200B;_true_&#x200B;作为最佳实践。
 
 - **`true`** — 在部署更新的静态内容之前删除所有现有的静态内容。
 - **`false`** — 仅当生成的内容包含较新版本时，部署才会覆盖现有的静态内容文件。
@@ -182,7 +182,7 @@ stage:
       consumers: []
 ```
 
-默认情况下，部署进程会覆盖`env.php`文件中的相应设置。 请参阅本地Adobe Commerce的&#x200B;_Commerce配置指南_&#x200B;中的[管理消息队列](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues)。
+默认情况下，部署进程会覆盖`env.php`文件中的相应设置。 请参阅本地Adobe Commerce的&#x200B;_Commerce配置指南_&#x200B;中的[管理消息队列](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues)。
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -210,7 +210,7 @@ stage:
 
 >[!WARNING]
 >
->为避免在源代码存储库中公开密钥，请通过[!DNL Cloud Console]而不是`.magento.env.yaml`文件设置`CRYPT_KEY`值。 请参阅[设置环境和项目变量](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/overview#configure-environment)。
+>为避免在源代码存储库中公开密钥，请通过[!DNL Cloud Console]而不是`.magento.env.yaml`文件设置`CRYPT_KEY`值。 请参阅[设置环境和项目变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/project/overview#configure-environment)。
 
 在没有安装过程的情况下将数据库从一个环境移动到另一个环境时，需要相应的加密信息。 Adobe Commerce使用[!DNL Cloud Console]中设置的加密密钥值作为`env.php`文件中的`crypt/key`值。
 
@@ -299,7 +299,7 @@ stage:
 
 >[!NOTE]
 >
->在具有三个节点（或[缩放架构](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)上的三个服务节点）的Pro暂存/生产群集上，`indices_settings`应按如下方式进行设置：
+>在具有三个节点（或[缩放架构](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)上的三个服务节点）的Pro暂存/生产群集上，`indices_settings`应按如下方式进行设置：
 >
 >```yaml
 >           indices_settings:
@@ -455,7 +455,7 @@ stage:
 
 指定Redis缓存的后端模型配置。
 
-Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4修补程序不支持Redis缓存。 对于这些版本，请使用Valkey和相应的`VALKEY_BACKEND`配置。 始终验证[系统要求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)中支持的缓存服务。
+Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4修补程序不支持Redis缓存。 对于这些版本，请使用Valkey和相应的`VALKEY_BACKEND`配置。 始终验证[系统要求](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)中支持的缓存服务。
 
 对于Redis支持的版本，可用的后端模型包括：
 
@@ -522,7 +522,7 @@ stage:
     VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-指定远程同步后端将启用L2缓存，`ece-tools`将自动生成缓存配置。 查看[示例配置文件](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#customize-the-symfony-l2-cache-configuration)。 要自定义生成的配置，请使用[`CACHE_CONFIGURATION`](#cache_configuration)。
+指定远程同步后端将启用L2缓存，`ece-tools`将自动生成缓存配置。 查看[示例配置文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#customize-the-symfony-l2-cache-configuration)。 要自定义生成的配置，请使用[`CACHE_CONFIGURATION`](#cache_configuration)。
 
 ### 配置现代Symfony L2缓存实施
 
@@ -534,7 +534,7 @@ stage:
     VALKEY_BACKEND: 'symfony_l2'
 ```
 
-将`symfony_l2`指定为Valkey后端模型将启用L2缓存，并且`ece-tools`会根据您的Valkey服务连接详细信息（包括`default`和`stale_cache_enabled`前端）自动生成L2缓存配置。 仅在需要自定义支持的后端选项（如本地缓存目录）时才定义`CACHE_CONFIGURATION`。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[Symfony L2缓存实现](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}。
+将`symfony_l2`指定为Valkey后端模型将启用L2缓存，并且`ece-tools`会根据您的Valkey服务连接详细信息（包括`default`和`stale_cache_enabled`前端）自动生成L2缓存配置。 仅在需要自定义支持的后端选项（如本地缓存目录）时才定义`CACHE_CONFIGURATION`。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[Symfony L2缓存实现](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}。
 
 >[!NOTE]
 >
@@ -672,7 +672,7 @@ stage:
 
 - **默认**—`quick`
 
-允许您自定义静态内容的[部署策略](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)。 请参阅[部署静态视图文件](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)。
+允许您自定义静态内容的[部署策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)。 请参阅[部署静态视图文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)。
 
 如果您有多个区域设置，请仅使用这些选项&#x200B;__：
 
@@ -749,7 +749,7 @@ stage:
 
 - **默认值**—_未设置_
 
-使用`SESSION_CONFIGURATION`配置会话存储。 以下示例使用与Redis兼容的会话配置结构。 仅将其用于精确Commerce版本支持的会话存储命名和服务组合。 对于Valkey支持的会话，请遵循[Valkey会话存储示例](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#apply-all-best-practice-recommendations)。
+使用`SESSION_CONFIGURATION`配置会话存储。 以下示例使用与Redis兼容的会话配置结构。 仅将其用于精确Commerce版本支持的会话存储命名和服务组合。 对于Valkey支持的会话，请遵循[Valkey会话存储示例](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#apply-all-best-practice-recommendations)。
 
 请勿假定缓存变量（如`VALKEY_BACKEND`或`REDIS_BACKEND`）配置会话。 缓存和会话配置是相互独立的。 在云项目中，尽可能使用服务关系和生成的配置；不要在不替换示例主机和端口的情况下硬编码特定于环境的值。
 
@@ -857,7 +857,7 @@ stage:
 >
 >在Adobe Commerce 2.4.8上，设置`USE_LUA_ON_GC: false`可能会导致基于标记的缓存失效静默失败，并且需要完全缓存刷新才能恢复。
 >
->在2.4.9及更高版本上，按照已安装版本的[缓存服务指南](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)操作。
+>在2.4.9及更高版本上，按照已安装版本的[缓存服务指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)操作。
 
 ## `VERBOSE_COMMANDS`
 
