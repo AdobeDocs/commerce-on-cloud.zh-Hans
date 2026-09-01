@@ -1,24 +1,16 @@
 ---
 title: 配置Fastly服务
-description: 了解如何为您的Adobe Commerce项目设置和配置Fastly服务。
+description: 了解如何为暂存环境和生产环境设置、配置和测试Fastly缓存、VCL代码片段和Web应用程序防火墙(WAF)。
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
 TQID: https://experienceleague.adobe.com/sDx6n5Qgt1lI3-3FDzhUR-JyKgI59woXmoVHSjKFT9w
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 2254
+source-wordcount: 2216
 ht-degree: 0%
 
 ---
@@ -33,7 +25,7 @@ Fastly与Varnish合作，提供快速缓存功能以及用于静态资产的内�
 >
 >Fastly在集成环境中不可用。
 
-请完成以下步骤，在站点开发过程的早期启用、配置和测试快速访问，以启用对站点的安全访问。
+完成以下步骤以在站点开发过程的早期阶段启用、配置和测试Fastly以启用对站点的安全访问。
 
 - 获取暂存和生产环境的Fastly凭据
 - 启用Fastly CDN缓存
@@ -53,7 +45,7 @@ Fastly与Varnish合作，提供快速缓存功能以及用于静态资产的内�
 
 在云基础架构上使用Adobe Commerce，您无法直接访问Fastly管理仪表板。
 
-使用Adobe Commerce管理员查看和更新环境的Fastly配置。 如果您无法在管理员中使用Fastly功能解决问题，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)。
+使用Adobe Commerce管理员查看和更新环境的Fastly配置。 如果您无法在管理员中使用Fastly功能解决问题，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)。
 
 ## 获取Fastly凭据
 
@@ -89,7 +81,7 @@ Fastly与Varnish合作，提供快速缓存功能以及用于静态资产的内�
 
 - 如果您找不到暂存或生产环境的Fastly凭据，请联系您的Adobe客户技术顾问(CTA)。
 
-- [验证Fastly凭据时出错](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)。
+- [验证Fastly凭据时出错](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)。
 
 ## 保护您的凭据
 
@@ -103,7 +95,7 @@ Adobe Commerce支持已有权访问必要的密钥，因此在寻求帮助时，
 
 您需要以下组件来启用和配置Fastly服务：
 
-- 暂存环境和生产环境中安装了适用于Magento 2模块[&#128279;](fastly.md#fastly-cdn-module-for-magento-2)的最新版本的Fastly CDN。 查看[快速升级](#upgrade-the-fastly-module)。
+- 暂存环境和生产环境中安装了适用于Magento 2模块](fastly.md#fastly-cdn-module-for-magento-2)的最新版本的[Fastly CDN。 查看[快速升级](#upgrade-the-fastly-module)。
 
 - 云基础架构暂存和生产环境上的Adobe Commerce的[Fastly凭据](#get-fastly-credentials)
 
@@ -111,37 +103,37 @@ Adobe Commerce支持已有权访问必要的密钥，因此在寻求帮助时，
 
 {{admin-login-step}}
 
-1. 单击&#x200B;**存储** >设置> **配置** > **高级** > **系统**，然后展开&#x200B;**全页缓存**。
+1. 单击&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]**&#x200B;并展开&#x200B;**[!UICONTROL Full Page Cache]**。
 
    ![展开以选择Fastly](../../assets/cdn/fastly-menu.png)
 
-1. 在&#x200B;_缓存应用程序_&#x200B;部分中，从&#x200B;**使用系统值**&#x200B;中删除所选内容，然后从下拉列表中选择&#x200B;**Fastly CDN**。
+1. 在&#x200B;_[!UICONTROL Caching Application]_部分中，从&#x200B;**[!UICONTROL Use system value]**中删除所选内容，然后从下拉列表中选择&#x200B;**[!UICONTROL Fastly CDN]**。
 
    ![选择Fastly](../../assets/cdn/fastly-enable-admin.png)
 
-1. 展开&#x200B;**Fastly配置**&#x200B;并[选择缓存选项](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module)。
+1. 展开&#x200B;**[!UICONTROL Fastly Configuration]**&#x200B;并[选择缓存选项](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module)。
 
-1. 配置缓存选项后，单击页面顶部的&#x200B;**保存配置**。
+1. 配置缓存选项后，单击页面顶部的&#x200B;**[!UICONTROL Save Config]**。
 
 1. 根据通知清除缓存。
 
-1. 导航回&#x200B;**商店** > **设置** > **配置** > **高级** > **系统** > **Fastly配置**，以继续配置Fastly。
+1. 导航回&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** > **[!UICONTROL Fastly Configuration]**，继续配置Fastly。
 
 ### 测试Fastly凭据
 
-1. 在管理员中，导航到&#x200B;**商店** >设置> **配置** > **高级** > **系统** > **快速配置**。
+1. 在管理员中，导航到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** > **[!UICONTROL Fastly Configuration]**。
 
-1. 如果需要，请为您的项目环境添加&#x200B;**Fastly服务ID**&#x200B;和&#x200B;**API令牌**&#x200B;值。
+1. 如果需要，请为您的项目环境添加&#x200B;**[!UICONTROL Fastly service ID]**&#x200B;和&#x200B;**[!UICONTROL API token]**&#x200B;值。
 
    ![Fastly凭据管理员](../../assets/cdn/fastly-credentials-admin-ui.png)
 
    >[!NOTE]
    >
-   >请勿选择链接以创建Fastly API令牌。 请改用Adobe[&#128279;](#get-fastly-credentials)提供的Fastly凭据（服务ID和API令牌）。
+   >请勿选择链接以创建Fastly API令牌。 请改用Adobe](#get-fastly-credentials)提供的[Fastly凭据（服务ID和API令牌）。
 
-1. 单击&#x200B;**测试凭据**。
+1. 单击&#x200B;**[!UICONTROL Test credentials]**。
 
-1. 如果测试成功，请单击&#x200B;**保存配置**，然后清除缓存。
+1. 如果测试成功，请单击&#x200B;**[!UICONTROL Save Config]**，然后清除缓存。
 
    如果测试失败，请验证正确的服务ID和API令牌值是否与当前环境的凭据匹配。
 
@@ -161,7 +153,7 @@ Adobe Commerce支持已有权访问必要的密钥，因此在寻求帮助时，
 
 **要上传Fastly VCL**：
 
-1. 在&#x200B;_Fastly配置_&#x200B;部分中，单击&#x200B;**将VCL上传到Fastly**，如下图所示。
+1. 在&#x200B;_[!UICONTROL Fastly Configuration]_部分中，单击&#x200B;**[!UICONTROL Upload VCL to Fastly]**，如下图所示。
 
    ![将Magento VCL上传到Fastly](../../assets/cdn/fastly-upload-vcl-admin.png)
 
@@ -169,7 +161,7 @@ Adobe Commerce支持已有权访问必要的密钥，因此在寻求帮助时，
 
 ## 配置SSL/TLS证书
 
-Adobe提供了一个域验证的Let’s Encrypt SSL/TLS证书，为来自Fastly的安全HTTPS流量提供服务。 Adobe为每个Pro Production、Staging和Starter Production环境提供一个证书，以保护该环境中的所有域。 有关提供的证书的详细信息，请参阅云基础架构上的[Adobe SSL (TLS)证书](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq)。
+Adobe提供了一个域验证的Let’s Encrypt SSL/TLS证书，为来自Fastly的安全HTTPS流量提供服务。 Adobe为每个Pro Production、Staging和Starter Production环境提供一个证书，以保护该环境中的所有域。 有关提供的证书的详细信息，请参阅云基础架构上的[Adobe SSL (TLS)证书](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq)。
 
 >[!NOTE]
 >
@@ -190,7 +182,7 @@ Adobe提供了一个域验证的Let’s Encrypt SSL/TLS证书，为来自Fastly�
 >
 >如果您有一个非活动的生产域，请使用ACME质询CNAME记录进行域验证。 提前将记录添加到您的DNS配置可让Adobe在站点启动之前为SSL/TLS证书配置正确的域。 在启动到生产环境之前，必须使用Adobe提供的CNAME记录替换这些占位符记录。
 
-域验证完成后，Adobe会配置让我们加密TLS/SSL证书，并将其上传到实时暂存或生产环境。 此过程可能需要12小时。 Adobe建议您提前几天完成DNS配置更新，以防止网站开发和网站启动出现延迟。
+域验证完成后，Adobe会配置让我们加密TLS/SSL证书，并将其上传到实时暂存或生产环境。 此过程可能需要12小时。 Adobe建议您提前几天完成DNS配置更新，以防止网站开发和启动延迟。
 
 ## 使用开发设置更新DNS配置
 
@@ -273,7 +265,7 @@ Adobe提供了一个域验证的Let’s Encrypt SSL/TLS证书，为来自Fastly�
 
    >[!NOTE]
    >
-   >作为使用Cloud CLI的替代方法，您可以从[管理员](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-urls)更新基本URL
+   >作为使用Cloud CLI的替代方法，您可以从[管理员](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)更新基本URL
 
 1. 重新启动Web浏览器。
 
@@ -297,7 +289,7 @@ Adobe提供了一个域验证的Let’s Encrypt SSL/TLS证书，为来自Fastly�
    curl -vo /dev/null -H Fastly-Debug:1 --resolve <live-URL-hostname>:443:<live-IP-address>
    ```
 
-1. 在响应中，验证[标头](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers)以确保Fastly正常工作。 例如，您应在响应中看到以下唯一标头：
+1. 在响应中，验证[标头](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers)以确保Fastly正常工作。 例如，请参阅响应中的以下唯一标头：
 
    ```http
    < Fastly-Magento-VCL-Uploaded: 1.2.228
@@ -350,4 +342,4 @@ Adobe建议您将暂存和生产环境中的Fastly模块更新到[最新版本](
 
 >[!TIP]
 >
-> 如果您在Adobe Commerce环境中遇到Fastly服务问题，请参阅[Adobe Commerce Fastly疑难解答程序](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-29661)。
+> 如果您在Adobe Commerce环境中遇到Fastly服务问题，请参阅[Adobe Commerce Fastly疑难解答程序](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29661)。

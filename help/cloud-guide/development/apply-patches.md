@@ -1,17 +1,14 @@
 ---
 title: 应用修补程序
-description: 了解如何在Adobe Commerce on cloud infrastructure项目中应用修补程序。
+description: 了解如何使用ECE-Tools和Quality Patches Tool将必需、可选和自定义的修补程序应用到云基础架构项目上的Adobe Commerce。
 feature: Cloud, Upgrade
 exl-id: 923c1e43-45da-450f-bdfc-de84a901400d
 TQID: https://experienceleague.adobe.com/SyS-AIRHp0LW7Z4JwZw2FNtbvy9FVzISUID12MjlMrc
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: f3a3403ffd55c2e08e20592fa719f42a9473e72d
 workflow-type: tm+mt
-source-wordcount: 911
+source-wordcount: 922
 ht-degree: 0%
 
 ---
@@ -21,15 +18,15 @@ ht-degree: 0%
 [适用于Commerce的云修补程序](https://github.com/magento/magento-cloud-patches)和[Quality Patches Tool](https://github.com/magento/quality-patches)，可为您安装的Adobe Commerce应用程序提供修补程序。
 
 - Commerce云修补程序包提供了所需的修补程序以及关键修补程序
-- 质量修补程序提供可选的、低影响的质量修补程序，作为[不包含向后不兼容更改的单个修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/versioning-policy#individual-patch)
+- 质量修补程序提供可选的、低影响的质量修补程序，作为[不包含向后不兼容更改的单个修补程序](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/versioning-policy#individual-patch)
 
-请参阅&#x200B;_Commerce Operations Tools Guide_&#x200B;中的[可用修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+请参阅&#x200B;_Commerce Operations Tools Guide_&#x200B;中的[可用修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 这两个包都改进了所有Adobe Commerce版本与Cloud环境的集成，并支持快速交付关键、可选和自定义修补程序。 您可以使用这些软件包来应用、还原和查看有关Commerce可用的所有单个修补程序的一般信息。
 
 >[!TIP]
 >
->您可以将Commerce的[Quality Patches Tool](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)和Cloud Patches用作Magento Open Source和Adobe Commerce项目的独立包。 我们建议将质量修补程序工具用于非云项目。
+>您可以将Commerce的[Quality Patches Tool](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)和Cloud Patches用作Magento Open Source和Adobe Commerce项目的独立包。 我们建议将质量修补程序工具用于非云项目。
 
 当您将更改部署到远程环境时，`ece-tools`包使用`magento/magento-cloud-patches`和`magento/quality-patches`来检查挂起的修补程序并按以下顺序自动应用它们：
 
@@ -119,7 +116,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 **要在本地开发环境中应用单个修补程序**：
 
-1. 将“QUALITY_PATCHES”变量添加到`.magento.env.yaml`文件中，并在下面列出所需的修补程序。
+1. 将`QUALITY_PATCHES`变量添加到`.magento.env.yaml`文件中并在下面列出所需的修补程序。
 
    ```yaml
    stage:
@@ -194,7 +191,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 **要在云环境中应用和测试自定义修补程序**：
 
-1. 在项目根目录下，创建一个名为`m2-hotfixes`的目录（如果该目录不存在）
+1. 在项目根目录下，创建一个名为`m2-hotfixes`的目录（如果该目录不存在）。
 
    ```bash
    mkdir m2-hotfixes

@@ -6,19 +6,13 @@ recommendations: noDisplay, catalog
 role: Developer
 exl-id: 980ec809-8c68-450a-9db5-29c5674daa16
 TQID: https://experienceleague.adobe.com/TNuUxXzCiXnKefww0DmKbjfJygEz2HFG-0PjCsCy2nA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: bdc2bedd2696e7dde0ffb55f846a8bced2dbd25d
 workflow-type: tm+mt
-source-wordcount: 3049
+source-wordcount: 3106
 ht-degree: 0%
 
 ---
@@ -41,24 +35,41 @@ stage:
 ## `CACHE_CONFIGURATION`
 
 - **默认值**—_未设置_
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
-配置Redis页和默认缓存。 在设置`cm_cache_backend_redis`参数时，必须指定`server`、`port`和`database`选项。
+使用`CACHE_CONFIGURATION`合并或覆盖部署期间生成的缓存前端和后端选项。
+
+对于云基础架构上的Adobe Commerce，请勿直接编辑`app/etc/env.php`。 `ece-tools`包从`.magento.env.yaml`、服务关系和支持的部署变量生成部署配置。
+
+使用`VALKEY_BACKEND`或`REDIS_BACKEND`为确切的Adobe Commerce版本选择支持的缓存或L2实现。 使用`CACHE_CONFIGURATION`自定义连接重试、读取超时、缓存前缀或预加载密钥等选项。
+
+支持的后端和缓存服务组合取决于Commerce发行版和修补程序级别。 Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4修补程序不支持Redis。 对于[系统要求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)所需的版本，请使用Valkey。
+
+>[!NOTE]
+>
+>有关更详细的Redis和Valkey服务配置指导，请参阅[Valkey和Redis服务配置的最佳实践](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)
+
+默认情况下，部署过程会覆盖相应的缓存配置。 要将指定的值与生成的配置合并，请将`_merge`设置为`true`：
 
 ```yaml
 stage:
   deploy:
     CACHE_CONFIGURATION:
+      _merge: true
       frontend:
         default:
-          backend: file
-        page_cache:
-          backend: file
+          backend_options:
+            connect_retries: 3
+          remote_backend_options:
+            read_timeout: 10
 ```
 
-{{merge-options}}
+若要使用`CACHE_CONFIGURATION`中指定的值替换现有配置，请将`_merge`设置为`false`。
 
-以下示例将新值合并到现有配置：
+>[!IMPORTANT]
+>
+> 请勿将本地`bin/magento setup:config:set`选项（如`cm_cache_backend_redis`）直接复制到`CACHE_CONFIGURATION`中。 在云项目中，`ece-tools`从配置的关系中获取服务连接详细信息。 使用为所选Commerce版本和缓存实施记录的结构。
+
+以下示例将数据库分配合并到现有缓存配置中。 仅在所选后端和Commerce版本支持此覆盖类型时才使用此覆盖。 仅当当前的Symfony L2文档明确支持该选项时，才将前端设置应用到`symfony_l2`。
 
 ```yaml
 stage:
@@ -74,7 +85,7 @@ stage:
             database: 11
 ```
 
-以下示例使用&#x200B;_配置指南_&#x200B;中定义的[Redis预加载功能](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache#redis-preload-feature)：
+以下示例使用&#x200B;_配置指南_&#x200B;中定义的[Redis预加载功能](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache#redis-preload-feature)。 对于使用Valkey的版本，请使用相应的Valkey指南。
 
 ```yaml
 stage:
@@ -92,7 +103,7 @@ stage:
               - '061_SYSTEM_DEFAULT:hash'
 ```
 
-要使用自定义[REDIS_BACKEND](#redis_backend)模型（不仅来自允许列表），请将`_custom_redis_backend`选项设置为`true`以启用正确的验证，如以下示例所示：
+要使用不在允许列表中的自定义[REDIS_BACKEND](#redis_backend)模型，请将`_custom_redis_backend`设置为`true`，以便ece-tools应用相应的验证：
 
 ```yaml
 stage:
@@ -107,9 +118,8 @@ stage:
 ## `CLEAN_STATIC_FILES`
 
 - **默认**—`true`
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
-启用或禁用清理在生成或部署阶段生成的[静态内容文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)。 在开发中使用默认值&#x200B;_true_&#x200B;作为最佳实践。
+启用或禁用清理在生成或部署阶段生成的[静态内容文件](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)。 在开发中使用默认值&#x200B;_true_&#x200B;作为最佳实践。
 
 - **`true`** — 在部署更新的静态内容之前删除所有现有的静态内容。
 - **`false`** — 仅当生成的内容包含较新版本时，部署才会覆盖现有的静态内容文件。
@@ -127,21 +137,19 @@ stage:
 ## `CRON_CONSUMERS_RUNNER`
 
 - **默认**—`cron_run = false`，`max_messages = 1000`
-- **版本**—Adobe Commerce 2.2.0及更高版本
 
 使用此环境变量可确认消息队列在部署后正在运行。
 
-- `cron_run` — 一个布尔值，用于启用或禁用`consumers_runner` cron作业（默认值= `false`）。
-- `max_messages` — 指定每个使用者在终止前必须处理的最大消息数（默认值= `1000`）的数字。 您可以将值设置为`0`以防止使用者终止。
-- `consumers` — 一个字符串数组，指定要运行的使用者。 空数组运行&#x200B;_所有_&#x200B;使用者。
-
-- `multiple_processes` — 指定每个使用者要衍生的进程数的数字。 在Commerce **2.4.4**&#x200B;或更高版本中支持。
+- `cron_run` — 一个布尔值，用于启用或禁用`consumers_runner` cron作业。 默认值为`false`。
+- `max_messages` — 终止前每个使用者处理的最大消息数。 默认值为`1000`。 要阻止使用者终止，请将其设置为`0`。
+- `consumers` — 一个字符串数组，指定要运行的使用者名称。 空数组运行&#x200B;_所有_&#x200B;使用者。
+- `multiple_processes` — 每个使用者要衍生的进程数。 Adobe Commerce 2.4.4及更高版本支持此选项。
 
 >[!NOTE]
 >
->要返回消息队列`consumers`的列表，请在远程环境中运行`./bin/magento queue:consumers:list`命令。
+>要列出可用的消息队列使用者，请在远程环境中运行`./bin/magento queue:consumers:list`命令。
 
-运行特定`consumers`且为每个使用者派生`multiple_processes`的示例数组：
+以下示例运行选定的使用者并为每个使用者启动多个进程：
 
 ```yaml
 stage:
@@ -150,14 +158,14 @@ stage:
       cron_run: true
       max_messages: 1000
       consumers:
-        - example_consumer_1
-        - example_consumer_2
--     multiple_processes:
+       example_consumer_1
+       example_consumer_2
+      multiple_processes:
         example_consumer_1: 4
         example_consumer_2: 3
 ```
 
-运行所有`consumers`的空数组的示例：
+以下示例运行所有使用者：
 
 ```yaml
 stage:
@@ -168,16 +176,15 @@ stage:
       consumers: []
 ```
 
-默认情况下，部署进程将覆盖`env.php`文件中的所有设置。 请参阅本地Adobe Commerce的&#x200B;_Commerce配置指南_&#x200B;中的[管理消息队列](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues)。
+默认情况下，部署进程会覆盖`env.php`文件中的相应设置。 请参阅本地Adobe Commerce的&#x200B;_Commerce配置指南_&#x200B;中的[管理消息队列](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues)。
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
 - **默认**—`false`
-- **版本**—Adobe Commerce 2.2.0及更高版本
 
 通过选择以下选项之一，配置`consumers`处理消息队列中的消息的方式：
 
-- `false`—`Consumers`处理队列中的可用消息，关闭TCP连接并终止。 即使已处理的消息数小于`CRON_CONSUMERS_RUNNER`部署变量中指定的`max_messages`值，`Consumers`也不等待其他消息进入队列。
+- `false`—`Consumers`处理可用消息，关闭TCP连接，然后终止，而不管在`CRON_CONSUMERS_RUNNER`部署变量中指定了`max_messages`限制。
 
 - `true`—`Consumers`继续处理来自消息队列的消息，直到达到`CRON_CONSUMERS_RUNNER`部署变量中指定的最大消息数(`max_messages`)，然后关闭TCP连接并终止使用者进程。 如果队列在到达`max_messages`之前排空，则使用者将等待更多消息到达。
 
@@ -194,18 +201,16 @@ stage:
 ## `CRYPT_KEY`
 
 - **默认值**—_未设置_
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
 >[!WARNING]
 >
->通过[!DNL Cloud Console]而不是`.magento.env.yaml`文件设置`CRYPT_KEY`值，以避免在您的环境的源代码存储库中公开密钥。 请参阅[设置环境和项目变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/project/overview#configure-environment)。
+>为避免在源代码存储库中公开密钥，请通过[!DNL Cloud Console]而不是`.magento.env.yaml`文件设置`CRYPT_KEY`值。 请参阅[设置环境和项目变量](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/overview#configure-environment)。
 
 在没有安装过程的情况下将数据库从一个环境移动到另一个环境时，需要相应的加密信息。 Adobe Commerce使用[!DNL Cloud Console]中设置的加密密钥值作为`env.php`文件中的`crypt/key`值。
 
 ## `DATABASE_CONFIGURATION`
 
 - **默认值**—_未设置_
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
 如果在`.magento.app.yaml`文件的[关系属性](../application/properties.md#relationships)中定义了数据库，则可以自定义数据库连接以进行部署。
 
@@ -272,7 +277,6 @@ MariaDB [main]> SHOW TABLES;
 ## `ELASTICSUITE_CONFIGURATION`
 
 - **默认值**—_未设置_
-- **版本**—Adobe Commerce 2.2.0及更高版本
 
 在部署之间保留自定义的[!DNL Elastic Suite]服务设置，并在主[!DNL Elastic Suite]配置的“system/default/smile_elasticsuite_core_base_settings”部分使用它。 如果已安装[!DNL Elastic Suite]编辑器包，则会自动对其进行配置。
 
@@ -289,7 +293,7 @@ stage:
 
 >[!NOTE]
 >
->在[缩放架构](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)上具有三个节点（或三个服务节点）的Pro暂存/生产群集上，`indices_settings`应设置如下：
+>在具有三个节点（或[缩放架构](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)上的三个服务节点）的Pro暂存/生产群集上，`indices_settings`应按如下方式进行设置：
 >
 >```yaml
 >           indices_settings:
@@ -323,9 +327,8 @@ stage:
 ## `ENABLE_GOOGLE_ANALYTICS`
 
 - **默认**—`false`
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
-在部署到暂存和集成环境时，启用和禁用Google Analytics。 默认情况下，Google Analytics仅适用于生产环境。 将此值设置为`true`以在暂存和集成环境中启用Google Analytics。
+在部署到暂存和集成环境时，启用和禁用Google Analytics。 默认情况下，Google Analytics仅适用于生产环境。 要在暂存环境和集成环境中启用Google Analytics，请将此值设置为`true`。
 
 - **`true`** — 在暂存环境和集成环境中启用Google Analytics。
 - **`false`** — 在暂存环境和集成环境中禁用Google Analytics。
@@ -345,9 +348,8 @@ stage:
 ## `FORCE_UPDATE_URLS`
 
 - **默认**—`true`
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
-在部署到Pro或Starter Staging and Production环境时，此变量将数据库中的Adobe Commerce基本URL替换为由[`MAGENTO_CLOUD_ROUTES`](variables-cloud.md)变量指定的项目URL。 使用此设置可覆盖[UPDATE_URLS](#update_urls)部署变量的默认行为，在部署到暂存或生产环境时会忽略该行为。
+在部署到Pro或Starter Staging and Production环境时，此变量将数据库中的Adobe Commerce基本URL替换为由[`MAGENTO_CLOUD_ROUTES`](variables-cloud.md)变量指定的项目URL。 要覆盖[UPDATE_URLS](#update_urls)部署变量的默认行为，请使用此设置。
 
 ```yaml
 stage:
@@ -358,28 +360,26 @@ stage:
 ## `LOCK_PROVIDER`
 
 - **默认值** — 在生产环境和暂存环境中，默认为`file`，无法更改。 对于Pro集成和入门环境，默认为`db`。
-- **版本**—Adobe Commerce 2.2.5及更高版本
 
-锁定提供程序阻止启动重复的cron作业和cron组。 Cloud上的Commerce仅支持`file`和`db`锁定提供程序。
+锁定提供程序阻止重复的cron作业和cron组运行。 Cloud上的Adobe Commerce支持`file`和`db`锁定提供程序。
 
-对于生产和暂存环境，默认值`file`由[MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md)设置，无法覆盖。 对于入门环境和Pro集成环境，`ece-tools`会自动设置`db`锁定提供程序。 在这些环境中，您可以将默认值更改为`file`以优化本地性能和镜像生产体系结构。
+在Pro暂存和生产环境中，`MAGENTO_CLOUD_LOCKS_DIR`配置`file`提供程序。 无法覆盖此设置。 在Pro Integration and Starter环境中，`ece-tools`默认设置`db`提供程序。 要优化本地性能并镜像生产体系结构，请在这些环境中将提供程序设置为`file`。
 
 ```yaml
 stage:
   deploy:
-    LOCK_PROVIDER: "file"
+    LOCK_PROVIDER: 'file'
 ```
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
 
 - **默认**—`false`
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
 >[!TIP]
 >
->`MYSQL_USE_SLAVE_CONNECTION`变量仅在Adobe Commerce上受云基础架构暂存和Production Pro群集环境支持，在入门项目上不受支持。
+>仅云基础架构Staging和Production Pro群集上的Adobe Commerce支持`MYSQL_USE_SLAVE_CONNECTION`变量。 起始项目不支持此功能。
 
-Adobe Commerce可以异步读取多个数据库。 设置为`true`可自动使用到数据库的&#x200B;_只读_&#x200B;连接来接收非主节点上的只读通信。 此连接通过负载平衡提高了性能，因为只有一个节点处理读写通信。 设置为`false`可从`env.php`文件中删除任何现有的只读连接数组。
+Adobe Commerce可以异步读取多个数据库。 设置为`true`以自动使用到数据库的&#x200B;_只读_&#x200B;连接来接收非主节点上的只读通信。 此连接通过负载平衡提高了性能，因为只有一个节点处理读写通信。 要从`env.php`文件中删除任何现有的只读连接数组，请设置为`false`。
 
 ```yaml
 stage:
@@ -387,12 +387,11 @@ stage:
     MYSQL_USE_SLAVE_CONNECTION: true
 ```
 
-当`MYSQL_USE_SLAVE_CONNECTION`变量设置为`true`时，在Pro暂存和生产环境的`env.php`文件中，`synchronous_replication`参数默认设置为`true`。 当`MYSQL_USE_SLAVE_CONNECTION`设置为`false`时，未配置`synchronous_replication`参数。
+当`MYSQL_USE_SLAVE_CONNECTION`变量设置为`true`时，系统在Pro暂存和生产环境的`env.php`文件中，默认将`synchronous_replication`参数设置为`true`。 当`MYSQL_USE_SLAVE_CONNECTION`设置为`false`时，未配置`synchronous_replication`参数。
 
 ## `QUEUE_CONFIGURATION`
 
 - **默认值**—_未设置_
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
 使用此环境变量可在部署之间保留自定义的队列服务设置。 此变量同时支持AMQP（适用于RabbitMQ）和STOMP（适用于ActiveMQ Artemis）协议。 例如，如果您希望使用现有的消息队列服务而不是依赖云基础架构为您创建它，请使用`QUEUE_CONFIGURATION`环境变量将其连接到您的站点：
 
@@ -447,17 +446,18 @@ stage:
 ## `REDIS_BACKEND`
 
 - **默认**—`Cm_Cache_Backend_Redis`
-- **版本**—Adobe Commerce 2.3.0及更高版本
 
 指定Redis缓存的后端模型配置。
 
-Adobe Commerce版本2.3.0及更高版本包括以下后端模型：
+Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4修补程序不支持Redis缓存。 对于这些版本，请使用Valkey和相应的`VALKEY_BACKEND`配置。 始终验证[系统要求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)中支持的缓存服务。
+
+对于Redis支持的版本，可用的后端模型包括：
 
 - `Cm_Cache_Backend_Redis`
 - `\Magento\Framework\Cache\Backend\Redis`
 - `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`
 
-如何设置`REDIS_BACKEND`的示例
+以下示例启用远程同步缓存后端和L2缓存：
 
 ```yaml
 stage:
@@ -467,18 +467,17 @@ stage:
 
 >[!NOTE]
 >
->如果将`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`指定为Redis后端模型以启用[二级缓存](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache)，`ece-tools`将自动生成缓存配置。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的示例[配置文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache#configuration-example)。 要覆盖生成的缓存配置，请使用[CACHE_CONFIGURATION](#cache_configuration)部署变量。
+> 选择`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`后，`ece-tools`将自动生成L2缓存配置。 要自定义生成的配置，请使用[`CACHE_CONFIGURATION`](#cache_configuration)。
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
 - **默认**—`false`
-- **版本**—Adobe Commerce 2.1.16及更高版本
 
 >[!TIP]
 >
->`REDIS_USE_SLAVE_CONNECTION`变量仅在Adobe Commerce上受云基础架构暂存和Production Pro群集环境支持，在入门项目上不受支持。
+>仅在Cloud Staging和Production Pro群集上的Adobe Commerce上支持`REDIS_USE_SLAVE_CONNECTION`。 起始项目不支持此功能。
 
-Adobe Commerce可以异步读取多个Redis实例。 设置为`true`可自动使用到Redis实例的&#x200B;_只读_&#x200B;连接来接收非主节点上的只读流量。 此连接通过负载平衡提高了性能，因为只有一个节点处理读写通信。 设置为`false`可从`env.php`文件中删除任何现有的只读连接数组。
+Adobe Commerce可以异步读取多个Redis实例。 将此变量设置为`true`可在主实例处理读写通信时，使用到Redis副本的只读连接进行读取通信。 要从`env.php`中删除现有的只读连接数组，请将其设置为`false`。
 
 ```yaml
 stage:
@@ -486,55 +485,54 @@ stage:
     REDIS_USE_SLAVE_CONNECTION: true
 ```
 
-您必须在`.magento.app.yaml`文件和`services.yaml`文件中配置Redis服务。
+您必须在`.magento.app.yaml`和`services.yaml`文件中配置[Redis服务](../services/redis.md)。
 
-[ECE-Tools版本2002.0.18](../release-notes/cloud-release-archive.md#v2002018)及更高版本使用更多容错设置。 如果Adobe Commerce无法从Redis _从_&#x200B;实例读取数据，则会从Redis _主_&#x200B;实例读取数据。
+[ECE-Tools版本2002.0.18](../release-notes/cloud-release-archive.md#v2002018)及更高版本使用更多容错设置。 如果Adobe Commerce无法从Redis复制副本中读取数据，则它将回退到Redis主实例。
 
-只读连接不可用于集成环境或使用[`CACHE_CONFIGURATION`变量](#cache_configuration)。
+只读连接在集成环境中不可用。 如果您使用[`CACHE_CONFIGURATION`](#cache_configuration)，请将更改合并到生成的配置中，并验证生成的配置是否保留副本连接。
 
 ## `VALKEY_BACKEND`
 
 - **默认**—`Cm_Cache_Backend_Redis`
-- **版本**—Adobe Commerce 2.4.8及更高版本
+- **版本** — 支持Valkey的Adobe Commerce版本
 
-`VALKEY_BACKEND`指定Valkey缓存的后端模型配置。
+`VALKEY_BACKEND`指定Valkey缓存配置的后端模型。 默认值使用旧版Redis兼容类名称；这并不意味着服务必须是Redis。
 
-Adobe Commerce版本2.4.8及更高版本包含以下后端模型：
+对于低于2.4.9且支持Valkey的Adobe Commerce版本，后端模型包括：
 
 - `Cm_Cache_Backend_Redis`
 - `\Magento\Framework\Cache\Backend\Redis`
 - `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`
 
-Adobe Commerce 2.4.9及更高版本还支持`symfony_l2`后端模型，该模型支持基于Symfony缓存的现代L2缓存实现。
+Adobe Commerce 2.4.9及更高版本还支持基于Symfony缓存的L2实施`symfony_l2`。 仅Valkey支持`symfony_l2`。
 
 ### 配置远程同步缓存
 
-对于Adobe Commerce 2.4.8，以下示例描述了如何将`VALKEY_BACKEND`设置为远程同步缓存：
+对于Adobe Commerce 2.4.8，如果远程同步缓存实施合适，请使用以下配置：
 
 ```yaml
 stage:
   deploy:
-  VALKEY_USE_SLAVE_CONNECTION: true
-  VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-将远程同步缓存指定为Valkey后端模型可启用[二级缓存](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache)，并且`ece-tools`会自动生成缓存配置。 查看[示例配置文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache#configuration-example)。 要覆盖配置，请使用[CACHE_CONFIGURATION](#cache_configuration)部署变量。
+指定远程同步后端将启用L2缓存，`ece-tools`将自动生成缓存配置。 查看[示例配置文件](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#customize-the-symfony-l2-cache-configuration)。 要自定义生成的配置，请使用[`CACHE_CONFIGURATION`](#cache_configuration)。
 
 ### 配置现代Symfony L2缓存实施
 
-对于Adobe Commerce 2.4.9及更高版本，以下示例描述了如何将`VALKEY_BACKEND`设置为现代Symfony L2缓存实现：
+对于Adobe Commerce 2.4.9及更高版本，请使用Symfony L2实施：
 
 ```yaml
 stage:
   deploy:
-    VALKEY_BACKEND: symfony_l2
+    VALKEY_BACKEND: 'symfony_l2'
 ```
 
-将`symfony_l2`指定为Valkey后端模型将启用[二级缓存](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache){target="_blank"}，并且`ece-tools`会自动从您的Valkey服务连接详细信息中生成二级缓存配置，包括`default`前端和`stale_cache_enabled`前端。 定义`CACHE_CONFIGURATION`是可选的，仅需要自定义特定的后端选项，如本地缓存目录。 有关自定义示例，请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[Modern Symfony L2缓存实现](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache#modern-symfony-l2-cache-implementation){target="_blank"}和&#x200B;_实现行动手册_&#x200B;中的[配置Symfony L2缓存](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}。
+将`symfony_l2`指定为Valkey后端模型将启用L2缓存，并且`ece-tools`会根据您的Valkey服务连接详细信息（包括`default`和`stale_cache_enabled`前端）自动生成L2缓存配置。 仅在需要自定义支持的后端选项（如本地缓存目录）时才定义`CACHE_CONFIGURATION`。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[Symfony L2缓存实现](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}。
 
 >[!NOTE]
 >
->Adobe Commerce 2.4.9包括Symfony L2缓存改进（包括缓存标记存储、失效和压缩），该改进包括使用修补程序ACP2E-5132，减少磁盘I/O，消除过时的缓存条目，以及减少内存和网络开销。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[增强的Symfony L2缓存性能和可靠性](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache#enhanced-symfony-l2-cache-performance-and-reliability)。
+>Adobe Commerce 2.4.9包括Symfony L2缓存改进（包括缓存标记存储、失效和压缩），该改进包括使用修补程序ACP2E-5132，减少磁盘I/O，消除过时的缓存条目，以及减少内存和网络开销。
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 
@@ -543,9 +541,9 @@ stage:
 
 >[!TIP]
 >
->`VALKEY_USE_SLAVE_CONNECTION`变量仅在Adobe Commerce上受云基础架构暂存和Production Pro群集环境支持，在入门项目上不受支持。
+>仅在Cloud Staging和Production Pro群集上的Adobe Commerce上支持`VALKEY_USE_SLAVE_CONNECTION`。 起始项目不支持此功能。
 
-Adobe Commerce可以异步读取多个Redis实例。`VALKEY_USE_SLAVE_CONNECTION` 设置为`true`可自动使用到Redis实例的&#x200B;_只读_&#x200B;连接来接收非主节点上的只读流量。 此连接通过负载平衡提高了性能，因为只有一个节点处理读写通信。 将`VALKEY_USE_SLAVE_CONNECTION`设置为`false`以从`env.php`文件中删除任何现有的只读连接数组。
+Adobe Commerce可以异步读取多个Valkey实例。 将`VALKEY_USE_SLAVE_CONNECTION`设置为`true`可在主实例处理读写通信时，使用到Valkey副本的&#x200B;_只读_&#x200B;连接进行只读通信。 此连接通过负载平衡提高了性能，因为只有一个节点处理读写通信。 要从`env.php`中删除现有的只读连接数组，请将其设置为`false`。
 
 ```yaml
 stage:
@@ -553,16 +551,21 @@ stage:
     VALKEY_USE_SLAVE_CONNECTION: true
 ```
 
-您必须在`.magento.app.yaml`文件和`services.yaml`文件中配置Redis服务。
+您必须在`.magento.app.yaml`和`.magento/services.yaml`中配置[Valkey服务](../services/valkey.md)。 副本连接是否可用取决于项目拓扑和安装的`ece-tools`版本。
 
-[ECE-Tools版本2002.0.18](../release-notes/cloud-release-archive.md#v2002018)及更高版本使用更多容错设置。 如果Adobe Commerce无法从Valkey _slave_&#x200B;实例读取数据，则会从Redis _master_&#x200B;实例读取数据。
+在依赖此设置之前，检查已解码的`MAGENTO_CLOUD_RELATIONSHIPS`值，并确认存在副本关系。 例如：
 
-只读连接不可用于集成环境或使用[`CACHE_CONFIGURATION`变量](#cache_configuration)。
+```bash
+echo "$MAGENTO_CLOUD_RELATIONSHIPS" | base64 -d | json_pp
+```
+
+对于`symfony_l2`，副本支持需要相关的`ece-tools`和云修补程序更新。 在启用此设置之前，请更新到最新的`ece-tools`版本。 如果重新部署后不存在副本关系，请联系Adobe Commerce支持。
+
+使用[`CACHE_CONFIGURATION`](#cache_configuration)时，将支持的覆盖合并到生成的配置中，而不是替换生成的连接结构。
 
 ## `RESOURCE_CONFIGURATION`
 
 - **默认值** — 未设置
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
 将资源名称映射到数据库连接。 此配置对应于`env.php`文件的`resource`部分。
 
@@ -582,9 +585,8 @@ stage:
 ## `SCD_COMPRESSION_LEVEL`
 
 - **默认**—`4`
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
-指定压缩静态内容时要使用的[gzip](https://www.gnu.org/software/gzip)压缩级别（`0`到`9`）；`0`禁用压缩。
+指定压缩静态内容时要使用的[gzip](https://www.gnu.org/software/gzip)压缩级别（`0`到`9`）。 将其设置为`0`以禁用压缩。
 
 ```yaml
 stage:
@@ -595,7 +597,6 @@ stage:
 ## `SCD_COMPRESSION_TIMEOUT`
 
 - **默认**—`600`
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
 当压缩静态资源所花费的时间超过压缩超时限制时，将中断部署过程。 设置静态内容压缩命令的最长执行时间（秒）。
 
@@ -608,7 +609,6 @@ stage:
 ## `SCD_MATRIX`
 
 - **默认值**—_未设置_
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
 您可以为每个主题配置多个区域设置。 此自定义通过减少不必要的主题文件来加快部署过程。 例如，您可以部署英语版的&#x200B;_magento/backend_&#x200B;主题以及其他语言的自定义主题。
 
@@ -637,11 +637,10 @@ stage:
 ## `SCD_MAX_EXECUTION_TIME`
 
 - **默认值**—_未设置_
-- **版本**—Adobe Commerce 2.2.0及更高版本
 
 允许您增加静态内容部署的最大预期执行时间。
 
-默认情况下，Adobe Commerce将最大预期执行时间设置为900秒，但在某些情况下，您可能需要更多时间来完成Cloud项目的静态内容部署。
+默认情况下，Adobe Commerce将最大预期执行时间设置为900秒，但某些场景需要更多时间来完成Cloud项目的静态内容部署。
 
 ```yaml
 stage:
@@ -654,7 +653,6 @@ stage:
 ## `SCD_NO_PARENT`
 
 - **默认**—`false`
-- **版本**—Adobe Commerce 2.4.2及更高版本
 
 在部署阶段，设置`SCD_NO_PARENT: true`，以便在部署阶段不生成父主题的静态内容。 此设置可最大限度地缩短部署时间，并防止在部署期间静态内容构建失败时可能发生的站点停机时间。 请参阅[静态内容部署](../deploy/static-content.md)。
 
@@ -667,15 +665,14 @@ stage:
 ## `SCD_STRATEGY`
 
 - **默认**—`quick`
-- **版本**—Adobe Commerce 2.2.0及更高版本
 
-允许您自定义静态内容的[部署策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)。 请参阅[部署静态视图文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)。
+允许您自定义静态内容的[部署策略](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)。 请参阅[部署静态视图文件](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)。
 
 如果您有多个区域设置，请仅使用这些选项&#x200B;__：
 
 - `standard` — 为所有包部署所有静态视图文件。
 - `quick` — （_默认值_）可最大限度地缩短部署时间。
-- `compact` — 节省服务器上的磁盘空间。 在Adobe Commerce版本2.2.4及更早版本中，此设置将使用`1`的值覆盖`scd_threads`的值。
+- `compact` — 节省服务器上的磁盘空间。
 
 ```yaml
 stage:
@@ -686,9 +683,8 @@ stage:
 ## `SCD_THREADS`
 
 - **默认** — 自动
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
-设置静态内容部署的线程数。 默认值是根据检测到的CPU线程数设置的，不超过4的值。 增加线程数会加快静态内容部署；减少线程数会减慢部署速度。 您可以设置线程值，例如：
+设置静态内容部署的线程数。 默认值是根据检测到的CPU线程数设置的，不超过4的值。 增加线程数可加快静态内容部署。 减少线程数会减慢速度。 您可以设置线程值，例如：
 
 ```yaml
 stage:
@@ -696,12 +692,11 @@ stage:
     SCD_THREADS: 2
 ```
 
-要进一步缩短部署时间，请使用[配置管理](../store/store-settings.md)和`scd-dump`命令将静态部署移动到生成阶段。
+要进一步缩短部署时间，请将[配置管理](../store/store-settings.md)与`scd-dump`命令一起使用以将静态部署移动到生成阶段。
 
 ## `SEARCH_CONFIGURATION`
 
 - **默认值**—_未设置_
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
 使用此环境变量可在部署之间保留自定义的搜索服务设置。 例如：
 
@@ -747,9 +742,10 @@ stage:
 ## `SESSION_CONFIGURATION`
 
 - **默认值**—_未设置_
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
-配置Redis会话存储 需要会话存储变量的`save`、`redis`、`host`、`port`和`database`选项。 例如：
+使用`SESSION_CONFIGURATION`配置会话存储。 以下示例使用与Redis兼容的会话配置结构。 仅将其用于精确Commerce版本支持的会话存储命名和服务组合。 对于Valkey支持的会话，请遵循[Valkey会话存储示例](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#apply-all-best-practice-recommendations)。
+
+请勿假定缓存变量（如`VALKEY_BACKEND`或`REDIS_BACKEND`）配置会话。 缓存和会话配置是相互独立的。 在云项目中，尽可能使用服务关系和生成的配置；不要在不替换示例主机和端口的情况下硬编码特定于环境的值。
 
 ```yaml
 stage:
@@ -760,13 +756,15 @@ stage:
         bot_lifetime: 10001
         database: 0
         disable_locking: 1
-        host: redis.internal
+        host: 'redis.internal'
         max_concurrency: 10
         max_lifetime: 10001
         min_lifetime: 100
         port: 6379
       save: redis
 ```
+
+当部署配置需要显式连接详细信息时，将`redis.internal`和`6379`替换为目标环境的会话服务主机和端口。
 
 {{merge-options}}
 
@@ -784,7 +782,6 @@ stage:
 ## `SKIP_SCD`
 
 - **默认值**— _未设置_
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
 设置为`true`可在部署阶段跳过静态内容部署。
 
@@ -799,7 +796,6 @@ stage:
 ## `UPDATE_URLS`
 
 - **默认**—`true`
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
 在部署时，将数据库中的Adobe Commerce基本URL替换为[`MAGENTO_CLOUD_ROUTES`](variables-cloud.md)变量指定的项目URL。 此配置对于本地开发非常有用，因为本地开发为本地环境设置了基本URL。 当您部署到云环境时，URL会更新，以便您可以使用项目URL访问店面和管理员。
 
@@ -830,7 +826,7 @@ stage:
 >
 >在Adobe Commerce 2.4.7和2.4.8上，设置`USE_LUA: true`可能会导致缓存损坏和GraphQL缓存缺失问题。
 >
->从Adobe Commerce 2.4.9开始，对您的Commerce版本使用Valkey缓存配置指南，并且不要依赖`USE_LUA`进行新部署。 请参阅[为默认和页面缓存配置Redis](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)。
+>从Adobe Commerce 2.4.9开始，对您的Commerce版本使用Valkey缓存配置指南，并且不要依赖`USE_LUA`进行新部署。
 
 ## `LUA_KEY`
 
@@ -855,12 +851,11 @@ stage:
 >
 >在Adobe Commerce 2.4.8上，设置`USE_LUA_ON_GC: false`可能会导致基于标记的缓存失效静默失败，并且需要完全缓存刷新才能恢复。
 >
->在2.4.9及更高版本上，按照已安装版本的[缓存服务指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)操作。
+>在2.4.9及更高版本上，按照已安装版本的[缓存服务指南](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)操作。
 
 ## `VERBOSE_COMMANDS`
 
 - **默认值**—_未设置_
-- **版本**—Adobe Commerce 2.1.4及更高版本
 
 为部署阶段执行的`bin/magento`个CLI命令启用或禁用[Symfony](https://symfony.com/doc/current/console/verbosity.html)调试详细级别。
 

@@ -3,19 +3,12 @@ title: Cloud CLI
 description: 了解magento-cloud CLI以及它如何帮助您在云基础架构项目上管理Adobe Commerce的本地开发环境。
 exl-id: 71a705f2-8672-4125-b539-b7b1621f2f64
 TQID: https://experienceleague.adobe.com/cp-mG1bOtIxmm4bKKFmABa-vrudh-paS7E6x6IlWHmU
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 862
+source-wordcount: 859
 ht-degree: 0%
 
 ---
@@ -28,14 +21,14 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->这是本地工具，仅在基于Unix的操作系统上受支持。 不支持Windows。 无法使用此页面上描述的方法将其安装在云环境中（只读）。 您只能通过以下&#x200B;**部署工作流**&#x200B;之一在云环境中安装模块。
+>此本地工具仅在基于Unix的操作系统上受支持。 不支持Windows。 无法使用此页面上描述的方法将其安装在云环境中（只读）。 您只能通过以下&#x200B;**部署工作流**&#x200B;之一在云环境中安装模块。
 >
->- [专业部署工作流](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
->- [入门部署工作流](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
+>- [专业部署工作流](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
+>- [入门部署工作流](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
 
 **安装`magento-cloud` CLI**：
 
-1. 在您的&#x200B;_本地工作站_&#x200B;上，切换到您打算克隆云项目且[文件系统所有者](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)具有&#x200B;_写入_&#x200B;访问权限的目录。
+1. 在您的&#x200B;_本地工作站_&#x200B;上，切换到您打算克隆云项目且[文件系统所有者](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)具有&#x200B;_写入_&#x200B;访问权限的目录。
 
 1. 安装`magento-cloud` CLI。
 
@@ -105,7 +98,11 @@ magento-cloud environment:list
 
 ### 重新部署环境
 
-不使用推送触发重新部署。 验证并确认要重新部署的环境。 如果内部版本处于待处理状态，请勿使用重新部署。
+不使用推送触发重新部署。 验证并确认要重新部署的环境。
+
+>[!CAUTION]
+>
+>如果内部版本处于待处理状态，请勿使用重新部署。
 
 ```bash
 magento-cloud environment:redeploy
@@ -121,7 +118,7 @@ Are you sure you want to redeploy the environment <environment-name>? [Y/n]
 
 ## Git命令
 
-您可能会注意到其中的一些命令与Git命令类似。 `magento-cloud`命令直接连接到具有其他功能的基于Git的云项目。 如果您在不使用`magento-cloud` CLI的情况下创建分支，则它不会“激活”，并且在将更改推送到远程环境时不会自动生成。 `magento-cloud` CLI命令包含激活。
+其中一些命令与Git命令类似。 `magento-cloud`命令直接连接到具有其他功能的基于Git的云项目。 如果您在不使用`magento-cloud` CLI的情况下创建分支，则它不会“激活”，并且在将更改推送到远程环境时不会自动生成。 `magento-cloud` CLI命令包含激活。
 
 要创建分支，请使用`magento-cloud`命令以激活该分支。
 
@@ -148,7 +145,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
 
 1. 在本地工作站上，转到您的项目目录。
 
-1. 切换到[文件系统所有者](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)。
+1. 切换到[文件系统所有者](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)。
 
 1. 登录到您的项目。
 
@@ -190,7 +187,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
    >
    >您可以使用`magento-cloud environment:branch <environment-name> <parent-environment-ID>`命令语法创建环境分支。 创建和激活环境分支可能需要一些额外的时间。
 
-1. 使用环境ID将任何更新的代码拉入到您的本地。 如果环境分支是新的，则不必执行此操作。
+1. 使用环境ID将任何更新的代码拉入到本地环境。 如果环境分支是新的，则无需执行此步骤。
 
    ```bash
    git pull origin <environment-ID>

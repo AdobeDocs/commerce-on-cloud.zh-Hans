@@ -1,27 +1,17 @@
 ---
 title: Commerce的云修补程序
-description: 请参阅云修补程序包的最新改进列表。
+description: 了解Commerce云修补程序的软件包的最新改进，包括安全修复、缓存增强功能和修补程序可靠性更新。
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00.000Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
 TQID: https://experienceleague.adobe.com/ZN1TwgU2EFiIezQcZZT-CglLQGY1xZcXoi-BslV3sGQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 2969
+source-wordcount: 2978
 ht-degree: 0%
 
 ---
@@ -75,7 +65,7 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 发行日期： 2026年7月14日
 
-- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-73](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-37421)中引用的安全修复。<!--MCLOUD-15066 -->
+- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-73](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-37421)中引用的安全修复。<!--MCLOUD-15066 -->
 
 ## v1.1.14
 
@@ -97,7 +87,7 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 发行日期： 2025年11月13日
 
 - ![修复图标](../../assets/fix.svg) **Symfony包** — 已添加对最新Symfony YAML包的支持。<!-- MCLOUD-14020 -->
-- ![修复图标](../../assets/fix.svg) **修补程序** — 启用JS缩小和捆绑时，修复[签出失败](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27997)问题，如&#x200B;*Commerce知识库*&#x200B;中所述。
+- ![修复图标](../../assets/fix.svg) **修补程序** — 启用JS缩小和捆绑时，修复[签出失败](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27997)问题，如&#x200B;*Commerce知识库*&#x200B;中所述。
 - ![修复图标](../../assets/fix.svg) **改进的类别视图**—MCLOUD-13752：改进类别视图。<!-- MCLOUD-13752 | MCLOUD-14139  -->
 
 ## v1.1.11
@@ -129,13 +119,13 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 发行日期： 2025年5月5日
 
-- ![新图标](../../assets/new.svg) **已将Commerce 2.4.4的修补程序更新为2.4.8** — 这是在1.1.7<!-- MCLOUD-13619 -->中发布的[CVE-2025-24434](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27148)的更新修补程序
+- ![新图标](../../assets/new.svg) **已将Commerce 2.4.4的修补程序更新为2.4.8** — 这是在1.1.7<!-- MCLOUD-13619 -->中发布的[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27148)的更新修补程序
 
 ## v1.1.6
 
 发行日期： 2025年4月24日
 
-- ![新图标](../../assets/new.svg) **已将Commerce 2.4.4的修补程序更新到2.4.7** — 此更新是已在1.1.4<!-- MCLOUD-13240 -->中发布的[CVE-2025-24434](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27149)的更新修补程序
+- ![新图标](../../assets/new.svg) **已将Commerce 2.4.4的修补程序更新到2.4.7** — 此更新是已在1.1.4<!-- MCLOUD-13240 -->中发布的[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27149)的更新修补程序
 
 ## v1.1.5
 
@@ -147,7 +137,7 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 发行日期： 2025年2月13日
 
-- ![新图标](../../assets/new.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修补程序[CVE-2025-24434](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27149)。<!-- MCLOUD-13240     - -->
+- ![新图标](../../assets/new.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修补程序[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27149)。<!-- MCLOUD-13240     - -->
 
 ## v1.1.3
 
@@ -159,13 +149,13 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 发行日期： 2024年11月5日
 
-- ![修复图标](../../assets/fix.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修复了在使用B2B模块时Adobe Commerce存在的严重[CVE-2024-45115](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27151)漏洞。<!-- MCLOUD-12980 - -->
+- ![修复图标](../../assets/fix.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修复了在使用B2B模块时Adobe Commerce存在的严重[CVE-2024-45115](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27151)漏洞。<!-- MCLOUD-12980 - -->
 
 ## v1.1.1
 
 发行日期： 2024年11月5日
 
-- ![修复图标](../../assets/fix.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修补了严重的[CVE-2024-34102](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27136) CosmicSting漏洞。<!-- MCLOUD-12980 - -->
+- ![修复图标](../../assets/fix.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修补了严重的[CVE-2024-34102](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136) CosmicSting漏洞。<!-- MCLOUD-12980 - -->
 
 ## v1.1.0
 
@@ -243,7 +233,7 @@ Adobe Commerce 2.4.5的关键修补程序：
 
 - **使用Braintree付款的订单问题** — 此修补程序解决了阻止管理员发出新订单或重新订购的关键问题。<!-- MCLOUD-9137 -->
 
-请参阅[启用Braintree付款时，管理员无法创建订单/重新订单](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27169)。
+请参阅[启用Braintree付款时，管理员无法创建订单/重新订单](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27169)。
 
 ## v1.0.17
 
@@ -292,7 +282,7 @@ Adobe Commerce 2.3.3-p1及更高版本的关键修补程序：
 
 Adobe Commerce 2.4.3和2.3.7-p1的关键修补程序：
 
-- **API速率限制问题** — 此修补程序更正了默认速率限制，该限制导致Web API无法处理数组中超过20个项目的请求。 此修补程序将提高速率限制的默认值。 请参阅Adobe Commerce [2.4.3发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
+- **API速率限制问题** — 此修补程序更正了默认速率限制，该限制导致Web API无法处理数组中超过20个项目的请求。 此修补程序将提高速率限制的默认值。 请参阅Adobe Commerce [2.4.3发行说明](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
 
 ## v1.0.11
 
@@ -300,7 +290,7 @@ Adobe Commerce 2.4.3和2.3.7-p1的关键修补程序：
 
 - **修复了应用B2B分层导航修补程序导致的问题** — 此修复程序解决了在切换存储视图后在“搜索”页面上显示的`Undefined offset`错误。<!--MCLOUD-5287-->
 
-- **Paypal结帐修补程序** — 修复了PayPal Express显示先前下订单价格的Adobe Commerce 2.3.7问题。<!--MC-42674-->
+- **PayPal结账修补程序** — 修复了PayPal Express显示之前所下订单价格的Adobe Commerce 2.3.7问题。<!--MC-42674-->
 
 - **修补程序类别支持** — 添加了对处理分配给质量修补程序的修补程序类别和源来源的支持。 类别允许客户在使用[Quality Patches Tool](https://github.com/magento/quality-patches)和全站点分析工具(SWAT)时使用过滤器和排序功能更快地查找修补程序。<!--MC-38577-->
 

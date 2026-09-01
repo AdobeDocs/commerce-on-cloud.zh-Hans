@@ -3,18 +3,18 @@ title: Adobe Commerce高级安全性
 description: 了解Advanced Security如何在Adobe Commerce on Cloud Infrastructure中添加机器人管理、高级速率限制和第7层DDoS保护。
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: '2482'
+source-wordcount: '2487'
 ht-degree: 0%
 
 ---
 
 # [!DNL Adobe Commerce Advanced Security]
 
-[!DNL Adobe Commerce Advanced Security]是与[!DNL Adobe Commerce on Cloud Infrastructure]一起使用的产品，可让您的在线商店保持快速、可用和安全。 这有助于在流量高峰期事件和自动攻击期间保护收入、减少停机时间，并维护客户信任。
+[!DNL Adobe Commerce Advanced Security]是与[!DNL Adobe Commerce on Cloud Infrastructure]一起使用的产品，可让您的在线商店保持快速、可用和安全。 这些功能有助于在流量高峰事件和自动攻击期间保护收入、减少停机时间并保持客户信任。
 
-[!DNL Adobe Commerce on Cloud Infrastructure]包含内置[第3层和第4层DDoS保护](./fastly.md#ddos-protection)以及[Web应用程序防火墙(WAF)](./fastly-waf-service.md)。 在[责任分担模型](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/security-and-compliance/shared-responsibility)中，第7层DDoS检测、机器人保护和主动IP阻止是商家责任，而[!DNL Adobe Commerce Advanced Security]旨在解决这些责任。
+[!DNL Adobe Commerce on Cloud Infrastructure]包含内置[第3层和第4层DDoS保护](./fastly.md#ddos-protection)以及[Web应用程序防火墙(WAF)](./fastly-waf-service.md)。 在[责任分担模型](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)中，第7层DDoS检测、机器人保护和主动IP阻止是商家责任，而[!DNL Adobe Commerce Advanced Security]旨在解决这些责任。
 
 [!DNL Advanced Security]通过Fastly支持的边缘安全功能扩展了店面保护，该功能提供了机器人管理、高级速率限制和第7层DDoS保护，是整合了网络边缘的规模、性能和安全性的统一边缘平台的一部分。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 - **[DDoS保护](https://docs.fastly.com/products/fastly-ddos-protection)** — 提供第7层（应用层）DDoS保护，该保护超出了所有[!DNL Adobe Commerce on Cloud Infrastructure]项目中包含的现有第3层和第4层保护。 DDoS Protection Service吸收了大规模体积攻击，并确保在分布式拒绝服务(DDoS)事件期间应用程序保持连续可用性，从而保护了在流量高峰期间的收入。
 
-- **[高级速率限制](https://www.fastly.com/documentation/guides/next-gen-waf/rules/working-with-advanced-rate-limiting-rules/)** — 提供可配置的速率限制规则，保护特定URL、API端点和应用程序资源不受滥用。 高级速率限制服务超出了Fastly CDN模块提供的[基本速率限制](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md)，可针对特定流量模式和攻击向量，从而减少基础架构紧张和云成本。
+- **[高级速率限制](https://www.fastly.com/documentation/guides/next-gen-waf/rules/working-with-advanced-rate-limiting-rules/)** — 提供可配置的速率限制规则，保护特定URL、API端点和应用程序资源不受滥用。 高级速率限制服务扩展了通过Fastly CDN模块提供的[基本速率限制](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/RATE-LIMITING.md)，以针对特定的流量模式和攻击向量，从而降低了基础架构的紧张程度和云成本。
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ ht-degree: 0%
 >
 >在2026年第3季度结束之前，客户不能直接修改或管理机器人管理规则。
 >
->有关任何规则的添加、修改或调整，请通过[支持票证](https://experienceleague.adobe.com/home?lang=zh-Hans&support-tab=home#support)联系Adobe Commerce支持部门。 支持团队将实施请求的更改。
+>有关任何规则的添加、修改或调整，请通过[支持票证](https://experienceleague.adobe.com/home?support-tab=home#support)联系Adobe Commerce支持部门。 支持团队将实施请求的更改。
 >
 >从2026年第4季度开始，Fastly计划发布一项附加功能，允许客户在Commerce管理面板中管理机器人管理规则。
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 | 特定API或URL模式的动态挑战 | 仅在需要与客户协作时配置 | 被阻止的流量显示在`Agent_response`下的New Relic日志中 |
 | 浏览器质询 | 仅在需要与客户协作时配置 | 被阻止的流量显示在`Agent_response`下的New Relic日志中 |
 
-## 可观察性 — 监视机器人保护和NGWAF活动
+## 监控机器人保护和NGWAF活动
 
 CDN日志会自动转发到客户的New Relic帐户。 有关其他详细信息，请参阅[日志管理](../monitor/log-management.md)。
 
@@ -139,7 +139,7 @@ CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置�
 
 ### 其他功能
 
-- **动态挑战** — 自动将最佳挑战分配给可疑通信。 利用私有访问令牌(PAT)无缝验证部分请求，而不影响用户体验。
+- **动态挑战** — 自动将最佳挑战分配给可疑通信。 利用专用访问令牌(PAT)无缝验证部分请求，而不会影响用户体验。
 - **欺骗技术** — 通过向攻击者返回虚假信息来解决帐户接管尝试问题，从而减少攻击并破坏其大规模操作能力。
 
 ## 选择正确的保护
@@ -198,7 +198,7 @@ CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置�
 - **[源遮蔽](./fastly.md#origin-cloaking)** — 确保通过Fastly的所有流量路由，阻止对源服务器的直接访问。
 - **[基于VCL的安全片段](./fastly-vcl-custom-snippets.md)** — 用于IP阻塞、列入允许列表和请求过滤的自定义Varnish配置语言(VCL)规则。
 
-### [!DNL Advanced Security]
+### 针对高级安全性的额外保护
 
 [!DNL Advanced Security]提供了比[!DNL Adobe Commerce on Cloud Infrastructure]附带的内置保护更多的保护，但需要额外付费：
 
@@ -216,7 +216,7 @@ CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置�
 - **合规性工具** — PCI扫描、SOC合规性报告和法规审核工具。
 - **应用程序级强化** — 基于令牌的API身份验证、查询参数规范化和缓存策略设计。
 
-有关Adobe和客户安全责任的完整概述，请参阅[责任分担模型](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/security-and-compliance/shared-responsibility)。
+有关Adobe和客户安全责任的完整概述，请参阅[责任分担模型](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)。
 
 ## 常见攻击模式和保护
 
@@ -254,7 +254,7 @@ CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置�
 
 1. 请联系您的Adobe客户团队或Adobe销售代表，讨论您项目的[!DNL Advanced Security]。
 
-1. 购买[!DNL Advanced Security]后，[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，请求[!DNL Advanced Security]启用。 包括您的[!DNL Adobe Commerce on Cloud Infrastructure]项目ID和需要启用的环境（例如，生产和暂存）。
+1. 购买[!DNL Advanced Security]后，[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，请求[!DNL Advanced Security]启用。 包括您的[!DNL Adobe Commerce on Cloud Infrastructure]项目ID和需要启用的环境（例如，生产和暂存）。
 
 1. Adobe在您的Fastly服务上激活[!DNL Advanced Security]并配置初始保护策略。 启用通常在提交票证后的几个工作日内完成。
 
@@ -262,14 +262,14 @@ CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置�
 
 >[!NOTE]
 >
->对[!DNL Advanced Security]的配置更改当前需要[提交支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 计划在未来版本中通过管理员UI进行自助配置。
+>对[!DNL Advanced Security]的配置更改当前需要[提交支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 计划在未来版本中通过管理员UI进行自助配置。
 
 ## 限制
 
 [!DNL Advanced Security]提供边缘层店面保护。 以下功能不可用，最好使用补充性解决方案来处理：
 
 - **交易级别的欺诈得分**—[!DNL Advanced Security]不评估单个付款交易的欺诈风险。 使用专用的防欺诈平台进行交易级评分。
-- **身份和访问管理(IAM)**—[!DNL Advanced Security]不管理用户身份验证、授权或会话管理。 这些仍然是客户的责任。
+- **身份和访问管理(IAM)**—[!DNL Advanced Security]不管理用户身份验证、授权或会话管理。 这些项目仍然是客户的责任。
 - **静态和动态应用程序安全测试(SAST/DAST)**—[!DNL Advanced Security]不包括代码级漏洞扫描或渗透测试。
 - **API安全** — 虽然高级速率限制可以保护API端点免遭滥用，但是未提供诸如架构验证和API网关管理等全面的API安全功能。
 - **全面防欺诈**—[!DNL Advanced Security]侧重于边缘层店面保护，不是完整的欺诈管理平台。
