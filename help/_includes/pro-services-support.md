@@ -11,11 +11,11 @@ ht-degree: 0%
 
 要在暂存或生产环境中请求并完成Pro服务升级，请执行以下步骤：
 
-1. **若要仅在`Staging`和`Production`环境中安装或更新[服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)**，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
+1. **若要仅在`Staging`和`Production`环境中安装或更新[服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)**，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
 
    在票证中，指定所需的服务更改，包括更新的`.magento.app.yaml`和`.magento/services.yaml`文件，并记下目标PHP版本。
 
-   PHP版本、编辑器更新、扩展和环境设置都是自助更改。 为兼容PHP版本，Adobe可能需要更新New Relic代理。 查看&#x200B;_应用程序配置_&#x200B;中的[PHP设置](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings)。
+   PHP版本、编辑器更新、扩展和环境设置都是自助更改。 为兼容PHP版本，Adobe可能需要更新New Relic代理。 查看&#x200B;_应用程序配置_&#x200B;中的[PHP设置](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/php-settings)。
 
    >[!IMPORTANT]
    >

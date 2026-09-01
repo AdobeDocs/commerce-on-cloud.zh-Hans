@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在2020年6月5日之前配置的项目具有多个较小的集成环境。 如果您需要更大的集成环境来进行测试和开发，请请求升级到增强集成环境。 有关详细信息，请参阅&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[集成环境请求](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27242)文章。
+>在2020年6月5日之前配置的项目具有多个较小的集成环境。 如果您需要更大的集成环境来进行测试和开发，请请求升级到增强集成环境。 有关详细信息，请参阅&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[集成环境请求](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27242)文章。
 
 ## 合并选项 {#merge-options}
 
@@ -41,15 +41,15 @@ ht-degree: 0%
 >有些&#x200B;**Pro项目**&#x200B;需要Adobe支持部门的帮助来更新`routes.yaml`文件中的路由配置和`.magento.app.yaml`文件中的cron配置。 Adobe建议先在集成环境中进行并验证所有YAML配置更改，然后将其部署到暂存环境。
 >
 >
->如果重新部署后您的更改未反映在暂存站点上，并且日志中没有相关错误消息，则您&#x200B;**必须** [提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 在票证中，清楚地描述您尝试的配置更改，并在票证中附加任何更新的YAML配置文件。
+>如果重新部署后您的更改未反映在暂存站点上，并且日志中没有相关错误消息，则您&#x200B;**必须** [提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 在票证中，清楚地描述您尝试的配置更改，并在票证中附加任何更新的YAML配置文件。
 
 ## 专业备份 {#pro-backups}
 
 >[!TIP]
 >
->要在Pro暂存和生产环境中检索特定备份，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，并在票证中注明日期、时间和时区。
+>要在Pro暂存和生产环境中检索特定备份，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，并在票证中注明日期、时间和时区。
 >
->Adobe不会&#x200B;**从自动备份中还原任何环境**。 请参阅[从暂存或生产还原数据库快照](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production)，以帮助选择还原暂存或生产快照的方法。
+>Adobe不会&#x200B;**从自动备份中还原任何环境**。 请参阅[从暂存或生产还原数据库快照](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production)，以帮助选择还原暂存或生产快照的方法。
 
 ## 重新部署警告 {#redeploy-warning}
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->要更改Pro生产和暂存环境中的服务配置，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 有关计划要求和客户可用性指导，请参阅&#x200B;_配置服务_&#x200B;中的[专业服务支持](https://experienceleague.adobe.com/en/docs/cloud-guide/services/services-yaml.md#pro-services-support)。
+>要更改Pro生产和暂存环境中的服务配置，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 有关计划要求和客户可用性指导，请参阅&#x200B;_配置服务_&#x200B;中的[专业服务支持](https://experienceleague.adobe.com/en/docs/cloud-guide/services/services-yaml.md#pro-services-support)。
 
 ## 服务更改 {#service-change-tip}
 
@@ -99,7 +99,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->要获得停滞部署的帮助，请使用&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[Commerce部署疑难解答程序](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29640)。
+>要获得停滞部署的帮助，请使用&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[Commerce部署疑难解答程序](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-29640)。
 
 ## ECE工具的更新 {#ece-tools-package}
 
