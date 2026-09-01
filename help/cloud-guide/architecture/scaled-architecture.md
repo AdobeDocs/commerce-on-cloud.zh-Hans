@@ -4,20 +4,13 @@ description: 了解分层的体系结构以及它如何根据需求进行扩展�
 feature: Cloud, Auto Scaling, Iaas, Logs
 exl-id: 45c0cf14-99e6-4643-88f0-98ebcdb3a98c
 TQID: https://experienceleague.adobe.com/jbO3zavC7ZZs6nlYlMC0Isj0QLl-wlr-opAfxOKCNao
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
-  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 2defc3f82cdada4e9576721ae7a7b3dd25a84adc
 workflow-type: tm+mt
-source-wordcount: 828
+source-wordcount: 807
 ht-degree: 0%
 
 ---
@@ -36,27 +29,27 @@ ht-degree: 0%
 
 ### 服务层
 
-数据存储、缓存和服务有三个服务节点： **OpenSearch**&#x200B;或&#x200B;**Elasticsearch**、**MariaDB**、**Redis**&#x200B;等等。 当服务层接近容量时，进行扩展的唯一方法是增加服务器大小，例如增加CPU的能力和内存。 容量受限于可用节点的大小。 由于数据库群集是为高可用性而设计的，因此不能以可靠的方式横向扩展所使用的技术。
+这三个服务节点分别运行相同的服务集：**OpenSearch**&#x200B;或&#x200B;**Elasticsearch**&#x200B;用于搜索，**MariaDB**&#x200B;用于数据库，以及&#x200B;**Redis**&#x200B;或&#x200B;**Valkey**&#x200B;用于缓存，等等。 当服务层接近容量时，您只能通过增加服务器大小（CPU和内存）垂直扩展。 容量仅限于最大可用节点大小。 由于数据库群集是为高可用性而设计的，因此不能以可靠的方式使用所使用的技术来扩展数据库节点。
 
 ![服务层缩放](../../assets/scaling-service.png)
 
-考虑一个示例，服务节点实例类型为&#x200B;_m5.2xlarge_，RAM为32-Gb。 服务（如数据库）占用相当多的内存(30 Gb)。 扩展至下一个可用实例大小&#x200B;_m5.4xlarge_&#x200B;可提供64 Gb RAM，这可使内存增加一倍，并适应不断增长的数据库需求。
+考虑一个示例，其中服务节点实例类型为&#x200B;_m5.2xlarge_，RAM为32-Gb。 服务（如数据库）占用相当多的内存(30 Gb)。 扩展至下一个可用实例大小&#x200B;_m5.4xlarge_&#x200B;可提供64 Gb RAM，这可使内存增加一倍，并适应不断增长的数据库需求。
 
 您可以根据节点类型路由流量，进一步优化服务层的性能。 缺省情况下，数据库节点与Web通信隔离。 例如，您可以选择在数据库节点上提供Web流量。
 
 ### Web层
 
-有三个Web节点用于处理请求和Web流量： **php-fpm**&#x200B;和&#x200B;**NGINX**。 除了通过增加功率和内存进行垂直扩展外，Web层还可以通过将Web服务器添加到现有群集来水平扩展（在PHP级别进行限制时）。 查看[自动缩放](autoscaling.md)以了解Web节点如何自动缩放。
+有三个Web节点用于处理请求和Web流量： **php-fpm**&#x200B;和&#x200B;**NGINX**。 除了通过增加功率和内存进行垂直扩展外，Web层还可以通过将Web服务器添加到现有群集来水平扩展（在PHP级别进行限制时）。 要了解Web节点如何自动缩放，请参阅[自动缩放](autoscaling.md)。
 
 ![Web层缩放](../../assets/scaling-web.png)
 
-这补充了服务层提供的垂直扩展。 随着服务层在规模和能力上扩展以适应不断增长的数据库和服务使用，Web层在规模、能力和实例上扩展以适应不断增长的流程请求和更高的流量要求。
+这补充了服务层提供的垂直扩展。 随着服务层进行扩展以适应不断增长的数据库，Web层会进行扩展以处理请求和流量的增加。
 
-考虑一个Web节点实例类型为&#x200B;_C5.2xlarge的示例，它有八个CPU和16-Gb RAM_。 对网站的请求数量大幅增加。 可以添加C5.2xlarge节点来处理php-fpm进程中的增加，也可以将每个实例类型更改为&#x200B;_C5.4xlarge，其中具有16个CPU和32-Gb RAM_。 添加节点可减少喘振容量不足的风险。
+请考虑一个Web节点实例类型为&#x200B;_C5.2xlarge的示例，它有八个CPU和16-Gb RAM_。 对网站的请求数量大幅增加。 要处理php-fpm进程中的增加，可以添加C5.2xlarge节点，也可以将每个实例类型更改为&#x200B;_C5.4xlarge，其中具有16个CPU和32-Gb RAM_。 添加节点可减少喘振容量不足的风险。
 
 ## 项目结构
 
-最低限度，具有可扩展体系结构的Pro项目具有6个可用节点。
+具有可扩展架构的Pro项目具有6个可用节点。
 
 - 3个Web节点c5.2xlarge（8个CPU，16 Gb RAM）
 
@@ -114,7 +107,6 @@ project-id@server-id:~$
 
 ### 日志位置
 
-日志位置会因节点而略有不同。 例如，数据库日志，如&#x200B;**MySQL错误日志**，在服务节点(`/var/log/mysql/mysql-error.log`)上可用，但在Web节点上不可用。
+日志位置会因节点而略有不同。 例如，**MySQL错误日志** (`/var/log/mysql/mysql-error.log`)在服务节点上可用，但在Web节点上不可用。
 
 每个Pro帐户都包含[New Relic日志服务](../monitor/new-relic-service.md)，该服务会自动与来自应用程序的日志数据连接以提供动态日志管理。 来自所有节点的聚合日志数据将显示在New Relic日志应用程序中，以便您可以从单个功能板排除特定节点的性能问题。
-

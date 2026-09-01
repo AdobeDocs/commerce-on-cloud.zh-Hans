@@ -4,16 +4,12 @@ description: 在配置 [!DNL Commerce] 应用程序以生成并部署到云基�
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
 exl-id: 32bd1f64-43d6-48a3-84b7-bea22f125bb0
 TQID: https://experienceleague.adobe.com/5HoI8DnJqL6pyBZRt3u-jVlQvhP1UGqN70B9fq2c9-Y
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 330a8bbd9298a28b5c007f4a79f684ce7adca9ff
 workflow-type: tm+mt
-source-wordcount: 857
+source-wordcount: 858
 ht-degree: 0%
 
 ---
@@ -31,7 +27,7 @@ ht-degree: 0%
 | [`hooks`](hooks-property.md) | 自定义生成、部署和部署后阶段的shell命令 | — | 否 |
 | [`mounts`](#mounts) | 设置路径 | 路径：<ul><li>`"var": "shared:files/var"`</li><li>`"app/etc": "shared:files/etc"`</li><li>`"pub/media": "shared:files/media"`</li><li>`"pub/static": "shared:files/static"`</li></ul> | 否 |
 | [`name`](#name) | 定义应用程序名称 | `mymagento` | 是 |
-| [`relationships`](#relationships) | 映射服务 | 服务：<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | 否 |
+| [`relationships`](#relationships) | 映射服务 | 服务：<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"`或`valkey: "cache:valkey"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | 否 |
 | [`runtime`](#runtime) | 运行时属性包含[!DNL Commerce]应用程序所需的扩展。 | 扩展：<ul><li>`xsl`</li><li>`newrelic`</li><li>`sodium`</li></ul> | 是 |
 | [`type`](#type-and-build) | 设置基本容器图像 | `php:8.3` | 是 |
 | [`variables`](variables-property.md) | 为特定Commerce版本应用环境变量 | — | 否 |
@@ -147,7 +143,7 @@ disk: 5120
 
 >[!NOTE]
 >
->对于Pro暂存环境和生产环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以更新应用程序的`mounts`和`disk`配置。 提交票证时，请指示所需的配置更改并包含`.magento.app.yaml`文件的更新版本。
+>对于Pro暂存环境和生产环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以更新应用程序的`mounts`和`disk`配置。 提交票证时，请指示所需的配置更改并包含`.magento.app.yaml`文件的更新版本。
 >
 >暂时无法在暂存或生产环境中增加磁盘存储；此过程不可逆。
 
@@ -198,7 +194,7 @@ mounts:
 
 >[!NOTE]
 >
->对于Pro暂存环境和生产环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以更新应用程序的`mounts`和`disk`配置。 提交票证时，请指示所需的配置更改并包含`.magento.app.yaml`文件的更新版本。
+>对于Pro暂存环境和生产环境，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以更新应用程序的`mounts`和`disk`配置。 提交票证时，请指示所需的配置更改并包含`.magento.app.yaml`文件的更新版本。
 
 通过将挂载Web添加到位置的[`web`](web-property.md)块，可以使挂载Web可访问。
 

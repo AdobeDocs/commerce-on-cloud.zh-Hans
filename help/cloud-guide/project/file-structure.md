@@ -3,19 +3,13 @@ title: 项目结构
 description: 了解云基础架构上Adobe Commerce的文件结构和项目模板。
 exl-id: 364e40e4-a5b3-4d23-b86d-74fc0696ac19
 TQID: https://experienceleague.adobe.com/B6fTvmHLFa5THSgLKsjl1smPC8ekPdXB9A-vyqFVwG8
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 473
+source-wordcount: 475
 ht-degree: 0%
 
 ---
@@ -29,7 +23,7 @@ ht-degree: 0%
 | 文件 | 描述 |
 | ------------------------- | ------------ |
 | `/.magento/routes.yaml` | 将`www`重定向到Apex域和`php`应用程序以提供HTTP的配置文件。 请参阅[配置路由](../routes/routes-yaml.md)。 |
-| `/.magento/services.yaml` | 定义MySQL实例(MariaDB)、Redis和OpenSearch或Elasticsearch的配置文件。 请参阅[配置服务](../services/services-yaml.md)。 |
+| `/.magento/services.yaml` | 定义MySQL实例(MariaDB)、Redis或Valkey以及OpenSearch或Elasticsearch的配置文件。 请参阅[配置服务](../services/services-yaml.md)。 |
 | `/app` | `code`文件夹用于自定义模块。 `design`文件夹用于[自定义主题](../store/custom-theme.md)。 `etc`文件夹包含应用程序的配置文件。 |
 | `/m2-hotfixes` | 用于自定义修补程序。 |
 | `/update` | 支持模块使用的服务文件夹。 |
@@ -71,7 +65,7 @@ ht-degree: 0%
 
 ## 忽略文件
 
-云基础架构项目存储库上存在具有Adobe Commerce的基本`.gitignore`文件。 在magento-cloud存储库[&#128279;](https://github.com/magento/magento-cloud/blob/master/.gitignore)中查看最新的.gitignore文件。 要添加位于`.gitignore`列表中的文件，您可以在暂存提交时使用`-f` （强制）选项：
+云基础架构项目存储库上存在具有Adobe Commerce的基本`.gitignore`文件。 在magento-cloud存储库](https://github.com/magento/magento-cloud/blob/master/.gitignore)中查看最新的[.gitignore文件。 要添加位于`.gitignore`列表中的文件，您可以在暂存提交时使用`-f` （强制）选项：
 
 ```bash
 git add <path/filename> -f
@@ -92,7 +86,7 @@ git add <path/filename> -f
    }
    ```
 
-1. 添加为基本模板设计的`.gitignore`文件。 例如，如果您需要版本2.2.6模板的`.gitignore`文件，请使用2.2.6[&#128279;](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore)的.gitignore文件作为引用。
+1. 添加为基本模板设计的`.gitignore`文件。 例如，如果您需要版本2.2.6模板的`.gitignore`文件，请使用2.2.6](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore)的[.gitignore文件作为引用。
 
 1. 清除Git缓存。
 
