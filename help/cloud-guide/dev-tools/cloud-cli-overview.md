@@ -13,9 +13,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 862
+source-wordcount: 859
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->这是本地工具，仅在基于Unix的操作系统上受支持。 不支持Windows。 无法使用此页面上描述的方法将其安装在云环境中（只读）。 您只能通过以下&#x200B;**部署工作流**&#x200B;之一在云环境中安装模块。
+>此本地工具仅在基于Unix的操作系统上受支持。 不支持Windows。 无法使用此页面上描述的方法将其安装在云环境中（只读）。 您只能通过以下&#x200B;**部署工作流**&#x200B;之一在云环境中安装模块。
 >
 >- [专业部署工作流](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
 >- [入门部署工作流](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
@@ -105,7 +105,11 @@ magento-cloud environment:list
 
 ### 重新部署环境
 
-不使用推送触发重新部署。 验证并确认要重新部署的环境。 如果内部版本处于待处理状态，请勿使用重新部署。
+不使用推送触发重新部署。 验证并确认要重新部署的环境。
+
+>[!CAUTION]
+>
+>如果内部版本处于待处理状态，请勿使用重新部署。
 
 ```bash
 magento-cloud environment:redeploy
@@ -121,7 +125,7 @@ Are you sure you want to redeploy the environment <environment-name>? [Y/n]
 
 ## Git命令
 
-您可能会注意到其中的一些命令与Git命令类似。 `magento-cloud`命令直接连接到具有其他功能的基于Git的云项目。 如果您在不使用`magento-cloud` CLI的情况下创建分支，则它不会“激活”，并且在将更改推送到远程环境时不会自动生成。 `magento-cloud` CLI命令包含激活。
+其中一些命令与Git命令类似。 `magento-cloud`命令直接连接到具有其他功能的基于Git的云项目。 如果您在不使用`magento-cloud` CLI的情况下创建分支，则它不会“激活”，并且在将更改推送到远程环境时不会自动生成。 `magento-cloud` CLI命令包含激活。
 
 要创建分支，请使用`magento-cloud`命令以激活该分支。
 
@@ -190,7 +194,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
    >
    >您可以使用`magento-cloud environment:branch <environment-name> <parent-environment-ID>`命令语法创建环境分支。 创建和激活环境分支可能需要一些额外的时间。
 
-1. 使用环境ID将任何更新的代码拉入到您的本地。 如果环境分支是新的，则不必执行此操作。
+1. 使用环境ID将任何更新的代码拉入到本地环境。 如果环境分支是新的，则无需执行此步骤。
 
    ```bash
    git pull origin <environment-ID>

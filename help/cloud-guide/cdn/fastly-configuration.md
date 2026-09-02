@@ -1,6 +1,6 @@
 ---
 title: 配置Fastly服务
-description: 了解如何为您的Adobe Commerce项目设置和配置Fastly服务。
+description: 了解如何为暂存环境和生产环境设置、配置和测试Fastly缓存、VCL代码片段和Web应用程序防火墙(WAF)。
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
 TQID: https://experienceleague.adobe.com/sDx6n5Qgt1lI3-3FDzhUR-JyKgI59woXmoVHSjKFT9w
@@ -16,9 +16,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 2254
+source-wordcount: 2216
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Fastly与Varnish合作，提供快速缓存功能以及用于静态资产的内�
 >
 >Fastly在集成环境中不可用。
 
-请完成以下步骤，在站点开发过程的早期启用、配置和测试快速访问，以启用对站点的安全访问。
+完成以下步骤以在站点开发过程的早期阶段启用、配置和测试Fastly以启用对站点的安全访问。
 
 - 获取暂存和生产环境的Fastly凭据
 - 启用Fastly CDN缓存
@@ -111,27 +111,27 @@ Adobe Commerce支持已有权访问必要的密钥，因此在寻求帮助时，
 
 {{admin-login-step}}
 
-1. 单击&#x200B;**存储** >设置> **配置** > **高级** > **系统**，然后展开&#x200B;**全页缓存**。
+1. 单击&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]**&#x200B;并展开&#x200B;**[!UICONTROL Full Page Cache]**。
 
    ![展开以选择Fastly](../../assets/cdn/fastly-menu.png)
 
-1. 在&#x200B;_缓存应用程序_&#x200B;部分中，从&#x200B;**使用系统值**&#x200B;中删除所选内容，然后从下拉列表中选择&#x200B;**Fastly CDN**。
+1. 在&#x200B;_[!UICONTROL Caching Application]_&#x200B;部分中，从&#x200B;**[!UICONTROL Use system value]**&#x200B;中删除所选内容，然后从下拉列表中选择&#x200B;**[!UICONTROL Fastly CDN]**。
 
    ![选择Fastly](../../assets/cdn/fastly-enable-admin.png)
 
-1. 展开&#x200B;**Fastly配置**&#x200B;并[选择缓存选项](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module)。
+1. 展开&#x200B;**[!UICONTROL Fastly Configuration]**&#x200B;并[选择缓存选项](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module)。
 
-1. 配置缓存选项后，单击页面顶部的&#x200B;**保存配置**。
+1. 配置缓存选项后，单击页面顶部的&#x200B;**[!UICONTROL Save Config]**。
 
 1. 根据通知清除缓存。
 
-1. 导航回&#x200B;**商店** > **设置** > **配置** > **高级** > **系统** > **Fastly配置**，以继续配置Fastly。
+1. 导航回&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** > **[!UICONTROL Fastly Configuration]**，继续配置Fastly。
 
 ### 测试Fastly凭据
 
-1. 在管理员中，导航到&#x200B;**商店** >设置> **配置** > **高级** > **系统** > **快速配置**。
+1. 在管理员中，导航到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** > **[!UICONTROL Fastly Configuration]**。
 
-1. 如果需要，请为您的项目环境添加&#x200B;**Fastly服务ID**&#x200B;和&#x200B;**API令牌**&#x200B;值。
+1. 如果需要，请为您的项目环境添加&#x200B;**[!UICONTROL Fastly service ID]**&#x200B;和&#x200B;**[!UICONTROL API token]**&#x200B;值。
 
    ![Fastly凭据管理员](../../assets/cdn/fastly-credentials-admin-ui.png)
 
@@ -139,9 +139,9 @@ Adobe Commerce支持已有权访问必要的密钥，因此在寻求帮助时，
    >
    >请勿选择链接以创建Fastly API令牌。 请改用Adobe[&#128279;](#get-fastly-credentials)提供的Fastly凭据（服务ID和API令牌）。
 
-1. 单击&#x200B;**测试凭据**。
+1. 单击&#x200B;**[!UICONTROL Test credentials]**。
 
-1. 如果测试成功，请单击&#x200B;**保存配置**，然后清除缓存。
+1. 如果测试成功，请单击&#x200B;**[!UICONTROL Save Config]**，然后清除缓存。
 
    如果测试失败，请验证正确的服务ID和API令牌值是否与当前环境的凭据匹配。
 
@@ -161,7 +161,7 @@ Adobe Commerce支持已有权访问必要的密钥，因此在寻求帮助时，
 
 **要上传Fastly VCL**：
 
-1. 在&#x200B;_Fastly配置_&#x200B;部分中，单击&#x200B;**将VCL上传到Fastly**，如下图所示。
+1. 在&#x200B;_[!UICONTROL Fastly Configuration]_&#x200B;部分中，单击&#x200B;**[!UICONTROL Upload VCL to Fastly]**，如下图所示。
 
    ![将Magento VCL上传到Fastly](../../assets/cdn/fastly-upload-vcl-admin.png)
 
@@ -190,7 +190,7 @@ Adobe提供了一个域验证的Let’s Encrypt SSL/TLS证书，为来自Fastly�
 >
 >如果您有一个非活动的生产域，请使用ACME质询CNAME记录进行域验证。 提前将记录添加到您的DNS配置可让Adobe在站点启动之前为SSL/TLS证书配置正确的域。 在启动到生产环境之前，必须使用Adobe提供的CNAME记录替换这些占位符记录。
 
-域验证完成后，Adobe会配置让我们加密TLS/SSL证书，并将其上传到实时暂存或生产环境。 此过程可能需要12小时。 Adobe建议您提前几天完成DNS配置更新，以防止网站开发和网站启动出现延迟。
+域验证完成后，Adobe会配置让我们加密TLS/SSL证书，并将其上传到实时暂存或生产环境。 此过程可能需要12小时。 Adobe建议您提前几天完成DNS配置更新，以防止网站开发和启动延迟。
 
 ## 使用开发设置更新DNS配置
 
@@ -297,7 +297,7 @@ Adobe提供了一个域验证的Let’s Encrypt SSL/TLS证书，为来自Fastly�
    curl -vo /dev/null -H Fastly-Debug:1 --resolve <live-URL-hostname>:443:<live-IP-address>
    ```
 
-1. 在响应中，验证[标头](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers)以确保Fastly正常工作。 例如，您应在响应中看到以下唯一标头：
+1. 在响应中，验证[标头](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers)以确保Fastly正常工作。 例如，请参阅响应中的以下唯一标头：
 
    ```http
    < Fastly-Magento-VCL-Uploaded: 1.2.228

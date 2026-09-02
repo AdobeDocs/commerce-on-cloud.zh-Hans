@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 50c653aa6f78056f3fa8fe300fd224693a4460b0
 workflow-type: tm+mt
-source-wordcount: 1369
+source-wordcount: 1371
 ht-degree: 0%
 
 ---
@@ -283,6 +283,7 @@ type: warning
 由于每个服务都在一个单独的容器中运行，因此服务日志在集成环境中不可用。 云基础架构上的Adobe Commerce仅允许访问集成环境中的Web服务器容器。 以下服务日志位置适用于专业生产和暂存环境：
 
 - **Redis日志**： `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
+- **Valkey日志**： `/var/log/platform/<project-ID>*/valkey-server-<project-ID>*.log`
 - **Elasticsearch日志**： `/var/log/elasticsearch/elasticsearch.log`
 - **Java垃圾回收日志**： `/var/log/elasticsearch/gc.log`
 - **邮件日志**： `/var/log/mail.log`

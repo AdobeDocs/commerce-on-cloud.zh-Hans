@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 326
+source-wordcount: 328
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 智能向导可帮助您确定云配置是否遵循最佳实践。 可用的向导有助于进行以下配置：
 
 - 最少的部署停机时间的理想状态
-- 数据库和Redis的负载平衡配置
+- 数据库和Redis或Valkey的负载平衡配置
 - 用于按需、构建阶段或部署阶段的静态内容部署(SCD)
 
 每个Smart Wizard命令都会提供验证响应，并在适用的情况下提供正确配置的建议。

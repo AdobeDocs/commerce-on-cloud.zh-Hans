@@ -1,6 +1,6 @@
 ---
 title: 云基础架构上的Commerce
-description: 了解如何在云基础架构上构建、部署与管理 Commerce。
+description: 了解如何在云基础架构上构建、部署和管理Adobe Commerce，这是一个跨AWS和Azure区域托管的安全平台即服务(PaaS)。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
 TQID: https://experienceleague.adobe.com/-sgz85xapPKNipyFVB4yMrLilEku3ff5IJg3OddymsA
 product_v2:
@@ -16,19 +16,19 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2026-08-25
-source-git-commit: ccff84c55425e8e4f91812b54f5e6ccf9a700104
+last-update: 2026-08-28
+source-git-commit: d5d947f9858ab15e2e5daed7848163846580f883
 workflow-type: tm+mt
-source-wordcount: 324
-ht-degree: 3%
+source-wordcount: 356
+ht-degree: 0%
 
 ---
 
 # 云基础架构上的Commerce
 
-云基础架构上的Adobe Commerce提供了一个自动托管平台，该平台提供了一种用于在云原生环境中构建、部署和管理[!DNL Commerce]应用程序的&#x200B;**自助服务**&#x200B;方法。 云基础架构上的Adobe Commerce提供了其他功能，使其与内部部署Adobe Commerce和Magento Open Source平台有所不同：
+云基础架构上的Adobe Commerce提供了一个自动托管平台，该平台提供了一种用于在云原生环境中构建、部署和管理[!DNL Commerce]应用程序的&#x200B;**自助服务**&#x200B;方法。 Adobe Commerce on cloud基础架构附带了其他功能，这些功能与本地Adobe Commerce和Magento Open Source平台有所不同：
 
-- 预配置的基础结构，包括PHP、MySQL (MariaDB)、Redis、消息队列服务（[!DNL RabbitMQ]或[!DNL ActiveMQ]）以及支持的搜索引擎技术。
+- 预配置的基础结构，包括PHP、MySQL (MariaDB)、Redis或Valkey、消息队列服务（[!DNL RabbitMQ]或[!DNL ActiveMQ]）以及支持的搜索引擎技术。
 - 基于Git的工作流，具有自动构建和部署功能，可在您每次推送Platform as a Service (PaaS)环境中的代码更改时实现高效的快速开发和连续部署。
 - 高度可定制的环境配置文件和命令行界面(CLI)管理和部署工具。
 - Amazon Web Services (AWS)托管，为在线销售和零售提供可扩展且安全的环境。
@@ -58,7 +58,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
-> 仅在中国和俄罗斯进行内部部署。
+> 云基础架构上的Adobe Commerce在中国或俄罗斯不可用。 在这些国家，仅支持内部部署。
 
 ## Azure地区
 
@@ -66,7 +66,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
-> 仅在中国和俄罗斯进行内部部署。 所有需要集成环境的商家都必须使用美国地区。
+> 在中国和俄罗斯，仅支持内部部署。 所有需要集成环境的商家都必须使用美国地区。
 
 ## Adobe Commerce文档
 

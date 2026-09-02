@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 473
+source-wordcount: 475
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 | 文件 | 描述 |
 | ------------------------- | ------------ |
 | `/.magento/routes.yaml` | 将`www`重定向到Apex域和`php`应用程序以提供HTTP的配置文件。 请参阅[配置路由](../routes/routes-yaml.md)。 |
-| `/.magento/services.yaml` | 定义MySQL实例(MariaDB)、Redis和OpenSearch或Elasticsearch的配置文件。 请参阅[配置服务](../services/services-yaml.md)。 |
+| `/.magento/services.yaml` | 定义MySQL实例(MariaDB)、Redis或Valkey以及OpenSearch或Elasticsearch的配置文件。 请参阅[配置服务](../services/services-yaml.md)。 |
 | `/app` | `code`文件夹用于自定义模块。 `design`文件夹用于[自定义主题](../store/custom-theme.md)。 `etc`文件夹包含应用程序的配置文件。 |
 | `/m2-hotfixes` | 用于自定义修补程序。 |
 | `/update` | 支持模块使用的服务文件夹。 |

@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
 workflow-type: tm+mt
-source-wordcount: 799
+source-wordcount: 816
 ht-degree: 0%
 
 ---
@@ -174,7 +174,7 @@ OpenSearch允许您从任何来源、任何格式获取数据，并实时搜索�
    }
    ```
 
-{{pro-update-service}}
+有关Pro服务升级计划要求和客户可用性指导，请参阅&#x200B;_配置服务_&#x200B;中的[Pro服务支持](services-yaml.md#pro-services-support)。
 
 ## 重新启动OpenSearch服务
 

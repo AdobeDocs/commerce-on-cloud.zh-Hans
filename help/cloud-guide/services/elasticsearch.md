@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
 workflow-type: tm+mt
-source-wordcount: 739
+source-wordcount: 783
 ht-degree: 0%
 
 ---
@@ -204,7 +204,7 @@ ht-degree: 0%
 
    - 将`services.yaml`文件中的Elasticsearch服务版本更改为与Elasticsearch PHP客户端兼容的版本。
 
-     {{pro-update-service}}
+     有关Pro服务升级计划要求和客户可用性指导，请参阅&#x200B;_配置服务_&#x200B;中的[Pro服务支持](services-yaml.md#pro-services-support)。
 
 ## 重新启动Elasticsearch服务
 
@@ -231,7 +231,7 @@ elasticsearch:
 ```
 
 如果您使用Elastic Suite第三方插件，则必须[将`ece-tools`包](../dev-tools/update-package.md)更新为版本2002.0.19或更高版本。
-设置Elastic Suite时，将配置设置添加到`ELASTICSUITE_CONFIGURATION`部署变量。此配置跨部署保存设置。
+设置Elastic Suite时，将配置设置添加到`ELASTICSUITE_CONFIGURATION`部署变量。 此配置跨部署保存设置。
 
 ### 删除Elasticsearch的插件
 

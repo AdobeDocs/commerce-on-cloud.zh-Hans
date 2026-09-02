@@ -15,9 +15,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
 workflow-type: tm+mt
-source-wordcount: 1024
+source-wordcount: 1050
 ht-degree: 0%
 
 ---
@@ -29,18 +29,18 @@ ht-degree: 0%
 根据环境类型（“开发”、“暂存”或“生产”），您的升级任务可能包括：
 
 - 将第三方扩展升级到支持的最新版本。
-- 对于Pro项目，您必须提交Adobe Commerce支持工单以在暂存环境和生产环境中安装或更新服务。
-- 对于开发/集成/PR分支：
-  - 使用MariaDB (MySQL)、OpenSearch、RabbitMQ和Redis的新版本更新`.magento/services.yaml`文件，以便与新的Adobe Commerce版本兼容。
-  - 使用挂接和环境变量的新设置更新`.magento.app.yaml`文件。
+- 使用MariaDB (MySQL)、OpenSearch、RabbitMQ以及Redis或Valkey所需的服务版本更新`.magento/services.yaml`文件，以便它们保持与目标Adobe Commerce版本兼容。
+  - 对于开发/集成/PR分支，这些更改将直接用作环境配置的一部分。
+  - 对于Pro暂存和生产环境，Adobe Commerce支持会执行实际的服务安装或更新，但您仍必须保持`.magento/services.yaml`最新、完整和有效，因为其内容在部署期间经过验证。
+- 使用挂接和环境变量的新设置更新`.magento.app.yaml`文件。
 
 {{upgrade-tip}}
 
-{{pro-update-service}}
+{{$include /help/_includes/pro-services-support.md}}
 
 ## 配置文件
 
-在升级应用程序之前，必须更新项目配置文件，以便考虑对云基础架构或应用程序上Adobe Commerce的默认配置设置所做的更改。 可以在[magento-cloud GitHub存储库](https://github.com/magento/magento-cloud)中找到最新的默认值。
+要考虑对云基础架构或应用程序上Adobe Commerce的默认配置设置所做的更改，请在升级应用程序之前更新项目配置文件。 可以在[magento-cloud GitHub存储库](https://github.com/magento/magento-cloud)中找到最新的默认值。
 
 ### composer.json
 
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 ## 环境备份
 
-我们建议在升级之前创建实例的备份。 使用以下步骤可备份集成、暂存和生产环境。
+Adobe建议在升级之前创建实例的备份。 使用以下步骤可备份集成、暂存和生产环境。
 
 **要备份集成环境数据库和代码**：
 
@@ -164,7 +164,7 @@ ht-degree: 0%
 
    **方法2**： [查看可用的修补程序和状态](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **方法3**： [搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)
+   **方法3**： [搜索修补程序](https://experienceleague.adobe.com/zh-hans/tools/commerce-quality-patches)
 
 
 1. 添加、提交和推送代码更改。
@@ -185,7 +185,7 @@ ht-degree: 0%
 
    Composer封送的文件属于新版本的Adobe Commerce，用于覆盖这些相同文件的过时版本。 目前，Adobe Commerce中已禁用封送处理，因此您必须将封送处理文件添加到源代码管理。
 
-1. 等待部署完成。
+1. 要完成升级，请等待部署。
 
 1. 通过使用SSH登录并检查版本，在集成、暂存或生产环境中验证升级。
 
@@ -213,9 +213,9 @@ ht-degree: 0%
 
 1. 推送到并在您的集成环境中测试。
 
-1. 推送到暂存环境以在预生产环境中测试。
+1. 要在预生产环境中进行测试，请推送至暂存环境。
 
-Adobe强烈建议在&#x200B;_之前升级您的生产环境_，包括在您的站点启动过程中升级的扩展。
+Adobe建议在&#x200B;_之前升级您的生产环境_，包括在您的站点启动过程中升级的扩展。
 
 >[!NOTE]
 >

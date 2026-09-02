@@ -1,6 +1,6 @@
 ---
 title: Commerce的云修补程序
-description: 请参阅云修补程序包的最新改进列表。
+description: 了解Commerce云修补程序的软件包的最新改进，包括安全修复、缓存增强功能和修补程序可靠性更新。
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00.000Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 2969
+source-wordcount: 2978
 ht-degree: 0%
 
 ---
@@ -300,7 +300,7 @@ Adobe Commerce 2.4.3和2.3.7-p1的关键修补程序：
 
 - **修复了应用B2B分层导航修补程序导致的问题** — 此修复程序解决了在切换存储视图后在“搜索”页面上显示的`Undefined offset`错误。<!--MCLOUD-5287-->
 
-- **Paypal结帐修补程序** — 修复了PayPal Express显示先前下订单价格的Adobe Commerce 2.3.7问题。<!--MC-42674-->
+- **PayPal结账修补程序** — 修复了PayPal Express显示之前所下订单价格的Adobe Commerce 2.3.7问题。<!--MC-42674-->
 
 - **修补程序类别支持** — 添加了对处理分配给质量修补程序的修补程序类别和源来源的支持。 类别允许客户在使用[Quality Patches Tool](https://github.com/magento/quality-patches)和全站点分析工具(SWAT)时使用过滤器和排序功能更快地查找修补程序。<!--MC-38577-->
 

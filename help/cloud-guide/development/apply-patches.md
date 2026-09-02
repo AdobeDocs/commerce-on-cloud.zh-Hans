@@ -1,6 +1,6 @@
 ---
 title: 应用修补程序
-description: 了解如何在Adobe Commerce on cloud infrastructure项目中应用修补程序。
+description: 了解如何使用ECE-Tools和Quality Patches Tool将必需、可选和自定义的修补程序应用到云基础架构项目上的Adobe Commerce。
 feature: Cloud, Upgrade
 exl-id: 923c1e43-45da-450f-bdfc-de84a901400d
 TQID: https://experienceleague.adobe.com/SyS-AIRHp0LW7Z4JwZw2FNtbvy9FVzISUID12MjlMrc
@@ -9,9 +9,9 @@ product_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: f3a3403ffd55c2e08e20592fa719f42a9473e72d
 workflow-type: tm+mt
-source-wordcount: 911
+source-wordcount: 922
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 **要在本地开发环境中应用单个修补程序**：
 
-1. 将“QUALITY_PATCHES”变量添加到`.magento.env.yaml`文件中，并在下面列出所需的修补程序。
+1. 将`QUALITY_PATCHES`变量添加到`.magento.env.yaml`文件中并在下面列出所需的修补程序。
 
    ```yaml
    stage:
@@ -194,7 +194,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 **要在云环境中应用和测试自定义修补程序**：
 
-1. 在项目根目录下，创建一个名为`m2-hotfixes`的目录（如果该目录不存在）
+1. 在项目根目录下，创建一个名为`m2-hotfixes`的目录（如果该目录不存在）。
 
    ```bash
    mkdir m2-hotfixes

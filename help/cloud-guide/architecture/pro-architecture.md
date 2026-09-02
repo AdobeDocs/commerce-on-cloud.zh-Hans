@@ -1,6 +1,6 @@
 ---
 title: 专业体系结构
-description: 了解Pro架构支持的环境。
+description: 了解Pro环境体系结构，包括主环境、集成环境、暂存环境和生产环境，以及群集扩展和备份。
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: a6eb562b-1b97-4285-a271-989d9fddc4f9
@@ -18,9 +18,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: bdc2bedd2696e7dde0ffb55f846a8bced2dbd25d
 workflow-type: tm+mt
-source-wordcount: 1619
+source-wordcount: 1621
 ht-degree: 0%
 
 ---
@@ -46,6 +46,8 @@ ht-degree: 0%
 | 包括New Relic服务 | 否 | APM | APM + NRI |
 | 自动备份 | 否 | 是 | 是 |
 
+**APM**&#x200B;引用[!DNL New Relic's]应用程序性能监视。
+
 >[!NOTE]
 >
 >Adobe提供了Cloud Docker for Commerce工具，可用于部署到本地Cloud Docker环境，以便您可以开发和测试Adobe Commerce项目。 请参阅[Docker开发](../dev-tools/cloud-docker.md)。
@@ -64,7 +66,7 @@ ht-degree: 0%
 
 - 请&#x200B;**不**&#x200B;根据`master`分支创建分支。 使用集成环境创建用于开发的活动分支。
 
-- 请勿使用`master`环境进行开发、UAT或性能测试
+- 请勿使用`master`环境进行开发、用户验收测试(UAT)或性能测试
 
 ### 集成环境
 
@@ -99,11 +101,11 @@ ht-degree: 0%
 
 - 集成环境体系结构与暂存和生产体系结构不匹配
 
-- 请勿使用`integration`环境进行开发测试、性能测试或用户验收测试(UAT)
+- 请勿将`integration`环境用于开发测试、性能测试或UAT
 
 - 请勿使用`integration`环境来测试B2B的Adobe Commerce功能
 
-- 无法从数据库生产或暂存还原集成环境中的数据库
+- 您无法从生产或暂存数据库中还原集成环境中的数据库
 
 {{enhanced-integration-envs}}
 
@@ -160,11 +162,9 @@ ht-degree: 0%
   - `pub/static`
   - `app/etc`
 
-- **Redis** — 每个虚拟机一个服务器，只有一个处于活动状态，另外两个作为副本
+- **Redis**&#x200B;或&#x200B;**Valkey** — 每个VM一台服务器，只有一个处于活动状态，其他两个作为副本。
 
-- **Elasticsearch** — 在Cloud Infrastructure 2.2到2.4.3-p2上搜索Adobe Commerce
-
-- **OpenSearch** — 在云基础架构2.3.7-p3、2.4.3-p2、2.4.4及更高版本上搜索Adobe Commerce
+- **OpenSearch** — 在云基础架构2.4.4及更高版本上搜索Adobe Commerce
 
 - **Galera** — 数据库群集，每个节点有一个MariaDB MySQL数据库，每个数据库的唯一ID的自动增量设置为3
 
@@ -191,7 +191,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->装入的卷仅包含/引用[可写装入](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)，将不包含所有`app/`目录。 至于其他文件，它们由[生成和部署过程](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)创建/生成，您还必须检查Git存储库中是否有剩余文件。
+>装入的卷仅包含或引用了[可写装入](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)，而不包含所有`app/`目录。 至于其他文件，它们由[生成和部署过程](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)创建/生成，您还必须检查Git存储库中是否有剩余文件。
 
 {{pro-backups}}
 
@@ -213,11 +213,11 @@ Adobe会根据以下数据保留策略保留自动备份：
 | 第8周至第12周 | 双周备份 |
 | 第3个月至第5个月 | 每月一次备份 |
 
-此策略可能因您的云基础架构计划而异。
+此策略因您的云基础架构计划而异。
 
 ### 恢复时间目标
 
-RTO取决于存储的大小。 大型EBS卷需要更多时间来恢复。 恢复时间可能因数据库的大小而异。 有关详细信息，请联系您的Adobe客户成功经理。
+RTO取决于存储的大小。 大型EBS卷需要更多时间来恢复。 恢复时间因数据库的大小而异。 有关详细信息，请联系您的Adobe客户成功经理。
 
 ## 专业群集扩展
 
