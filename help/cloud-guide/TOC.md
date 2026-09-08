@@ -27,7 +27,7 @@ ht-degree: 9%
   + [专业工作流程](architecture/pro-develop-deploy-workflow.md)
   + [可扩展的体系结构](architecture/scaled-architecture.md)
   + [自动缩放](architecture/autoscaling.md)
-+ [快速入门](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
++ [快速入门](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/start/overview)
 + 发行说明 {#release-notes}
   + [Cloud tools suite](release-notes/cloud-tools-suite.md)
   + [ECE-Tools包](release-notes/ece-tools-package.md)
