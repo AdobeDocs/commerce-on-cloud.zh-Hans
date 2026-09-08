@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
 workflow-type: tm+mt
-source-wordcount: 3631
+source-wordcount: 3685
 ht-degree: 0%
 
 ---
@@ -40,11 +40,19 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.13 {#latest}
+## v2002.2.14 {#latest}
+
+发行日期： 2026年9月08日
+
+- ![修复图标](../../assets/fix.svg) **Valkey 8.5功能测试覆盖率** — 已改进Symfony L2缓存配置的覆盖率。<!-- MCLOUD-15487 -->
+- ![修复图标](../../assets/fix.svg) **缓存改进** — 解决了页面缓存隔离问题。<!-- MCLOUD-15509 -->
+- ![修复图标](../../assets/fix.svg) **Redis和Valkey改进** — 增强了`REDIS_BACKEND`和`VALKEY_BACKEND`处理功能，可支持旧版和新版(Symfony Cache， 2.4.9+) Redis和Valkey缓存配置。<!-- MCLOUD-15546 -->
+
+## v2002.2.13
 
 发行日期： 2026年8月19日
 
-- ![修复图标](../../assets/fix.svg) **缓存改进**&#x200B;增强了Symfony_l2缓存对Redis和Valkey从属连接的支持，并解决了相关的缓存、标记索引、预加载和静态部署问题。<!-- MCLOUD-15433 -->
+- ![修复图标](../../assets/fix.svg) **缓存改进** — 增强了Symfony_l2缓存对Redis和Valkey从属连接的支持，并解决了相关的缓存、标记索引、预加载和静态部署问题。<!-- MCLOUD-15433 -->
 
 ## v2002.2.12
 
