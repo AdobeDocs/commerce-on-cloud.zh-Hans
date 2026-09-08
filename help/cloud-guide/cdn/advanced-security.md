@@ -3,9 +3,9 @@ title: Adobe Commerce高级安全性
 description: 了解Advanced Security如何在Adobe Commerce on Cloud Infrastructure中添加机器人管理、高级速率限制和第7层DDoS保护。
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
+source-git-commit: 6bab2df0240c8b74a455de73fbf7a7645a46e904
 workflow-type: tm+mt
-source-wordcount: '2487'
+source-wordcount: '2514'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,11 @@ ht-degree: 0%
 
 [!DNL Adobe Commerce Advanced Security]是与[!DNL Adobe Commerce on Cloud Infrastructure]一起使用的产品，可让您的在线商店保持快速、可用和安全。 这些功能有助于在流量高峰事件和自动攻击期间保护收入、减少停机时间并保持客户信任。
 
-[!DNL Adobe Commerce on Cloud Infrastructure]包含内置[第3层和第4层DDoS保护](./fastly.md#ddos-protection)以及[Web应用程序防火墙(WAF)](./fastly-waf-service.md)。 在[责任分担模型](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/security-and-compliance/shared-responsibility)中，第7层DDoS检测、机器人保护和主动IP阻止是商家责任，而[!DNL Adobe Commerce Advanced Security]旨在解决这些责任。
+>[!TIP]
+>
+>在New Relic中使用[Adobe Commerce流量分析](../monitor/traffic-insights/overview.md)应用程序来分析您的Fastly流量和机器人模式，并确定高级安全性是否适合您。
+
+[!DNL Adobe Commerce on Cloud Infrastructure]包含内置[第3层和第4层DDoS保护](./fastly.md#ddos-protection)以及[Web应用程序防火墙(WAF)](./fastly-waf-service.md)。 在[责任分担模型](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)中，第7层DDoS检测、机器人保护和主动IP阻止是商家责任，而[!DNL Adobe Commerce Advanced Security]旨在解决这些责任。
 
 [!DNL Advanced Security]通过Fastly支持的边缘安全功能扩展了店面保护，该功能提供了机器人管理、高级速率限制和第7层DDoS保护，是整合了网络边缘的规模、性能和安全性的统一边缘平台的一部分。
 
@@ -42,7 +46,7 @@ ht-degree: 0%
 >
 >在2026年第3季度结束之前，客户不能直接修改或管理机器人管理规则。
 >
->有关任何规则的添加、修改或调整，请通过[支持票证](https://experienceleague.adobe.com/home?lang=zh-Hans&support-tab=home#support)联系Adobe Commerce支持部门。 支持团队将实施请求的更改。
+>有关任何规则的添加、修改或调整，请通过[支持票证](https://experienceleague.adobe.com/home?support-tab=home#support)联系Adobe Commerce支持部门。 支持团队将实施请求的更改。
 >
 >从2026年第4季度开始，Fastly计划发布一项附加功能，允许客户在Commerce管理面板中管理机器人管理规则。
 
@@ -216,7 +220,7 @@ CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置�
 - **合规性工具** — PCI扫描、SOC合规性报告和法规审核工具。
 - **应用程序级强化** — 基于令牌的API身份验证、查询参数规范化和缓存策略设计。
 
-有关Adobe和客户安全责任的完整概述，请参阅[责任分担模型](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/security-and-compliance/shared-responsibility)。
+有关Adobe和客户安全责任的完整概述，请参阅[责任分担模型](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)。
 
 ## 常见攻击模式和保护
 
@@ -254,7 +258,7 @@ CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置�
 
 1. 请联系您的Adobe客户团队或Adobe销售代表，讨论您项目的[!DNL Advanced Security]。
 
-1. 购买[!DNL Advanced Security]后，[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，请求[!DNL Advanced Security]启用。 包括您的[!DNL Adobe Commerce on Cloud Infrastructure]项目ID和需要启用的环境（例如，生产和暂存）。
+1. 购买[!DNL Advanced Security]后，[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，请求[!DNL Advanced Security]启用。 包括您的[!DNL Adobe Commerce on Cloud Infrastructure]项目ID和需要启用的环境（例如，生产和暂存）。
 
 1. Adobe在您的Fastly服务上激活[!DNL Advanced Security]并配置初始保护策略。 启用通常在提交票证后的几个工作日内完成。
 
@@ -262,7 +266,7 @@ CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置�
 
 >[!NOTE]
 >
->对[!DNL Advanced Security]的配置更改当前需要[提交支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 计划在未来版本中通过管理员UI进行自助配置。
+>对[!DNL Advanced Security]的配置更改当前需要[提交支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 计划在未来版本中通过管理员UI进行自助配置。
 
 ## 限制
 
