@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
+source-git-commit: 2b2dee7e34c753ad18c7df6886557de1e57508d6
 workflow-type: tm+mt
-source-wordcount: 2997
+source-wordcount: 3027
 ht-degree: 0%
 
 ---
@@ -44,7 +44,13 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 <!--Add release notes below-->
 
-## v1.1.20 {#latest}
+## v1.1.21 {#latest}
+
+发行日期： 2026年9月08日
+
+- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-146](https://helpx.adobe.com/security/products/magento/apsb26-146.html)中引用的安全修复。<!--MCLOUD-15587 -->
+
+## v1.1.20
 
 发行日期： 2026年9月08日
 

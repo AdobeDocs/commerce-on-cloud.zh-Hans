@@ -6,10 +6,10 @@ breadcrumb-title: Commerce on Cloud
 user-guide-description: 了解如何在云基础架构上管理 Adobe Commerce 应用程序。
 product: magento
 feature: Cloud
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 6bab2df0240c8b74a455de73fbf7a7645a46e904
 workflow-type: tm+mt
-source-wordcount: '390'
-ht-degree: 8%
+source-wordcount: '398'
+ht-degree: 9%
 
 ---
 
@@ -183,3 +183,7 @@ ht-degree: 8%
       + [数据摄取](monitor/ingest-data.md)
       + [跟踪部署](monitor/track-deployments.md)
     + [日志管理](monitor/log-management.md)
+    + 流量分析 {#traffic-insights}
+      + [概述](monitor/traffic-insights/overview.md)
+      + [了解应用程序](monitor/traffic-insights/understanding-the-app.md)
+      + [调查行动手册](monitor/traffic-insights/investigation-playbook.md)
