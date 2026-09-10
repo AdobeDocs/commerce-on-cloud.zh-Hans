@@ -10,9 +10,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 32426a82db5a81306c1dcc670a8268a9f5959874
 workflow-type: tm+mt
-source-wordcount: 450
+source-wordcount: 449
 ht-degree: 0%
 
 ---
@@ -101,5 +101,5 @@ Ideal state is configured
 
 ## Adobe修补程序和自定义修补程序
 
-`ece-tools`包包含对[magento/magento-cloud-patches](https://github.com/magento/magento-cloud-patches)包的依赖项，该包提供了Adobe修补程序和修补程序，可改进所有Adobe Commerce版本与云环境的集成，并支持快速交付关键修补程序。 “ ”还提供了自定义修补程序，可将其添加到Adobe Commerce on cloud infrastructure项目。 请参阅[应用修补程序](../development/apply-patches.md)。
+`ece-tools`包包含对`magento/magento-cloud-patches`编辑器包的依赖项（请参阅[Commerce的云修补程序](../release-notes/cloud-patches.md)），该包提供了Adobe修补程序和修补程序，可改进所有Adobe Commerce版本与云环境的集成，并支持快速交付关键修补程序。 该软件包还提供了自定义修补程序，您可将其添加到Adobe Commerce on cloud infrastructure项目。 请参阅[应用修补程序](../development/apply-patches.md)。
 

@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
+source-git-commit: 9e21b435447f7b87b1105f9d435314b5a3efb072
 workflow-type: tm+mt
-source-wordcount: 3685
+source-wordcount: 3676
 ht-degree: 0%
 
 ---
@@ -461,7 +461,7 @@ ht-degree: 0%
 
   - ![新图标](../../assets/new.svg) **为Commerce的Cloud Docker添加了单独的包** — 将Docker包与`ece-tools`包分离，以保持代码质量并提供独立的发行版。 从[magento-cloud-docker](https://github.com/magento/magento-cloud-docker) GitHub存储库中管理与`ece-tools`相关的更新和修复。<!--MAGECLOUD-2927-->
 
-  - ![新图标](../../assets/new.svg) **更新了修补功能** — 已将修补功能从ECE-Tools包移动到单独的[magento-cloud-patches](https://github.com/magento/magento-cloud-patches)包。 在部署期间，`ece-tools`使用新包来应用修补程序。 请参阅[Cloud修补程序发行说明](cloud-patches.md).<!--MAGECLOUD-4567-->
+  - ![新图标](../../assets/new.svg) **更新了修补功能** — 已将修补功能从ECE-Tools包移动到单独的`magento-cloud-patches`包。 在部署期间，`ece-tools`使用新包来应用修补程序。 请参阅[Cloud修补程序发行说明](cloud-patches.md).<!--MAGECLOUD-4567-->
 
   - ![新图标](../../assets/new.svg) **已更新编辑器依赖项** — 已更新云基础架构上Adobe Commerce的`composer.json`文件，该文件依赖于`magento/magento-cloud-docker`包。 现在，`ece-tools`包含[`Cloud Tools Suite for Commerce`](cloud-tools-suite.md)中所有包的依赖项。 安装或更新`ece-tools`时，会自动安装和更新这些软件包。
 
