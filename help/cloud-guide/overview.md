@@ -5,25 +5,31 @@ exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
 TQID: https://experienceleague.adobe.com/-sgz85xapPKNipyFVB4yMrLilEku3ff5IJg3OddymsA
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
 subfeature_v2:
   - id: f8ddfd3b-6194-46e8-a176-0e918039be56
+    internal-label: Cloud architecture
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2026-09-08
-source-git-commit: 2bd8125217ddba99d38629d5d01b2875a5392841
+    internal-label: Security
+last-update: 2026-09-11
+source-git-commit: 17ac172f51966dedf3317d87cb9e49d3dd946f06
 workflow-type: tm+mt
-source-wordcount: 356
+source-wordcount: '356'
 ht-degree: 0%
-
 ---
-
 # 云基础架构上的Commerce
 
 云基础架构上的Adobe Commerce提供了一个自动托管平台，该平台提供了一种用于在云原生环境中构建、部署和管理[!DNL Commerce]应用程序的&#x200B;**自助服务**&#x200B;方法。 Adobe Commerce on cloud基础架构附带了其他功能，这些功能与本地Adobe Commerce和Magento Open Source平台有所不同：
@@ -37,9 +43,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有关安全性的更多信息，请参阅[安全性启动项核对清单](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
+>有关安全性的更多信息，请参阅[安全性启动项核对清单](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
 
-查看[技术栈栈](architecture/tech-stack.md)的详细信息，或了解有关Commerce [&#128279;](architecture/cloud-architecture.md)的云架构中的特定功能和支持的产品的更多信息。
+查看[技术栈栈](architecture/tech-stack.md)的详细信息，或了解有关Commerce ](architecture/cloud-architecture.md)的[云架构中的特定功能和支持的产品的更多信息。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -74,7 +80,7 @@ Commerce on cloud infrastructure指南假定您对Adobe Commerce应用程序有�
 
 - [Adobe Commerce开发人员文档](https://developer.adobe.com/commerce/docs/) （Adobe Developer站点） — 开发、自定义、集成、扩展和使用高级功能
 
-- [Adobe Commerce文档](https://experienceleague.adobe.com/zh-hans/docs/commerce) (Adobe Experience League) — 规划、实施、运营、升级和维护您的[!DNL Commerce]项目
+- [Adobe Commerce文档](https://experienceleague.adobe.com/en/docs/commerce) (Adobe Experience League) — 规划、实施、运营、升级和维护您的[!DNL Commerce]项目
 
 {{$include /help/_includes/templated/whats-new.md}}
 
