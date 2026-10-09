@@ -132,7 +132,7 @@ Adobe Commerce支持已有权访问必要的密钥，因此在寻求帮助时，
 
    ![展开以选择Fastly](../../assets/cdn/fastly-menu.png)
 
-1. 在&#x200B;_[!UICONTROL Caching Application]_部分中，从&#x200B;**[!UICONTROL Use system value]**中删除所选内容，然后从下拉列表中选择&#x200B;**[!UICONTROL Fastly CDN]**。
+1. 在&#x200B;_[!UICONTROL Caching Application]_&#x200B;部分中，从&#x200B;**[!UICONTROL Use system value]**&#x200B;中删除所选内容，然后从下拉列表中选择&#x200B;**[!UICONTROL Fastly CDN]**。
 
    ![选择Fastly](../../assets/cdn/fastly-enable-admin.png)
 
@@ -154,7 +154,7 @@ Adobe Commerce支持已有权访问必要的密钥，因此在寻求帮助时，
 
    >[!NOTE]
    >
-   >请勿选择链接以创建Fastly API令牌。 请改用Adobe](#get-fastly-credentials)提供的[Fastly凭据（服务ID和API令牌）。
+   >请勿选择链接以创建Fastly API令牌。 请改用Adobe[&#128279;](#get-fastly-credentials)提供的Fastly凭据（服务ID和API令牌）。
 
 1. 单击&#x200B;**[!UICONTROL Test credentials]**。
 
@@ -178,7 +178,7 @@ Adobe Commerce支持已有权访问必要的密钥，因此在寻求帮助时，
 
 **要上传Fastly VCL**：
 
-1. 在&#x200B;_[!UICONTROL Fastly Configuration]_部分中，单击&#x200B;**[!UICONTROL Upload VCL to Fastly]**，如下图所示。
+1. 在&#x200B;_[!UICONTROL Fastly Configuration]_&#x200B;部分中，单击&#x200B;**[!UICONTROL Upload VCL to Fastly]**，如下图所示。
 
    ![将Magento VCL上传到Fastly](../../assets/cdn/fastly-upload-vcl-admin.png)
 
@@ -328,7 +328,7 @@ Adobe提供了一个域验证的Let’s Encrypt SSL/TLS证书，为来自Fastly�
 Fastly更新了Magento 2模块的Fastly CDN，以解决问题、提高性能并提供新功能。
 Adobe建议您将暂存和生产环境中的Fastly模块更新到[最新版本](https://github.com/fastly/fastly-magento2/blob/master/VERSION)。
 
-有关模块版本和更新的最新信息，请参阅GitHub上Fastly CDN for Magento2模块](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)的[发行说明。
+有关模块版本和更新的最新信息，请参阅GitHub上Fastly CDN for Magento2模块[&#128279;](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)的发行说明。
 
 更新模块后，必须上传VCL代码以将更改应用于Fastly服务配置。
 
