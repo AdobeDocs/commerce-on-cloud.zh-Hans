@@ -4,24 +4,30 @@ description: 了解Adobe Commerce在云基础架构上的保护性阻止功能�
 feature: Cloud, Configuration, Security
 topic: Security
 exl-id: 4a470e75-0b42-4ab7-b3dc-9f50b63bea14
-TQID: https://experienceleague.adobe.com/E0lyCu6cFEaHR0KoauRFmQi9QThzoGDmNetnzYv3hVg
+TQID: 'https://experienceleague.adobe.com/E0lyCu6cFEaHR0KoauRFmQi9QThzoGDmNetnzYv3hVg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 311
+source-wordcount: '311'
 ht-degree: 0%
-
 ---
-
 # 保护块
 
 云基础架构上的Adobe Commerce具有保护性阻止功能，可在某些情况下限制对具有安全漏洞的网站的访问。 这种部分阻止方法可防止利用已知的安全漏洞。 过时的软件通常包含漏洞，因此通过部分阻止对这些站点的访问来防御这些漏洞是非常重要的。

@@ -3,21 +3,30 @@ title: 环境变量
 description: 请参阅云基础架构上特定于Adobe Commerce的环境变量列表。
 feature: Cloud, Build, Configuration, Deploy
 exl-id: 38b2cdc2-1a98-48bd-90b2-13ef179da26f
-TQID: https://experienceleague.adobe.com/qRdv72nxgkwRjRz0lXqs33rSmZKc3akq2W0pJK4CM7k
+TQID: 'https://experienceleague.adobe.com/qRdv72nxgkwRjRz0lXqs33rSmZKc3akq2W0pJK4CM7k'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 266
+source-wordcount: '266'
 ht-degree: 0%
-
 ---
-
 # 环境变量
 
 云基础架构上的Adobe Commerce允许您分配环境变量以覆盖配置选项。 `ece-tools`包根据[Cloud变量](variables-cloud.md)、[!DNL Cloud Console]中设置的变量和`.magento.env.yaml`配置文件中的值在`env.php`文件中设置值。
@@ -29,10 +38,10 @@ ht-degree: 0%
 - [管理员](variables-admin.md) — 变量覆盖项目管理员变量
 - [MAGENTO_CLOUD](variables-cloud.md) — 特定于云基础架构的变量
 - `.magento.env.yaml`文件中使用的变量：
-   - [全局](variables-global.md) — 变量会影响生成、部署和部署后阶段
-   - [生成](variables-build.md) — 变量控制生成操作
-   - [部署](variables-deploy.md) — 变量控制部署操作
-   - [部署后](variables-post-deploy.md) — 部署后的变量控制操作
+  - [全局](variables-global.md) — 变量会影响生成、部署和部署后阶段
+  - [生成](variables-build.md) — 变量控制生成操作
+  - [部署](variables-deploy.md) — 变量控制部署操作
+  - [部署后](variables-post-deploy.md) — 部署后的变量控制操作
 
 变量为&#x200B;_层级_，这意味着如果变量未被覆盖，则它继承自父环境。
 

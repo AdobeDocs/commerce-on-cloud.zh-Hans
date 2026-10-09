@@ -3,31 +3,44 @@ title: 设置Redis服务
 description: 了解如何在云基础架构上设置和优化Redis作为适用于Adobe Commerce的后端缓存解决方案。
 feature: Cloud, Cache, Services
 exl-id: be6f2462-0878-47e3-b906-ebdd4aa319f2
-TQID: https://experienceleague.adobe.com/Q3w1Y1sRuQSwqmbxGfEBavrvHe0ecI9qWJjsfVc2yPU
+TQID: 'https://experienceleague.adobe.com/Q3w1Y1sRuQSwqmbxGfEBavrvHe0ecI9qWJjsfVc2yPU'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: df2792f9d653c4561e4e40cbc71499095f63ff71
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 710
+source-wordcount: '710'
 ht-degree: 0%
-
 ---
-
 # 设置Redis服务
 
 [Redis](https://redis.io)是一个可选的后端缓存解决方案，它取代了Adobe Commerce默认使用的`Zend Framework Zend_Cache_Backend_File`。
 
 >[!IMPORTANT]
 >
->Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4修补程序不支持Redis缓存。 对于不支持Redis的缓存配置，请使用[Valkey](valkey.md)。 按版本查看支持的缓存服务的[系统要求](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)。
+>Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4修补程序不支持Redis缓存。 对于不支持Redis的缓存配置，请使用[Valkey](valkey.md)。 按版本查看支持的缓存服务的[系统要求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)。
 
 {{service-instruction}}
 
@@ -54,7 +67,7 @@ cache:
   type: redis:7.2
 ```
 
-示例版本不是通用的。 实际的默认服务版本和支持的服务版本取决于您的Adobe Commerce版本、修补程序级别和当前的Cloud模板。 验证[系统要求](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)和当前项目模板中支持的组合。
+示例版本不是通用的。 实际的默认服务版本和支持的服务版本取决于您的Adobe Commerce版本、修补程序级别和当前的Cloud模板。 验证[系统要求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)和当前项目模板中支持的组合。
 
 ### 配置服务关系
 
@@ -142,7 +155,7 @@ printf '%s' "$MAGENTO_CLOUD_RELATIONSHIPS" \
 
 ## 自定义Redis配置
 
-有关缓存、会话、L2和副本连接建议，请参阅&#x200B;_实施行动手册最佳实践指南_&#x200B;中的[Valkey和Redis服务配置的最佳实践](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
+有关缓存、会话、L2和副本连接建议，请参阅&#x200B;_实施行动手册最佳实践指南_&#x200B;中的[Valkey和Redis服务配置的最佳实践](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
 
 ## 使用Redis CLI
 
@@ -203,8 +216,8 @@ Redis server v=<installed-version> ...
 
 请参阅以下Adobe Commerce支持文章，以获取有关Redis问题疑难解答的帮助：
 
-- [Adobe Commerce上的托管警报： Redis内存警告警报](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-warning-alert)
-- [Adobe Commerce上的托管警报：Redis内存严重警报](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert)
+- [Adobe Commerce上的托管警报： Redis内存警告警报](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-warning-alert)
+- [Adobe Commerce上的托管警报：Redis内存严重警报](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert)
 
 ### Cache-clean错误引用Valkey配置的缓存上的Redis
 

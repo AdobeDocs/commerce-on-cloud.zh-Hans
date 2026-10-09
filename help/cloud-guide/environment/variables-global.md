@@ -5,24 +5,41 @@ feature: Cloud, Configuration, Build, Deploy, Eventing, Logs, SCD
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 1f1ef6db-6836-4f71-b1e4-3629352d7e74
-TQID: https://experienceleague.adobe.com/2aBPh7We4-KqoUVDfd4B-ZNWoaUVO-3mWVbqErdgyoQ
+TQID: 'https://experienceleague.adobe.com/2aBPh7We4-KqoUVDfd4B-ZNWoaUVO-3mWVbqErdgyoQ'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: 5594f40c-5dc7-522f-a0e0-f84045197b3c
+    internal-label: Eventing
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
+  - id: 3c398179-d35a-51ba-b317-6c5b95feef5e
+    internal-label: Logs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 775
+source-wordcount: '775'
 ht-degree: 0%
-
 ---
-
 # 全局变量
 
 全局变量控制[!DNL Commerce]部署过程的每个阶段的操作：生成、部署和部署后。 由于全局变量会影响每个阶段，因此您必须在`.magento.env.yaml`文件的`global`阶段中设置它们：
@@ -189,7 +206,7 @@ stage:
 - **默认值**—_未设置_
 - **版本**—Adobe Commerce 2.1.4及更高版本
 
-使用`X_FRAME_CONFIGURATION`变量更改Adobe Commerce站点的[`X-Frame-Options`](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/security/xframe-options)标头配置。 此配置控制浏览器如何呈现`<frame>`、`<iframe>`或`<object>`中的页面。 使用以下选项之一：
+使用`X_FRAME_CONFIGURATION`变量更改Adobe Commerce站点的[`X-Frame-Options`](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/security/xframe-options)标头配置。 此配置控制浏览器如何呈现`<frame>`、`<iframe>`或`<object>`中的页面。 使用以下选项之一：
 
 - `DENY` — 页面无法显示在框架中。
 - `SAMEORIGIN` — （默认Adobe Commerce设置。） 页面只能在与页面本身同源的框架中显示。

@@ -3,26 +3,36 @@ title: 入门级架构
 description: 了解Starter架构支持的环境。
 feature: Cloud, Paas
 exl-id: 2f16cc60-b5f7-4331-b80e-43042a3f9b8f
-TQID: https://experienceleague.adobe.com/NZ2ea2-D3coPcwXTEHL7viNlgpIBSVA0zO2-iVUIhB0
+TQID: 'https://experienceleague.adobe.com/NZ2ea2-D3coPcwXTEHL7viNlgpIBSVA0zO2-iVUIhB0'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 00451af3-7b97-5414-9992-3a6c269e413f
+    internal-label: Paas
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 8465292300c871aaa85e57cbb25e7ae5358bcd2f
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1010
+source-wordcount: '1010'
 ht-degree: 0%
-
 ---
-
 # 入门级架构
 
 您的Adobe Commerce on cloud infrastructure Starter架构支持最多&#x200B;**四个**&#x200B;环境，包括包含初始项目代码的`master`环境、暂存环境和最多两个集成环境。
@@ -137,7 +147,7 @@ Adobe建议从`master`创建一个名为`staging`的分支。 `staging`分支将
 
 - [OpenSearch](../services/opensearch.md)
 
-在暂存和生产环境中，您可以使用Fastly进行CDN和缓存。 最新版本的Fastly CDN扩展将在项目初始配置期间安装。 您可以升级扩展以获取最新的错误修复和改进。 查看Magento 2[&#128279;](https://github.com/fastly/fastly-magento2)的Fastly CDN模块。 此外，您还有权访问[New Relic](../monitor/account-management.md)以进行性能监控。
+在暂存和生产环境中，您可以使用Fastly进行CDN和缓存。 最新版本的Fastly CDN扩展将在项目初始配置期间安装。 您可以升级扩展以获取最新的错误修复和改进。 查看Magento 2](https://github.com/fastly/fastly-magento2)的[Fastly CDN模块。 此外，您还有权访问[New Relic](../monitor/account-management.md)以进行性能监控。
 
 使用以下文件配置要在实施中使用的软件版本。
 

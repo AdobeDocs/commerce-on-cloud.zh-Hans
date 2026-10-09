@@ -4,25 +4,31 @@ description: 了解云基础架构上Adobe Commerce的性能监控。
 feature: Cloud, Observability
 topic: Performance
 exl-id: 51e371cf-8374-4dae-8e5a-f31477dc59c1
-TQID: https://experienceleague.adobe.com/m90Dn1QULOga6Q-Rlq6bvfYkN2FXd3k1GRkpAvayuig
+TQID: 'https://experienceleague.adobe.com/m90Dn1QULOga6Q-Rlq6bvfYkN2FXd3k1GRkpAvayuig'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 154
+source-wordcount: '154'
 ht-degree: 0%
-
 ---
-
 # 性能监控
 
 您可以使用以下服务来监控云环境的性能：
 
 - [运行状况通知](../integrations/health-notifications.md) — 一种集成，可在入门和专业版集成环境中提供磁盘空间警报。
-- [Adobe Commerce观察指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/observation-for-adobe-commerce/intro) — 全面监视所有Commerce站点，结合来自多个源的日志数据，以帮助您更好地管理Adobe Commerce站点性能和诊断问题。
+- [Adobe Commerce观察指南](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/observation-for-adobe-commerce/intro) — 全面监视所有Commerce站点，结合来自多个源的日志数据，以帮助您更好地管理Adobe Commerce站点性能和诊断问题。
 - [操作遥测服务](operational-telemetry.md) — 对店面上的客户端流量进行性能监控。
 
 ## New Relic服务

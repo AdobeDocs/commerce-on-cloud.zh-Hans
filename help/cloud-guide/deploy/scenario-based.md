@@ -3,27 +3,37 @@ title: 基于方案的部署
 description: 了解如何使用自定义配置文件在云基础架构部署中自定义Adobe Commerce。
 feature: Cloud, Configuration, Deploy, Build
 exl-id: 44c2a73e-4ea2-49a6-86c1-9fa8cfc8b66e
-TQID: https://experienceleague.adobe.com/BttmvnP2iMbN-EAaPR9g2i9mv7fH4REAEwHFTu-2sw0
+TQID: 'https://experienceleague.adobe.com/BttmvnP2iMbN-EAaPR9g2i9mv7fH4REAEwHFTu-2sw0'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 884
+source-wordcount: '884'
 ht-degree: 0%
-
 ---
-
 # 基于方案的部署
 
 对于`ece-tools` 2002.1.0及更高版本，您可以使用基于方案的部署功能自定义默认部署行为。
-此功能在配置中使用&#x200B;**方案**&#x200B;和&#x200B;**步骤**：
+此功能在配置中使用**方案**&#x200B;和&#x200B;**步骤**：
 
 - **方案配置** — 每个部署挂接都是&#x200B;*方案*，这是一个XML配置文件，用于描述完成部署任务的顺序和配置参数。 您可以在`.magento.app.yaml`文件的`hooks`部分中配置方案。
 
@@ -51,7 +61,7 @@ hooks:
 
 >[!NOTE]
 >
->随着`ece-tools` 2002.1.x的发布，有新的[挂接配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property)格式。 仍支持`ece-tools` 2002.0.x版本的旧格式。 但是，必须更新为新格式才能使用基于场景的部署功能。
+>随着`ece-tools` 2002.1.x的发布，有新的[挂接配置](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property)格式。 仍支持`ece-tools` 2002.0.x版本的旧格式。 但是，必须更新为新格式才能使用基于场景的部署功能。
 
 ## 查看方案步骤
 

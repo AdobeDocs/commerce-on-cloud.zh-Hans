@@ -3,24 +3,37 @@ title: 静态内容部署
 description: 了解在Adobe Commerce上针对云基础架构项目部署静态内容（如图像、脚本和CSS）的策略。
 feature: Cloud, Build, Deploy, SCD
 exl-id: 8f30cae7-a3a0-4ce4-9c73-d52649ef4d7a
-TQID: https://experienceleague.adobe.com/bl2z1YM8u-HNuBYuQH3uqoRwiU4lfHGOQyr8Vbwyef8
+TQID: 'https://experienceleague.adobe.com/bl2z1YM8u-HNuBYuQH3uqoRwiU4lfHGOQyr8Vbwyef8'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 860
+source-wordcount: '860'
 ht-degree: 0%
-
 ---
-
 # 静态内容部署策略
 
 静态内容部署(SCD)对存储部署过程有显着影响，这取决于要生成多少内容（如图像、脚本、CSS、视频、主题、区域设置和网页）以及何时生成内容。 例如，当站点处于维护模式时，默认策略会在[部署阶段](process.md#deploy-phase-deploy-phase)期间生成静态内容；但是，此部署策略需要一些时间才能将内容直接写入装入的`pub/static`目录。 您可以通过多种选项或策略来帮助您根据自己的需求缩短部署时间。
@@ -52,8 +65,8 @@ ht-degree: 0%
 生成静态内容需要访问主题和区域设置。 Adobe Commerce将主题存储在文件系统中（可在构建阶段访问）；但是，Adobe Commerce将区域设置存储在数据库中。 在生成阶段，数据库&#x200B;_不可用_。 为了在生成阶段生成静态内容，您必须使用`ece-tools`包中的`config:dump`命令将区域设置移动到文件系统。 它读取区域设置并将它们保存在`app/etc/config.php`文件中。
 
 >[!NOTE]
->运行`ece-tools`包中的`config:dump`命令后，转储到`config.php`文件[的配置在管理员仪表板](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-26879)中将被锁定（灰显）。 在管理员中更新这些配置的唯一方法是从本地文件删除它们，然后重新部署项目。
->此外，每次向实例添加新的商店/商店组/网站时，都应记得运行`config:dump`命令以确保数据库同步。 您还可以选择应将哪些配置[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)转储到`config.php`文件中的。
+>运行`ece-tools`包中的`config:dump`命令后，转储到`config.php`文件[的配置在管理员仪表板](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26879)中将被锁定（灰显）。 在管理员中更新这些配置的唯一方法是从本地文件删除它们，然后重新部署项目。
+>此外，每次向实例添加新的商店/商店组/网站时，都应记得运行`config:dump`命令以确保数据库同步。 您还可以选择应将哪些配置](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)转储到`config.php`文件中的[。
 >如果由于字段灰显而忽略执行此步骤而从`config.php`文件中删除商店/商店组/网站配置，则下次部署时将从数据库中删除未转储的新实体。
 
 **要将项目配置为在生成**&#x200B;时生成SCD，请执行以下操作：

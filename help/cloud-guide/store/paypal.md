@@ -3,22 +3,31 @@ title: 设置PayPal支付方式
 description: 在云基础架构上为Adobe Commerce设置PayPal支付方法。
 feature: Cloud, Checkout, Payments
 exl-id: 577639f8-74a1-4bb2-96fc-72135252cbd1
-TQID: https://experienceleague.adobe.com/wGyqg7fnVgAglBAqnaA0ak-JaBLHGn5-Bkj-jx8qwoo
+TQID: 'https://experienceleague.adobe.com/wGyqg7fnVgAglBAqnaA0ak-JaBLHGn5-Bkj-jx8qwoo'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 8cd50456-5eb0-5364-922a-f14161feb828
+    internal-label: Checkout
+  - id: 3dcbfa9e-51f8-569c-a0e4-7f59098f730f
+    internal-label: Payments
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 697
+source-wordcount: '697'
 ht-degree: 0%
-
 ---
-
 # 设置PayPal支付方式
 
 云基础架构上的Adobe Commerce提供了一个载入工具，用于直接通过管理员配置PayPal Express签出帐户。 此工具可用于ECE 2.1.8及更高版本。 为了更好地支持上线和测试PayPal支付方法，您可以为沙盒或生产帐户启用和配置您的PayPal Express结账帐户。
@@ -68,7 +77,7 @@ PayPal支持在全球范围内为国家/地区连接PayPal Express Checkout，�
    * **沙盒模式**&#x200B;选择“是”或“否”以指示您输入的凭据是否用于沙盒。 如果您输入了生产凭据，请选择“否”。
    * **API使用代理**&#x200B;如果系统使用代理服务器在Adobe Commerce和PayPal支付系统之间建立连接，请选择“是”或“否”进行设置。 如果为Yes，则输入代理主机和端口。
 
-1. 有关配置帐户的详细信息和步骤，请参阅[PayPal Express签出](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout)，从步骤2开始，完成所需的设置。
+1. 有关配置帐户的详细信息和步骤，请参阅[PayPal Express签出](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout)，从步骤2开始，完成所需的设置。
 
 通过配置和身份验证帐户，您可以在“必需的PayPal设置”下启用和禁用PayPal付款选项：
 

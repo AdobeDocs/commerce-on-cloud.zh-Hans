@@ -1,29 +1,38 @@
 ---
-title: 使用 [!DNL Cloud Console]管理分支
-description: 了解如何使用 [!DNL Cloud Console]在云基础架构上管理Adobe Commerce的环境分支。
+title: 使用[!DNL Cloud Console]管理分支
+description: 了解如何使用[!DNL Cloud Console]在云基础架构上管理Adobe Commerce的环境分支。
 role: Developer
 feature: Cloud, Install
 exl-id: 2c254586-b670-4dd7-8f82-edcc139e9800
-TQID: https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ
+TQID: 'https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 6388cf7b-8a81-5248-a1e4-7bb57bbe250f
+    internal-label: Install
 subfeature_v2:
   - id: f8ddfd3b-6194-46e8-a176-0e918039be56
+    internal-label: Cloud architecture
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1642
+source-wordcount: '1642'
 ht-degree: 0%
-
 ---
-
 # 使用[!DNL Cloud Console]管理分支
 
 您可以使用[!DNL Cloud Console]或`magento-cloud` CLI管理环境。 您的项目文件存储在Git存储库中。 您可以使用Git命令来管理代码，但`magento-cloud` CLI设计用于与平台功能交互，而Git命令则不然。 请参阅云CLI主题中的[Git命令](../dev-tools/cloud-cli-overview.md#git-commands)。
@@ -47,7 +56,7 @@ ht-degree: 0%
 
 您的帐户支持有限数量的![活动分支](../../assets/icon-active.png){width="32"} （活动）和无限数量的![非活动分支](../../assets/icon-inactive.png){width="32"} （非活动）开发分支。 通过仅使用[!DNL Cloud Console]或Cloud CLI添加或删除分支来管理活动和不活动分支。 在删除分支之前，请先取消激活该分支，它仍保留在&#x200B;_环境_&#x200B;列表中，作为&#x200B;_不活动_。 您可以稍后重新激活分支，也可以[在环境设置中或使用云CLI删除分支](../dev-tools/cloud-cli-overview.md#)。
 
-如果需要其他活动环境进行开发，请提交[支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
+如果需要其他活动环境进行开发，请提交[支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
 
 **添加分支**：
 
@@ -101,7 +110,7 @@ git push -o "environment.Parent=<parent branch>" <origin> <branch>
 
 1. 单击顶部导航栏右侧的配置图标，打开环境设置。
 
-1. 在&#x200B;_[!UICONTROL General]_&#x200B;选项卡上，向下滚动到&#x200B;_[!UICONTROL Deactivate environment]_&#x200B;部分，然后单击&#x200B;**[!UICONTROL Deactivate environment and delete data]**&#x200B;并按照说明操作。
+1. 在&#x200B;_[!UICONTROL General]_选项卡上，向下滚动到_[!UICONTROL Deactivate environment]_&#x200B;部分，然后单击&#x200B;**[!UICONTROL Deactivate environment and delete data]**&#x200B;并按照说明操作。
 
 ## 同步环境
 

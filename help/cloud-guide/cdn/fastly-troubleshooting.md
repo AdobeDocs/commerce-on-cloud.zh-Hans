@@ -3,26 +3,41 @@ title: Fastly故障诊断
 description: 了解如何对Adobe Commerce的Fastly CDN模块和服务进行故障诊断和管理。
 feature: Cloud, Configuration, Cache, Services
 exl-id: 69954ef9-9ece-411e-934e-814a56542290
-TQID: https://experienceleague.adobe.com/2TJ-5byRz5seZ1tpd4FXjZ6JfeaqtKs6ZQlv81Lkr7c
+TQID: 'https://experienceleague.adobe.com/2TJ-5byRz5seZ1tpd4FXjZ6JfeaqtKs6ZQlv81Lkr7c'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1911
+source-wordcount: '1911'
 ht-degree: 0%
-
 ---
-
 # Fastly故障诊断
 
 使用以下信息对云基础架构项目环境中Adobe Commerce中Magento 2的Fastly CDN模块进行故障诊断和管理。 例如，您可以调查响应标头值和缓存行为以解决Fastly服务和性能问题。
@@ -69,8 +84,8 @@ log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 
   此问题可能由以下任一问题引起：
 
-   - 云基础架构项目环境上的Adobe Commerce的Fastly服务配置中的Fastly凭据无效
-   - 自定义VCL代码片段中的代码无效
+  - 云基础架构项目环境上的Adobe Commerce的Fastly服务配置中的Fastly凭据无效
+  - 自定义VCL代码片段中的代码无效
 
   要解决此问题，请参阅Adobe Commerce帮助中心的[清除Cloud上的Fastly缓存时出错](https://support.magento.com/hc/en-us/articles/115001853194-Error-purging-Fastly-cache-on-Cloud-The-purge-request-was-not-processed-successfully-)。
 
@@ -189,7 +204,7 @@ Fastly API请求通过Fastly扩展传递，以从源服务器获取响应。 如
 
 - 包含`X-Magento-Tags`标头
 
-- `Fastly-Module-Enabled`标头的值为`Yes`或在项目环境中安装的CDN Magento 2模块的Fastly的版本号
+- `Fastly-Module-Enabled`标头的值为`Yes`或项目环境中安装的CDN Magento 2模块的Fastly的版本号
 
 - [Cache-Control： max-age](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9)大于0
 

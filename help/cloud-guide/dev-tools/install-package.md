@@ -3,21 +3,27 @@ title: 升级项目以使用ECE工具
 description: 了解如何升级云基础架构项目上的Adobe Commerce以使用ECE-Tools包并利用最新的修复和功能。
 feature: Cloud, Install
 exl-id: 164c47e4-c871-41a3-b268-581d426e7a7f
-TQID: https://experienceleague.adobe.com/CH-wgIk-5aM6qIO7tdHI2jHlx1YgaEbLvfp4cEpSqTc
+TQID: 'https://experienceleague.adobe.com/CH-wgIk-5aM6qIO7tdHI2jHlx1YgaEbLvfp4cEpSqTc'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 6388cf7b-8a81-5248-a1e4-7bb57bbe250f
+    internal-label: Install
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 376
+source-wordcount: '376'
 ht-degree: 0%
-
 ---
-
 # 升级项目以使用ECE-Tools包
 
 Adobe已弃用`magento/magento-cloud-configuration`和`magento/ece-patches`包而支持`ece-tools`包，这简化了许多云过程。 如果您在云基础架构项目上使用早期的Adobe Commerce，但&#x200B;_不_&#x200B;包含`ece-tools`包，则必须执行一次性的手动&#x200B;_升级_&#x200B;过程。

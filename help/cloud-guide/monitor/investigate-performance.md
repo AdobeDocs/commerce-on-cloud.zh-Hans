@@ -4,24 +4,32 @@ description: 了解如何访问New Relic功能板并分析云基础架构项目�
 feature: Cloud, Observability
 topic: Performance
 exl-id: b9d806c4-f659-4e10-8dcb-b320a61de5e1
-TQID: https://experienceleague.adobe.com/Ih9Y5JqsurZqdXK-vpPGxVe2erbexdQxAlLpDjCBTCg
+TQID: 'https://experienceleague.adobe.com/Ih9Y5JqsurZqdXK-vpPGxVe2erbexdQxAlLpDjCBTCg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Data collection
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 896
+source-wordcount: '896'
 ht-degree: 0%
-
 ---
-
 # New Relic监控
 
 New Relic使用PHP代理连接并监视您的基础结构和[!DNL Commerce]应用程序。 在Cloud环境连接到New Relic后，您可以登录到New Relic帐户以查看代理收集的数据。
@@ -42,7 +50,7 @@ New Relic使用PHP代理连接并监视您的基础结构和[!DNL Commerce]应�
 
 >[!TIP]
 >
->有关使用此数据解决应用程序性能问题的详细信息，请参阅&#x200B;_New Relic帮助中心_&#x200B;中的[使用Adobe Commerce解决性能问题](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-40830)。
+>有关使用此数据解决应用程序性能问题的详细信息，请参阅&#x200B;_New Relic帮助中心_&#x200B;中的[使用Adobe Commerce解决性能问题](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-40830)。
 
 ## 使用受管警报监视性能
 
@@ -58,7 +66,7 @@ Adobe为Adobe Commerce _警报策略提供了_&#x200B;托管警报，用于跟�
 | MariaDB查询加载 | NRI | Pro |
 | Redis内存 | NRI | Pro |
 
-当站点基础设施或应用程序条件触发警报阈值时，New Relic会发送警报通知，以便您能够主动解决问题。 有关警报阈值的详细信息以及解决触发警报的问题的故障排除步骤，请参阅&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[Adobe Commerce托管警报](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)。
+当站点基础设施或应用程序条件触发警报阈值时，New Relic会发送警报通知，以便您能够主动解决问题。 有关警报阈值的详细信息以及解决触发警报的问题的故障排除步骤，请参阅&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[Adobe Commerce托管警报](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)。
 
 >[!TIP]
 >
@@ -88,7 +96,7 @@ Adobe为Adobe Commerce _警报策略提供了_&#x200B;托管警报，用于跟�
 
      >[!NOTE]
      >
-     >如果&#x200B;_Adobe Commerce托管警报_&#x200B;策略不可用，请参阅&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[Adobe Commerce托管警报](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)。
+     >如果&#x200B;_Adobe Commerce托管警报_&#x200B;策略不可用，请参阅&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[Adobe Commerce托管警报](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)。
 
 1. 单击&#x200B;**[!UICONTROL Alert conditions]**&#x200B;选项卡以查看策略中定义的警报条件。
 

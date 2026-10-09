@@ -3,29 +3,39 @@ title: 设置MySQL服务
 description: 了解如何在云基础架构上使用Adobe Commerce管理用于永久数据存储的MySQL服务。
 feature: Cloud, Services, Storage
 exl-id: 37b893ef-43cf-466b-9d18-ee3b80fdf2d8
-TQID: https://experienceleague.adobe.com/xPikS7qhOEhhWDRuUYBJEqL7EUPObzPDxJEZ4xjKkuE
+TQID: 'https://experienceleague.adobe.com/xPikS7qhOEhhWDRuUYBJEqL7EUPObzPDxJEZ4xjKkuE'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
+  - id: aa037b12-c774-5642-a947-459024feb1a2
+    internal-label: Storage
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 928
+source-wordcount: '928'
 ht-degree: 1%
-
 ---
-
 # 设置MySQL服务
 
 `mysql`服务提供基于[MariaDB](https://mariadb.com/)版本10.2到10.4的永久数据存储，支持[XtraDB](https://docs.percona.com/percona-xtradb-cluster/8.0/index.html)存储引擎并重新实施了MySQL 5.6和5.7中的功能。
 
-与其他MariaDB或MySQL版本相比，在MariaDB 10.4上重新索引需要更多时间。 请参阅&#x200B;_性能最佳实践_&#x200B;指南中的[索引器](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/performance-best-practices/configuration#indexers)。
+与其他MariaDB或MySQL版本相比，在MariaDB 10.4上重新索引需要更多时间。 请参阅&#x200B;_性能最佳实践_&#x200B;指南中的[索引器](https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/configuration#indexers)。
 
 >[!WARNING]
 >
@@ -84,7 +94,7 @@ mysql:
             optimizer_use_condition_selectivity: 1
 ```
 
-上例中的`properties`将默认`optimizer`设置修改为“性能最佳实践指南”[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/performance-best-practices/configuration#indexers)中建议的。
+上例中的`properties`将默认`optimizer`设置修改为“性能最佳实践指南”](https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/configuration#indexers)中建议的[。
 
 **MariaDB配置选项**：
 
@@ -100,7 +110,7 @@ mysql:
 
 或者，您可以设置多个具有不同权限的用户来访问`main`数据库。
 
-默认情况下，有一个名为`mysql`的终结点具有对数据库的管理员访问权限。 要设置多个数据库用户，必须在`services.yaml`文件中定义多个端点，并在`.magento.app.yaml`文件中声明关系。 对于Pro暂存和生产环境，[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以请求附加用户。
+默认情况下，有一个名为`mysql`的终结点具有对数据库的管理员访问权限。 要设置多个数据库用户，必须在`services.yaml`文件中定义多个端点，并在`.magento.app.yaml`文件中声明关系。 对于Pro暂存和生产环境，[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以请求附加用户。
 
 使用嵌套数组定义特定用户访问的端点。 每个端点可以指定对一个或多个架构（数据库）的访问以及对每个架构的不同权限级别。
 
@@ -224,13 +234,13 @@ relationships:
 >
 >此功能仅在Pro Production和Staging群集上可用。
 
-有时，必须连接到辅助数据库以提高数据库性能或解决数据库锁定问题。 如果需要此配置，请使用`"port" : 3304`建立连接。 请参阅&#x200B;_实施最佳实践_&#x200B;指南中的[配置MySQL从属连接](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/mysql-configuration)的最佳实践。
+有时，必须连接到辅助数据库以提高数据库性能或解决数据库锁定问题。 如果需要此配置，请使用`"port" : 3304`建立连接。 请参阅&#x200B;_实施最佳实践_&#x200B;指南中的[配置MySQL从属连接](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/mysql-configuration)的最佳实践。
 
 ## 故障排除
 
 请参阅以下Adobe Commerce支持文章，以获取有关MySQL问题疑难解答的帮助：
 
-- [正在检查慢查询和进程MySQL](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql)
-- [在云上创建数据库转储](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)
-- [数据迁移工具故障排除](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=zh-Hans)
-- [Adobe Commerce升级：压缩到动态表2.2.x、从2.3.x到2.4.x](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/maintenance/mariadb-upgrade)
+- [正在检查慢查询和进程MySQL](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql)
+- [在云上创建数据库转储](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)
+- [数据迁移工具故障排除](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
+- [Adobe Commerce升级：压缩到动态表2.2.x、从2.3.x到2.4.x](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/maintenance/mariadb-upgrade)

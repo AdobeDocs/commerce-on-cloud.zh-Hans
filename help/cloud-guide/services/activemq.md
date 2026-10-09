@@ -3,26 +3,33 @@ title: 设置ActiveMQ服务
 description: 了解如何启用ActiveMQ Artemis服务来管理云基础架构上Adobe Commerce的消息队列。
 feature: Cloud, Services
 exl-id: 39eb03a7-3345-4db9-88fa-dd7c422228f9
-TQID: https://experienceleague.adobe.com/YYGonI3614QouFjVftfShC1Mq7IJB7YcrxynBt6AnuY
+TQID: 'https://experienceleague.adobe.com/YYGonI3614QouFjVftfShC1Mq7IJB7YcrxynBt6AnuY'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 632
+source-wordcount: '632'
 ht-degree: 0%
-
 ---
-
 # 设置[!DNL ActiveMQ]服务
 
-[Message Queue Framework (MQF)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework)是Adobe Commerce中的系统，它允许[模块](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/glossary#module)将消息发布到队列。 它还定义了异步接收消息的消费者。
+[Message Queue Framework (MQF)](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework)是Adobe Commerce中的系统，它允许[模块](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module)将消息发布到队列。 它还定义了异步接收消息的消费者。
 
 MQF可以使用[ActiveMQ Artemis](https://activemq.apache.org/components/artemis/)作为消息代理，该消息代理为发送和接收消息提供了一个可伸缩的平台。 它还包括用于存储未传递消息的机制。 [!DNL ActiveMQ Artemis]支持用于消息传送的STOMP（流式文本导向消息传送协议）协议。
 
@@ -97,7 +104,7 @@ MQF可以使用[ActiveMQ Artemis](https://activemq.apache.org/components/artemis
    magento-cloud ssh
    ```
 
-1. 从[$MAGENTO_CLOUD_RELATIONSHIP](../application/properties.md#relationships)变量检索ActiveMQ连接详细信息和登录凭据：
+1. 从[$MAGENTO_CLOUD_RELATIONSHIPS](../application/properties.md#relationships)变量检索ActiveMQ连接详细信息和登录凭据：
 
    ```bash
    echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
@@ -142,7 +149,7 @@ MQF可以使用[ActiveMQ Artemis](https://activemq.apache.org/components/artemis
    >
    >ActiveMQ Artemis使用端口61616进行STOMP消息传递，使用端口8161进行Web控制台。
 
-1. 在会话打开时，您可以使用MAGENTO_CLOUD_RELATIONSHIPS变量的用户名和密码访问`http://localhost:8161`上的ActiveMQ Artemis Web控制台。
+1. 会话打开时，您可以使用MAGENTO_CLOUD_RELATIONSHIPS变量中的用户名和密码访问`http://localhost:8161`上的ActiveMQ Artemis Web控制台。
 
 ### 从应用程序连接
 

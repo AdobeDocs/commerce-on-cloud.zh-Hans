@@ -3,28 +3,34 @@ title: 用于阻止请求的自定义VCL
 description: 使用带有自定义VCL代码片段的Edge访问控制列表(ACL)，按IP地址阻止传入请求。
 feature: Cloud, Configuration, Security
 exl-id: eb21c166-21ae-4404-85d9-c3a26137f82c
-TQID: https://experienceleague.adobe.com/AhSqQYill1D5hYn06pkQXnUsIW-0pc6k51OZwHA8Qtg
+last-update: 2025-01-29T00:00:00.000Z
+TQID: 'https://experienceleague.adobe.com/AhSqQYill1D5hYn06pkQXnUsIW-0pc6k51OZwHA8Qtg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2025-01-29
-source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1026
+source-wordcount: '1026'
 ht-degree: 0%
-
 ---
-
 # 用于阻止请求的自定义VCL
 
-您可以使用适用于Magento 2的Fastly CDN模块创建一个包含要阻止的IP地址列表的Edge ACL。 然后，您可以将该列表与VCL代码段一起使用来阻止传入的请求。 该代码检查传入请求的IP地址。 如果与ACL列表中包含的IP地址匹配，Fastly将阻止请求访问您的站点并返回`403 Forbidden error`。 允许访问所有其他客户端IP地址。
+您可以使用适用于Magento 2的Fastly CDN模块创建一个Edge ACL，其中包含要阻止的IP地址列表。 然后，您可以将该列表与VCL代码段一起使用来阻止传入的请求。 该代码检查传入请求的IP地址。 如果与ACL列表中包含的IP地址匹配，Fastly将阻止请求访问您的站点并返回`403 Forbidden error`。 允许访问所有其他客户端IP地址。
 
 **先决条件：**
 
@@ -51,7 +57,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此示例向高级用户展示如何创建VCL代码段来配置自定义阻止规则以上载到Fastly服务。 您可以使用Magento 2的Fastly CDN中提供的[阻止](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md)功能，根据Adobe Commerce管理员的国家/地区配置阻止列表或模块。
+>此示例向高级用户展示如何创建VCL代码段来配置自定义阻止规则以上载到Fastly服务。 您可以使用Fastly CDN for Magento 2阻止列表中的[阻止](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md)功能，根据Adobe Commerce管理员提供的国家/地区来配置模块或模块。
 
 定义Edge ACL后，可以使用它创建VCL代码片段，以阻止对ACL中指定的IP地址的访问。 您可以在暂存环境和生产环境中使用相同的VCL代码片段，但必须分别将该代码片段上传到每个环境。
 
@@ -71,7 +77,7 @@ ht-degree: 0%
 
 - `name`： VCL代码片段的名称。 在此示例中，我们使用了名称`blocklist`。
 
-- `priority`：确定VCL代码片段的运行时间。 优先级为`5`以立即运行并检查管理员请求是否来自允许的IP地址。 该代码片段在任何默认Magento VCL代码片段(`magentomodule_*`)的优先级为50之前运行。 根据您希望代码片段运行的时间，将每个自定义代码片段的优先级设置为高于或低于50。 优先级较低的代码片段首先运行。
+- `priority`：确定VCL代码片段的运行时间。 优先级为`5`以立即运行并检查管理员请求是否来自允许的IP地址。 该代码片段在任何默认的Magento VCL代码片段(`magentomodule_*`)被指定优先级50之前运行。 根据您希望代码片段运行的时间，将每个自定义代码片段的优先级设置为高于或低于50。 优先级较低的代码片段首先运行。
 
 - `type`：指定VCL代码片段的类型，以确定代码片段在生成的VCL代码中的位置。 在本例中，我们使用`recv`，它将VCL代码插入`vcl_recv`子例程中、样板VCL的下方和任何对象的上方。 有关代码片段类型的列表，请参阅[Fastly VCL代码片段引用](https://docs.fastly.com/api/config#api-section-snippet)。
 
@@ -121,7 +127,7 @@ Fastly在上传过程中验证VCL代码的更新版本。 如果验证失败，�
 
 >[!WARNING]
 >
->在这些示例中，VCL代码的格式为JSON有效负荷，该有效负荷可以保存到文件中并在Fastly API请求中提交。 您可以从Admin[&#128279;](#add-the-custom-vcl-snippet)提交VCL代码片段，或使用Fastly API作为JSON字符串提交。 要防止在将Fastly API与JSON字符串一起使用时发生验证错误，必须使用反斜杠对特殊字符进行转义。
+>在这些示例中，VCL代码的格式为JSON有效负荷，该有效负荷可以保存到文件中并在Fastly API请求中提交。 您可以从Admin](#add-the-custom-vcl-snippet)提交[VCL代码片段，或使用Fastly API作为JSON字符串提交。 要防止在将Fastly API与JSON字符串一起使用时发生验证错误，必须使用反斜杠对特殊字符进行转义。
 
 >[!NOTE]
 >如果要从Admin提交VCL代码片段，请从示例VCL代码中提取各个值，并将它们输入到相应的字段中。 例如：

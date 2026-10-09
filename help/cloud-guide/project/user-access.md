@@ -5,28 +5,40 @@ role: Admin
 feature: Cloud, Roles/Permissions
 level: Beginner
 short-description: 在Cloud Console或CLI中添加用户并分配项目和环境角色。
-last-substantial-update: 2026-06-11
+last-substantial-update: 2026-06-11T00:00:00.000Z
 topic: Security
 exl-id: 953593de-f675-49fd-988f-f11306f67fbd
-TQID: https://experienceleague.adobe.com/hoRda1DXcWU5ZfsEnOf0JSe-JbCQy0GkXQ4Tw3HIU0g
+TQID: 'https://experienceleague.adobe.com/hoRda1DXcWU5ZfsEnOf0JSe-JbCQy0GkXQ4Tw3HIU0g'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+    internal-label: Compliance
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: e439352c-5b67-587d-b34e-d2a0aa5a0242
+    internal-label: Roles/Permissions
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1694
+source-wordcount: '1694'
 ht-degree: 0%
-
 ---
-
 # 管理用户访问权限
 
 云基础架构上的Adobe Commerce项目使用基于角色的访问。 在项目级别有两个可用的角色：
@@ -157,7 +169,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. 在&#x200B;_访问_&#x200B;视图中，单击&#x200B;**[!UICONTROL Add]**。
 
-1. 完成&#x200B;_[!UICONTROL Add User]_&#x200B;表单：
+1. 完成&#x200B;_[!UICONTROL Add User]_表单：
 
    - 输入用户电子邮件地址。
 
@@ -258,7 +270,7 @@ magento-cloud user:update alice@example.com -r production:a
 
      >[!WARNING]
      >
-     >如果您无法访问具有TFA的帐户，并且没有恢复代码列表，则必须联系项目管理员，或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以重置TFA应用程序。
+     >如果您无法访问具有TFA的帐户，并且没有恢复代码列表，则必须联系项目管理员，或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以重置TFA应用程序。
 
 1. 完成TFA设置后，单击&#x200B;**保存**&#x200B;以更新您的帐户。
 
@@ -311,4 +323,4 @@ magento-cloud user:update alice@example.com -r production:a
 
 ## 有关此主题的更多帮助
 
-- [无法向Adobe Commerce云项目添加用户](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/unable-add-user-adobe-commerce-cloud-project) — 添加用户时疑难解答失败。
+- [无法向Adobe Commerce云项目添加用户](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/unable-add-user-adobe-commerce-cloud-project) — 添加用户时疑难解答失败。

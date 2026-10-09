@@ -3,22 +3,31 @@ title: 设置多个网站或商店
 description: 了解如何在云基础架构上为Adobe Commerce配置多个网站或商店。
 feature: Cloud, Configuration, Routes, Site Navigation
 exl-id: 773d8d64-d235-4c2b-87e9-aadbf8471b2c
-TQID: https://experienceleague.adobe.com/532nrO6XkiqiNDfRMT6gZ4mVRqlv5PszegPJLuemmyc
+TQID: 'https://experienceleague.adobe.com/532nrO6XkiqiNDfRMT6gZ4mVRqlv5PszegPJLuemmyc'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 1783ae9f-7157-5aeb-a915-91e260301e46
+    internal-label: Routes
+  - id: 48c59cc5-3c2e-5df1-8756-f5c139a28932
+    internal-label: Site Navigation
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1105
+source-wordcount: '1105'
 ht-degree: 0%
-
 ---
-
 # 设置多个网站或商店
 
 您可以将Adobe Commerce配置为拥有多个网站或商店，例如英语商店、法语商店和德语商店。 查看[了解网站、商店和商店视图](best-practices.md#store-views)。
@@ -45,7 +54,7 @@ https://store.com/second/
 
 >[!TIP]
 >
->要将商店视图添加到站点基本URL，您不必创建多个目录。 请参阅&#x200B;_配置指南_&#x200B;中的[将存储代码添加到基本URL](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/multi-sites/ms-admin)。
+>要将商店视图添加到站点基本URL，您不必创建多个目录。 请参阅&#x200B;_配置指南_&#x200B;中的[将存储代码添加到基本URL](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/multi-sites/ms-admin)。
 
 ## 添加域
 
@@ -55,15 +64,15 @@ https://store.com/second/
 
 - 用于Pro暂存和生产
 
-  向Fastly添加新域，请参阅[管理域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或打开支持票证以请求帮助。 此外，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以请求将新域添加到群集。
+  向Fastly添加新域，请参阅[管理域](../cdn/fastly-custom-cache-configuration.md#manage-domains)，或打开支持票证以请求帮助。 此外，您必须[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以请求将新域添加到群集。
 
 - 仅用于入门级生产
 
-  将新域添加到Fastly，请参阅[管理域](../cdn/fastly-custom-cache-configuration.md#manage-domains)或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以请求帮助。 此外，您必须将新域添加到[!DNL Cloud Console]中的&#x200B;**域**&#x200B;选项卡： `https://<zone>.magento.cloud/projects/<project-ID>/edit`
+  将新域添加到Fastly，请参阅[管理域](../cdn/fastly-custom-cache-configuration.md#manage-domains)或[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以请求帮助。 此外，您必须将新域添加到[!DNL Cloud Console]中的&#x200B;**域**&#x200B;选项卡： `https://<zone>.magento.cloud/projects/<project-ID>/edit`
 
 ## 配置本地安装
 
-若要将本地安装配置为使用多个商店，请参阅&#x200B;_配置指南_&#x200B;中的[多个网站或商店](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/multi-sites/ms-overview)。
+若要将本地安装配置为使用多个商店，请参阅&#x200B;_配置指南_&#x200B;中的[多个网站或商店](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/multi-sites/ms-overview)。
 
 在成功创建和测试本地安装以使用多个存储区后，必须准备集成环境：
 
@@ -222,7 +231,7 @@ https://store.com/second/
 
 ### 设置网站、商店和商店视图
 
-在&#x200B;_管理UI_&#x200B;中，设置您的Adobe Commerce **网站**、**商店**&#x200B;和&#x200B;**商店视图**。 请参阅&#x200B;_配置指南_&#x200B;的“管理员”[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/multi-sites/ms-admin)中的设置多个网站、商店和商店视图。
+在&#x200B;_管理UI_&#x200B;中，设置您的Adobe Commerce **网站**、**商店**&#x200B;和&#x200B;**商店视图**。 请参阅&#x200B;_配置指南_&#x200B;的“管理员”](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/multi-sites/ms-admin)中的[设置多个网站、商店和商店视图。
 
 设置本地安装时，请务必使用管理员提供的网站、商店和商店视图的相同名称和代码。 更新`magento-vars.php`文件时需要这些值。
 

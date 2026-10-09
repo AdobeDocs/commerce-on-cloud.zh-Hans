@@ -4,32 +4,42 @@ description: 了解如何访问您的New Relic帐户并管理您的Adobe Commerc
 feature: Cloud, Observability
 role: Admin
 exl-id: 7aeedd12-7a81-47eb-a82f-3079e16ecb06
-TQID: https://experienceleague.adobe.com/JUx2wo00f8bfp-XZ-eaTGlHjYL6gUH-M0BtNWEg9MgU
+TQID: 'https://experienceleague.adobe.com/JUx2wo00f8bfp-XZ-eaTGlHjYL6gUH-M0BtNWEg9MgU'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+    internal-label: Reporting
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
 subfeature_v2:
   - id: d9ced453-36f4-4eb5-b2f3-1d593e32476b
+    internal-label: Account management
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Administration
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 958
+source-wordcount: '958'
 ht-degree: 0%
-
 ---
-
 # New Relic帐户管理
 
 Adobe配置云基础架构项目时，许可证所有者会收到New Relic的电子邮件，其中包含用于访问New Relic帐户的凭据和说明。 如果您没有收到电子邮件，请使用许可证所有者电子邮件地址来重置New Relic密码。
 
-如果许可证所有者已更改，而新许可证所有者当前无权访问New Relic，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
+如果许可证所有者已更改，而新许可证所有者当前无权访问New Relic，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
 
 ## 管理用户访问权限（管理员角色）
 
@@ -55,7 +65,7 @@ Adobe配置云基础架构项目时，许可证所有者会收到New Relic的电
 
 >[!NOTE]
 >
->**Pro环境**&#x200B;已预配置为使用New Relic服务，可以跳过启用和连接说明。 如果暂存环境和生产环境中未安装New Relic APM，或者New Relic基础架构在生产环境中不可用，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以请求安装。
+>**Pro环境**&#x200B;已预配置为使用New Relic服务，可以跳过启用和连接说明。 如果暂存环境和生产环境中未安装New Relic APM，或者New Relic基础架构在生产环境中不可用，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以请求安装。
 
 对于入门环境，必须检查`.magento.app.yaml`文件以验证`runtime`部分是否包含New Relic扩展。 如果尚未配置该扩展，请添加以下内容：
 
@@ -75,7 +85,7 @@ runtime:
 
 - 对于&#x200B;**入门项目**，您拥有最多支持&#x200B;_三个_&#x200B;环境的New Relic许可证密钥。 您必须手动将密钥添加到环境配置。 未预配置入门环境以使用New Relic服务。
 
-对于入门环境，请通过将New Relic许可证密钥添加到环境配置来启用New Relic集成。 将密钥添加到暂存环境和生产环境以及您选择的其他一个环境。 配置只需要使用New Relic许可证密钥。 您可以在&#x200B;_New Relic用户指南_&#x200B;的[Adobe Commerce报表](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)主题中找到有关其他配置选项的信息。
+对于入门环境，请通过将New Relic许可证密钥添加到环境配置来启用New Relic集成。 将密钥添加到暂存环境和生产环境以及您选择的其他一个环境。 配置只需要使用New Relic许可证密钥。 您可以在&#x200B;_New Relic用户指南_&#x200B;的[Adobe Commerce报表](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)主题中找到有关其他配置选项的信息。
 
 {{redeploy-warning}}
 
@@ -83,7 +93,7 @@ runtime:
 >
 >- Adobe Commerce帐户页面或与项目关联的New Relic许可证的登录凭据
 >- [管理员级访问权限](../project/user-access.md)以配置入门环境
->- 用于访问环境的[管理员](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/user-accounts/permissions)的凭据
+>- 用于访问环境的[管理员](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions)的凭据
 
 **要为入门环境配置New Relic**：
 
@@ -116,7 +126,7 @@ runtime:
      magento-cloud variable:update php:newrelic.license --value <newrelic-license-key>
      ```
 
-   或者，您可以从[Commerce管理员](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)添加它。
+   或者，您可以从[Commerce管理员](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)添加它。
 
 1. 登录到您的[New Relic帐户](https://login.newrelic.com/login)以验证您是否可以从Adobe Commerce环境中查看数据。 请参阅[调查性能](investigate-performance.md)。
 
@@ -162,4 +172,4 @@ runtime:
 
 3. **需要帮助？** 如果没有现有的所有者或管理员可以提供帮助，则任何有权访问[Adobe Commerce合作伙伴所有者帐户](https://account.newrelic.com/accounts/1311131/users)的Adobe Commerce用户都可以代表您添加用户。
 
-有关详细信息，请参阅[New Relic服务概述](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)。
+有关详细信息，请参阅[New Relic服务概述](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)。

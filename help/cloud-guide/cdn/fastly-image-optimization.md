@@ -3,23 +3,30 @@ title: Fastly图像优化
 description: 了解如何通过启用和配置Fastly图像优化来优化图像投放并简化Adobe Commerce站点的图像管理。
 feature: Cloud, Configuration, Media
 exl-id: 3457ebb0-dbb4-4cb0-b6ab-837b15dce03e
-TQID: https://experienceleague.adobe.com/n3BJ-fU6SwFrRJGvqpF07cZ1XVTDkXqLRIRv46MQotI
+TQID: 'https://experienceleague.adobe.com/n3BJ-fU6SwFrRJGvqpF07cZ1XVTDkXqLRIRv46MQotI'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4ca54350-01cb-5b22-8966-5f2873dc6d90
+    internal-label: Media
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Optimization
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1211
+source-wordcount: '1290'
 ht-degree: 0%
-
 ---
-
 # Fastly图像优化
 
 Fastly图像优化(Fastly IO)提供实时图像处理和优化，以加快图像投放并简化响应式Web应用程序的图像源集的维护。 配置Fastly IO后，可提供以下映像优化功能：
@@ -89,11 +96,11 @@ Fastly图像优化(Fastly IO)提供实时图像处理和优化，以加快图像
 
    - **调整筛选器大小** — 保留默认设置(`Lancsoz3`)，或选择替代设置。 此设置指定用于传送调整大小的图像的滤镜。 根据所选滤镜，调整大小后的图像可以具有更高或更低的像素数。
 
-      - `Lanczos3` （默认） — 提供最佳质量的图像。 它提高了检测图像中的边缘和线性特征的能力，并使用&#x200B;_[!DNL sinc]_&#x200B;重新取样以提供最佳重建。
-      - `Lanczos2` — 使用与`Lancsoz3`相同的筛选器，但对&#x200B;_[!DNL sinc]_&#x200B;重新取样函数的近似值不太准确。
-      - `Bicubic` — 在缩小图像时具有自然锐化效果。
-      - `Bilinear` — 在放大图像时具有自然平滑效果。
-      - `Nearest` — 在调整像素图稿大小时具有自然的像素化效果。
+     - `Lanczos3` （默认） — 提供最佳质量的图像。 它提高了检测图像中的边缘和线性特征的能力，并使用&#x200B;_[!DNL sinc]_重新取样以提供最佳重建。
+     - `Lanczos2` — 使用与`Lancsoz3`相同的筛选器，但对&#x200B;_[!DNL sinc]_重新取样函数的近似值不太准确。
+     - `Bicubic` — 在缩小图像时具有自然锐化效果。
+     - `Bilinear` — 在放大图像时具有自然平滑效果。
+     - `Nearest` — 在调整像素图稿大小时具有自然的像素化效果。
 
 1. 为Fastly服务指定IO配置设置后，选择&#x200B;**取消**&#x200B;以返回Fastly配置设置。
 
@@ -119,14 +126,14 @@ Fastly图像优化(Fastly IO)提供实时图像处理和优化，以加快图像
 强制有损转换的好处是提供的图像更小。
 例如，通过使用JPEG或WEBp格式而不是PNG，大小可能会减少60%到70%，具体取决于Fastly IO配置中指定的质量级别。
 
-根据为图像优化选择的质量级别，您可能会看到图像中的视觉差异。 例如，Alpha渠道/透明度会被去除，并替换为白色背景，除非您使用使用使用主题的背景颜色的深度图像优化。
+根据为图像优化选择的质量级别，您可能会看到图像中的视觉差异。 例如，Alpha通道/透明度会被去除，并替换为白色背景，除非您使用使用使用主题的背景颜色的深度图像优化。
 
 如果关闭有损转换(`WebP Auto? = No`)，则Fastly IO仅会将JPEG图像更改为兼容浏览器的WEBP格式。 不会更改其他图像类型。 例如，如果原始图像为PNG，则Fastly IO服务的输出为PNG。
 
 ### 深度图像优化
 
-默认情况下，深度图像优化处于关闭状态。启用此选项会关闭内置的Adobe Commerce大小调整并将其完全卸载到Fastly IO服务。
-此功能仅调整_产品_&#x200B;图像的大小。CMS图像大小不进行调整。
+默认情况下，深度图像优化处于关闭状态。 启用此选项会关闭内置的Adobe Commerce大小调整并将其完全卸载到Fastly IO服务。
+此功能仅调整_产品_&#x200B;图像的大小。 CMS图像大小不进行调整。
 
 启用深度图像优化会向每个图像添加背景颜色定义，如主题中所定义。 结果，WebP图像从WebP无损切换到WebP有损。 无损和有损之间的主要区别之一是，有损丢弃来自PNG图像的Alpha通道，这可提供小得多的图像。 但是，在使用不同背景的产品和促销活动页面上，具有透明度的图像可能会看起来很奇怪。
 
