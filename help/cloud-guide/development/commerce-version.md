@@ -3,7 +3,7 @@ title: 升级Commerce版本
 description: 了解如何在云基础架构环境中升级Adobe Commerce版本。
 feature: Cloud, Upgrade
 exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
-last-update: 2026-09-01T00:00:00.000Z
+last-update: 2026-09-01
 TQID: 'https://experienceleague.adobe.com/XCHw9c0bX8UE8LLmFOYjMFRLTaIk8sT57dESptRTUXs'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
@@ -27,14 +27,14 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
 source-wordcount: '1050'
 ht-degree: 0%
 ---
 # 升级Commerce版本
 
-您可以将Adobe Commerce代码库升级到较新版本。 在升级环境之前，请查看&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)以了解最新的软件版本要求。
+您可以将Adobe Commerce代码库升级到较新版本。 在升级环境之前，请查看&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)以了解最新的软件版本要求。
 
 根据环境类型（“开发”、“暂存”或“生产”），您的升级任务可能包括：
 
@@ -152,7 +152,7 @@ Adobe建议在升级之前创建实例的备份。 使用以下步骤可备份�
    composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
    ```
 
-1. 如果您使用的是B2B，请将您的`composer.json`文件更新为Commerce的[支持的版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/product-availability#adobe-authored-extensions)。
+1. 如果您使用的是B2B，请将您的`composer.json`文件更新为Commerce的[支持的版本](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions)。
 
    ```bash
    composer require-commerce magento/extension-b2b 1.5.2 --no-update
@@ -166,15 +166,15 @@ Adobe建议在升级之前创建实例的备份。 使用以下步骤可备份�
 
 1. 查看当前应用的修补程序：
 
-   - 如果`m2-hotfixes`目录中安装了任何修补程序，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)，并与Adobe Commerce支持部门合作，验证哪些修补程序仍可以应用于新版本。 从`m2-hotfixes`目录中删除不适用的修补程序。
+   - 如果`m2-hotfixes`目录中安装了任何修补程序，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)，并与Adobe Commerce支持部门合作，验证哪些修补程序仍可以应用于新版本。 从`m2-hotfixes`目录中删除不适用的修补程序。
 
    - 如果`.magento.env.yaml`文件中应用了任何[质量修补程序]，请验证它们是否仍可应用于新版本。 从`.magento.env.yaml`文件的`QUALITY_PATCHES`部分删除不适用的修补程序。
 
-   **方法1**： [验证Quality Patches发行说明中的适用版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **方法1**： [验证Quality Patches发行说明中的适用版本](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **方法2**： [查看可用的修补程序和状态](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **方法2**： [查看可用的修补程序和状态](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **方法3**： [搜索修补程序](https://experienceleague.adobe.com/zh-hans/tools/commerce-quality-patches)
+   **方法3**： [搜索修补程序](https://experienceleague.adobe.com/en/tools/commerce-quality-patches)
 
 
 1. 添加、提交和推送代码更改。

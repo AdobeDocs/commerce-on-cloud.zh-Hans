@@ -3,7 +3,7 @@ title: 用于阻止请求的自定义VCL
 description: 使用带有自定义VCL代码片段的Edge访问控制列表(ACL)，按IP地址阻止传入请求。
 feature: Cloud, Configuration, Security
 exl-id: eb21c166-21ae-4404-85d9-c3a26137f82c
-last-update: 2025-01-29T00:00:00.000Z
+last-update: 2025-01-29
 TQID: 'https://experienceleague.adobe.com/AhSqQYill1D5hYn06pkQXnUsIW-0pc6k51OZwHA8Qtg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
@@ -23,7 +23,7 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
 source-wordcount: '1026'
 ht-degree: 0%
@@ -127,7 +127,7 @@ Fastly在上传过程中验证VCL代码的更新版本。 如果验证失败，�
 
 >[!WARNING]
 >
->在这些示例中，VCL代码的格式为JSON有效负荷，该有效负荷可以保存到文件中并在Fastly API请求中提交。 您可以从Admin[&#128279;](#add-the-custom-vcl-snippet)提交VCL代码片段，或使用Fastly API作为JSON字符串提交。 要防止在将Fastly API与JSON字符串一起使用时发生验证错误，必须使用反斜杠对特殊字符进行转义。
+>在这些示例中，VCL代码的格式为JSON有效负荷，该有效负荷可以保存到文件中并在Fastly API请求中提交。 您可以从Admin](#add-the-custom-vcl-snippet)提交[VCL代码片段，或使用Fastly API作为JSON字符串提交。 要防止在将Fastly API与JSON字符串一起使用时发生验证错误，必须使用反斜杠对特殊字符进行转义。
 
 >[!NOTE]
 >如果要从Admin提交VCL代码片段，请从示例VCL代码中提取各个值，并将它们输入到相应的字段中。 例如：

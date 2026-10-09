@@ -3,7 +3,7 @@ title: 用于允许请求的自定义VCL
 description: 使用Fastly Edge ACL列表和自定义VCL代码片段，过滤传入请求并允许按IP地址访问Adobe Commerce站点。
 feature: Cloud, Configuration, Security
 exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
-last-update: 2026-08-25T00:00:00.000Z
+last-update: 2026-08-25
 TQID: 'https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
@@ -23,7 +23,7 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
 source-wordcount: '874'
 ht-degree: 0%
@@ -93,7 +93,7 @@ Edge ACL创建IP地址列表来管理对站点的访问。 在此示例中，您
 }
 ```
 
-在此示例中[创建自定义代码片段](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist#add-the-custom-vcl-snippet)之前，请查看值以确定是否需要进行任何更改。 然后在相应的字段中输入每个值，例如在“类型”字段中输入值`type`，在“内容”字段中输入值`content`。
+在此示例中[创建自定义代码片段](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist#add-the-custom-vcl-snippet)之前，请查看值以确定是否需要进行任何更改。 然后在相应的字段中输入每个值，例如在“类型”字段中输入值`type`，在“内容”字段中输入值`content`。
 
 - `name` — VCL代码片段的名称。 对于此示例，`allowlist`。
 
@@ -109,7 +109,7 @@ Edge ACL创建IP地址列表来管理对站点的访问。 在此示例中，您
 
 查看并更新环境的代码后，使用以下任一方法将自定义VCL代码段添加到Fastly服务配置中：
 
-- [从Admin](#add-the-custom-vcl-snippet)添加自定义VCL代码片段。 如果您可以访问管理员，则建议使用此方法。 （需要Magento 2版本1.2.58[&#128279;](fastly-configuration.md#upgrade)或更高版本的Fastly CDN模块。）
+- [从Admin](#add-the-custom-vcl-snippet)添加自定义VCL代码片段。 如果您可以访问管理员，则建议使用此方法。 （需要Magento 2版本1.2.58](fastly-configuration.md#upgrade)或更高版本的[Fastly CDN模块。）
 
 - 将JSON代码示例保存到文件（例如，`allowlist.json`）中，然后[使用Fastly API](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)上载它。 如果您无法访问管理员，请使用此方法。
 

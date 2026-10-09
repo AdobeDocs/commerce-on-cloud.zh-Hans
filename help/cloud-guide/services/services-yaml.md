@@ -3,7 +3,7 @@ title: 配置服务
 description: 了解如何在云基础架构上配置Adobe Commerce使用的服务，例如MySQL、Redis和Elasticsearch。
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
-last-update: 2026-09-01T00:00:00.000Z
+last-update: 2026-09-01
 TQID: 'https://experienceleague.adobe.com/qvCjqNc8E9QGme-zM42vMg-kb1WjwTlWUqjbm-NI2bg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
@@ -25,7 +25,7 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
 source-wordcount: '1176'
 ht-degree: 0%
@@ -63,7 +63,7 @@ ht-degree: 0%
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->[在可用版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)之间按顺序升级RabbitMQ。 例如，不要直接从3.9升级到4.1。
+>[在可用版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)之间按顺序升级RabbitMQ。 例如，不要直接从3.9升级到4.1。
 >
 >要确保升级到新版本后在RabbitMQ中重新创建自定义消息队列，请触发完全部署。
 
@@ -209,7 +209,7 @@ mysql:
 
 ## 服务版本
 
-在云基础架构上部署和测试的版本决定了云基础架构上Adobe Commerce的服务版本和兼容性支持，这些版本有时与Adobe Commerce内部部署支持的版本不同。 请参阅&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)，获取Adobe已使用特定Adobe Commerce和Magento Open Source版本测试的第三方软件依赖项列表。
+在云基础架构上部署和测试的版本决定了云基础架构上Adobe Commerce的服务版本和兼容性支持，这些版本有时与Adobe Commerce内部部署支持的版本不同。 请参阅&#x200B;_安装_&#x200B;指南中的[系统要求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)，获取Adobe已使用特定Adobe Commerce和Magento Open Source版本测试的第三方软件依赖项列表。
 
 ### 软件EOL检查
 
