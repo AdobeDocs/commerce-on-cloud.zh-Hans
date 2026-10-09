@@ -3,22 +3,30 @@ title: 数据摄取
 description: 了解如何在New Relic中查看和管理Commerce数据摄取。
 feature: Cloud, Observability
 exl-id: b457b4de-deeb-4e92-b95a-c2b89d6f7a05
-TQID: https://experienceleague.adobe.com/60hhI0IvazUSrw6cCRoXfbGjA4fkLLPXb8Q4Q08AqeE
+TQID: 'https://experienceleague.adobe.com/60hhI0IvazUSrw6cCRoXfbGjA4fkLLPXb8Q4Q08AqeE'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+    internal-label: Data management
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Administration
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 209
+source-wordcount: '221'
 ht-degree: 0%
-
 ---
-
 # 数据摄取
 
 New Relic依靠丰富的数据提供有效的监测和分析，但大型数据集可能会影响及时的结果、性能和合规性。 本主题提供有关管理数据摄取的一些指南，以及优化数据以使其最有效的策略。
@@ -33,7 +41,7 @@ New Relic提供了一个&#x200B;_数据管理_&#x200B;视图，该视图按数�
    ![数据管理](../../assets/new-relic/data-ingestion.png)
 
    **[!UICONTROL Data ingestion]**&#x200B;选项卡显示当天摄取的数据以及数据源。
-“数据保留”选项卡显示并控制数据的存储时间。
+   “数据保留”选项卡显示并控制数据的存储时间。
 
 1. 选择&#x200B;**[!UICONTROL Limits]**&#x200B;选项卡并查看您帐户的限制。
 

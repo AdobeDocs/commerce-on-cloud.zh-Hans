@@ -1,23 +1,27 @@
 ---
 title: 工作人员
-description: 了解如何在 [!DNL Commerce] 应用程序配置文件中配置Worker属性。
+description: 了解如何在[!DNL Commerce]应用程序配置文件中配置Worker属性。
 feature: Cloud, Configuration
 exl-id: 62d9dfaf-6265-4016-8d68-26362cf6a63a
-TQID: https://experienceleague.adobe.com/sLfoGU5aolWVm6p-jHMC6VkF-DgNGdt7Wk40oALTj0o
+TQID: 'https://experienceleague.adobe.com/sLfoGU5aolWVm6p-jHMC6VkF-DgNGdt7Wk40oALTj0o'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 361
+source-wordcount: '362'
 ht-degree: 0%
-
 ---
-
 # Workers属性
 
 您可以定义辅助进程独立于Web实例运行，而无需运行Nginx实例；但是，辅助进程使用的网络存储与[!DNL Commerce]应用程序使用的网络存储相同。 您不需要在工作线程实例上设置Web服务器（使用Node.js或Go），因为路由器无法将公共请求定向到工作线程。 这使得工作人员实例非常适合后台任务或可能阻止部署的持续运行任务。

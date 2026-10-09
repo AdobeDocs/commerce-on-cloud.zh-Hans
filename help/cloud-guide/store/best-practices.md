@@ -3,25 +3,34 @@ title: 存储配置的最佳实践
 description: 了解在云基础架构上在Adobe Commerce上配置存储的最佳实践。
 feature: Cloud, Best Practices
 exl-id: ae7da73b-f874-4623-bf29-821ee0a00eb9
-TQID: https://experienceleague.adobe.com/dhZ3IlMZ-8xCdbEQzjDNWoFALPxUIaIFN1ch0w6O6R0
+TQID: 'https://experienceleague.adobe.com/dhZ3IlMZ-8xCdbEQzjDNWoFALPxUIaIFN1ch0w6O6R0'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+    internal-label: Order Management System
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1185
+source-wordcount: '1185'
 ht-degree: 0%
-
 ---
-
 # 存储配置的最佳实践
 
 有关配置您的商店、站点和网站的详细信息，您可能需要查看[Adobe Commerce用户指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/user-guides/home)。 此页面提供了用于配置商店、网站等的最佳实践、有用信息和指南，以及随着时间推移和在不同版本之间发布的其他内容。

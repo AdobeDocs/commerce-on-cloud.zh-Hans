@@ -3,13 +3,22 @@ title: 了解应用程序
 description: 了解Adobe Commerce流量分析的工作原理、如何使用过滤器推动流量、如何测量其数据以及其数据限制和性能。
 feature: Cloud, Observability
 role: Admin
-source-git-commit: 09318645dd341a74d72237f4d4162d1d26d03651
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
 source-wordcount: '949'
 ht-degree: 0%
-
 ---
-
 # 了解应用程序
 
 [!DNL Adobe Commerce Traffic Insights]应用程序将原始Fastly内容分发网络(CDN)访问日志可视化为商店边缘流量的图片。 图表分为以下选项卡：

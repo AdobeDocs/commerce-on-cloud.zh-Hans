@@ -3,13 +3,22 @@ title: Adobe Commerce流量分析
 description: 了解Adobe Commerce流量分析工具，以及它如何帮助您了解Adobe Commerce上的云基础架构项目流量。
 feature: Cloud, Observability
 role: Admin
-source-git-commit: 119c9415abd22221e3ae785445d537f0609eba14
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%
-
 ---
-
 # 流量分析
 
 Adobe Commerce流量分析是一个New Relic One应用程序，可可视化[!DNL Adobe Commerce on Cloud Infrastructure] Fastly CDN流量。 它将读取已发送到New Relic的Fastly CDN访问日志行作为`Log`事件，并呈现一组精选的图表，其范围涵盖您选择的New Relic帐户和平台时间范围。 这无需手动编写New Relic的查询语言NRQL ，即可将商店的边缘流量可视化。

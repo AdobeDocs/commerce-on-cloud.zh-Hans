@@ -3,25 +3,31 @@ title: 用于允许请求的自定义VCL
 description: 使用Fastly Edge ACL列表和自定义VCL代码片段，过滤传入请求并允许按IP地址访问Adobe Commerce站点。
 feature: Cloud, Configuration, Security
 exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
-TQID: https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY
+last-update: 2026-08-25T00:00:00.000Z
+TQID: 'https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2026-08-25
-source-git-commit: ccff84c55425e8e4f91812b54f5e6ccf9a700104
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 874
+source-wordcount: '874'
 ht-degree: 0%
-
 ---
-
 # 用于允许请求的自定义VCL
 
 您可以使用带有自定义VCL代码片段的Fastly Edge ACL列表过滤传入的请求并允许按IP地址访问。 ACL列表指定要允许的IP地址。
@@ -91,7 +97,7 @@ Edge ACL创建IP地址列表来管理对站点的访问。 在此示例中，您
 
 - `name` — VCL代码片段的名称。 对于此示例，`allowlist`。
 
-- `priority` — 确定VCL代码片段的运行时间。 优先级为`5`立即运行并检查管理员请求是否来自允许的IP地址。 该代码片段在任何默认Magento VCL代码片段(`magentomodule_*`)的优先级为50之前运行。 根据您希望代码片段运行的时间，将每个自定义代码片段的优先级设置为高于或低于50。 优先级较低的代码片段首先运行。
+- `priority` — 确定VCL代码片段的运行时间。 优先级为`5`立即运行并检查管理员请求是否来自允许的IP地址。 该代码片段在任何默认的Magento VCL代码片段(`magentomodule_*`)被指定优先级50之前运行。 根据您希望代码片段运行的时间，将每个自定义代码片段的优先级设置为高于或低于50。 优先级较低的代码片段首先运行。
 
 - `type` — 指定在版本化VCL代码中插入代码片段的位置。 此VCL是`recv`代码片段类型，它将代码片段添加到默认Fastly VCL代码下方的`vcl_recv`子例程中以及任何对象的上方。
 

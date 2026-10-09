@@ -3,23 +3,30 @@ title: 存储选项和配置管理概述
 description: 在云基础架构上自定义您的Adobe Commerce商店。
 feature: Cloud, Configuration, Services
 exl-id: e653172f-7370-4761-b2ce-3a420b33b948
-TQID: https://experienceleague.adobe.com/iseYcfjh61-4ArUf9rKBGKFVuOz1dbS1xVq-FYiCxsw
+TQID: 'https://experienceleague.adobe.com/iseYcfjh61-4ArUf9rKBGKFVuOz1dbS1xVq-FYiCxsw'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 193
+source-wordcount: '193'
 ht-degree: 0%
-
 ---
-
 # 存储选项和配置管理概述
 
 自定义存储的方法有很多，例如添加自定义主题、安装扩展或跨云基础架构环境强制实施特定配置。 您可以直接在暂存环境和生产环境中为特定服务配置设置。 您可以设置多个网站和商店。 应用商店配置可帮助您在本地工作站中配置这些选项，并跨环境部署特定设置。

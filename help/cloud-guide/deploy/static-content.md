@@ -3,24 +3,37 @@ title: 静态内容部署
 description: 了解在Adobe Commerce上针对云基础架构项目部署静态内容（如图像、脚本和CSS）的策略。
 feature: Cloud, Build, Deploy, SCD
 exl-id: 8f30cae7-a3a0-4ce4-9c73-d52649ef4d7a
-TQID: https://experienceleague.adobe.com/bl2z1YM8u-HNuBYuQH3uqoRwiU4lfHGOQyr8Vbwyef8
+TQID: 'https://experienceleague.adobe.com/bl2z1YM8u-HNuBYuQH3uqoRwiU4lfHGOQyr8Vbwyef8'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 860
+source-wordcount: '860'
 ht-degree: 0%
-
 ---
-
 # 静态内容部署策略
 
 静态内容部署(SCD)对存储部署过程有显着影响，这取决于要生成多少内容（如图像、脚本、CSS、视频、主题、区域设置和网页）以及何时生成内容。 例如，当站点处于维护模式时，默认策略会在[部署阶段](process.md#deploy-phase-deploy-phase)期间生成静态内容；但是，此部署策略需要一些时间才能将内容直接写入装入的`pub/static`目录。 您可以通过多种选项或策略来帮助您根据自己的需求缩短部署时间。

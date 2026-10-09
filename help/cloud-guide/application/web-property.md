@@ -1,23 +1,27 @@
 ---
 title: Web属性
-description: 请参阅有关如何在 [!DNL Commerce] 应用程序配置文件中配置Web属性的示例。
+description: 请参阅有关如何在[!DNL Commerce]应用程序配置文件中配置Web属性的示例。
 feature: Cloud, Configuration
 exl-id: 6ecf6fb5-57a8-435c-8de3-f66dc56837fe
-TQID: https://experienceleague.adobe.com/IFmzGyuOpqIc9Fq4vLp1JEgrfSWORDtERWdisL4dyT8
+TQID: 'https://experienceleague.adobe.com/IFmzGyuOpqIc9Fq4vLp1JEgrfSWORDtERWdisL4dyT8'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 462
+source-wordcount: '463'
 ht-degree: 0%
-
 ---
-
 # Web属性
 
 `web`属性定义应用程序向Web公开的方式（在HTTP中），确定Web应用程序提供内容的方式，并通过在每个位置&#x200B;_块_&#x200B;中设置规则来控制应用程序容器如何响应传入请求。 块表示以正斜杠(`/`)开头的绝对路径。
