@@ -3,7 +3,7 @@ title: 将请求重新路由到CMS后端
 description: 了解如何使用Fastly Edge模块将来自Adobe Commerce存储区的传入请求重新路由到单独的WordPress网站。
 feature: Cloud, Configuration, Routes
 exl-id: ef024c68-395b-4d47-9362-a8404a93dbbe
-last-update: 2025-01-29T00:00:00.000Z
+last-update: 2025-01-29
 TQID: 'https://experienceleague.adobe.com/zRM-iTFGNPgSmT5xu1B9Lo3-onUtCHh-tVY-WPPiVC8'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
@@ -20,7 +20,7 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%

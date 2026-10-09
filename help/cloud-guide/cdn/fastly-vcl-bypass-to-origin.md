@@ -3,7 +3,7 @@ title: 自定义VCL以绕过Fastly缓存
 description: 通过创建自定义VCL代码片段以绕过Fastly缓存，对到源服务器的请求流量进行故障诊断。
 feature: Cloud, Configuration, Cache
 exl-id: 4e19d6d4-b5a1-4623-b0be-804ddc81ff3d
-last-update: 2025-01-29T00:00:00.000Z
+last-update: 2025-01-29
 TQID: 'https://experienceleague.adobe.com/67LdlbG62T-cBEgNTwQ5p5MvvYQwNuHUYVQhrVBSn1A'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
@@ -26,7 +26,7 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
     internal-label: Troubleshooting
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 0%
