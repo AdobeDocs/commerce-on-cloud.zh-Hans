@@ -24,7 +24,7 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 6f7a0fb23a3b479c766f82273658d4404707a171
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 3%
@@ -36,7 +36,7 @@ ht-degree: 3%
 | 发行说明 | 版本 | 描述 | Source |
 | ----------------- |----------| ---------------------------------------- | --------------------------- |
 | [ece-tools包](ece-tools-package.md) | 2002.2.15 | 一组用于管理和部署云项目的脚本和工具 | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.15) |
-| Commerce的[云修补程序](cloud-patches.md) | 1.1.21 | 一组修补程序，用于改进所有Adobe Commerce版本与Cloud环境的集成。 此软件包包含Adobe Commerce修补程序以及使用`ece-tools`进行部署时应用的可用修补程序 | `magento/magento-cloud-patches`，通过位于`repo.magento.com`的Commerce Composer存储库（需要Adobe Commerce on cloud infrastructure权利；请参阅[Commerce的Cloud Patches发行说明](cloud-patches.md)） |
+| Commerce的[云修补程序](cloud-patches.md) | 1.1.22 | 一组修补程序，用于改进所有Adobe Commerce版本与Cloud环境的集成。 此软件包包含Adobe Commerce修补程序以及使用`ece-tools`进行部署时应用的可用修补程序 | `magento/magento-cloud-patches`，通过位于`repo.magento.com`的Commerce Composer存储库（需要Adobe Commerce on cloud infrastructure权利；请参阅[Commerce的Cloud Patches发行说明](cloud-patches.md)） |
 | 适用于Commerce的[Cloud Docker](cloud-docker.md) | 1.4.10 | Docker映像将Adobe Commerce部署到本地云环境的功能和配置文件 | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.10) |
 | Commerce的[云组件](cloud-components.md) | 1.1.4 | 为部署在云基础架构上的站点扩展了Adobe Commerce核心功能 | [`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components/tree/1.1.4) |
 
