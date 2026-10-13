@@ -7,25 +7,33 @@ exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
 TQID: https://experienceleague.adobe.com/ZN1TwgU2EFiIezQcZZT-CglLQGY1xZcXoi-BslV3sGQ
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+    internal-label: Order Management System
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 1195121d2c83da858744839e82e14bd423ea5528
+    internal-label: Security
+source-git-commit: 6f7a0fb23a3b479c766f82273658d4404707a171
 workflow-type: tm+mt
-source-wordcount: 3067
+source-wordcount: '3097'
 ht-degree: 0%
-
 ---
-
 # Commerce的云修补程序
 
 `magento/magento-cloud-patches`编辑器包提供了一组必需的修补程序，这些修补程序改进了所有Adobe Commerce版本与云环境的集成，并支持关键修补程序的快速交付。 Adobe通过`repo.magento.com`处的Commerce Composer存储库分发此包。
@@ -48,7 +56,13 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 <!--Add release notes below-->
 
-## v1.1.21 {#latest}
+## v1.1.22 {#latest}
+
+发行日期： 2026年10月13日
+
+- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-153](https://helpx.adobe.com/security/products/magento/apsb26-153.html)中引用的安全修复。<!--MCLOUD-15727 -->
+
+## v1.1.21
 
 发行日期： 2026年9月08日
 
@@ -394,7 +408,7 @@ Adobe Commerce 2.4.3和2.3.7-p1的关键修补程序：
 
 - **网站性能改进** — 修复了`Magento\Framework\App\DeploymentConfig\Reader::load`函数的性能问题，该函数会定期经历影响网站性能的长时间加载。<!--MCLOUD-5650-->
 
-- 更新了支付方式修补程序的修补程序分配，以支付模块为目标，而非Magento基本包(magento/magento2-base)，这样只有当支付模块存在时才应用支付修补程序。<!--MCLOUD-5666-->
+- 更新了支付方式修补程序的修补程序分配，以支付模块为目标，而非Magento基本包(magento/magento2-base)，以便仅当支付模块存在时才应用支付修补程序。<!--MCLOUD-5666-->
 
 - 更新了修补程序以与Magento Open Source兼容。<!--MCLOUD-5701-->
 

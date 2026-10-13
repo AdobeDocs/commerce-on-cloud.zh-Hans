@@ -1,13 +1,12 @@
 ---
-source-git-commit: 205287e813ec7358273f95df87189b9b663679f5
+source-git-commit: 74cb44aaa4a1c178561bfd1ac7b40c0f3ceb7551
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 7%
-
 ---
 # ece-tools
 
-**版本**： 2002.2.14
+**版本**： 2002.2.15
 
 此引用包含通过`ece-tools`命令行工具提供的34个命令。
 在云基础架构上的Adobe Commerce中使用`ece-tools list`命令自动生成初始列表。
@@ -553,7 +552,7 @@ ece-tools cron:enable
 ece-tools cron:kill
 ```
 
-终止所有Magento cron流程。
+终止所有Magento cron进程。
 
 ### 选项
 
