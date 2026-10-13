@@ -25,9 +25,9 @@ role_v2:
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: f25bd014c1b6f546d3395db1691128b3e63bfa85
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '555'
 ht-degree: 0%
 ---
 # 开发概述
@@ -75,7 +75,6 @@ Composer将项目所需的库和依赖项安装在`vendor`目录中。 以下必
 - **vendor/magento/ece-tools** — `ece-tools`包与Adobe Commerce版本2.1.4及更高版本兼容，以提供一组丰富的功能，可用于在云基础架构项目上管理Adobe Commerce。 它包含脚本和云基础架构上的Adobe Commerce命令，旨在帮助管理代码并自动构建和部署项目。 查看[`ece-tools`包概述](../dev-tools/package-overview.md)。
 - **vendor/magento/product-enterprise-edition** — 此中继需要应用程序组件，包括模块、框架、主题等。
 - **vendor/fastly2/magento2** — 此模块管理Pro暂存环境和生产环境以及入门级生产环境的Fastly CDN和服务。 查看[Fastly服务](/help/cloud-guide/cdn/fastly.md#fastly-cdn-module-for-magento-2)。
-- **vendor/magento/module-paypal-on-boarding** — 此模块通过连接到您的PayPal商家帐户来提供PayPal付款网关结帐。 查看[PayPal入门培训工具](../store/paypal.md)。
 - **供应商/aem/rum** — 此模块管理[操作遥测](../monitor/operational-telemetry.md)数据收集工具。
 
 >[!TIP]
