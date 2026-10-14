@@ -29,9 +29,9 @@ topic_v2:
     internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: 6f7a0fb23a3b479c766f82273658d4404707a171
+source-git-commit: df46dbad973a1042e02fccc47c3fc17227a453a5
 workflow-type: tm+mt
-source-wordcount: '3097'
+source-wordcount: '3098'
 ht-degree: 0%
 ---
 # Commerce的云修补程序
@@ -60,19 +60,19 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 发行日期： 2026年10月13日
 
-- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-153](https://helpx.adobe.com/security/products/magento/apsb26-153.html)中引用的安全修复。<!--MCLOUD-15727 -->
+- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-153](https://www.adobe.com/trust/security/products/commerce/apsb26-153.html)中引用的安全修复。<!--MCLOUD-15727 -->
 
 ## v1.1.21
 
 发行日期： 2026年9月08日
 
-- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-146](https://helpx.adobe.com/cn/security/products/magento/apsb26-146.html)中引用的安全修复。<!--MCLOUD-15587 -->
+- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-146](https://helpx.adobe.com/security/products/magento/apsb26-146.html)中引用的安全修复。<!--MCLOUD-15587 -->
 
 ## v1.1.20
 
 发行日期： 2026年9月08日
 
-- ![修复图标](../../assets/fix.svg) **安全改进** — 包含对[Adobe Commerce安全更新APSB26-138](https://helpx.adobe.com/cn/security/products/magento/apsb26-138.html)中引用的2026年9月隔离安全修补程序的支持。<!-- MCLOUD-15053 -->
+- ![修复图标](../../assets/fix.svg) **安全改进** — 包含对[Adobe Commerce安全更新APSB26-138](https://helpx.adobe.com/security/products/magento/apsb26-138.html)中引用的2026年9月隔离安全修补程序的支持。<!-- MCLOUD-15053 -->
 
 ## v1.1.19
 
@@ -86,7 +86,7 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 发行日期： 2026年8月11日
 
 - ![修复图标](../../assets/fix.svg) **改进的修补程序处理** — 修补程序现在跳过通过`composer.json` `replace`删除的定位模块的栈栈，并继续应用剩余的安装部分。<!-- MCLOUD-15325 -->
-- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-92](https://helpx.adobe.com/cn/security/products/magento/apsb26-92.html)中引用的安全修复。<!--MCLOUD-15035 -->
+- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-92](https://helpx.adobe.com/security/products/magento/apsb26-92.html)中引用的安全修复。<!--MCLOUD-15035 -->
 
 ## v1.1.17
 
@@ -105,7 +105,7 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 发行日期： 2026年7月14日
 
-- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-73](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-37421)中引用的安全修复。<!--MCLOUD-15066 -->
+- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-73](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-37421)中引用的安全修复。<!--MCLOUD-15066 -->
 
 ## v1.1.14
 
@@ -127,7 +127,7 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 发行日期： 2025年11月13日
 
 - ![修复图标](../../assets/fix.svg) **Symfony包** — 已添加对最新Symfony YAML包的支持。<!-- MCLOUD-14020 -->
-- ![修复图标](../../assets/fix.svg) **修补程序** — 启用JS缩小和捆绑时，修复[签出失败](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27997)问题，如&#x200B;*Commerce知识库*&#x200B;中所述。
+- ![修复图标](../../assets/fix.svg) **修补程序** — 启用JS缩小和捆绑时，修复[签出失败](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27997)问题，如&#x200B;*Commerce知识库*&#x200B;中所述。
 - ![修复图标](../../assets/fix.svg) **改进的类别视图**—MCLOUD-13752：改进类别视图。<!-- MCLOUD-13752 | MCLOUD-14139  -->
 
 ## v1.1.11
@@ -159,13 +159,13 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 发行日期： 2025年5月5日
 
-- ![新图标](../../assets/new.svg) **已将Commerce 2.4.4的修补程序更新到2.4.8** — 此更新将修订[CVE-2025-24434](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27148)的修补程序，该修补程序已在1.1.7<!-- MCLOUD-13619 -->中发布
+- ![新图标](../../assets/new.svg) **已将Commerce 2.4.4的修补程序更新到2.4.8** — 此更新将修订[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27148)的修补程序，该修补程序已在1.1.7<!-- MCLOUD-13619 -->中发布
 
 ## v1.1.6
 
 发行日期： 2025年4月24日
 
-- ![新图标](../../assets/new.svg) **已将Commerce 2.4.4的修补程序更新到2.4.7** — 此更新是已在1.1.4<!-- MCLOUD-13240 -->中发布的[CVE-2025-24434](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27149)的更新修补程序
+- ![新图标](../../assets/new.svg) **已将Commerce 2.4.4的修补程序更新到2.4.7** — 此更新是已在1.1.4<!-- MCLOUD-13240 -->中发布的[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27149)的更新修补程序
 
 ## v1.1.5
 
@@ -177,7 +177,7 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 发行日期： 2025年2月13日
 
-- ![新图标](../../assets/new.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修补程序[CVE-2025-24434](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27149)。<!-- MCLOUD-13240     - -->
+- ![新图标](../../assets/new.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修补程序[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27149)。<!-- MCLOUD-13240     - -->
 
 ## v1.1.3
 
@@ -189,13 +189,13 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 发行日期： 2024年11月5日
 
-- ![修复图标](../../assets/fix.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修复了在使用B2B模块时Adobe Commerce存在的严重[CVE-2024-45115](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27151)漏洞。<!-- MCLOUD-12980 - -->
+- ![修复图标](../../assets/fix.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修复了在使用B2B模块时Adobe Commerce存在的严重[CVE-2024-45115](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27151)漏洞。<!-- MCLOUD-12980 - -->
 
 ## v1.1.1
 
 发行日期： 2024年11月5日
 
-- ![修复图标](../../assets/fix.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修补了严重的[CVE-2024-34102](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27136) CosmicSting漏洞。<!-- MCLOUD-12980 - -->
+- ![修复图标](../../assets/fix.svg) **已添加Commerce 2.4.4到2.4.7**&#x200B;的修补程序 — 此更新修补了严重的[CVE-2024-34102](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136) CosmicSting漏洞。<!-- MCLOUD-12980 - -->
 
 ## v1.1.0
 
@@ -273,7 +273,7 @@ Adobe Commerce 2.4.5的关键修补程序：
 
 - **使用Braintree付款的订单问题** — 此修补程序解决了阻止管理员发出新订单或重新订购的关键问题。<!-- MCLOUD-9137 -->
 
-请参阅[启用Braintree付款时，管理员无法创建订单/重新订单](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27169)。
+请参阅[启用Braintree付款时，管理员无法创建订单/重新订单](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27169)。
 
 ## v1.0.17
 
@@ -289,7 +289,7 @@ Adobe Commerce 2.3.3-p1及更高版本的关键修补程序：
 
 更新了修补程序以解决导致未经身份验证的远程代码执行的&#x200B;**关键**&#x200B;漏洞。<!-- MCLOUD-8479 -->
 
-请参阅[Adobe安全公告APSB22-12](https://helpx.adobe.com/cn/security/products/magento/apsb22-12.html)。
+请参阅[Adobe安全公告APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)。
 
 ## v1.0.15
 
@@ -306,7 +306,7 @@ Adobe Commerce 2.3.3-p1及更高版本的关键修补程序：
 
 添加了修补程序，以解决导致远程代码执行未经身份验证的&#x200B;**关键**&#x200B;漏洞。<!-- MCLOUD-8461 -->
 
-请参阅[Adobe安全公告APSB22-12](https://helpx.adobe.com/cn/security/products/magento/apsb22-12.html)。
+请参阅[Adobe安全公告APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)。
 
 ## v1.0.13
 
@@ -322,7 +322,7 @@ Adobe Commerce 2.3.3-p1及更高版本的关键修补程序：
 
 Adobe Commerce 2.4.3和2.3.7-p1的关键修补程序：
 
-- **API速率限制问题** — 此修补程序更正了默认速率限制，该限制导致Web API无法处理数组中超过20个项目的请求。 此修补程序将提高速率限制的默认值。 请参阅Adobe Commerce [2.4.3发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
+- **API速率限制问题** — 此修补程序更正了默认速率限制，该限制导致Web API无法处理数组中超过20个项目的请求。 此修补程序将提高速率限制的默认值。 请参阅Adobe Commerce [2.4.3发行说明](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
 
 ## v1.0.11
 
@@ -408,7 +408,7 @@ Adobe Commerce 2.4.3和2.3.7-p1的关键修补程序：
 
 - **网站性能改进** — 修复了`Magento\Framework\App\DeploymentConfig\Reader::load`函数的性能问题，该函数会定期经历影响网站性能的长时间加载。<!--MCLOUD-5650-->
 
-- 更新了支付方式修补程序的修补程序分配，以支付模块为目标，而非Magento基本包(magento/magento2-base)，以便仅当支付模块存在时才应用支付修补程序。<!--MCLOUD-5666-->
+- 更新了支付方式修补程序的修补程序分配，以支付模块为目标，而非Magento基本包(magento/magento2-base)，这样只有当支付模块存在时才应用支付修补程序。<!--MCLOUD-5666-->
 
 - 更新了修补程序以与Magento Open Source兼容。<!--MCLOUD-5701-->
 
