@@ -29,9 +29,9 @@ topic_v2:
     internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: 6f7a0fb23a3b479c766f82273658d4404707a171
+source-git-commit: df46dbad973a1042e02fccc47c3fc17227a453a5
 workflow-type: tm+mt
-source-wordcount: '3097'
+source-wordcount: '3098'
 ht-degree: 0%
 ---
 # Commerce的云修补程序
@@ -60,7 +60,7 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 发行日期： 2026年10月13日
 
-- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-153](https://helpx.adobe.com/security/products/magento/apsb26-153.html)中引用的安全修复。<!--MCLOUD-15727 -->
+- ![修复图标](../../assets/fix.svg) **安全改进** — 已应用[Adobe Commerce安全更新APSB26-153](https://www.adobe.com/trust/security/products/commerce/apsb26-153.html)中引用的安全修复。<!--MCLOUD-15727 -->
 
 ## v1.1.21
 
@@ -408,7 +408,7 @@ Adobe Commerce 2.4.3和2.3.7-p1的关键修补程序：
 
 - **网站性能改进** — 修复了`Magento\Framework\App\DeploymentConfig\Reader::load`函数的性能问题，该函数会定期经历影响网站性能的长时间加载。<!--MCLOUD-5650-->
 
-- 更新了支付方式修补程序的修补程序分配，以支付模块为目标，而非Magento基本包(magento/magento2-base)，以便仅当支付模块存在时才应用支付修补程序。<!--MCLOUD-5666-->
+- 更新了支付方式修补程序的修补程序分配，以支付模块为目标，而非Magento基本包(magento/magento2-base)，这样只有当支付模块存在时才应用支付修补程序。<!--MCLOUD-5666-->
 
 - 更新了修补程序以与Magento Open Source兼容。<!--MCLOUD-5701-->
 
