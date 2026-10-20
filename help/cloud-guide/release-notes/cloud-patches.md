@@ -29,9 +29,9 @@ topic_v2:
     internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: df46dbad973a1042e02fccc47c3fc17227a453a5
+source-git-commit: d7aff88a23f73345c5ad5c80f1131b77a8f797ca
 workflow-type: tm+mt
-source-wordcount: '3098'
+source-wordcount: '3143'
 ht-degree: 0%
 ---
 # Commerce的云修补程序
@@ -56,7 +56,13 @@ Commerce的云修补程序软件包依赖于ECE-Tools软件包，并在安装或
 
 <!--Add release notes below-->
 
-## v1.1.22 {#latest}
+## v1.1.23 {#latest}
+
+发行日期： 2026年10月19日
+
+- ![修复图标](../../assets/fix.svg) **安全改进** — 更新了2026年10月针对2.4.8-p5的隔离安全修补程序，以包含其他安全保护措施（深入防御）以进一步降低风险。 查看[KA-50927](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-50927).<!--MCLOUD-15841 -->
+
+## v1.1.22
 
 发行日期： 2026年10月13日
 
