@@ -24,8 +24,8 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-last-update: 2026-10-16
-source-git-commit: 0126689d3df966fe5d4000e2acd10bdce8c0b77e
+last-update: 2026-10-26
+source-git-commit: 17da5331a143649babf228ffec8f51169b6024eb
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%
@@ -43,9 +43,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有关安全性的更多信息，请参阅[安全性启动项核对清单](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
+>有关安全性的更多信息，请参阅[安全性启动项核对清单](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)。
 
-查看[技术栈栈](architecture/tech-stack.md)的详细信息，或了解有关Commerce [&#128279;](architecture/cloud-architecture.md)的云架构中的特定功能和支持的产品的更多信息。
+查看[技术栈栈](architecture/tech-stack.md)的详细信息，或了解有关Commerce ](architecture/cloud-architecture.md)的[云架构中的特定功能和支持的产品的更多信息。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -80,7 +80,7 @@ Commerce on cloud infrastructure指南假定您对Adobe Commerce应用程序有�
 
 - [Adobe Commerce开发人员文档](https://developer.adobe.com/commerce/docs/) （Adobe Developer站点） — 开发、自定义、集成、扩展和使用高级功能
 
-- [Adobe Commerce文档](https://experienceleague.adobe.com/zh-hans/docs/commerce) (Adobe Experience League) — 规划、实施、运营、升级和维护您的[!DNL Commerce]项目
+- [Adobe Commerce文档](https://experienceleague.adobe.com/en/docs/commerce) (Adobe Experience League) — 规划、实施、运营、升级和维护您的[!DNL Commerce]项目
 
 {{$include /help/_includes/templated/whats-new.md}}
 
