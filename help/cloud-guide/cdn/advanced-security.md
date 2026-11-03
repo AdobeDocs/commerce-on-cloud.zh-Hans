@@ -18,9 +18,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 800e5c27d4d0879bafd32101fd70ec0f00f1880c
 workflow-type: tm+mt
-source-wordcount: '2514'
+source-wordcount: '2599'
 ht-degree: 0%
 ---
 # [!DNL Adobe Commerce Advanced Security]
@@ -31,7 +31,7 @@ ht-degree: 0%
 >
 >在New Relic中使用[Adobe Commerce流量分析](../monitor/traffic-insights/overview.md)应用程序来分析您的Fastly流量和机器人模式，并确定高级安全性是否适合您。
 
-[!DNL Adobe Commerce on Cloud Infrastructure]包含内置[第3层和第4层DDoS保护](./fastly.md#ddos-protection)以及[Web应用程序防火墙(WAF)](./fastly-waf-service.md)。 在[责任分担模型](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/security-and-compliance/shared-responsibility)中，第7层DDoS检测、机器人保护和主动IP阻止是商家责任，而[!DNL Adobe Commerce Advanced Security]旨在解决这些责任。
+[!DNL Adobe Commerce on Cloud Infrastructure]包含内置[第3层和第4层DDoS保护](./fastly.md#ddos-protection)以及[Web应用程序防火墙(WAF)](./fastly-waf-service.md)。 在[责任分担模型](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)中，第7层DDoS检测、机器人保护和主动IP阻止是商家责任，而[!DNL Adobe Commerce Advanced Security]旨在解决这些责任。
 
 [!DNL Advanced Security]通过Fastly支持的边缘安全功能扩展了店面保护，该功能提供了机器人管理、高级速率限制和第7层DDoS保护，是整合了网络边缘的规模、性能和安全性的统一边缘平台的一部分。
 
@@ -57,11 +57,11 @@ ht-degree: 0%
 >
 >**当前限制**
 >
->在2026年第3季度结束之前，客户不能直接修改或管理机器人管理规则。
+>目前，客户无法直接修改或管理机器人管理规则。
 >
->有关任何规则的添加、修改或调整，请通过[支持票证](https://experienceleague.adobe.com/home?lang=zh-Hans&support-tab=home#support)联系Adobe Commerce支持部门。 支持团队将实施请求的更改。
+>有关任何规则的添加、修改或调整，请通过[支持票证](https://experienceleague.adobe.com/home?support-tab=home#support)联系Adobe Commerce支持部门。 支持团队将实施请求的更改。
 >
->从2026年第4季度开始，Fastly计划发布一项附加功能，允许客户在Commerce管理面板中管理机器人管理规则。
+>从2027年第1季度开始，Fastly计划发布一项附加功能，允许客户在Commerce管理员中管理机器人管理规则。
 
 ## 默认规则和保护
 
@@ -175,6 +175,12 @@ CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置�
 | 您希望管理访问您店面内容的AI爬虫和提取器 | 机器人管理包括可配置的AI机器人检测和执行策略 |
 | 您需要一个支持Adobe的边缘安全解决方案与您现有的Fastly CDN集成 | [!DNL Advanced Security]在同一个Fastly Edge平台上运行，该平台已为您的店面提供服务 |
 
+#### Headless实施指南
+
+如果您的Adobe Commerce站点使用Headless实施，其中店面不是默认的Adobe Commerce店面，而是通过单独的店面提供商托管或交付，则在选择机器人保护解决方案之前，请考虑受影响流量的提供位置。
+
+对于店面流量，如果机器人或爬虫活动主要针对店面页面，如产品详细信息页面(PDP)、产品列表页面(PLP)或类别页面，请与店面提供商合作，评估可用于该店面的机器人管理或安全功能。
+
 ### 何时使用现有保护
 
 以下情形最适合现有的保护：
@@ -233,7 +239,7 @@ CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置�
 - **合规性工具** — PCI扫描、SOC合规性报告和法规审核工具。
 - **应用程序级强化** — 基于令牌的API身份验证、查询参数规范化和缓存策略设计。
 
-有关Adobe和客户安全责任的完整概述，请参阅[责任分担模型](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/security-and-compliance/shared-responsibility)。
+有关Adobe和客户安全责任的完整概述，请参阅[责任分担模型](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)。
 
 ## 常见攻击模式和保护
 
@@ -271,7 +277,7 @@ CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置�
 
 1. 请联系您的Adobe客户团队或Adobe销售代表，讨论您项目的[!DNL Advanced Security]。
 
-1. 购买[!DNL Advanced Security]后，[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，请求[!DNL Advanced Security]启用。 包括您的[!DNL Adobe Commerce on Cloud Infrastructure]项目ID和需要启用的环境（例如，生产和暂存）。
+1. 购买[!DNL Advanced Security]后，[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)，请求[!DNL Advanced Security]启用。 包括您的[!DNL Adobe Commerce on Cloud Infrastructure]项目ID和需要启用的环境（例如，生产和暂存）。
 
 1. Adobe在您的Fastly服务上激活[!DNL Advanced Security]并配置初始保护策略。 启用通常在提交票证后的几个工作日内完成。
 
@@ -279,7 +285,7 @@ CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置�
 
 >[!NOTE]
 >
->对[!DNL Advanced Security]的配置更改当前需要[提交支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 计划在未来版本中通过管理员UI进行自助配置。
+>对[!DNL Advanced Security]的配置更改当前需要[提交支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 计划在未来版本中通过管理员UI进行自助配置。
 
 ## 限制
 
