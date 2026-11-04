@@ -18,9 +18,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 800e5c27d4d0879bafd32101fd70ec0f00f1880c
 workflow-type: tm+mt
-source-wordcount: '2514'
+source-wordcount: '2599'
 ht-degree: 0%
 ---
 # [!DNL Adobe Commerce Advanced Security]
@@ -57,11 +57,11 @@ ht-degree: 0%
 >
 >**当前限制**
 >
->在2026年第3季度结束之前，客户不能直接修改或管理机器人管理规则。
+>目前，客户无法直接修改或管理机器人管理规则。
 >
 >有关任何规则的添加、修改或调整，请通过[支持票证](https://experienceleague.adobe.com/home?lang=zh-Hans&support-tab=home#support)联系Adobe Commerce支持部门。 支持团队将实施请求的更改。
 >
->从2026年第4季度开始，Fastly计划发布一项附加功能，允许客户在Commerce管理面板中管理机器人管理规则。
+>从2027年第1季度开始，Fastly计划发布一项附加功能，允许客户在Commerce管理员中管理机器人管理规则。
 
 ## 默认规则和保护
 
@@ -174,6 +174,12 @@ CDN日志包含来自Signal Sciences（机器人保护/下一代WAF）的内置�
 | 特定URL或API端点被无法被IP阻止的高流量分布式流量定向 | 高级速率限制为特定端点和流量模式提供精细化的控制 |
 | 您希望管理访问您店面内容的AI爬虫和提取器 | 机器人管理包括可配置的AI机器人检测和执行策略 |
 | 您需要一个支持Adobe的边缘安全解决方案与您现有的Fastly CDN集成 | [!DNL Advanced Security]在同一个Fastly Edge平台上运行，该平台已为您的店面提供服务 |
+
+#### Headless实施指南
+
+如果您的Adobe Commerce站点使用Headless实施，其中店面不是默认的Adobe Commerce店面，而是通过单独的店面提供商托管或交付，则在选择机器人保护解决方案之前，请考虑受影响流量的提供位置。
+
+对于店面流量，如果机器人或爬虫活动主要针对店面页面，如产品详细信息页面(PDP)、产品列表页面(PLP)或类别页面，请与店面提供商合作，评估可用于该店面的机器人管理或安全功能。
 
 ### 何时使用现有保护
 

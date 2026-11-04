@@ -1,7 +1,7 @@
 ---
-source-git-commit: e3d730f2e6ca7fe67e6f07368bef4d3b4f461d38
+source-git-commit: 01f6e8984fe013e99ab05fe63a5963e0b772c73b
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '270'
 ht-degree: 1%
 ---
 # 新增功能模板
@@ -10,120 +10,9 @@ ht-degree: 1%
 
 本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
 
-### 2026年10月13
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>在ECE-Tools v2002.2.15版本之后更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI引用</a>和<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">错误消息</a>。</p>
-</td>
-      <td>
-        技术
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d27cc83271459bb3c8cb718fe72a1810d2f5a3c5">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年9月10日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>在<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Commerce Cloud Patches </a>和<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Commerce Cloud Tools Suite</a>的发行说明中阐明，从版本1.1.15开始，客户必须从<code>repo.magento.com</code>而不是GitHub通过Composer下载Commerce程序包的Cloud Patches，并且需要Adobe Commerce on cloud infrastructure授权。</p>
-</td>
-      <td>
-        反馈，技术
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/ccc122ea36aa8709ac5fa281f94f0814d62e71db">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年9月9日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>在ECE-Tools版本v2002.2.14之后更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI引用</a>和<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">错误消息</a>。</p>
-</td>
-      <td>
-        技术
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/0e2395ce240935dd67032fe7d2d9d7005958e026">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年9月8日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>新的<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/new-relic/traffic-insights/overview">流量分析</a>应用程序可帮助用户可视化其CDN流量。</p>
-</td>
-      <td>
-        重大更新，新主题
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/74ff686398d92e74f6f889aa10eca67205beb42e">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年9月1日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>更新了Redis和Valkey服务文档以反映当前版本和修补程序级别的支持，并添加了Cloud Guide架构和服务页面中的Valkey引用，包括<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/redis">设置Redis服务</a>、<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/valkey">设置Valkey服务</a>和<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/environment/variables-deploy">部署变量</a>。</p>
-</td>
-      <td>
-        反馈、重大更新
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/89a9594b50dfeacc4e0e7765f195d9bade00413d">提交</a></td>
-    </tr>
-    <tr>
-      <td><p>在<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">升级Commerce版本</a>和<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml">配置服务</a>中，添加了有关Commerce升级窗口期间客户可用性要求的指南，并阐明了Pro服务升级请求和计划流程。</p>
-</td>
-      <td>
-        反馈
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/ea46582388a9afaf94eb9ced6b61dbef0044370d">提交</a></td>
-    </tr>
-  </tbody>
-</table>
+| 描述 | 类型 | 日期/来源 |
+| --- | --- | --- |
+| 在ECE-Tools v2002.2.15版本之后更新了[CLI引用](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference)和[错误消息](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference)。 | 技术 | [2026年10月13日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d27cc83271459bb3c8cb718fe72a1810d2f5a3c5) |
+| 在[Commerce Cloud Patches &#x200B;](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches)和[Commerce Cloud Tools Suite](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite)的发行说明中阐明，从版本1.1.15开始，客户必须从`repo.magento.com`而不是GitHub通过Composer下载Commerce程序包的Cloud Patches，并且需要Adobe Commerce on cloud infrastructure授权。 | 反馈，技术 | [2026年9月10日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/ccc122ea36aa8709ac5fa281f94f0814d62e71db) |
+| 在ECE-Tools版本v2002.2.14之后更新了[CLI引用](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference)和[错误消息](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference)。 | 技术 | [2026年9月9日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/0e2395ce240935dd67032fe7d2d9d7005958e026) |
+| 新的[流量分析](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/new-relic/traffic-insights/overview)应用程序可帮助用户可视化其CDN流量。 | 重大更新，新主题 | [2026年9月8日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/74ff686398d92e74f6f889aa10eca67205beb42e) |
