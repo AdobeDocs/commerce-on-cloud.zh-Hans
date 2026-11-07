@@ -57,7 +57,7 @@ ht-degree: 0%
 
 您可以直接为所有入门环境和Pro集成环境启用[!DNL Xdebug]。 专业生产和暂存环境不需要此配置步骤。 请参阅[Debug for Pro Staging and Production](#debug-for-pro-staging-and-production)。
 
->[!VIDEO](https://video.tv.adobe.com/v/3437407?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505684?captions=chi_hans&learn=on)
 
 要为您的项目启用[!DNL Xdebug]，请将`xdebug`添加到`.magento.app.yaml`文件的`runtime:extensions`部分。
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 
 ### 配置PhpStorm服务器
 
->[!VIDEO](https://video.tv.adobe.com/v/3437409?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505702?captions=chi_hans&learn=on)
 
 必须将[PhpStorm](https://www.jetbrains.com/phpstorm/) IDE配置为正确使用[!DNL Xdebug]。
 
@@ -137,7 +137,7 @@ ht-degree: 0%
 
 这使应用程序能够拥有正确的调试设置以处理来自Adobe Commerce应用程序的请求。
 
->[!VIDEO](https://video.tv.adobe.com/v/3437426?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505747?captions=chi_hans&learn=on)
 
 1. 打开PHPStorm应用程序，然后单击屏幕右上角的&#x200B;**[!UICONTROL Add Configuration]**。
 
@@ -154,7 +154,7 @@ ht-degree: 0%
 
 ### 设置端口转发
 
->[!VIDEO](https://video.tv.adobe.com/v/3437410?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505693?captions=chi_hans&learn=on)
 
 将`XDEBUG`连接从服务器映射到本地系统。 要执行任何类型的调试，必须将端口9000从云基础架构服务器上的Adobe Commerce转发到本地计算机。 请参阅以下部分之一：
 
@@ -323,7 +323,7 @@ ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
 
 演示了用于启动远程调试会话的配置以及GET参数。
 
->[!VIDEO](https://video.tv.adobe.com/v/3437417?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505726?captions=chi_hans&learn=on)
 
 1. 启用远程调试；访问浏览器中的站点，并将以下内容附加到URL中，`KEY`为`xdebug_key`的值。
 
