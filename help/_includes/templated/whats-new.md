@@ -12,4 +12,4 @@ ht-degree: 3%
 
 | 描述 | 类型 | 日期/来源 |
 | --- | --- | --- |
-| 在ECE-Tools v2002.2.15版本之后更新了[CLI引用](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference)和[错误消息](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference)。 | 技术 | [2026年10月13日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d27cc83271459bb3c8cb718fe72a1810d2f5a3c5) |
+| 在ECE-Tools v2002.2.15版本之后更新了[CLI引用](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference)和[错误消息](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference)。 | 技术 | [2026年10月13日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d27cc83271459bb3c8cb718fe72a1810d2f5a3c5) |
